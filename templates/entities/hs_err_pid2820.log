@@ -1,0 +1,216 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000df7a3, pid=2820, tid=3376
+#
+# JRE version: 6.0_18-b07
+# Java VM: Java HotSpot(TM) Client VM (16.0-b13 mixed mode windows-x86 )
+# Problematic frame:
+# C  0x000df7a3
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x3eb1e400):  JavaThread "AWT-Windows" daemon [_thread_in_native, id=3376, stack(0x3f2b0000,0x3f340000)]
+
+siginfo: ExceptionCode=0xc0000005, writing address 0x00000000
+
+Registers:
+EAX=0x010ef878, EBX=0x00000000, ECX=0x000df768, EDX=0x00000000
+ESP=0x3f33f630, EBP=0x3f33f640, ESI=0x000df768, EDI=0x000df758
+EIP=0x000df7a3, EFLAGS=0x00010a82
+
+Top of Stack: (sp=0x3f33f630)
+0x3f33f630:   3f33001b 77e7b70c 00000001 000df610
+0x3f33f640:   3f33f65c 77e7c715 000df610 3f33f6e4
+0x3f33f650:   000df610 00000001 000df768 3f33f668
+0x3f33f660:   77e7c6ca 3f33f6e4 3f33f674 77e791b3
+0x3f33f670:   3f33f6b8 3f33f684 77e790e8 3f33f6b8
+0x3f33f680:   3f33f7e4 3f33f698 77e7a2fb 3f33f6e4
+0x3f33f690:   774efa30 3f33fa94 3f33fa78 77ef46cf
+0x3f33f6a0:   3f33f6e4 00000000 77ef4695 3f33fb68 
+
+Instructions: (pc=0x000df7a3)
+0x000df793:   00 00 00 00 00 00 00 00 00 00 00 00 00 06 00 00
+0x000df7a3:   00 0a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+Stack: [0x3f2b0000,0x3f340000],  sp=0x3f33f630,  free space=23d3f33f164k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x000df7a3
+C  [RPCRT4.dll+0xc715]
+C  [RPCRT4.dll+0xc6ca]
+C  [RPCRT4.dll+0x91b3]
+C  [RPCRT4.dll+0x90e8]
+C  [RPCRT4.dll+0xa2fb]
+C  [RPCRT4.dll+0x846cf]
+C  [ole32.dll+0x6769a]
+C  [ole32.dll+0x6765a]
+C  [ole32.dll+0x74611]
+C  [ole32.dll+0x7a356]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.awt.windows.WToolkit.eventLoop()V+0
+j  sun.awt.windows.WToolkit.run()V+77
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x3f073000 JavaThread "Thread-1" daemon [_thread_in_native, id=1288, stack(0x41ec0000,0x41f50000)]
+  0x403f6400 JavaThread "OxygenSingletonChecker-Thread" [_thread_in_native, id=1268, stack(0x415c0000,0x41650000)]
+  0x3f7bc400 JavaThread "Timer-3" daemon [_thread_blocked, id=2788, stack(0x40d50000,0x40de0000)]
+  0x3f7a3800 JavaThread "DocumentTypeProviderTimer" daemon [_thread_blocked, id=3908, stack(0x40cc0000,0x40d50000)]
+  0x3f5d0800 JavaThread "Timer-2" daemon [_thread_blocked, id=4052, stack(0x3fca0000,0x3fd30000)]
+  0x3f7b9400 JavaThread "Timer-1" [_thread_blocked, id=3848, stack(0x40bb0000,0x40c40000)]
+  0x3f732400 JavaThread "AutomaticallyValidation" daemon [_thread_blocked, id=1160, stack(0x40b20000,0x40bb0000)]
+  0x3ef48c00 JavaThread "Autosave" daemon [_thread_blocked, id=2780, stack(0x40a90000,0x40b20000)]
+  0x3f7c1400 JavaThread "Timer-0" daemon [_thread_blocked, id=3792, stack(0x40200000,0x40290000)]
+  0x3f5db400 JavaThread "TimerQueue" daemon [_thread_blocked, id=3308, stack(0x3fa10000,0x3faa0000)]
+  0x3f742c00 JavaThread "Opened editors lock manager" [_thread_blocked, id=4068, stack(0x3fc10000,0x3fca0000)]
+  0x3f5b1400 JavaThread "AutomaticallyValidation" daemon [_thread_blocked, id=2328, stack(0x3fb80000,0x3fc10000)]
+  0x3f70c000 JavaThread "Autosave" daemon [_thread_blocked, id=1624, stack(0x3faf0000,0x3fb80000)]
+  0x3ef36400 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=2000, stack(0x3f8b0000,0x3f940000)]
+  0x3f6ac400 JavaThread "AWT-Shutdown" [_thread_blocked, id=1080, stack(0x3f820000,0x3f8b0000)]
+=>0x3eb1e400 JavaThread "AWT-Windows" daemon [_thread_in_native, id=3376, stack(0x3f2b0000,0x3f340000)]
+  0x3efbf400 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3580, stack(0x3f190000,0x3f220000)]
+  0x3eae3000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=3524, stack(0x3ee50000,0x3eee0000)]
+  0x3eadcc00 JavaThread "CompilerThread0" daemon [_thread_blocked, id=2220, stack(0x3ee00000,0x3ee50000)]
+  0x3eadb400 JavaThread "Attach Listener" daemon [_thread_blocked, id=3204, stack(0x3ed70000,0x3ee00000)]
+  0x3eada000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4076, stack(0x3ece0000,0x3ed70000)]
+  0x3eacac00 JavaThread "Finalizer" daemon [_thread_blocked, id=3196, stack(0x3ec50000,0x3ece0000)]
+  0x3eac6400 JavaThread "Reference Handler" daemon [_thread_blocked, id=3188, stack(0x3ebc0000,0x3ec50000)]
+  0x003c7000 JavaThread "main" [_thread_blocked, id=2980, stack(0x00030000,0x00080000)]
+
+Other Threads:
+  0x3eac3800 VMThread [stack: 0x3eb70000,0x3ebc0000] [id=2900]
+  0x3eaed800 WatcherThread [stack: 0x3eee0000,0x3ef30000] [id=2332]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 125440K, used 39195K [0x2fd30000, 0x3a380000, 0x3e680000)
+  eden space 94144K, 30% used [0x2fd30000,0x318dbc90,0x35920000)
+  from space 31296K, 34% used [0x384f0000,0x38f8b308,0x3a380000)
+  to   space 38080K, 0% used [0x35920000,0x35920000,0x37e50000)
+ PSOldGen        total 189632K, used 135923K [0x12a80000, 0x1e3b0000, 0x2fd30000)
+  object space 189632K, 71% used [0x12a80000,0x1af3cfa0,0x1e3b0000)
+ PSPermGen       total 56320K, used 36571K [0x02a80000, 0x06180000, 0x12a80000)
+  object space 56320K, 64% used [0x02a80000,0x04e36da0,0x06180000)
+
+Dynamic libraries:
+0x00400000 - 0x00453000 	C:\Program Files\Oxygen XML Author 11\author.exe
+0x7c900000 - 0x7c9b2000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c8f6000 	C:\WINDOWS\system32\kernel32.dll
+0x77dd0000 - 0x77e6b000 	C:\WINDOWS\system32\ADVAPI32.DLL
+0x77e70000 - 0x77f02000 	C:\WINDOWS\system32\RPCRT4.dll
+0x77fe0000 - 0x77ff1000 	C:\WINDOWS\system32\Secur32.dll
+0x773d0000 - 0x774d3000 	C:\WINDOWS\WinSxS\X86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\COMCTL32.DLL
+0x77c10000 - 0x77c68000 	C:\WINDOWS\system32\msvcrt.dll
+0x77f10000 - 0x77f59000 	C:\WINDOWS\system32\GDI32.dll
+0x7e410000 - 0x7e4a1000 	C:\WINDOWS\system32\USER32.dll
+0x77f60000 - 0x77fd6000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x7c9c0000 - 0x7d1d7000 	C:\WINDOWS\system32\SHELL32.DLL
+0x76390000 - 0x763ad000 	C:\WINDOWS\system32\IMM32.DLL
+0x6d800000 - 0x6da97000 	c:\program files\oxygen xml author 11\jre\bin\client\jvm.dll
+0x76b40000 - 0x76b6d000 	C:\WINDOWS\system32\WINMM.dll
+0x7c340000 - 0x7c396000 	C:\WINDOWS\system32\MSVCR71.dll
+0x6d7b0000 - 0x6d7bc000 	c:\program files\oxygen xml author 11\jre\bin\verify.dll
+0x6d330000 - 0x6d34f000 	c:\program files\oxygen xml author 11\jre\bin\java.dll
+0x6d290000 - 0x6d298000 	c:\program files\oxygen xml author 11\jre\bin\hpi.dll
+0x76bf0000 - 0x76bfb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x6d7f0000 - 0x6d7ff000 	c:\program files\oxygen xml author 11\jre\bin\zip.dll
+0x6d000000 - 0x6d14a000 	C:\Program Files\Oxygen XML Author 11\jre\bin\awt.dll
+0x73000000 - 0x73026000 	C:\WINDOWS\system32\WINSPOOL.DRV
+0x774e0000 - 0x7761d000 	C:\WINDOWS\system32\ole32.dll
+0x5ad70000 - 0x5ada8000 	C:\WINDOWS\system32\uxtheme.dll
+0x74720000 - 0x7476c000 	C:\WINDOWS\system32\MSCTF.dll
+0x755c0000 - 0x755ee000 	C:\WINDOWS\system32\msctfime.ime
+0x6d610000 - 0x6d623000 	C:\Program Files\Oxygen XML Author 11\jre\bin\net.dll
+0x71ab0000 - 0x71ac7000 	C:\WINDOWS\system32\WS2_32.dll
+0x71aa0000 - 0x71aa8000 	C:\WINDOWS\system32\WS2HELP.dll
+0x6d230000 - 0x6d284000 	C:\Program Files\Oxygen XML Author 11\jre\bin\fontmanager.dll
+0x68000000 - 0x68036000 	C:\WINDOWS\system32\rsaenh.dll
+0x769c0000 - 0x76a74000 	C:\WINDOWS\system32\USERENV.dll
+0x5b860000 - 0x5b8b5000 	C:\WINDOWS\system32\netapi32.dll
+0x71a50000 - 0x71a8f000 	C:\WINDOWS\System32\mswsock.dll
+0x76f20000 - 0x76f47000 	C:\WINDOWS\system32\DNSAPI.dll
+0x76fb0000 - 0x76fb8000 	C:\WINDOWS\System32\winrnr.dll
+0x76f60000 - 0x76f8c000 	C:\WINDOWS\system32\WLDAP32.dll
+0x64000000 - 0x64025000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x76d60000 - 0x76d79000 	C:\WINDOWS\system32\Iphlpapi.dll
+0x76fc0000 - 0x76fc6000 	C:\WINDOWS\system32\rasadhlp.dll
+0x662b0000 - 0x66308000 	C:\WINDOWS\system32\hnetcfg.dll
+0x71a90000 - 0x71a98000 	C:\WINDOWS\System32\wshtcpip.dll
+0x6d450000 - 0x6d474000 	C:\Program Files\Oxygen XML Author 11\jre\bin\jpeg.dll
+0x6d630000 - 0x6d639000 	C:\Program Files\Oxygen XML Author 11\jre\bin\nio.dll
+0x605d0000 - 0x605d9000 	C:\WINDOWS\system32\mslbui.dll
+0x77120000 - 0x771ab000 	C:\WINDOWS\system32\OLEAUT32.DLL
+0x3f3f0000 - 0x3f405000 	C:\Program Files\Oxygen XML Author 11\lib\WinFileChooserNativeHelper32.dll
+0x763b0000 - 0x763f9000 	C:\WINDOWS\system32\COMDLG32.dll
+0x6d560000 - 0x6d569000 	C:\Program Files\Oxygen XML Author 11\jre\bin\management.dll
+0x40de0000 - 0x40e34000 	C:\Program Files\Oxygen XML Author 11\lib\com\sun\jna\win32-x86\jnidispatch.dll
+0x40e40000 - 0x40e91000 	C:\Program Files\Oxygen XML Author 11\lib\hunspell\hunspell-win-x86-32.dll
+0x77b40000 - 0x77b62000 	C:\WINDOWS\system32\appHelp.dll
+0x76fd0000 - 0x7704f000 	C:\WINDOWS\system32\CLBCATQ.DLL
+0x77050000 - 0x77115000 	C:\WINDOWS\system32\COMRes.dll
+0x77c00000 - 0x77c08000 	C:\WINDOWS\system32\VERSION.dll
+0x77a20000 - 0x77a74000 	C:\WINDOWS\System32\cscui.dll
+0x76600000 - 0x7661d000 	C:\WINDOWS\System32\CSCDLL.dll
+0x77920000 - 0x77a13000 	C:\WINDOWS\system32\SETUPAPI.dll
+0x76990000 - 0x769b5000 	C:\WINDOWS\system32\ntshrui.dll
+0x76b20000 - 0x76b31000 	C:\WINDOWS\system32\ATL.DLL
+0x71b20000 - 0x71b32000 	C:\WINDOWS\system32\MPR.dll
+0x71c10000 - 0x71c1e000 	C:\WINDOWS\System32\ntlanman.dll
+0x71cd0000 - 0x71ce7000 	C:\WINDOWS\System32\NETUI0.dll
+0x71c90000 - 0x71cd0000 	C:\WINDOWS\System32\NETUI1.dll
+0x71c80000 - 0x71c87000 	C:\WINDOWS\System32\NETRAP.dll
+0x71bf0000 - 0x71c03000 	C:\WINDOWS\System32\SAMLIB.dll
+0x77a80000 - 0x77b15000 	C:\WINDOWS\System32\CRYPT32.dll
+0x77b20000 - 0x77b32000 	C:\WINDOWS\System32\MSASN1.dll
+0x76c30000 - 0x76c5e000 	C:\WINDOWS\System32\WINTRUST.dll
+0x76c90000 - 0x76cb8000 	C:\WINDOWS\system32\IMAGEHLP.dll
+0x75970000 - 0x75a68000 	C:\WINDOWS\system32\MSGINA.dll
+0x74320000 - 0x7435d000 	C:\WINDOWS\system32\ODBC32.dll
+0x76360000 - 0x76370000 	C:\WINDOWS\system32\WINSTA.dll
+0x42370000 - 0x42387000 	C:\WINDOWS\system32\odbcint.dll
+0x42680000 - 0x42945000 	C:\WINDOWS\system32\xpsp2res.dll
+0x3fab0000 - 0x3fac4000 	C:\Program Files\Common Files\Adobe\Adobe Drive CS4\AdobeDriveCS4_NP.dll
+0x75f60000 - 0x75f67000 	C:\WINDOWS\System32\drprov.dll
+0x75f70000 - 0x75f7a000 	C:\WINDOWS\System32\davclnt.dll
+
+VM Arguments:
+jvm_args: -Dexe4j.semaphoreName=c:_program files_oxygen xml author 11_author.exe0 -Dexe4j.isInstall4j=true -Dexe4j.moduleName=C:\Program Files\Oxygen XML Author 11\author.exe -Dexe4j.tempDir= -Dexe4j.unextractedPosition=0 -Dexe4j.consoleCodepage=cp0 -Dcom.oxygenxml.app.descriptor=ro.sync.exml.AuthorFrameDescriptor -Xss550k -XX:SoftRefLRUPolicyMSPerMB=10 -XX:MaxPermSize=256m -Dsun.java2d.noddraw=true -Xmx700m -Dcom.oxygenxml.language=English -XX:+UseParallelGC 
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+CLASSPATH=.;C:\Program Files\Java\jre6\lib\ext\QTJava.zip
+PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\ATI Technologies\ATI.ACE\;C:\Program Files\OpenAFS\Client\Program;C:\Program Files\OpenAFS\Common;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Program Files\Liquid Technologies\Liquid XML Studio 2010\XmlDataBinder8\Redist8\cpp\win32\bin;C:\Program Files\Subversion\bin;C:\Program Files\QuickTime\QTSystem\;;C:\PROGRA~1\NETSUR~1\PuTTY;C:\PROGRA~1\UNIVER~1\PuTTY;c:\program files\oxygen xml author 11\jre\bin
+USERNAME=paredeso
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 6, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 3
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 15 stepping 6, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3
+
+Memory: 4k page, physical 2094632k(699900k free), swap 4030548k(2446856k free)
+
+vm_info: Java HotSpot(TM) Client VM (16.0-b13) for windows-x86 JRE (1.6.0_18-b07), built on Dec 17 2009 13:35:55 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Thu Jul 22 14:08:28 2010
+elapsed time: 183642 seconds
+

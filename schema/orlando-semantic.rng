@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <!--
+    
+    Written 2013-04-07 by Mariana Paredes-Olea
+    
+  -->
+  
+  <include href="biography.rng"/>
+  <include href="writing.rng"/>
+
+  <define name="anyOrlando">
+      <choice>
+        <ref name="anyBio"/>
+        <ref name="anyWri"/>
+      </choice>
+  </define>  
+  
+</grammar>

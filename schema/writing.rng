@@ -1,0 +1,2102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  
+  Tree structure and modularization of content models 2012-10 by Mariana Paredes-Olea
+  This schema is a representation and structural improvement of the Orlando SGML DTD writing.dtd in RELAX NG.  
+  
+  Initial content models transformaed 2010-07 by Syd Bauman, based on writing.dtd, as sent
+  in e-mail "Re: Orlando conversion to XML: summary and meeting" from
+  Susan Brown on 2010-06-21 20:19, and on
+  biography-test_10-07-16-CAPS.rng, common_10-07-16.rnc, and
+  events-test_10-07-16-CAPS.rnc "Re: drafts of
+  schemas" from Mariana Paredes on 2010-07-16 12:37.
+  Version 02: schema changes by Mariana Paredes-Olea:
+  Added AREA element and attributes completed responsibility values, fixed hyphenated attributes and value names;
+  missing hyphens and substrings, changed case of elements, attributes, and values
+  names to reflect Orlando data (the current production system requires caps).
+  
+-->
+<!--
+  check list of changes to facilitate linked data
+  check if other elements are shared with bio schema
+-->
+
+<!-- revised 2013-07-07
+ -->
+
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  
+  <!--http://cwrc.ca/schema/-->
+  <include href="http://cwrc.ca/schema/orlando_common_schema.rng">
+    <start combine="choice">
+      <ref name="Writing-element"/>
+    </start>    
+  </include>
+  
+  <define name="Writing-element" combine="choice">
+    <element name="WRITING">
+      <ref name="attlist.Writing"/>
+      <ref name="header-element"/>
+      <ref name="Div0-element"/>
+    </element>
+  </define>
+  
+  <!-- MAIN TREE -->
+  
+  <define name="chronProse-element" combine="choice">
+    <element name="CHRONPROSE">
+      <ref name="attlist.chronProse"/>
+      <interleave>
+        <optional>
+          <ref name="chronProse-element"/>
+        </optional>
+        <ref name="Div0-inclusion"/>
+        <ref name="Div1-narrow-inclusion"/>
+        <ref name="anyWri"/>
+        <text/>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="chronStruct-element" combine="choice">
+    <element name="CHRONSTRUCT">
+      <!-- Already documented in common schema. This definition includes writing semantic elements -->
+      <zeroOrMore>
+        <choice>
+          <group>
+            <choice>
+              <ref name="dateRange-element"/>
+              <ref name="dateStruct-element"/>
+              <ref name="date-element"/>
+            </choice>
+            <ref name="chronProse-element"/>
+          </group>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <ref name="anyWri"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="Div0-element" combine="choice">
+    <element name="DIV0">
+      <ref name="attlist.Div0"/>      
+      <interleave>
+        <optional>
+          <ref name="heading-element"/>
+        </optional>
+        <optional>
+          <choice>
+            <ref name="standard-element"/>
+            <ref name="nonStandardDescriptor-element"/>
+          </choice>        
+        </optional>
+        <optional>
+          <ref name="authorSummary-element"/>
+        </optional>      
+        <optional>
+          <ref name="worksCited-element"/>
+        </optional> 
+        <optional>
+          <ref name="biogProse-element"/>
+        </optional>
+        <zeroOrMore>
+          <ref name="Div1-element"/>
+        </zeroOrMore>
+        <ref name="Div0-inclusion"/><!-- inclusion from common schema: Div0: +( researchNote , title , bibCit , scholarNote , keywordClass , bibCits , lb) -->
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="Div1-element" combine="choice">
+    <element name="DIV1">
+      <ref name="attlist.Div1"/>
+      <interleave>
+        <optional>
+          <ref name="heading-element"/>
+        </optional>
+        <zeroOrMore>
+          <zeroOrMore>
+            <ref name="textScope-element"/>
+          </zeroOrMore>
+          <oneOrMore>
+            <ref name="Div2-element"/>
+          </oneOrMore>
+        </zeroOrMore>
+        <ref name="Div0-inclusion"/>
+        <ref name="Div1-inclusion"/><!-- inclusion: Div1: +(dateStruct , date , dateRange , time , name , place , orgName , emph , foreign , soCalled , quote , sic , corr , rs , l , lg , topic , xref , xptr) -->
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="Div2-element" combine="choice">
+    <element name="DIV2">
+      <ref name="attlist.Div2"/>      
+      <interleave>
+        <optional>
+          <ref name="heading-element"/>
+        </optional>
+        <zeroOrMore>
+          <ref name="textScope-element"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <choice>
+            <ref name="production-element"/>
+            <ref name="reception-element"/>
+            <ref name="textualFeatures-element"/>
+            <ref name="Div0-inclusion"/>
+            <ref name="Div1-inclusion"/>
+          </choice>
+        </zeroOrMore>
+        
+      </interleave>      
+    </element>
+  </define>
+  
+  <define name="Div3-element" combine="choice">
+    <element name="DIV3">
+      <ref name="attlist.Div3"/>
+      <interleave>
+        <optional>
+          <ref name="heading-element"/>
+        </optional>
+        <oneOrMore>
+          <choice>
+            <ref name="chronStruct-element"/>
+            <ref name="dataStruct-element"/>
+            <ref name="p-element"/>
+          </choice>
+        </oneOrMore>
+        <ref name="Div0-inclusion"/>
+        <ref name="Div1-narrow-inclusion"/>
+        <ref name="anyWri"/>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="emph-element" combine="choice">
+    <!-- mpo: defined in common schema, present definition includes tMotif -->
+    <element name="EMPH">
+      <ref name="ID-attribute"/>        
+        <zeroOrMore>
+          <choice>
+            <text/>
+            <ref name="tMotif-element"/>
+            <ref name="anyWri"/>
+            <ref name="Div0-inclusion"/>
+            <ref name="Div1-inclusion"/>
+          </choice>          
+        </zeroOrMore>     
+    </element>
+  </define>
+  
+  <define name="ExtentOfOeuvre-element" combine="choice">
+    <element name="EXTENTOFOEUVRE">
+      <ref name="attlist.ExtentOfOeuvre"/>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="genericRange-element"/>
+            <ref name="tGenre-element"/>
+            <ref name="Div0-inclusion"/>
+            <ref name="Div1-inclusion"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="foreign-element" combine="choice">
+    <element name="FOREIGN">
+      <optional><ref name="ID-attribute"/></optional>
+      <optional><ref name="reg-attribute"/></optional>
+      <optional>
+        <ref name="lang-attribute"/>
+      </optional>
+      <!-- change to xml:lang ?-->
+      <zeroOrMore>
+        <choice>
+          <text/>        
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <ref name="anyWri"/>
+        </choice>          
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="l-element" combine="choice">
+    <element name="L">
+      <optional>
+        <ref name="met-attribute"/>
+      </optional>
+      <optional>
+        <ref name="real-attribute"/>
+      </optional>
+      <optional>
+        <ref name="rhyme-attribute"/>
+      </optional>
+      <optional>
+        <ref name="part-attribute"/>
+      </optional>
+      <interleave>
+        <ref name="Div0-inclusion"/>
+        <ref name="Div1-narrow-inclusion"/>
+        <ref name="anyWri"/>
+        <text/>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="name-element" combine="choice">
+    <element name="NAME" >
+      <ref name="entity-attributes"/>      
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="tCharacterName-element"/>
+          <ref name="tCharacterTypeRole-element"/>
+          <ref name="tThemeTopic-element"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="narrow-inclusion" combine="choice">
+    <!--Inclusion from Div1 and Div0 except elements
+        in DTD exclusion -(date, dateStruct, dateRange, keywordClass, name, orgName, place, 
+        scholarNote, topic) -->
+    <zeroOrMore>
+      <choice>
+        <ref name="time-element"/>
+        <ref name="l-element"/>
+        <ref name="lg-element"/>
+      </choice>
+    </zeroOrMore>
+  </define>
+  
+  <define name="orgName-element" combine="choice">
+    <!-- Documentation already included in common schema; this instance contains biography inclusions -->
+    <element name="ORGNAME">
+      <ref name="entity-attributes"/>      
+      <optional>
+        <ref name="orgType-attribute"/>
+      </optional>
+      <ref name="reg-attribute"/>
+      <interleave>
+        <text/>
+        <optional>
+          <ref name="narrow-inclusion"/>
+        </optional>
+        <zeroOrMore>
+          <choice>
+            <ref name="tCharacterTypeRole-element"/>
+            <ref name="tCharacterName-element"/>
+            <ref name="tThemeTopic-element"/>
+            <ref name="job-element"/>
+            <ref name="tMotif-element"/>
+            <ref name="rRecognitionName-element"/>
+          </choice>
+        </zeroOrMore>       
+        <!--<ref name="politics-inclusion"></ref> overlaps with culturalformation inclusion-->
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="p-element" combine="choice">
+    <element name="P">
+      <ref name="attlist.p"/>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="Div0-inclusion"/>
+            <ref name="Div1-inclusion"/>
+            <ref name="genericRange-element"/>
+            <ref name="ExtentOfOeuvre-element"/>
+            <ref name="anyWri"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="quote-element" combine="choice">
+    <element name="QUOTE">
+      <ref name="attlist.quote"/>
+      <interleave>
+        <zeroOrMore>
+          <choice>
+            <ref name="corrquoteitem-group"/>
+            <text/>
+            <ref name="anyWri"/>
+            <ref name="ExtentOfOeuvre-element"/>            
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="researchNote-element" combine="choice">
+    <element name="RESEARCHNOTE">
+      <ref name="ID-attribute"/>
+      <interleave>
+        <text/>
+        <ref name="Div0-inclusion"/>
+        <ref name="Div1-narrow-inclusion"/>
+        <ref name="anyWri"/>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="shortProse-element" combine="choice">
+    <element name="SHORTPROSE">
+      <!-- LS to MP: No documentation for this even though it is mentioned many times in the documentation for other tags. -->
+      <ref name="ID-attribute"/>
+      <interleave>
+        <text/>
+        <oneOrMore>
+          <ref name="p-element"/>
+        </oneOrMore>
+        <ref name="Div0-inclusion"/>
+        <ref name="Div1-narrow-inclusion"/>
+        <ref name="anyWri"/>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="soCalled-element" combine="choice">
+    <element name="SOCALLED">
+      <ref name="ID-attribute"/>
+      <interleave>
+        <text/>
+        <ref name="Div0-inclusion"/>
+        <ref name="Div1-narrow-inclusion"/>
+        <ref name="anyWri"/>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="tGenre-element" combine="choice">
+    <element name="TGENRE">
+      <ref name="attlist.tGenre"/>
+      <interleave>        
+        <text/>
+        <ref name="Div0-inclusion"/>
+        <ref name="Div1-narrow-inclusion"/>
+        <ref name="anyWri"/>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="title-element" combine="choice">
+    <element name="TITLE">
+      <ref name="attlist.title"/>      
+      <interleave>
+        <ref name="Div0-inclusion"/>
+        <ref name="Div1-narrow-inclusion"/>
+        <ref name="anyWri"/>
+        <text/>
+      </interleave>      
+    </element>
+  </define>
+  
+  <define name="topic-element" combine="choice">
+    <element name="TOPIC">
+      <!-- exclusion of dateStruct , dateRange , 
+            keywordClass , name , topic , orgName , place , scholarNote -->
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</a:documentation>
+      <ref name="ID-attribute"/>
+      <optional>
+        <ref name="standard-attribute"/>
+      </optional>
+      <!-- CDATA -->
+      <interleave>
+        <zeroOrMore>
+          <choice>
+            <text/>
+            <ref name="narrow-inclusion"/>
+            <ref name="anyWri"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  
+  <!-- authorSummary: +(ExtentOfOeuvre , tGenre , genericRange , dateStruct , date , dateRange , time , name , place , orgName , emph , foreign , quote , soCalled , sic , corr , rs , lg , l , topic) -->
+  <define name="authorSummary-element" combine="choice">
+    <element name="AUTHORSUMMARY">
+      <ref name="attlist.authorSummary"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="p-element"/>
+          <ref name="authorSummary-inclusion"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="shortProse-element"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>  
+  
+  <define name="genericRange-element" combine="choice">
+    <element name="GENERICRANGE">
+      <ref name="attlist.genericRange"/>
+      <interleave>
+        <zeroOrMore>
+          <choice>
+            <text/>
+            <ref name="authorSummary-inclusion"/>
+            <ref name="Div0-inclusion"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  
+  <define name="nonStandardDescriptor-element" combine="choice">
+    <element name="NONSTANDARDDESCRIPTOR">
+      <ref name="attlist.nonStandardDescriptor"/>
+      <text/>
+    </element>
+  </define>
+  
+  <define name="pAdvertising-element" combine="choice">
+    <element name="PADVERTISING">
+      <ref name="attlist.pAdvertising"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pAnthologization-element" combine="choice">
+    <element name="PANTHOLOGIZATION">
+      <ref name="attlist.pAnthologization"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pArchivalLocation-element" combine="choice">
+    <element name="PARCHIVALLOCATION">
+      <ref name="attlist.pArchivalLocation"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pAttitudes-element" combine="choice">
+    <element name="PATTITUDES">
+      <ref name="attlist.pAttitudes"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pAuthorship-element" combine="choice">
+    <element name="PAUTHORSHIP">
+      <ref name="attlist.pAuthorship"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pCirculation-element" combine="choice">
+    <element name="PCIRCULATION">
+      <ref name="attlist.pCirculation"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pContract-element" combine="choice">
+    <element name="PCONTRACT">
+      <ref name="attlist.pContract"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pCopyright-element" combine="choice">
+    <element name="PCOPYRIGHT">
+      <ref name="attlist.pCopyright"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pDedication-element" combine="choice">
+    <element name="PDEDICATION">
+      <ref name="attlist.pDedication"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pEarnings-element" combine="choice">
+    <element name="PEARNINGS">
+      <ref name="attlist.pEarnings"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pEditions-element" combine="choice">
+    <element name="PEDITIONS">
+      <ref name="attlist.pEditions"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pFirstLiteraryActivity-element" combine="choice">
+    <element name="PFIRSTLITERARYACTIVITY">
+      <ref name="attlist.pFirstLiteraryActivity"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pInfluencesHer-element" combine="choice">
+    <element name="PINFLUENCESHER">
+      <ref name="attlist.pInfluencesHer"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pLastLiteraryActivity-element" combine="choice">
+    <element name="PLASTLITERARYACTIVITY">
+      <ref name="attlist.pLastLiteraryActivity"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pLiterarySchools-element" combine="choice">
+    <element name="PLITERARYSCHOOLS">
+      <ref name="attlist.pLiterarySchools"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pManuscriptHistory-element" combine="choice">
+    <element name="PMANUSCRIPTHISTORY">
+      <ref name="attlist.pManuscriptHistory"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pMaterialConditions-element" combine="choice">
+    <element name="PMATERIALCONDITIONS">
+      <ref name="attlist.pMaterialConditions"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pModeOfPublication-element" combine="choice">
+    <element name="PMODEOFPUBLICATION">
+      <ref name="attlist.pModeOfPublication"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pMotives-element" combine="choice">
+    <element name="PMOTIVES">
+      <ref name="attlist.pMotives"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pNonBookMedia-element" combine="choice">
+    <element name="PNONBOOKMEDIA">
+      <ref name="attlist.pNonBookMedia"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pNonSurvival-element" combine="choice">
+    <element name="PNONSURVIVAL">
+      <ref name="attlist.pNonSurvival"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pPerformance-element" combine="choice">
+    <element name="PPERFORMANCE">
+      <ref name="attlist.pPerformance"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pPeriodicalPublication-element" combine="choice">
+    <element name="PPERIODICALPUBLICATION">
+      <ref name="attlist.pPeriodicalPublication"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pPlaceOfPublication-element" combine="choice">
+    <element name="PPLACEOFPUBLICATION">
+      <ref name="attlist.pPlaceOfPublication"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pPressRun-element" combine="choice">
+    <element name="PPRESSRUN">
+      <ref name="attlist.pPressRun"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pPrice-element" combine="choice">
+    <element name="PPRICE">
+      <ref name="attlist.pPrice"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pRaritiesFeaturesDecorations-element" combine="choice">
+    <element name="PRARITIESFEATURESDECORATIONS">
+      <ref name="attlist.pRaritiesFeaturesDecorations"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pRelationsWithPublisher-element" combine="choice">
+    <element name="PRELATIONSWITHPUBLISHER">
+      <ref name="attlist.pRelationsWithPublisher"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pSerialization-element" combine="choice">
+    <element name="PSERIALIZATION">
+      <ref name="attlist.pSerialization"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pSubmissionsRejections-element" combine="choice">
+    <element name="PSUBMISSIONSREJECTIONS">
+      <ref name="attlist.pSubmissionsRejections"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="pTypeOfPress-element" combine="choice">
+    <element name="PTYPEOFPRESS">
+      <ref name="attlist.pTypeOfPress"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- production: +( pFirstLiteraryActivity , pInfluencesHer , pLiterarySchools , pAttitudes , pMotives , pMaterialConditions , pLastLiteraryActivity , pSubmissionsRejections , pRelationsWithPublisher , pContract , pDedication , pEarnings , pCopyright , pModeOfPublication , pTypeOfPress , pPerformance , pPlaceOfPublication , pPrice , pEditions , pSerialization , pPeriodicalPublication , pNonBookMedia , pAnthologization , pCirculation , pPressRun , pAdvertising , pManuscriptHistory , pAuthorship , pNonSurvival , pArchivalLocation , pRaritiesFeaturesDecorations , rResponses , rSelfDescription , rFictionalization , rRecognitions , rRecognitionName , rPenalties , rRecognitionValue , rDestructionOfWork , rSheInfluenced , rBestKnownWork , rLandmarkText , tSettingDate , tSettingPlace , tGenreIssue , tGenre , tToneStyle , tVoiceNarration , tTechniques , tThemeTopic , tMotif , tCharacterization , tCharacterTypeRole , tCharacterName , tPlot , tIntertextuality) -->
+  <define name="production-element" combine="choice">
+    <element name="PRODUCTION">
+      <ref name="attlist.production"/>
+      <oneOrMore>
+        <choice>
+          <ref name="chronStruct-element"/>
+          <ref name="dataStruct-element"/>
+          <ref name="p-element"/>
+          <ref name="shortProse-element"/>
+          <ref name="scholarNote-element"/>
+          <ref name="keywordClass-element"/>
+          <ref name="researchNote-element"/>
+          <zeroOrMore>
+            <ref name="Div3-element"/>
+          </zeroOrMore>
+          <ref name="anyWri"/>  
+          <text/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="rBestKnownWork-element" combine="choice">
+    <element name="RBESTKNOWNWORK">
+      <ref name="attlist.rBestKnownWork"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rDestructionOfWork-element" combine="choice">
+    <element name="RDESTRUCTIONOFWORK">
+      <ref name="attlist.rDestructionOfWork"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rFictionalization-element" combine="choice">
+    <element name="RFICTIONALIZATION">
+      <ref name="attlist.rFictionalization"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rLandmarkText-element" combine="choice">
+    <element name="RLANDMARKTEXT">
+      <ref name="attlist.rLandmarkText"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rPenalties-element" combine="choice">
+    <element name="RPENALTIES">
+      <ref name="attlist.rPenalties"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rRecognitionName-element" combine="choice">
+    <element name="RRECOGNITIONNAME">
+      <ref name="attlist.rRecognitionName"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rRecognitionValue-element" combine="choice">
+    <element name="RRECOGNITIONVALUE">
+      <ref name="attlist.rRecognitionValue"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rRecognitions-element" combine="choice">
+    <element name="RRECOGNITIONS">
+      <ref name="attlist.rRecognitions"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rResponses-element" combine="choice">
+    <element name="RRESPONSES">
+      <ref name="attlist.rResponses"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rSelfDescription-element" combine="choice">
+    <element name="RSELFDESCRIPTION">
+      <ref name="attlist.rSelfDescription"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rSheInfluenced-element" combine="choice">
+    <element name="RSHEINFLUENCED">
+      <ref name="attlist.rSheInfluenced"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="rWritingMilestone-element" combine="choice">
+    <element name="RWRITINGMILESTONE">
+      <ref name="attlist.rWritingMilestone"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- reception: +( pFirstLiteraryActivity , pInfluencesHer , pLiterarySchools , pAttitudes , pMotives , pMaterialConditions , pLastLiteraryActivity , pSubmissionsRejections , pRelationsWithPublisher , pContract , pDedication , pEarnings , pCopyright , pModeOfPublication , pTypeOfPress , pPerformance , pPlaceOfPublication , pPrice , pEditions , pSerialization , pPeriodicalPublication , pNonBookMedia , pAnthologization , pCirculation , pPressRun , pAdvertising , pManuscriptHistory , pAuthorship , pNonSurvival , pArchivalLocation , pRaritiesFeaturesDecorations , rResponses , rSelfDescription , rFictionalization , rRecognitions , rRecognitionName , rPenalties , rRecognitionValue , rDestructionOfWork , rSheInfluenced , rBestKnownWork , rLandmarkText , tIntertextuality , tPlot , tCharacterName , tCharacterTypeRole , tCharacterization , tMotif , tThemeTopic , tTechniques , tVoiceNarration , tToneStyle , tGenre , tGenreIssue , tSettingPlace , tSettingDate) -->
+  <define name="reception-element" combine="choice">
+    <element name="RECEPTION">
+      <ref name="attlist.reception"/>
+      <oneOrMore>
+        <choice>
+          <ref name="chronStruct-element"/>
+          <ref name="dataStruct-element"/>
+          <ref name="p-element"/>
+          <ref name="shortProse-element"/>
+          <ref name="scholarNote-element"/>
+          <ref name="keywordClass-element"/>
+          <ref name="researchNote-element"/>
+          <zeroOrMore>
+            <ref name="Div3-element"/>
+          </zeroOrMore>
+          <ref name="anyWri"/>
+          <text/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="tCharacterName-element" combine="choice">
+    <element name="TCHARACTERNAME">
+      <ref name="attlist.tCharacterName"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tCharacterTypeRole-element" combine="choice">
+    <element name="TCHARACTERTYPEROLE">
+      <ref name="attlist.tCharacterTypeRole"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tCharacterization-element" combine="choice">
+    <element name="TCHARACTERIZATION">
+      <ref name="attlist.tCharacterization"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tGenreIssue-element" combine="choice">
+    <element name="TGENREISSUE">
+      <ref name="attlist.tGenreIssue"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tIntertextuality-element" combine="choice">
+    <element name="TINTERTEXTUALITY">
+      <ref name="attlist.tIntertextuality"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tMotif-element" combine="choice">
+    <element name="TMOTIF">
+      <ref name="attlist.tMotif"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tPlot-element" combine="choice">
+    <element name="TPLOT">
+      <ref name="attlist.tPlot"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tSettingDate-element" combine="choice">
+    <element name="TSETTINGDATE">
+      <ref name="attlist.tSettingDate"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tSettingPlace-element" combine="choice">
+    <element name="TSETTINGPLACE">
+      <ref name="attlist.tSettingPlace"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tTechniques-element" combine="choice">
+    <element name="TTECHNIQUES">
+      <ref name="attlist.tTechniques"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tThemeTopic-element" combine="choice">
+    <element name="TTHEMETOPIC">
+      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</a:documentation>
+      <xhtml:h2>themeTopic</xhtml:h2>            
+      <xhtml:h3>Definition</xhtml:h3>
+      <xhtml:p>This element applies to both theme and topic. Theme is the central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</xhtml:p>
+      <xhtml:h3>Placement</xhtml:h3>
+      <xhtml:p>Writing</xhtml:p>
+      <xhtml:p>Occurring in the TextualFeatures component, this element should be used around one or two descriptive words. You should also use it around a name if a person was the topic of a book or article, for example. So if a woman writer wrote a book on Sappho, use both the name tag and the themeTopic tag around the name of Sappho.</xhtml:p>
+      <xhtml:h3>Relationships</xhtml:h3>
+      <xhtml:p>There are no mandatory or optional sub-elements or attributes for this element.</xhtml:p>
+      <xhtml:h3>Examples</xhtml:h3>
+      <xhtml:p>&lt;tThemeTopic&gt; forced marriage&lt;/&gt;</xhtml:p>
+      <xhtml:p>&lt;tThemeTopic&gt; Oriental, African, pastoral, medieval, and contemporary subjects&lt;/&gt;</xhtml:p>
+      <xhtml:p>&lt;tThemeTopic&gt; Colonial oppression&lt;/&gt;</xhtml:p>
+      <xhtml:h3>Troubleshooting</xhtml:h3>
+      <xhtml:p>Theme differs from motif in that theme is larger scale, appears throughout the work and differs from sub-genre in that theme is not a work's defining principle.</xhtml:p>
+      <xhtml:p>Topic can be used if a woman wrote a cookbook, a non-fiction work on stitchery, or an educational text which used the Napoleanic wars for examples. None of these subjects could be properly described as themes; they are topics.</xhtml:p>
+      <ref name="attlist.tThemeTopic"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tToneStyle-element" combine="choice">
+    <element name="TTONESTYLE">
+      <ref name="attlist.tToneStyle"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="tVoiceNarration-element" combine="choice">
+    <element name="TVOICENARRATION">
+      <ref name="attlist.tVoiceNarration"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="textScope-element" combine="choice">
+    <element name="TEXTSCOPE">
+      <ref name="attlist.textScope"/>
+      <zeroOrMore>
+        <choice>
+          <ref name="anyWri"/>
+          <ref name="Div0-inclusion"/>
+          <ref name="Div1-inclusion"/>
+          <text/>
+        </choice>        
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <!-- textualFeatures: +(pFirstLiteraryActivity , pInfluencesHer , pLiterarySchools , pAttitudes , pMotives , pMaterialConditions , pLastLiteraryActivity , pSubmissionsRejections , pRelationsWithPublisher , pContract , pDedication , pEarnings , pCopyright , pModeOfPublication , pTypeOfPress , pPerformance , pPlaceOfPublication , pPrice , pEditions , pSerialization , pPeriodicalPublication , pNonBookMedia , pAnthologization , pCirculation , pPressRun , pAdvertising , pManuscriptHistory , pRaritiesFeaturesDecorations , pAuthorship , pNonSurvival , pArchivalLocation , rResponses , rSelfDescription , rFictionalization , rRecognitions , rRecognitionName , rPenalties , rRecognitionValue , rDestructionOfWork , rSheInfluenced , rBestKnownWork , rLandmarkText , tSettingDate , tSettingPlace , tGenreIssue , tGenre , tToneStyle , tVoiceNarration , tTechniques , tThemeTopic , tMotif , tCharacterization , tCharacterTypeRole , tCharacterName , tPlot , tIntertextuality) -->
+  <define name="textualFeatures-element" combine="choice">
+    <element name="TEXTUALFEATURES">
+      <ref name="attlist.textualFeatures"/>
+      <oneOrMore>
+        <choice>
+          <ref name="chronStruct-element"/>
+          <ref name="dataStruct-element"/>
+          <ref name="p-element"/>
+          <ref name="shortProse-element"/>
+          <ref name="scholarNote-element"/>
+          <ref name="keywordClass-element"/>
+          <ref name="researchNote-element"/>
+          <zeroOrMore>
+            <ref name="Div3-element"/>
+          </zeroOrMore>
+          <ref name="anyWri"/>   
+          <text/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <!-- common -->
+  <!--<define name="time-element" combine="choice">
+    <element name="TIME">
+      <ref name="attlist.time"/>
+      <text/>
+    </element>
+  </define>-->
+  
+  <!-- common -->
+  
+  <!-- common -->
+  <!--<define name="titleStmt-element" combine="choice">
+    <element name="TITLESTMT">
+      <ref name="attlist.titleStmt"/>
+      <oneOrMore>
+        <ref name="docTitle"/>
+      </oneOrMore>
+      <zeroOrMore>
+        <choice>
+          <ref name="docAuthor"/>
+          <ref name="docEditor"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>-->
+  
+  <!-- common -->
+  <!--<define name="topic-element" combine="choice">
+    <element name="TOPIC">
+      <ref name="attlist.topic"/>
+      <text/>
+    </element>
+  </define>-->
+  
+  <!-- common -->
+  <!--<define name="week-element" combine="choice">
+    <element name="WEEK">
+      <ref name="attlist.week"/>
+      <text/>
+    </element>
+  </define>-->
+  
+  <!-- common -->
+  <!--<define name="worksCited-element" combine="choice">
+    <element name="WORKSCITED">
+      <ref name="attlist.worksCited"/>
+      <oneOrMore>
+        <ref name="source"/>
+      </oneOrMore>
+    </element>
+  </define>-->
+  
+  <!-- common -->
+  <!--<define name="xptr-element" combine="choice">
+    <element name="XPTR">
+      <ref name="attlist.xptr"/>
+      <empty/>
+    </element>
+  </define>-->
+  
+  <!-- common -->
+  <!--<define name="xref-element" combine="choice">
+    <element name="XREF">
+      <ref name="attlist.xref"/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="address"/>
+          <ref name="date"/>
+          <ref name="name"/>
+          <ref name="rs"/>
+          <ref name="time"/>
+          <ref name="corr"/>
+          <ref name="emph"/>
+          <ref name="foreign"/>
+          <ref name="soCalled"/>
+          <ref name="docTitle"/>
+          <ref name="xptr"/>
+          <ref name="xref"/>
+          <ref name="quote"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>-->
+  
+  <!-- common -->
+  <!--<define name="year-element" combine="choice">
+    <element name="YEAR">
+      <ref name="attlist.year"/>
+      <text/>
+    </element>
+  </define>-->
+  
+  
+  <!-- INCLUSIONS -->
+  <!--
+    
+    Waterlooish pattern: matches *any* Orlando production, textualFeatures, or reception DTD element in
+    "INCLUSION" mode
+    
+  -->
+  <define name="anyWri" combine="choice">
+    <zeroOrMore>
+      <choice>
+        <ref name="pAdvertising-element"/>
+        <ref name="pAnthologization-element"/>
+        <ref name="pArchivalLocation-element"/>
+        <ref name="pAttitudes-element"/>
+        <ref name="pAuthorship-element"/>
+        <ref name="pCirculation-element"/>
+        <ref name="pContract-element"/>
+        <ref name="pCopyright-element"/>
+        <ref name="pDedication-element"/>
+        <ref name="pEarnings-element"/>
+        <ref name="pEditions-element"/>
+        <ref name="pFirstLiteraryActivity-element"/>
+        <ref name="pInfluencesHer-element"/>
+        <ref name="pLastLiteraryActivity-element"/>
+        <ref name="pLiterarySchools-element"/>
+        <ref name="pManuscriptHistory-element"/>
+        <ref name="pMaterialConditions-element"/>
+        <ref name="pModeOfPublication-element"/>
+        <ref name="pMotives-element"/>
+        <ref name="pNonBookMedia-element"/>
+        <ref name="pNonSurvival-element"/>
+        <ref name="pPerformance-element"/>
+        <ref name="pPeriodicalPublication-element"/>
+        <ref name="pPlaceOfPublication-element"/>
+        <ref name="pPressRun-element"/>
+        <ref name="pPrice-element"/>
+        <ref name="pRaritiesFeaturesDecorations-element"/>
+        <ref name="pRelationsWithPublisher-element"/>
+        <ref name="pSerialization-element"/>
+        <ref name="pSubmissionsRejections-element"/>
+        <ref name="pTypeOfPress-element"/>
+        <ref name="production-element"/>
+        <ref name="rBestKnownWork-element"/>
+        <ref name="rDestructionOfWork-element"/>
+        <ref name="rFictionalization-element"/>
+        <ref name="rLandmarkText-element"/>
+        <ref name="rPenalties-element"/>
+        <ref name="rRecognitionName-element"/>
+        <ref name="rRecognitionValue-element"/>
+        <ref name="rRecognitions-element"/>
+        <ref name="rResponses-element"/>
+        <ref name="rSelfDescription-element"/>
+        <ref name="rSheInfluenced-element"/>
+        <ref name="rWritingMilestone-element"/>
+        <ref name="reception-element"/>
+        <ref name="tCharacterName-element"/>
+        <ref name="tCharacterTypeRole-element"/>
+        <ref name="tCharacterization-element"/>
+        <ref name="tGenre-element"/>
+        <ref name="tGenreIssue-element"/>
+        <ref name="tIntertextuality-element"/>
+        <ref name="tMotif-element"/>
+        <ref name="tPlot-element"/>
+        <ref name="tSettingDate-element"/>
+        <ref name="tSettingPlace-element"/>
+        <ref name="tTechniques-element"/>
+        <ref name="tThemeTopic-element"/>
+        <ref name="tToneStyle-element"/>
+        <ref name="tVoiceNarration-element"/>
+        <ref name="textualFeatures-element"/>        
+      </choice>
+    </zeroOrMore>
+  </define>
+  
+  
+  
+  <define name="authorSummary-inclusion" combine="choice">
+    <zeroOrMore>
+      <choice>
+        <ref name="ExtentOfOeuvre-element"/>
+        <ref name="genericRange-element"/>
+        <ref name="tGenre-element"/>
+        <ref name="Div1-inclusion"/>
+      </choice>
+    </zeroOrMore>
+  </define>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ <!-- ALL ELEMENTS -->  
+  
+  <!--
+    
+    Declare an "INCLUSION" mode for each and every element (except the
+    root). These declare that the pattern must match the given element
+    and its attributes, but its content can consist of *any* combination
+    of *any* Orlando Writing DTD elements, and also text nodes iff this
+    element had PCDATA per the writing DTD.
+    
+  --> 
+  
+  
+  
+  
+  <!-- ATTRIBUTES -->
+  
+  
+  <define name="attlist.Div0" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.Div1" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.Div2" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.Div3" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.ExtentOfOeuvre" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.Writing" combine="interleave">
+    <optional>
+      <ref name="ID-attribute"/>
+    </optional>
+    <optional>
+      <ref name="sex-attribute"/>
+    </optional>
+    <optional>
+      <ref name="person-attribute"/>
+    </optional>
+  </define>
+    
+  <define name="attlist.authorSummary" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.chronProse" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.genericRange" combine="interleave">
+    <optional>
+      <ref name="ID-attribute"/>
+      <zeroOrMore>
+        <ref name="tGenre-element"/>
+      </zeroOrMore>
+    </optional>
+  </define>
+  
+  <define name="attlist.nonStandardDescriptor" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.p" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pAdvertising" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pAnthologization" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pArchivalLocation" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pAttitudes" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pAuthorship" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="AUTHORSHIPCONTROVERSY">
+        <choice>
+          <value>FORGERY</value>
+          <value>SPURIOUS</value>
+          <value>MISATTRIBUTION</value>
+          <value>DOUBTFUL</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="CONTROVERSYDATE">
+        <choice>
+          <value>PRESENT</value>
+          <value>HISTORICAL</value>
+          <value>ONGOING</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="AUTHORNAMETYPE">
+        <choice>
+          <value>ANONYMOUS</value>
+          <value>PSEUDONYMOUS</value>
+          <value>ALLUSIVEAUTHORSHIP</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="COLLABORATION">
+        <value>COLLABORATIONYES</value>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.pCirculation" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pContract" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pCopyright" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pDedication" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pEarnings" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pEditions" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pFirstLiteraryActivity" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pInfluencesHer" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="INFLUENCETYPE">
+        <choice>
+          <value>LITERARY</value>
+          <value>INTELLECTUAL</value>
+          <value>FAMILIAL</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.pLastLiteraryActivity" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pLiterarySchools" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="INVOLVEMENT">
+        <choice>
+          <value>INVOLVEMENTYES</value>
+          <value>INVOLVEMENTNO</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <ref name="reg-attribute"/>
+    </optional>
+  </define>
+  
+  <define name="attlist.pManuscriptHistory" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pMaterialConditions" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="DISPLACEMENT">
+        <value>DISPLACEMENTYES</value>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.pModeOfPublication" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="PUBLICATIONMODE">
+        <choice>
+          <value>SELF-PUBLICATION</value>
+          <value>PRIVATELYPRINTED</value>
+          <value>LIMITEDEDITION</value>
+          <value>PIRATED</value>
+          <value>SUBSCRIPTION</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.pMotives" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="MOTIVETYPE">
+        <choice>
+          <value>ASCRIBED</value>
+          <value>SELF-IDENTIFIED</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.pNonBookMedia" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pNonSurvival" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="TYPEOFNONSURVIVAL">
+        <choice>
+          <value>ACCIDENT</value>
+          <value>UNKNOWN</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.pPerformance" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pPeriodicalPublication" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pPlaceOfPublication" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pPressRun" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pPrice" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pRaritiesFeaturesDecorations" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pRelationsWithPublisher" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="RELATIONSHIPTYPE">
+        <choice>
+          <value>PERSONAL</value>
+          <value>PROFESSIONAL</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.pSerialization" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="FORMOFSERIALIZATION">
+        <choice>
+          <value>VOLUMEFORM</value>
+          <value>PERIODICALFORM</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.pSubmissionsRejections" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.pTypeOfPress" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.production" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+   
+  <define name="attlist.quote" combine="interleave">
+    <ref name="ID-attribute"/>
+    <ref name="direct-attribute"/>
+  </define>
+  
+  <define name="attlist.rBestKnownWork" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.rDestructionOfWork" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="DESTROYEDBY">
+        <choice>
+          <value>SELF</value>
+          <value>OTHER</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.rFictionalization" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.rLandmarkText" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.rPenalties" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="CENSORSHIP">
+        <value>CENSORSHIPYES</value>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.rRecognitionName" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <ref name="reg-attribute"/>
+    </optional>
+  </define>
+  
+  <define name="attlist.rRecognitionValue" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.rRecognitions" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.rResponses" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="RESPONSETYPE">
+        <choice>
+          <value>RE-EVALUATION</value>
+          <value>RECENT</value>
+          <value>INITIAL</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="FORMALITY">
+        <choice>
+          <value>FORMAL</value>
+          <value>INFORMAL</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="GENDEREDRESPONSE">
+        <choice>
+          <value>ADFEMINAM</value>
+          <value>GENDEREDYES</value>
+          <value>GENDEREDNO</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.rSelfDescription" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.rSheInfluenced" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.rWritingMilestone" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.reception" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+
+  <define name="attlist.tCharacterName" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <ref name="reg-attribute"/>
+    </optional>
+  </define>
+  
+  <define name="attlist.tCharacterTypeRole" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="PROTAGONIST">
+        <choice>
+          <value>MALE</value>
+          <value>FEMALE</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.tCharacterization" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.tGenreIssue" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.tIntertextuality" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="INTERTEXTTYPE">
+        <choice>
+          <value>ALLUSIONACKNOWLEDGED</value>
+          <value>ALLUSIONUNACKNOWLEDGED</value>
+          <value>QUOTATION</value>
+          <value>MISQUOTATION</value>
+          <value>PARODY</value>
+          <value>SATIRE</value>
+          <value>IMITATION</value>
+          <value>ADAPTATION-UPDATE</value>
+          <value>PREQUEL</value>
+          <value>CONTINUATION</value>
+          <value>ANSWER</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="GENDEROFAUTHOR">
+        <choice>
+          <value>FEMALE</value>
+          <value>MALE</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.tMotif" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="MOTIFNAME"/>
+    </optional>
+  </define>
+  
+  <define name="attlist.tPlot" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.tSettingDate" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="SETTINGDATETYPE">
+        <choice>
+          <value>PAST</value>
+          <value>PRESENT</value>
+          <value>FUTURE</value>
+          <value>AMBIGUOUS</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.tSettingPlace" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="SETTINGPLACETYPE">
+        <choice>
+          <value>FICTIVE</value>
+          <value>REAL</value>
+          <value>IDENTIFIABLE</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="SETTINGCLASS">
+        <choice>
+          <value>UPPERCLASS</value>
+          <value>WORKINGCLASS</value>
+          <value>MIDDLECLASS</value>
+          <value>WIDERANGE</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.tTechniques" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <attribute name="TECHNIQUETYPE">
+        <choice>
+          <value>DICTION</value>
+          <value>VERSIFICATION</value>
+          <value>NONSTANDARDENGLISH</value>
+          <value>IMAGERY</value>
+          <value>AURALEFFECTS</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.tThemeTopic" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.tToneStyle" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.tVoiceNarration" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.textScope" combine="interleave">
+    <ref name="ID-attribute"/>
+    <optional>
+      <ref name="dbRef-attribute"/>
+    </optional>
+    <optional>
+      <ref name="placeHolder-attribute"/>
+    </optional>
+  </define>
+  
+  <define name="attlist.textualFeatures" combine="interleave">
+    <ref name="ID-attribute"/>
+  </define>
+  
+  <define name="attlist.title" combine="interleave">
+    <ref name="entity-attributes"/>
+    <optional>
+      <ref name="titleType-attribute"/>
+    </optional>
+    <optional>
+      <ref name="reg-attribute"/>
+    </optional>
+    <optional>
+      <ref name="rend-attribute"/>
+    </optional>
+  </define>
+  
+</grammar>

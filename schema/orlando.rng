@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" 
+  xmlns="http://relaxng.org/ns/structure/1.0" 
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"    >
+  <!--
+    orlando_.rnc
+    This schema combimes Biography, Writing, Event, and Entry elements within an Orlando root element in the pattern:
+    ORLANDO-CWRC/ENTRY/ORLANDOHEADER?/BIOGRAPHY*|WRITING*
+    the intent is to provide a schema for the Canadian Writing and Research Collaboratory (CWRC)
+    literary team based in Orlando's SGML documents structure.
+    
+    Written 2010-08 by Mariana Paredes-Olea
+    revised 2013-01-29
+    revised 2013-02-19
+    revised 2013-03-23
+  -->
+  
+  <include href="http://cwrc.ca/schema/orlando_common_schema.rng">
+    <start>
+      <ref name="orlando-element"/>
+    </start>
+  </include>
+  <include href="biography.rng"/>
+  <include href="writing.rng"/>
+  <!--<include href="entry.rng"/>-->
+  <include href="events.rng"/>
+  
+  
+  <define name="orlando-element">
+    <element name="ORLANDO">
+      <ref name="ID-attribute"/>
+      <optional>
+        <ref name="header-element"/>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <ref name="Biography-element"/>
+          <ref name="Writing-element"/>
+          <!--<ref name="Entry-element"/>-->
+          <ref name="Events-element"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  
+
+</grammar>

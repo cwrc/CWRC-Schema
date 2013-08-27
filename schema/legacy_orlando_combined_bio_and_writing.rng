@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    * Legacy Orlando Experimental data for Ovis, Mandala and others 2012 and prior
+    * roughly follows combined-bio_nad_writing.rng
+    * details of the generation of these documents
+    * ==> orlando CVS: developement/docs/WORK-NOTES - section "7.0 Combined Entries - Mandala, Viz, etc. experiments"
+    *       and section "10.0 Secondary Services"
+    *
+    * 2013-02-01
+-->
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"   
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+    >
+
+
+    <start>
+        <ref name="Orlando-element" />
+    </start>
+
+    <define name="Orlando-element">
+        <element name="ORLANDO">
+            <ref name="attlist.Orlando"/>
+            <zeroOrMore>
+                <ref name="Entry-element" />                
+            </zeroOrMore>
+        </element>
+    </define>
+    
+
+    <define name="Entry-element">
+        <element name="ENTRY">
+            <ref name="attlist.Entry"/>
+            <oneOrMore>
+                <choice>
+                    <externalRef href="biography.rng" />
+                    <externalRef href="writing.rng" />
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+   
+   
+    <define name="attlist.Entry" combine="interleave">
+        <optional>
+            <attribute name="ID">
+                <data type="ID"/>
+            </attribute>
+        </optional>
+    </define>
+    
+    <define name="attlist.Orlando" combine="interleave">
+        <optional>
+            <attribute name="ID">
+                <data type="ID"/>
+            </attribute>
+        </optional>
+        <attribute name="date">
+            <data type="date" />
+        </attribute>
+    </define>
+    
+         
+    
+</grammar>

@@ -1,0 +1,27 @@
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOnum PUBLIC
+       "ISO 8879-1986//ENTITIES Numeric and Special Graphic//EN">
+     %ISOnum;
+-->
+
+<!--  These entitites from ISOnum set included in the Orlando Project DTDs:
+	characters for currency
+-->
+
+<!ENTITY curren SDATA "[curren]"--=general currency sign-->
+<!ENTITY pound  SDATA "[pound ]"--=pound sign-->
+<!ENTITY dollar SDATA "[dollar]"--=dollar sign-->
+<!ENTITY cent   SDATA "[cent  ]"--=cent sign-->
+<!ENTITY yen    SDATA "[yen   ]"--/yen =yen sign-->
+<!ENTITY copy   SDATA "[copy  ]"--=copyright sign-->
+<!ENTITY reg    SDATA "[reg   ]"--/circledR =registered sign-->
+<!ENTITY trade  SDATA "[trade ]"--=trade mark sign-->
+<!ENTITY deg    SDATA "[deg   ]"--=degree sign-->
+<!ENTITY amp    SDATA "[amp   ]"--=ampersand-->
+<!ENTITY prime  SDATA "[prime ]"--/prime =prime or minute-->
+<!ENTITY Prime  SDATA "[Prime ]"--=double prime or second-->

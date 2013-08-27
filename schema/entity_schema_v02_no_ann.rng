@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    CANADIAN WRITING RESEARCH COLLABORATORY - ENTITY SCHEMA
+    Based on elements of EAC - CPF, MADS, and FOAF
+    
+    Schema Type: Relax NG Schema XML
+    
+    Version: 2012-04
+    
+    Summary: The present CWRC Entity Schema outlines a format for the description of persons, corporate bodies,
+    places, titles (frbr:work), and event entities. It is based on concepts from ISAAR(CPF),
+    EAC-CFP standards, MADS, and FOAF and designed for implementation within the Fedora Commons framework.
+    Most administrative metadata (equivalent to EAC-CPF\'s <control> element) should be captured in
+    Fedora Object datastreams such as object properties, AUDIT, RELS-EXT (object-level relations),
+    or worlkflow. Content-level relations are captured in the entity record itself.
+    
+    **********
+    Release Notes: V02. Second version includes definition of person and organization entity types.
+    Subsequent versions will model places, titles (frbr:work), and event entities.
+    ********** 
+    
+    **********
+    For comments, questions, and suggestions please contact Susan Brown, CWRC project leader
+    (sbrown@uoguelph.ca) or Mariana Paredes-Olea, CWRC Metadata Coordinator (paredeso@ualberta.ca)
+    **********    
+-->
+
+<!-- PENDING WORK:
+    decide whether to keep localType elements
+    
+    to be implemented:
+        noteTypes
+        mandate?
+        useDates?
+        certainty - granularize
+        source - granularize
+        note - granularize
+        noteTypes
+        languageUsed
+        contact
+        relation types: family, parent, friend, child, sibling, marriage, affiliation, associative (see cpfRelation and
+        @cpfRelationType), 
+        position?
+        
+        
+    document interoperability with FOAF
+    
+    alphabetize definitions and values
+    value element names - interface labels
+    
+    translate interface labels
+        
+        
+    implement certainty in possible triples
+    
+    partType
+    variantType
+    dateType
+    -> defined in appinfo
+    
+    personType values
+    ->  in define node
+    
+    
+    
+    
+-->
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <choice>
+            <ref name="cwrc-element"/>
+            <ref name="entity-element"/>
+        </choice>
+    </start>
+
+
+
+    <define name="cwrc-element">
+        <element name="cwrc">
+            <a:documentation>Group of CWRC records</a:documentation>
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <oneOrMore>
+                <ref name="entity-element"/>
+            </oneOrMore>
+        </element>
+    </define>
+
+
+
+    <define name="entity-element">
+        <element name="entity">
+            <a:documentation>CWRC entity record</a:documentation>
+            <choice>
+                <ref name="person-element"/>
+                <ref name="organization-element"/>
+                <!--<ref name="title"/>
+                <ref name="place"/>
+                <ref name="event"/>-->
+            </choice>
+        </element>
+    </define>
+    
+    
+    <define name="person-element">
+        <element name="person">            
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <interleave>
+                <ref name="personRecordInfo-element"/>
+                <ref name="identity-element"/>
+                <optional>
+                    <ref name="personDescription-element"/>
+                </optional>
+            </interleave>
+            <optional>
+                <ref name="relations-element"/>
+            </optional>
+        </element>
+    </define>
+    
+    
+    <define name="organization-element">
+        <element name="organization">
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <interleave>
+                <ref name="orgRecordInfo-element"/>
+                <ref name="identity-element"/>
+                <optional>
+                    <ref name="orgDescription-element"/>
+                </optional>
+            </interleave>
+            <optional>
+                <ref name="relations-element"/>
+            </optional>
+        </element>
+    </define>    
+
+
+    <define name="personRecordInfo-element">
+        <element name="recordInfo">
+            <a:documentation>Captures record-level information. Components of
+                this element are kept to a minimum given that administrative and
+                object-level metadata is captured in other FOXML
+                datastreams.</a:documentation>
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <interleave>
+                <optional>
+                    <ref name="personTypes-element"/>            
+                </optional>
+                <optional>
+                    <ref name="originInfo-element"/>
+                </optional>
+                <optional>
+                    <ref name="entityId-element"/>
+                    <!-- mpo: change to mandatory -->
+                </optional>
+            </interleave>
+        </element>
+    </define>
+    
+    
+    <define name="orgRecordInfo-element">
+        <element name="recordInfo">
+            <a:documentation>Captures record-level information. Components of
+                this element are kept to a minimum given that administrative and
+                object-level metadata is captured in other FOXML
+                datastreams.</a:documentation>
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <interleave>
+                <optional>
+                    <ref name="orgTypes-element"/>            
+                </optional>
+                <optional>
+                    <ref name="originInfo-element"/>
+                </optional>
+                <optional>
+                    <ref name="entityId-element"/>
+                    <!-- mpo: change to mandatory -->
+                </optional>
+            </interleave>
+        </element>
+    </define>
+    
+
+    <define name="identity-element">
+        <element name="identity">
+            <a:documentation>A container element grouping data for
+                identification of a CWRC entity instance</a:documentation>
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <interleave>
+                <ref name="preferredForm-element"/>
+                <!-- mpo: old "authorityLabel" -->
+                <optional>
+                    <ref name="variantForms-element"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="sameAs-element"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+
+
+    <define name="personDescription-element">
+        <element name="description">
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <interleave>
+                <optional>
+                    <ref name="existDates-element"/>
+                </optional>
+                <optional>
+                    <ref name="occupations-element"/>
+                </optional>
+                <optional>
+                    <ref name="activities-element"/>
+                </optional>
+                <optional>
+                    <ref name="genders-element"/>
+                </optional>
+                <optional>
+                    <ref name="researchInterests-element"/>
+                </optional>
+                <!--<optional>
+                    <ref name="contact-element"/>
+                </optional>-->
+                <optional>
+                    <ref name="descriptiveNotes-element"/>
+                </optional>                
+                <optional>
+                    <ref name="relatedResources-element"/>
+                </optional>
+            </interleave>
+        </element>
+    </define>
+    
+    
+    <define name="orgDescription-element">
+        <element name="description">
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <interleave>
+                <optional>
+                    <ref name="existDates-element"/>
+                </optional>                
+                <optional>
+                    <ref name="activities-element"/>
+                </optional>                
+                <optional>
+                    <ref name="researchInterests-element"/>
+                </optional>
+                <!--<optional>
+                    <ref name="contact-element"/>
+                    </optional>-->
+                <optional>
+                    <ref name="descriptiveNotes-element"/>
+                </optional>                
+                <optional>
+                    <ref name="relatedResources-element"/>
+                </optional>
+            </interleave>
+        </element>
+    </define>
+    
+    
+    <define name="occupations-element">
+        <element name="occupations">
+            <zeroOrMore>
+                <ref name="occupation-element"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="activities-element">
+        <element name="activities">
+            <zeroOrMore>
+                <ref name="activity-element"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="researchInterests-element">
+        <element name="researchInterests">
+            <zeroOrMore>
+                <ref name="interest-element"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="genders-element">
+        <element name="genders">
+            <zeroOrMore>
+                <ref name="gender-element"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="occupation-element">
+        <element name="occupation">
+            <interleave>
+                <optional>
+                    <ref name="term-element"/>
+                </optional>
+                <!--from EAC CPF
+                    <zeroOrMore>
+                    <ref name="e.placeEntry"/>
+                    </zeroOrMore>-->
+                <zeroOrMore>
+                    <ref name="dateSingle-element"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="dateRange-element"/>
+                </zeroOrMore>
+                <!--from EAC CPF
+                    <optional>
+                    <ref name="e.citation"/>
+                    </optional>-->
+                <optional>
+                    <ref name="note-element"/>
+                </optional>
+            </interleave>
+        </element>
+    </define>
+    
+    <define name="relatedResources-element">
+        <element name="relatedResources">
+            <optional>
+                <ref name="resource-element"/>
+            </optional>
+        </element>
+    </define>
+    
+    <define name="activity-element">
+        <element name="activity">
+            <optional>
+                <ref name="term-element"/>
+            </optional>
+        </element>
+    </define>
+    
+    <define name="interest-element">
+        <element name="interest">
+            <optional>
+                <ref name="term-element"/>
+            </optional>
+        </element>
+    </define>
+    
+    <define name="gender-element">
+        <element name="gender">
+            
+            
+            
+            <optional>
+                <choice>
+                    <value>female</value>
+                    <value>male</value>
+                    <value>undetermined</value>
+                    <value>transgendered</value>
+                    <data a:en="Specify" type="string"/>
+                </choice>
+            </optional>
+        </element>
+    </define>
+    
+    <define name="resource-element">
+        <element name="resource">
+            <data type="anyURI"/>
+        </element>
+    </define>
+    
+    
+    <define name="term-element">
+        <element name="term">            
+            
+                                
+            
+            <text/>
+        </element>
+    </define>
+    
+    
+    
+    <define name="relations-element">
+        <element name="relations">
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <optional>
+                <ref name="lang-attribute"/>
+            </optional>            
+            <!--<zeroOrMore>
+                <ref name="e.cpfRelation"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="e.resourceRelation"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="e.functionRelation"/>
+            </zeroOrMore>-->
+        </element>
+    </define>
+
+    
+    <define name="originInfo-element">
+        <element name="originInfo">
+            
+            
+            
+            <zeroOrMore>
+                <ref name="projectId-element"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="recordIdentifier-element"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="recordCreationDate-element"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="recordChangeDate-element"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+
+    <define name="projectId-element">
+        <element name="projectId">
+            <a:documentation>Similar to EAC-CPF\'s agencyCode. In CWRC\'s
+                context, projectId captures an identifieer for the originating
+                project, but subsequent modifications should be captured in
+                FOXML\'s datastreams</a:documentation>
+            
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <data type="NCName"/>
+        </element>
+    </define>
+    
+    
+    <define name="recordIdentifier-element">
+        <element name="recordIdentifier">
+            <optional>
+                <ref name="source-attribute"/>
+            </optional>
+            <data type="string"/>
+        </element> <!-- mads -->
+    </define>
+    
+    
+    <define name="recordCreationDate-element">
+        <element name="recordCreationDate">
+            <zeroOrMore>
+                <ref name="dateSingle-element"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    <define name="recordChangeDate-element">
+        <element name="recordChangeDate">
+            <zeroOrMore>
+                <ref name="dateSingle-element"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    
+    
+    <define name="source-attribute">
+        <attribute name="anyURI"/>
+    </define>
+    
+
+    <define name="entityId-element">
+        <element name="entityId">
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <data type="NMTOKEN"/>
+        </element>
+    </define>
+
+
+
+    <define name="preferredForm-element">
+        <element name="preferredForm">
+            <a:documentation>An element used to indicate which recorded entity
+                name is the preferred one for display purposes in a given
+                context.</a:documentation>
+            
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <oneOrMore>
+                <ref name="namePart-element"/>
+            </oneOrMore>
+            <optional>
+                <ref name="displayLabel-element"/>
+            </optional>
+        </element>
+    </define>
+
+
+
+    <define name="displayLabel-element">
+        <element name="displayLabel">
+            <text/>
+        </element>
+    </define>
+
+
+
+    <define name="namePart-element">
+        <element name="namePart">
+            
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <optional>
+                <ref name="partType-attribute"/>
+            </optional>
+            <text/>
+        </element>
+    </define>
+
+
+
+    <define name="partType-attribute">
+        <attribute name="partType">
+            <a:documentation/>
+            
+            <data type="string"/>
+        </attribute>
+    </define>
+
+
+
+    <define name="variantType-element">
+        <element name="variantType">
+
+            
+
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <data type="string"/>
+        </element>
+    </define>
+
+
+
+    <define name="existDates-element">
+        <element name="existDates">
+
+            
+
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <interleave>
+                <zeroOrMore>
+                    <ref name="dateSingle-element"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="dateRange-element"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+
+
+    <!--<define name="entityType-element">
+        <element name="entityType">
+            <choice>
+                <value a:fr="" a:en="Writer">person</value>
+                <value a:fr="" a:en="organization">organization</value>
+                <value a:fr="" a:en="title">title</value>
+                <value a:fr="" a:en="place">place</value>
+                <value a:fr="" a:en="event">event</value>
+                <value a:fr="" a:en="biological species">biological species</value>
+                <value a:fr="" a:en="abstract concept">abstract concept</value>
+                <value a:fr="" a:en="other named entity">other named entity</value>
+            </choice>
+        </element>
+    </define>-->
+
+
+
+    <define name="personTypes-element">
+        <element name="personTypes">
+            <a:documentation>Captures generic person types defined by each
+                project. Based on WEAC-CPF\'s @localType.</a:documentation>           
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <zeroOrMore>
+                <ref name="personType-element"/>
+            </zeroOrMore>
+        </element>
+    </define>
+
+    <define name="personType-element">
+        <element name="personType">
+            <a:documentation>Captures generic person types defined by each
+                project. Based on WEAC-CPF\'s @localType.</a:documentation>
+            
+            <data type="string"/>
+        </element>
+    </define>
+
+
+
+    <define name="orgTypes-element">            
+            <element name="orgTypes">
+                <a:documentation>Captures generic person types defined by each
+                    project. Based on WEAC-CPF\'s @localType.</a:documentation>           
+                <optional>
+                    <ref name="id-attribute"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="orgType-element"/>
+                </zeroOrMore>
+            </element>        
+    </define>
+    
+    
+    <define name="orgType-element">
+        <element name="orgType">
+            <a:documentation>Captures generic organization types. Based on EAC-CPF\'s @localType.</a:documentation>
+            
+            
+            
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <data type="string"/>
+        </element>
+    </define>
+    
+    
+
+    <define name="sameAs-element">
+        <element name="sameAs">
+            
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <optional>
+                <ref name="cert-attribute"/>
+            </optional>
+            <data type="anyURI"/>
+        </element>
+    </define>
+
+
+
+    <define name="cert-attribute">
+        <!-- mpo: check if attribute or element -->
+        <attribute name="cert" a:defaultValue="definite">
+
+            
+
+            <choice>
+                <value a:en="definite" a:fr="">4</value>
+                <value a:en="reasonably certain" a:fr="">3</value>
+                <value a:en="probable" a:fr="">2</value>
+                <value a:en="speculative" a:fr="">1</value>
+            </choice>
+        </attribute>
+    </define>
+
+
+    <define name="dateSingle-element">
+        <element name="dateSingle">
+
+            
+
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <optional>
+                <ref name="cert-attribute"/>
+            </optional>
+            <interleave>
+                <ref name="date-pattern"/>
+            </interleave>
+        </element>
+    </define>
+
+
+
+    <define name="dateRange-element">
+        <element name="dateRange">
+
+            
+
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <optional>
+                <ref name="cert-attribute"/>
+            </optional>
+            <interleave>
+                <optional>
+                    <ref name="fromDate-element"/>
+                </optional>
+                <optional>
+                    <ref name="toDate-element"/>
+                </optional>                
+            </interleave>
+        </element>
+    </define>
+
+
+
+    <define name="fromDate-element">
+        <element a:id="fromDate" name="fromDate">
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <ref name="date-pattern"/>
+        </element>
+    </define>
+
+
+
+    <define name="toDate-element">
+        <element a:id="toDate" name="toDate">
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <ref name="date-pattern"/>
+        </element>
+    </define>
+
+
+
+    <define name="date-pattern">
+        <interleave>
+            <ref name="standardDate-element"/>
+            <optional>
+                <ref name="textDate-element"/>
+            </optional>
+            <optional>
+                <ref name="dateType-element"/>
+            </optional>
+            <optional>
+                <ref name="note-element"/>
+            </optional>
+        </interleave>
+    </define>
+
+
+
+    <define name="standardDate-element">
+        <element name="standardDate">
+
+            
+
+            <choice>
+                <data type="date"/>
+                <data type="gYearMonth"/>
+                <data type="gYear"/>
+                <data type="dateTime"/>
+                <data type="string">
+                    <!-- mpo: regex - orlando dates; check datatype -->
+                    <param name="pattern"
+                        >((\d{4})\D(0[1-9]|1[0-2])\D([12]\d|0[1-9]|3[01])|(\d{4})(0[1-9]|1[0-2])([12]\d|0[1-9]|3[01]))</param>
+                    <!-- mpo: check if replace \d for hyphens -->
+                </data>
+                <data type="string">
+                    <param name="pattern"
+                        >(\d{4})((\D(0[1-9]|1[0-2])\D)|(0[1-9]|1[0-2]))</param>
+                </data>
+                <data type="string">
+                    <param name="pattern">(\d{4})(\D{2})?</param>
+                </data>
+            </choice>
+        </element>
+    </define>
+
+
+
+    <define name="textDate-element">
+        <element name="textDate">
+
+            
+
+            <text/>
+        </element>
+    </define>
+
+
+
+    <define name="dateType-element">
+        <element name="dateType">
+            <a:documentation>Recommended values: birth, death, marriage, flourish, circa, residence,
+            travel (person), start, end, flourish, circa (organization), original issuance, edition, reprint (works).</a:documentation>
+
+            
+
+            <data type="string"/>
+        </element>
+    </define>
+
+
+
+    <define name="id-attribute" ns="http://www.w3.org/XML/1998/namespace">
+        <attribute a:id="xmlID" name="xml:id">
+            <data type="NCName">
+                <!-- Because of restrictions in Relax NG, the expression of this attribute is NCName. 
+                    This is not strictly conformant to the xml:id specification, though necessary in order for
+                    to validate. The XML Schema version of this attribute should be defined as ID -->
+            </data>
+        </attribute>
+    </define>
+
+
+
+    <define name="descriptiveNotes-element">
+        <element name="descriptiveNotes">
+            
+            
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <oneOrMore>
+                <ref name="note-element"/>
+            </oneOrMore> 
+        </element>
+    </define>
+
+
+
+    <define name="p-element">
+        <element name="p">
+            <text/>
+        </element>
+    </define>
+
+
+
+    <define name="access-element">
+        <element name="access">            
+            
+            
+            
+            <choice>
+                <value a:en="public">public</value>
+                <value a:en="project">project</value>
+                <value a:en="private">private</value>
+            </choice>
+            
+        </element>
+    </define>
+
+
+
+    <define name="note-element">
+        <element name="note">
+
+            
+
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <optional>
+                <ref name="lang-attribute"/>
+            </optional>
+            <!--<optional>
+                <ref name="noteType-attribute"/>
+            </optional>-->
+            <interleave>
+                <ref name="projectId-element"/>
+                <ref name="access-element"/>
+                <oneOrMore>
+                    <ref name="p-element"/>
+                </oneOrMore>
+            </interleave>
+        </element>
+    </define>
+    
+    
+    
+    
+
+    <define name="lang-attribute" ns="http://www.w3.org/XML/1998/namespace">
+        <attribute name="xml:lang">
+
+            
+            
+            <data type="language"/>
+        </attribute>
+    </define>
+
+
+
+    <define name="variantForms-element">
+        <element name="variantForms">
+            <zeroOrMore>
+                <ref name="variant-element"/>
+            </zeroOrMore>
+        </element>
+    </define>
+
+
+
+    <define name="variant-element">
+        <element name="variant">
+
+            
+
+            <interleave>
+                <oneOrMore>
+                    <ref name="namePart-element"/>
+                </oneOrMore>
+                <zeroOrMore>
+                    <!-- mpo: check if zeroOrMore or oneOrMore -->
+                    <ref name="variantType-element"/>
+                </zeroOrMore>
+                <optional>
+                    <ref name="authorizedBy-element"/>
+                </optional>
+            </interleave>
+        </element>
+    </define>
+
+
+
+    <define name="authorizedBy-element">
+        <element name="authorizedBy">
+            <a:documentation>authorizedBy element registers projects that use a
+                variant name as authorized or preferred form in their local
+                context.</a:documentation>
+
+            <oneOrMore>
+                <ref name="projectId-element"/>
+            </oneOrMore>
+        </element>
+    </define>
+
+
+
+    <define name="link-element">
+        <element name="link">
+            <optional>
+                <ref name="id-attribute"/>
+            </optional>
+            <data type="anyURI"/>            
+        </element>
+    </define>
+
+    
+
+</grammar>

@@ -1,0 +1,2580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                         "http://www.docbook.org/xml/4.5/docbookx.dtd">
+
+<article>
+   <title>RELAX-NG Schema Documentation</title>
+   <section>
+      <title>Grammar Documentation</title>
+      <para>
+Namespace:
+cwrc.ca/workflow</para>
+      <section>
+         <title>
+Element:
+activity</title>
+         <table role="element" id="element-activity.activity">
+            <title>
+Element:
+activity</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Element activity captures information on one or more process(es) applied to a Fedora object aas well as its completion status. </para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+			
+						
+			
+			
+				
+			
+?
+,
+			
+				<link linkend="element-note">
+%
+element-note
+;
+</link>
+			
+?
+
+		</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Attributes</para>
+                     </entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>category</entry>
+                              <entry>
+Enumeration:
+
+"
+created
+"
+|
+"
+deposited
+"
+|
+"
+metadata_contribution
+"
+|
+"
+content_contribution
+"
+|
+"
+checked
+"
+|
+"
+machine_processed
+"
+|
+"
+user-tagged
+"
+|
+"
+rights_assigned
+"
+|
+"
+published
+"
+|
+"
+peer-reviewed/evaluated
+"
+|
+"
+withdrawn
+"
+|
+"
+deleted
+"
+|</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Activity categories or ‘primitives’ put together during workflow meetings in October 2010 (re: SB, SF, MP meeting on workflow values), and revised in November 2011 (MP). The categories are meant to represent a set of constant values to be used across projects to allow workflow general procedures to be applied to objects CWRC-wide without restricting workflow stamps (see stamp attribute).</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>status</entry>
+                              <entry>
+Enumeration:
+
+"
+c
+"
+|
+"
+ipr
+"
+|
+"
+p
+"
+|
+"
+i
+"
+|</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Attribute status captures completion information on a particular process.</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>stamp</entry>
+                              <entry>
+Enumeration:
+
+"
+niso:AO
+"
+|
+"
+niso:SMUR
+"
+|
+"
+niso:AM
+"
+|
+"
+niso:P
+"
+|
+"
+niso:VoR
+"
+|
+"
+niso:CVoR
+"
+|
+"
+niso:EVoR
+"
+|
+"
+orl:SUB
+"
+|
+"
+orl:RWT
+"
+|
+"
+orl:REV
+"
+|
+"
+orl:RBV
+"
+|
+"
+orl:CAS
+"
+|
+"
+orl:CFT
+"
+|
+"
+orl:CFB
+"
+|
+"
+orl:PUB
+"
+|
+"
+orl:ENH
+"
+|
+"
+orl:TC
+"
+|
+"
+orl:PUBR
+"
+|
+"
+cwrc:cre
+"
+|
+"
+cwrc:dep
+"
+|
+"
+cwrc:cvr
+"
+|
+"
+cwrc:evr
+"
+|
+"
+cwrc:ckd
+"
+|
+"
+cwrc:tag
+"
+|
+"
+cwrc:rights_asg
+"
+|
+"
+cwrc:pub
+"
+|
+"
+cwrc:rev
+"
+|
+"
+cwrc:wdr
+"
+|
+"
+cwrc:del
+"
+|</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Activity types or stamps. These finer categories can be created on a project-specific basis, and particular projects may wish to rename these categories (i.e. Orlando may want to have ‘cas’ instead of ‘ckd’, another project may want to give it a stamp that according to a French name),, but the basic activities categories (primitives) should stay the same. NOTE: the values in the Activity type column are not exhaustive--more values can be created. The included values represent a minimum of stamps that can be offered as default to all projects.</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+assigned</title>
+         <table role="element" id="element-assigned.assigned">
+            <title>
+Element:
+assigned</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Element assigned captures one or more assigned users and/or tools as well as optional note for next workflow steps.</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+			
+			
+				
+			
+?
+,
+			
+			
+(
+
+				
+(
+<link linkend="element-user">
+%
+element-user
+;
+</link>|<link linkend="element-tool">
+%
+element-tool
+;
+</link>
+)
+
+			
+)+
+,
+			
+				<link linkend="element-message">
+%
+element-message
+;
+</link>
+			
+?
+
+		</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Attributes</para>
+                     </entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>process</entry>
+                              <entry>
+xsd:
+string</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Some id used to trigger a process by some tool.</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>category</entry>
+                              <entry>
+Enumeration:
+
+"
+created
+"
+|
+"
+deposited
+"
+|
+"
+metadata_contribution
+"
+|
+"
+content_contribution
+"
+|
+"
+checked
+"
+|
+"
+machine_processed
+"
+|
+"
+user-tagged
+"
+|
+"
+rights_assigned
+"
+|
+"
+published
+"
+|
+"
+peer-reviewed/evaluated
+"
+|
+"
+withdrawn
+"
+|
+"
+deleted
+"
+|</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Activity categories or ‘primitives’ put together during workflow meetings in October 2010 (re: SB, SF, MP meeting on workflow values), and revised in November 2011 (MP). The categories are meant to represent a set of constant values to be used across projects to allow workflow general procedures to be applied to objects CWRC-wide without restricting workflow stamps (see stamp attribute).</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+auto</title>
+         <table role="element" id="element-workflow.workflow.auto">
+            <title>
+Element:
+auto</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Automated workflow record.</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+											
+						
+                           <link linkend="common-content">
+%
+common-content
+;
+</link>
+					
+                        </para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Attributes</para>
+                     </entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>date</entry>
+                              <entry>
+xsd:
+date</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Date/time information</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>userID</entry>
+                              <entry>
+xsd:
+NCName</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>User ID</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>toolID</entry>
+                              <entry>
+xsd:
+NCName</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Tool ID</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>datastreamID</entry>
+                              <entry>
+xsd:
+string</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para/>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+body</title>
+         <table role="element" id="element-body.body">
+            <title>
+Element:
+body</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Message body</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+			
+			
+TEXT
+
+		</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+cwrc</title>
+         <table role="element" id="element-cwrc.cwrc">
+            <title>
+Element:
+cwrc</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Element cwrc can hold a collection of workflow elements.</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+			
+			
+(
+
+				<link linkend="element-workflow">
+%
+element-workflow
+;
+</link>
+			
+)+
+
+		</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+human</title>
+         <table role="element" id="element-workflow.workflow.human">
+            <title>
+Element:
+human</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>User-generated workflow record.</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+												
+						
+                           <link linkend="common-content">
+%
+common-content
+;
+</link>
+					
+                        </para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Attributes</para>
+                     </entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>date</entry>
+                              <entry>
+xsd:
+date</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Date/time information</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>userID</entry>
+                              <entry>
+xsd:
+NCName</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>User ID</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>toolID</entry>
+                              <entry>
+xsd:
+NCName</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Tool ID</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>datastreamID</entry>
+                              <entry>
+xsd:
+string</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para/>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+message</title>
+         <table role="element" id="element-message.message">
+            <title>
+Element:
+message</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Element message captures notification messages to be sent to users and/or tools. Can contain subject and body.</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+			
+			
+                           <link linkend="element-subject">
+%
+element-subject
+;
+</link>
+?
+,
+			<link linkend="element-body">
+%
+element-body
+;
+</link>
+?
+
+		</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+note</title>
+         <table role="element" id="element-note.note">
+            <title>
+Element:
+note</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Element note captures workflow notes for future reference of processes executed.</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+			
+			
+TEXT
+
+		</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+subject</title>
+         <table role="element" id="element-subject.subject">
+            <title>
+Element:
+subject</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Message subject</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+			
+			
+TEXT
+
+		</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+tool</title>
+         <table role="element" id="element-tool.tool">
+            <title>
+Element:
+tool</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Element tool captures an assigned tool's ID.</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+			
+			
+			
+				
+                           <link linkend="element-note">
+%
+element-note
+;
+</link>
+			
+?
+
+		</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Attributes</para>
+                     </entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>toolID</entry>
+                              <entry>
+xsd:
+NCName</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Tool ID</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+user</title>
+         <table role="element" id="element-user.user">
+            <title>
+Element:
+user</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Element tool captures an assigned user's ID.</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+			
+			
+				
+			
+?
+,
+			
+				<link linkend="element-note">
+%
+element-note
+;
+</link>
+			
+?
+
+		</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Attributes</para>
+                     </entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>userID</entry>
+                              <entry>
+xsd:
+NCName</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>User ID</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>
+Element:
+workflow</title>
+         <table role="element" id="element-workflow.workflow">
+            <title>
+Element:
+workflow</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>Element workflow contains one or more automated or
+			human-generated workflow records.</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+				
+			
+			
+(
+
+				
+(
+<link linkend="element-workflow.workflow.auto">auto</link>|<link linkend="element-workflow.workflow.human">human</link>
+)
+
+			
+)+
+
+		</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Attributes</para>
+                     </entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry/>
+                              <entry>
+xsd:
+string</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Attribute workflowID captures a string that identifies a particular workflow (set of processes to be tracked by workflow system) defined by users.</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+                  <row>
+                     <entry role="header" valign="top">
+                        <para>Source</para>
+                     </entry>
+                     <entry>
+                        <programlisting></programlisting>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="attribute-category">
+         <title>
+Pattern:
+attribute-category</title>
+         <table>
+            <title>
+Pattern:
+attribute-category</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">Attributes</entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>category</entry>
+                              <entry>
+Enumeration:
+
+"
+created
+"
+|
+"
+deposited
+"
+|
+"
+metadata_contribution
+"
+|
+"
+content_contribution
+"
+|
+"
+checked
+"
+|
+"
+machine_processed
+"
+|
+"
+user-tagged
+"
+|
+"
+rights_assigned
+"
+|
+"
+published
+"
+|
+"
+peer-reviewed/evaluated
+"
+|
+"
+withdrawn
+"
+|
+"
+deleted
+"
+|</entry>
+                              <entry>Required</entry>
+                              <entry>
+                                 <para>Activity categories or ‘primitives’ put together during workflow meetings in October 2010 (re: SB, SF, MP meeting on workflow values), and revised in November 2011 (MP). The categories are meant to represent a set of constant values to be used across projects to allow workflow general procedures to be applied to objects CWRC-wide without restricting workflow stamps (see stamp attribute).</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="attribute-datastreamID">
+         <title>
+Pattern:
+attribute-datastreamID</title>
+         <table>
+            <title>
+Pattern:
+attribute-datastreamID</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">Attributes</entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>datastreamID</entry>
+                              <entry>
+xsd:
+string</entry>
+                              <entry>Required</entry>
+                              <entry>
+                                 <para/>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="attribute-date">
+         <title>
+Pattern:
+attribute-date</title>
+         <table>
+            <title>
+Pattern:
+attribute-date</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">Attributes</entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>date</entry>
+                              <entry>
+xsd:
+date</entry>
+                              <entry>Required</entry>
+                              <entry>
+                                 <para>Date/time information</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="attribute-process">
+         <title>
+Pattern:
+attribute-process</title>
+         <table>
+            <title>
+Pattern:
+attribute-process</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">Attributes</entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>process</entry>
+                              <entry>
+xsd:
+string</entry>
+                              <entry>Required</entry>
+                              <entry>
+                                 <para>Some id used to trigger a process by some tool.</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="attribute-stamp">
+         <title>
+Pattern:
+attribute-stamp</title>
+         <table>
+            <title>
+Pattern:
+attribute-stamp</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">Attributes</entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>stamp</entry>
+                              <entry>
+Enumeration:
+
+"
+niso:AO
+"
+|
+"
+niso:SMUR
+"
+|
+"
+niso:AM
+"
+|
+"
+niso:P
+"
+|
+"
+niso:VoR
+"
+|
+"
+niso:CVoR
+"
+|
+"
+niso:EVoR
+"
+|
+"
+orl:SUB
+"
+|
+"
+orl:RWT
+"
+|
+"
+orl:REV
+"
+|
+"
+orl:RBV
+"
+|
+"
+orl:CAS
+"
+|
+"
+orl:CFT
+"
+|
+"
+orl:CFB
+"
+|
+"
+orl:PUB
+"
+|
+"
+orl:ENH
+"
+|
+"
+orl:TC
+"
+|
+"
+orl:PUBR
+"
+|
+"
+cwrc:cre
+"
+|
+"
+cwrc:dep
+"
+|
+"
+cwrc:cvr
+"
+|
+"
+cwrc:evr
+"
+|
+"
+cwrc:ckd
+"
+|
+"
+cwrc:tag
+"
+|
+"
+cwrc:rights_asg
+"
+|
+"
+cwrc:pub
+"
+|
+"
+cwrc:rev
+"
+|
+"
+cwrc:wdr
+"
+|
+"
+cwrc:del
+"
+|</entry>
+                              <entry>Required</entry>
+                              <entry>
+                                 <para>Activity types or stamps. These finer categories can be created on a project-specific basis, and particular projects may wish to rename these categories (i.e. Orlando may want to have ‘cas’ instead of ‘ckd’, another project may want to give it a stamp that according to a French name),, but the basic activities categories (primitives) should stay the same. NOTE: the values in the Activity type column are not exhaustive--more values can be created. The included values represent a minimum of stamps that can be offered as default to all projects.</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="attribute-status">
+         <title>
+Pattern:
+attribute-status</title>
+         <table>
+            <title>
+Pattern:
+attribute-status</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">Attributes</entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>status</entry>
+                              <entry>
+Enumeration:
+
+"
+c
+"
+|
+"
+ipr
+"
+|
+"
+p
+"
+|
+"
+i
+"
+|</entry>
+                              <entry>Required</entry>
+                              <entry>
+                                 <para>Attribute status captures completion information on a particular process.</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="attribute-toolID">
+         <title>
+Pattern:
+attribute-toolID</title>
+         <table>
+            <title>
+Pattern:
+attribute-toolID</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">Attributes</entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>toolID</entry>
+                              <entry>
+xsd:
+NCName</entry>
+                              <entry>Required</entry>
+                              <entry>
+                                 <para>Tool ID</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="attribute-userID">
+         <title>
+Pattern:
+attribute-userID</title>
+         <table>
+            <title>
+Pattern:
+attribute-userID</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">Attributes</entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>userID</entry>
+                              <entry>
+xsd:
+NCName</entry>
+                              <entry>Required</entry>
+                              <entry>
+                                 <para>User ID</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="attribute-workflowID">
+         <title>
+Pattern:
+attribute-workflowID</title>
+         <table>
+            <title>
+Pattern:
+attribute-workflowID</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">Attributes</entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry/>
+                              <entry>
+xsd:
+string</entry>
+                              <entry>Required</entry>
+                              <entry>
+                                 <para>Attribute workflowID captures a string that identifies a particular workflow (set of processes to be tracked by workflow system) defined by users.</para>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="common-content">
+         <title>
+Pattern:
+common-content</title>
+         <table>
+            <title>
+Pattern:
+common-content</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+						
+		
+?
+,
+			
+		
+?
+,
+			
+		
+?
+</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">Attributes</entry>
+                     <entrytbl cols="3">
+                        <tbody>
+                           <row>
+                              <entry role="header">
+                                 <para>Attribute</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Type</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Use</para>
+                              </entry>
+                              <entry role="header">
+                                 <para>Documentation</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>date</entry>
+                              <entry>
+xsd:
+date</entry>
+                              <entry>Required</entry>
+                              <entry>
+                                 <para>Date/time information</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>userID</entry>
+                              <entry>
+xsd:
+NCName</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>User ID</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>toolID</entry>
+                              <entry>
+xsd:
+NCName</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para>Tool ID</para>
+                              </entry>
+                           </row>
+                           <row>
+                              <entry>datastreamID</entry>
+                              <entry>
+xsd:
+string</entry>
+                              <entry>Optional</entry>
+                              <entry>
+                                 <para/>
+                              </entry>
+                           </row>
+                        </tbody>
+                     </entrytbl>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="element-activity">
+         <title>
+Pattern:
+element-activity</title>
+         <table>
+            <title>
+Pattern:
+element-activity</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+                           <link linkend="element-activity.activity">activity</link>
+                        </para>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="element-assigned">
+         <title>
+Pattern:
+element-assigned</title>
+         <table>
+            <title>
+Pattern:
+element-assigned</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+                           <link linkend="element-assigned.assigned">assigned</link>
+                        </para>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="element-body">
+         <title>
+Pattern:
+element-body</title>
+         <table>
+            <title>
+Pattern:
+element-body</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+                           <link linkend="element-body.body">body</link>
+                        </para>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="element-cwrc">
+         <title>
+Pattern:
+element-cwrc</title>
+         <table>
+            <title>
+Pattern:
+element-cwrc</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+                           <link linkend="element-cwrc.cwrc">cwrc</link>
+                        </para>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="element-message">
+         <title>
+Pattern:
+element-message</title>
+         <table>
+            <title>
+Pattern:
+element-message</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+                           <link linkend="element-message.message">message</link>
+                        </para>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="element-note">
+         <title>
+Pattern:
+element-note</title>
+         <table>
+            <title>
+Pattern:
+element-note</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+                           <link linkend="element-note.note">note</link>
+                        </para>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="element-subject">
+         <title>
+Pattern:
+element-subject</title>
+         <table>
+            <title>
+Pattern:
+element-subject</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+                           <link linkend="element-subject.subject">subject</link>
+                        </para>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="element-tool">
+         <title>
+Pattern:
+element-tool</title>
+         <table>
+            <title>
+Pattern:
+element-tool</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+                           <link linkend="element-tool.tool">tool</link>
+                        </para>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="element-user">
+         <title>
+Pattern:
+element-user</title>
+         <table>
+            <title>
+Pattern:
+element-user</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+                           <link linkend="element-user.user">user</link>
+                        </para>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section id="element-workflow">
+         <title>
+Pattern:
+element-workflow</title>
+         <table>
+            <title>
+Pattern:
+element-workflow</title>
+            <tgroup cols="2">
+               <colspec colnum="1"/>
+               <colspec colnum="2" colwidth="*"/>
+               <tbody>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Namespace</para>
+                     </entry>
+                     <entry>
+                        <para>cwrc.ca/workflow</para>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry class="header" valign="top">
+                        <para>Documentation</para>
+                     </entry>
+                     <entry>
+                        <para>No documentation available.</para>
+                     </entry>
+                  </row>
+                  <row valign="top">
+                     <entry class="header">
+                        <para>Content Model</para>
+                     </entry>
+                     <entry>
+                        <para>
+                           <link linkend="element-workflow.workflow">workflow</link>
+                        </para>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+   </section>
+</article>
+

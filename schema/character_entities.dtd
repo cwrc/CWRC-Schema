@@ -1,0 +1,645 @@
+<!-- This file is modified from material copyrighted by Rick Jelliffe of Allette Systems. -->
+
+<!ENTITY num           "#"        > <!--number sign-->
+<!ENTITY dollar        "$"        > <!--dollar sign-->
+<!ENTITY percnt        "&#37;"    > <!--percent sign-->
+<!ENTITY plus          "+"        > <!--plus sign B:-->
+<!ENTITY pound         "&#165;"   > <!--pound sign-->
+<!ENTITY deg           "&#176;"   > <!--degree sign-->
+<!ENTITY frac34        "&#190;"   > <!--fraction three-quarters-->
+<!ENTITY Aacute        "&#193;"   > <!-- capital A, acute accent -->
+<!ENTITY Acirc         "&#194;"   > <!-- capital A, circumflex accent -->
+<!ENTITY Auml          "&#196;"   > <!-- capital A, dieresis or umlaut mark -->
+<!ENTITY AElig         "&#198;"   > <!-- capital AE diphthong (ligature) -->
+<!ENTITY Eacute        "&#201;"   > <!-- capital E, acute accent -->
+<!ENTITY Euml          "&#203;"   > <!-- capital E, dieresis or umlaut mark -->
+<!ENTITY Icirc         "&#206;"   > <!-- capital I, circumflex accent -->
+<!ENTITY Iuml          "&#207;"   > <!-- capital I, dieresis or umlaut mark -->
+<!ENTITY Oacute        "&#211;"   > <!-- capital O, acute accent -->
+<!ENTITY agrave        "&#224;"   > <!-- small a, grave accent -->
+<!ENTITY aacute        "&#225;"   > <!-- small a, acute accent -->
+<!ENTITY acirc         "&#226;"   > <!-- small a, circumflex accent -->
+<!ENTITY atilde        "&#227;"   > <!-- small a, tilde -->
+<!ENTITY auml          "&#228;"   > <!-- small a, dieresis or umlaut mark -->
+<!ENTITY aelig         "&#230;"   > <!-- small ae diphthong (ligature) -->
+<!ENTITY ccedil        "&#231;"   > <!-- small c, cedilla -->
+<!ENTITY egrave        "&#232;"   > <!-- small e, grave accent -->
+<!ENTITY eacute        "&#233;"   > <!-- small e, acute accent -->
+<!ENTITY ecirc         "&#234;"   > <!-- small e, circumflex accent -->
+<!ENTITY euml          "&#235;"   > <!-- small e, dieresis or umlaut mark -->
+<!ENTITY iacute        "&#237;"   > <!-- small i, acute accent -->
+<!ENTITY iuml          "&#239;"   > <!-- small i, dieresis or umlaut mark -->
+<!ENTITY ntilde        "&#241;"   > <!-- small n, tilde -->
+<!ENTITY oacute        "&#243;"   > <!-- small o, acute accent -->
+<!ENTITY ocirc         "&#244;"   > <!-- small o, circumflex accent -->
+<!ENTITY ouml          "&#246;"   > <!-- small o, dieresis or umlaut mark -->
+<!ENTITY oslash        "&#248;"   > <!-- small o, slash -->
+<!ENTITY uuml          "&#252;"   > <!-- small u, dieresis or umlaut mark -->
+<!ENTITY yuml          "&#255;"   > <!-- small y, dieresis or umlaut mark -->
+<!ENTITY inodot        "&#x131;"  > <!--small i without dot-->
+<!ENTITY ncaron        "&#x148;"  > <!--small n, caron-->
+<!ENTITY OElig         "&#x152;"  > <!--capital OE ligature-->
+<!ENTITY oelig         "&#x153;"  > <!--small oe ligature-->
+<!ENTITY sacute        "&#x15B;"  > <!--small s, acute accent-->
+<!ENTITY dash          "&#x2010;" > <!--hyphen (true graphic)-->
+<!ENTITY mdash         "&#x2014;" > <!--em dash-->
+<!ENTITY prime         "&#x2032;" > <!--/prime prime or minute-->
+<!ENTITY trade         "&#8482;"  > <!--trade mark sign-->
+
+<!ENTITY acute         "&#180;"   > <!--acute accent-->
+<!ENTITY breve         "&#x2D8;"  > <!--breve-->
+<!ENTITY caron         "&#x2C7;"  > <!--caron-->
+<!ENTITY cedil         "&#184;"   > <!--cedilla-->
+<!ENTITY circ          "^"        > <!--circumflex accent-->
+<!ENTITY dblac         "&#x2DD;"  > <!--double acute accent-->
+<!ENTITY die           "&#168;"   > <!--dieresis-->
+<!ENTITY dot           "&#x2D9;"  > <!--dot above-->
+<!ENTITY grave         "`"        > <!--grave accent-->
+<!ENTITY macr          "&#175;"   > <!--macron-->
+<!ENTITY ogon          "&#x2DB;"  > <!--ogonek-->
+<!ENTITY ring          "&#x2DA;"  > <!--ring-->
+<!ENTITY tilde         "&#x2DC;"  > <!--tilde-->
+<!ENTITY uml           "&#168;"   > <!--umlaut mark-->
+
+<!ENTITY agr           "&#945;"   > <!--small alpha, Greek, U03B1 -->
+<!ENTITY Agr           "&#913;"   > <!--capital Alpha, Greek, U0391 -->
+<!ENTITY bgr           "&#946;"   > <!--small beta, Greek, U03B2 -->
+<!ENTITY Bgr           "&#914;"   > <!--capital Beta, Greek, U0392 -->
+<!ENTITY ggr           "&#947;"   > <!--small gamma, Greek, U03B3 -->
+<!ENTITY Ggr           "&#915;"   > <!--capital Gamma, Greek, U0393 -->
+<!ENTITY dgr           "&#948;"   > <!--small delta, Greek, U03B4 -->
+<!ENTITY Dgr           "&#916;"   > <!--capital Delta, Greek, U0394 -->
+<!ENTITY egr           "&#949;"   > <!--small epsilon, Greek, U03B5 -->
+<!ENTITY Egr           "&#917;"   > <!--capital Epsilon, Greek, U0395 -->
+<!ENTITY zgr           "&#950;"   > <!--small zeta, Greek, U03B6 -->
+<!ENTITY Zgr           "&#918;"   > <!--capital Zeta, Greek, U0396 -->
+<!ENTITY eegr          "&#951;"   > <!--small eta, Greek, U03B7 -->
+<!ENTITY EEgr          "&#919;"   > <!--capital Eta, Greek, U0397 -->
+<!ENTITY thgr          "&#952;"   > <!--small theta, Greek, U03B8 -->
+<!ENTITY THgr          "&#920;"   > <!--capital Theta, Greek, U0398 -->
+<!ENTITY igr           "&#953;"   > <!--small iota, Greek, U03B9 -->
+<!ENTITY Igr           "&#921;"   > <!--capital Iota, Greek, U0399 -->
+<!ENTITY kgr           "&#954;"   > <!--small kappa, Greek, U03BA -->
+<!ENTITY Kgr           "&#922;"   > <!--capital Kappa, Greek, U039A -->
+<!ENTITY lgr           "&#955;"   > <!--small lambda, Greek, U03BB -->
+<!ENTITY Lgr           "&#923;"   > <!--capital Lambda, Greek, U039B -->
+<!ENTITY mgr           "&#956;"   > <!--small mu, Greek, U03BC -->
+<!ENTITY Mgr           "&#924;"   > <!--capital Mu, Greek, U039C -->
+<!ENTITY ngr           "&#957;"   > <!--small nu, Greek, U03BD -->
+<!ENTITY Ngr           "&#925;"   > <!--capital Nu, Greek, U039D -->
+<!ENTITY xgr           "&#958;"   > <!--small xi, Greek, U03BE -->
+<!ENTITY Xgr           "&#926;"   > <!--capital Xi, Greek, U039E -->
+<!ENTITY ogr           "&#959;"   > <!--small omicron, Greek, U03BF -->
+<!ENTITY Ogr           "&#927;"   > <!--capital Omicron, Greek, U039F -->
+<!ENTITY pgr           "&#960;"   > <!--small pi, Greek, U03C0 -->
+<!ENTITY Pgr           "&#928;"   > <!--capital Pi, Greek, U03A0 -->
+<!ENTITY rgr           "&#961;"   > <!--small rho, Greek, U03C1 -->
+<!ENTITY Rgr           "&#929;"   > <!--capital Rho, Greek, U03A1 -->
+<!ENTITY sfgr          "&#962;"   > <!--final small sigma, Greek, U03C2 -->
+<!ENTITY sgr           "&#963;"   > <!--small sigma, Greek, U03C3 -->
+<!ENTITY Sgr           "&#931;"   > <!--capital Sigma, Greek, U03A3 -->
+<!ENTITY tgr           "&#964;"   > <!--small tau, Greek, U03C4 -->
+<!ENTITY Tgr           "&#932;"   > <!--capital Tau, Greek, U03A4 -->
+<!ENTITY ugr           "&#965;"   > <!--small upsilon, Greek, U03C5 -->
+<!ENTITY Ugr           "&#933;"   > <!--capital Upsilon, Greek, U03A5 -->
+<!ENTITY phgr          "&#966;"   > <!--small phi, Greek, U03C6 -->
+<!ENTITY PHgr          "&#934;"   > <!--capital Phi, Greek, U03A6 -->
+<!ENTITY khgr          "&#967;"   > <!--small chi, Greek, U03C7 -->
+<!ENTITY KHgr          "&#935;"   > <!--capital Chi, Greek, U03A7 -->
+<!ENTITY psgr          "&#968;"   > <!--small psi, Greek, U03C8 -->
+<!ENTITY PSgr          "&#936;"   > <!--capital Psi, Greek, U03A8 -->
+<!ENTITY ohgr          "&#969;"   > <!--small omega, Greek, U03C9 -->
+<!ENTITY OHgr          "&#937;"   > <!--capital Omega, Greek, U03A9 -->
+
+<!ENTITY aacgr         "&#x3AC;"  > <!--small alpha, accent, Greek-->
+<!ENTITY Aacgr         "&#x386;"  > <!--capital Alpha, accent, Greek-->
+<!ENTITY eacgr         "&#x3AD;"  > <!--small epsilon, accent, Greek-->
+<!ENTITY Eacgr         "&#x388;"  > <!--capital Epsilon, accent, Greek-->
+<!ENTITY eeacgr        "&#x3AE;"  > <!--small eta, accent, Greek-->
+<!ENTITY EEacgr        "&#x389;"  > <!--capital Eta, accent, Greek-->
+<!ENTITY idigr         "&#x3CA;"  > <!--small iota, dieresis, Greek-->
+<!ENTITY Idigr         "&#x3AA;"  > <!--capital Iota, dieresis, Greek-->
+<!ENTITY iacgr         "&#x3AF;"  > <!--small iota, accent, Greek-->
+<!ENTITY Iacgr         "&#x38A;"  > <!--capital Iota, accent, Greek-->
+<!ENTITY idiagr        "&#x390;"  > <!--small iota, dieresis, accent, Greek-->
+<!ENTITY oacgr         "&#x3CC;"  > <!--small omicron, accent, Greek-->
+<!ENTITY Oacgr         "&#x38C;"  > <!--capital Omicron, accent, Greek-->
+<!ENTITY udigr         "&#x3CB;"  > <!--small upsilon, dieresis, Greek-->
+<!ENTITY Udigr         "&#x3AB;"  > <!--capital Upsilon, dieresis, Greek-->
+<!ENTITY uacgr         "&#x3CD;"  > <!--small upsilon, accent, Greek-->
+<!ENTITY Uacgr         "&#x38E;"  > <!--capital Upsilon, accent, Greek-->
+<!ENTITY udiagr        "&#x3B0;"  > <!--small upsilon, dieresis, accent, = Greek-->
+<!ENTITY Udiagr        "&#x3AB;&#x30D;" > <!--capital Upsilon, dieresis, = accent, Greek-->
+<!ENTITY ohacgr        "&#x3CE;"  > <!--small omega, accent, Greek-->
+<!ENTITY OHacgr        "&#x38F;"  > <!--capital Omega, accent, Greek-->
+
+<!ENTITY alpha         "&#x3B1;"  > <!--small alpha, Greek-->
+<!ENTITY beta          "&#x3B2;"  > <!--small beta, Greek-->
+<!ENTITY gamma         "&#x3B3;"  > <!--small gamma, Greek-->
+<!ENTITY Gamma         "&#x393;"  > <!--capital Gamma, Greek-->
+<!ENTITY gammad        "&#x3DC;"  > <!--/digamma-->
+<!ENTITY delta         "&#x3B4;"  > <!--small delta, Greek-->
+<!ENTITY Delta         "&#x394;"  > <!--capital Delta, Greek-->
+<!ENTITY epsi          "&#x3B5;"  > <!--small epsilon, Greek -->
+<!ENTITY epsiv         "&#x2107;" > <!--/varepsilon ?-->
+<!ENTITY epsis         "&#x1B8;"  > <!--/straightepsilon ?-->
+<!ENTITY zeta          "&#x3B6;"  > <!--small zeta, Greek-->
+<!ENTITY eta           "&#x3B7;"  > <!--small eta, Greek-->
+<!ENTITY thetas        "&#x3B8;"  > <!--straight theta-->
+<!ENTITY Theta         "&#x398;"  > <!--capital Theta, Greek-->
+<!ENTITY thetav        "&#x3D1;"  > <!--/vartheta - curly or open theta-->
+<!ENTITY iota          "&#x3B9;"  > <!--small iota, Greek-->
+<!ENTITY kappa         "&#x3BA;"  > <!--small kappa, Greek-->
+<!ENTITY kappav        "&#x3F0;"  > <!--/varkappa-->
+<!ENTITY lambda        "&#x3BB;"  > <!--small lambda, Greek-->
+<!ENTITY Lambda        "&#x39B;"  > <!--capital Lambda, Greek-->
+<!ENTITY mu            "&#x3BC;"  > <!--small mu, Greek-->
+<!ENTITY nu            "&#x3BD;"  > <!--small nu, Greek-->
+<!ENTITY xi            "&#x3BE;"  > <!--small xi, Greek-->
+<!ENTITY Xi            "&#x39E;"  > <!--capital Xi, Greek-->
+<!ENTITY pi            "&#x3C0;"  > <!--small pi, Greek-->
+<!ENTITY piv           "&#x3D6;"  > <!--/varpi-->
+<!ENTITY Pi            "&#x3A0;"  > <!--capital Pi, Greek-->
+<!ENTITY rho           "&#x3c1;"  > <!--small rho, Greek-->
+<!ENTITY rhov          "&#x3F1;"  > <!--/varrho-->
+<!ENTITY sigma         "&#x3C3;"  > <!--small sigma, Greek-->
+<!ENTITY Sigma         "&#x3A3;"  > <!--capital Sigma, Greek-->
+<!ENTITY sigmav        "&#x3C2;"  > <!--/varsigma-->
+<!ENTITY tau           "&#x3C4;"  > <!--small tau, Greek-->
+<!ENTITY upsi          "&#x3C5;"  > <!--small upsilon, Greek-->
+<!ENTITY Upsi          "&#x3A5;"  > <!--capital Upsilon, Greek-->
+<!ENTITY phis          "&#x3C6;"  > <!--/straightphi - straight phi-->
+<!ENTITY Phi           "&#x3A6;"  > <!--capital Phi, Greek-->
+<!ENTITY phiv          "&#x3D5;"  > <!--/varphi - curly or open phi-->
+<!ENTITY chi           "&#x3C7;"  > <!--small chi, Greek-->
+<!ENTITY psi           "&#x3C8;"  > <!--small psi, Greek-->
+<!ENTITY Psi           "&#x3A8;"  > <!--capital Psi, Greek-->
+<!ENTITY omega         "&#x3C9;"  > <!--small omega, Greek-->
+<!ENTITY Omega         "&#x3A9;"  > <!--capital Omega, Greek-->
+
+<!ENTITY XML-GRK4-STAG "">
+<!ENTITY XML-GRK4-ETAG "">
+
+<!ENTITY b.alpha       "&#x3B1;"  > <!--small alpha, Greek-->
+<!ENTITY b.beta        "&#x3B2;"  > <!--small beta, Greek-->
+<!ENTITY b.gamma       "&#x3B3;"  > <!--small gamma, Greek-->
+<!ENTITY b.Gamma       "&#x393;"  > <!--capital Gamma, Greek-->
+<!ENTITY b.gammad      "&#x3DC;"  > <!--/digamma-->
+<!ENTITY b.delta       "&#x3B4;"  > <!--small delta, Greek-->
+<!ENTITY b.Delta       "&#x394;"  > <!--capital Delta, Greek-->
+<!ENTITY b.epsi        "&#x3B5;"  > <!--small epsilon, Greek -->
+<!ENTITY b.epsiv       "&#x2107;" > <!--/varepsilon ?-->
+<!ENTITY b.epsis       "&#x1B8;"  > <!--/straightepsilon ?-->
+<!ENTITY b.zeta        "&#x3B6;"  > <!--small zeta, Greek-->
+<!ENTITY b.eta         "&#x3B7;"  > <!--small eta, Greek-->
+<!ENTITY b.thetas      "&#x3B8;"  > <!--straight theta-->
+<!ENTITY b.Theta       "&#x398;"  > <!--capital Theta, Greek-->
+<!ENTITY b.thetav      "&#x3D1;"  > <!--/vartheta - curly or open theta-->
+<!ENTITY b.iota        "&#x3B9;"  > <!--small iota, Greek-->
+<!ENTITY b.kappa       "&#x3BA;"  > <!--small kappa, Greek-->
+<!ENTITY b.kappav      "&#x3F0;"  > <!--/varkappa-->
+<!ENTITY b.lambda      "&#x3BB;"  > <!--small lambda, Greek-->
+<!ENTITY b.Lambda      "&#x39B;"  > <!--capital Lambda, Greek-->
+<!ENTITY b.mu          "&#x3BC;"  > <!--small mu, Greek-->
+<!ENTITY b.nu          "&#x3BD;"  > <!--small nu, Greek-->
+<!ENTITY b.xi          "&#x3BE;"  > <!--small xi, Greek-->
+<!ENTITY b.Xi          "&#x39E;"  > <!--capital Xi, Greek-->
+<!ENTITY b.pi          "&#x3C0;"  > <!--small pi, Greek-->
+<!ENTITY b.piv         "&#x3D6;"  > <!--/varpi-->
+<!ENTITY b.Pi          "&#x3A0;"  > <!--capital Pi, Greek-->
+<!ENTITY b.rho         "&#x3c1;"  > <!--small rho, Greek-->
+<!ENTITY b.rhov        "&#x3F1;"  > <!--/varrho-->
+<!ENTITY b.sigma       "&#x3C3;"  > <!--small sigma, Greek-->
+<!ENTITY b.Sigma       "&#x3A3;"  > <!--capital Sigma, Greek-->
+<!ENTITY b.sigmav      "&#x3C2;"  > <!--/varsigma-->
+<!ENTITY b.tau         "&#x3C4;"  > <!--small tau, Greek-->
+<!ENTITY b.upsi        "&#x3C5;"  > <!--small upsilon, Greek-->
+<!ENTITY b.Upsi        "&#x3A5;"  > <!--capital Upsilon, Greek-->
+<!ENTITY b.phis        "&#x3C6;"  > <!--/straightphi - straight phi-->
+<!ENTITY b.Phi         "&#x3A6;"  > <!--capital Phi, Greek-->
+<!ENTITY b.phiv        "&#x3D5;"  > <!--/varphi =- curly or open phi-->
+<!ENTITY b.chi         "&#x3C7;"  > <!--small chi, Greek-->
+<!ENTITY b.psi         "&#x3C8;"  > <!--small psi, Greek-->
+<!ENTITY b.Psi         "&#x3A8;"  > <!--capital Psi, Greek-->
+<!ENTITY b.omega       "&#x3C9;"  > <!--small omega, Greek-->
+<!ENTITY b.Omega       "&#x3A9;"  > <!--capital Omega, Greek-->
+
+<!ENTITY Agrave        "&#192;"   > <!-- capital A, grave accent -->
+<!ENTITY Aacute        "&#193;"   > <!-- capital A, acute accent -->
+<!ENTITY Acirc         "&#194;"   > <!-- capital A, circumflex accent -->
+<!ENTITY Atilde        "&#195;"   > <!-- capital A, tilde -->
+<!ENTITY Auml          "&#196;"   > <!-- capital A, dieresis or umlaut mark -->
+<!ENTITY Aring         "&#197;"   > <!-- capital A, ring -->
+<!ENTITY AElig         "&#198;"   > <!-- capital AE diphthong (ligature) -->
+<!ENTITY Ccedil        "&#199;"   > <!-- capital C, cedilla -->
+<!ENTITY Egrave        "&#200;"   > <!-- capital E, grave accent -->
+<!ENTITY Eacute        "&#201;"   > <!-- capital E, acute accent -->
+<!ENTITY Ecirc         "&#202;"   > <!-- capital E, circumflex accent -->
+<!ENTITY Euml          "&#203;"   > <!-- capital E, dieresis or umlaut mark -->
+<!ENTITY Igrave        "&#204;"   > <!-- capital I, grave accent -->
+<!ENTITY Iacute        "&#205;"   > <!-- capital I, acute accent -->
+<!ENTITY Icirc         "&#206;"   > <!-- capital I, circumflex accent -->
+<!ENTITY Iuml          "&#207;"   > <!-- capital I, dieresis or umlaut mark -->
+<!ENTITY ETH           "&#208;"   > <!-- capital Eth, Icelandic -->
+<!ENTITY Ntilde        "&#209;"   > <!-- capital N, tilde -->
+<!ENTITY Ograve        "&#210;"   > <!-- capital O, grave accent -->
+<!ENTITY Oacute        "&#211;"   > <!-- capital O, acute accent -->
+<!ENTITY Ocirc         "&#212;"   > <!-- capital O, circumflex accent -->
+<!ENTITY Otilde        "&#213;"   > <!-- capital O, tilde -->
+<!ENTITY Ouml          "&#214;"   > <!-- capital O, dieresis or umlaut mark -->
+<!ENTITY Oslash        "&#216;"   > <!-- capital O, slash -->
+<!ENTITY Ugrave        "&#217;"   > <!-- capital U, grave accent -->
+<!ENTITY Uacute        "&#218;"   > <!-- capital U, acute accent -->
+<!ENTITY Ucirc         "&#219;"   > <!-- capital U, circumflex accent -->
+<!ENTITY Uuml          "&#220;"   > <!-- capital U, dieresis or umlaut mark -->
+<!ENTITY Yacute        "&#221;"   > <!-- capital Y, acute accent -->
+<!ENTITY THORN         "&#222;"   > <!-- capital THORN, Icelandic -->
+<!ENTITY szlig         "&#223;"   > <!-- small sharp s, German (sz ligature) -->
+<!ENTITY agrave        "&#224;"   > <!-- small a, grave accent -->
+<!ENTITY aacute        "&#225;"   > <!-- small a, acute accent -->
+<!ENTITY acirc         "&#226;"   > <!-- small a, circumflex accent -->
+<!ENTITY atilde        "&#227;"   > <!-- small a, tilde -->
+<!ENTITY auml          "&#228;"   > <!-- small a, dieresis or umlaut mark -->
+<!ENTITY aring         "&#229;"   > <!-- small a, ring -->
+<!ENTITY aelig         "&#230;"   > <!-- small ae diphthong (ligature) -->
+<!ENTITY ccedil        "&#231;"   > <!-- small c, cedilla -->
+<!ENTITY egrave        "&#232;"   > <!-- small e, grave accent -->
+<!ENTITY eacute        "&#233;"   > <!-- small e, acute accent -->
+<!ENTITY ecirc         "&#234;"   > <!-- small e, circumflex accent -->
+<!ENTITY euml          "&#235;"   > <!-- small e, dieresis or umlaut mark -->
+<!ENTITY igrave        "&#236;"   > <!-- small i, grave accent -->
+<!ENTITY iacute        "&#237;"   > <!-- small i, acute accent -->
+<!ENTITY icirc         "&#238;"   > <!-- small i, circumflex accent -->
+<!ENTITY iuml          "&#239;"   > <!-- small i, dieresis or umlaut mark -->
+<!ENTITY eth           "&#240;"   > <!-- small eth, Icelandic -->
+<!ENTITY ntilde        "&#241;"   > <!-- small n, tilde -->
+<!ENTITY ograve        "&#242;"   > <!-- small o, grave accent -->
+<!ENTITY oacute        "&#243;"   > <!-- small o, acute accent -->
+<!ENTITY ocirc         "&#244;"   > <!-- small o, circumflex accent -->
+<!ENTITY otilde        "&#245;"   > <!-- small o, tilde -->
+<!ENTITY ouml          "&#246;"   > <!-- small o, dieresis or umlaut mark -->
+<!ENTITY oslash        "&#248;"   > <!-- small o, slash -->
+<!ENTITY ugrave        "&#249;"   > <!-- small u, grave accent -->
+<!ENTITY uacute        "&#250;"   > <!-- small u, acute accent -->
+<!ENTITY ucirc         "&#251;"   > <!-- small u, circumflex accent -->
+<!ENTITY uuml          "&#252;"   > <!-- small u, dieresis or umlaut mark -->
+<!ENTITY yacute        "&#253;"   > <!-- small y, acute accent -->
+<!ENTITY thorn         "&#254;"   > <!-- small thorn, Icelandic -->
+<!ENTITY yuml          "&#255;"   > <!-- small y, dieresis or umlaut mark -->
+
+<!ENTITY abreve        "&#x103;"  > <!--small a, breve-->
+<!ENTITY Abreve        "&#x102;"  > <!--capital A, breve-->
+<!ENTITY amacr         "&#x101;"  > <!--small a, macron-->
+<!ENTITY Amacr         "&#x100;"  > <!--capital A, macron-->
+<!ENTITY aogon         "&#x105;"  > <!--small a, ogonek-->
+<!ENTITY Aogon         "&#x104;"  > <!--capital A, ogonek-->
+<!ENTITY cacute        "&#x107;"  > <!--small c, acute accent-->
+<!ENTITY Cacute        "&#x106;"  > <!--capital C, acute accent-->
+<!ENTITY ccaron        "&#x10D;"  > <!--small c, caron-->
+<!ENTITY Ccaron        "&#x10C;"  > <!--capital C, caron-->
+<!ENTITY ccirc         "&#x109;"  > <!--small c, circumflex accent-->
+<!ENTITY Ccirc         "&#x108;"  > <!--capital C, circumflex accent-->
+<!ENTITY cdot          "&#x10B;"  > <!--small c, dot above-->
+<!ENTITY Cdot          "&#x10A;"  > <!--capital C, dot above-->
+<!ENTITY dcaron        "&#x10F;"  > <!--small d, caron-->
+<!ENTITY Dcaron        "&#x10E;"  > <!--capital D, caron-->
+<!ENTITY dstrok        "&#x111;"  > <!--small d, stroke-->
+<!ENTITY Dstrok        "&#x110;"  > <!--capital D, stroke-->
+<!ENTITY ecaron        "&#x11B;"  > <!--small e, caron-->
+<!ENTITY Ecaron        "&#x11A;"  > <!--capital E, caron-->
+<!ENTITY edot          "&#x117;"  > <!--small e, dot above-->
+<!ENTITY Edot          "&#x116;"  > <!--capital E, dot above-->
+<!ENTITY emacr         "&#x113;"  > <!--small e, macron-->
+<!ENTITY Emacr         "&#x112;"  > <!--capital E, macron-->
+<!ENTITY eogon         "&#x119;"  > <!--small e, ogonek-->
+<!ENTITY Eogon         "&#x118;"  > <!--capital E, ogonek-->
+<!ENTITY gacute        "&#x1F5;"  > <!--small g, acute accent-->
+<!ENTITY gbreve        "&#x11F;"  > <!--small g, breve-->
+<!ENTITY Gbreve        "&#x11E;"  > <!--capital G, breve-->
+<!ENTITY Gcedil        "&#x122;"  > <!--capital G, cedilla-->
+<!ENTITY gcirc         "&#x11D;"  > <!--small g, circumflex accent-->
+<!ENTITY Gcirc         "&#x11C;"  > <!--capital G, circumflex accent-->
+<!ENTITY gdot          "&#x121;"  > <!--small g, dot above-->
+<!ENTITY Gdot          "&#x120;"  > <!--capital G, dot above-->
+<!ENTITY hcirc         "&#x125;"  > <!--small h, circumflex accent-->
+<!ENTITY Hcirc         "&#x124;"  > <!--capital H, circumflex accent-->
+<!ENTITY hstrok        "&#x127;"  > <!--small h, stroke-->
+<!ENTITY Hstrok        "&#x126;"  > <!--capital H, stroke-->
+<!ENTITY Idot          "&#x130;"  > <!--capital I, dot above-->
+<!ENTITY Imacr         "&#x12A;"  > <!--capital I, macron-->
+<!ENTITY imacr         "&#x12B;"  > <!--small i, macron-->
+<!ENTITY ijlig         "&#x133;"  > <!--small ij ligature-->
+<!ENTITY IJlig         "&#x132;"  > <!--capital IJ ligature-->
+<!ENTITY inodot        "&#x131;"  > <!--small i without dot-->
+<!ENTITY iogon         "&#x12F;"  > <!--small i, ogonek-->
+<!ENTITY Iogon         "&#x12E;"  > <!--capital I, ogonek-->
+<!ENTITY itilde        "&#x129;"  > <!--small i, tilde-->
+<!ENTITY Itilde        "&#x128;"  > <!--capital I, tilde-->
+<!ENTITY jcirc         "&#x135;"  > <!--small j, circumflex accent-->
+<!ENTITY Jcirc         "&#x134;"  > <!--capital J, circumflex accent-->
+<!ENTITY kcedil        "&#x137;"  > <!--small k, cedilla-->
+<!ENTITY Kcedil        "&#x136;"  > <!--capital K, cedilla-->
+<!ENTITY kgreen        "&#x138;"  > <!--small k, Greenlandic-->
+<!ENTITY lacute        "&#x13A;"  > <!--small l, acute accent-->
+<!ENTITY Lacute        "&#x139;"  > <!--capital L, acute accent-->
+<!ENTITY lcaron        "&#x13E;"  > <!--small l, caron-->
+<!ENTITY Lcaron        "&#x13D;"  > <!--capital L, caron-->
+<!ENTITY lcedil        "&#x13C;"  > <!--small l, cedilla-->
+<!ENTITY Lcedil        "&#x13B;"  > <!--capital L, cedilla-->
+<!ENTITY lmidot        "&#x140;"  > <!--small l, middle dot-->
+<!ENTITY Lmidot        "&#x139;"  > <!--capital L, middle dot-->
+<!ENTITY lstrok        "&#x142;"  > <!--small l, stroke-->
+<!ENTITY Lstrok        "&#x141;"  > <!--capital L, stroke-->
+<!ENTITY nacute        "&#x144;"  > <!--small n, acute accent-->
+<!ENTITY Nacute        "&#x143;"  > <!--capital N, acute accent-->
+<!ENTITY eng           "&#x14B;"  > <!--small eng, Lapp-->
+<!ENTITY ENG           "&#x14A;"  > <!--capital ENG, Lapp-->
+<!ENTITY napos         "&#x149;"  > <!--small n, apostrophe-->
+<!ENTITY ncaron        "&#x148;"  > <!--small n, caron-->
+<!ENTITY Ncaron        "&#x147;"  > <!--capital N, caron-->
+<!ENTITY ncedil        "&#x146;"  > <!--small n, cedilla-->
+<!ENTITY Ncedil        "&#x145;"  > <!--capital N, cedilla-->
+<!ENTITY odblac        "&#x151;"  > <!--small o, double acute accent-->
+<!ENTITY Odblac        "&#x150;"  > <!--capital O, double acute accent-->
+<!ENTITY Omacr         "&#x14C;"  > <!--capital O, macron-->
+<!ENTITY omacr         "&#x14D;"  > <!--small o, macron-->
+<!ENTITY oelig         "&#x153;"  > <!--small oe ligature-->
+<!ENTITY OElig         "&#x152;"  > <!--capital OE ligature-->
+<!ENTITY racute        "&#x155;"  > <!--small r, acute accent-->
+<!ENTITY Racute        "&#x154;"  > <!--capital R, acute accent-->
+<!ENTITY rcaron        "&#x159;"  > <!--small r, caron-->
+<!ENTITY Rcaron        "&#x158;"  > <!--capital R, caron-->
+<!ENTITY rcedil        "&#x157;"  > <!--small r, cedilla-->
+<!ENTITY Rcedil        "&#x156;"  > <!--capital R, cedilla-->
+<!ENTITY sacute        "&#x15B;"  > <!--small s, acute accent-->
+<!ENTITY Sacute        "&#x158;"  > <!--capital S, acute accent-->
+<!ENTITY scaron        "&#x161;"  > <!--small s, caron-->
+<!ENTITY Scaron        "&#x160;"  > <!--capital S, caron-->
+<!ENTITY scedil        "&#x15F;"  > <!--small s, cedilla-->
+<!ENTITY Scedil        "&#x15E;"  > <!--capital S, cedilla-->
+<!ENTITY scirc         "&#x15C;"  > <!--small s, circumflex accent-->
+<!ENTITY Scirc         "&#x15D;"  > <!--capital S, circumflex accent-->
+<!ENTITY tcaron        "&#x165;"  > <!--small t, caron-->
+<!ENTITY Tcaron        "&#x164;"  > <!--capital T, caron-->
+<!ENTITY tcedil        "&#x162;"  > <!--small t, cedilla-->
+<!ENTITY Tcedil        "&#x163;"  > <!--capital T, cedilla-->
+<!ENTITY tstrok        "&#x167;"  > <!--small t, stroke-->
+<!ENTITY Tstrok        "&#x166;"  > <!--capital T, stroke-->
+<!ENTITY ubreve        "&#x16D;"  > <!--small u, breve-->
+<!ENTITY Ubreve        "&#x16C;"  > <!--capital U, breve-->
+<!ENTITY udblac        "&#x171;"  > <!--small u, double acute accent-->
+<!ENTITY Udblac        "&#x170;"  > <!--capital U, double acute accent-->
+<!ENTITY umacr         "&#x16B;"  > <!--small u, macron-->
+<!ENTITY Umacr         "&#x16A;"  > <!--capital U, macron-->
+<!ENTITY uogon         "&#x173;"  > <!--small u, ogonek-->
+<!ENTITY Uogon         "&#x172;"  > <!--capital U, ogonek-->
+<!ENTITY uring         "&#x16F;"  > <!--small u, ring-->
+<!ENTITY Uring         "&#x16E;"  > <!--capital U, ring-->
+<!ENTITY utilde        "&#x169;"  > <!--small u, tilde-->
+<!ENTITY Utilde        "&#x168;"  > <!--capital U, tilde-->
+<!ENTITY wcirc         "&#x175;"  > <!--small w, circumflex accent-->
+<!ENTITY Wcirc         "&#x174;"  > <!--capital W, circumflex accent-->
+<!ENTITY ycirc         "&#x177;"  > <!--small y, circumflex accent-->
+<!ENTITY Ycirc         "&#x176;"  > <!--capital Y, circumflex accent-->
+<!ENTITY Yuml          "&#x178;"  > <!--capital Y, dieresis or umlaut mark-->
+<!ENTITY zacute        "&#x17A;"  > <!--small z, acute accent-->
+<!ENTITY Zacute        "&#x179;"  > <!--capital Z, acute accent-->
+<!ENTITY zcaron        "&#x1FD;"  > <!--small z, caron-->
+<!ENTITY Zcaron        "&#x17E;"  > <!--capital Z, caron-->
+<!ENTITY zdot          "&#x17C;"  > <!--small z, dot above-->
+<!ENTITY Zdot          "&#x17B;"  > <!--capital Z, dot above-->
+
+<!ENTITY hal	       "&#189;"   > <!--fraction one-half-->
+<!ENTITY frac12	       "&#189;"   > <!--fraction one-half-->
+<!ENTITY frac14	       "&#188;"   > <!--fraction one-quarter-->
+<!ENTITY frac34	       "&#190;"   > <!--fraction three-quarters-->
+<!ENTITY frac18	       "&#x215B;" > <!--fraction one-eighth-->     <!-- or "&#xB1;&#x202;&#x2044;&#x2088;" --> 
+<!ENTITY frac38	       "&#x215C;" > <!--fraction three-eighths-->  <!-- or "&#xB3;&#x2044;&#x2088;" -->
+<!ENTITY frac58	       "&#x215D;" > <!--fraction five-eighths-->   <!-- or "&#x2075;&#x2044;&#x2088;" -->
+<!ENTITY frac78	       "&#x215E;" > <!--fraction seven-eighths-->  <!-- or "&#x2077;&#x2044;&#x2088;" -->
+
+<!ENTITY sup1	       "&#185;"   > <!--superscript one-->
+<!ENTITY sup2	       "&#178;"   > <!--superscript two-->
+<!ENTITY sup3	       "&#179;"   > <!--superscript three-->
+
+<!ENTITY plus	       "+"        > <!--plus sign B:-->
+<!ENTITY plusmn	       "&#xB1;"   > <!--/pm B: plus-or-minus sign-->
+<!ENTITY equals	       "="        > <!--equals sign R:-->
+<!ENTITY gt	       ">"        > <!--greater-than sign R:-->
+<!ENTITY divide	       "&#247;"   > <!--/div B: divide sign-->
+<!ENTITY times	       "&#215;"   > <!--/times B: multiply sign-->
+
+<!ENTITY curren	       "&#164;"   > <!--general currency sign-->
+<!ENTITY pound	       "&#165;"   > <!--pound sign-->
+<!ENTITY dollar	       "$"        > <!--dollar sign-->
+<!ENTITY cent	       "&#162;"   > <!--cent sign-->
+<!ENTITY yen	       "&#165;"   > <!--/yen yen sign-->
+
+<!ENTITY num	       "#"        > <!--number sign-->
+<!ENTITY percnt	       "&#37;"    > <!--percent sign-->
+<!ENTITY ast	       "*"        > <!--/ast B: asterisk-->
+<!ENTITY commat	       "@"        > <!--commercial at-->
+<!ENTITY lsqb	       "["        > <!--/lbrack O: left square bracket-->
+<!ENTITY bsol	       "\"        > <!--/backslash reverse solidus-->
+<!ENTITY rsqb	       "]"        > <!--/rbrack C: right square bracket-->
+<!ENTITY lcub	       "{"        > <!--/lbrace O: left curly bracket-->
+<!ENTITY horbar	       "&#x2015;" > <!--horizontal bar-->
+<!ENTITY verbar	       "|"        > <!--/vert vertical bar-->
+<!ENTITY rcub	       "}"        > <!--/rbrace C: right curly bracket-->
+<!ENTITY micro	       "&#181;"   > <!--micro sign-->
+<!ENTITY ohm	       "&#2126;"  > <!--ohm sign-->
+<!ENTITY deg	       "&#176;"   > <!--degree sign-->
+<!ENTITY ordm	       "&#186;"   > <!--ordinal indicator, masculine-->
+<!ENTITY ordf	       "&#170;"   > <!--ordinal indicator, feminine-->
+<!ENTITY sect	       "&#167;"   > <!--section sign-->
+<!ENTITY para	       "&#182;"   > <!--pilcrow (paragraph sign)-->
+<!ENTITY middot	       "&#183;"   > <!--/centerdot B: middle dot-->
+<!ENTITY larr	       "&#x2190;" > <!--/leftarrow /gets A: leftward arrow-->
+<!ENTITY rarr	       "&#x2192;" > <!--/rightarrow /to A: rightward arrow-->
+<!ENTITY uarr	       "&#x2191;" > <!--/uparrow A: upward arrow-->
+<!ENTITY darr	       "&#x2193;" > <!--/downarrow A: downward arrow-->
+<!ENTITY copy	       "&#169;"   > <!--copyright sign-->
+<!ENTITY reg	       "&#174;"   > <!--/circledR registered sign-->
+<!ENTITY trade	       "&#8482;"  > <!--trade mark sign-->
+<!ENTITY brvbar	       "&#xA6;"   > <!--bren (vertical) bar-->
+<!ENTITY not	       "&#xAC;"   > <!--/neg /lnot not sign-->
+<!ENTITY sung	       "&#x266A;" > <!--music note (sung text sign)-->
+
+<!ENTITY excl	       "!"        > <!--exclamation mark-->
+<!ENTITY iexcl	       "&#xA1;"	  > <!--inverted exclamation mark-->
+<!ENTITY quot	       '"'        > <!--quotation mark-->
+<!ENTITY apos	       "'"        > <!--apostrophe-->
+<!ENTITY lpar	       "("        > <!--O: left parenthesis-->
+<!ENTITY rpar	       ")"        > <!--C: right parenthesis-->
+<!ENTITY comma	       ","        > <!--P: comma-->
+<!ENTITY lowbar	       "_"        > <!--low line-->
+<!ENTITY hyphen	       "&#x2010;" > <!--hyphen-->
+<!ENTITY period	       "."        > <!--full stop, period-->
+<!ENTITY sol	       "/"        > <!--solidus-->
+<!ENTITY colon	       ":"        > <!--/colon P:-->
+<!ENTITY semi	       ";"        > <!--semicolon P:-->
+<!ENTITY quest	       "?"        > <!--question mark-->
+<!ENTITY iquest	       "&#xBF;"   > <!--inverted question mark-->
+<!ENTITY laquo	       "&#x2039;" > <!--angle quotation mark, left   But note = that Unicode 1 & Maler & el Andaloussi give &#xAB; -->
+<!ENTITY raquo	       "&#x203A;" > <!--angle quotation mark, right  But note = that Unicode 1 & Maler & el Andaloussi give &#xBB; -->
+<!ENTITY lsquo	       "&#x2018;" > <!--single quotation mark, left-->
+<!ENTITY rsquo	       "&#x2019;" > <!--single quotation mark, right-->
+<!ENTITY ldquo	       "&#x201C;" > <!--double quotation mark, left-->
+<!ENTITY rdquo	       "&#x201D;" > <!--double quotation mark, right-->
+<!ENTITY nbsp	       "&#160;"   > <!--no break (required) space-->
+<!ENTITY shy	       "&#173;"   > <!--soft hyphen-->
+
+<!ENTITY emsp	       "&#x2003;" > <!--em space-->
+<!ENTITY ensp	       "&#x2002;" > <!--en space (1/2-em)-->
+<!ENTITY emsp13	       "&#x2004;" > <!--1/3-em space-->
+<!ENTITY emsp14	       "&#x2005;" > <!--1/4-em space-->
+<!ENTITY numsp	       "&#x2007;" > <!--digit space (width of a number)-->
+<!ENTITY puncsp	       "&#x2008;" > <!--punctuation space (width of comma)-->
+<!ENTITY thinsp	       "&#x2009;" > <!--thin space (1/6-em)-->
+<!ENTITY hairsp	       "&#x200A;" > <!--hair space-->
+<!ENTITY mdash	       "&#x2014;" > <!--em dash-->
+<!ENTITY ndash	       "&#x2013;" > <!--en dash-->
+<!ENTITY dash	       "&#x2010;" > <!--hyphen (true graphic)-->
+<!ENTITY blank	       "&#x2423;" > <!--significant blank symbol-->
+<!ENTITY hellip	       "&#x2026;" > <!--ellipsis (horizontal)-->
+<!ENTITY nldr	       "&#x2025;" > <!--double baseline dot (en leader)-->
+<!ENTITY frac13	       "&#x2153;" > <!--fraction one-third-->
+<!ENTITY frac23	       "&#x2154;" > <!--fraction two-thirds-->
+<!ENTITY frac15	       "&#x2155;" > <!--fraction one-fifth-->
+<!ENTITY frac25	       "&#x2156;" > <!--fraction two-fifths-->
+<!ENTITY frac35	       "&#x2157;" > <!--fraction three-fifths-->
+<!ENTITY frac45	       "&#x2158;" > <!--fraction four-fifths-->
+<!ENTITY frac16	       "&#x2159;" > <!--fraction one-sixth-->
+<!ENTITY frac56	       "&#x215a;" > <!--fraction five-sixths-->
+<!ENTITY incare	       "&#x2105;" > <!--in-care-of symbol-->
+<!ENTITY block	       "&#x2588;" > <!--full block-->
+<!ENTITY uhblk	       "&#x2580;" > <!--upper half block-->
+<!ENTITY lhblk	       "&#x2584;" > <!--lower half block-->
+<!ENTITY blk14	       "&#x2591;" > <!--25% shaded block-->
+<!ENTITY blk12	       "&#x2592;" > <!--50% shaded block-->
+<!ENTITY blk34	       "&#x2593;" > <!--75% shaded block-->
+<!ENTITY marker	       "&#x25AE;" > <!--histogram marker-->
+<!ENTITY cir	       "&#x25CB;" > <!--/circ B: circle, open-->
+<!ENTITY squ	       "&#x25A1;" > <!--square, open-->
+<!ENTITY rect	       "&#x25AD;" > <!--rectangle, open-->
+<!ENTITY utri	       "&#x25B5;" > <!--/triangle up triangle, open-->
+<!ENTITY dtri	       "&#x25BF;" > <!--/triangledown down triangle, open-->
+<!ENTITY star	       "&#x2606;" > <!--star, open-->
+<!ENTITY bull	       "&#x2022;" > <!--/bullet B: round bullet, filled-->
+<!ENTITY squf	       "&#x25AA;" > <!--/blacksquare sq bullet, filled-->
+<!ENTITY utrif	       "&#x25B4;" > <!--/blacktriangle up tri, filled-->
+<!ENTITY dtrif	       "&#x25BE;" > <!--/blacktriangledown dn tri, filled-->
+<!ENTITY ltrif	       "&#x25C2;" > <!--/blacktriangleleft R: l tri, filled-->
+<!ENTITY rtrif	       "&#x25B8;" > <!--/blacktriangleright R: r tri, filled-->
+<!ENTITY clubs	       "&#x2663;" > <!--/clubsuit club suit symbol-->
+<!ENTITY diams	       "&#x2662;" > <!--/diamondsuit diamond suit symbol-->
+<!ENTITY hearts	       "&#x2661;" > <!--/heartsuit heart suit symbol-->
+<!ENTITY spades	       "&#x2660;" > <!--/spadesuit spades suit symbol-->
+<!ENTITY malt	       "&#x2720;" > <!--/maltese maltese cross-->
+<!ENTITY dagger	       "&#x2020;" > <!--/dagger B: dagger-->
+<!ENTITY Dagger	       "&#x2021;" > <!--/ddagger B: double dagger-->
+<!ENTITY check	       "&#x2713;" > <!--/checkmark tick, check mark-->
+<!ENTITY cross	       "&#x2717;" > <!--ballot cross-->
+<!ENTITY sharp	       "&#x266F;" > <!--/sharp musical sharp-->
+<!ENTITY flat	       "&#x266D;" > <!--/flat musical flat-->
+<!ENTITY male	       "&#x2642;" > <!--male symbol-->
+<!ENTITY female	       "&#x2640;" > <!--female symbol-->
+<!ENTITY phone	       "&#x26E0;" > <!--telephone symbol-->
+<!ENTITY telrec	       "&#x2315;" > <!--telephone recorder symbol-->
+<!ENTITY copysr	       "&#x2117;" > <!--sound recording copyright sign-->
+<!ENTITY caret	       "&#x2041;" > <!--caret (insertion mark)-->
+<!ENTITY lsquor	       "&#x201A;" > <!--rising single quote, left (low)-->
+<!ENTITY ldquor	       "&#x201E;" > <!--rising dbl quote, left (low)-->
+
+<!ENTITY fflig	       "&#xFB00;" > <!--small ff ligature-->
+<!ENTITY filig	       "&#xFB01;" > <!--small fi ligature-->
+<!ENTITY fjlig	       "fj"       > <!--small fj ligature-->
+<!ENTITY ffilig	       "&#xFB03;" > <!--small ffi ligature-->
+<!ENTITY ffllig	       "&#xFB04;" > <!--small ffl ligature-->
+<!ENTITY fllig	       "&#xFB02;" > <!--small fl ligature-->
+
+<!ENTITY mldr	       "&#x2025;" > <!--em leader-->
+<!ENTITY rdquor	       "&#x201D;" > <!--rising dbl quote, right (high)-->
+<!ENTITY rsquor	       "&#x2019;" > <!--rising single quote, right (high)-->
+<!ENTITY vellip	       "&#x22EE;" > <!--vertical ellipsis-->
+
+<!ENTITY hybull	       "&#x2043;" > <!--rectangle, filled (hyphen bullet)-->
+<!ENTITY loz	       "&#x2727;" > <!--/lozenge - lozenge or total mark-->
+<!ENTITY lozf	       "&#x2726;" > <!--/blacklozenge - lozenge, filled-->
+<!ENTITY ltri	       "&#x25C3;" > <!--/triangleleft B: l triangle, open-->
+<!ENTITY rtri	       "&#x25B9;" > <!--/triangleright B: r triangle, open-->
+<!ENTITY starf	       "&#x2605;" > <!--/bigstar - star, filled-->
+
+<!ENTITY natur	       "&#x266E;" > <!--/natural - music natural-->
+<!ENTITY rx	       "&#x211E;" > <!--pharmaceutical prescription (Rx)-->
+<!ENTITY sext	       "&#x2736;" > <!--sextile (6-pointed star)-->
+
+<!ENTITY target	       "&#x2316;" > <!--register mark or target-->
+<!ENTITY dlcrop	       "&#x230D;" > <!--downward left crop mark -->
+<!ENTITY drcrop	       "&#x230C;" > <!--downward right crop mark -->
+<!ENTITY ulcrop	       "&#x230F;" > <!--upward left crop mark -->
+<!ENTITY urcrop	       "&#x230E;" > <!--upward right crop mark -->
+
+<!ENTITY aleph	       "&#x2135;" > <!--/aleph aleph, Hebrew-->
+<!ENTITY and	       "&#x2227;" > <!--/wedge /land B: logical and-->
+<!ENTITY ang90	       "&#x221F;" > <!--right (90 degree) angle-->
+<!ENTITY angsph	       "&#x2222;" > <!--/sphericalangle angle-spherical-->
+<!ENTITY ap	       "&#x2249;" > <!--/approx R: approximate-->
+<!ENTITY becaus	       "&#x2235;" > <!--/because R: because-->
+<!ENTITY bottom	       "&#x22A5;" > <!--/bot B: perpendicular-->
+<!ENTITY cap	       "&#x2229;" > <!--/cap B: intersection-->
+<!ENTITY cong	       "&#x2245;" > <!--/cong R: congruent with-->
+<!ENTITY conint	       "&#x222E;" > <!--/oint L: contour integral operator-->
+<!ENTITY cup	       "&#x222A;" > <!--/cup B: union or logical sum-->
+<!ENTITY equiv	       "&#x2261;" > <!--/equiv R: identical with-->
+<!ENTITY exist	       "&#x2203;" > <!--/exists at least one exists-->
+<!ENTITY forall	       "&#x2200;" > <!--/forall for all-->
+<!ENTITY fnof	       "&#x192;"  > <!--function of (italic small f)-->
+<!ENTITY ge	       "&#x2265;" > <!--/geq /ge R: greater-than-or-equal-->
+<!ENTITY iff	       "&#x21D4;" > <!--/iff if and only if-->
+<!ENTITY infin	       "&#x221E;" > <!--/infty infinity-->
+<!ENTITY int	       "&#x222B;" > <!--/int L: integral operator-->
+<!ENTITY isin	       "&#x2208;" > <!--/in R: set membership-->
+<!ENTITY lang	       "&#x2329;" > <!--/langle O: left angle bracket-->
+<!ENTITY lArr	       "&#x21D0;" > <!--/Leftarrow A: is implied by-->
+<!ENTITY le	       "&#x2264;" > <!--/leq /le R: less-than-or-equal-->
+<!ENTITY minus	       "-"        > <!--B: minus sign-->
+<!ENTITY mnplus	       "&#x2213;" > <!--/mp B: minus-or-plus sign-->
+<!ENTITY nabla	       "&#x2207;" > <!--/nabla del, Hamilton operator-->
+<!ENTITY ne	       "&#x2260;" > <!--/ne /neq R: not equal-->
+<!ENTITY ni	       "&#x220B;" > <!--/ni /owns R: contains-->
+<!ENTITY or	       "&#x2228;" > <!--/vee /lor B: logical or-->
+<!ENTITY par	       "&#x2225;" > <!--/parallel R: parallel-->
+<!ENTITY part	       "&#x2202;" > <!--/partial partial differential-->
+<!ENTITY permil	       "&#x2030;" > <!--per thousand-->
+<!ENTITY perp	       "&#x22A5;" > <!--/perp R: perpendicular-->
+<!ENTITY prime	       "&#x2032;" > <!--/prime prime or minute-->
+<!ENTITY Prime	       "&#x2033;" > <!--double prime or second-->
+<!ENTITY prop	       "&#x221D;" > <!--/propto R: is proportional to-->
+<!ENTITY radic	       "&#x221A;" > <!--/surd radical-->
+<!ENTITY rang	       "&#x232A;" > <!--/rangle C: right angle bracket-->
+<!ENTITY rArr	       "&#x21D2;" > <!--/Rightarrow A: implies-->
+<!ENTITY sim	       "&#x223C;" > <!--/sim R: similar-->
+<!ENTITY sime	       "&#x2243;" > <!--/simeq R: similar, equals-->
+<!ENTITY square	       "&#x25A1;" > <!--/square B: square-->
+<!ENTITY sub	       "&#x2282;" > <!--/subset R: subset or is implied by-->
+<!ENTITY sube	       "&#x2286;" > <!--/subseteq R: subset, equals-->
+<!ENTITY sup	       "&#x2283;" > <!--/supset R: superset or implies-->
+<!ENTITY supe	       "&#x2287;" > <!--/supseteq R: superset, equals-->
+<!ENTITY there4	       "&#x2234;" > <!--/therefore R: therefore-->
+<!ENTITY Verbar	       "&#x2016;" > <!--/Vert dbl vertical bar-->
+
+<!ENTITY angst	       "&#x212B;" > <!--Angstrom capital A, ring-->
+<!ENTITY bernou	       "&#x212C;" > <!--Bernoulli function (script capital B)-->
+<!ENTITY compfn	       "&#x2218;" > <!--B: composite function (small circle)-->
+<!ENTITY Dot	       "&#xA8;"   > <!--dieresis or umlaut mark-->
+<!ENTITY DotDot	       "&#x20DC;" > <!--four dots above-->
+<!ENTITY hamilt	       "&#x210B;" > <!--Hamiltonian (script capital H)-->
+<!ENTITY lagran	       "&#x2112;" > <!--Lagrangian (script capital L)-->
+<!ENTITY lowast	       "&#x2217;" > <!--low asterisk-->
+<!ENTITY notin	       "&#x2209;" > <!--N: negated set membership-->
+<!ENTITY order	       "&#x2134;" > <!--order of (script small o)-->
+<!ENTITY phmmat	       "&#x2133;" > <!--physics M-matrix (script capital M)-->
+<!ENTITY tdot	       "&#x20DB;" > <!--three dots above-->
+<!ENTITY tprime	       "&#x2034;" > <!--triple prime-->
+<!ENTITY wedgeq	       "&#x2259;" > <!--R: corresponds to (wedge, equals)-->

@@ -1,0 +1,1166 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+   <title>CWRC Workflow Schema Documentation</title>
+		<meta name="generator" content="DocBook XSL Stylesheets V1.77.1"/>
+   	<link rel="home" href="workflow-schema_documentation.html" title="CWRC Workflow Schema Documentation"/>
+	   <link href="documentation.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		
+		<div class="article"><div class="titlepage">
+			<div>
+				<div>
+					<h2 class="title">
+						<a name="d5e1"></a>
+						CWRC Workflow Schema Documentation
+					</h2>
+				</div>
+			</div>
+		</div>
+			<div class="toc">
+				<p><b>Table of Contents</b></p>
+				<dl>
+					<dt><span class="section"><a href="#d5e3">Grammar Documentation</a></span></dt>
+					<dd>
+						<dl><dt><span class="section"><a href="#d5e6">
+	Element: activity</a></span></dt><dt><span class="section"><a href="#d5e67">
+	Element: assigned</a></span></dt><dt><span class="section"><a href="#d5e124">
+	Element: auto</a></span></dt><dt><span class="section"><a href="#d5e191">
+	Element: cwrc</a></span></dt><dt><span class="section"><a href="#d5e220">
+	Element: human</a></span></dt><dt><span class="section"><a href="#d5e287">
+	Element: message</a></span></dt><dt><span class="section"><a href="#d5e315">
+	Element: note</a></span></dt><dt><span class="section"><a href="#d5e343">
+	Element: tool</a></span></dt><dt><span class="section"><a href="#d5e392">
+	Element: user</a></span></dt><dt><span class="section"><a href="#d5e441">
+	Element: workflow</a></span></dt><dt><span class="section"><a href="#attribute-category">
+	   Pattern: attribute-category</a></span></dt><dt><span class="section"><a href="#attribute-datastreamID">
+	      Pattern: attribute-datastreamID</a></span></dt><dt><span class="section"><a href="#attribute-date">
+	         Pattern: attribute-date</a></span></dt><dt><span class="section"><a href="#attribute-process">
+	            Pattern: attribute-process</a></span></dt><dt><span class="section"><a href="#attribute-stamp">
+	               Pattern: attribute-stamp</a></span></dt><dt><span class="section"><a href="#attribute-status">
+	                  Pattern: attribute-status</a></span></dt><dt><span class="section"><a href="#attribute-toolID">
+	                     Pattern: attribute-toolID</a></span></dt><dt><span class="section"><a href="#attribute-userID">
+	                        Pattern: attribute-userID</a></span></dt><dt><span class="section"><a href="#common-content">
+	                           Pattern: common-content</a></span></dt><dt><span class="section"><a href="#element-activity">
+	                              Pattern: element-activity</a></span></dt><dt><span class="section"><a href="#element-assigned">
+	                                 Pattern: element-assigned</a></span></dt><dt><span class="section"><a href="#element-cwrc">
+	                                    Pattern: element-cwrc</a></span></dt><dt><span class="section"><a href="#element-message">
+	                                       Pattern: element-message</a></span></dt><dt><span class="section"><a href="#element-note">
+	                                          Pattern: element-note</a></span></dt><dt><span class="section"><a href="#element-tool">
+	                                             Pattern: element-tool</a></span></dt><dt><span class="section"><a href="#element-user">
+	                                                Pattern: element-user</a></span></dt><dt><span class="section"><a href="#element-workflow">
+	                                                   Pattern: element-workflow</a></span></dt></dl></dd></dl></div>
+   
+   <div class="section">
+		   <div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="sample"></a>Sample XML</h2></div></div></div>
+		   <img src="sample_workflow.jpeg" alt=""/>
+   </div>
+		   
+		   
+		   <div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e3"></a>Grammar Documentation</h2></div></div></div>
+      
+      <p>Namespace: cwrc.ca/workflow</p>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e6"></a>
+	Element: activity</h3></div></div></div>
+         
+         <div class="table"><a name="element-activity.activity"></a><p class="title"><b>Table 1. Element: activity</b></p><div class="table-contents">
+            
+            <table summary="Element: activity" border="1">
+            	<tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>Element activity captures information on one or more process(es) applied to a Fedora object aas well as its completion status. </p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td>
+                        <p>
+			
+						
+			
+			
+				
+			?
+      ,
+			
+				<a class="link" href="#element-note" title="Pattern: element-note">element-note;</a>
+			?
+      
+		</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Attributes</p>
+                     </td><td><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>category</td><td>
+	    Enumeration: 
+	      "created"<br/>
+	      "deposited"<br/>
+	      "metadata_contribution"<br/>
+	      "content_contribution"<br/>
+	      "checked"<br/>
+	      "machine_processed"<br/>
+	      "user-tagged"<br/>
+	      "rights_assigned"<br/>
+	      "published"<br/>
+	      "peer-reviewed/evaluated"<br/>
+	      "withdrawn"<br/>
+	      "deleted"<br/></td><td>Optional</td><td>
+                                 <p>Activity categories or &#8216;primitives&#8217; put together during workflow meetings in October 2010 (re: SB, SF, MP meeting on workflow values), and revised in November 2011 (MP). The categories are meant to represent a set of constant values to be used across projects to allow workflow general procedures to be applied to objects CWRC-wide without restricting workflow stamps (see stamp attribute).</p>
+                              </td></tr><tr><td>status</td><td>
+	    Enumeration: 
+	      "c"<br/>
+	      "ipr"<br/>
+	      "p"<br/>
+	      "i"<br/></td><td>Optional</td><td>
+                                 <p>Attribute status captures completion information on a particular process.</p>
+                              </td></tr><tr><td>stamp</td><td>
+	    Enumeration: 
+	      "niso:AO"<br/>
+	      "niso:SMUR"<br/>
+	      "niso:AM"<br/>
+	      "niso:P"<br/>
+	      "niso:VoR"<br/>
+	      "niso:CVoR"<br/>
+	      "niso:EVoR"<br/>
+	      "orl:SUB"<br/>
+	      "orl:RWT"<br/>
+	      "orl:REV"<br/>
+	      "orl:RBV"<br/>
+	      "orl:CAS"<br/>
+	      "orl:CFT"<br/>
+	      "orl:CFB"<br/>
+	      "orl:PUB"<br/>
+	      "orl:ENH"<br/>
+	      "orl:TC"<br/>
+	      "orl:PUBR"<br/>
+	      "cwrc:cre"<br/>
+	      "cwrc:dep"<br/>
+	      "cwrc:cvr"<br/>
+	      "cwrc:evr"<br/>
+	      "cwrc:ckd"<br/>
+	      "cwrc:tag"<br/>
+	      "cwrc:rights_asg"<br/>
+	      "cwrc:pub"<br/>
+	      "cwrc:rev"<br/>
+	      "cwrc:wdr"<br/>
+	      "cwrc:del"<br/></td><td>Optional</td><td>
+                                 <p>Activity types or stamps. These finer categories can be created on a project-specific basis, and particular projects may wish to rename these categories (i.e. Orlando may want to have &#8216;cas&#8217; instead of &#8216;ckd&#8217;, another project may want to give it a stamp that according to a French name),, but the basic activities categories (primitives) should stay the same. NOTE: the values in the Activity type column are not exhaustive--more values can be created. The included values represent a minimum of stamps that can be offered as default to all projects.</p>
+                              </td></tr></tbody></table></td></tr><tr><td class="header" valign="top">
+                        <p>Source</p>
+                     </td><td>
+                        <div class="code">&lt;element xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema" name="activity"&gt;
+			
+                              &lt;a:documentation&gt;Element activity captures information on one or more process(es) applied to a Fedora object aas well as its completion status. &lt;/a:documentation&gt;
+			
+                              &lt;ref name="attribute-category"/&gt;			
+			
+                              &lt;ref name="attribute-status"/&gt;
+			
+                              &lt;optional&gt;
+				
+                                 &lt;ref name="attribute-stamp"/&gt;
+			
+                              &lt;/optional&gt;
+			
+                              &lt;optional&gt;
+				
+                                 &lt;ref name="element-note"/&gt;
+			
+                              &lt;/optional&gt;
+		
+                           &lt;/element&gt;</div>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e67"></a>
+	Element: assigned</h3></div></div></div>
+         
+         <div class="table"><a name="element-assigned.assigned"></a><p class="title"><b>Table&nbsp;2.&nbsp;Element: assigned</b></p><div class="table-contents">
+            
+            <table summary="Element: assigned" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>Element assigned captures one or more assigned users and/or tools as well as optional note for next workflow steps.</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td>
+                        <p>
+			
+			
+				
+			?
+      ,
+			
+			
+    (
+				
+    ( 
+    <a class="link" href="#element-user" title="Pattern: element-user">element-user;</a> | <a class="link" href="#element-tool" title="Pattern: element-tool">element-tool;</a>
+    )
+  
+			)+
+    ,
+			
+				<a class="link" href="#element-message" title="Pattern: element-message">element-message;</a>
+			?
+      
+		</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Attributes</p>
+                     </td><td><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>process</td><td>
+	    xsd:string</td><td>Optional</td><td>
+                                 <p>Some id used to trigger a process by some tool.</p>
+                              </td></tr><tr><td>category</td><td>
+	    Enumeration: 
+	      "created"<br/>
+	      "deposited"<br/>
+	      "metadata_contribution"<br/>
+	      "content_contribution"<br/>
+	      "checked"<br/>
+	      "machine_processed"<br/>
+	      "user-tagged"<br/>
+	      "rights_assigned"<br/>
+	      "published"<br/>
+	      "peer-reviewed/evaluated"<br/>
+	      "withdrawn"<br/>
+	      "deleted"<br/></td><td>Optional</td><td>
+                                 <p>Activity categories or &#8216;primitives&#8217; put together during workflow meetings in October 2010 (re: SB, SF, MP meeting on workflow values), and revised in November 2011 (MP). The categories are meant to represent a set of constant values to be used across projects to allow workflow general procedures to be applied to objects CWRC-wide without restricting workflow stamps (see stamp attribute).</p>
+                              </td></tr></tbody></table></td></tr><tr><td class="header" valign="top">
+                        <p>Source</p>
+                     </td><td>
+                        <div class="code">&lt;element xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema" name="assigned"&gt;
+			
+                              &lt;a:documentation&gt;Element assigned captures one or more assigned users and/or tools as well as optional note for next workflow steps.&lt;/a:documentation&gt;
+			
+                              &lt;optional&gt;
+				
+                                 &lt;ref name="attribute-process"/&gt;
+			
+                              &lt;/optional&gt;
+			
+                              &lt;ref name="attribute-category"/&gt;
+			
+                              &lt;oneOrMore&gt;
+				
+                                 &lt;choice&gt;
+					
+                                    &lt;ref name="element-user"/&gt;
+					
+                                    &lt;ref name="element-tool"/&gt;
+				
+                                 &lt;/choice&gt;
+			
+                              &lt;/oneOrMore&gt;
+			
+                              &lt;optional&gt;
+				
+                                 &lt;ref name="element-message"/&gt;
+			
+                              &lt;/optional&gt;
+		
+                           &lt;/element&gt;</div>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e124"></a>
+	Element: auto</h3></div></div></div>
+         
+         <div class="table"><a name="element-workflow.workflow.auto"></a><p class="title"><b>Table&nbsp;3.&nbsp;Element: auto</b></p><div class="table-contents">
+            
+            <table summary="Element: auto" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>Automated workflow record.</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td>
+                        <p>
+											
+						
+                           <a class="link" href="#common-content" title="Pattern: common-content">common-content;</a>
+					
+                        </p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Attributes</p>
+                     </td><td><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>date</td><td>
+	    xsd:date</td><td>Optional</td><td>
+                                 <p>Date/time information</p>
+                              </td></tr><tr><td>userID</td><td>
+	    xsd:NCName</td><td>Optional</td><td>
+                                 <p>User ID</p>
+                              </td></tr><tr><td>toolID</td><td>
+	    xsd:NCName</td><td>Optional</td><td>
+                                 <p>Tool ID</p>
+                              </td></tr><tr><td>datastreamID</td><td>
+	    xsd:string</td><td>Optional</td><td>
+                                 <p></p>
+                              </td></tr></tbody></table></td></tr><tr><td class="header" valign="top">
+                        <p>Source</p>
+                     </td><td>
+                        <div class="code">&lt;element xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema" name="auto"&gt;
+						
+                              &lt;a:documentation&gt;Automated workflow record.&lt;/a:documentation&gt;					
+						
+                              &lt;ref name="common-content"/&gt;
+					
+                           &lt;/element&gt;</div>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e191"></a>
+	Element: cwrc</h3></div></div></div>
+         
+         <div class="table"><a name="element-cwrc.cwrc"></a><p class="title"><b>Table&nbsp;4.&nbsp;Element: cwrc</b></p><div class="table-contents">
+            
+            <table summary="Element: cwrc" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>Element cwrc can hold a collection of workflow elements.</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td>
+                        <p>
+			
+			
+    (
+				<a class="link" href="#element-workflow" title="Pattern: element-workflow">element-workflow;</a>
+			)+
+    
+		</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Source</p>
+                     </td><td>
+                        <div class="code">&lt;element xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema" name="cwrc"&gt;
+			
+                              &lt;a:documentation&gt;Element cwrc can hold a collection of workflow elements.&lt;/a:documentation&gt;
+			
+                              &lt;oneOrMore&gt;
+				
+                                 &lt;ref name="element-workflow"/&gt;
+			
+                              &lt;/oneOrMore&gt;
+		
+                           &lt;/element&gt;</div>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e220"></a>
+	Element: human</h3></div></div></div>
+         
+         <div class="table"><a name="element-workflow.workflow.human"></a><p class="title"><b>Table&nbsp;5.&nbsp;Element: human</b></p><div class="table-contents">
+            
+            <table summary="Element: human" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>User-generated workflow record.</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td>
+                        <p>
+												
+						
+                           <a class="link" href="#common-content" title="Pattern: common-content">common-content;</a>
+					
+                        </p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Attributes</p>
+                     </td><td><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>date</td><td>
+	    xsd:date</td><td>Optional</td><td>
+                                 <p>Date/time information</p>
+                              </td></tr><tr><td>userID</td><td>
+	    xsd:NCName</td><td>Optional</td><td>
+                                 <p>User ID</p>
+                              </td></tr><tr><td>toolID</td><td>
+	    xsd:NCName</td><td>Optional</td><td>
+                                 <p>Tool ID</p>
+                              </td></tr><tr><td>datastreamID</td><td>
+	    xsd:string</td><td>Optional</td><td>
+                                 <p></p>
+                              </td></tr></tbody></table></td></tr><tr><td class="header" valign="top">
+                        <p>Source</p>
+                     </td><td>
+                        <div class="code">&lt;element xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema" name="human"&gt;
+						
+                              &lt;a:documentation&gt;User-generated workflow record.&lt;/a:documentation&gt;						
+						
+                              &lt;ref name="common-content"/&gt;
+					
+                           &lt;/element&gt;</div>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e287"></a>
+	Element: message</h3></div></div></div>
+         
+         <div class="table"><a name="element-message.message"></a><p class="title"><b>Table&nbsp;6.&nbsp;Element: message</b></p><div class="table-contents">
+            
+            <table summary="Element: message" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>Element message captures notes for notifications to be sent to users and/or tools.</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td>
+                        <p>
+			
+			
+    TEXT
+    
+		</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Source</p>
+                     </td><td>
+                        <div class="code">&lt;element xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema" name="message"&gt;
+			
+                              &lt;a:documentation&gt;Element message captures notes for notifications to be sent to users and/or tools.&lt;/a:documentation&gt;
+			
+                              &lt;text/&gt;
+		
+                           &lt;/element&gt;</div>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e315"></a>
+	Element: note</h3></div></div></div>
+         
+         <div class="table"><a name="element-note.note"></a><p class="title"><b>Table&nbsp;7.&nbsp;Element: note</b></p><div class="table-contents">
+            
+            <table summary="Element: note" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>Element note captures workflow notes for future reference of processes executed.</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td>
+                        <p>
+			
+			
+    TEXT
+    
+		</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Source</p>
+                     </td><td>
+                        <div class="code">&lt;element xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema" name="note"&gt;
+			
+                              &lt;a:documentation&gt;Element note captures workflow notes for future reference of processes executed.&lt;/a:documentation&gt;
+			
+                              &lt;text/&gt;
+		
+                           &lt;/element&gt;</div>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e343"></a>
+	Element: tool</h3></div></div></div>
+         
+         <div class="table"><a name="element-tool.tool"></a><p class="title"><b>Table&nbsp;8.&nbsp;Element: tool</b></p><div class="table-contents">
+            
+            <table summary="Element: tool" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>Element tool captures an assigned tool's ID.</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td>
+                        <p>
+			
+			
+			
+				
+                           <a class="link" href="#element-note" title="Pattern: element-note">element-note;</a>
+			?
+      
+		</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Attributes</p>
+                     </td><td><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>toolID</td><td>
+	    xsd:NCName</td><td>Optional</td><td>
+                                 <p>Tool ID</p>
+                              </td></tr></tbody></table></td></tr><tr><td class="header" valign="top">
+                        <p>Source</p>
+                     </td><td>
+                        <div class="code">&lt;element xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema" name="tool"&gt;
+			
+                              &lt;a:documentation&gt;Element tool captures an assigned tool's ID.&lt;/a:documentation&gt;
+			
+                              &lt;ref name="attribute-toolID"/&gt;
+			
+                              &lt;optional&gt;
+				
+                                 &lt;ref name="element-note"/&gt;
+			
+                              &lt;/optional&gt;
+		
+                           &lt;/element&gt;</div>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e392"></a>
+	Element: user</h3></div></div></div>
+         
+         <div class="table"><a name="element-user.user"></a><p class="title"><b>Table&nbsp;9.&nbsp;Element: user</b></p><div class="table-contents">
+            
+            <table summary="Element: user" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>Element tool captures an assigned user's ID.</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td>
+                        <p>
+			
+			
+				
+			?
+      ,
+			
+				<a class="link" href="#element-note" title="Pattern: element-note">element-note;</a>
+			?
+      
+		</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Attributes</p>
+                     </td><td><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>userID</td><td>
+	    xsd:NCName</td><td>Optional</td><td>
+                                 <p>User ID</p>
+                              </td></tr></tbody></table></td></tr><tr><td class="header" valign="top">
+                        <p>Source</p>
+                     </td><td>
+                        <div class="code">&lt;element xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema" name="user"&gt;
+			
+                              &lt;a:documentation&gt;Element tool captures an assigned user's ID.&lt;/a:documentation&gt;
+			
+                              &lt;optional&gt;
+				
+                                 &lt;ref name="attribute-userID"/&gt;
+			
+                              &lt;/optional&gt;
+			
+                              &lt;optional&gt;
+				
+                                 &lt;ref name="element-note"/&gt;
+			
+                              &lt;/optional&gt;
+		
+                           &lt;/element&gt;</div>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e441"></a>
+	Element: workflow</h3></div></div></div>
+         
+         <div class="table"><a name="element-workflow.workflow"></a><p class="title"><b>Table&nbsp;10.&nbsp;Element: workflow</b></p><div class="table-contents">
+            
+            <table summary="Element: workflow" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>Element workflow contains one or more automated or
+			human-generated workflow records.</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td>
+                        <p>
+						
+			
+    (
+				
+    ( 
+    <a class="link" href="#element-workflow.workflow.auto" title="Table&nbsp;3.&nbsp;Element: auto">auto</a> | <a class="link" href="#element-workflow.workflow.human" title="Table&nbsp;5.&nbsp;Element: human">human</a>
+    )
+  
+			)+
+    
+		</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Source</p>
+                     </td><td>
+                        <div class="code">&lt;element xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema" name="workflow"&gt;
+			
+                              &lt;a:documentation&gt;Element workflow contains one or more automated or
+			human-generated workflow records.&lt;/a:documentation&gt;			
+			
+                              &lt;oneOrMore&gt;
+				
+                                 &lt;choice&gt;
+					
+                                    &lt;element name="auto"&gt;
+						
+                                       &lt;a:documentation&gt;Automated workflow record.&lt;/a:documentation&gt;					
+						
+                                       &lt;ref name="common-content"/&gt;
+					
+                                    &lt;/element&gt;
+					
+                                    &lt;element name="human"&gt;
+						
+                                       &lt;a:documentation&gt;User-generated workflow record.&lt;/a:documentation&gt;						
+						
+                                       &lt;ref name="common-content"/&gt;
+					
+                                    &lt;/element&gt;
+				
+                                 &lt;/choice&gt;
+			
+                              &lt;/oneOrMore&gt;
+		
+                           &lt;/element&gt;</div>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="attribute-category"></a>Pattern: attribute-category</h3></div></div></div>
+         
+         <div class="table"><a name="d5e473"></a><p class="title"><b>Table&nbsp;11.&nbsp;Pattern: attribute-category</b></p><div class="table-contents">
+            
+            <table summary="Pattern: attribute-category" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">Attributes</td><td valign="top"><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>category</td><td>
+	    Enumeration: 
+	      "created"<br/>
+	      "deposited"<br/>
+	      "metadata_contribution"<br/>
+	      "content_contribution"<br/>
+	      "checked"<br/>
+	      "machine_processed"<br/>
+	      "user-tagged"<br/>
+	      "rights_assigned"<br/>
+	      "published"<br/>
+	      "peer-reviewed/evaluated"<br/>
+	      "withdrawn"<br/>
+	      "deleted"<br/></td><td>Required</td><td>
+                                 <p>Activity categories or &#8216;primitives&#8217; put together during workflow meetings in October 2010 (re: SB, SF, MP meeting on workflow values), and revised in November 2011 (MP). The categories are meant to represent a set of constant values to be used across projects to allow workflow general procedures to be applied to objects CWRC-wide without restricting workflow stamps (see stamp attribute).</p>
+                              </td></tr></tbody></table></td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="attribute-datastreamID"></a>Pattern: attribute-datastreamID</h3></div></div></div>
+         
+         <div class="table"><a name="d5e510"></a><p class="title"><b>Table&nbsp;12.&nbsp;Pattern: attribute-datastreamID</b></p><div class="table-contents">
+            
+            <table summary="Pattern: attribute-datastreamID" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">Attributes</td><td valign="top"><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>datastreamID</td><td>
+	    xsd:string</td><td>Required</td><td>
+                                 <p></p>
+                              </td></tr></tbody></table></td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="attribute-date"></a>Pattern: attribute-date</h3></div></div></div>
+         
+         <div class="table"><a name="d5e547"></a><p class="title"><b>Table&nbsp;13.&nbsp;Pattern: attribute-date</b></p><div class="table-contents">
+            
+            <table summary="Pattern: attribute-date" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">Attributes</td><td valign="top"><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>date</td><td>
+	    xsd:date</td><td>Required</td><td>
+                                 <p>Date/time information</p>
+                              </td></tr></tbody></table></td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section" ><div class="titlepage"><div><div><h3 class="title"><a name="attribute-process"></a>Pattern: attribute-process</h3></div></div></div>
+         
+         <div class="table"><a name="d5e584"></a><p class="title"><b>Table&nbsp;14.&nbsp;Pattern: attribute-process</b></p><div class="table-contents">
+            
+            <table summary="Pattern: attribute-process" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">Attributes</td><td valign="top"><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>process</td><td>
+	    xsd:string</td><td>Required</td><td>
+                                 <p>Some id used to trigger a process by some tool.</p>
+                              </td></tr></tbody></table></td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="attribute-stamp"></a>Pattern: attribute-stamp</h3></div></div></div>
+         
+         <div class="table"><a name="d5e621"></a><p class="title"><b>Table&nbsp;15.&nbsp;Pattern: attribute-stamp</b></p><div class="table-contents">
+            
+            <table summary="Pattern: attribute-stamp" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">Attributes</td><td valign="top"><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>stamp</td><td>
+	    Enumeration: 
+	      "niso:AO"<br/>
+	      "niso:SMUR"<br/>
+	      "niso:AM"<br/>
+	      "niso:P"<br/>
+	      "niso:VoR"<br/>
+	      "niso:CVoR"<br/>
+	      "niso:EVoR"<br/>
+	      "orl:SUB"<br/>
+	      "orl:RWT"<br/>
+	      "orl:REV"<br/>
+	      "orl:RBV"<br/>
+	      "orl:CAS"<br/>
+	      "orl:CFT"<br/>
+	      "orl:CFB"<br/>
+	      "orl:PUB"<br/>
+	      "orl:ENH"<br/>
+	      "orl:TC"<br/>
+	      "orl:PUBR"<br/>
+	      "cwrc:cre"<br/>
+	      "cwrc:dep"<br/>
+	      "cwrc:cvr"<br/>
+	      "cwrc:evr"<br/>
+	      "cwrc:ckd"<br/>
+	      "cwrc:tag"<br/>
+	      "cwrc:rights_asg"<br/>
+	      "cwrc:pub"<br/>
+	      "cwrc:rev"<br/>
+	      "cwrc:wdr"<br/>
+	      "cwrc:del"<br/></td><td>Required</td><td>
+                                 <p>Activity types or stamps. These finer categories can be created on a project-specific basis, and particular projects may wish to rename these categories (i.e. Orlando may want to have &#8216;cas&#8217; instead of &#8216;ckd&#8217;, another project may want to give it a stamp that according to a French name),, but the basic activities categories (primitives) should stay the same. NOTE: the values in the Activity type column are not exhaustive--more values can be created. The included values represent a minimum of stamps that can be offered as default to all projects.</p>
+                              </td></tr></tbody></table></td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="attribute-status"></a>Pattern: attribute-status</h3></div></div></div>
+         
+         <div class="table"><a name="d5e658"></a><p class="title"><b>Table&nbsp;16.&nbsp;Pattern: attribute-status</b></p><div class="table-contents">
+            
+            <table summary="Pattern: attribute-status" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">Attributes</td><td valign="top"><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>status</td><td>
+	    Enumeration: 
+	      "c"<br/>
+	      "ipr"<br/>
+	      "p"<br/>
+	      "i"<br/></td><td>Required</td><td>
+                                 <p>Attribute status captures completion information on a particular process.</p>
+                              </td></tr></tbody></table></td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="attribute-toolID"></a>Pattern: attribute-toolID</h3></div></div></div>
+         
+         <div class="table"><a name="d5e695"></a><p class="title"><b>Table&nbsp;17.&nbsp;Pattern: attribute-toolID</b></p><div class="table-contents">
+            
+            <table summary="Pattern: attribute-toolID" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">Attributes</td><td valign="top"><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>toolID</td><td>
+	    xsd:NCName</td><td>Required</td><td>
+                                 <p>Tool ID</p>
+                              </td></tr></tbody></table></td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="attribute-userID"></a>Pattern: attribute-userID</h3></div></div></div>
+         
+         <div class="table"><a name="d5e732"></a><p class="title"><b>Table&nbsp;18.&nbsp;Pattern: attribute-userID</b></p><div class="table-contents">
+            
+            <table summary="Pattern: attribute-userID" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">Attributes</td><td valign="top"><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>userID</td><td>
+	    xsd:NCName</td><td>Required</td><td>
+                                 <p>User ID</p>
+                              </td></tr></tbody></table></td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="common-content"></a>Pattern: common-content</h3></div></div></div>
+         
+         <div class="table"><a name="d5e769"></a><p class="title"><b>Table&nbsp;19.&nbsp;Pattern: common-content</b></p><div class="table-contents">
+            
+            <table summary="Pattern: common-content" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td valign="top">
+                        <p>
+    ( 
+     | 
+    )
+  
+			
+		?
+      </p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">Attributes</td><td valign="top"><table width="100%" border="0"><tbody><tr><td class="header">
+                                 <p>Attribute</p>
+                              </td><td class="header">
+                                 <p>Type</p>
+                              </td><td class="header">
+                                 <p>Use</p>
+                              </td><td class="header">
+                                 <p>Documentation</p>
+                              </td></tr><tr><td>date</td><td>
+	    xsd:date</td><td>Required</td><td>
+                                 <p>Date/time information</p>
+                              </td></tr><tr><td>userID</td><td>
+	    xsd:NCName</td><td>Required</td><td>
+                                 <p>User ID</p>
+                              </td></tr><tr><td>toolID</td><td>
+	    xsd:NCName</td><td>Required</td><td>
+                                 <p>Tool ID</p>
+                              </td></tr><tr><td>datastreamID</td><td>
+	    xsd:string</td><td>Optional</td><td>
+                                 <p></p>
+                              </td></tr></tbody></table></td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="element-activity"></a>Pattern: element-activity</h3></div></div></div>
+         
+         <div class="table"><a name="d5e829"></a><p class="title"><b>Table&nbsp;20.&nbsp;Pattern: element-activity</b></p><div class="table-contents">
+            
+            <table summary="Pattern: element-activity" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td valign="top">
+                        <p>
+                           <a class="link" href="#element-activity.activity" title="Table&nbsp;1.&nbsp;Element: activity">activity</a>
+                        </p>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="element-assigned"></a>Pattern: element-assigned</h3></div></div></div>
+         
+         <div class="table"><a name="d5e853"></a><p class="title"><b>Table&nbsp;21.&nbsp;Pattern: element-assigned</b></p><div class="table-contents">
+            
+            <table summary="Pattern: element-assigned" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td valign="top">
+                        <p>
+                           <a class="link" href="#element-assigned.assigned" title="Table&nbsp;2.&nbsp;Element: assigned">assigned</a>
+                        </p>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="element-cwrc"></a>Pattern: element-cwrc</h3></div></div></div>
+         
+         <div class="table"><a name="d5e877"></a><p class="title"><b>Table&nbsp;22.&nbsp;Pattern: element-cwrc</b></p><div class="table-contents">
+            
+            <table summary="Pattern: element-cwrc" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td valign="top">
+                        <p>
+                           <a class="link" href="#element-cwrc.cwrc" title="Table&nbsp;4.&nbsp;Element: cwrc">cwrc</a>
+                        </p>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="element-message"></a>Pattern: element-message</h3></div></div></div>
+         
+         <div class="table"><a name="d5e901"></a><p class="title"><b>Table&nbsp;23.&nbsp;Pattern: element-message</b></p><div class="table-contents">
+            
+            <table summary="Pattern: element-message" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td valign="top">
+                        <p>
+                           <a class="link" href="#element-message.message" title="Table&nbsp;6.&nbsp;Element: message">message</a>
+                        </p>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="element-note"></a>Pattern: element-note</h3></div></div></div>
+         
+         <div class="table"><a name="d5e925"></a><p class="title"><b>Table&nbsp;24.&nbsp;Pattern: element-note</b></p><div class="table-contents">
+            
+            <table summary="Pattern: element-note" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td valign="top">
+                        <p>
+                           <a class="link" href="#element-note.note" title="Table&nbsp;7.&nbsp;Element: note">note</a>
+                        </p>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="element-tool"></a>Pattern: element-tool</h3></div></div></div>
+         
+         <div class="table"><a name="d5e949"></a><p class="title"><b>Table&nbsp;25.&nbsp;Pattern: element-tool</b></p><div class="table-contents">
+            
+            <table summary="Pattern: element-tool" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td valign="top">
+                        <p>
+                           <a class="link" href="#element-tool.tool" title="Table&nbsp;8.&nbsp;Element: tool">tool</a>
+                        </p>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="element-user"></a>Pattern: element-user</h3></div></div></div>
+         
+         <div class="table"><a name="d5e973"></a><p class="title"><b>Table&nbsp;26.&nbsp;Pattern: element-user</b></p><div class="table-contents">
+            
+            <table summary="Pattern: element-user" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td valign="top">
+                        <p>
+                           <a class="link" href="#element-user.user" title="Table&nbsp;9.&nbsp;Element: user">user</a>
+                        </p>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+      <div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="element-workflow"></a>Pattern: element-workflow</h3></div></div></div>
+         
+         <div class="table"><a name="d5e997"></a><p class="title"><b>Table&nbsp;27.&nbsp;Pattern: element-workflow</b></p><div class="table-contents">
+            
+            <table summary="Pattern: element-workflow" border="1"><tbody><tr><td class="header" valign="top">
+                        <p>Namespace</p>
+                     </td><td>
+                        <p>cwrc.ca/workflow</p>
+                     </td></tr><tr><td class="header" valign="top">
+                        <p>Documentation</p>
+                     </td><td>
+                        <p>No documentation available.</p>
+                     </td></tr><tr valign="top"><td class="header" valign="top">
+                        <p>Content Model</p>
+                     </td><td valign="top">
+                        <p>
+                           <a class="link" href="#element-workflow.workflow" title="Table&nbsp;10.&nbsp;Element: workflow">workflow</a>
+                        </p>
+                     </td></tr></tbody></table>
+         </div></div><br class="table-break"/>
+      </div>
+   </div>
+</div><div class="navfooter"></div></body></html>

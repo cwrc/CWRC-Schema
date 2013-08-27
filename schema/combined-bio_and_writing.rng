@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <!--
+    
+    orlando_bio_and_writing_.rnc
+    This schema combimes Biography and Writing elements within an Orlando root element in the pattern:
+    ORLANDO-CWRC/ENTRY/ORLANDOHEADER?/BIOGRAPHY*|WRITING*
+    the intent is to provide a schema for the Canadian Writing and Research Collaboratory (CWRC)
+    literary team based in Orlando's SGML documents structure.
+    
+    Written 2010-08 by Mariana Paredes-Olea
+    revised 2013-01-29
+    revised 2013-02-19
+  -->
+  
+  <include href="http://cwrc.ca/schema/orlando_common_schema.rng">
+    <start combine="choice">
+      <ref name="ORLANDO-CWRC-element"/>
+    </start>
+  </include>
+  
+  <define name="ORLANDO-CWRC-element">
+    <element name="ORLANDO-CWRC">
+      <ref name="attlist.generic"/>
+      <zeroOrMore>
+        <ref name="entry-element" />                
+      </zeroOrMore>
+    </element>
+  </define>
+  
+  <define name="entry-element">
+    <element name="ENTRY">
+      <ref name="attlist.Entry"/>
+      <optional>
+        <ref name="OrlandoHeader"/>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <externalRef href="http://cwrc.ca/schema/biography.rng"/>
+          <externalRef href="http://cwrc.ca/schema/writing.rng"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  
+  <define name="OrlandoHeader" combine="choice">
+    <element name="ORLANDOHEADER">
+      <ref name="attlist.OrlandoHeader"/>
+      <ref name="fileDesc-element"/>
+      <ref name="revisionDesc-element"/>
+    </element>
+  </define>
+  
+  <define name="attlist.Entry" combine="interleave">
+    <optional>
+      <attribute name="ID">
+        <data type="ID"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="SEX">
+        <choice>
+          <value>FEMALE</value>
+          <value>MALE</value>
+          <value>UNDEFINED</value>
+          <value>TRANSGENDERED</value>
+        </choice>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="PERSON">
+        <choice>
+          <value>HISTORICALFIGURE</value>
+          <value>BRWWRITER</value>
+          <value>IBRWRITER</value>
+          <value>CWRITER</value>
+          <value>ICWRITER</value>
+          <value>WRITER</value>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.generic" combine="interleave">
+    <optional>
+      <attribute name="ID">
+        <data type="ID"/>
+      </attribute>
+    </optional>
+  </define>
+  
+  <define name="attlist.OrlandoHeader" combine="interleave">
+    <optional>
+      <attribute name="ID">
+        <data type="ID"/>
+      </attribute>
+    </optional>
+    <optional>
+      <attribute name="TYPE" a:defaultValue="TEXT"/>
+    </optional>
+  </define>
+</grammar>

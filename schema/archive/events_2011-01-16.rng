@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Events schema for use by Biography, Events and Writing schemas
+    written 2010-03-31 by Mariana Paredes-Olea, based on events.dtd(SGML)
+    Copyright 2010 The Orlando Project -->
+
+<!-- Revision as of 2011-01-16 -->
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <include href="http://www.arts.ualberta.ca/~cwrc/schema/common_2011-01-16.rng">
+        <start>
+            <ref name="Events-element"></ref>
+        </start>
+        <define name="chronStruct-element">
+            <!-- Chronstruct does not accept bibcit/s
+            in event submission database, this is a variation of chronstruct to
+            restrict use ob bibcit/s (only for events)-->
+            <element name="CHRONSTRUCT">
+                <ref name="ID-attribute"></ref>
+                <ref name="chronColumnRelevance-content"></ref>
+                <interleave>
+                    <group>
+                        <choice>
+                            <ref name="dateRange-element"></ref>
+                            <ref name="dateStruct-element"></ref>
+                            <ref name="date-element"></ref>
+                        </choice>
+                        <ref name="chronProse-element"></ref>
+                    </group>
+                    <ref name="Div0-inclusion-noBibcits"></ref>
+                    <ref name="Div1-inclusion"></ref>
+                </interleave>
+            </element>
+        </define>
+    </include>
+    <define name="Div0-inclusion-noBibcits">
+        <zeroOrMore>
+            <choice>
+                <ref name="researchNote-element"></ref>
+                <ref name="title-element"></ref>
+                <ref name="scholarNote-element"></ref>
+                <ref name="keywordClass-element"></ref>
+                <ref name="lb-element"></ref>
+            </choice>
+        </zeroOrMore>
+    </define>
+    <define name="Events-element">
+        <element name="EVENTS">
+            <optional>
+                <ref name="ID-attribute"></ref>
+            </optional>
+            <ref name="OrlandoHeader-element"></ref>
+            <oneOrMore>
+                <ref name="Div0-element"></ref>
+            </oneOrMore>
+        </element>
+    </define>
+</grammar>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<start>
+		<element name="AUTHORITYLIST">
+			<oneOrMore>
+				<ref name="AUTHORITYITEM-element"/>
+			</oneOrMore>
+		</element>
+	</start>
+	<define name="AUTHORITYITEM-element">
+		<element name="AUTHORITYITEM">
+			<attribute name="STANDARD">
+				<data type="string"/>
+			</attribute>
+			<optional>
+				<attribute name="PERSONTYPE">
+					<choice>
+						<value>BWW</value>
+						<a:documentation>British Women Writer</a:documentation>
+						<value a:documentation="Male Writer">MW</value>
+						<value a:documentation="International Woman Writer">IWW</value>
+						<value a:documentation="International British Writer">IBW</value>
+					</choice>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<interleave>
+					<optional>
+						<oneOrMore>
+							<ref name="FORM-element"/>
+						</oneOrMore>
+					</optional>
+					<optional>
+						<oneOrMore>
+							<ref name="BIRTHNAME-element"/>
+						</oneOrMore>
+					</optional>
+					<optional>
+						<oneOrMore>
+							<ref name="MARRIED-element"/>
+						</oneOrMore>
+					</optional>
+					<optional>
+						<oneOrMore>
+							<ref name="PSEUDONYM-element"/>
+						</oneOrMore>
+					</optional>
+					<optional>
+						<oneOrMore>
+							<ref name="NICKNAME-element"/>
+						</oneOrMore>
+					</optional>
+					<optional>
+						<oneOrMore>
+							<ref name="TITLED-element"/>
+						</oneOrMore>
+					</optional>
+					<optional>
+						<oneOrMore>
+							<ref name="STYLED-element"/>
+						</oneOrMore>
+					</optional>
+					<optional>
+						<oneOrMore>
+							<ref name="INDEXED-element"/>
+						</oneOrMore>
+					</optional>
+					<optional>
+						<oneOrMore>
+							<ref name="SELFCONSTRUCTED-element"/>
+						</oneOrMore>
+					</optional>
+					<optional>
+						<oneOrMore>
+							<ref name="RELIGIOUSNAME-element"/>
+						</oneOrMore>
+					</optional>
+					<optional>
+						<oneOrMore>
+							<ref name="ROYAL-element"/>
+						</oneOrMore>
+					</optional>
+				</interleave>
+			</optional>
+		</element>
+	</define>
+	<define name="FORM-element">
+		<element name="FORM">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+	<define name="BIRTHNAME-element">
+		<element name="BIRTHNAME">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+	<define name="MARRIED-element">
+		<element name="MARRIED">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+	<define name="PSEUDONYM-element">
+		<element name="PSEUDONYM">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+	<define name="NICKNAME-element">
+		<element name="NICKNAME">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+	<define name="SELFCONSTRUCTED-element">
+		<element name="SELFCONSTRUCTED">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+	<define name="TITLED-element">
+		<element name="TITLED">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+	<define name="STYLED-element">
+		<element name="STYLED">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+	<define name="INDEXED-element">
+		<element name="INDEXED">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+	<define name="RELIGIOUSNAME-element">
+		<element name="RELIGIOUSNAME">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+	<define name="ROYAL-element">
+		<element name="ROYAL">
+			<optional>
+				<attribute name="DISPLAY"/>
+			</optional>
+			<optional>
+				<attribute name="PICKLIST"/>
+			</optional>
+			<text/>
+		</element>
+	</define>
+</grammar>

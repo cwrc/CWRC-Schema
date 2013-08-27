@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.cwrc.ca/schema/workflow" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<cwrc xmlns="cwrc.ca/workflow">   
+    <workflow>
+        <auto date="2012-11-10" userID="someUserID" datastreamID="someDSID" toolID="someToolID">
+            <activity category="deleted" stamp="cwrc:del" status="i">
+                <note>Some general note on stamp applied and or process executed</note>
+            </activity>
+            <assigned process="someProcessAssigned" category="machine_processed">
+                <tool toolID="assignedToolC"/>
+                <tool toolID="assignedToolD"/>
+                <user userID="assignedUserA"/>
+                <user userID="assignedUserB"/>                
+                <message>Some message directed to assigned users</message>
+            </assigned>            
+        </auto>
+        <human date="2012-11-10" userID="someUserID" toolID="someToolID" datastreamID="someDSID">
+            <activity category="deleted" stamp="cwrc:del" status="i">
+                <note>Some general note on stamp applied and or process executed</note>
+            </activity>
+            <assigned process="someProcessAssigned" category="peer-reviewed/evaluated">
+                <user userID="assignedUserA"/>
+                <user userID="assignedUserB"/>
+                <tool toolID="assignedToolC"/>
+                <tool toolID="assignedToolD"/>
+                <message>Some message directed to assigned users</message>
+            </assigned>            
+        </human>
+    </workflow> 
+</cwrc>
