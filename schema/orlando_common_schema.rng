@@ -8,6 +8,7 @@
 <!-- revised 2013-07-07
      revised 2013-08-20: changed @dbRef attribute data type from "Name" to "string" [JCA & MRB]
      revised 2013-08-21: added new @resp attribute values [JCA & MRB]
+     revised 2013-09-03: added new @resp attribute values [JCA & MRB]
  -->
 
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
@@ -1279,7 +1280,14 @@
                 <value type="token">REE</value>
                 <value type="token">RZK</value>
                 <value type="token">SDD</value>
-                               
+                <!-- JCA & MRB: Tue 03-Sep-2013: added the following @resp attribute values -->
+                <value type="token">JAM</value><a:documentation>Jueun Moon</a:documentation>
+                <value type="token">ATC</value><a:documentation>Amy Cote</a:documentation>
+                <value type="token">AKB</value><a:documentation>Adela Burke</a:documentation>
+                <value type="token">AJS</value><a:documentation>Aaron Swanbergson</a:documentation>
+                <value type="token">DEA</value><a:documentation>Devin Ayotte</a:documentation>
+              <!--  <value type="token">DEA</value><a:documentation>Cameron Koetsch</a:documentation> -->
+                
                 
                 <!-- Documentation (in progress)
                     <value type="token">ACF</value>
