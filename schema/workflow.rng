@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- MRB: Fri 20-Sep-2013: Revised workflow schema, based on discussions involving SIB, RKK, JCA, and MRB.  See the Google
+	doc "Workflow schema deconstruction" at https://docs.google.com/a/ualberta.ca/document/d/1xDB83PCwVXiF27j-Bn_EFxni4lxuPJHm1aFveVXnJL4/edit
+	for more information on the revisions undertaken.  The revisions included the following:
+	* Eliminated the <auto> and <human> elements.  There are now two main child elements of the the root <workflow> element,
+	<activity> (the workflow activity being chronicled) and <assigned> (the next workflow activity in the workflow chain).
+	* Made the @date attribute, which was an attribute of the <auto> and <human> elements, an attribute of the workflow element.
+	* Made the @userID and @toolID attributes, which were attributes of the <auto> and <human> elements, attributes of the
+	<activity> element.
+	* Eliminated the @datastreamID attribute, which was an attribute of the <auto> and <human> elements
+	* Made the <note> element a child element of the <assigned> element.
+	* Made the <userID> element a repeatable child element of the <activity> element.
+	* Made the <message> element (and its child elements of <subject> and <body>) a child element of the <activity> element.
+-->
+
+<grammar
+	ns="cwrc.ca/workflow"
+	xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+	xmlns:rng="http://relaxng.org/ns/structure/1.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<a:documentation>CWRC namespace for workflow datastream.</a:documentation>
+	
+	<start>
+		<choice>
+			<ref name="element-cwrc"/>
+			<ref name="element-workflow"/>
+		</choice>
+	</start>
+	
+	<define name="element-cwrc">
+		<element name="cwrc">
+			<a:documentation>Element cwrc can hold a collection of workflow elements.</a:documentation>
+			<oneOrMore>
+				<ref name="element-workflow"/>
+			</oneOrMore>
+		</element>
+	</define>
+	
+	<define name="element-workflow">
+		<element name="workflow">
+			<a:documentation>Element workflow contains a workflow record containing an activity element
+			(the workflow activity being chronicled) and an assigned element (the next workflow activity
+			in the workflow chain).</a:documentation>	
+			<optional>
+				<ref name="attribute-date"/>
+			</optional>
+			<optional>
+				<ref name="attribute-workflowID"/>
+			</optional>
+			<optional>
+				<ref name="element-activity"/>
+			</optional>
+			<optional>
+				<ref name="element-assigned"/>
+			</optional>
+		</element>
+	</define>
+	
+	<!-- main element <activity> -->
+	
+	<define name="element-activity">
+		<element name="activity">
+			<a:documentation>Element activity captures information on a workflow category and/or stamp process and its completion status, as well 
+				as an activity note and message to users about the completed workflow process. </a:documentation>
+			<ref name="attribute-category"/>			
+			<ref name="attribute-status"/>
+			<optional>
+				<ref name="attribute-stamp"/>
+			</optional>
+			<interleave>
+				<zeroOrMore>
+					<ref name="element-user"/>
+				</zeroOrMore>
+				<zeroOrMore>
+					<ref name="element-tool"/>
+				</zeroOrMore>
+			</interleave>
+			<optional>
+				<ref name="element-note"/>
+			</optional>
+			<optional>
+				<ref name="element-message"/>
+			</optional>
+		</element>
+	</define>
+	
+	<!-- main element <assigned> -->
+	
+	<define name="element-assigned">
+		<element name="assigned">
+			<a:documentation>Element assigned records message information to be sent to one or more assigned users and/or tools about the next workflow step, as
+				well as a note about the assigned activity.</a:documentation>
+			<ref name="attribute-category"/>
+			<optional>
+				<ref name="attribute-process"/>
+			</optional>
+			<interleave>
+				<zeroOrMore>
+					<ref name="element-user"/>
+				</zeroOrMore>
+				<zeroOrMore>
+					<ref name="element-tool"/>
+				</zeroOrMore>
+			</interleave>
+			<optional>
+				<ref name="element-note"/>
+			</optional>
+			<optional>
+				<ref name="element-message"/>
+			</optional>
+		</element>
+	</define>
+	
+	<!-- elements -->
+	
+	<define name="element-user">
+		<element name="user">
+			<a:documentation>Element user captures an assigned user's ID.</a:documentation>
+			<optional>
+				<ref name="attribute-userID"/>
+			</optional>
+			<optional>
+				<ref name="element-note"/>
+			</optional>
+		</element>
+	</define>
+	<!-- check: user management namespace; MRB: ??? -->
+	
+	<define name="element-tool">
+		<element name="tool">
+			<a:documentation>Element tool captures an assigned tool's ID.</a:documentation>
+			<optional>
+				<ref name="attribute-toolID"/>
+			</optional>
+			<optional>
+				<ref name="element-note"/>
+			</optional>
+		</element>
+	</define>
+	
+	<define name="element-message">
+		<element name="message">
+			<a:documentation>Element message captures notification messages to be sent to users and/or tools. Contains a subject and a body.</a:documentation>
+			<ref name="element-subject"/>
+			<ref name="element-body"/>
+		</element>
+	</define>
+	
+	<define name="element-subject">
+		<element name="subject">
+			<a:documentation>Message subject</a:documentation>
+			<text></text>
+		</element>
+	</define>
+	
+	<define name="element-body">
+		<element name="body">
+			<a:documentation>Message body</a:documentation>
+			<text></text>
+		</element>
+	</define>
+	
+	<define name="element-note">
+		<element name="note">
+			<a:documentation>Element note captures workflow notes for future reference of processes executed.</a:documentation>
+			<text/>
+		</element>
+	</define>
+
+	<!-- attributes -->
+	
+	<define name="attribute-date">
+		<attribute name="date">
+			<a:documentation>Date/time format in the form of YYYY-MM-DDThh:mm:ss</a:documentation>
+			<data type="dateTime"/>
+		</attribute>
+	</define>
+	
+	<define name="attribute-workflowID">
+		<attribute name="workflowID">
+			<a:documentation>Attribute workflowID captures a string that identifies a particular workflow (set of processes to be tracked by workflow system) defined by users.</a:documentation>
+			<data type="string"/>
+		</attribute>
+	</define>
+	
+	<define name="attribute-category">
+		<attribute name="category">
+			<a:documentation>Activity categories or ‘primitives’ put together during workflow meetings in October 2010 (re: SB, SF, MP meeting on workflow values), 
+				and revised in November 2011 (MP). The categories are meant to represent a set of constant values to be used across projects to allow workflow 
+				general procedures to be applied to objects CWRC-wide without restricting workflow stamps (see stamp attribute).</a:documentation>
+			<choice>
+				<value>created</value>
+				<a:documentation>created - repository item created (original version of repository object) - equivalent to cwrc:cre</a:documentation>
+				<value>deposited</value>
+				<a:documentation>deposited - repository item deposited (an existing file) - equivalent to stamp cwrc:dep</a:documentation>
+				<value>metadata_contribution</value>
+				<a:documentation>metadata_contribution - repository object metadata (external or embedded) created or edited - equivalent to stamp cwrc:evr (enhanced version of record)</a:documentation>
+				<value>content_contribution</value>
+				<a:documentation>content_contribution - repository object content added or edited - equivalent to stamp cwrc:evr (enhanced version of record) or cvr (corrected version of record)</a:documentation>
+				<value>checked</value>
+				<a:documentation>checked - Checked/corrected - equivalent to stamp cwrc:ckd</a:documentation>
+				<value>machine_processed</value>
+				<a:documentation>machine_processed - Automatic processing of data - equivalent to stamps cwrc:evr (enhanced version of record) or cwrc:cvr (corrected version of record)</a:documentation>
+				<value>user-tagged</value>
+				<a:documentation>user-tagged - tagged by member of general public (i.e. subject keywords/ folksonomic descriptors  added) - equivalent to stamp cwrc:tag</a:documentation>
+				<value>rights_assigned</value>
+				<a:documentation>rights_assigned - Copyright/license terms attached to object - equivalent to stamp cwrc:rights_asg</a:documentation>
+				<value>published</value>
+				<a:documentation>published - repository item under ongoing publishing procedures - equivalent to stamp cwrc:pub</a:documentation>
+				<value>peer-reviewed/evaluated</value>
+				<a:documentation>peer_reviewed - peer-review as opposed to internal editing/revision - equivalent to stamp cwrc:rev</a:documentation>
+				<!-- check: spilt? of merge?; MRB: ??? -->
+				<value>withdrawn</value>
+				<a:documentation>withdrawn - Removed from published state - equivalent to stamp cwrc:wdr</a:documentation>
+				<value>deleted</value>
+				<a:documentation>deleted - Deleted from the repository - equivalent to stamp cwrc:del</a:documentation>
+			</choice>
+			<!-- check: revise categories: maybe we need categories only to enable cross-projects workflow and content management? -->
+		</attribute>
+	</define>
+	
+	<define name="attribute-stamp">
+		<!-- check: stamps namespace to be removed and replaced by documentation?; MRB: ??? -->
+		<attribute name="stamp">
+			<a:documentation>Activity types or stamps. These finer categories can be created on a project-specific basis, and particular projects may wish to rename 
+				these categories (i.e. Orlando may want to have ‘cas’ instead of ‘ckd’, another project may want to give it a stamp that according to a French name), 
+				but the basic activities categories (primitives) should stay the same. NOTE: the values in the Activity type column are not exhaustive--more values 
+				can be created. The included values represent a minimum of stamps that can be offered as default to all projects.</a:documentation>
+			<a:documentation>NISO values from Journal Article Version - NISO Recommendations 2008
+				Orlando values from Orlando DTDs. TC and PUBR are not currently used (as of Nov 2011) but were added for workflow definition
+				CWRC values from workflow meetings held in October 2010 (re: SB, SF, MP meeting on workflow values), revised November 2011 (MP)</a:documentation>
+			<choice>
+				<value>niso:AO</value>
+				<a:documentation>Author's Original (AO)</a:documentation>
+				<value>niso:SMUR</value>
+				<a:documentation>Submitted Manuscript Under Review (SMUR)</a:documentation>
+				<value>niso:AM</value>
+				<a:documentation>Accepted Manuscript (AM)</a:documentation>
+				<value>niso:P</value>
+				<a:documentation>Proof (P)</a:documentation>
+				<value>niso:VoR</value>
+				<a:documentation>Version of Record (VoR)</a:documentation>
+				<value>niso:CVoR</value>
+				<a:documentation>Corrected Version of Record (CVoR)</a:documentation>
+				<value>niso:EVoR</value>
+				<a:documentation>Enhanced Version of Record (EVoR)</a:documentation>
+				<value>orl:SUB</value>
+				<a:documentation>Submitted (SUB)</a:documentation>
+				<value>orl:RWT</value>
+				<a:documentation>Researched / Written / Tagged (RWT)</a:documentation>
+				<value>orl:REV</value>
+				<a:documentation>Revised (REV)</a:documentation>
+				<value>orl:RBV</value>
+				<a:documentation>Reviewed by Volume Author (RVB)</a:documentation>
+				<value>orl:CAS</value>
+				<a:documentation>Checked Against Sources (CAS)</a:documentation>
+				<value>orl:CFT</value>
+				<a:documentation>Checked for Tagging (CFT)</a:documentation>
+				<value>orl:CFB</value>
+				<a:documentation>Checked for Bibliographic Practices (CFB)</a:documentation>
+				<value>orl:PUB</value>
+				<a:documentation>Published (PUB)</a:documentation>
+				<value>orl:ENH</value>
+				<a:documentation>Enhanced (ENH)</a:documentation>
+				<value>orl:TC</value>
+				<a:documentation>Tag Cleanup (TC)</a:documentation>
+				<value>orl:PUBR</value>
+				<a:documentation>Publication Readthrough (PUBR)</a:documentation>
+				<value>cwrc:cre</value>
+				<a:documentation>repository item created (original version of repository object) - equivalent to category created  </a:documentation>
+				<value>cwrc:dep</value>
+				<a:documentation>repository item deposited (an existing file) - equivalent to category deposited</a:documentation>
+				<value>cwrc:cvr</value>
+				<a:documentation>object content edited - cvr (corrected version of record)</a:documentation>
+				<value>cwrc:evr</value>
+				<a:documentation>object content added evr (enhanced version of record)</a:documentation>
+				<value>cwrc:ckd</value>
+				<a:documentation>Checked/corrected - equivalent to category checked</a:documentation>
+				<value>cwrc:tag</value>
+				<a:documentation>tagged by member of general public (i.e. subject keywords/ folksonomic descriptors  added) - equivalent to category tagged</a:documentation>
+				<value>cwrc:rights_asg</value>
+				<a:documentation>Copyright/license terms attached to object - equivalent to category rights_assigned</a:documentation>
+				<value>cwrc:pub</value>
+				<a:documentation>repository item under ongoing publishing procedures - equivalent to category published</a:documentation>
+				<value>cwrc:rev</value>
+				<a:documentation>peer-review as opposed to internal editing/revision - equivalent to category peer-reviewed/evaluated</a:documentation>
+				<value>cwrc:wdr</value>
+				<a:documentation>Removed from published state - equivalent to category withdrawn</a:documentation>
+				<value>cwrc:del</value>
+				<a:documentation>Deleted from the repository - equivalent to category deleted</a:documentation>
+			</choice>
+			<!--
+				check: do we want equivalent categories / stamps?
+				check: add stamp specific for metadata correction or enhancement? - repository object metadata (external or embedded) created or edited	evr (enhanced version of record)
+				check : Automatic processing of data	evr (enhanced version of record) or cvr (corrected version of record)
+			-->
+		</attribute>
+	</define>
+	
+	<define name="attribute-status">
+		<attribute name="status">
+			<a:documentation>Attribute status captures completion information on a particular process.</a:documentation>
+			<choice>
+				<value type="NCName">c</value>
+				<a:documentation>Complete</a:documentation>
+				<value type="NCName">ipr</value>
+				<a:documentation>In Progress</a:documentation>
+				<value type="NCName">p</value>
+				<a:documentation>Pending</a:documentation>
+				<value type="NCName">i</value>
+				<a:documentation>Incomplete</a:documentation>
+			</choice>
+		</attribute>
+	</define>
+	<!-- check: ipr (in progress) and i (incomplete); MRB: ??? -->
+	
+	<define name="attribute-process">
+		<attribute name="process">
+			<a:documentation>Some id used to trigger a process by some tool.</a:documentation>
+			<data type="string"/>
+		</attribute>
+	</define>
+	
+	<define name="attribute-userID">
+		<attribute name="userID">
+			<a:documentation>User ID</a:documentation>
+			<data type="NCName"/>
+		</attribute>
+	</define>
+	<!-- check: user management namespace; MRB: ??? -->
+	
+	<define name="attribute-toolID">
+		<attribute name="toolID">
+			<a:documentation>Tool ID</a:documentation>
+			<data type="NCName"/>
+		</attribute>
+	</define>
+	
+</grammar>

@@ -341,7 +341,6 @@
     </define>
 
 
-
     <define name="personDescription-element">
         <element name="description">
             <a:documentation>This section captures descriptive data about a CWRC entity record</a:documentation>
@@ -428,19 +427,22 @@
                     <ref name="relatedResources-element"/>
                 </optional>
                 <optional>
-                    <ref name="lat-element"/>
+                    <ref name="latitude-element"/>
                 </optional>
                 <optional>
-                    <ref name="long-element"/>
-                </optional>
-                <optional>
-                    <ref name="geographicHierarchy-element"/>
+                    <ref name="longitude-element"/>
                 </optional>
                 <optional>
                     <ref name="featureType-element"/>
                 </optional>
                 <optional>
                     <ref name="altitude-element"/>
+                </optional>
+                <optional>
+                    <ref name="administrativeDivision-element"/>
+                </optional>
+                <optional>
+                    <ref name="country-element"/>
                 </optional>
             </interleave>
         </element>
@@ -710,43 +712,50 @@
     
     <!-- MRB: July 2013: added definitions for various child elements of the <placeDescription> element -->
 
-    <define name="lat-element">
+    <define name="latitude-element">
         <element name="placeLat">
-            <a:documentation>Latitude of the place associated with the described entity.</a:documentation>
+            <a:documentation>Latitude of the place associated with the described place entity.</a:documentation>
             <data type="string"/>
         </element>
     </define>
 
-    <define name="long-element">
-        <a:documentation>Longitude of the place associated with the described entity.</a:documentation>
+    <define name="longitude-element">
+        <a:documentation>Longitude of the place associated with the described place entity.</a:documentation>
         <element name="placeLong">
             <data type="string"/>
         </element>
     </define>
 
-    <define name="geographicHierarchy-element">
-        <a:documentation>Larger geographic administrative unit of the place associated with the described entity -- the FIPS region code is recommended (http://www.itl.nist.gov/fipspubs/10-3tab1.htm).</a:documentation>
-        <element name="placeGeographicHierarchy">
-            <data type="string"/>
-        </element>
-    </define>
-
     <define name="featureType-element">
-        <a:documentation>Feature type of the place associated with the described entity -- the GeoNames feature class or feature code is recommended (http://www.geonames.org/export/codes.html).</a:documentation>
+        <a:documentation>Feature type of the place associated with the described place entity (e.g., populated place).</a:documentation>
         <element name="placeFeatureType">
             <data type="string"/>
         </element>
     </define>
 
     <define name="altitude-element">
-        <a:documentation>Altitude in meters of the place associated with the described entity.</a:documentation>
+        <a:documentation>Altitude in meters of the place associated with the described place entity.</a:documentation>
         <element name="placeAltitude">
             <data type="string"/>
         </element>
     </define>
 
+    <define name="administrativeDivision-element">
+        <a:documentation>The ISO 3166-2 country subdivision name, or first-order administrative division name (e.g., provinces or states) that contains the place associated with the described place entity.</a:documentation>
+        <element name="placeAdministrativeDivision">
+            <data type="string"/>
+        </element>
+    </define>
+    
+    <define name="country-element">
+        <a:documentation>The ISO 3166-1 country name that contains the place associated with the described place entity.</a:documentation>
+        <element name="placeCountry">
+            <data type="string"/>
+        </element>
+    </define>
+
     <define name="URI-element">
-        <a:documentation>URI of a linked resource that describes a geographical location associated with the described entity.</a:documentation>
+        <a:documentation>URI of a linked resource that describes a geographical location associated with the described place entity.</a:documentation>
         <element name="placeURI">
             <data type="anyURI"/>
         </element>
