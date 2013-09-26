@@ -5,9 +5,8 @@
 	for more information on the revisions undertaken.  The revisions included the following:
 	* Eliminated the <auto> and <human> elements.  There are now two main child elements of the the root <workflow> element,
 	<activity> (the workflow activity being chronicled) and <assigned> (the next workflow activity in the workflow chain).
-	* Made the @date attribute, which was an attribute of the <auto> and <human> elements, an attribute of the workflow element.
-	* Made the @userID and @toolID attributes, which were attributes of the <auto> and <human> elements, attributes of the
-	<activity> element.
+	* Made the @date, @userID, and @toolID attributes, which were attributes of the <auto> and <human> elements, attributes of
+	the workflow element.
 	* Eliminated the @datastreamID attribute, which was an attribute of the <auto> and <human> elements
 	* Made the <note> element a child element of the <assigned> element.
 	* Made the <userID> element a repeatable child element of the <activity> element.
@@ -51,6 +50,12 @@
 			</optional>
 			<optional>
 				<ref name="attribute-workflowID"/>
+			</optional>
+			<optional>
+				<ref name="attribute-userID"/>
+			</optional>
+			<optional>
+				<ref name="attribute-toolID"/>
 			</optional>
 			<optional>
 				<ref name="element-activity"/>
@@ -188,6 +193,28 @@
 		</attribute>
 	</define>
 	
+	<define name="attribute-userID">
+		<attribute name="userID">
+			<a:documentation>User ID</a:documentation>
+			<data type="NCName"/>
+		</attribute>
+	</define>
+	<!-- check: user management namespace; MRB: ??? -->
+	
+	<define name="attribute-toolID">
+		<attribute name="toolID">
+			<a:documentation>Tool ID</a:documentation>
+			<data type="NCName"/>
+		</attribute>
+	</define>
+	
+	<define name="attribute-process">
+		<attribute name="process">
+			<a:documentation>Some id used to trigger a process by some tool.</a:documentation>
+			<data type="string"/>
+		</attribute>
+	</define>
+	
 	<define name="attribute-category">
 		<attribute name="category">
 			<a:documentation>Activity categories or ‘primitives’ put together during workflow meetings in October 2010 (re: SB, SF, MP meeting on workflow values), 
@@ -318,27 +345,5 @@
 		</attribute>
 	</define>
 	<!-- check: ipr (in progress) and i (incomplete); MRB: ??? -->
-	
-	<define name="attribute-process">
-		<attribute name="process">
-			<a:documentation>Some id used to trigger a process by some tool.</a:documentation>
-			<data type="string"/>
-		</attribute>
-	</define>
-	
-	<define name="attribute-userID">
-		<attribute name="userID">
-			<a:documentation>User ID</a:documentation>
-			<data type="NCName"/>
-		</attribute>
-	</define>
-	<!-- check: user management namespace; MRB: ??? -->
-	
-	<define name="attribute-toolID">
-		<attribute name="toolID">
-			<a:documentation>Tool ID</a:documentation>
-			<data type="NCName"/>
-		</attribute>
-	</define>
 	
 </grammar>
