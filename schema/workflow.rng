@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- MRB: Fri 20-Sep-2013: Revised workflow schema, based on discussions involving SIB, RKK, JCA, and MRB.  See the Google
+<!-- MRB: Fri 27-Sep-2013: Revised workflow schema, based on discussions involving SIB, RKK, JCA, and MRB.  See the Google
 	doc "Workflow schema deconstruction" at https://docs.google.com/a/ualberta.ca/document/d/1xDB83PCwVXiF27j-Bn_EFxni4lxuPJHm1aFveVXnJL4/edit
 	for more information on the revisions undertaken.  The revisions included the following:
 	* Eliminated the <auto> and <human> elements.  There are now two main child elements of the the root <workflow> element,
 	<activity> (the workflow activity being chronicled) and <assigned> (the next workflow activity in the workflow chain).
 	* Made the @date, @userID, and @toolID attributes, which were attributes of the <auto> and <human> elements, attributes of
-	the workflow element.
-	* Eliminated the @datastreamID attribute, which was an attribute of the <auto> and <human> elements
+	the <workflow> element.
+	* Changed the datatype for the @date attribute from "date" to "dateTime".
+	* Eliminated the @datastreamID attribute, which was an attribute of the <auto> and <human> elements.
+	* Eliminated the <tool> element, which was a child element of the <assigned> element.
+	* Renamed the <user> element to <recipient>, and made it a child element of the <message> element, moving it from where it was a child
+	element of the <assigned> element.
+	* Made the <message> element (and its child elements of <recipient>, <subject> and <body>) a child element of the <activity> element.
 	* Made the <note> element a child element of the <assigned> element.
-	* Made the <userID> element a repeatable child element of the <activity> element.
-	* Made the <message> element (and its child elements of <subject> and <body>) a child element of the <activity> element.
 -->
 
 <grammar
@@ -71,26 +74,20 @@
 	<define name="element-activity">
 		<element name="activity">
 			<a:documentation>Element activity captures information on a workflow category and/or stamp process and its completion status, as well 
-				as an activity note and message to users about the completed workflow process. </a:documentation>
+				as an activity note, and message to users about the completed workflow process. </a:documentation>
 			<ref name="attribute-category"/>			
 			<ref name="attribute-status"/>
 			<optional>
 				<ref name="attribute-stamp"/>
 			</optional>
 			<interleave>
-				<zeroOrMore>
-					<ref name="element-user"/>
-				</zeroOrMore>
-				<zeroOrMore>
-					<ref name="element-tool"/>
-				</zeroOrMore>
+				<optional>
+					<ref name="element-note"/>
+				</optional>
+				<optional>
+					<ref name="element-message"/>
+				</optional>
 			</interleave>
-			<optional>
-				<ref name="element-note"/>
-			</optional>
-			<optional>
-				<ref name="element-message"/>
-			</optional>
 		</element>
 	</define>
 	
@@ -98,61 +95,49 @@
 	
 	<define name="element-assigned">
 		<element name="assigned">
-			<a:documentation>Element assigned records message information to be sent to one or more assigned users and/or tools about the next workflow step, as
-				well as a note about the assigned activity.</a:documentation>
+			<a:documentation>Element assigned records message information to be sent to one or more assigned recipient users about the next
+				workflow step, as well as a note about the assigned activity.</a:documentation>
 			<ref name="attribute-category"/>
 			<optional>
 				<ref name="attribute-process"/>
 			</optional>
 			<interleave>
-				<zeroOrMore>
-					<ref name="element-user"/>
-				</zeroOrMore>
-				<zeroOrMore>
-					<ref name="element-tool"/>
-				</zeroOrMore>
+				<optional>
+					<ref name="element-note"/>
+				</optional>
+				<optional>
+					<ref name="element-message"/>
+				</optional>
 			</interleave>
-			<optional>
-				<ref name="element-note"/>
-			</optional>
-			<optional>
-				<ref name="element-message"/>
-			</optional>
 		</element>
 	</define>
 	
 	<!-- elements -->
 	
-	<define name="element-user">
-		<element name="user">
-			<a:documentation>Element user captures an assigned user's ID.</a:documentation>
-			<optional>
-				<ref name="attribute-userID"/>
-			</optional>
-			<optional>
-				<ref name="element-note"/>
-			</optional>
-		</element>
-	</define>
-	<!-- check: user management namespace; MRB: ??? -->
-	
-	<define name="element-tool">
-		<element name="tool">
-			<a:documentation>Element tool captures an assigned tool's ID.</a:documentation>
-			<optional>
-				<ref name="attribute-toolID"/>
-			</optional>
-			<optional>
-				<ref name="element-note"/>
-			</optional>
+	<define name="element-note">
+		<element name="note">
+			<a:documentation>Element note captures workflow notes for future reference of processes executed.</a:documentation>
+			<text/>
 		</element>
 	</define>
 	
 	<define name="element-message">
 		<element name="message">
-			<a:documentation>Element message captures notification messages to be sent to users and/or tools. Contains a subject and a body.</a:documentation>
+			<a:documentation>Element message captures notification messages to be sent to recipient users.  Contains recipients, a subject, and a body.</a:documentation>
+			<interleave>
+				<oneOrMore>
+					<ref name="element-recipient"/>
+				</oneOrMore>
 			<ref name="element-subject"/>
 			<ref name="element-body"/>
+			</interleave>
+		</element>
+	</define>
+	
+	<define name="element-recipient">
+		<element name="recipient">
+			<a:documentation>To send a message to recipients, element recipient captures a user's ID in the element's @userID attribute.</a:documentation>
+			<ref name="attribute-userID"/>
 		</element>
 	</define>
 	
@@ -167,13 +152,6 @@
 		<element name="body">
 			<a:documentation>Message body</a:documentation>
 			<text></text>
-		</element>
-	</define>
-	
-	<define name="element-note">
-		<element name="note">
-			<a:documentation>Element note captures workflow notes for future reference of processes executed.</a:documentation>
-			<text/>
 		</element>
 	</define>
 
