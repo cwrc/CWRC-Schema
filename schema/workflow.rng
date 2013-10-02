@@ -177,7 +177,7 @@
 			<data type="NCName"/>
 		</attribute>
 	</define>
-	<!-- check: user management namespace; MRB: ??? -->
+	<!-- check: user management namespace -->
 	
 	<define name="attribute-toolID">
 		<attribute name="toolID">
@@ -219,7 +219,7 @@
 				<a:documentation>published - repository item under ongoing publishing procedures - equivalent to stamp cwrc:pub</a:documentation>
 				<value>peer-reviewed/evaluated</value>
 				<a:documentation>peer_reviewed - peer-review as opposed to internal editing/revision - equivalent to stamp cwrc:rev</a:documentation>
-				<!-- check: spilt? of merge?; MRB: ??? -->
+				<!-- check: spilt? of merge? -->
 				<value>withdrawn</value>
 				<a:documentation>withdrawn - Removed from published state - equivalent to stamp cwrc:wdr</a:documentation>
 				<value>deleted</value>
@@ -230,7 +230,7 @@
 	</define>
 	
 	<define name="attribute-stamp">
-		<!-- check: stamps namespace to be removed and replaced by documentation?; MRB: ??? -->
+		<!-- check: stamps namespace to be removed and replaced by documentation? -->
 		<attribute name="stamp">
 			<a:documentation>Activity types or stamps. These finer categories can be created on a project-specific basis, and particular projects may wish to rename 
 				these categories (i.e. Orlando may want to have ‘cas’ instead of ‘ckd’, another project may want to give it a stamp that according to a French name), 
@@ -322,6 +322,6 @@
 			</choice>
 		</attribute>
 	</define>
-	<!-- check: ipr (in progress) and i (incomplete); MRB: ??? -->
+	<!-- check: ipr (in progress) and i (incomplete) -->
 	
 </grammar>

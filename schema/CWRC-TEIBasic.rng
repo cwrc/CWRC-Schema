@@ -6290,11 +6290,14 @@ represented within a text. [2.4.2.  2.4.  15.3.2. ]</a:documentation>
             <ref name="list"/>
          </choice>
          <ref name="att.global.attributes"/>
-         <attribute name="scheme">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the controlled vocabulary within which the set of keywords concerned is
-        defined. </a:documentation>
-            <ref name="data.pointer"/>
-         </attribute>
+         <!-- MRB: Wed 02-Oct-2013: changed <keywords> element's @scheme attribute from required to optional  -->
+         <optional>
+            <attribute name="scheme">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">identifies the controlled vocabulary within which the set of keywords concerned is
+               defined. </a:documentation>
+               <ref name="data.pointer"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
