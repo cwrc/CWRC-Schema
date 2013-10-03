@@ -1,0 +1,1553 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for </title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
+         <!--
+        var propertiesBoxes= new Array('properties_entities.xsd', 
+				'properties_xml.xsd', 
+				'properties_cwrc', 
+				'properties_entity', 
+				'properties_person', 
+				'properties_personRecordInfo-element_recordInfo', 
+				'properties_personTypes', 
+				'properties_personType', 
+				'properties_originInfo', 
+				'properties_projectId', 
+				'properties_recordIdentifier', 
+				'properties_recordCreationDate', 
+				'properties_dateSingle', 
+				'properties_standardDate', 
+				'properties_textDate', 
+				'properties_dateType', 
+				'properties_note', 
+				'properties_p', 
+				'properties_access', 
+				'properties_recordChangeDate', 
+				'properties_entityId', 
+				'properties_identity-element_identity', 
+				'properties_preferredForm', 
+				'properties_namePart', 
+				'properties_displayLabel', 
+				'properties_variantForms', 
+				'properties_variant', 
+				'properties_variantType', 
+				'properties_authorizedBy', 
+				'properties_picklist', 
+				'properties_sameAs', 
+				'properties_personDescription-element_description', 
+				'properties_descriptiveNotes', 
+				'properties_existDates', 
+				'properties_dateRange', 
+				'properties_fromDate', 
+				'properties_toDate', 
+				'properties_genders', 
+				'properties_gender', 
+				'properties_occupations', 
+				'properties_occupation', 
+				'properties_term', 
+				'properties_activities', 
+				'properties_activity', 
+				'properties_researchInterests', 
+				'properties_interest', 
+				'properties_relatedResources', 
+				'properties_resource', 
+				'properties_relations', 
+				'properties_relation', 
+				'properties_personRef', 
+				'properties_placeURI', 
+				'properties_organizationRef', 
+				'properties_placeRef', 
+				'properties_organization', 
+				'properties_orgRecordInfo-element_recordInfo', 
+				'properties_orgDescription-element_description', 
+				'properties_orgTypes', 
+				'properties_orgType', 
+				'properties_place', 
+				'properties_placeRecordInfo-element_recordInfo', 
+				'properties_placeDescription-element_description', 
+				'properties_placeLat', 
+				'properties_placeLong', 
+				'properties_placeFeatureType', 
+				'properties_placeAltitude', 
+				'properties_placeAdministrativeDivision', 
+				'properties_placeCountry', 
+				'properties_recordInfo-element_recordInfo', 
+				'properties_titleIdentity-element_identity', 
+				'properties_level', 
+				'properties_link', 
+				'properties_id', 
+				'properties_recordIdentifier_source', 
+				'properties_lang', 
+				'properties_NO_NAMESPACE_date-pattern_cert', 
+				'properties_recordChangeDate_source', 
+				'properties_namePart_partType', 
+				'properties_sameAs_cert', 
+				'properties_gender_cert', 
+				'properties_term_cert', 
+				'properties_relation_type', 
+				'properties_type-attribute_type', 
+				'properties_source-attribute_source', 
+				'properties_partType-attribute_partType', 
+				'properties_cert-attribute_cert');
+
+        
+        
+        var usedByBoxes= new Array('usedBy_entity', 
+				'usedBy_person', 
+				'usedBy_personTypes', 
+				'usedBy_personType', 
+				'usedBy_originInfo', 
+				'usedBy_projectId', 
+				'usedBy_recordIdentifier', 
+				'usedBy_recordCreationDate', 
+				'usedBy_dateSingle', 
+				'usedBy_standardDate', 
+				'usedBy_textDate', 
+				'usedBy_dateType', 
+				'usedBy_note', 
+				'usedBy_p', 
+				'usedBy_access', 
+				'usedBy_recordChangeDate', 
+				'usedBy_entityId', 
+				'usedBy_preferredForm', 
+				'usedBy_namePart', 
+				'usedBy_displayLabel', 
+				'usedBy_variantForms', 
+				'usedBy_variant', 
+				'usedBy_variantType', 
+				'usedBy_authorizedBy', 
+				'usedBy_picklist', 
+				'usedBy_sameAs', 
+				'usedBy_descriptiveNotes', 
+				'usedBy_existDates', 
+				'usedBy_dateRange', 
+				'usedBy_fromDate', 
+				'usedBy_toDate', 
+				'usedBy_genders', 
+				'usedBy_gender', 
+				'usedBy_occupations', 
+				'usedBy_occupation', 
+				'usedBy_term', 
+				'usedBy_activities', 
+				'usedBy_activity', 
+				'usedBy_researchInterests', 
+				'usedBy_interest', 
+				'usedBy_relatedResources', 
+				'usedBy_resource', 
+				'usedBy_relations', 
+				'usedBy_relation', 
+				'usedBy_personRef', 
+				'usedBy_placeURI', 
+				'usedBy_organizationRef', 
+				'usedBy_placeRef', 
+				'usedBy_organization', 
+				'usedBy_orgTypes', 
+				'usedBy_orgType', 
+				'usedBy_place', 
+				'usedBy_placeLat', 
+				'usedBy_placeLong', 
+				'usedBy_placeFeatureType', 
+				'usedBy_placeAltitude', 
+				'usedBy_placeAdministrativeDivision', 
+				'usedBy_placeCountry', 
+				'usedBy_level', 
+				'usedBy_id', 
+				'usedBy_recordIdentifier_source', 
+				'usedBy_lang', 
+				'usedBy_NO_NAMESPACE_date-pattern_cert', 
+				'usedBy_recordChangeDate_source', 
+				'usedBy_namePart_partType', 
+				'usedBy_sameAs_cert', 
+				'usedBy_gender_cert', 
+				'usedBy_term_cert', 
+				'usedBy_relation_type', 
+				'usedBy_type-attribute_type', 
+				'usedBy_source-attribute_source', 
+				'usedBy_partType-attribute_partType', 
+				'usedBy_cert-attribute_cert', 
+				'usedBy_personRecordInfo-element', 
+				'usedBy_date-pattern', 
+				'usedBy_identity-element', 
+				'usedBy_personDescription-element', 
+				'usedBy_orgRecordInfo-element', 
+				'usedBy_orgDescription-element', 
+				'usedBy_placeRecordInfo-element', 
+				'usedBy_placeDescription-element', 
+				'usedBy_NO_NAMESPACE_date-pattern');
+
+        var sourceBoxes= new Array('source_cwrc', 
+				'source_entity', 
+				'source_person', 
+				'source_personRecordInfo-element_recordInfo', 
+				'source_personTypes', 
+				'source_personType', 
+				'source_originInfo', 
+				'source_projectId', 
+				'source_recordIdentifier', 
+				'source_recordCreationDate', 
+				'source_dateSingle', 
+				'source_standardDate', 
+				'source_textDate', 
+				'source_dateType', 
+				'source_note', 
+				'source_p', 
+				'source_access', 
+				'source_recordChangeDate', 
+				'source_entityId', 
+				'source_identity-element_identity', 
+				'source_preferredForm', 
+				'source_namePart', 
+				'source_displayLabel', 
+				'source_variantForms', 
+				'source_variant', 
+				'source_variantType', 
+				'source_authorizedBy', 
+				'source_picklist', 
+				'source_sameAs', 
+				'source_personDescription-element_description', 
+				'source_descriptiveNotes', 
+				'source_existDates', 
+				'source_dateRange', 
+				'source_fromDate', 
+				'source_toDate', 
+				'source_genders', 
+				'source_gender', 
+				'source_occupations', 
+				'source_occupation', 
+				'source_term', 
+				'source_activities', 
+				'source_activity', 
+				'source_researchInterests', 
+				'source_interest', 
+				'source_relatedResources', 
+				'source_resource', 
+				'source_relations', 
+				'source_relation', 
+				'source_personRef', 
+				'source_placeURI', 
+				'source_organizationRef', 
+				'source_placeRef', 
+				'source_organization', 
+				'source_orgRecordInfo-element_recordInfo', 
+				'source_orgDescription-element_description', 
+				'source_orgTypes', 
+				'source_orgType', 
+				'source_place', 
+				'source_placeRecordInfo-element_recordInfo', 
+				'source_placeDescription-element_description', 
+				'source_placeLat', 
+				'source_placeLong', 
+				'source_placeFeatureType', 
+				'source_placeAltitude', 
+				'source_placeAdministrativeDivision', 
+				'source_placeCountry', 
+				'source_recordInfo-element_recordInfo', 
+				'source_titleIdentity-element_identity', 
+				'source_level', 
+				'source_link', 
+				'source_id', 
+				'source_recordIdentifier_source', 
+				'source_lang', 
+				'source_NO_NAMESPACE_date-pattern_cert', 
+				'source_recordChangeDate_source', 
+				'source_namePart_partType', 
+				'source_sameAs_cert', 
+				'source_gender_cert', 
+				'source_term_cert', 
+				'source_relation_type', 
+				'source_type-attribute_type', 
+				'source_source-attribute_source', 
+				'source_partType-attribute_partType', 
+				'source_cert-attribute_cert', 
+				'source_personRecordInfo-element', 
+				'source_date-pattern', 
+				'source_identity-element', 
+				'source_personDescription-element', 
+				'source_orgRecordInfo-element', 
+				'source_orgDescription-element', 
+				'source_placeRecordInfo-element', 
+				'source_placeDescription-element', 
+				'source_recordInfo-element', 
+				'source_titleIdentity-element', 
+				'source_NO_NAMESPACE_date-pattern', 
+				'source_type-attribute', 
+				'source_source-attribute', 
+				'source_partType-attribute', 
+				'source_cert-attribute', 
+				'source_id-attribute', 
+				'source_lang-attribute');
+
+        var instanceBoxes= new Array('instance_cwrc', 
+				'instance_entity', 
+				'instance_person', 
+				'instance_personRecordInfo-element_recordInfo', 
+				'instance_personTypes', 
+				'instance_originInfo', 
+				'instance_recordCreationDate', 
+				'instance_dateSingle', 
+				'instance_note', 
+				'instance_recordChangeDate', 
+				'instance_identity-element_identity', 
+				'instance_preferredForm', 
+				'instance_variantForms', 
+				'instance_variant', 
+				'instance_authorizedBy', 
+				'instance_personDescription-element_description', 
+				'instance_descriptiveNotes', 
+				'instance_existDates', 
+				'instance_dateRange', 
+				'instance_fromDate', 
+				'instance_toDate', 
+				'instance_genders', 
+				'instance_occupations', 
+				'instance_occupation', 
+				'instance_activities', 
+				'instance_activity', 
+				'instance_researchInterests', 
+				'instance_interest', 
+				'instance_relatedResources', 
+				'instance_relations', 
+				'instance_relation', 
+				'instance_personRef', 
+				'instance_organizationRef', 
+				'instance_placeRef', 
+				'instance_organization', 
+				'instance_orgRecordInfo-element_recordInfo', 
+				'instance_orgDescription-element_description', 
+				'instance_orgTypes', 
+				'instance_place', 
+				'instance_placeRecordInfo-element_recordInfo', 
+				'instance_placeDescription-element_description', 
+				'instance_recordInfo-element_recordInfo', 
+				'instance_titleIdentity-element_identity');
+
+        var diagramBoxes= new Array('diagram_cwrc', 
+				'diagram_entity', 
+				'diagram_person', 
+				'diagram_personRecordInfo-element_recordInfo', 
+				'diagram_personTypes', 
+				'diagram_personType', 
+				'diagram_originInfo', 
+				'diagram_projectId', 
+				'diagram_recordIdentifier', 
+				'diagram_recordCreationDate', 
+				'diagram_dateSingle', 
+				'diagram_standardDate', 
+				'diagram_textDate', 
+				'diagram_dateType', 
+				'diagram_note', 
+				'diagram_p', 
+				'diagram_access', 
+				'diagram_recordChangeDate', 
+				'diagram_entityId', 
+				'diagram_identity-element_identity', 
+				'diagram_preferredForm', 
+				'diagram_namePart', 
+				'diagram_displayLabel', 
+				'diagram_variantForms', 
+				'diagram_variant', 
+				'diagram_variantType', 
+				'diagram_authorizedBy', 
+				'diagram_picklist', 
+				'diagram_sameAs', 
+				'diagram_personDescription-element_description', 
+				'diagram_descriptiveNotes', 
+				'diagram_existDates', 
+				'diagram_dateRange', 
+				'diagram_fromDate', 
+				'diagram_toDate', 
+				'diagram_genders', 
+				'diagram_gender', 
+				'diagram_occupations', 
+				'diagram_occupation', 
+				'diagram_term', 
+				'diagram_activities', 
+				'diagram_activity', 
+				'diagram_researchInterests', 
+				'diagram_interest', 
+				'diagram_relatedResources', 
+				'diagram_resource', 
+				'diagram_relations', 
+				'diagram_relation', 
+				'diagram_personRef', 
+				'diagram_placeURI', 
+				'diagram_organizationRef', 
+				'diagram_placeRef', 
+				'diagram_organization', 
+				'diagram_orgRecordInfo-element_recordInfo', 
+				'diagram_orgDescription-element_description', 
+				'diagram_orgTypes', 
+				'diagram_orgType', 
+				'diagram_place', 
+				'diagram_placeRecordInfo-element_recordInfo', 
+				'diagram_placeDescription-element_description', 
+				'diagram_placeLat', 
+				'diagram_placeLong', 
+				'diagram_placeFeatureType', 
+				'diagram_placeAltitude', 
+				'diagram_placeAdministrativeDivision', 
+				'diagram_placeCountry', 
+				'diagram_recordInfo-element_recordInfo', 
+				'diagram_titleIdentity-element_identity', 
+				'diagram_level', 
+				'diagram_link', 
+				'diagram_personRecordInfo-element', 
+				'diagram_date-pattern', 
+				'diagram_identity-element', 
+				'diagram_personDescription-element', 
+				'diagram_orgRecordInfo-element', 
+				'diagram_orgDescription-element', 
+				'diagram_placeRecordInfo-element', 
+				'diagram_placeDescription-element', 
+				'diagram_recordInfo-element', 
+				'diagram_titleIdentity-element', 
+				'diagram_NO_NAMESPACE_date-pattern', 
+				'diagram_type-attribute', 
+				'diagram_source-attribute', 
+				'diagram_partType-attribute', 
+				'diagram_cert-attribute', 
+				'diagram_id-attribute', 
+				'diagram_lang-attribute');
+
+        var annotationBoxes= new Array('annotations_cwrc', 
+				'annotations_entity', 
+				'annotations_person', 
+				'annotations_personRecordInfo-element_recordInfo', 
+				'annotations_personTypes', 
+				'annotations_personType', 
+				'annotations_originInfo', 
+				'annotations_projectId', 
+				'annotations_recordIdentifier', 
+				'annotations_recordCreationDate', 
+				'annotations_dateSingle', 
+				'annotations_standardDate', 
+				'annotations_textDate', 
+				'annotations_dateType', 
+				'annotations_recordChangeDate', 
+				'annotations_entityId', 
+				'annotations_identity-element_identity', 
+				'annotations_preferredForm', 
+				'annotations_namePart', 
+				'annotations_displayLabel', 
+				'annotations_variantType', 
+				'annotations_authorizedBy', 
+				'annotations_sameAs', 
+				'annotations_personDescription-element_description', 
+				'annotations_existDates', 
+				'annotations_dateRange', 
+				'annotations_fromDate', 
+				'annotations_toDate', 
+				'annotations_genders', 
+				'annotations_gender', 
+				'annotations_occupations', 
+				'annotations_occupation', 
+				'annotations_term', 
+				'annotations_activities', 
+				'annotations_activity', 
+				'annotations_researchInterests', 
+				'annotations_interest', 
+				'annotations_resource', 
+				'annotations_relations', 
+				'annotations_relation', 
+				'annotations_personRef', 
+				'annotations_organizationRef', 
+				'annotations_placeRef', 
+				'annotations_organization', 
+				'annotations_orgRecordInfo-element_recordInfo', 
+				'annotations_orgDescription-element_description', 
+				'annotations_orgTypes', 
+				'annotations_orgType', 
+				'annotations_place', 
+				'annotations_placeRecordInfo-element_recordInfo', 
+				'annotations_placeDescription-element_description', 
+				'annotations_placeLat', 
+				'annotations_recordInfo-element_recordInfo', 
+				'annotations_titleIdentity-element_identity', 
+				'annotations_level', 
+				'annotations_recordIdentifier_source', 
+				'annotations_NO_NAMESPACE_date-pattern_cert', 
+				'annotations_recordChangeDate_source', 
+				'annotations_namePart_partType', 
+				'annotations_sameAs_cert', 
+				'annotations_gender_cert', 
+				'annotations_term_cert', 
+				'annotations_relation_type', 
+				'annotations_type-attribute_type', 
+				'annotations_source-attribute_source', 
+				'annotations_partType-attribute_partType', 
+				'annotations_cert-attribute_cert');
+
+        var attributesBoxes= new Array('attributes_cwrc', 
+				'attributes_person', 
+				'attributes_personRecordInfo-element_recordInfo', 
+				'attributes_personTypes', 
+				'attributes_projectId', 
+				'attributes_recordIdentifier', 
+				'attributes_dateSingle', 
+				'attributes_note', 
+				'attributes_recordChangeDate', 
+				'attributes_entityId', 
+				'attributes_identity-element_identity', 
+				'attributes_preferredForm', 
+				'attributes_namePart', 
+				'attributes_variantType', 
+				'attributes_sameAs', 
+				'attributes_personDescription-element_description', 
+				'attributes_descriptiveNotes', 
+				'attributes_existDates', 
+				'attributes_dateRange', 
+				'attributes_fromDate', 
+				'attributes_toDate', 
+				'attributes_gender', 
+				'attributes_term', 
+				'attributes_relations', 
+				'attributes_relation', 
+				'attributes_organization', 
+				'attributes_orgRecordInfo-element_recordInfo', 
+				'attributes_orgDescription-element_description', 
+				'attributes_orgTypes', 
+				'attributes_orgType', 
+				'attributes_place', 
+				'attributes_placeRecordInfo-element_recordInfo', 
+				'attributes_placeDescription-element_description', 
+				'attributes_recordInfo-element_recordInfo', 
+				'attributes_titleIdentity-element_identity', 
+				'attributes_level', 
+				'attributes_link', 
+				'attributes_NO_NAMESPACE_date-pattern', 
+				'attributes_type-attribute', 
+				'attributes_source-attribute', 
+				'attributes_partType-attribute', 
+				'attributes_cert-attribute', 
+				'attributes_id-attribute', 
+				'attributes_lang-attribute');
+
+        
+        
+        
+        var modelBoxes= new Array('model_cwrc', 
+				'model_entity', 
+				'model_person', 
+				'model_personRecordInfo-element_recordInfo', 
+				'model_personTypes', 
+				'model_originInfo', 
+				'model_recordCreationDate', 
+				'model_dateSingle', 
+				'model_note', 
+				'model_recordChangeDate', 
+				'model_identity-element_identity', 
+				'model_preferredForm', 
+				'model_namePart', 
+				'model_variantForms', 
+				'model_variant', 
+				'model_authorizedBy', 
+				'model_personDescription-element_description', 
+				'model_descriptiveNotes', 
+				'model_existDates', 
+				'model_dateRange', 
+				'model_fromDate', 
+				'model_toDate', 
+				'model_genders', 
+				'model_occupations', 
+				'model_occupation', 
+				'model_term', 
+				'model_activities', 
+				'model_activity', 
+				'model_researchInterests', 
+				'model_interest', 
+				'model_relatedResources', 
+				'model_relations', 
+				'model_relation', 
+				'model_personRef', 
+				'model_organizationRef', 
+				'model_placeRef', 
+				'model_organization', 
+				'model_orgRecordInfo-element_recordInfo', 
+				'model_orgDescription-element_description', 
+				'model_orgTypes', 
+				'model_place', 
+				'model_placeRecordInfo-element_recordInfo', 
+				'model_placeDescription-element_description', 
+				'model_recordInfo-element_recordInfo', 
+				'model_titleIdentity-element_identity', 
+				'model_personRecordInfo-element', 
+				'model_date-pattern', 
+				'model_identity-element', 
+				'model_personDescription-element', 
+				'model_orgRecordInfo-element', 
+				'model_orgDescription-element', 
+				'model_placeRecordInfo-element', 
+				'model_placeDescription-element', 
+				'model_recordInfo-element', 
+				'model_titleIdentity-element');
+
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    --></script></head>
+   <body>
+      <h2><a id="INDEX">Table of Contents</a></h2>
+      <div class="toc">
+         <form action="none">
+            <div><span> Group by: <select id="selectTOC" onchange="selectTOCGroupBy(this.options[this.selectedIndex].value, false, '.html', 'ns.html', 'comp.html');">
+                     <option value="toc_group_by_namespace" selected="selected">Namespace</option>
+                     <option value="toc_group_by_location">Location</option>
+                     <option value="toc_group_by_component_type">Component Type</option></select></span></div>
+         </form>
+         <div class="level1" id="toc_group_by_namespace" style="display:block">
+            <div>
+               <div class="level2">
+                  <p><input id="button_boxIdNamespace1" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1');" class="control" /><span class="indexGroupTitle">No namespace</span></p>
+                  <div id="boxIdNamespace1" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Element" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Element');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                                                <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
+                                                <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                                <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
+                                                <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
+                                                <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
+                                                <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
+                                                <div><b><a href="index.html#dateType" target="_self" title="No namespace">dateType</a></b></div>
+                                                <div><b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b></div>
+                                                <div><b><a href="index.html#displayLabel" target="_self" title="No namespace">displayLabel</a></b></div>
+                                                <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
+                                                <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
+                                                <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                                <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
+                                                <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
+                                                <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
+                                                <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
+                                                <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
+                                                <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                                <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
+                                                <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
+                                                <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
+                                                <div><b><a href="index.html#occupations" target="_self" title="No namespace">occupations</a></b></div>
+                                                <div><b><a href="index.html#orgType" target="_self" title="No namespace">orgType</a></b></div>
+                                                <div><b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b></div>
+                                                <div><b><a href="index.html#organization" target="_self" title="No namespace">organization</a></b></div>
+                                                <div><b><a href="index.html#organizationRef" target="_self" title="No namespace">organizationRef</a></b></div>
+                                                <div><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></div>
+                                                <div><b><a href="index.html#p" target="_self" title="No namespace">p</a></b></div>
+                                                <div><b><a href="index.html#person" target="_self" title="No namespace">person</a></b></div>
+                                                <div><b><a href="index.html#personRef" target="_self" title="No namespace">personRef</a></b></div>
+                                                <div><b><a href="index.html#personType" target="_self" title="No namespace">personType</a></b></div>
+                                                <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
+                                                <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
+                                                <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
+                                                <div><b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b></div>
+                                                <div><b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b></div>
+                                                <div><b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b></div>
+                                                <div><b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b></div>
+                                                <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
+                                                <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
+                                                <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
+                                                <div><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></div>
+                                                <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
+                                                <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
+                                                <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
+                                                <div><b><a href="index.html#recordCreationDate" target="_self" title="No namespace">recordCreationDate</a></b></div>
+                                                <div><b><a href="index.html#recordIdentifier" target="_self" title="No namespace">recordIdentifier</a></b></div>
+                                                <div><b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b></div>
+                                                <div><b><a href="index.html#relation" target="_self" title="No namespace">relation</a></b></div>
+                                                <div><b><a href="index.html#relations" target="_self" title="No namespace">relations</a></b></div>
+                                                <div><b><a href="index.html#researchInterests" target="_self" title="No namespace">researchInterests</a></b></div>
+                                                <div><b><a href="index.html#resource" target="_self" title="No namespace">resource</a></b></div>
+                                                <div><b><a href="index.html#sameAs" target="_self" title="No namespace">sameAs</a></b></div>
+                                                <div><b><a href="index.html#standardDate" target="_self" title="No namespace">standardDate</a></b></div>
+                                                <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
+                                                <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
+                                                <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
+                                                <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
+                                                <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
+                                                <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Element_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Element_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Element Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Element_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                                <div><b><a href="index.html#identity-element" target="_self" title="No namespace">identity-element</a></b></div>
+                                                <div><b><a href="index.html#orgDescription-element" target="_self" title="No namespace">orgDescription-element</a></b></div>
+                                                <div><b><a href="index.html#orgRecordInfo-element" target="_self" title="No namespace">orgRecordInfo-element</a></b></div>
+                                                <div><b><a href="index.html#personDescription-element" target="_self" title="No namespace">personDescription-element</a></b></div>
+                                                <div><b><a href="index.html#personRecordInfo-element" target="_self" title="No namespace">personRecordInfo-element</a></b></div>
+                                                <div><b><a href="index.html#placeDescription-element" target="_self" title="No namespace">placeDescription-element</a></b></div>
+                                                <div><b><a href="index.html#placeRecordInfo-element" target="_self" title="No namespace">placeRecordInfo-element</a></b></div>
+                                                <div><b><a href="index.html#recordInfo-element" target="_self" title="No namespace">recordInfo-element</a></b></div>
+                                                <div><b><a href="index.html#titleIdentity-element" target="_self" title="No namespace">titleIdentity-element</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Attribute_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attribute Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
+                                                <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                                <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
+                                                <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
+                                                <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                                <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
+                                                <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+               <div class="level2">
+                  <p><input id="button_boxIdNamespace2" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2');" class="control" /><span class="indexGroupTitle">http://www.w3.org/XML/1998/namespace</span></p>
+                  <div id="boxIdNamespace2" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace2Attribute" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2Attribute');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attributes</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace2Attribute" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
+                                                <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_component_type" style="display:none">
+            <div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Element" type="image" value="-" src="img/btM.gif" onclick="switchState('Element');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Elements</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Element" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                                          <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
+                                          <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                          <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
+                                          <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
+                                          <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
+                                          <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
+                                          <div><b><a href="index.html#dateType" target="_self" title="No namespace">dateType</a></b></div>
+                                          <div><b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b></div>
+                                          <div><b><a href="index.html#displayLabel" target="_self" title="No namespace">displayLabel</a></b></div>
+                                          <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
+                                          <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
+                                          <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                          <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
+                                          <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
+                                          <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
+                                          <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
+                                          <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
+                                          <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                          <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
+                                          <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
+                                          <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
+                                          <div><b><a href="index.html#occupations" target="_self" title="No namespace">occupations</a></b></div>
+                                          <div><b><a href="index.html#orgType" target="_self" title="No namespace">orgType</a></b></div>
+                                          <div><b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b></div>
+                                          <div><b><a href="index.html#organization" target="_self" title="No namespace">organization</a></b></div>
+                                          <div><b><a href="index.html#organizationRef" target="_self" title="No namespace">organizationRef</a></b></div>
+                                          <div><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></div>
+                                          <div><b><a href="index.html#p" target="_self" title="No namespace">p</a></b></div>
+                                          <div><b><a href="index.html#person" target="_self" title="No namespace">person</a></b></div>
+                                          <div><b><a href="index.html#personRef" target="_self" title="No namespace">personRef</a></b></div>
+                                          <div><b><a href="index.html#personType" target="_self" title="No namespace">personType</a></b></div>
+                                          <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
+                                          <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
+                                          <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
+                                          <div><b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b></div>
+                                          <div><b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b></div>
+                                          <div><b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b></div>
+                                          <div><b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b></div>
+                                          <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
+                                          <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
+                                          <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
+                                          <div><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></div>
+                                          <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
+                                          <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
+                                          <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
+                                          <div><b><a href="index.html#recordCreationDate" target="_self" title="No namespace">recordCreationDate</a></b></div>
+                                          <div><b><a href="index.html#recordIdentifier" target="_self" title="No namespace">recordIdentifier</a></b></div>
+                                          <div><b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b></div>
+                                          <div><b><a href="index.html#relation" target="_self" title="No namespace">relation</a></b></div>
+                                          <div><b><a href="index.html#relations" target="_self" title="No namespace">relations</a></b></div>
+                                          <div><b><a href="index.html#researchInterests" target="_self" title="No namespace">researchInterests</a></b></div>
+                                          <div><b><a href="index.html#resource" target="_self" title="No namespace">resource</a></b></div>
+                                          <div><b><a href="index.html#sameAs" target="_self" title="No namespace">sameAs</a></b></div>
+                                          <div><b><a href="index.html#standardDate" target="_self" title="No namespace">standardDate</a></b></div>
+                                          <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
+                                          <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
+                                          <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
+                                          <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
+                                          <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
+                                          <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Attribute" type="image" value="-" src="img/btM.gif" onclick="switchState('Attribute');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Attributes</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Attribute" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
+                                          <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Element_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('Element_Group');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Element Groups</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Element_Group" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                          <div><b><a href="index.html#identity-element" target="_self" title="No namespace">identity-element</a></b></div>
+                                          <div><b><a href="index.html#orgDescription-element" target="_self" title="No namespace">orgDescription-element</a></b></div>
+                                          <div><b><a href="index.html#orgRecordInfo-element" target="_self" title="No namespace">orgRecordInfo-element</a></b></div>
+                                          <div><b><a href="index.html#personDescription-element" target="_self" title="No namespace">personDescription-element</a></b></div>
+                                          <div><b><a href="index.html#personRecordInfo-element" target="_self" title="No namespace">personRecordInfo-element</a></b></div>
+                                          <div><b><a href="index.html#placeDescription-element" target="_self" title="No namespace">placeDescription-element</a></b></div>
+                                          <div><b><a href="index.html#placeRecordInfo-element" target="_self" title="No namespace">placeRecordInfo-element</a></b></div>
+                                          <div><b><a href="index.html#recordInfo-element" target="_self" title="No namespace">recordInfo-element</a></b></div>
+                                          <div><b><a href="index.html#titleIdentity-element" target="_self" title="No namespace">titleIdentity-element</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('Attribute_Group');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Attribute Groups</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Attribute_Group" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
+                                          <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                          <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
+                                          <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
+                                          <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                          <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
+                                          <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div style="clear:left"></div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_location" style="display:none">
+            <div>
+               <div class="level2">
+                  <p><input id="button_gr_entities.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_entities.xsd');" class="control" /><span class="indexGroupTitle">entities.xsd</span></p>
+                  <div id="gr_entities.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_entities.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_entities.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_entities.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                                                <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
+                                                <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                                <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
+                                                <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
+                                                <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
+                                                <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
+                                                <div><b><a href="index.html#dateType" target="_self" title="No namespace">dateType</a></b></div>
+                                                <div><b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b></div>
+                                                <div><b><a href="index.html#displayLabel" target="_self" title="No namespace">displayLabel</a></b></div>
+                                                <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
+                                                <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
+                                                <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                                <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
+                                                <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
+                                                <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
+                                                <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
+                                                <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
+                                                <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                                <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
+                                                <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
+                                                <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
+                                                <div><b><a href="index.html#occupations" target="_self" title="No namespace">occupations</a></b></div>
+                                                <div><b><a href="index.html#orgType" target="_self" title="No namespace">orgType</a></b></div>
+                                                <div><b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b></div>
+                                                <div><b><a href="index.html#organization" target="_self" title="No namespace">organization</a></b></div>
+                                                <div><b><a href="index.html#organizationRef" target="_self" title="No namespace">organizationRef</a></b></div>
+                                                <div><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></div>
+                                                <div><b><a href="index.html#p" target="_self" title="No namespace">p</a></b></div>
+                                                <div><b><a href="index.html#person" target="_self" title="No namespace">person</a></b></div>
+                                                <div><b><a href="index.html#personRef" target="_self" title="No namespace">personRef</a></b></div>
+                                                <div><b><a href="index.html#personType" target="_self" title="No namespace">personType</a></b></div>
+                                                <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
+                                                <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
+                                                <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
+                                                <div><b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b></div>
+                                                <div><b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b></div>
+                                                <div><b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b></div>
+                                                <div><b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b></div>
+                                                <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
+                                                <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
+                                                <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
+                                                <div><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></div>
+                                                <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
+                                                <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
+                                                <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
+                                                <div><b><a href="index.html#recordCreationDate" target="_self" title="No namespace">recordCreationDate</a></b></div>
+                                                <div><b><a href="index.html#recordIdentifier" target="_self" title="No namespace">recordIdentifier</a></b></div>
+                                                <div><b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b></div>
+                                                <div><b><a href="index.html#relation" target="_self" title="No namespace">relation</a></b></div>
+                                                <div><b><a href="index.html#relations" target="_self" title="No namespace">relations</a></b></div>
+                                                <div><b><a href="index.html#researchInterests" target="_self" title="No namespace">researchInterests</a></b></div>
+                                                <div><b><a href="index.html#resource" target="_self" title="No namespace">resource</a></b></div>
+                                                <div><b><a href="index.html#sameAs" target="_self" title="No namespace">sameAs</a></b></div>
+                                                <div><b><a href="index.html#standardDate" target="_self" title="No namespace">standardDate</a></b></div>
+                                                <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
+                                                <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
+                                                <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
+                                                <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
+                                                <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
+                                                <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_entities.xsdElement_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_entities.xsdElement_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Element Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_entities.xsdElement_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                                <div><b><a href="index.html#identity-element" target="_self" title="No namespace">identity-element</a></b></div>
+                                                <div><b><a href="index.html#orgDescription-element" target="_self" title="No namespace">orgDescription-element</a></b></div>
+                                                <div><b><a href="index.html#orgRecordInfo-element" target="_self" title="No namespace">orgRecordInfo-element</a></b></div>
+                                                <div><b><a href="index.html#personDescription-element" target="_self" title="No namespace">personDescription-element</a></b></div>
+                                                <div><b><a href="index.html#personRecordInfo-element" target="_self" title="No namespace">personRecordInfo-element</a></b></div>
+                                                <div><b><a href="index.html#placeDescription-element" target="_self" title="No namespace">placeDescription-element</a></b></div>
+                                                <div><b><a href="index.html#placeRecordInfo-element" target="_self" title="No namespace">placeRecordInfo-element</a></b></div>
+                                                <div><b><a href="index.html#recordInfo-element" target="_self" title="No namespace">recordInfo-element</a></b></div>
+                                                <div><b><a href="index.html#titleIdentity-element" target="_self" title="No namespace">titleIdentity-element</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_entities.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_entities.xsdAttribute_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attribute Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_entities.xsdAttribute_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
+                                                <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                                <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
+                                                <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
+                                                <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                                <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
+                                                <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+               <div class="level2">
+                  <p><input id="button_gr_xml.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsd');" class="control" /><span class="indexGroupTitle">xml.xsd</span></p>
+                  <div id="gr_xml.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_xml.xsdAttribute" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsdAttribute');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attributes</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_xml.xsdAttribute" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
+                                                <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Editor.
+         </div>
+      </div>
+   </body>
+</html>

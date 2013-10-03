@@ -1,0 +1,711 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for </title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
+         <!--
+        var propertiesBoxes= new Array('properties_workflow.xsd', 
+				'properties_cwrc', 
+				'properties_workflow', 
+				'properties_activity', 
+				'properties_note', 
+				'properties_message', 
+				'properties_recipient', 
+				'properties_subject', 
+				'properties_body', 
+				'properties_assigned', 
+				'properties_attribute-userID_userID', 
+				'properties_attribute-category_category', 
+				'properties_attribute-status_status', 
+				'properties_activity_stamp', 
+				'properties_assigned_process', 
+				'properties_workflow_date', 
+				'properties_workflow_workflowID', 
+				'properties_workflow_userID', 
+				'properties_workflow_toolID', 
+				'properties_attribute-date_date', 
+				'properties_attribute-workflowID_workflowID', 
+				'properties_attribute-toolID_toolID', 
+				'properties_attribute-process_process', 
+				'properties_attribute-stamp_stamp');
+
+        
+        var facetsBoxes= new Array('facets_attribute-category_category', 
+				'facets_attribute-status_status', 
+				'facets_activity_stamp', 
+				'facets_attribute-stamp_stamp');
+
+        var usedByBoxes= new Array('usedBy_workflow', 
+				'usedBy_activity', 
+				'usedBy_note', 
+				'usedBy_message', 
+				'usedBy_recipient', 
+				'usedBy_subject', 
+				'usedBy_body', 
+				'usedBy_assigned', 
+				'usedBy_attribute-userID_userID', 
+				'usedBy_attribute-category_category', 
+				'usedBy_attribute-status_status', 
+				'usedBy_activity_stamp', 
+				'usedBy_assigned_process', 
+				'usedBy_workflow_date', 
+				'usedBy_workflow_workflowID', 
+				'usedBy_workflow_userID', 
+				'usedBy_workflow_toolID', 
+				'usedBy_attribute-date_date', 
+				'usedBy_attribute-workflowID_workflowID', 
+				'usedBy_attribute-toolID_toolID', 
+				'usedBy_attribute-process_process', 
+				'usedBy_attribute-stamp_stamp', 
+				'usedBy_attribute-userID', 
+				'usedBy_attribute-category', 
+				'usedBy_attribute-status');
+
+        var sourceBoxes= new Array('source_cwrc', 
+				'source_workflow', 
+				'source_activity', 
+				'source_note', 
+				'source_message', 
+				'source_recipient', 
+				'source_subject', 
+				'source_body', 
+				'source_assigned', 
+				'source_attribute-userID_userID', 
+				'source_attribute-category_category', 
+				'source_attribute-status_status', 
+				'source_activity_stamp', 
+				'source_assigned_process', 
+				'source_workflow_date', 
+				'source_workflow_workflowID', 
+				'source_workflow_userID', 
+				'source_workflow_toolID', 
+				'source_attribute-date_date', 
+				'source_attribute-workflowID_workflowID', 
+				'source_attribute-toolID_toolID', 
+				'source_attribute-process_process', 
+				'source_attribute-stamp_stamp', 
+				'source_attribute-userID', 
+				'source_attribute-category', 
+				'source_attribute-status', 
+				'source_attribute-date', 
+				'source_attribute-workflowID', 
+				'source_attribute-toolID', 
+				'source_attribute-process', 
+				'source_attribute-stamp');
+
+        var instanceBoxes= new Array('instance_cwrc', 
+				'instance_workflow', 
+				'instance_activity', 
+				'instance_message', 
+				'instance_assigned');
+
+        var diagramBoxes= new Array('diagram_cwrc', 
+				'diagram_workflow', 
+				'diagram_activity', 
+				'diagram_note', 
+				'diagram_message', 
+				'diagram_recipient', 
+				'diagram_subject', 
+				'diagram_body', 
+				'diagram_assigned', 
+				'diagram_attribute-userID', 
+				'diagram_attribute-category', 
+				'diagram_attribute-status', 
+				'diagram_attribute-date', 
+				'diagram_attribute-workflowID', 
+				'diagram_attribute-toolID', 
+				'diagram_attribute-process', 
+				'diagram_attribute-stamp');
+
+        var annotationBoxes= new Array('annotations_cwrc', 
+				'annotations_workflow', 
+				'annotations_activity', 
+				'annotations_note', 
+				'annotations_message', 
+				'annotations_recipient', 
+				'annotations_subject', 
+				'annotations_body', 
+				'annotations_assigned', 
+				'annotations_attribute-userID_userID', 
+				'annotations_attribute-category_category', 
+				'annotations_attribute-status_status', 
+				'annotations_activity_stamp', 
+				'annotations_assigned_process', 
+				'annotations_workflow_date', 
+				'annotations_workflow_workflowID', 
+				'annotations_workflow_userID', 
+				'annotations_workflow_toolID', 
+				'annotations_attribute-date_date', 
+				'annotations_attribute-workflowID_workflowID', 
+				'annotations_attribute-toolID_toolID', 
+				'annotations_attribute-process_process', 
+				'annotations_attribute-stamp_stamp');
+
+        var attributesBoxes= new Array('attributes_workflow', 
+				'attributes_activity', 
+				'attributes_recipient', 
+				'attributes_assigned', 
+				'attributes_attribute-userID', 
+				'attributes_attribute-category', 
+				'attributes_attribute-status', 
+				'attributes_attribute-date', 
+				'attributes_attribute-workflowID', 
+				'attributes_attribute-toolID', 
+				'attributes_attribute-process', 
+				'attributes_attribute-stamp');
+
+        
+        
+        
+        var modelBoxes= new Array('model_cwrc', 
+				'model_workflow', 
+				'model_activity', 
+				'model_message', 
+				'model_assigned');
+
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    --></script></head>
+   <body>
+      <h2><a id="INDEX">Table of Contents</a></h2>
+      <div class="toc">
+         <form action="none">
+            <div><span> Group by: <select id="selectTOC" onchange="selectTOCGroupBy(this.options[this.selectedIndex].value, false, '.html', 'ns.html', 'comp.html');">
+                     <option value="toc_group_by_namespace" selected="selected">Namespace</option>
+                     <option value="toc_group_by_location">Location</option>
+                     <option value="toc_group_by_component_type">Component Type</option></select></span></div>
+         </form>
+         <div class="level1" id="toc_group_by_namespace" style="display:block">
+            <div>
+               <div class="level2">
+                  <p><input id="button_boxIdNamespace1" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1');" class="control" /><span class="indexGroupTitle">cwrc.ca/workflow</span></p>
+                  <div id="boxIdNamespace1" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Element" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Element');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></div>
+                                                <div><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></div>
+                                                <div><b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b></div>
+                                                <div><b><a href="index.html#cwrc" target="_self" title="cwrc.ca/workflow">workflow:cwrc</a></b></div>
+                                                <div><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
+                                                <div><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></div>
+                                                <div><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b></div>
+                                                <div><b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b></div>
+                                                <div><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Attribute_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attribute Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b></div>
+                                                <div><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b></div>
+                                                <div><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b></div>
+                                                <div><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b></div>
+                                                <div><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b></div>
+                                                <div><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b></div>
+                                                <div><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b></div>
+                                                <div><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_component_type" style="display:none">
+            <div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Element" type="image" value="-" src="img/btM.gif" onclick="switchState('Element');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Elements</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Element" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></div>
+                                          <div><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></div>
+                                          <div><b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b></div>
+                                          <div><b><a href="index.html#cwrc" target="_self" title="cwrc.ca/workflow">workflow:cwrc</a></b></div>
+                                          <div><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
+                                          <div><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></div>
+                                          <div><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b></div>
+                                          <div><b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b></div>
+                                          <div><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('Attribute_Group');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Attribute Groups</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Attribute_Group" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b></div>
+                                          <div><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b></div>
+                                          <div><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b></div>
+                                          <div><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b></div>
+                                          <div><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b></div>
+                                          <div><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b></div>
+                                          <div><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b></div>
+                                          <div><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div style="clear:left"></div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_location" style="display:none">
+            <div>
+               <div class="level2">
+                  <p><input id="button_gr_workflow.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_workflow.xsd');" class="control" /><span class="indexGroupTitle">workflow.xsd</span></p>
+                  <div id="gr_workflow.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_workflow.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_workflow.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_workflow.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></div>
+                                                <div><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></div>
+                                                <div><b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b></div>
+                                                <div><b><a href="index.html#cwrc" target="_self" title="cwrc.ca/workflow">workflow:cwrc</a></b></div>
+                                                <div><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
+                                                <div><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></div>
+                                                <div><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b></div>
+                                                <div><b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b></div>
+                                                <div><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_workflow.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_workflow.xsdAttribute_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attribute Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_workflow.xsdAttribute_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b></div>
+                                                <div><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b></div>
+                                                <div><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b></div>
+                                                <div><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b></div>
+                                                <div><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b></div>
+                                                <div><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b></div>
+                                                <div><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b></div>
+                                                <div><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Editor.
+         </div>
+      </div>
+   </body>
+</html>
