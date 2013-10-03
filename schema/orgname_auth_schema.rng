@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
 
+<!--
+        revised 2013-10-02: organization types and organization name types added 
+        to match CWRC entity schema (not used in Orlando as of current date) [MPO]
+ -->
+
     <start>
         <element name="AUTHORITYLIST">
             <oneOrMore>
@@ -12,18 +17,33 @@
     <define name="AUTHORITYITEM-element">
         <element name="AUTHORITYITEM">
             <attribute name="STANDARD"/>
-            <optional>
-                <attribute name="PERSONTYPE">
+            <optional>                
+                <attribute name="ORGTYPE"> <!-- not currently used in Olrando. Added values to match CWRC entity schema organization types -->
                     <choice>
-                        <value>BWW</value>
-                        <a:documentation>British Woman Writer</a:documentation>
-                        <!-- British Woman Writer -->
-                        <value>MW</value>
-                        <!-- Male Writer -->
-                        <value>IWW</value>
-                        <!-- International Woman Writer -->
-                        <value>IBW</value>
-                        <!-- International British Writer -->
+                        <value a:fr="" a:en="undefined">undefined</value>
+                        <value a:fr="" a:en="labour">labour</value>
+                        <value a:fr="" a:en="club or society">club or society</value>
+                        <value a:fr="" a:en="political">political</value>
+                        <value a:fr="" a:en="academic">academic</value>
+                        <value a:fr="" a:en="research">research</value>
+                        <value a:fr="" a:en="corporate">corporate</value>
+                        <value a:fr="" a:en="activist">activist</value>
+                        <value a:fr="" a:en="governmental">governmental</value>
+                        <value a:fr="" a:en="military">military</value>
+                        <value a:fr="" a:en="law-enforcement">law-enforcement</value>
+                        <value a:fr="" a:en="professional">professional</value>
+                        <value a:fr="" a:en="sporting">sporting</value>
+                        <value a:fr="" a:en="medical">medical</value>
+                        <value a:fr="" a:en="altruistic">altruistic</value>
+                        <value a:fr="" a:en="non-profit">non-profit</value>
+                        <value a:fr="" a:en="artistic">artistic</value>
+                        <value a:fr="" a:en="dramatic">dramatic</value>
+                        <value a:fr="" a:en="ethnic">ethnic</value>
+                        <value a:fr="" a:en="iterary">literary</value>
+                        <value a:fr="" a:en="musical">musical</value>
+                        <value a:fr="" a:en="religious">religious</value>
+                        <value a:fr="" a:en="publishing">publishing</value>
+                        <data a:fr="" a:en="other" type="string"/>
                     </choice>
                 </attribute>
             </optional>
@@ -39,52 +59,22 @@
                     </optional>
                     <optional>
                         <oneOrMore>
-                            <ref name="BIRTHNAME-element"/>
+                            <ref name="GEOGRAPHIC-element"/>
                         </oneOrMore>
                     </optional>
                     <optional>
                         <oneOrMore>
-                            <ref name="MARRIED-element"/>
+                            <ref name="DATE-element"/>
                         </oneOrMore>
                     </optional>
                     <optional>
                         <oneOrMore>
-                            <ref name="PSEUDONYM-element"/>
-                        </oneOrMore>
-                    </optional>
-                    <optional>
-                        <oneOrMore>
-                            <ref name="NICKNAME-element"/>
-                        </oneOrMore>
-                    </optional>
-                    <optional>
-                        <oneOrMore>
-                            <ref name="TITLED-element"/>
-                        </oneOrMore>
-                    </optional>
-                    <optional>
-                        <oneOrMore>
-                            <ref name="STYLED-element"/>
+                            <ref name="PERSON-element"/>
                         </oneOrMore>
                     </optional>
                     <optional>
                         <oneOrMore>
                             <ref name="INDEXED-element"/>
-                        </oneOrMore>
-                    </optional>
-                    <optional>
-                        <oneOrMore>
-                            <ref name="SELFCONSTRUCTED-element"/>
-                        </oneOrMore>
-                    </optional>
-                    <optional>
-                        <oneOrMore>
-                            <ref name="RELIGIOUSNAME-element"/>
-                        </oneOrMore>
-                    </optional>
-                    <optional>
-                        <oneOrMore>
-                            <ref name="ROYAL-element"/>
                         </oneOrMore>
                     </optional>
                 </interleave>
@@ -104,7 +94,7 @@
         </element>
     </define>
 
-    <define name="BIRTHNAME-element">
+    <define name="GEOGRAPHIC-element">
         <element name="BIRTHNAME">
             <optional>
                 <attribute name="DISPLAY"/>
@@ -116,7 +106,7 @@
         </element>
     </define>
 
-    <define name="MARRIED-element">
+    <define name="DATE-element">
         <element name="MARRIED">
             <optional>
                 <attribute name="DISPLAY"/>
@@ -128,56 +118,8 @@
         </element>
     </define>
 
-    <define name="PSEUDONYM-element">
+    <define name="PERSON-element">
         <element name="PSEUDONYM">
-            <optional>
-                <attribute name="DISPLAY"/>
-            </optional>
-            <optional>
-                <attribute name="PICKLIST"/>
-            </optional>
-            <text/>
-        </element>
-    </define>
-
-    <define name="NICKNAME-element">
-        <element name="NICKNAME">
-            <optional>
-                <attribute name="DISPLAY"/>
-            </optional>
-            <optional>
-                <attribute name="PICKLIST"/>
-            </optional>
-            <text/>
-        </element>
-    </define>
-
-    <define name="SELFCONSTRUCTED-element">
-        <element name="SELFCONSTRUCTED">
-            <optional>
-                <attribute name="DISPLAY"/>
-            </optional>
-            <optional>
-                <attribute name="PICKLIST"/>
-            </optional>
-            <text/>
-        </element>
-    </define>
-
-    <define name="TITLED-element">
-        <element name="TITLED">
-            <optional>
-                <attribute name="DISPLAY"/>
-            </optional>
-            <optional>
-                <attribute name="PICKLIST"/>
-            </optional>
-            <text/>
-        </element>
-    </define>
-
-    <define name="STYLED-element">
-        <element name="STYLED">
             <optional>
                 <attribute name="DISPLAY"/>
             </optional>
@@ -190,30 +132,6 @@
 
     <define name="INDEXED-element">
         <element name="INDEXED">
-            <optional>
-                <attribute name="DISPLAY"/>
-            </optional>
-            <optional>
-                <attribute name="PICKLIST"/>
-            </optional>
-            <text/>
-        </element>
-    </define>
-
-    <define name="RELIGIOUSNAME-element">
-        <element name="RELIGIOUSNAME">
-            <optional>
-                <attribute name="DISPLAY"/>
-            </optional>
-            <optional>
-                <attribute name="PICKLIST"/>
-            </optional>
-            <text/>
-        </element>
-    </define>
-
-    <define name="ROYAL-element">
-        <element name="ROYAL">
             <optional>
                 <attribute name="DISPLAY"/>
             </optional>

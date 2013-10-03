@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- common schema 
-    for use by Biography, Events and Writing schemas
+    for use by Biography, Events, and Writing schemas
     written 2010-03-31 by Mariana Paredes-Olea,
     based on events.dtd and biograph.dtd (SGML)
     Copyright 2010 The Orlando Project -->
@@ -853,16 +853,17 @@
             <interleave>
                 <zeroOrMore>
                     <choice>
-                        <text/>                
-                        <ref name="place-element"/>
-                        <ref name="orgName-element"/>
-                        <ref name="rs-element"/>
+                        <text/>
                         <ref name="sic-element"/>
                         <ref name="corr-element"/>
                         <ref name="emph-element"/>
                         <ref name="quote-element"/>
                         <ref name="foreign-element"/>
-                        <ref name="soCalled-element"/>               
+                        <ref name="soCalled-element"/>
+                        <ref name="researchNote-element"/>
+                        <!--<ref name="place-element"/>
+                        <ref name="orgName-element"/>
+                        <ref name="rs-element"/>
                         <ref name="topic-element"/>
                         <ref name="tGenre-element"/>
                         <ref name="job-element"/>
@@ -873,12 +874,11 @@
                         <ref name="dateStruct-element"/>
                         <ref name="l-element"/>
                         <ref name="lg-element"/>
-                        <ref name="time-element"/>                
-                        <ref name="researchNote-element"/>
+                        <ref name="time-element"/>                        
                         <ref name="title-element"/>
                         <ref name="bibCit-element"/>
-                        <ref name="bibCits-element"/>                
-                        <ref name="lb-element"/>
+                        <ref name="bibCits-element"/>
+                        <ref name="lb-element"/>-->
                     </choice>
                 </zeroOrMore> 
             </interleave>

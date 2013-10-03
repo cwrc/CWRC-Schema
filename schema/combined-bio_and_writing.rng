@@ -2,18 +2,21 @@
 <grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <!--
     
-    orlando_bio_and_writing_.rnc
+    combined-bio_and_writing.rnc
+    
     This schema combimes Biography and Writing elements within an Orlando root element in the pattern:
     ORLANDO-CWRC/ENTRY/ORLANDOHEADER?/BIOGRAPHY*|WRITING*
     the intent is to provide a schema for the Canadian Writing and Research Collaboratory (CWRC)
     literary team based in Orlando's SGML documents structure.
     
     Written 2010-08 by Mariana Paredes-Olea
-    revised 2013-01-29
-    revised 2013-02-19
+    revised 2013-01-29 [MPO]
+    revised 2013-02-19 [MPO]
+    revised 2013-10-02: relative URLs [MPO]
+
   -->
   
-  <include href="http://cwrc.ca/schema/orlando_common_schema.rng">
+  <include href="orlando_common_schema.rng">
     <start combine="choice">
       <ref name="ORLANDO-CWRC-element"/>
     </start>
@@ -36,8 +39,8 @@
       </optional>
       <oneOrMore>
         <choice>
-          <externalRef href="http://cwrc.ca/schema/biography.rng"/>
-          <externalRef href="http://cwrc.ca/schema/writing.rng"/>
+          <externalRef href="biography.rng"/>
+          <externalRef href="writing.rng"/>
         </choice>
       </oneOrMore>
     </element>

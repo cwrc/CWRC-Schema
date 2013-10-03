@@ -22,15 +22,15 @@
 -->
 
 <!-- revised 2013-07-07
+  revised 2013-10-02: relative URLs [MPO]
  -->
 
 <grammar xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
   xmlns="http://relaxng.org/ns/structure/1.0"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
-  
-  <!--http://cwrc.ca/schema/-->
-  <include href="http://cwrc.ca/schema/orlando_common_schema.rng">
+
+  <include href="orlando_common_schema.rng">
     <start combine="choice">
       <ref name="Writing-element"/>
     </start>    

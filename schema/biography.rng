@@ -5,8 +5,9 @@
     based on biograph.dtd (SGML)
     The Orlando Project -->
 
-<!-- revised 2013-07-07
+<!-- revised 2013-07-07 [MPO]
      revised 2013-08-21: added <Div2> element as a child element of <culturalFormation> element [JCA & MRB]
+     revised 2013-10-02: relative URLs [MPO]
  -->
 
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
@@ -15,8 +16,7 @@
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
     >
 
-    <!--http://cwrc.ca/schema/-->
-    <include href="http://cwrc.ca/schema/orlando_common_schema.rng">
+    <include href="orlando_common_schema.rng">
         <start combine="choice">
             <ref name="Biography-element"/>
         </start>
@@ -52,9 +52,9 @@
                     <ref name="education-inclusion"/>
                     <ref name="family-inclusion"/>
                     <ref name="friendsAssociates-inclusion"/>
-                    <!--<ref name="intimateRelationships-inclusion" combine="choice"></ref> overlaps with culturalformation inclusion-->
+                    <!--<ref name="intimateRelationships-inclusion" combine="choice"/> - overlaps with culturalformation inclusion-->
                     <ref name="occupation-inclusion"/>
-                    <!--<ref name="politics-inclusion" combine="choice"></ref> overlaps with culturalformation inclusion-->
+                    <!--<ref name="politics-inclusion" combine="choice"/> - overlaps with culturalformation inclusion-->
                 </choice>
             </zeroOrMore>
         </define>
@@ -90,9 +90,9 @@
                     <ref name="education-inclusion"/>
                     <ref name="family-inclusion"/>
                     <ref name="friendsAssociates-inclusion"/>
-                    <!--<ref name="intimateRelationships-inclusion" combine="choice"></ref> overlaps with culturalformation inclusion-->
+                    <!--<ref name="intimateRelationships-inclusion" combine="choice"/> - overlaps with culturalformation inclusion-->
                     <ref name="occupation-inclusion"/>
-                    <!--<ref name="politics-inclusion" combine="choice"></ref> overlaps with culturalformation inclusion-->
+                    <!--<ref name="politics-inclusion" combine="choice"/> - overlaps with culturalformation inclusion-->
                 </choice>
             </zeroOrMore>
         </define>

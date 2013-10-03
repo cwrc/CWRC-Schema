@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- MRB: July 2013: The entity schema now includes the person, organization, and place entity types.  The title
-    entity is defined by the MODS schema mods.xsd.  The events entity schema will eventually be developed in RDF by JS.
+<!-- MRB: July 2013: The entity schema now includes the person, organization, and place entity types.  The title entity is defined by the MODS schema mods.xsd.  The events entity schema will eventually be developed in RDF by JS.
 -->
 
 <!-- 
@@ -10,23 +9,20 @@
     
     Schema Type: Relax NG Schema XML
     
-    Version: 2012-04
+    Version: 2013-04
     
-    Summary: The present CWRC Entity Schema outlines a format for the description of persons, corporate bodies,
-    places, titles (frbr:work), and event entities. It is based on concepts from ISAAR(CPF),
-    EAC-CFP standards, MADS, and FOAF and designed for implementation within the Fedora Commons framework.
-    Most administrative metadata (equivalent to EAC-CPF\'s <control> element) should be captured in
-    Fedora Object datastreams such as object properties, AUDIT, RELS-EXT (object-level relations),
-    or worlkflow. Content-level relations are captured in the entity record itself.
+    Summary: The present CWRC Entity Schema outlines a format for the description of persons, corporate bodies, places, titles (frbr:work), and event entities. It is based on concepts from ISAAR(CPF), EAC-CFP standards, MADS, and FOAF and designed for implementation within the Fedora Commons framework.
+    Most administrative metadata (equivalent to EAC-CPF\'s <control> element) should be captured in Fedora Object datastreams such as object properties, AUDIT, RELS-EXT (object-level relations), or worlkflow. Content-level relations are captured in the entity record itself.
     
     **********
-    Release Notes: V03. Third version includes definition of person and organization entity types,
-    as well as granular certainty information.
+    Release Notes: V04.
+    
+    Revised 2013-10-02: added comment on interface annotations (possible future improvement), changed documentation's release number and version approximate date [MPO]
+    
     ********** 
     
     **********
-    For comments, questions, and suggestions please contact Susan Brown, CWRC project leader
-    (sbrown@uoguelph.ca) or Mariana Paredes-Olea, CWRC Metadata Coordinator (paredeso@ualberta.ca)
+    For comments, questions, and suggestions please contact Susan Brown, CWRC project leader (sbrown@uoguelph.ca) or Mariana Paredes-Olea, CWRC Metadata Coordinator (paredeso@ualberta.ca)
     **********    
 -->
 
@@ -57,10 +53,6 @@
     
     personType values
     ->  in define node
-    
-    
-    
-    
 -->
 
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
@@ -1444,7 +1436,8 @@
                         <label xml:lang="en">Organization Type</label>
                         <input>dynamicCheckbox</input>
                     </interface-field>
-
+                    
+                    <!-- MPO: note that values are currently defined twice (for schema and interface annotations) to match current CWRC entity pop-up prototype requirements. This can be improved later [MPO] -->
                     <values>
                         <choice>
                             <value a:fr="" a:en="undefined" default="yes">undefined</value>

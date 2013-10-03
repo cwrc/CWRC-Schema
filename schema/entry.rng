@@ -21,6 +21,8 @@
     revised 2013-04-14
     revised 2013-06-30
     revised 2013-07-07
+    revised 2013-10-02: relative URLs [MPO]
+
     -->
     
     
@@ -62,8 +64,7 @@
             
         -->
     
-    <!--http://cwrc.ca/schema/-->
-    <include href="http://cwrc.ca/schema/orlando_common_schema.rng">
+    <include href="orlando_common_schema.rng">
         <start combine="choice">
             <ref name="Entry-element"/>
         </start>
@@ -138,8 +139,7 @@
     </include>
     
     
-    <!--http://cwrc.ca/schema/-->
-    <include href="http://cwrc.ca/schema/biography.rng">
+    <include href="biography.rng">
         
         <define name="contestedBehaviour-element" combine="choice">
             <notAllowed/>
