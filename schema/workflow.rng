@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- MRB: Fri 27-Sep-2013: Revised workflow schema, based on discussions involving SIB, RKK, JCA, and MRB.  See the Google
-	doc "Workflow schema deconstruction" at https://docs.google.com/a/ualberta.ca/document/d/1xDB83PCwVXiF27j-Bn_EFxni4lxuPJHm1aFveVXnJL4/edit
+<!-- MRB: Thu 10-Oct-2013
+	* Changed the @date attribute datatype from "dateTime" to "date", and added an optional @time attribute with a datatype of "time".
+	* Changed the <workflow> element's @date and @userID attributes from optional to required.
+-->
+
+<!-- MRB: Fri 27-Sep-2013
+	Revised workflow schema, based on discussions involving SIB, RKK, JCA, and MRB.  See the Google doc "Workflow
+	schema deconstruction" at https://docs.google.com/a/ualberta.ca/document/d/1xDB83PCwVXiF27j-Bn_EFxni4lxuPJHm1aFveVXnJL4/edit
 	for more information on the revisions undertaken.  The revisions included the following:
 	* Eliminated the <auto> and <human> elements.  There are now two main child elements of the the root <workflow> element,
 	<activity> (the workflow activity being chronicled) and <assigned> (the next workflow activity in the workflow chain).
@@ -47,16 +53,15 @@
 		<element name="workflow">
 			<a:documentation>Element workflow contains a workflow record containing an activity element
 			(the workflow activity being chronicled) and an assigned element (the next workflow activity
-			in the workflow chain).</a:documentation>	
+			in the workflow chain).</a:documentation>
+			<ref name="attribute-date"/>
 			<optional>
-				<ref name="attribute-date"/>
+				<ref name="attribute-time"/>
 			</optional>
 			<optional>
 				<ref name="attribute-workflowID"/>
 			</optional>
-			<optional>
-				<ref name="attribute-userID"/>
-			</optional>
+			<ref name="attribute-userID"/>
 			<optional>
 				<ref name="attribute-toolID"/>
 			</optional>
@@ -159,8 +164,15 @@
 	
 	<define name="attribute-date">
 		<attribute name="date">
-			<a:documentation>Date/time format in the form of YYYY-MM-DDThh:mm:ss</a:documentation>
+			<a:documentation>Date format in the form of YYYY-MM-DD</a:documentation>
 			<data type="dateTime"/>
+		</attribute>
+	</define>
+	
+	<define name="attribute-time">
+		<attribute name="time">
+			<a:documentation>Time format in the form of hh:mm:ss.  Note: can append an optional timezone offset to the time value: -07:00 for MST, and -06:00 for MDT</a:documentation>
+			<data type="time"/>
 		</attribute>
 	</define>
 	
