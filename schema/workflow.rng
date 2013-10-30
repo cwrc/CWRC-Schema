@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- MRB: Thu 10-Oct-2013
+<!--
+	MRB: Tue 29-Oct-2013
+	* Changed the schema declartion.
+	
+	MRB: Thu 10-Oct-2013
 	* Changed the @date attribute datatype from "dateTime" to "date", and added an optional @time attribute with a datatype of "time".
 	* Changed the <workflow> element's @date and @userID attributes from optional to required.
--->
 
-<!-- MRB: Fri 27-Sep-2013
+	MRB: Fri 27-Sep-2013
 	Revised workflow schema, based on discussions involving SIB, RKK, JCA, and MRB.  See the Google doc "Workflow
 	schema deconstruction" at https://docs.google.com/a/ualberta.ca/document/d/1xDB83PCwVXiF27j-Bn_EFxni4lxuPJHm1aFveVXnJL4/edit
 	for more information on the revisions undertaken.  The revisions included the following:
@@ -23,15 +26,10 @@
 -->
 
 <grammar
-	ns="cwrc.ca/workflow"
-	xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-	xmlns:rng="http://relaxng.org/ns/structure/1.0"
-	xmlns:xlink="http://www.w3.org/1999/xlink"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema"
 	xmlns="http://relaxng.org/ns/structure/1.0"
+	xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
-	<a:documentation>CWRC namespace for workflow datastream.</a:documentation>
 	
 	<start>
 		<choice>
