@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/cwrc.css"?>
+<?xml-model href="../../CWRC-Schema/schema/entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<ENTRY PERSONTYPE="writer" SEX="female" NATIONALITY="Canadian">
+    <CWRCHEADER>
+        <FILEDESC>
+            <TITLESTMT>
+                <DOCTITLE>Some Title</DOCTITLE>
+                <DOCAUTHOR>Author Name</DOCAUTHOR>
+            </TITLESTMT>
+            <PUBLICATIONSTMT>
+                <P>Created from original research by members of CWRC/CSÉC unless otherwise noted.</P>
+            </PUBLICATIONSTMT>
+            <SOURCEDESC></SOURCEDESC>
+        </FILEDESC>
+        <REVISIONDESC>
+            <RESPONSIBILITY RESP="MPO" WORKSTATUS="SUB" WORKVALUE="I">
+                <ITEM>Template created</ITEM>
+                <DATE>2013-11-16</DATE>
+            </RESPONSIBILITY>
+        </REVISIONDESC>
+    </CWRCHEADER>
+    <DIV0>
+        <DIV1>
+            <HEADING>Sample heading</HEADING>
+            <PERSONNAME>
+                <BIRTHNAME>
+                    <GIVEN>Enter Given Name</GIVEN>
+                    <SURNAME>Enter Surname</SURNAME>
+                </BIRTHNAME>
+                <NICKNAME>Enter Nickname</NICKNAME>
+            </PERSONNAME>
+            <BIRTH>
+                <CHRONSTRUCT><DATE>Date of birth (dd Month yyyy)</DATE><CHRONPROSE>Enter text about birth.</CHRONPROSE></CHRONSTRUCT>
+            </BIRTH>
+            
+            
+            
+            <!-- MP: customizations for Playwrights project  template need to be continued below -->
+            
+            
+            <FAMILY>
+                <P>Some text on the writer's family, <TINTERTEXTUALITY>some reference to
+                    intertextuality related to the life of the author's <CHILDREN>children</CHILDREN>, as well as <PDEDICATION>some reference to a <TITLE TITLETYPE="MONOGRAPHIC">work</TITLE> dedicated to them</PDEDICATION>.
+                </TINTERTEXTUALITY></P>
+            </FAMILY>
+        </DIV1>
+        <DIV1>
+            <HEADING>Insert heading here</HEADING>
+            <PFIRSTLITERARYACTIVITY>
+                <P>Insert text here</P>
+            </PFIRSTLITERARYACTIVITY>                    
+            <OCCUPATION>
+                <P>Insert text here</P>
+            </OCCUPATION>
+            <PRODUCTION>
+                <P>Insert text here.</P>
+            </PRODUCTION>
+            <LEISUREANDSOCIETY>
+                <P>Insert text here.</P>
+            </LEISUREANDSOCIETY>
+            <RECEPTION>
+                <P>Insert text here</P>
+            </RECEPTION>
+        </DIV1>
+    </DIV0>
+</ENTRY>
