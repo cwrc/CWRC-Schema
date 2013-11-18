@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;note&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element note overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;note&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="note.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;note&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;note&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Element</th>
+      <td width="479" scope="col"><strong>&lt;note&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">General textual information relating to a resource.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; displayLabel; <span class="attribute">altRepGroup;</span> xlink; ID; lang; xml:lang; script; transliteration; typeURI </td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None </td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="note.html#guidelines">GUIDELINES</a> | <a href="note.html#examples">EXAMPLES</a> | <a href="note.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>&lt;note&gt; is used for information that is not encoded in another, more specific MODS element. For example, in retrospective conversion of existing MARC 21 records, many 5XX note fields, while technically falling within the definition of the &lt;note&gt; element above,
+  should be mapped to more specific MODS elements where possible; see &lt;<a href="http://www.loc.gov/standards/mods/userguide/abstract_2012.html">abstract</a>&gt;, &lt;<a href="http://www.loc.gov/standards/mods/userguide/accesscondition_2012.html">accessCondition</a>&gt;,
+  &lt;<a href="tableofcontents.html">tableOfContents</a>&gt;, and &lt;<a href="targetaudience.html">targetAudience</a>&gt;.</p>
+<p>Each note should be entered in a separate &lt;note&gt; element and the note given a type value if possible.</p>
+<p>A link to text accessible externally to the record may be supplied in lieu of or in addition to the &lt;note&gt; content.</p>
+<p>Notes relating to physical description aspects of a resource should be recorded in the &lt;note&gt; subelement of &lt;<a href="physicaldescription.html">physicalDescription</a>&gt;. </p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> recommend using &lt;note&gt; if applicable. </p>
+<p>In an OAI-PMH environment, where end users will be directed by service providers back to the original institution's site and a complete metadata record for access, &lt;note&gt; content that is not about the content of the resource may not need to be included in
+  the MODS record made available for harvesting.</p>
+<p>For DLF/Aquifer the use of the <i>type</i> attribute is not recommended due to the use of uncontrolled values.</p>
+<p>The use of the <i>displayLabel</i> attribute is optional. The <i>displayLabel</i> attribute may be used to indicate the preferred labeling when displayed by a metadata aggregator. Metadata aggregators may choose to ignore this attribute.</p>
+<p>See the &lt;<a href="dlfaquifer.html#note">note</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Aggregator information: Aggregators may choose to index and display content in &lt;note&gt; directly to end users. However, there is no requirement or obligation for them to do so. Therefore, the &lt;note&gt; field should not be relied upon to communicate information
+  critical to use or access that is better suited for other fields.</p>
+<p>Notes as a broad class of elements are not covered in the <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" />.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Identifies what type of note is recorded.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is not controlled by a list and thus is open-ended. A list of <a href="http://www.loc.gov/standards/mods/mods-notes.html"> note types</a> used by MODS implementers has been compiled for interoperability.</div>
+<p class="attribute">altRepGroup; xlink; ID; lang; xml:lang; script; transliteration; typeURI; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p>There are no subelements for &lt;note&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="note.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <div class="indent1"><strong>&lt;note&gt;</strong>Thesis (M.A.)--Yale University, 1974.<strong>&lt;/note&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;note&gt;</strong>Based on a play which originally appeared in France as &quot;Un peu plus tard, un peu plus t&ocirc;t&quot;.<strong>&lt;/note&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;note&gt;</strong>170 of the 177 pages of the original have been digitized. Prefaces and appendices were excluded.<strong>&lt;/note&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;note&gt;</strong>Perspective map not drawn to scale.<strong>&lt;/note&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;note type=&quot;performers&quot;&gt;</strong>Anne Baxter (Louise), Maria Perschy (Angela), Gustavo Rojo (Bill), Reginald Gilliam (Mr. Johnson), [Catherine Elliot?] (Aunt Sallie), Ben Tatar (waiter)<strong>&lt;/note&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;note type=&quot;statement of responsibility&quot;&gt;</strong>written by Burt Kimmelman<strong>&lt;/note&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;note type=&quot;historical&quot; displayLabel=&quot;Historical note:&quot; xlink:href=&quot;http://www.mnhs.org/library/findaids/80881.html&quot;&gt;</strong>The Faribault State School and Hospital provided care, treatment, training, and a variety of other services
+    to mentally retarded individuals and their families. It was operated by the State of Minnesota from 1879 to 1998 under different administrative structures and with different names. A more detailed history of the Hospital may be found at: http://www.mnhs.org/library/findaids/80881.html.<strong>&lt;/note&gt;</strong></div>
+</div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="note.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;note&gt; &#8776; MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd5xx.html"> 5XX</a>.</p>
+<p class="nomargin">Some examples of &lt;note&gt; <i>type</i> attribute values are: </p>
+<ul>
+  <li>performers = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd511.html"> 511</a></li>
+  <li>venue = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd518.html"> 518</a></li>
+  <li>statementOfResponsibility = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd245.html"> 245</a> subfield $c. </li>
+</ul>
+<p>See also <a href="http://www.loc.gov/standards/mods/mods-mapping.html#note"><i>MARC Mapping to MODS</i> for the &lt;note&gt; element.</a></p>
+<h3>Dublin Core Mapping</h3>
+<p>The <i><a href="http://www.loc.gov/standards/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping </a></i>recommends mapping each &lt;note&gt; element to a &lt;dc:description&gt; element.</p>
+<p>MODS examples expressed in Dublin Core:</p>
+<div class="example">
+<div class="indent1">
+  <p><strong>&lt;dc:description&gt;</strong>Thesis (M.A.)--Yale University, 1974.<strong>&lt;/dc:description&gt;</strong></p>
+  <p><strong>&lt;dc:description&gt;</strong>Based on a play which originally appeared in France as &quot;Un peu plus tard, un peu plus t&ocirc;t&quot;.<strong>&lt;/dc:description&gt;</strong></p>
+</div>
+</div>
+<h1><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="note.html#skip_menu">Top</a></h1>
+
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->August 8, 2013<!-- #EndDate -->
+      </p>  
+</td>
+</tr> 
+
+	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->August 8, 2013<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

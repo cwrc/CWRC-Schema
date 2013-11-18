@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;targetAudience&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element titleinfo overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;targetAudience&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="targetaudience.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+ <p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;targetAudience&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;targetAudience&gt;</h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <td scope="col"><strong>&lt;targetAudience&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">A description of the intellectual level of the audience for which the resource is intended.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI; displayLabel; <span class="attribute">altRepGroup;</span> lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<p></p>
+<p><a href="targetaudience.html#guidelines">GUIDELINES</a> | <a href="targetaudience.html#examples">EXAMPLES</a> | <a href="targetaudience.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>Use this element whenever there is a specific audience for a resource (for example, a text marked up specifically for historians).</p>
+<p>Do not use &lt;targetAudience&gt; to indicate audiences to whom access or use of the resource is limited; include this information in the &lt;<a href="http://www.loc.gov/standards/mods/userguide/accesscondition_2012.html">accessCondition</a>&gt; element.</p>
+<p>When more than one target audience is recorded, the element is repeated. </p>
+<p>Either a controlled list of values or free text may be used.</p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> recommend the use of at least one &lt;targetAudience&gt; element when applicable, and a controlled vocabulary when available. Note that these guidelines do not limit the use of the &lt;targetAudience&gt;
+  element to the intellectual level of the audience.</p>
+<p>The use of the <i>authority</i> attribute is recommended if applicable. Use this attribute whenever possible to indicate the controlled vocabulary used. The DLF/Aquifer guidelines recognize that the <a href="http://www.loc.gov/standards/sourcelist/target-audience.html"> Target Audience Code and Term Source Codes</a>, maintained by the Library of Congress, contains only one source code: &quot;<a href="http://www.loc.gov/standards/valuelist/marctarget.html">marctarget</a>&quot;,
+  which itself contains a very limited set of values. If this source is not of use, these guidelines recommend that the value of the &lt;targetAudience&gt; be expressed clearly and be generally understandable outside of the local context of the resource.</p>
+<p>See the &lt;<a href="dlfaquifer.html#targetaudience">targetAudience</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Aggregator information: Aggregators may use this field to separate out content to audiences of differing intellectual interests and levels. This is not currently common practice.</p>
+<p>The <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" /> does not discuss audience as a general class of elements.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken. </div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used for the values in the &lt;targetAudience&gt; element, if applicable. Consult <a href="http://www.loc.gov/standards/sourcelist/target-audience.html"> Target Audience Code and Term Source Codes</a>, for a list of possible controlled vocabularies and their source codes.</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">altRepGroup; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p>There are no subelements for &lt;targetAudience&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="targetaudience.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <div class="indent1"><strong>&lt;targetAudience authority=&quot;marctarget&quot;&gt;</strong>adolescent<strong>&lt;targetAudience&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;targetAudience authority=&quot;marctarget&quot;&gt;</strong>adult<strong>&lt;targetAudience&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;targetAudience displayLabel=&quot;grade level&quot;&gt;</strong>kindergarten<strong>&lt;targetAudience&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;targetAudience&gt;</strong>Genealogists<strong>&lt;targetAudience&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;targetAudience authority=&quot;marctarget&quot;&gt;</strong>juvenile<strong>&lt;targetAudience&gt;</strong><br />
+    <strong>&lt;targetAudience authority=&quot;marctarget&quot;&gt;</strong>adolescent<strong>&lt;targetAudience&gt;</strong><br />
+    [<i>Resource contains information targeted to both juvenile and adolescent audiences</i>]</div>
+</div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="targetaudience.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;targetAudience authority=&quot;marctarget&quot;&gt; &#8776; MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd008.html"> 008</a>/22 (BK, CF, MU, VM), <a href="http://www.loc.gov/marc/bibliographic/bd521.html"> 521</a>.</p>
+<p>See also <a href="http://www.loc.gov/mods/mods-mapping.html#targetaudience"> MARC Mapping to MODS</a> for the &lt;targetAudience&gt; element.</p>
+<h3>Dublin Core Mapping</h3>
+<p>The <i><a href="http://www.loc.gov/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping </a></i>does not provide a mapping for &lt;targetAudience&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="targetaudience.html#skip_menu">Top</a></p>
+
+
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->February 18, 2011<!-- #EndDate -->
+      </p>  
+
+</td>
+</tr> 	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->February 18, 2011<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

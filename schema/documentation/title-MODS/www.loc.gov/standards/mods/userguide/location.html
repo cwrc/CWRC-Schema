@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;location&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element location overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;location&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="location.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;location&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;location&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <td scope="col"><strong>&lt;location&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">Identifies the institution or repository holding the resource, or the electronic location in the form of a URL where it is available.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td><span class="attribute">displayLabel; altRepGroup;</span> lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="location.html#physicallocation">physicalLocation</a>&gt; &lt;<a href="location.html#shelflocator">shelfLocator</a>&gt; &lt;<a href="location.html#url">url</a>&gt; &lt;<a href="location.html#holdingsimple">holdingSimple</a>&gt; &lt;<a href="location.html#holdingexternal">holdingExternal</a>&gt; </strong></td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="location.html#guidelines">GUIDELINES</a> | <a href="location.html#examples">EXAMPLES</a> | <a href="location.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>&lt;location&gt; is a container element; specific data is recorded in the subelements. </p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> require the use of at least one &lt;location&gt; element with at least one &lt;url&gt; subelement. See &lt;<a href="location.html#url">url</a>&gt; below for additional guidelines on this subelement.</p>
+<p>See the &lt;<a href="dlfaquifer.html#location">location</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Tabble</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Aggregator information: Aggregators will use the &lt;location&gt;&lt;url usage=&quot;primary display&quot;&gt; as the primary or&#8212;within a short display&#8212;the only link for an end user to access the described digital resource. Aggregators may choose to display additional &lt;location&gt;&lt;url&gt;
+  or &lt;location&gt;&lt;physicalLocation&gt; links to end users, but generally will not use those within the search or browse functionality. In addition, aggregators may use links provided within &lt;location&gt;&lt;url&gt; to collect more information for their service. For example,
+  if a URL is provided to image thumbnails (access=&quot;preview&quot;), an aggregator may spider those URLs to collect the thumbnail. These are then displayed with the search results to improve the user's browsing of the results.</p>
+<p>The &lt;url&gt; subelement of element &lt;location&gt; is addressed in the &quot;Recommendations for Classes of Data Elements&quot; section under &quot;Identifiers&quot; and &quot;Linking from a Record to a Resource&quot; under the &quot;General Recommendations&quot; section of the <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" />.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">altRepGroup; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p class="nomargin">The following subelements are described below:</p>
+<ul>
+  <li>&lt;<a href="location.html#physicallocation">physicalLocation</a>&gt; </li>
+  <li>&lt;<a href="location.html#shelflocator">shelfLocator</a>&gt; </li>
+  <li>&lt;<a href="location.html#url">url</a>&gt; </li>
+  <li>&lt;<a href="location.html#holdingsimple">holdingSimple</a>&gt; </li>
+  <li>&lt;<a href="location.html#holdingexternal">holdingExternal</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 id="physicallocation" class="border">Subelement: &lt;physicalLocation&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="598" scope="col">The institution or repository that holds the resource or where it is available.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; authority; authorityURI; valueURI; displayLabel; xlink; lang; xml:lang; script; transliteration </td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;physicalLocation&gt; typically includes specific information used to locate a resource within a collection, such as the name or code of an institution/repository, and perhaps subcollection. A shelf number is given in &lt;shelfLocator&gt;.</p>
+<p>&lt;physicalLocation&gt; may be expressed as text and/or as a code. Use the <i>authority</i> attribute to designate the source of the code. </p>
+<p>The attribute <i>xlink</i> may be used to link to additional information about the entity recorded in &lt;physicalLocation&gt;, e.g. the institution's website. </p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> allow the optional use of this subelement to identify the institution or repository holding the resource, or from which it is available. Within these guidelines, it identifies the
+  physical, institutional home of an analog resource that has been digitized. It is not recommended to include, for aggregation, a physical location for the location of digital files.</p>
+<p>The <i>displayLabel</i> attribute may be used, optionally, to indicate the preferred labeling when displayed by a metadata aggregator. Metadata aggregators may choose to ignore this attribute.</p>
+<p>Permissible values for the <i>authority</i> attribute are &quot;marcorg&quot; and &quot;oclcorg&quot;. Use the naming authority appropriate to each value as identified in <a href="http://www.loc.gov/standards/sourcelist/organization.html"> Organization Code Source Codes</a>. </p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Identifies the type of location recorded.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Use to indicate different kinds of locations if more specificity is needed, e.g. current, discovery, former, creation.</div>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken. </div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable. For a listing of authority values, see <a href="http://www.loc.gov/standards/sourcelist/organization.html"> Organization Code Source Codes</a>. If &quot;marcorg&quot; is used, the value in &lt;physicalLocation&gt; is from the <a href="http://www.loc.gov/marc/organizations/"> MARC Code List for Organizations</a>. If the <i>authority</i> attribute is not used, the &lt;physicalLocation&gt; value is assumed to be a textual, natural language name and/or address.</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">xlink; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;physicalLocation&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 id="shelflocator" class="border">Subelement: &lt;shelfLocator&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Shelfmark or other shelving designation that indicates the location identifier for a copy.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td><span class="attribute">lang; xml:lang; script; transliteration</span></td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>If more detailed holdings information is given at the item level, use &lt;shelfLocator&gt; under &lt;<a href="location.html#holdingsimple">holdingSimple</a>&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute"> lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;shelfLocator&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 id="url" class="border">Subelement: &lt;url&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="435" scope="col">Contains the Uniform Resource Location of the resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>displayLabel; dateLastAccessed; note; access; usage</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;url&gt; is for an electronic location from which the resource is available.</p>
+<p>Note that &lt;<a href="http://www.loc.gov/standards/mods/userguide/identifier_2012.html">identifier</a>&gt; is used for persistent identifiers that may or may not be resolvable.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The DLF/Aquifer Guidelines require one and only one &lt;location&gt;&lt;url&gt; subelement with the <i>usage</i> attribute value &quot;primary display&quot;. Many aggregators may include only one URL in their brief display. Use of <i>usage</i>=&quot;primary display&quot; allows aggregators to easily identify which URL to display for their users. If a record describes multiple items (a multi-volume set, for example), these guidelines strongly recommend identifying a primary entry point for these.</p>
+<p>It is recommended that all URLs used with the &lt;location&gt; element be persistent.</p>
+<p>The &lt;location&gt; element with the &lt;url&gt; subelement may be used to indicate locations of additional versions of the digital resource such as thumbnails of the digital resource. These guidelines recommend that in these cases the <i>access</i> attribute be used to help an aggregator determine what versions of the resource are available. Best practice is that the &quot;primary display&quot; URL is a link to the resource with its contextual material (for example metadata, navigation to the collection
+  homepage). If the primary link to a resource is to a stand-alone version of the resource (such as a JPEG image only), an end user will have no context except for the metadata on the service provider's site. At a minimum, the URL should point to a page that
+  contains the resource and a navigation bar that allows users to reach the collection homepage. It is highly desirable that this page also include the descriptive metadata for the resource.</p>
+<p>The &lt;location&gt; element with the &lt;physicalLocation&gt; subelement may also be used to point to the location of the equivalent analog resource. However, it is not necessary nor always desirable to include the location of all digital and/or analog versions of
+  the described resource. Only include that information which is useful and important to the aggregator and to the end user.</p>
+<p>Use of the <i>access</i> attribute is recommended with all instances of &lt;location&gt;&lt;url&gt;. This attribute helps a metadata aggregator determine what a URL is likely to link to and can help determine which URL to use for specific purposes.</p>
+<p>Use the <i>note</i> attribute only when other attributes (<i>access</i>, <i>usage</i>, or <i>displayLabel</i>) are not appropriate.</p>
+<p>These guidelines do not recommend use of the <i>dateLastAccessed</i> attribute. This attribute is unlikely to be useful to an aggregator, and, when persistent URLs are used, this attribute will be of little value.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">dateLastAccessed</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Intended to express the date that a digital resource has been accessed remotely.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute may be useful to a user because of the volatility of Web content. There is no encoding scheme specified for use with this attribute, however, a structured date is recommended.</div>
+<p class="attribute">note</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Includes notes that are associated with the link that is included as the value of the &lt;url&gt; element.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is generally free text.</div>
+<p class="attribute">access</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Indicates the type of resource that the user will access when following the URL link.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is particularly useful to provide a flag in the context of OAI service providers harvesting metadata.<br />
+  The following values may be used with the access attribute:
+  <ul>
+    <li><strong>preview</strong> &#8211; Indicates a link to a thumbnail or snippet of text. </li>
+    <li><strong>raw object</strong> &#8211; Indicates a direct link to the object described (e.g., a jpg or pdf document). Used only when the object is represented by a single file. </li>
+    <li><strong>object in context</strong> &#8211; Indicates a link to the object within the context of its environment (with associated metadata, navigation, etc.) </li>
+  </ul>
+</div>
+<p class="attribute">usage</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Indicates how the object represented by the link will be used.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute may be used to indicate special purpose of the URL in the element, which may be marked as such using the access attribute. The following values is defined:<br />
+  <ul>
+    <li><strong>primary display</strong> &#8211; Indicates that the link is the most appropriate to display for end users.</li>
+    <li><strong>primary</strong> &#8211; Added for consistency when <em>usage</em> was defined for several other elements. This value has the same definition as &quot;primary display&quot;. The intent is that &quot;primary display&quot; will be depricated in favor of &quot;primary&quot; in a future MODS version. Use of &quot; primary&quot; instead of &quot;primary display&quot; is therefore recommended in this attribute.</li>
+  </ul>
+</div>
+<p class="attribute">displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<br />
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;url&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 id="holdingsimple" class="border">Subelement: &lt;holdingSimple&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">General information about what the institution identified in &lt;physicalLocation&gt; holds of the resource and its specific location.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="location.html#copyinformation">copyInformation&gt;</a></strong></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Holdings information consists of copy-specific information about the resource, information about the specific location within an institution, version information, and other information that is peculiar to the institution. &lt;holdingSimple&gt; is a set of MODS
+  internally defined elements and corresponds roughly to summary holdings information. If more granularity is required, &lt;<a href="location.html#holdingexternal">holdingExternal</a>&gt; may be used in lieu of &lt;holdingSimple&gt; with elements from an external schema. </p>
+<p>&lt;holdingSimple&gt; is a container element for the single subelement, &lt;copyInformation&gt; which has several subelements.</p>
+<p>&lt;holdingSimple&gt; is not repeatable; if additional holdings statements are needed for the resource, repeat &lt;location&gt; with appropriate subelements. For more information see <a href="http://www.loc.gov/standards/mods/v3/mods-holdings.html"> MODS Holdings Information</a>. </p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>There are no attributes for &lt;holdingSimple&gt;.</p>
+<h4>Subelements</h4>
+<p>The following subelement is enumerated below:</p>
+<ul>
+  <li>&lt;<a href="location.html#copyinformation">copyInformation</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 id="copyinformation" class="border">Subelement: &lt;holdingSimple&gt;&lt;copyInformation&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Information about a specific tangible instance of a bibliographic resource or set which comprises one or more pieces via indication of sublocation and/or locator.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="location.html#form">form</a>&gt; &lt;<a href="location.html#sublocation">subLocation</a>&gt; &lt;<a href="location.html#copyshelflocator">shelfLocator</a>&gt; &lt;<a href="location.html#electroniclocator">electronicLocator</a>&gt; &lt;<a href="location.html#note">note</a>&gt; &lt;<a href="location.html#enumerationandchronology">enumerationAndChronology</a>&gt; </strong></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;copyInformation&gt; is a container element. Data is entered in the subelements.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>There are no attributes for &lt;copyInformation&gt;.</p>
+<h4>Subelements</h4>
+<p class="nomargin">The following subelements are described below:</p>
+<ul>
+  <li>&lt;<a href="location.html#form">form</a>&gt; </li>
+  <li>&lt;<a href="location.html#sublocation">subLocation</a>&gt; </li>
+  <li>&lt;<a href="location.html#copyshelflocator">shelfLocator</a>&gt; </li>
+  <li>&lt;<a href="location.html#electroniclocator">electronicLocator</a>&gt; </li>
+  <li>&lt;<a href="location.html#note">note</a>&gt; </li>
+  <li>&lt;<a href="location.html#enumerationandchronology">enumerationAndChronology</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 id="form" class="border">Subelement: &lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;form&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="519" scope="col">Designation of a particular physical presentation of a resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; authority<span class="attribute">; authorityURI; valueURI; ID; lang; xml:lang; script; transliteration</span></td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>The &lt;form&gt; subelement is equivalent to MODS &lt;<a href="physicaldescription.html">physicalDescription&gt;&lt;form</a>&gt;. It may be included under &lt;copyInformation&gt; when the MODS record refers to multiple forms and there is different detailed holdings
+  information associated with each form. Form is not repeatable; &lt;copyInformation&gt; is repeated within &lt;holdingSimple&gt; for multiple forms. </p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">May be used to specify whether the form concerns materials or techniques, for example:
+  <div class="indent2">&lt;form type=&quot;material&gt;oil paint&lt;/form&gt;<br />
+    &lt;form type=&quot;technique&gt;painting&lt;/form&gt;</div>
+</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">There are no controlled values for the <i>type</i> attribute.</div>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken. </div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">A <a href="http://www.loc.gov/standards/sourcelist/genre-form.html"> <em>Genre/Form Code and Term Source Codes</em></a><a href="http://www.loc.gov/marc/sourcecode/form/formsource.html"></a> list of authorities is maintained by the Library of Congress. </div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">ID; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;form&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 class="border" id="sublocation">Subelement: &lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;subLocation&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Department, division, or section of an institution holding a copy of the resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td><span class="attribute">lang; xml:lang; script; transliteration</span></td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;subLocation&gt; may be repeated for multiple equivalent items in different sublocations within the institution named in &lt;physicalLocation&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;subLocation&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 class="border" id="copyshelflocator">Subelement: &lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;shelfLocator&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Shelfmark or other shelving designation that indicates the location identifier for a copy.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td><span class="attribute">lang; xml:lang; script; transliteration</span></td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;shelfLocator&gt; may be given at the bibliographic description level under &lt;location&gt; (i.e. shelfLocator of the entire resource) or at the item level under &lt;holdingSimple&gt; (when &lt;shelfLocator&gt; may vary by each physical piece).</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;shelfLocator&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 class="border" id="electroniclocator">Subelement: &lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;electronicLocator&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Uniform Resource Location of the resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>This is a copy-specific form of &lt;location&gt;&lt;url&gt;, without its attributes.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>There are no attributes for &lt;electronicLocator&gt;.</p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;electronicLocator&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 id="note" class="border">Subelement: &lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;note&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="483" scope="col">Note relating to a specific copy of a document.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; displayLabel; <span class="attribute">xlink; ID; lang; xml:lang; script; transliteration</span></td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Use for notes relating to the specific copy information of a resource that do not fit in one of the other available subelements.</p>
+<p>A link may be supplied in lieu of or in addition to the content. </p>
+<p>Each note should be entered in a separate &lt;note&gt; subelement.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Describes the type of note that is recorded.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is not controlled by a list and thus is open-ended.</div>
+<p class="attribute">xlink; ID; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;note&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 class="border" id="enumerationandchronology">Subelement: &lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;enumerationAndChronology&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Alpha-numeric identification, such as a volume or issue, and an indication of the date of publication or date of issue of a component of a multi-part resource, distinguishing it from other components of the same resource. </td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>unitType; <span class="attribute">lang; xml:lang; script; transliteration</span></td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;enumerationAndChronology&gt; is an unparsed string that comprises a summary holdings statement. If more granularity is needed, a parsed statement using an external schema may be used within &lt;holdingExternal&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">unitType</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The category of bibliographic entity for which &lt;enumerationAndChronology&gt; is given. </div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute may contain the following values:<br />
+  <ul>
+    <li>1 &#8211; information is about the basic bibliographic unit </li>
+    <li>2 &#8211; information is about supplementary material to the basic unit </li>
+    <li>3 &#8211; information is about index(es) to the basic unit </li>
+  </ul>
+</div>
+<p class="attribute"> lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;enumerationAndChronology&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 class="border" id="holdingexternal">Subelement: &lt;holdingExternal&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Holdings information that uses a schema defined externally to MODS.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;holdingExternal&gt; may include more detailed holdings information than that accommodated by the MODS schema. An example is <a href="http://www.loc.gov/standards/iso20775/"> ISO&nbsp;20775</a> and its accompanying schema.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>There are no attributes for &lt;holdingExternal&gt;.</p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;holdingExternal&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;physicalLocation authority=&quot;marcorg&quot;&gt;</strong>DLC MicRR Microfilm 82/528 MicRR<strong>&lt;/physicalLocation&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;physicalLocation xlink:href=&quot;http://www.loc.gov/rr/mss/&quot;&gt;</strong>Library of Congress Manuscript Division<strong>&lt;/physicalLocation&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong><br />
+    <i>[xlink attribute links to the web page of the institution represented by the value]</i></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;physicalLocation displayLabel=&quot;Correspondence&quot;&gt;</strong>National Archives and Records Service. Genealogical Research Recording. Pennsylvania Ave. at 8th St., N.W., Washington, D.C. USA <strong>&lt;/physicalLocation&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;url displayLabel=&quot;French version&quot;&gt;</strong>http://www.cgiar.org/ifpri/reports/0297rpt/0297-ft.htm<strong>&lt;/url&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;url dateLastAccessed=&quot;2004-01-27&quot;&gt;</strong>http://www.loc.gov/marc/<strong>&lt;/url&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;url access=&quot;raw object&gt;</strong>http://www.loc.gov/standards/relreport.pdf<strong>&lt;/url&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;url access=&quot;preview&quot;&gt;</strong>http://purl.dlib.indiana.edu/iudl/lilly/slocum/thumbnail/LL-SLO-000077<strong>&lt;/url&gt;</strong> <br />
+    <strong>&lt;url access=&quot;object in context&quot;&gt;</strong>http://purl.dlib.indiana.edu/iudl/lilly/slocum/LL-SLO-000077<strong>&lt;/url&gt;</strong> <br />
+    <strong>&lt;url access=&quot;raw object&quot;&gt;</strong>http://purl.dlib.indiana.edu/iudl/lilly/slocum/full/LL-SLO-000077<strong>&lt;/url&gt;</strong> </div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt; location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;url note=&quot;Adobe Acrobat Reader required&quot;&gt;</strong> http://purl.access.gpo.gov/GPO/LPS31437 <strong>&lt;/url&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;physicalLocation&gt;</strong>University of Chicago <strong> &lt;/physicalLocation&gt;</strong> <br />
+    <strong>&lt;url&quot;&gt; </strong>http://pi.lib.uchicago.edu/1001/dig/chopin/373<strong>&lt;/url&gt;</strong> </div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;physicalLocation&gt;</strong>Library of Congress <strong> &lt;/physicalLocation&gt;</strong> <br />
+    <strong>&lt;holdingSimple&gt;</strong></div>
+  <div class="indent3"><strong>&lt;copyInformation&gt;</strong></div>
+  <div class="indent4"><strong>&lt;subLocation&gt;</strong>Prints and Photographs Division Washington, D.C. 20540 USA<strong>&lt;/subLocation&gt;</strong><br />
+    <strong>&lt;shelfLocator&gt;</strong>DAG no. 1410<strong>&lt;/shelfLocator&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/copyInformation&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/holdingSimple&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;physicalLocation authority=&quot;marcorg&quot;&gt;</strong>MnRM<strong>&lt;/physicalLocation&gt;</strong><br />
+    <strong>&lt;holdingSimple&gt;</strong></div>
+  <div class="indent3"><strong>&lt;copyInformation&gt;</strong></div>
+  <div class="indent4"><strong>&lt;subLocation&gt;</strong>Patient reading room<strong>&lt;/subLocation&gt;</strong><br />
+    <strong>&lt;shelfLocator&gt;</strong>QH511.A1J68<strong>&lt;/shelfLocator&gt;</strong> <br />
+    <strong>&lt;enumerationAndChronology unitType=&quot;1&quot;&gt;</strong> v.1-v.8 1970-1976<strong>&lt;/enumerationAndChronology&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/copyInformation&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/holdingSimple&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;physicalLocation authority=&quot;marcorg&quot;&gt;</strong> CaOON<strong>&lt;/physicalLocation&gt;</strong><br />
+    <strong>&lt;holdingSimple&gt;</strong></div>
+  <div class="indent3"><strong>&lt;copyInformation&gt;</strong></div>
+  <div class="indent4"><strong>&lt;form authority=&quot;marcform&quot;&gt;</strong>print<strong>&lt;/form&gt;</strong><br />
+    <strong>&lt;subLocation&gt;</strong>Chem<strong>&lt;/subLocation&gt;</strong> <br />
+    <strong>&lt;shelfLocator&gt;</strong> QD.C454L55<strong>&lt;/shelfLocator&gt;</strong><br />
+    <strong>&lt;enumerationAndChronology unitType=&quot;1&quot;&gt;</strong> v. 1-24 1994-2000<strong>&lt;/enumerationAndChronology&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/copyInformation&gt;</strong><br />
+    <strong>&lt;copyInformation&gt;</strong></div>
+  <div class="indent4"><strong>&lt;form authority=&quot;marcform&quot;&gt;</strong>electronic<strong>&lt;/form&gt;</strong><br />
+    <strong>&lt;electronicLocator&gt;</strong>http://cisti-icist.nrc-cnrc.gc.ca/journal1.html<strong>&lt;/electronicLocator&gt;</strong><br />
+    <strong>&lt;enumerationAndChronology unitType=&quot;1&quot;&gt;</strong>v. 16-24 1998-2000<strong>&lt;/enumerationAndChronology&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/copyInformation&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/holdingSimple&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;physicalLocation&gt;</strong>Menlo Park Public Library<strong>&lt;/physicalLocation&gt;</strong><br />
+    <strong>&lt;holdingExternal&gt;</strong></div>
+  <div class="indent3"><strong>&lt;holding xmlns:iso20775=&quot;info:ofi/fmt:xml:xsd:iso20775&quot; xsi:schemaLocation=&quot;info:ofi/fmt:xml:xsd:iso20775 http://www.loc.gov/standards/iso20775/N130_ISOholdings_v6_1.xsd&quot;&gt;</strong></div>
+  <div class="indent4"><strong>&lt;institutionIdentifier&gt;</strong></div>
+  <div class="indent5"><strong>&lt;value&gt;</strong>JRF<strong>&lt;/value&gt;</strong><br />
+    <strong>&lt;typeOrSource&gt;</strong></div>
+  <div class="indent6"><strong>&lt;pointer&gt;</strong>http://worldcat.org/registry/institutions/<strong>&lt;/pointer&gt;</strong></div>
+  <div class="indent5"><strong>&lt;/typeOrSource&gt;</strong></div>
+  <div class="indent4"><strong>&lt;/institutionIdentifier&gt;</strong><br />
+    <strong>&lt;physicalLocation&gt;</strong>Menlo Park Public Library<strong>&lt;/physicalLocation&gt;</strong><br />
+    <strong>&lt;physicalAddress&gt;</strong></div>
+  <div class="indent5"><strong>&lt;text&gt;</strong>Menlo Park, CA 94025 United States <strong> &lt;/text&gt;</strong></div>
+  <div class="indent4"><strong>&lt;/physicalAddress&gt;</strong><br />
+    <strong>&lt;electronicAddress&gt;</strong></div>
+  <div class="indent5"><strong>&lt;text&gt;</strong>http://www.worldcat.org/wcpa/oclc/15550774? page=frame&amp;url=%3D%3FUTF-<br />
+    8%3FB%FaHR0cDovL2NhdGFsb2cucGxzaW5mby5vcmcvc2VhcmNoL2kwMTk1MDM4NjMw%3F%3D<br />
+    &amp;title=Menlo&#43;Park&#43;Public&#43;Library&amp;linktype=opac&amp;detail=JRF%3AMenlo&#43;Park&#43;Public&#43;Library%3APublic<br />
+    &amp;app=wcapi&amp;id=OCL-OCLC&#43;Staff&#43;use<strong>&lt;/text&gt;</strong></div>
+  <div class="indent4"><strong>&lt;/electronicAddress&gt;</strong><br />
+    <strong>&lt;holdingSimple&gt;</strong></div>
+  <div class="indent5"><strong>&lt;copiesSummary&gt;</strong></div>
+  <div class="indent6"><strong>&lt;copiesCount&gt;</strong>1<strong>&lt;/copiesCount&gt;</strong></div>
+  <div class="indent5"><strong>&lt;/copiesSummary&gt;</strong></div>
+  <div class="indent4"><strong>&lt;/holdingSimple&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/holding&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/holdingExternal&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;url usage=&quot;primary display&quot; access=&quot;object in context&quot;&gt;</strong>http://hemi.es.its.nyu.edu/journal/2_1/ramalho_por.html<strong>&lt;/url&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;physicalLocation authority=&quot;oclcorg&quot;&gt;</strong>NNU<strong>&lt;/physicalLocation&gt;</strong><br />
+    <strong>&lt;physicalLocation&gt;</strong>New York University, E. H. Bobst Library (New York, NY)<strong>&lt;/physicalLocation&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;location&gt;</strong></div>
+  <div class="indent2"><strong>&lt;url usage=&quot;primary display&quot; access=&quot;object in context&quot;&gt;</strong>http://webapp1.dlib.indiana.edu/cushman/results/detail.do?pnum=P04995<strong>&lt;/url&gt;</strong><br />
+    <strong>&lt;url access=&quot;raw object&quot;&gt;</strong>http://webapp1.dlib.indiana.edu/collections/cushman/full/P04995.jpg<strong>&lt;/url&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/location&gt;</strong></div>
+</div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;location&gt;&lt;physicalLocation&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd852.html"> 852</a> subfields a, b, j and e. If information equivalent to these subfields is included, it is given in a string and is not parsed. </p>
+<p>&lt;location&gt;&lt;physicalLocation&gt; with <i>displayLabel</i> attribute = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd852.html"> 852</a> subfield 3.</p>
+<p>&lt;location&gt;&lt;shelfLocator&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd852.html"> 852</a> subfields h (Classification part), i (Item part), j (Shelving control number), k (Call number prefix), l (Shelving form of title), m (Call number suffix) and t (Copy number). If information equivalent to these subfields is included, it is merged together
+  as a single string.</p>
+<p>&lt;location&gt;&lt;url&gt; with <i>displayLabel</i> attribute = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd856.html"> 856</a> subfields y and 3. There is no MARC equivalent for &lt;url&gt; with the <i>dateLastAccessed</i> attribute.</p>
+<p>For the &lt;form&gt; subelement, see the &lt;<a href="physicaldescription.html#form">physicalDescription&gt;&lt;form</a>&gt; element.</p>
+<p>&lt;location&gt;&lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;subLocation&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd852.html"> 852</a> subfields b (Sublocation or collection), c (Shelving location), e (Address), which are expressed together as a string.</p>
+<p>&lt;location&gt;&lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;shelfLocator&gt; = MARC field <a href="http://www.loc.gov/marc/bibliographic/bd852.html"> 852</a> subfields h (Classification part), i (Item part), j (Shelving control number), k (Call number prefix), l (Shelving form of title), m (Call number suffix) and t (Copy number). If information equivalent to these subfields is included, it is merged together
+  as a single string. </p>
+<p>&lt;location&gt;&lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;electronicLocator&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd856.html"> 856</a> subfield u (in holdings record).</p>
+<p>&lt;location&gt;&lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;note&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd852.html"> 852</a>, with subfield x when type=&quot;nonpublic&quot; and subfield z when type=&quot;public&quot;.</p>
+<p>&lt;location&gt;&lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;enumerationAndChronology&gt; = MARC 21 field <a href="http://www.loc.gov/marc/holdings/hd866.html"> 866</a> when unitType&nbsp;=&nbsp;&quot;1&quot;.</p>
+<p>&lt;location&gt;&lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;enumerationAndChronology&gt; = MARC 21 field <a href="http://www.loc.gov/marc/holdings/hd867.html"> 867</a> when unitType&nbsp;=&nbsp;&quot;2&quot;.</p>
+<p>&lt;location&gt;&lt;holdingSimple&gt;&lt;copyInformation&gt;&lt;enumerationAndChronology&gt; = MARC 21 field <a href="http://www.loc.gov/marc/holdings/hd868.html"> 868</a> when unitType&nbsp;=&nbsp;&quot;3&quot;.</p>
+<p>See also <a href="http://www.loc.gov/standards/mods/mods-mapping.html#location"><i>MARC Mapping to MODS</i> for the &lt;location&gt; element</a> and for the <a href="http://www.loc.gov/standards/mods/mods-mapping.html#holdingSimple">&lt;holdingSimple&gt;</a> element.</p>
+<h3>Dublin Core Mapping</h3>
+<p>The &lt;location&gt;&lt;url&gt; subelement, along with the &lt;<a href="http://www.loc.gov/standards/mods/userguide/identifier_2012.html">identifier</a>&gt; element, are both mapped to &lt;dc:identifier&gt; in <a href="http://www.loc.gov/standards/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping</a>.</p>
+<p>&lt;location&gt;&lt;physicalLocation&gt; does not easily map to any Dublin Core element; the DLF/Aquifer guidelines recommend mapping only the &lt;location&gt;&lt;url&gt; if both are available. </p>
+<p>MODS example expressed in Dublin Core:</p>
+<div class="example">
+<div class="indent1"><strong>&lt;dc:identifier&gt;</strong>http://hemi.es.its.nyu.edu/journal/2_1/ramalho_por.html<strong>&lt;/dc:identifier&gt;</strong><br />
+  <strong>&lt;dc:identifier&gt;</strong>http://webapp1.dlib.indiana.edu/cushman/results/detail.do?pnum=P04995<strong>&lt;/dc:identifier&gt;.</strong></div>
+  </div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="location.html#skip_menu">Top</a></p>
+      <p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->September 22, 2011<!-- #EndDate -->
+      </p>  
+
+	</td>
+</tr> 
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->September 22, 2011<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

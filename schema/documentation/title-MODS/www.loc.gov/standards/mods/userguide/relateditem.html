@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;relatedItem&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element relateditem overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;relatedItem&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="relateditem.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;relatedItem&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;relatedItem&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <td scope="col"><strong>&lt;relatedItem&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">Information that identifies 
+        other resources related to the one being described.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; xlink:href; displayLabel; ID </td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">All MODS elements can appear as 
+        subelements.</td>
+    </tr>
+  </tbody>
+</table>
+<!-- Guidelines and Use sections -->
+<p><a 
+      href="relateditem.html#guidelines">GUIDELINES</a> | <a 
+      href="relateditem.html#examples">EXAMPLES</a> | <a 
+      href="relateditem.html#mappings">MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>&lt;relatedItem&gt; is a container element under which any MODS element 
+  may be used as a subelement. It is thus fully recursive.</p>
+<p>Since &lt;relatedItem&gt; may include any MODS element as a subelement, 
+  it may describe a constituent item if that is desired. This may be 
+  suitable, for instance, for complex objects that require specific 
+  descriptive information for constituent parts, but that are considered 
+  intellectually one object (e.g. a CD with several tracks, digitized or 
+  analog). </p>
+<p>&lt;relatedItem&gt; includes a designation of the specific type of 
+  relationship as a value of the <i>type</i> attribute; a controlled list of 
+  types is enumerated in the schema.
+  <!-- Aquifer guidelines -->
+</p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS 
+  Records</i> recommend the use of the &lt;relatedItem&gt; element in three 
+  cases:</p>
+<ol>
+  <li>To link to records for related items, without duplicating the 
+    metadata for these items as subelements of &lt;relatedItem&gt;, using 
+    the <i>xlink</i> attribute. Best practices for use of the XLink language 
+    are still emerging, but potentially the link could be used by 
+    aggregators to retrieve or interact with the remote metadata. No 
+    subelements of &lt;relatedItem&gt; should be used in this case. Note 
+    that a link to give user access to a described related resource would be 
+    encoded in &lt;relatedItem&gt;&lt;location&gt;&lt;url&gt;. </li>
+  <li>To provide contextual information about the item being described in 
+    relationship to other items. Applicable subelements of 
+    &lt;relatedItem&gt; should be used. Most frequently, these subelements 
+    are used to describe a host item, series, or other version. </li>
+  <li>To provide information about constituent parts when a physical 
+    object being described (for example a compact disc) contains multiple 
+    intellectual items that require description (for example tracks on a 
+    compact disc). </li>
+</ol>
+<p>Although the MODS &lt;relatedItem&gt; element allows multiple items to 
+  be described in a hierarchical fashion within a single MODS record, the 
+  DLF/Aquifer guidelines recommend that the use of the &lt;relatedItem&gt; 
+  element be restricted to the three cases described above. Do not use 
+  multiple nested &lt;relatedItem&gt; elements within a single MODS record 
+  to describe an entire collection in metadata records shared for 
+  aggregation. Deep recursion may be counter-productive.</p>
+<p>The core MODS record should describe the resource at the level metadata 
+  aggregators should return as matches to user queries. Information about 
+  the original from which a digital surrogate or reproduction was made 
+  should be included in the main record. Any subelements of the 
+  &lt;relatedItem&gt; element should describe related material of only 
+  subsidiary interest, helpful for identifying and completely describing a 
+  resource, or providing context for the resource which may be useful for 
+  retrieval.</p>
+<p>The use of the <i>type</i> attribute is required. The DLF/Aquifer 
+  guidelines recommend the following <i>type</i> values for each of the 
+  recommended uses of &lt;relatedItem&gt;:</p>
+<div class="indent1"><U>Case 1: Linking</U></div>
+<div class="indent2">Use any value listed in these guidelines, as 
+  appropriate.</div>
+<div class="indent1"><U>Case 2: Context</U></div>
+<div class="indent2">
+  <ul>
+    <li><strong>host</strong> – Use this value to describe a host or parent 
+      resource, for example a book in which an article appears or a collection 
+      in which an item belongs. </li>
+    <li><strong>constituent</strong> – Use this value to describe parts of 
+      the resource, except information that falls within the scope of the MODS 
+      &lt;<a 
+        href="tableofcontents.html">tableOfContents</a>&gt; 
+      element. </li>
+    <li><strong>series</strong> – Use this value to describe a named series 
+      of which the resource is a part. </li>
+    <li><strong>otherVersion</strong> – Use this value to describe other 
+      versions of the work contained in the resource.</li>
+  </ul>
+</div>
+<div class="indent1"><U>Case 3: Constituent parts</U></div>
+<div class="indent2">
+  <ul>
+    <li><strong>constituent</strong> – Use this value to describe 
+      constituent parts of the resource that warrant separate description. If 
+      it is more appropriate in an unparsed form use the MODS &lt;<a 
+        href="tableofcontents.html">tableOfContents</a>&gt; 
+      element </li>
+  </ul>
+</div>
+<p>The use of the <i>xlink:href</i> attribute is recommended if 
+  applicable. Use this attribute to link to external resources. The 
+  DLF/Aquifer guidelines recommend that this attribute, when used, contain 
+  the URI of a MODS record or an OAI GetRecord request, if available, for a 
+  related resource. The 'info' URI scheme can also be used to encode an 
+  external link here using an LCCN or DOI (see <a 
+      href="http://www.loc.gov/standards/uri/info.html">www.loc.gov/standards/uri/info.html</a> for more information). The DLF/Aquifer guidelines also recommend that no 
+  subelements appear under &lt;relatedItem&gt; when this attribute is 
+  used.</p>
+<p>The use of the <i>displayLabel</i> attribute may be used to indicate 
+  the preferred labeling when displayed by a metadata aggregator.</p>
+<p>See the <a 
+      href="dlfaquifer.html#relateditem">&lt;relatedItem&gt;</a> entry in the <a 
+      href="dlfaquifer.html">DLF/Aquifer 
+  Summary of MODS Requirements and Recommendations Table</a> for further 
+  information on requirements of this element, its attributes, and 
+  subelements. </p>
+<!-- Aggregator guidelines -->
+<p>Aggregator information: Links to related items may be displayed as 
+  links in record displays. Some related item elements for some types of 
+  relationships may be indexed (for example, series &lt;titleInfo&gt; might 
+  be indexed as a title or as a series title), and included in record 
+  display. Some elements of constituent parts may be indexed and included in 
+  record display.</p>
+<!-- Relationship to DLF/NSDL Best Practice -->
+<p>The &quot;Describing Versions and Reproductions&quot; and &quot;Bibliographic 
+  Citation&quot; pages in the <a 
+      href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"><i>DLF/NSDL 
+    Best Practices for Shareable Metadata</i></a> <img height="10" alt="External Link" src="../../../images/icon-ext2.gif" width="8" /> address issues raised by the MODS &lt;relatedItem&gt; 
+  element.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">type</p>
+<div class="indent1"><U>Definition</U></div>
+<div class="indent2">The value of the <i>type</i> attribute describes the 
+  relationship between the &lt;relatedItem&gt; and the resource being 
+  described in the MODS record.</div>
+<div class="indent1"><U>Application</U></div>
+<div class="indent2">This attribute may contain the following values:
+  <ul>
+    <li><strong>preceding</strong> – Information concerning a predecessor to 
+      the resource. </li>
+    <li><strong>succeeding</strong> – Information concerning a successor to 
+      the resource. </li>
+    <li><strong>original</strong> – Information concerning an original form 
+      of the resource. </li>
+    <li><strong>host</strong> – Information concerning a host or parent 
+      resource for the resource described; this may be a parent collection. </li>
+    <li><strong>constituent</strong> – Information concerning a constituent 
+      unit of the resource. This allows for more specific parsed information 
+      than may be used in &lt;<a 
+        href="tableofcontents.html">tableOfContents</a>&gt;. </li>
+    <li><strong>series</strong> – Information concerning the series in which 
+      a resource is issued. </li>
+    <li><strong>otherVersion</strong> – Information concerning another 
+      version (i.e. change in intellectual content) of the resource. </li>
+    <li><strong>otherFormat</strong> – Information concerning another format 
+      (i.e. change in physical format) of the resource. </li>
+    <li><strong>isReferencedBy</strong> – Citations or references to 
+      published bibliographic descriptions, reviews, abstracts, or indexes of 
+      the content of the resource. </li>
+    <li><strong>references</strong> – Information concerning a resource cited or referred to in the resource. </li>
+    <li><strong>reviewOf</strong> – Information concerning a resource reviewed in the content of the resource.</li>
+  </ul>
+</div>
+<p class="attribute">xlink:href</p>
+<div class="indent1"><U>Definition</U></div>
+<div class="indent2">This attribute is used for an external link, including 
+  a link to a related record, if applicable.</div>
+<div class="indent1"><U>Application</U></div>
+<div class="indent2">Use &lt;<a 
+      href="http://www.loc.gov/standards/mods/userguide/identifier_2012.html">identifier</a>&gt; 
+  for a URI for the related resource itself.</div>
+<p class="attribute">ID; displayLabel</p>
+<div class="indent1"><i>See the <a 
+      href="generalapp.html#list">Attributes 
+  used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p class="nomargin">All MODS elements may appear as subelements of 
+  &lt;relatedItem&gt;. See the entries for the applicable top-level elements 
+  listed below. Although all MODS elements may be used, for purposes of 
+  interoperability, deep recursion may be counter-productive.</p>
+<ul>
+  <li>&lt;<a 
+        href="titleinfo.html">titleInfo</a>&gt; </li>
+  <li>&lt;<a 
+        href="http://www.loc.gov/standards/mods/userguide/name_2012.html">name</a>&gt; </li>
+  <li>&lt;<a 
+        href="typeofresource.html">typeOfResource</a>&gt; </li>
+  <li>&lt;<a 
+        href="genre.html">genre</a>&gt; </li>
+  <li>&lt;<a 
+        href="origininfo.html">originInfo</a>&gt; </li>
+  <li>&lt;<a 
+        href="http://www.loc.gov/standards/mods/userguide/language_2012.html">language</a>&gt; </li>
+  <li>&lt;<a 
+        href="physicaldescription.html">physicalDescription</a>&gt; </li>
+  <li>&lt;<a 
+        href="http://www.loc.gov/standards/mods/userguide/abstract_2012.html">abstract</a>&gt; </li>
+  <li>&lt;<a 
+        href="tableofcontents.html">tableOfContents</a>&gt; </li>
+  <li>&lt;<a 
+        href="targetaudience.html">targetAudience</a>&gt; </li>
+  <li>&lt;<a 
+        href="http://www.loc.gov/standards/mods/userguide/note_2012.html">note</a>&gt; </li>
+  <li>&lt;<a 
+        href="subject.html">subject</a>&gt; </li>
+  <li>&lt;<a 
+        href="http://www.loc.gov/standards/mods/userguide/classification_2012.html">classification</a>&gt; </li>
+  <li>&lt;<a 
+        href="relateditem.html">relatedItem</a>&gt; </li>
+  <li>&lt;<a 
+        href="http://www.loc.gov/standards/mods/userguide/identifier_2012.html">identifier</a>&gt; </li>
+  <li>&lt;<a 
+        href="location.html">location</a>&gt; </li>
+  <li>&lt;<a 
+        href="http://www.loc.gov/standards/mods/userguide/accesscondition_2012.html">accessCondition</a>&gt; </li>
+  <li>&lt;<a 
+        href="part.html">part</a>&gt; </li>
+  <li>&lt;<a 
+        href="extension.html">extension</a>&gt; </li>
+  <li>&lt;<a 
+        href="recordinfo.html">recordInfo</a>&gt; </li>
+</ul>
+<p class="top"><p class="top"><img alt="" 
+      src="images/arrow_up.gif" />&nbsp;<a 
+      href="relateditem.html#skip_menu">Top</a></p>Top</a></p>
+<!-- Examples -->
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <p>For Case 1: Linking</p>
+  <div class="indent1"><strong>&lt;relatedItem displayLabel=&quot;Preceding Title&quot; 
+    type=&quot;preceding&quot; 
+    xlink:href=&quot;http://hdl.loc.gov/umich.dli.moa/AGE3371&quot;/&gt;</strong><br />
+    <strong>&lt;relatedItem 
+      xlink:href=&quot;info:lccn/85000002&quot;/&gt;</strong></div>
+</div>
+<div class="example">
+  <p>For Case 2: Context</p>
+  <div class="indent1"><strong>&lt;relatedItem displayLabel=&quot;Appears in&quot; 
+    type=&quot;host&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div 
+      class="indent3"><strong>&lt;title&gt;</strong>Post-Fordism<strong>&lt;/title&gt;</strong><br />
+    <strong>&lt;subTitle&gt;</strong>A 
+    Reader<strong>&lt;/subTitle&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;name 
+      type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;namePart 
+    type=&quot;given&quot;&gt;</strong>Ash<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart 
+      type=&quot;family&quot;&gt;</strong>Amin<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;role&gt;</strong></div>
+  <div class="indent4"><strong>&lt;roleTerm 
+    type=&quot;text&quot;&gt;</strong>editor<strong>&lt;/roleTerm&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/role&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/name&gt;</strong><br />
+    <strong>&lt;originInfo&gt;</strong></div>
+  <div 
+      class="indent3"><strong>&lt;dateIssued&gt;</strong>1994<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>Blackwell 
+    Publishers<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;place&gt;</strong></div>
+  <div class="indent4"><strong>&lt;placeTerm 
+    type=&quot;text&quot;&gt;</strong>Oxford<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/place&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/originInfo&gt;</strong><br />
+    <strong>&lt;part&gt;</strong></div>
+  <div class="indent3"><strong>&lt;extent unit=&quot;page&quot;&gt;</strong></div>
+  <div 
+      class="indent4"><strong>&lt;start&gt;</strong>23<strong>&lt;/start&gt;</strong><br />
+    <strong>&lt;end&gt;</strong>45<strong>&lt;/end&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/extent&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/part&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <p>For Case 3: Constituent parts</p>
+  <p><i>Example of a single track in a MODS record for a compact 
+    disc</i></p>
+  <div class="indent1"><strong>&lt;relatedItem type=&quot;constituent&quot; 
+    ID=&quot;DMD_disc01_tr001&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo type=&quot;uniform&quot; 
+    authority=&quot;naf&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>Chaconne von 
+    Vitali<strong>&lt;/title&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;titleInfo&gt;</strong></div>
+  <div 
+      class="indent3"><strong>&lt;title&gt;</strong>Chaconne<strong>&lt;/title&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;name 
+      type=&quot;personal&quot; authority=&quot;naf&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;namePart&gt;</strong>Vitali, Tomaso 
+    Antonio<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart 
+      type=&quot;date&quot;&gt;</strong>1663-1745<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;role&gt;</strong></div>
+  <div class="indent4"><strong>&lt;roleTerm authority=&quot;marcrelator&quot; 
+    type=&quot;text&quot;&gt;</strong>composer<strong>&lt;/roleTerm&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/role&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/name&gt;</strong><br />
+    <strong>&lt;name 
+      type=&quot;personal&quot; authority=&quot;naf&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;namePart&gt;</strong>Blatt, 
+    Josef<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;role&gt;</strong></div>
+  <div class="indent4"><strong>&lt;roleTerm authority=&quot;marcrelator&quot; 
+    type=&quot;text&quot;&gt;</strong>performer<strong>&lt;/roleTerm&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/role&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/name&gt;</strong><br />
+    <strong>&lt;physicalDescription&gt;</strong></div>
+  <div 
+      class="indent3"><strong>&lt;extent&gt;</strong>9:55<strong>&lt;/extent&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/physicalDescription&gt;</strong><br />
+    <strong>&lt;note 
+      type=&quot;Standard Restriction&quot;&gt;</strong>This item is unavailable due to 
+    copyright restrictions.<strong>&lt;/note&gt;</strong><br />
+    <strong>&lt;note 
+      type=&quot;performers&quot;&gt;</strong>Nathan Milstein, violin ; Josef Blatt, 
+    piano.<strong>&lt;/note&gt;</strong><br />
+    <strong>&lt;note type=&quot;statement 
+      of responsibility&quot;&gt;</strong>Tomaso 
+    Vitali<strong>&lt;/note&gt;</strong><br />
+    <strong>&lt;note&gt;</strong>Originally 
+    for violin and continuo; arr. for violin and 
+    piano.<strong>&lt;/note&gt;</strong><br />
+    <strong>&lt;note&gt;</strong>Attributed 
+    to Tomaso Vitali, but most likely not by 
+    him.<strong>&lt;/note&gt;</strong><br />
+    <strong>&lt;subject 
+      authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;topic&gt;</strong>Chaconnes (Violin and 
+    piano), Arranged.<strong>&lt;/topic&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/subject&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<p>Additional Examples:</p>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;William P. Gottlieb 
+    Collection&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;relatedItem 
+      type=&quot;constituent&quot;&gt;</strong>;</div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>[Portrait of Charlie 
+    Parker and Tommy Potter, Three Deuces, New York, N.Y., ca. Oct. 
+    1947]<strong>&lt;/title&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;name&gt;</strong></div>
+  <div class="indent3"><strong>&lt;namePart&gt;</strong>Gottlieb, William 
+    P.<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart 
+      type=&quot;date&quot;&gt;</strong>1917-<strong>&lt;/namePart&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/name&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;local&quot;&gt;</strong>LC-GLB23-0542<strong>&lt;/identifier&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;The dancer's guide and ballroom 
+    companion&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;relatedItem 
+      type=&quot;host&quot; displayLabel=&quot;Parent&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div 
+      class="indent3"><strong>&lt;nonSort&gt;</strong>The<strong>&lt;/nonSort&gt;</strong><br />
+    <strong>&lt;title&gt;</strong>American 
+    ballroom companion 
+    :<strong>&lt;/title&gt;</strong><br />
+    <strong>&lt;subTitle&gt;</strong>dance 
+    instruction manuals, ca. 1600-1920 
+    /<strong>&lt;/subTitle&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;lccn&quot;&gt;</strong>98801326<strong>&lt;/identifier&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;uri&quot;&gt;</strong>http://memory.loc.gov/ammem/dihtml/dihome.html<strong>&lt;/identifier&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;relatedItem 
+    type=&quot;isReferencedBy&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div 
+      class="indent3"><strong>&lt;title&gt;</strong>Luck<strong>&lt;/title&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;name 
+      type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;namePart&gt;</strong>Frederick, 
+    John<strong>&lt;/namePart&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/name&gt;</strong><br />
+    <strong>&lt;originInfo&gt;</strong></div>
+  <div class="indent3"><strong>&lt;place&gt;</strong></div>
+  <div class="indent4"><strong>&lt;placeTerm 
+    type=&quot;text&quot;&gt;</strong>Argosy<strong>&lt;/placeTerm&gt;</strong></div>
+  <div 
+      class="indent3"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;dateIssued&gt;</strong>1919<strong>&lt;/dateIssued&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/originInfo&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Jay Robinson for 
+    Governor&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;relatedItem 
+      type=&quot;host&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>Election 2002 Web 
+    Archive<strong>&lt;/title&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;uri&quot;&gt;</strong>http://www.loc.gov/minerva/collect/elec2002/<strong>&lt;/identifier&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Directory of computer assisted research in 
+    musicology&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;relatedItem 
+      type=&quot;succeeding&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>Computing in 
+    musicology<strong>&lt;/title&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;issn&quot;&gt;</strong>1057-9478<strong>&lt;/identifier&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;lccn&quot;&gt;</strong>(DLC) 
+    91656596<strong>&lt;/identifier&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;local&quot;&gt;</strong>(OCoLC)21202412<strong>&lt;/identifier&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;relatedItem 
+    type=&quot;otherVersion&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo type=&quot;uniform&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>Modern maturity (NRTA 
+    edition)<strong>&lt;/title&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;lccn&quot;&gt;</strong>sn 
+    84010086<strong>&lt;/identifier&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;relatedItem type=&quot;host&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>International Journal of 
+    Urban and Regional Research<strong>&lt;/title&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;part&gt;</strong></div>
+  <div class="indent3"><strong>&lt;detail type=&quot;volume&quot;&gt;</strong></div>
+  <div 
+      class="indent4"><strong>&lt;number&gt;</strong>24<strong>&lt;/number&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/detail&gt;</strong><br />
+    <strong>&lt;detail 
+      type=&quot;issue&quot;&gt;</strong></div>
+  <div 
+      class="indent4"><strong>&lt;number&gt;</strong>2<strong>&lt;/number&gt;</strong><br />
+    <strong>&lt;caption&gt;</strong>no.<strong>&lt;/caption&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/detail&gt;</strong><br />
+    <strong>&lt;extent 
+      unit=&quot;page&quot;&gt;</strong></div>
+  <div 
+      class="indent4"><strong>&lt;start&gt;</strong>361<strong>&lt;/start&gt;</strong><br />
+    <strong>&lt;end&gt;</strong>378<strong>&lt;/end&gt;</strong></div>
+  <div 
+      class="indent3"><strong>&lt;/extent&gt;</strong><br />
+    <strong>&lt;date&gt;</strong>2000<strong>&lt;/date&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/part&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;&gt;Annali di 
+    geofisica&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;relatedItem 
+      type=&quot;preceding&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>Annales de 
+    géophysique<strong>&lt;/title&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;issn&quot;&gt;</strong>0003-4029<strong>&lt;/identifier&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;relatedItem 
+    type=&quot;series&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>Collection 
+    africaine<strong>&lt;/title&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/titleInfo&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;relatedItem 
+    type=&quot;related&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div 
+      class="indent3"><strong>&lt;title&gt;</strong>Mashinovedenie<strong>&lt;/title&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;local&quot;&gt;</strong>(DLC)###90646274#<strong>&lt;/identifier&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;local&quot;&gt;</strong>(OCoLC)6258868<strong>&lt;/identifier&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;relatedItem 
+    type=&quot;otherFormat&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+  <div 
+      class="indent3"><strong>&lt;title&gt;</strong>Americas<strong>&lt;/title&gt;</strong></div>
+  <div 
+      class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;issn&quot;&gt;</strong>0003-1615<strong>&lt;/identifier&gt;</strong><br />
+    <strong>&lt;identifier 
+      type=&quot;local&quot;&gt;</strong>(OCoLC)8370205<strong>&lt;/identifier&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;relatedItem type=&quot;reviewOf&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo&gt;&lt;nonSort&gt;</strong>The <strong>&lt;/nonSort&gt;</strong>&lt;title&gt;Handbook of 20th century literature&lt;/title&gt;<strong>&lt;/titleInfo&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+</div>
+<p class="top"><img alt="" src="images/arrow_up.gif" />&nbsp;<a ref="#skip_menu">Top</a></p>
+<!-- Mapping section -->
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p class="nomargin">&lt;relatedItem&gt; is equivalent to several fields in 
+  MARC 21. It includes the following: </p>
+<ul>
+  <li>with attribute type=&quot;preceding&quot; = MARC 21 field <a 
+        href="http://www.loc.gov/marc/bibliographic/bd780.html">780</a> </li>
+  <li>with attribute type=&quot;succeeding&quot; = MARC 21 field <a 
+        href="http://www.loc.gov/marc/bibliographic/bd785.html">785</a> </li>
+  <li>with attribute type=&quot;original&quot; = MARC 21 fields <a 
+        href="http://www.loc.gov/marc/bibliographic/bd534.html">534</a>, <a 
+        href="http://www.loc.gov/marc/bibliographic/bd786.html">786</a> </li>
+  <li>with attribute type=&quot;host&quot; = MARC 21 fields <a 
+        href="http://www.loc.gov/marc/bibliographic/bd760.html">760</a>, <a 
+        href="http://www.loc.gov/marc/bibliographic/bd772.html">772</a>, <a 
+        href="http://www.loc.gov/marc/bibliographic/bd773.html">773</a> </li>
+  <li>with attribute type=&quot;constituent&quot; = MARC 21 fields <a 
+        href="http://www.loc.gov/marc/bibliographic/bd762.html">762</a>, <a 
+        href="http://www.loc.gov/marc/bibliographic/bd770.html">770</a>, <a 
+        href="http://www.loc.gov/marc/bibliographic/bd774.html">774</a>; and 
+    fields <a 
+        href="http://www.loc.gov/marc/bibliographic/bd700.html">700</a>, <a 
+        href="http://www.loc.gov/marc/bibliographic/bd710.html">710</a>, <a 
+        href="http://www.loc.gov/marc/bibliographic/bd711.html">711</a> with 
+    subfield t </li>
+  <li>with attribute type=&quot;series&quot; = MARC 21 fields <a 
+        href="http://www.loc.gov/marc/bibliographic/bd490.html">490</a>, <a 
+        href="http://www.loc.gov/marc/bibliographic/bd80x83x.html">8XX</a> </li>
+  <li>with attribute type=&quot;otherVersion&quot;= MARC 21 field <a 
+        href="http://www.loc.gov/marc/bibliographic/bd775.html">775</a> </li>
+  <li>with attribute type=&quot;otherFormat&quot; = MARC 21 field <a 
+        href="http://www.loc.gov/marc/bibliographic/bd776.html">776</a> </li>
+  <li>with attribute type=&quot;isReferencedBy&quot; ≈ MARC 21 field <a 
+        href="http://www.loc.gov/marc/bibliographic/bd510.html">510</a>, but 
+    allows for additional parsing of data </li>
+  <li>with attribute displayLabel = MARC 21 fields <a 
+        href="http://www.loc.gov/marc/bibliographic/bd76x78x.html">76X-78X</a>, 
+    subfields i and 3 </li>
+</ul>
+<p>See also <a 
+      href="http://www.loc.gov/mods/mods-mapping.html#relateditem"><i>MARC 
+  Mapping to MODS</i> for the &lt;relatedItem&gt; element</a>.</p>
+<h3>Dublin Core Mapping</h3>
+<p>The <i><a href="http://www.loc.gov/mods/mods-dcsimple.html">MODS to 
+  Dublin Core Metadata Element Set Mapping </a></i>recommends mapping the 
+  contents of the &lt;relatedItem&gt; element to the &lt;dc:relation&gt; 
+  element in simple Dublin Core. However, caution in mapping is recommended 
+  because &lt;relatedItem&gt; elements with many subelements may yield &quot;an 
+  incomprehensible value.&quot; At the very least, mapping multiple subelements 
+  to the single &lt;dc:relation&gt; element will require addition of 
+  punctuation and re-ordering of elements to achieve the desired result. The <i>type</i> attribute of the &lt;relatedItem&gt; element may be used to 
+  determine a specialized mapping for each type.</p>
+<p>MODS examples expressed in Dublin Core:</p>
+<div class="example">
+<div class="indent1"><strong>&lt;dc:relation&gt;</strong>http://hdl.loc.gov/umich.dli.moa/AGE3371 <strong>&lt;/dc:relation&gt;</strong><br />
+  <strong>&lt;dc:relation&gt;</strong>Amin, 
+  Ash, editor. Post-Fordism: A Reader. Oxford: Blackwell Publishers, 1994: 
+  23-45.<strong>&lt;/dc:relation&gt;</strong></div>
+  </div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="relateditem.html#skip_menu">Top</a></p>
+
+
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->February 18, 2011<!-- #EndDate -->
+      </p>  
+
+</td>
+</tr> 	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->February 18, 2011<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

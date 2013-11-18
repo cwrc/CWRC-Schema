@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MODS Version 3 User Guidelines (Metadata Object Description Schema (MODS), Standards, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 user guidelines overview metadata object description schema web site library congress xml" />
+<meta name="description" content="MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Standards, Library of Congress." />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr>
+    <td class="left"><a id="skip" href="index.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><span class="selected">MODS User Guidelines (ver. 3)</span> <span class="left">&raquo;</span></p>
+</div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>MODS User Guidelines (Version 3)</h1>
+<p>This document should be used in conjunction with the Metadata
+  Object Description Schema (MODS) mappings (<a href="http://www.loc.gov/standards/mods/mods-mapping.html">MARC to MODS</a> and <a href="http://www.loc.gov/standards/mods/mods2marc-mapping.html">MODS to MARC</a>) and <a href="http://www.loc.gov/standards/mods/mods-outline.html">Outline of Elements</a>, as well as additional information that can be found on the <a href="http://www.loc.gov/standards/mods/index.html">MODS Web site</a>.  The guidelines are primarily intended
+  to be used for assistance in creating original MODS records, although
+  they may also be instructive in interpreting MODS records that have been
+  converted from MARC 21 or for use in developing detailed conversion specifications. This document is currently being revised to reflect MODS version 3.5. The <em>MODS User Guidelines</em> are maintained by the Library of Congress with the MODS Editorial Committee. </p>
+<h2>Contents</h2>
+<ol>
+  <li><a href="introduction.html">Introduction and Implementation</a>
+    <ul>
+      <li><a href="introduction.html#xml_structures">XML
+        Structures</a></li>
+      <li><a href="introduction.html#implementation_notes">Implementation Notes</a></li>
+    </ul>
+  </li>
+  <li><a href="generalapp.html">MODS Elements and Attributes</a>
+    <ul>
+      <li><a href="generalapp.html#top_level">Top Level Elements in MODS</a></li>
+      <li><a href="generalapp.html#list">Attributes Used Throughout the MODS Schema</a></li>
+    </ul>
+  </li>
+  <li><a href="lite.html">MODS &quot;Lite&quot;</a></li>
+  <li><a href="examples.html">MODS Full Record Examples</a></li>
+  <li><a href="userguide-index.html">Alphabetical Index of MODS Elements by Element Name</a></li>
+  </ol>
+ 
+ <h3>DLF/Aquifer MODS Profile
+   
+ </h3>
+ <p>In 2010, the <em>MODS User Guidelines</em> were combined  with the guidelines developed in the Digital Library Federation (DLF) Aquifer  Initiative that profiled the use of MODS for sharing metadata.   These <em>DLF/Aquifer Implementation  Guidelines for Shareable MODS Records</em> were the result of a  multi-institutional project that aggregated over 500,000 MODS metadata records for objects in nine formats and provided end user access to the aggregation (see <a href="http://www.dlfaquifer.org/"> American Social History Online</a> <img src="../../../images/icon-ext2.gif" alt="External Link" width="8" height="10" />).  At the end of the Initiative in 2009, work  began to merge the DLF/Aquifer profile and guidelines with the <em>MODS User  Guidelines</em> to enable the DLF/Aquifer guidelines to be kept current with the  changes to MODS.  A section in the  &quot;Guidelines for Use&quot; for MODS elements summarizes special DLF/Aquifer  specifications and the DLF/Aquifer MODS profile is presented as a linked table.  Since the DLF/Aquifer guidelines took special  note of the use of records by aggregators and references the <em>DLF/NSDL Best  Practices for Sharable Metadata</em>, this information was also included. <a href="dlfintro.html">Introductory material</a> from the DLF/Aquifer  guidelines explains their context.</p>
+ <p>&nbsp;</p>
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->July 12, 2013<!-- #EndDate -->
+      </p>  
+
+	</td>
+</tr> 
+
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->July 12, 2013<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

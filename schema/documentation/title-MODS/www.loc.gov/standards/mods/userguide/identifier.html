@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;identifier&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element identifier overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;identifier&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="identifier.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;identifier&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;identifier&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <td scope="col"><strong>&lt;identifier&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">Contains a unique standard number or code that distinctively identifies a resource.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; displayLabel; invalid;<span class="attribute"> altRepGroup;</span> lang; xml:lang; script; transliteration; typeURI </td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="identifier.html#guidelines">GUIDELINES</a> | <a href="identifier.html#examples">EXAMPLES</a> | <a href="identifier.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>&lt;identifier&gt; includes manifestation, expression, and work level identifiers.</p>
+<p>MODS makes a distinction between a persistent identifier of the resource and its electronic location. This element is used for the former; <a href="location.html">&lt;location&gt;&lt;url&gt;</a> is used for the latter. </p>
+<p>Repeat the &lt;identifier&gt; element for each applicable identifier recorded, including invalid and canceled identifiers.</p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> recommend the use of at least one &lt;identifier&gt; element with the <i>type</i> attribute containing appropriate values in each MODS record.</p>
+<p>The &lt;identifier&gt; element is recommended in these guidelines and refers to the digital resource being described or to its analog equivalent. In the shared metadata context, the &lt;identifier&gt; should identify the object universally.</p>
+<p>The guidelines recommend that &lt;identifier&gt; be used to encode any identifying character string uniquely associated with a resource, but reserves &lt;location&gt;&lt;url&gt; for encoding the URL to the resource in its repository context. Persistent URIs that serve both
+  as a unique identifier and a URL to the resource in its repository context should be encoded using both elements.</p>
+<p>These guidelines require that all &lt;identifier&gt; URLs follow the URI specifications laid out in the <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata Content</i></a>. </p>
+<p>All occurrences of the &lt;identifier&gt; element must contain the type attribute to indicate the type of the identifier. If a local identifier is used, it should be indicated as such using the &quot;local&quot; value. </p>
+<p>See the &lt;<a href="dlfaquifer.html#identifier">identifier</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Aggregator information: &lt;identifier&gt; is displayed in some aggregators but is generally not used for retrieval. It may in the future be used to de-duplicate aggregations.</p>
+<p>Identifier is addressed in the &quot;Recommendations for classes of data elements&quot; under &quot;Identifiers.&quot; The DLF/Aquifer guidelines recommend the use of the <i>type</i> attribute in lieu of prefixing identifiers, as recommended in <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" />.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Identifies the type of identifier that is recorded.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">
+  <p>There is no controlled list of identifier types. Suggested values include, but are not limited to, those specified in <a href="http://www.loc.gov/standards/sourcelist/standard-identifier.html"> <em>Standard Identifier Source Codes</em></a>.</p>
+</div>
+<p class="attribute">invalid</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Signifies a canceled or invalid identifier.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">The invalid attribute should be used with the following value:
+  <ul>
+    <li><b>yes</b> &#8211; This value is used only when recording a canceled or invalid identifier. If invalid=&quot;yes&quot; is not present, the identifier is assumed to be valid. Do not use invalid=&quot;no.&quot;</li>
+  </ul>
+</div>
+<p class="attribute">altRepGroup; lang; xml:lang; script; transliteration; typeURI; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p>There are no subelements for &lt;identifier&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="identifier.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <div class="indent1"><strong>&lt;identifier type=&quot;music publisher&quot;&gt;</strong>N.M. 275 Nova Music<strong>&lt;/identifier&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;identifier type=&quot;lccn&quot;&gt;</strong>##2001336783<strong>&lt;/identifier&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;identifier type=&quot;doi&quot;&gt;</strong>doi:10.1006/jmbi.1995.0238<strong>&lt;/identifier&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;identifier type=&quot;hdl&quot;&gt;</strong>hdl:loc.pnp/cph.3c30104<strong>&lt;/identifier&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;identifier type=&quot;uri&quot;&gt;</strong>http://hdl.loc.gov/loc.law/llst.072<strong>&lt;/identifier&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;identifier type=&quot;isbn&quot; invalid=&quot;yes&quot;&gt;</strong>0877780116<strong>&lt;/identifier&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;identifier type=&quot;uri&quot; invalid=&quot;yes&quot;&gt;</strong>http://hemi.tsoa.nyu.edu/journal/2_1/ramalho_por.html<strong>&lt;/identifier&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;identifier type=&quot;uri&quot; displayLabel=&quot;Active site&quot;&gt;</strong> http://www.georgewbush.com/<strong>&lt;/identifier&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;identifier type=&quot;uri&quot; displayLabel=&quot;Essays from annual reports&quot;&gt;</strong>http://woodrow.mpls.frb.fed.us/publs/ar/index.html<strong>&lt;/identifier&gt;</strong></div>
+</div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="identifier.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;identifier&gt; &#8776; MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd010.html"> 010</a>, <a href="http://www.loc.gov/marc/bibliographic/bd020.html"> 020</a>, <a href="http://www.loc.gov/marc/bibliographic/bd022.html"> 022</a>, <a href="http://www.loc.gov/marc/bibliographic/bd024.html"> 024</a>, <a href="http://www.loc.gov/marc/bibliographic/bd856.html"> 856 </a>(only when string begins urn:hdl, urn:doi, hdl: or doi:) </p>
+<p>See also <a href="http://www.loc.gov/mods/mods-mapping.html#identifier"> <i>MARC Mapping to MODS</i> for the &lt;identifier&gt; element</a>.</p>
+<h3>Dublin Core Mapping</h3>
+<p>The MODS &lt;identifier&gt; element, along with the &lt;location&gt;&lt;URL&gt;, are both mapped to &lt;dc:identifier&gt; in the <a href="http://www.loc.gov/mods/mods-dcsimple.html"> MODS to Dublin Core Metadata Element Set Mapping</a>.</p>
+<p>MODS examples expressed in Dublin Core:</p>
+<div class="indent1"><strong>&lt;dc:identifier&gt;</strong>http://hemi.es.its.nyu.edu/journal/2_1/ramalho_por.html<strong>&lt;/dc:identifier&gt;</strong><br />
+  <strong>&lt;dc:identifier&gt;</strong>00694010<strong>&lt;/dc:identifier&gt;</strong><br />
+  <strong>&lt;dc:identifier&gt;</strong>hdl:loc.mbrsmi/animp.4068<strong>&lt;/dc:identifier&gt;</strong></div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="identifier.html#skip_menu">Top</a></p>
+
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->February 19, 2013<!-- #EndDate -->
+      </p>  
+
+</td>
+</tr> 
+	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->February 19, 2013<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

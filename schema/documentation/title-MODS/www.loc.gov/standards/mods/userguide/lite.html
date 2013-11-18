@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MODS Userguide &quot;Lite&quot; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element elementname overview metadata object description schema web site library congress xml" />
+<meta name="description" content="MODS Userguide $amp;Lite&amp; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" /> 
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="lite.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo;
+<!-- Update breadcrumb with name of element, class=selected --> 
+      <span class="selected">MODS User Guidelines &quot;Lite&quot;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>MODS User Guidelines &quot;Lite&quot;</h1>
+
+<p>The following details a simpler view of MODS elements using only those
+      elements that have a correspondence to the 15 Dublin Core elements in <a href="http://www.dublincore.org/documents/dces/">DCMES
+      version 1.1</a> <img src="../../../images/icon-ext2.gif" alt="External Link" width="8" height="10" /> (unqualified Dublin Core). The MODS elements could include subelements and attributes
+      as defined under each. The use of this subset of MODS would result in a
+      simpler record than one using the full schema, but there is a tradeoff
+      in the richness of the record. For a full Dublin Core to MODS mapping see: <a href="http://www.loc.gov/standards/mods/mods-dcsimple.html">www.loc.gov/standards/mods/mods-dcsimple.html</a>.</p>
+
+
+      <h2>Example</h2><br />
+      
+<div class="indent1" ><strong>&lt;mods:titleInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;mods:title&gt;</strong>Florida Environments Online<strong>&lt;mods:/title&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:titleInfo&gt;</strong><br />
+<strong>&lt;mods:name type=&quot;corporate&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;mods:namePart&gt;</strong>Florida Geological Society<strong>&lt;/mods:namePart&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:name&gt;</strong><br />
+<strong>&lt;mods:name type=&quot;corporate&quot; authority=&quot;naf&quot;&gt; </strong></div> 
+<div class="indent2"><strong>&lt;mods:namePart&gt;</strong>Florida<strong>&lt;/mods:namePart&gt;</strong> <br />
+<strong>&lt;mods:namePart&gt;</strong>Department of Agriculture and Consumer Affairs<strong>&lt;/mods:namePart&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:name&gt;</strong><br />
+<strong>&lt;mods:name type=&quot;corporate&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;mods:namePart&gt;</strong>Agricultural Experiment Station/Extension Service (IFAS) <strong>&lt;/mods:namePart&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:name&gt;</strong><br />
+<strong>&lt;mods:name type=&quot;corporate&quot; authority=&quot;naf&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;mods:namePart&gt;</strong>University of Florida<strong>&lt;/mods:namePart&gt; <br />
+&lt;mods:namePart&gt;</strong>Engineering and Industrial Experiment Station<strong>&lt;/mods:namePart&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:name&gt;</strong><br />
+<strong>&lt;mods:typeOfResource collection=&quot;yes&quot;&gt;</strong>text<strong>&lt;/mods:typeOfResource&gt;</strong><br />
+<strong>&lt;mods:language&gt;</strong></div>
+<div class="indent2"><strong>&lt;mods:languageTerm authority=&quot;rfc3066&quot;&gt;</strong>en<strong>&lt;/mods:languageTerm&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:language&gt;</strong><br />
+<strong>&lt;mods:physicalDescription&gt;</strong></div>
+<div class="indent2"><strong>&lt;mods:internetMediaType&gt;</strong>text/html<strong>&lt;/mods:internetMediaType&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:physicalDescription&gt;</strong><br />
+<strong>&lt;mods:abstract&gt;</strong>Florida   Environments Online contains both digital full text materials and   research bibliographies about the ecology and environment of Florida.   Digitized materials include more than 200 seminal texts on species   and ecosystems selected by scientific experts throughout the state   of Florida and digitized specifically for the Linking Florida's Natural   Heritage project. They also include the publications of the Florida   Geological Society, and agricultural documents created by the Agricultural   Experiment Station/Extension Service (IFAS) and the Florida Department   of Agriculture and Consumer Affairs, as well as engineering documents   created by the UF Engineering and Industrial Experiment Station<strong>&lt;/mods:abstract&gt;</strong><br />
+<strong>&lt;mods:subject authority=&quot;lcsh&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;mods:topic&gt;</strong>Environmental sciences<strong>&lt;/mods:topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:subject&gt;</strong><br />
+<strong>&lt;mods:subject authority=&quot;lcsh&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;mods:topic&gt;</strong>Geology<strong>&lt;/mods:topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:subject&gt;</strong><br />
+<strong>&lt;mods:subject authority=&quot;lcsh&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;mods:topic&gt;</strong>Agriculture<strong>&lt;/mods:topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:subject&gt;</strong><br />
+<strong>&lt;mods:location&gt;</strong></div>
+<div class="indent2"><strong>&lt;url&gt;</strong>http://palmm.fcla.edu/feol/<strong>&lt;/url&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:location&gt;</strong><br />
+<strong>&lt;mods:recordInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;mods:recordContentSource authority=&quot;marcorg&quot;&gt;</strong>MARC organization code for my favorite Library<strong>&lt;/mods:recordContentSource&gt;</strong><br />
+<strong>&lt;mods:recordCreationDate encoding=&quot;iso8601&quot; &gt;</strong>20030331 <strong>&lt;/mods:recordCreationDate&gt; </strong><br />
+<strong>&lt;mods:recordIdentifier&gt;</strong>12345<strong>&lt;/mods:recordIdentifier&gt;</strong></div>
+<div class="indent1"><strong>&lt;/mods:recordInfo&gt;</strong></div>
+<p><i>[Note that record information is not included in the Dublin Core Metadata Element Set, but has been included here.]</i></p>
+
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="lite.html#skip_menu">Top</a></p>
+ 
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->October 18, 2010<!-- #EndDate -->
+      </p>  
+
+</td></tr>	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->October 18, 2010<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

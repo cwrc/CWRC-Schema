@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;typeOfResource&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element typeofresource overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;typeOfResource&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="typeofresource.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo;
+  <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+  <!-- Update breadcrumb with name of element, class=selected -->
+  <span class="selected">Top-level Element:</span> <span class="selected">&lt;typeOfResource&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;typeOfResource&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <td scope="col"><strong>&lt;typeOfResource&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">A term that specifies the characteristics and general type of content of the resource.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>collection; manuscript; usage; displayLabel; <span class="attribute">altRepGroup</span></td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="typeofresource.html#guidelines">GUIDELINES</a> | <a href="typeofresource.html#examples">EXAMPLES</a> | <a href="typeofresource.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>Information in &lt;typeOfResource&gt; is about the original item. For example, in the case of a digitized photograph, &lt;typeOfResource&gt; would apply to the analog original; in born-digital materials, it would apply to the original digital format.</p>
+<p>This element includes a high-level type that categorizes the material in a general way using an enumerated list of values. More specific typing is done in the &lt;<a href="genre.html">genre</a>&gt; element.</p>
+<p>The attributes <i>collection</i> and <i>manuscript</i> are associated with a specific value used in &lt;typeOfResource&gt;. For example, a MODS object that consists of a collection of maps with associated text would be represented by two instances of &lt;typeOfResource&gt;.
+  The first would be &quot;cartographic&quot; with attribute <i>collection</i>=&quot;yes&quot;, and the second would be &quot;text&quot; (with no attribute).</p>
+<h3>Values for &lt;typeOfResource&gt;</h3>
+<p class="nomargin">The following values may be used:</p>
+<ul>
+  <li><strong>text</strong> &#8211; Resources that are basically textual in nature. </li>
+  <li><strong>cartographic</strong> &#8211; Includes maps, atlases, globes, digital maps, and other cartographic items. </li>
+  <li><strong>notated music</strong> &#8211; Graphic, non-realized representations of musical works, both in printed and digitized manifestations that represent the four components of musical sound: pitch, duration, timbre, and loudness. </li>
+  <li><strong>sound recording</strong> &#8211; Used when a mixture of musical and nonmusical sound recordings occurs in a resource or when a user does not want to or cannot make a distinction between musical and nonmusical. </li>
+  <li><strong>sound recording-musical</strong> &#8211; Used when a resource is predominately a musical sound recording. </li>
+  <li><strong>sound recording-nonmusical</strong> &#8211; Used when the sound recording is nonmusical in nature. </li>
+  <li><strong>still image</strong> &#8211; Includes two-dimensional images and slides and transparencies. </li>
+  <li><strong>moving image</strong> &#8211; Includes motion pictures and videorecordings, as well as television programs, digital video, and animated computer graphics&#8212;but not slides and transparencies. It does not include moving images that are primarily computer
+    programs, such as computer games or computer-oriented multimedia; these are included in &quot;software, multimedia&quot;. </li>
+  <li><strong>three dimensional object</strong> &#8211; Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing. </li>
+  <li><strong>software, multimedia</strong> &#8211; Appropriate for any electronic resource without a significant aspect that indicates one of the other &lt;typeOfResource&gt; categories. It includes: software, numeric data, computer-oriented multimedia, and online systems
+    and services. </li>
+  <li><strong>mixed material</strong> &#8211; Indicates that there are significant materials in two or more forms that are usually related by virtue of their having been accumulated by or about a person or body. Mixed material includes archival fonds and manuscript
+    collections of mixed forms of materials, such as text, photographs, and sound recordings. </li>
+</ul>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The Guidelines require the use in all records of at least one &lt;typeOfResource&gt; element using the required enumerated values. </p>
+<p>See the &lt;<a href="dlfaquifer.html#typeofresource">typeOfResource</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements.</p>
+<p>Aggregator information: Due to its utility for determining research value (for example, a researcher looking specifically for cartographic material), aggregators may choose to include this field in a brief display to end users, and may also index it to allow
+  limiting or refining by this data. Aggregators may also use this field to determine suitability for harvesting based on their perception of end users' needs.</p>
+<p>Related information is discussed in the &quot;Types of Resource&quot; and the &quot;Describing Versions and Reproductions&quot; sections of the <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a>.<img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" /></p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">collection</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A made-up multipart group of items that were not originally published, distributed, or produced together.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is used as <i>collection</i>=&quot;yes&quot; when the resource is a collection. It may also be applied to electronic resources that are collections in the sense of a made-up multipart group of items. If there are multiple resource
+  types within the collection, these should be enumerated in separate &lt;typeOfResource&gt; elements.</div>
+<p class="attribute">manuscript</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A resource that is written in handwriting or typescript.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is used as <i>manuscript</i>=&quot;yes&quot; when a collection contains manuscripts and is considered generally to be manuscript in nature, and for individual manuscripts.</div>
+<p class="attribute">usage</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Strength of the form vis-a-vis the resource.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is used with <em>usage</em>=&quot;primary&quot; when the main form of the resource is specified in the element.</div>
+<p class="attribute">altRepGroup; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p>There are no subelements for &lt;typeOfResource&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="typeofresource.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;nonSort&gt;The&lt;/nonSort&gt;<br />
+    &lt;title&gt;new naval and military map of the United States&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;typeOfResource&gt;</strong>cartographic&lt;<strong>/typeOfResource&gt;</strong><br />
+    &lt;genre&gt;map&lt;/genre&gt;</div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Camp Council meeting; speech by Dewey Rodgers&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;typeOfResource&gt;</strong>sound recording-nonmusical&lt;<strong>/typeOfResource&gt;</strong><br />
+    &lt;genre authority=&quot;marcgt&quot;&gt;speech&lt;/genre&gt;</div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Glove&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    &lt;physicalDescription&gt;</div>
+  <div class="indent2">&lt;form authority=&quot;gmd&quot;&gt;sound recording&lt;/form&gt;</div>
+  <div class="indent1">&lt;/physicalDescription&gt;<br />
+    <strong>&lt;typeOfResource&gt;</strong>sound recording-musical&lt;<strong>/typeOfResource&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Portrait of Django Reinhardt, Aquarium, New York, N.Y., ca. Nov. 1946&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;typeOfResource&gt;</strong>still image&lt;<strong>/typeOfResource&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo displayLabel=&quot;Title&quot;&gt;</div>
+  <div class="indent2">&lt;nonSort&gt;The&lt;/nonSort&gt;<br />
+    &lt;title&gt;battle-cry of freedom&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;typeOfResource displayLabel=&quot;Format&quot;&gt;</strong>notated music&lt;<strong>/typeOfResource&gt;</strong><br />
+    &lt;genre displayLabel=&quot;Genre&quot;&gt;sheet music&lt;/genre&gt;</div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt; Collection relating to A. E.Housman&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;typeOfResource manuscript=&quot;yes&quot; collection=&quot;yes&quot;&gt;</strong>mixed material&lt;<strong>/typeOfResource&gt;</strong><br />
+    &lt;abstract&gt;Correspondence, manuscripts, typescripts, galley and page proofs, newspaper clippings, printed material, monographs, and musical scores pertaining primarily to Richards's biography of A. E. Housman titled Housman, 1896-1936 (1941) &lt;/abstract&gt;</div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Fifty years of Coca-Cola advertising &lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;typeOfResource&gt;</strong>moving image&lt;<strong>/typeOfResource&gt;</strong><br />
+    &lt;genre&gt;motion picture&lt;/genre&gt;</div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Cannon ball&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;typeOfResource&gt;</strong>three dimensional object<strong>&lt;/typeOfResource&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Google&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;typeOfResource&gt;</strong>software, multimedia<strong>&lt;/typeOfResource&gt;</strong><br />
+    &lt;genre authority=&quot;marcgt&quot;&gt;online system or service&lt;/genre&gt;<br />
+    &lt;genre&gt;search engine&lt;/genre&gt;</div>
+</div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="typeofresource.html#skip_menu">Top</a></p>
+<h2><a name="mappings" id="mappings"></a>MAPPING</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;typeOfResource&gt; = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> with the following controlled list of textual values:</p>
+<ul>
+  <li>text (for &quot;language material&quot;) = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> values &quot;a&quot; and &quot;t&quot; </li>
+  <li>cartographic = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> values &quot;e&quot; and &quot;f&quot; </li>
+  <li>notated music = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> values &quot;c&quot; and &quot;d&quot; </li>
+  <li>sound recording-musical = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> value &quot;j&quot; </li>
+  <li>sound recording-nonmusical = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> value &quot;i&quot; </li>
+  <li>still image = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> value &quot;k&quot; (and slides and transparencies from Leader/06 code &quot;g&quot; (projected medium)) </li>
+  <li>moving image = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> value &quot;g&quot; (Note that value &quot;g&quot; in MARC 21 is defined as &quot;Projected medium,&quot; so this is not an exact equivalent.) </li>
+  <li>three dimensional object = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> value &quot;r&quot; </li>
+  <li>software, multimedia = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> value &quot;m&quot; </li>
+  <li>mixed material = <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> value &quot;p&quot; </li>
+</ul>
+<p>Attributes are used to further indicate whether the resource is a collection or an aggregation of items (designated in MARC&nbsp;21 in <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/07</a> (Bibliographic level)) or manuscript in nature (designated in MARC 21 as a separate <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/06</a> code that combines the manuscript property with a resource type).</p>
+<p>See also <a href="http://www.loc.gov/standards/mods/mods-mapping.html#typeofresource"><i>MARC Mapping to MODS</i> for the &lt;typeOfResource&gt;</a>.</p>
+<h3>Dublin Core Mapping</h3>
+<p>The <i><a href="http://www.loc.gov/standards/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping</a></i> recommends mapping the &lt;typeOfResource&gt; to &lt;dc:type&gt;. In addition, these guidelines recommend that when mapping the values found in &lt;typeOfResource&gt;
+  to <a href="http://dublincore.org/documents/dcmi-type-vocabulary/"> Dublin Core Type values</a>, <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" /> include both the MODS value and the DC value if they are substantially different. Similarly, the attributes of collection and manuscript
+  should be included as an additional, separate &lt;dc:type&gt; value.</p>
+<p>MODS examples expressed in Dublin Core:</p>
+<div class="indent1"><strong>&lt;dc:type&gt;</strong>text<strong>&lt;/dc:type&gt;</strong><br />
+  <strong>&lt;dc:type&gt;</strong>still image<strong>&lt;/dc:type&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:type&gt;</strong>collection<strong>&lt;/dc:type&gt;</strong><br />
+  <strong>&lt;dc:type&gt;</strong>text<strong>&lt;/dc:type&gt;</strong><br />
+</div>
+<h1><br/>
+</h1>
+       <p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="typeofresource.html#skip_menu">Top</a></p>
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->February 18, 2011<!-- #EndDate -->
+      </p>  
+</td>
+</tr> 
+	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->February 18, 2011<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

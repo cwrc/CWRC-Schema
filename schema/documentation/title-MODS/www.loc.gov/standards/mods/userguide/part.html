@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;part&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element part overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;part&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="part.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;part&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;part&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Element</th>
+      <td width="499" scope="col"><strong>&lt;part&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">The designation of physical parts of a resource in a detailed form.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; order; displayLabel; altRepGroup; ID; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="part.html#detail">detail</a>&gt; &lt;<a href="part.html#extent">extent</a>&gt; &lt;<a href="part.html#date">date</a>&gt; &lt;<a href="part.html#text">text</a>&gt; </strong></td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="part.html#guidelines">GUIDELINES</a> | <a href="part.html#examples">EXAMPLES</a> | <a href="part.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>&lt;part&gt; is a container element used to provide detailed coding for physical parts of a resource. It may be used as a top level element to designate physical parts or under &lt;<a href="relateditem.html">relatedItem</a>&gt; for specifying the
+  location of a part within a host/parent item. </p>
+<p>Use &lt;part&gt; when the MODS record in question refers to either a physical or structural part of a resource, rather than an intellectual part. To indicate part names and numbers that are subordinate to the title as distinct intellectual items, use &lt;<a href="titleinfo.html#title">title</a>&gt;
+  with &lt;<a href="titleinfo.html#partname">partName</a>&gt; and/or &lt;<a href="titleinfo.html#partnumber">partNumber</a>&gt;. </p>
+<p>A newspaper issue is generally indicated in MODS with &lt;part&gt;, rather than indicating the issue number as part of the title. The &lt;part&gt; element at the top level is also used to describe one reel of microfilm in a set, or in any other case in which the part
+  being described is not an intellectual whole by itself. When in doubt and only part numbers or names are needed, use &lt;titleInfo&gt;&lt;title&gt;&lt;partNumber&gt; and/or &lt;titleInfo&gt;&lt;title&gt;&lt;partName&gt;.</p>
+<p>When there is a separate intellectual entity with its own identity that is part of a larger work, use &lt;<a href="relateditem.html">relatedItem&nbsp;type=&quot;host&quot;&gt;&lt;part</a>&gt; to show the location of the part within that host item. </p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> recommend that the &lt;part&gt; element be used in cases where the part of a resource being represented is a physical or structural part of another resource. Examples include an issue
+  of a journal or a single story from a collection.</p>
+<p>Since there is not a controlled set of terms for the <i>type</i> attribute, if used the value should be expressed clearly and be generally understandable outside of the local context of the resource.</p>
+<p>See the &lt;<a href="dlfaquifer.html#part">part</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Aggregator information: Aggregators may index &lt;part&gt; with other title information for search purposes; and may also include it in a full display.</p>
+<p>The <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" /> does not explicitly cover description of parts of resources. Some related issues are discussed on the
+  &quot;Granularity of Description&quot; page. </p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A designation of a document segment type.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Suggested values include volume, issue, chapter, section, paragraph, and track. Other values may be used as needed. </div>
+<p class="attribute">order</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">An integer that designates the sequence of parts.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Each numerical assignment corresponds to the part designated by the <i>type</i> attribute.</div>
+<p class="attribute">altRepGroup; ID; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p class="nomargin">The following subelements are described below:</p>
+<ul>
+  <li>&lt;<a href="part.html#detail">detail</a>&gt; </li>
+  <li>&lt;<a href="part.html#extent">extent</a>&gt; </li>
+  <li>&lt;<a href="part.html#date">date</a>&gt; </li>
+  <li>&lt;<a href="part.html#text">text</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="detail" class="border">Subelement: &lt;detail&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains numbering and type of designation of the part in relation to the host/parent item in which a host item resides.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; level; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="part.html#number">number</a>&gt; &lt;<a href="part.html#caption">caption&gt;</a> &lt;<a href="part.html#title">title&gt;</a></strong></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Use this subelement to indicate the numbering and type of designation of the part in relation to the parent item.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>Since there is not a controlled set of terms for the <i>type</i> attribute, if used the value should be expressed clearly and be generally understandable outside of the local context of the resource.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Indicates the type of detail described.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Suggested values include part, volume, issue, chapter, section, paragraph, and track. Other values may be used as needed.</div>
+<p class="attribute">level</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Describes the level of numbering in the host/parent item.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Use to describe the level of numbering in the parent item to ensure that the numbering is retained in the proper order. An example is: &quot;v.2, no. 3&quot;.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p class="nomargin">The following subelements are described below:</p>
+<ul>
+  <li>&lt;<a href="part.html#number">number</a>&gt; </li>
+  <li>&lt;<a href="part.html#caption">caption</a>&gt; </li>
+  <li>&lt;<a href="part.html#title">title</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="number" class="border">Subelement of &lt;detail&gt;: &lt;number&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="361" scope="col">Contains the actual number within the part.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Numbering can be sequencing in any form, e.g., Part 1, Supplement A, Book two.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;number&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="caption" class="border">Subelement of &lt;detail&gt;: &lt;caption&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains the caption describing the enumeration within a part.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>This may be the same as the <i>type</i> attribute for &lt;detail&gt;, but it conveys what is on the item being described.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;caption&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="title" class="border">Subelement of &lt;detail&gt;: &lt;title&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains the title of the part.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Only include if this is different than the title in &lt;<a href="titleinfo.html#title">titleInfo&gt;&lt;title</a>&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>There are no attributes for &lt;title&gt;.</p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;title&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="extent" class="border">Subelement: &lt;extent&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains the measured units making up the part.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>unit</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="part.html#start">start</a>&gt; &lt;<a href="part.html#end">end</a>&gt; &lt;<a href="part.html#total">total</a>&gt; &lt;<a href="part.html#list">list</a>&gt;</strong></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Examples include pages, minutes, etc.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>Since there is not a controlled set of terms for the <i>unit</i> attribute, the value should be expressed clearly and be generally understandable outside of the local context of the resource.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">unit</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Indicates the type of unit associated with the value.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">There is no controlled set of values for <i>unit</i>.</div>
+<h4>Subelements</h4>
+<p class="nomargin">The following subelements are described below:</p>
+<ul>
+  <li>&lt;<a href="part.html#start">start</a>&gt; </li>
+  <li>&lt;<a href="part.html#end">end</a>&gt; </li>
+  <li>&lt;<a href="part.html#total">total</a>&gt; </li>
+  <li>&lt;<a href="part.html#list">list</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="start" class="border">Subelement of &lt;extent&gt;: &lt;start&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains the beginning unit of the extent within a part.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>For example, the first page number in the range.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;start&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="end" class="border">Subelement of &lt;extent&gt;: &lt;end&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains the ending unit of the extent within a part. </td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>For example, the last page number in the range.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;end&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="total" class="border">Subelement of &lt;extent&gt;: &lt;total&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains the total number of units within a part, rather than specific units.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>For example, use &quot;5&quot; to indicate a total of five pages.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>There are no attributes for &lt;total&gt;.</p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;total&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="list" class="border">Subelement of &lt;extent&gt;: &lt;list&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="516" scope="col">Contains a textual listing of the units within a part.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td><span class="attribute">lang; xml:lang; script; transliteratio</span>n</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>For example: &quot;pp. 5-9&quot;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p>There are no subelements for &lt;list&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="date" class="border">Subelement: &lt;date&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="478" scope="col">Contains date information relevant to the part described.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>encoding; point; qualifier; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>If a structured date is used, indicate the formatting source using the <i>encoding</i> attribute.</p>
+<p>If no <i>point</i> attribute is specified, date is assumed to be a single date.</p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The DLF/Aquifer guidelines recommend using the following value for the <i>encoding</i> attribute:</p>
+<ul>
+  <li><strong>w3cdtf </strong>&#8211; used for the ISO 8601 profile to specify YYYY-MM-DD date patterns </li>
+</ul>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">encoding; point; qualifier; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;date&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 id="text" class="border">Subelement: &lt;text&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains unparsed information in textual form about the part.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; displayLabel; xlink: lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Use this subelement to record information in textual form when other subelements will not capture the appropriate information.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Identifies the type of part.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">There is no controlled list of part types.</div>
+<p class="attribute">xlink; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;text&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Washington observer&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;part&gt;</strong></div>
+  <div class="indent2"><strong>&lt;detail type=&quot;volume&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;number&gt;</strong>1<strong>&lt;/number&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/detail&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/part&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Dana&lt;/title&gt;<br />
+    &lt;subTitle&gt;an Irish magazine of independent thought&lt;/subTitle&gt;<br />
+    &lt;partNumber&gt;Vol. 1, no. 4&lt;/partNumber&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;part&gt;</strong></div>
+  <div class="indent2"><strong>&lt;detail&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>Wayfarers (Poem)<strong>&lt;/title&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/detail&gt;</strong><br />
+    <strong>&lt;extent unit=&quot;pages&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;start&gt;</strong>97<strong>&lt;/start&gt;</strong><br />
+    <strong>&lt;end&gt;</strong>98<strong>&lt;/end&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/extent&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/part&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Washington observer&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;part&gt;</strong></div>
+  <div class="indent2"><strong>&lt;detail type=&quot;page number&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;number&gt;</strong>3<strong>&lt;/number&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/detail&gt;</strong><br />
+    <strong>&lt;extent unit=&quot;pages&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;start&gt;</strong>3<strong>&lt;/start&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/extent&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/part&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Hlisen Sunnuntai-lehti. no. 78 20.02.2006&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    &lt;genre&gt;newspaper&lt;/genre&gt;<br />
+    &lt;relatedItem type=&quot;constituent&quot; ID=&quot;MODSMD_ARTICLE1&gt;</div>
+  <div class="indent2">&lt;titleInfo&gt;</div>
+  <div class="indent3">&lt;title&gt;Nuppineula.&lt;/title&gt;</div>
+  <div class="indent2">&lt;/titleInfo&gt;<br />
+    &lt;genre&gt;article&lt;/genre&gt;<br />
+    <strong>&lt;part ID=&quot;DIVL15&quot; type=&quot;paragraph&quot; order=&quot;1&quot;/&gt;</strong><br />
+    <strong>&lt;part ID=&quot;DIVL17&quot; type=&quot;paragraph&quot; order=&quot;2&quot;/&gt;</strong><br />
+    <strong>&lt;part ID=&quot;DIVL19&quot; type=&quot;paragraph&quot; order=&quot;3&quot;/&gt;</strong></div>
+  <div class="indent1">&lt;/relatedItem&gt;<br />
+    &lt;relatedItem type=&quot;constituent&quot; ID=&quot;MODSMD_ARTICLE2&gt;</div>
+  <div class="indent2">&lt;titleInfo&gt;</div>
+  <div class="indent3">&lt;title&gt;Is meidn rukouksen waikutuS. Kuolema Puusepp,&lt;/title&gt;</div>
+  <div class="indent2">&lt;/titleInfo&gt;<br />
+    &lt;genre&gt;article&lt;/genre&gt;<br />
+    <strong>&lt;part ID=&quot;DIVL74&quot; type=&quot;paragraph&quot; order=&quot;1&quot; /&gt;</strong><br />
+    <strong>&lt;part ID=&quot;DIVL76&quot; type=&quot;paragraph&quot; order=&quot;2&quot; /&gt;</strong></div>
+  <div class="indent1">&lt;/relatedItem&gt;</div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;relatedItem type=&quot;host&quot;&gt;</div>
+  <div class="indent2">&lt;titleInfo&gt;</div>
+  <div class="indent3">&lt;title&gt;Post-Fordism&lt;/title&gt;<br />
+    &lt;subTitle&gt;A Reader&lt;/subTitle&gt;</div>
+  <div class="indent2">&lt;/titleInfo&gt;<br />
+    &lt;name type=&quot;personal&quot;&gt;</div>
+  <div class="indent3">&lt;namePart type=&quot;given&quot;&gt;Ash&lt;/namePart&gt;<br />
+    &lt;namePart type=&quot;family&quot;&gt;Amin&lt;/namePart&gt;<br />
+    &lt;role&gt;</div>
+  <div class="indent4">&lt;roleTerm type=&quot;text&quot;&gt;editor&lt;/roleTerm&gt;</div>
+  <div class="indent3">&lt;/role&gt;</div>
+  <div class="indent2">&lt;/name&gt;<br />
+    &lt;originInfo&gt;</div>
+  <div class="indent3">&lt;dateIssued&gt;1994&lt;/dateIssued&gt;<br />
+    &lt;publisher&gt;Blackwell Publishers&lt;/publisher&gt;<br />
+    &lt;place&gt;</div>
+  <div class="indent4">&lt;placeTerm type=&quot;text&quot;&gt;Oxford&lt;/placeTerm&gt;</div>
+  <div class="indent3">&lt;/place&gt;</div>
+  <div class="indent2">&lt;/originInfo&gt;<br />
+    <strong>&lt;part&gt;</strong></div>
+  <div class="indent3"><strong>&lt;extent unit=&quot;page&quot;&gt;</strong></div>
+  <div class="indent4"><strong>&lt;start&gt;</strong>23<strong>&lt;/start&gt;</strong><br />
+    <strong>&lt;end&gt;</strong>45<strong>&lt;/end&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/extent&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/part&gt;</strong></div>
+  <div class="indent1">&lt;/relatedItem&gt;</div>
+</div>
+<div class="example">
+  <div class="indent1">&lt;titleInfo&gt;</div>
+  <div class="indent2">&lt;title&gt;Non-subject-matter Outcomes of Schooling&lt;/title&gt;</div>
+  <div class="indent1">&lt;/titleInfo&gt;<br />
+    <strong>&lt;part&gt;</strong></div>
+  <div class="indent2"><strong>&lt;detail type=&quot;volume&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;number&gt;</strong>99<strong>&lt;/number&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/detail&gt;</strong><br />
+    <strong>&lt;detail type=&quot;issue&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;number&gt;</strong>5<strong>&lt;/number&gt;</strong><br />
+    <strong>&lt;caption&gt;</strong>no.<strong>&lt;/caption&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/detail&gt;</strong><br />
+    <strong>&lt;extent unit=&quot;page&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;start&gt;</strong>131<strong>&lt;/start&gt;</strong><br />
+    <strong>&lt;end&gt;</strong>146<strong>&lt;/end&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/extent&gt;</strong><br />
+    <strong>&lt;date encoding=&quot;w3cdtf&quot;&gt;</strong>1999<strong>&lt;/date&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/part&gt;</strong></div>
+</div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>There is no MARC 21 equivalent to &lt;part&gt; at the top level.</p>
+<p>&lt;part&gt; used in &lt;relatedItem type=&quot;host&quot;&gt; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd773.html"> 773</a>, subfields g and q, but allows for additional parsing of data </p>
+<p>&lt;part&gt;&lt;text&gt; used in &lt;relatedItem type=&quot;host&quot;&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd773.html"> 773</a> subfield g </p>
+<p>See also <a href="http://www.loc.gov/mods/mods-mapping.html#relateditem"> <i>MARC Mapping to MODS</i> for the &lt;relatedItem&gt; element</a>, &lt;part&gt; subelement.</p>
+<h3>Dublin Core Mapping</h3>
+<p>The <i><a href="http://www.loc.gov/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping </a></i>does not include the &lt;part&gt; element in the mapping to Dublin Core.</p>
+<p>The DLF/Aquifer Guidelines recommend adding information appearing at the highest level of the record to title information when mapping to simple Dublin Core.</p>
+<p>MODS examples expressed in Dublin Core:</p>
+<div class="example">
+<div class="indent1"><b>&lt;dc:title&gt;</b>Washington observer volume 1<b>&lt;/dc:title&gt;</b><br />
+  <b>&lt;dc:title&gt;</b>Non-subject-matter Outcomes of Schooling volume, volume 99, issue 5, page 131-146, 1999<b>&lt;/dc:title&gt;</b></div>
+  </div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="part.html#skip_menu">Top</a></p>
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->February 18, 2011<!-- #EndDate -->
+      </p>  
+</td>
+</tr>
+
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->February 18, 2011<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

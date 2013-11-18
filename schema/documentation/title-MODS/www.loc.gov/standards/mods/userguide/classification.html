@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;classification&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element classification overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;classification&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="classification.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;classification&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;classification&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <td scope="col"><strong>&lt;classification&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">A designation applied to a resource that indicates the subject by applying a formal system of coding and organizing resources according to subject areas.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI; edition; displayLabel; usage; <span class="attribute">altRepGroup;</span> lang; xml:lang; script; transliteration; generator </td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="classification.html#guidelines">GUIDELINES</a> | <a href="classification.html#examples">EXAMPLES</a> | <a href="classification.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>&lt;classification&gt; contains the classification or call number of a resource. </p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> state that the use of the &lt;classification&gt; element is optional. </p>
+<p>The DLF/Aquifer guidelines recommend that &lt;classification&gt; contain only classification numbers and call numbers whose authorities are referenced in <a href="http://www.loc.gov/standards/sourcelist/classification.html"> Classification Scheme Source Codes</a> maintained by the Library of Congress. It is left to the institution's discretion whether to truncate assigned call numbers to just the formal classification segment (for example, QA76.17), or to include the full call
+  number (for example, QA76.17 .T55). </p>
+<p>The <i>authority</i> attribute is required. All occurrences of the MODS &lt;classification&gt; element should contain the attribute <i>authority</i> to indicate the name of the classification scheme used in the element. Values for this attribute should come from the Library of Congress <a href="http://www.loc.gov/standards/sourcelist/classification.html"> Classification Scheme Source Codes</a>. The <i>edition</i> attribute is recommended if applicable.</p>
+<p>See the &lt;<a href="dlfaquifer.html#classification">classification</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Aggregator information: &lt;classification&gt; is not generally used for searching or browsing by aggregators, but may appear in the record display.</p>
+<p>Although related to the section, &quot;Recording Subjects in OAI Records,&quot; classification of resources is not directly addressed in the <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" />.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Consult <a href="http://www.loc.gov/standards/sourcelist/classification.html"> <em>Classification Scheme Source Codes</em></a> for a list of possible authorities and their source codes.</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">edition</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Designates the edition of the particular classification scheme as indicated in the scheme's authority. </div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Use for those schemes that are issued in editions (e.g., DDC).</div>
+
+<p class="attribute">usage</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Strength of the classification vis-a-vis the resource.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is used with <em>usage</em>=&quot;primary&quot; when the main classification oif the resource is  specified in the element.</div>
+
+<p class="attribute">generator</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The value of this attribute indicates that the classification number was automatically generated and, if appropriate, how.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is used with<em> generator</em>=&quot;lcc2ddc-software v.1.2&quot;</div>
+
+<p class="attribute">altRepGroup; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p>There are no subelements for &lt;classification&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="classification.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <div class="indent1"><strong>&lt;classification authority=&quot;lcc&quot;&gt;</strong>JK609.M2<strong>&lt;/classification&gt;</strong></div>
+</div>
+
+<div class="example">
+  <div class="indent1"><strong>&lt;classification authority=&quot;lcc&quot; displayLabel=&quot;Library of Congress classification&quot;&gt;</strong>ML410.B3<strong>&lt;/classification&gt;</strong></div>
+</div>
+
+<div class="example">
+  <div class="indent1"><strong>&lt;classification authority=&quot;cacodoc&quot;&gt;</strong>CA2 PQ C07 81P52<strong>&lt;/classification&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;classification authority=&quot;lcc&quot;&gt;</strong>TH6493<strong>&lt;/classification&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;classification authority=&quot;ddc&quot; edition=&quot;11&quot;&gt;</strong>683<strong>&lt;/classification&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;classification authority=&quot;nlm&quot;&gt;</strong>QW 161.5.S8<strong>&lt;/classification&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;classification authority=&quot;udc&quot;&gt;</strong>669.183.211.18<strong>&lt;/classification&gt;</strong></div>
+</div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="classification.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;classification&gt; = MARC fields <a href="http://www.loc.gov/marc/bibliographic/bd050.html"> 050</a>, <a href="http://www.loc.gov/marc/bibliographic/bd060.html"> 060</a>, or <a href="http://www.loc.gov/marc/bibliographic/bd01x09x.html"> 08X</a> (depending on authority), subfields a and b.</p>
+<p>&lt;classification&gt; with displayLabel attribute = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd050.html"> 050</a> subfield 3. </p>
+<p>See also <i><a href="http://www.loc.gov/standards/mods/mods-mapping.html#classification">MARC Mapping to MODS</a></i><a href="http://www.loc.gov/standards/mods/mods-mapping.html#classification"> for the &lt;classification&gt; element</a>.</p>
+<h3>Dublin Core Mapping</h3>
+<p>The <i><a href="http://www.loc.gov/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping </a></i>recommends mapping the &lt;classification&gt; element to &lt;dc:subject&gt;.</p>
+<p>MODS examples expressed in Dublin Core:</p>
+<div class="indent1"><strong>&lt;dc:subject&gt;</strong>JK609.M2<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:subject&gt;</strong>QW 161.5.S8<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:subject&gt;</strong>669.183.211.18<strong>&lt;/dc:subject&gt;</strong></div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="classification.html#skip_menu">Top</a></p>
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->February 21, 2013<!-- #EndDate -->
+      </p>  
+
+	</td>
+</tr> 
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->February 21, 2013<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

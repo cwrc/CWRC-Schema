@@ -1,0 +1,1063 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;subject&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element subject overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;subject&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="subject.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;subject&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;subject&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <td scope="col"><strong>&lt;subject&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">A term or phrase representing the primary topic(s) on which a work is focused.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI; usage; displayLabel; <span class="attribute">altRepGroup;</span> xlink; ID; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="subject.html#topic">topic</a>&gt; &lt;<a href="subject.html#geographic">geographic</a>&gt; &lt;<a href="subject.html#temporal">temporal</a>&gt; &lt;<a href="subject.html#titleinfo">titleInfo</a>&gt; &lt;<a href="subject.html#name">name</a>&gt; &lt;<a href="subject.html#genre">genre</a>&gt; &lt;<a href="subject.html#hierarchicalgeographic">hierarchicalGeographic</a>&gt;
+        &lt;<a href="subject.html#cartographics">cartographics</a>&gt; &lt;<a href="subject.html#geographiccode">geographicCode</a>&gt; &lt;<a href="subject.html#occupation">occupation</a>&gt; </strong></td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="subject.html#guidelines">GUIDELINES</a> | <a href="subject.html#examples">EXAMPLES</a> | <a href="subject.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>&lt;subject&gt; is a container element that contains subelements relating to the subject aspect of the resource.</p>
+<p>If the subject is a controlled heading from an authoritative list, use the <i> authority</i> attribute to indicate which authority was used. If no <i>authority</i> attribute is present, the data is assumed to be an uncontrolled term.</p>
+<p>If it is not desired to parse the subject subelements, use &lt;subject&gt;&lt;topic&gt; and a string.</p>
+<p>Repeat &lt;subject&gt; for each subject string.</p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> require, when applicable, the use of at least one &lt;subject&gt; element in a record. Values for &lt;subject&gt; indicate what content is found within or represented by the work, and typically
+  answer such questions as who, what, where, and when. </p>
+<p>Description of subject content may not be applicable to some works; in those cases, use of a &lt;subject&gt; element is not required. Whether or not the use of &lt;subject&gt; is applicable depends upon who might search for an item outside its local context and how
+  they are likely to search for it. For instance, topical subject content may not apply to some items, such as abstract art. If researchers are likely to be interested in the form or genre of an item, and not its subject content, using the &lt;<a href="genre.html">genre</a>&gt;
+  element (not the subelement under &lt;subject&gt;) may be most appropriate. However, in many instances, using appropriate &lt;subject&gt; values can greatly enhance users' ability to locate relevant works.</p>
+<p>Enter as many specific terms as necessary to capture subject content, and be consistent in the formatting of subject terms. DLF/Aquifer guidelines highly recommend the use of subject values from a controlled vocabulary or formal classification scheme and
+  the designation of this list in the <i>authority</i> attribute. Select controlled vocabularies that are most relevant to and frequently used by the communities likely to benefit from the described materials, and explicitly identify this source. If a subject
+  term is appropriate or well-known among a group of users, and it is not included in a formal scheme, it may still be included, but the source of the term should be identified. Place any locally-developed vocabulary term in a separate &lt;subject&gt; element and
+  define its authority as &quot;local&quot;. If the term is not controlled by a formal subject scheme or a locally developed scheme, the <i>authority</i> attribute is not used. New subject authority vocabularies can be registered with the Library of Congress; email <a href="mailto:ndmso@loc.gov"> ndmso@loc.gov</a> to suggest an authority.</p>
+<p>Subelements within &lt;subject&gt; are used to differentiate subject content. While MODS does allow for placing multiple values in a single &lt;subject&gt;&lt;topic&gt; string, parsing subject terms into separate subelements is the preferred practice and highly recommended
+  in the DLF/Aquifer guidelines. Place distinct, multiple subjects in separate &lt;subject&gt; fields.</p>
+<p>Use of the <i>authority</i> attribute is recommended if applicable to record the name of the authoritative list for a controlled value. Specify authority at the &lt;subject&gt; level in most cases (exceptions are &lt;subject&gt;&lt;name&gt;, &lt;subject&gt;&lt;titleInfo&gt;, and &lt;subject&gt;&lt;geographicCode&gt;).
+  If providing subjects from different authorities, use a separate &lt;subject&gt; element for each. This is required even when subjects differ only at the subelement level.</p>
+<p>Locally developed terms should be listed separately, with &quot;local&quot; indicated as the source using the <i>authority</i> attribute at the &lt;subject&gt; level. </p>
+<p>If the term is uncontrolled (for example, if it is a keyword from legacy records), do not use the <i>authority</i> attribute. Note that the concept of an &quot;uncontrolled term&quot; is misleading: ideally, all terms used as subject values should be controlled, whether that control comes from a formal classification scheme or from a locally developed vocabulary.
+  But the DLF/Aquifer guidelines also recognize that if one is converting legacy records, subject values may not be controlled. However, the recommended best practice is to pull from controlled schema, or to make the locally developed list available.</p>
+<p>See the &lt;<a href="dlfaquifer.html#subject">subject</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Aggregator information: Subject matter is a critical piece of information for end users to retrieve and determine the suitability of a resource for informational needs; data providers should assume this field will be exposed by aggregators. Care should be
+  taken in situations in which subjects are assigned by batch process to ensure that the contents of individual items are represented accurately. Although information on subject authorities is provided via the model proposed in the DLF/Aquifer guidelines, aggregators
+  should not be expected to perform any normalization, linking, or other processing (although they are free to do so). The authority information is important, however, to communicate to the aggregator the nature of subject analysis that has taken place, and
+  to reduce semantic confusion based on local subject lists using the same terms as shared authority files.</p>
+<p>The &quot;Subjects/Topics&quot; section in the <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" /> discusses the use of subjects. The &quot;Providing supplemental information to service providers&quot; is also relevant.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable. Specify authority at the highest level if there are subelements; optionally it may also be specified for a subelement. The Library of Congress maintains an online listing of <a href="http://www.loc.gov/standards/sourcelist/subject.html"> Subject Heading and Term Source Codes</a>.<br />
+  <br />
+  If the subject string is formulated according to the Library of Congress Subject Headings (or <a href="http://authorities.loc.gov/"> LC Name Authority File</a>), the value of the authority attribute is &quot;lcsh.&quot; A subject thesaurus that does not include names but has an implied authority for names uses the designation for that thesaurus (i.e., &quot;lcsh&quot; means LCSH plus NAF).<br />
+  <br />
+  The <em>authority</em> attribute may also be specified for individual &lt;subject&gt; subelements. If no list or scheme controls the terms used, omit the <i>authority</i> attribute.</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">usage</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Strength of the subject vis-a-vis the resource.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is used with <em>usage</em>=&quot;primary&quot; when the main subject of the resource is specified in the element.</div>
+<p class="attribute">altRepGroup; xlink; ID; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p class="nomargin">The following subelements are described below:</p>
+<ul>
+  <li>&lt;<a href="subject.html#topic">topic</a>&gt; </li>
+  <li>&lt;<a href="subject.html#geographic">geographic</a>&gt; </li>
+  <li>&lt;<a href="subject.html#temporal">temporal</a>&gt; </li>
+  <li>&lt;<a href="subject.html#titleinfo">titleInfo</a>&gt; </li>
+  <li>&lt;<a href="subject.html#name">name</a>&gt; </li>
+  <li>&lt;<a href="subject.html#genre">genre</a>&gt; </li>
+  <li>&lt;<a href="subject.html#hierarchicalgeographic">hierarchicalGeographic</a>&gt; </li>
+  <li>&lt;<a href="subject.html#cartographics">cartographics</a>&gt; </li>
+  <li>&lt;<a href="subject.html#geographiccode">geographicCode</a>&gt; </li>
+  <li>&lt;<a href="subject.html#occupation">occupation</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="topic" class="border">Subelement: &lt;topic&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Used as the tag for any topical subjects that are not appropriate in the &lt;<a href="subject.html#geographic">geographic</a>&gt;, &lt;<a href="subject.html#temporal">temporal</a>&gt;, &lt;<a href="subject.html#titleinfo">titleInfo</a>&gt;, &lt;<a href="subject.html#name">name</a>&gt;, &lt;<a href="subject.html#genre">genre</a>&gt;,
+        &lt;<a href="subject.html#hierarchicalgeographic">hierarchicalGeographic</a>&gt;, or &lt;<a href="subject.html#occupation">occupation</a>&gt; subelements.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>If the type of subject string is unknown, &lt;topic&gt; is used (since &lt;subject&gt; is a container element).</p>
+<p>If a controlled subject term is used, indicate authority using the <i>authority</i> attribute at the &lt;subject&gt; level.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>While it is highly recommended that subject values be parsed into subelements, they may also be listed as a string under &lt;subject&gt;&lt;topic&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable. Specify authority at the highest level if there are subelements; optionally it may also be specified for a subelement. The Library of Congress maintains an online listing of <a href="http://www.loc.gov/standards/sourcelist/subject.html"> Subject Heading and Term Source Codes</a>. </div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;topic&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="geographic" class="border">Subelement: &lt;geographic&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Used for geographic subject terms that are not appropriate for the &lt;<a href="subject.html#hierarchicalgeographic">hierarchicalGeographic</a>&gt; element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>If a controlled subject term is used, indicate authority using the <i>authority</i> attribute at the &lt;subject&gt; level.</p>
+<p>If the geographic name is part of a corporate body name (i.e., United States. Senate), it is coded with the &lt;<a href="subject.html#name">name</a>&gt; subelement, not &lt;geographic&gt;. </p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable. Specify authority at the highest level if there are subelements; optionally it may also be specified for a subelement. The Library of Congress maintains an online listing of <a href="http://www.loc.gov/standards/sourcelist/subject.html"> Subject Heading and Term Source Codes</a>. </div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;geographic&gt;</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="temporal" class="border">Subelement: &lt;temporal&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="612" scope="col">Used for chronological subject terms or temporal coverage.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td> authority; authorityURI; valueURI; encoding; point; keyDate; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;temporal&gt; may be expressed as a controlled subject term or as a structured date with an encoding attribute. </p>
+<p>If a controlled subject term is used, indicate authority using the <i>authority</i> attribute at the &lt;subject&gt; level.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>Normalized dates are critical for effective searching. Dates should be formatted consistently, following the structure dictated by the formatting source used.</p>
+<p>If a structured date is used, indicate the formatting source using the <i>encoding</i> attribute. The DLF/Aquifer guidelines recommend using the following value for the <i>encoding</i> attribute:</p>
+<div class="indent1">
+  <ul>
+    <li><strong>w3cdtf</strong> &#8211; used for the ISO 8601 profile to specify YYYY-MM-DD date patterns</li>
+  </ul>
+</div>
+<p>Note that the <i>point</i> attribute is used to indicate a date range, not a single date.</p>
+<p>Use of the <i>keyDate</i> attribute is not recommended. Only one date element in a record should be specified as a key date and the DLF/Aquifer guidelines recommend that the <i>keyDate</i> appear in the &lt;originInfo&gt; element.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable. Specify authority at the highest level if there are subelements; optionally it may also be specified for a subelement. The Library of Congress maintains an online listing of <a href="http://www.loc.gov/standards/sourcelist/subject.html"> Subject Heading and Term Source Codes</a>. </div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">encoding; point; keyDate; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;temporal&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="titleinfo" class="border">Subelement: &lt;titleInfo&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="485" scope="col">A title used as a subject.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>Most attributes used under the top-level element &lt;<a href="titleinfo.html">titleInfo</a>&gt; may be used.</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">All subelements used under the top-level element &lt;<a href="titleinfo.html">titleInfo</a>&gt; may be used.</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>See the &lt;<a href="titleinfo.html">titleInfo</a>&gt; section of the guidelines for more explicit guidance.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The DLF/Aquifer guidelines highly recommend using the <i>authority</i> attribute at this level to indicate titles controlled by an authority.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>All attributes defined under the top-level element &lt;<a href="titleinfo.html">titleInfo</a>&gt; may be used except <em>usage</em>, <em>nameTitleGroup</em>, <em>altRepGroup</em>. An <i>authority</i> attribute may be used at this level if desired, in addition to at the highest level (under &lt;subject&gt;).</p>
+<h4>Subelements</h4>
+<p>All subelements defined under the top-level element &lt;<a href="titleinfo.html">titleInfo</a>&gt; may be used with this subelement.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="name" class="border">Subelement: &lt;name&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">A name used as a subject.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>Most attributes used under the top-level element &lt;<a href="http://www.loc.gov/standards/mods/userguide/name_2012.html">name</a>&gt; may be used.</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">All subelements used under the top-level element &lt;<a href="http://www.loc.gov/standards/mods/userguide/name_2012.html">name</a>&gt; may be used.</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>See the &lt;<a href="http://www.loc.gov/standards/mods/userguide/name_2012.html">name</a>&gt; section of the guidelines for more explicit guidance.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The DLF/Aquifer guidelines highly recommend using the <i>authority</i> attribute to indicate if a name is controlled by a record in an authority file.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>All attributes defined under the top-level element &lt;<a href="http://www.loc.gov/standards/mods/userguide/name_2012.html">name</a>&gt; may be used except <em>usage</em>, <em>nameTitleGroup</em>, and <em>altRepGroup</em>. An <i>authority</i> attribute may be used at this level if desired, in addition to at the highest level (under &lt;subject&gt;).</p>
+<h4>Subelements</h4>
+<p>All subelements defined under the top-level element &lt;<a href="http://www.loc.gov/standards/mods/userguide/name_2012.html">name</a>&gt; may be used.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="genre" class="border">Subelement: &lt;genre&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">A genre or form used as part of a subject string when the subject authority distinguishes parts of the subject string (e.g. LCSH).</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>If describing the genre of a resource as a whole, use the main &lt;<a href="http://www.loc.gov/standards/mods/userguide/name_2012.html">genre</a>&gt; element. This &lt;genre&gt; subelement is used to facilitate mapping of subject authorities that use form subdivisions.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The DLF/Aquifer guidelines make use of this subelement as an option but give strong preference to use of the main &lt;<a href="http://www.loc.gov/standards/mods/userguide/name_2012.html">genre</a>&gt; element for form/genre terms whenever possible.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable. Specify authority at the highest level if there are subelements; optionally it may also be specified for a subelement. The Library of Congress maintains an online listing of <a href="http://www.loc.gov/standards/sourcelist/subject.html"> Subject Heading and Term Source Codes</a>. </div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;genre&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="hierarchicalgeographic" class="border">Subelement: &lt;hierarchicalGeographic&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">A geographic name given in a hierarchical form relating to the resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;continent&gt; &lt;country&gt; &lt;province&gt; &lt;region&gt; &lt;state&gt; &lt;territory&gt; &lt;county&gt; &lt;city&gt; &lt;citySection&gt; &lt;island&gt; &lt;area&gt; &lt;extraterrestrialArea&gt;</strong></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;hierarchicalGeographic&gt; is a wrapper element for the hierarchical form of place name, which is both readable by humans and parsable by machines. This form can be applied to the degree of specificity that is known or relevant and used to generate browsable
+  hierarchies even when values are specified to different levels.</p>
+<p>Explicit inclusion of the complete hierarchy is of potential benefit for automated consultation of a gazetteer to derive map coordinates or to support a map-based interface for searching by country or state.</p>
+
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable. Specify authority at the highest level if there are subelements; optionally it may also be specified for a subelement. The Library of Congress maintains an online listing of <a href="http://www.loc.gov/standards/sourcelist/subject.html"> Subject Heading and Term Source Codes</a>. </div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<h4 id="hierarchicalgeographicsubelements">Subelements</h4>
+<p>The following subelements are defined for &lt;hierarchicalGeographic&gt;. In general, use the term most commonly used in the original language or its translation for the geographic entity. First order political divisions may have different terms depending on the
+  country. For instance, first order political divisions in the U.S. are states; in Canada provinces; in United Kingdom, England, Scotland, and Wales are countries and next order divisions (e.g. Yorkshire) are counties.</p>
+Each subelement has the following attributes: <em>lang; xml:lang; script; transliteration</em>.
+<ul>
+  <li><strong>&lt;continent&gt;</strong> &#8211; Includes Asia, Africa, Europe, North America, South America. </li>
+  <li><strong>&lt;country&gt;</strong> &#8211; Name of a country, i.e. a political entity considered a country. </li>
+  <li><strong>&lt;province&gt;</strong> &#8211; Includes first order political divisions called provinces within a country, e.g. in Canada. </li>
+  <li><strong>&lt;region&gt;</strong> &#8211; Includes regions that have status as a jurisdiction, usually incorporating more than one first level jurisdiction. </li>
+  <li><strong>&lt;state&gt;</strong> &#8211; Includes first order political divisions called states within a country, e.g. in U.S., Argentina, Italy. Use also for France d&eacute;partement. </li>
+  <li><strong>&lt;territory&gt;</strong> &#8211; Name of a geographical area belonging to or under the jurisdiction of a governmental authority. </li>
+  <li><strong>&lt;county&gt;</strong> &#8211; Name of the largest local administrative unit in various countries, e.g. England. </li>
+  <li><strong>&lt;city&gt;</strong> &#8211; Name of an inhabited place incorporated as a city, town, etc. </li>
+  <li><strong>&lt;citySection&gt;</strong> &#8211; Name of a smaller unit within a populated place, e.g., neighborhoods, parks, or streets. </li>
+  <li><strong>&lt;island&gt;</strong> &#8211;Name of a tract of land surrounded by water and smaller than a continent but is not itself a separate country. </li>
+  <li><strong>&lt;area&gt;</strong> &#8211; Name of a non-jurisdictional geographic entity. </li>
+  <li><strong>&lt;extraterrestrialArea&gt;</strong> &#8211; Name of any extraterrestrial entity or space, including solar systems, galaxies, star systems, and planets as well as geographic features of individual planets. </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="cartographics" class="border">Subelement: &lt;cartographics&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Cartographic (maps or charts) data indicating spatial coverage.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="subject.html#coordinates">coordinates</a>&gt; &lt;<a href="subject.html#scale">scale</a>&gt; &lt;<a href="subject.html#projection">projection</a>&gt; </strong></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;cartographics&gt; is a container element; data content is entered in the subelements.</p>
+<p>If desired, cartographic elements may be bound together with a geographic name (hierarchical or otherwise) within a &lt;subject&gt; element.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>This subelement is not fully developed; specific recommendations for its use are not possible at this point. Use established standards in your area to guide use of this subelement.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>There are no attributes for &lt;cartographics&gt;.</p>
+<h4>Subelements</h4>
+<p class="nomargin">The following subelements are described below:</p>
+<ul>
+  <li>&lt;<a href="subject.html#coordinates">coordinates</a>&gt; </li>
+  <li>&lt;<a href="subject.html#scale">scale</a>&gt; </li>
+  <li>&lt;<a href="subject.html#projection">projection</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="coordinates" class="border">Subelement: &lt;cartographics&gt;&lt;coordinates&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains a statement of coordinates covered by the resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>One or more statements may be supplied. If one is supplied, it is a point (i.e., a single location); if two, it is a line; if more than two, it is an n-sided polygon where n=number of coordinates assigned. No three points should be co-linear, and coordinates
+  should be supplied in polygon-traversal order.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;coordinates&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="scale" class="border">Subelement: &lt;cartographics&gt;&lt;scale&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Provides a statement of scale, the ratio between the actual size and a representation of it.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;scale&gt; may include any equivalency statements, vertical scales, or vertical exaggeration statements for relief models and other three-dimensional items.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;scale&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="projection" class="border">Subelement: &lt;cartographics&gt;&lt;projection&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Provides a statement of projection, the method of representing the surface of a sphere or other shape on a plane.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Includes the name of the projection and any associated information related to the properties of the projection, where applicable.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;projection&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="geographiccode" class="border">Subelement: &lt;geographicCode&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="459" scope="col">A geographic area code associated with a resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>A geographic code that represents the same entity as a term in the &lt;geographic&gt; subelement is included within the same &lt;subject&gt; element.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The DLF guidelines recommends the use of a &lt;geographic&gt; or &lt;hierarchicalGeographic&gt; value in addition to &lt;geographicCode&gt; to improve the searchability of a record.</p>
+<p>The geographic code should be from an established encoding scheme that is indicated in the <i>authority</i> attribute. For those not already using MARC, the DLF/Aquifer guidelines recommend using &quot;iso3166&quot; as the authority value for &lt;geographicCode&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken. </div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Values used with this attribute are the following:
+  <ul>
+    <li><strong>marcgac</strong> &#8211; for codes taken from <a href="http://www.loc.gov/marc/geoareas/"> MARC Code List for Geographic Areas</a></li>
+    <li><strong>marccountry</strong> &#8211; for codes from <a href="http://www.loc.gov/marc/countries/"> MARC Code List for Countries</a></li>
+    <li><strong>iso3166</strong> &#8211; for codes taken from ISO 3166, <i>Codes for the representation of names of countries and their subdivisions &#8211; Part 1: Country codes</i> or <i>Part 2: Country subdivision codes</i></li>
+  </ul>
+</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;geographicCode&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 id="occupation" class="border">Subelement: &lt;occupation&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">A term that is descriptive of the occupation reflected in the contents of the described materials.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;occupation&gt; is not used to list the occupations of the creators of the described materials, unless those occupations are significantly reflected in the materials themselves or bear some relationship to the materials.</p>
+<p>Specify authority at the main &lt;subject&gt; element level.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable. Specify authority at the highest level if there are subelements; optionally it may also be specified for a subelement. The Library of Congress maintains an online listing of <a href="http://www.loc.gov/standards/sourcelist/subject.html"> Subject Heading and Term Source Codes</a>. </div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;occupation&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <p><i>With topic subelement:</i></p>
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Learning disabilities<strong>&lt;/topic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;ericd&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Career Exploration<strong>&lt;/topic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcshac&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Iron founding<strong>&lt;/topic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;aat&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>vandalism<strong>&lt;/topic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot; authorityURI=&quot;http://id.loc.gov/authorities/#conceptscheme&quot; valueURI=&quot;http://id.loc.gov/authorities/sh89000851#concept&quot;&gt;</strong></div>
+    <div class="indent2"><strong>&lt;topic&gt;</strong>Kayaking<strong>&lt;/topic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+
+</div>
+
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Real property--Mississippi--Tippah County--Maps<strong>&lt;/topic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>Alternatively, the example above may be encoded as the following (an XSLT stylesheet may be used to generate hyphens in the string for display):</i></p>
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Real property<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;geographic&gt;</strong>Mississippi<strong>&lt;/geographic&gt;</strong><br />
+    <strong>&lt;geographic&gt;</strong>Tippah County<strong>&lt;/geographic&gt;</strong><br />
+    <strong>&lt;genre&gt;</strong>Maps<strong>&lt;/genre&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>With geographic subelement:</i></p>
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;geographic&gt;</strong>United States<strong>&lt;/geographic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>With temporal subelement:</i></p>
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;temporal encoding=&quot;iso8601&quot;&gt;</strong>197505<strong>&lt;/temporal&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;temporal encoding=&quot;w3cdtf&quot;&gt;</strong>1975-05-15<strong>&lt;/temporal&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;temporal encoding=&quot;w3cdtf&quot; point=&quot;start&quot;&gt;</strong>2001-09-11<strong>&lt;/temporal&gt;</strong><br />
+    <strong>&lt;temporal encoding=&quot;w3cdtf&quot; point=&quot;end&quot;&gt;</strong>2003-03-19<strong>&lt;/temporal&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>With titleInfo subelement</i></p>
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;titleInfo type=&quot;uniform&quot; authority=&quot;naf&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>Missale Carnotense<strong>&lt;/title&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/titleInfo&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>With name subelement:</i></p>
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;name type=&quot;personal&quot; authority=&quot;naf&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;namePart&gt;</strong>Woolf, Virginia<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1882-1941<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/name&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;name&gt;</strong></div>
+  <div class="indent3"><strong>&lt;namePart&gt;</strong>Garcia Lorca, Federico<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1898-1936<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/name&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>With name and genre subelement:</i></p>
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;name type=&quot;personal&quot; authority=&quot;naf&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;namePart&gt;</strong>Edmondston, Catherine Devereux<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1823-1875<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/name&gt;</strong><br />
+    <strong>&lt;genre&gt;</strong>Diaries<strong>&lt;/genre&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>With hierarchical geographic subelement:</i></p>
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;hierarchicalGeographic&gt;</strong></div>
+  <div class="indent3"><strong>&lt;country&gt;</strong>Canada<strong>&lt;/country&gt;</strong><br />
+    <strong>&lt;province&gt;</strong>British Columbia<strong>&lt;/province&gt;</strong><br />
+    <strong>&lt;city&gt;</strong>Vancouver<strong>&lt;/city&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/hierarchicalGeographic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;tgn&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;hierarchicalGeographic&gt;</strong></div>
+  <div class="indent3"><strong>&lt;country&gt;</strong>United States<strong>&lt;/country&gt;</strong><br />
+    <strong>&lt;state&gt;</strong>Mississippi<strong>&lt;/state&gt;</strong><br />
+    <strong>&lt;county&gt;</strong>Harrison<strong>&lt;/county&gt;</strong><br />
+    <strong>&lt;city&gt;</strong>Biloxi<strong>&lt;/city&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/hierarchicalGeographic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;hierarchicalGeographic&gt;</strong></div>
+  <div class="indent3"><strong>&lt;region&gt;</strong>Arctic Ocean<strong>&lt;/region&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/hierarchicalGeographic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;hierarchicalGeographic&gt;</strong></div>
+  <div class="indent3"><strong>&lt;area&gt;</strong>Intercontinental areas (Western Hemisphere)<strong>&lt;/area&gt;</strong></div>
+  <div class="indent2"><strong>&lt;hierarchicalGeographic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;hierarchicalGeographic&gt;</strong></div>
+  <div class="indent3"><strong>&lt;country&gt;</strong>France<strong>&lt;/country&gt;</strong><br />
+    <strong>&lt;region&gt;</strong>Franche Comt&eacute;<strong>&lt;/region&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/hierarchicalGeographic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>With cartographic subelement:</i></p>
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;cartographics&gt;</strong></div>
+  <div class="indent3"><strong>&lt;coordinates&gt;</strong>E 72&deg;--E 148&deg;/N 13&deg;--N 18&deg;<strong>&lt;/coordinates&gt;</strong><br />
+    <strong>&lt;scale&gt;</strong>1:22,000,000<strong>&lt;/scale&gt;</strong><br />
+    <strong>&lt;projection&gt;</strong>Conic proj<strong>&lt;/projection&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/cartographics&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;cartographics&gt;</strong></div>
+  <div class="indent3"><strong>&lt;scale&gt;</strong>1:22,000,000<strong>&lt;/scale&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/cartographics&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;cartographics&gt;</strong></div>
+  <div class="indent3"><strong>&lt;coordinates&gt;</strong>E 72&deg;--E 148&deg;/N 13&deg;--N 18&deg;<strong>&lt;/coordinates&gt;</strong><br />
+    <strong>&lt;scale&gt;</strong>1:22,000,000<strong>&lt;/scale&gt;</strong><br />
+    <strong>&lt;projection&gt;</strong>Conic proj<strong>&lt;/projection&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/cartographics&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;cartographics&gt;</strong></div>
+  <div class="indent3"><strong>&lt;scale&gt;</strong>Scale [1:6,336,000]. 1&quot; = 100 miles. Vertical scale [1:192,000]. 1/16&quot; = approx. 1000'<strong>&lt;/scale&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/cartographics&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>With geographicCode subelement:</i></p>
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;geographic&gt;</strong>United States<strong>&lt;/geographic&gt;</strong><br />
+    <strong>&lt;geographicCode authority=&quot;iso3166&quot;&gt;</strong>us<strong>&lt;/geographicCode&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;geographicCode authority=&quot;marcgac&quot;&gt;</strong>n-us-md<strong>&lt;/geographicCode&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+    <strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;geographicCode authority=&quot;iso3166&quot;&gt;</strong>us<strong>&lt;/geographicCode&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>With occcupation subelement:</i></p>
+  <div class="indent1"><strong>&lt;subject authority=&quot;aat&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;occupation&gt;</strong>printmaker<strong>&lt;/occupation&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;occupation&gt;</strong>Anthropologists<strong>&lt;/occupation&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <p><i>With multiple subelements:</i></p>
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Bluegrass music<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;temporal&gt;</strong>1971-1980<strong>&lt;/temporal&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Railroads<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;geographic&gt;</strong>West (U.S.)<strong>&lt;/geographic&gt;</strong><br />
+    <strong>&lt;genre&gt;</strong>Maps<strong>&lt;/genre&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lctgm&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Educational buildings<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;geographic&gt;</strong>Washington (D.C.)<strong>&lt;/geographic&gt;</strong><br />
+    <strong>&lt;temporal&gt;</strong>1890-1910<strong>&lt;/temporal&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Funeral rites and ceremonies<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;geographic&gt;</strong>Louisiana<strong>&lt;/geographic&gt;</strong><br />
+    <strong>&lt;geographic&gt;</strong>New Orleans<strong>&lt;/geographic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+    <strong>&lt;subject authority=&quot;local&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Jazz funerals<strong>&lt;/topic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;name type=&quot;personal&quot; authority=&quot;naf&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;namePart&gt;</strong>Frankenthaler, Helen<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1928-<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/name&gt;</strong><br />
+    <strong>&lt;topic&gt;</strong>Painting--Exhibitions<strong>&lt;/topic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;name type=&quot;personal&quot; authority=&quot;naf&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;namePart&gt;</strong>Woolf, Virginia<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1882-1941<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/name&gt;</strong><br />
+    <strong>&lt;titleInfo&gt;</strong></div>
+  <div class="indent3"><strong>&lt;title&gt;</strong>Three Guineas<strong>&lt;/title&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+    <strong>&lt;topic&gt;</strong>Criticism and interpretation<strong>&lt;/topic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;hierarchicalGeographic&gt;</strong></div>
+  <div class="indent3"><strong>&lt;territory&gt;</strong>British Indian Ocean Territory<strong>&lt;/territory&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/hierarchicalGeographic&gt;</strong><br />
+    <strong>&lt;cartographics&gt;</strong></div>
+  <div class="indent3"><strong>&lt;coordinates&gt;</strong>6 00 S, 71 30 E<strong>&lt;/coordinates&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/cartographics&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Registers of births, etc<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;geographic&gt;</strong>Massachusetts<strong>&lt;/geographic&gt;</strong><br />
+    <strong>&lt;geographic&gt;</strong>Springfield<strong>&lt;/geographic&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lctgm&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Educational buildings<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;geographic&gt;</strong>Washington (D.C.)<strong>&lt;/geographic&gt;</strong><br />
+    <strong>&lt;temporal&gt;</strong>1890-1910<strong>&lt;/temporal&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;rvm&quot; lang=&quot;fre&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>&Eacute;glise catholique<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;topic&gt;</strong>Histoire<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;temporal&gt;</strong>20e si&egrave;cle<strong>&lt;/temporal&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;topic&gt;</strong>Musicology<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;topic&gt;</strong>Data processing<strong>&lt;/topic&gt;</strong><br />
+    <strong>&lt;genre&gt;</strong>Periodicals<strong>&lt;/genre&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;subject&gt;</strong></div>
+  <div class="indent2"><strong>&lt;occupation&gt;</strong>Migrant laborers<strong>&lt;/occupation&gt;</strong><br />
+    <strong>&lt;genre&gt;</strong>School district case files<strong>&lt;/genre&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/subject&gt;</strong></div>
+</div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;subject&gt; with the <i>authority</i> attribute = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd6xx.html"> 6XX</a>, with the second indicator value</p>
+<p>&lt;subject&gt;&lt;topic&gt; with <i>authority</i> attribute defined = MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd650.html"> 650</a> or <a href="http://www.loc.gov/marc/bibliographic/bd6xx.html"> 6XX</a> subfields x and v</p>
+<p>&lt;subject&gt;&lt;topic&gt; with no <i>authority</i> attribute defined = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd653.html"> 653</a></p>
+<p>&lt;subject&gt;&lt;geographic&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd651.html"> 651</a> subfield z and <a href="http://www.loc.gov/marc/bibliographic/bd6xx.html"> 6XX</a></p>
+<p>&lt;subject&gt;&lt;temporal&gt; = MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd045.html"> 045</a> and <a href="http://www.loc.gov/marc/bibliographic/bd6xx.html"> 6XX</a> subfield y.</p>
+<p>&lt;subject&gt;&lt;titleInfo&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd630.html"> 630</a></p>
+<p>&lt;subject&gt;&lt;name&gt; = MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd600.html"> 600</a>, <a href="http://www.loc.gov/marc/bibliographic/bd610.html"> 610</a>, <a href="http://www.loc.gov/marc/bibliographic/bd611.html"> 611</a>.</p>
+<p>&lt;subject&gt;&lt;genre&gt; = MARC 21 <a href="http://www.loc.gov/marc/bibliographic/bd6xx.html"> 6XX</a> fields, subfield v</p>
+<p>&lt;subject&gt;&lt;hierarchicalGeographic&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd752.html"> 752</a>.</p>
+<p>&lt;subject&gt;&lt;cartographics&gt; = MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd034.html"> 034</a> and <a href="http://www.loc.gov/marc/bibliographic/bd255.html"> 255</a>.</p>
+<p>&lt;subject&gt;&lt;cartographics&gt;&lt;coordinates&gt; = MARC fields <a href="http://www.loc.gov/marc/bibliographic/bd034.html"> 034</a>, subfields d, e, f, and g or <a href="http://www.loc.gov/marc/bibliographic/bd255.html"> 255</a>, subfield c</p>
+<p>&lt;subject&gt;&lt;cartographics&gt;&lt;scale&gt; = MARC field <a href="http://www.loc.gov/marc/bibliographic/bd255.html"> 255</a>, subfield a</p>
+<p>&lt;subject&gt;&lt;cartographics&gt;&lt;projection&gt; = MARC field <a href="http://www.loc.gov/marc/bibliographic/bd255.html"> 255</a>, subfield b</p>
+<p>&lt;subject&gt;&lt;geographicCode&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd043.html"> 043</a></p>
+<p>&lt;subject&gt;&lt;occupation&gt; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd656.html"> 656</a></p>
+<p>See also <a href="http://www.loc.gov/standards/mods/mods-mapping.html#subject"><i>MARC Mapping to MODS</i> for the &lt;subject&gt; element</a>.</p>
+<h3>Dublin Core Mapping</h3>
+<p>Using the basis provided by the <a href="http://www.loc.gov/standards/mods/mods-dcsimple.html"> <i>MODS to Dublin Core Metadata Element Set Mapping</i></a> these guidelines suggest the following crosswalks between MODS element &lt;subject&gt; and simple Dublin Core elements.</p>
+<table class="dc-core">
+  <tbody>
+    <tr>
+      <th scope="col">MODS &lt;subject&gt; subelements</th>
+      <th scope="col">DC elements</th>
+    </tr>
+    <tr>
+      <td scope="row">&lt;topic&gt;<br />
+        &lt;name&gt;<br />
+        &lt;titleInfo&gt;<br />
+        &lt;occupation&gt; </td>
+      <td>&lt;dc:subject&gt; </td>
+    </tr>
+    <tr>
+      <td scope="row">&lt;geographic&gt;<br />
+        &lt;temporal&gt;<br />
+        &lt;hierarchicalGeographic&gt; </td>
+      <td>&lt;dc:coverage&gt; </td>
+    </tr>
+    <tr>
+      <td scope="row">&lt;genre&gt; </td>
+      <td>&lt;dc:type&gt; </td>
+    </tr>
+    <tr>
+      <td scope="row">&lt;cartographics&gt;<br />
+        &lt;geographicCode&gt; </td>
+      <td>[no field suggested]</td>
+    </tr>
+  </tbody>
+</table>
+<p>MODS examples expressed in Dublin Core:</p>
+<div class="indent1"><strong>&lt;dc:subject&gt;</strong>Railroads<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:coverage&gt;</strong>West (U.S.)<strong>&lt;/dc:coverage&gt;</strong><br />
+  <strong>&lt;dc:type&gt;</strong>Maps<strong>&lt;/dc:type&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:subject&gt;</strong>Railroads--West (U.S.)--Maps<strong>&lt;/dc:subject&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:subject&gt;</strong>vandalism<strong>&lt;/dc:subject&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:subject&gt;</strong>Funeral rites and ceremonies<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:coverage&gt;</strong>Louisiana<strong>&lt;/dc:coverage&gt;</strong><br />
+  <strong>&lt;dc:coverage&gt;</strong>New Orleans<strong>&lt;/dc:coverage&gt;</strong><br />
+  <strong>&lt;dc:subject&gt;</strong>Jazz funerals<strong>&lt;/dc:subject&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:subject&gt;</strong>Educational buildings<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:coverage&gt;</strong>Washington (D.C.)&lt;/dc:coverage&gt;<br />
+  <strong>&lt;dc:coverage&gt;</strong>1890-1910<strong>&lt;/dc:coverage&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:subject&gt;</strong>&Eacute;glise catholique<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:subject&gt;Histoire&lt;</strong>/dc:subject&gt;<br />
+  <strong>&lt;dc:coverage&gt;</strong>20e si&egrave;cle<strong>&lt;/dc:coverage&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:subject&gt;</strong>Woolf, Virginia, 1882-1941<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:subject&gt;</strong>Three Guineas<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:subject&gt;</strong>Criticism and interpretation<strong>&lt;/dc:subject&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:subject&gt;</strong>Frankenthaler, Helen, 1928-<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:subject&gt;</strong>Painting--Exhibitions<strong>&lt;/dc:subject&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:subject&gt;</strong>Edmondston, Catherine Devereux, 1823-1875<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:type&gt;</strong>Diaries<strong>&lt;/dc:type&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:subject&gt;</strong>Migrant laborers<strong>&lt;/dc:subject&gt;</strong><br />
+  <strong>&lt;dc:subject&gt;</strong>School district case files<strong>&lt;/dc:subject&gt;</strong> </div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="subject.html#skip_menu">Top</a></p>
+
+
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->February 18, 2011<!-- #EndDate -->
+      </p>  
+
+	</td>
+</tr> 
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->February 18, 2011<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

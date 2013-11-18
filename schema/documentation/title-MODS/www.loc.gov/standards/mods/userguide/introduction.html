@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Introduction and Implementation (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element titleinfo overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Introduction and Implementation (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(css/mods-v3.css);
+</style>
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr>
+    <td class="left"><a id="skip" href="introduction.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; 
+    <!-- Update breadcrumb with name of element, class=selected --> 
+      <span class="selected">Introduction and Implementation</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Introduction and Implementation</h1>
+<p><a name="skip_menu"></a>MODS is an XML schema for a bibliographic element set that may be used for
+  a variety of purposes, and particularly for library applications. It
+  is a derivative of the MARC 21 bibliographic format (MAchine-Readable
+  Cataloging) and as such includes a subset of MARC fields, using language-based
+  tags rather than numeric ones. Definitions (semantics) of MODS elements may be found in the
+  appropriate section.  </p>
+<h2><a id="xml_structures">XML Structures</a></h2>
+<p>MODS is expressed using the XML (Extensible Markup Language)
+  schema language of the <a href="http://www.w3c.org/">World Wide Web Consortium</a>. XML provides markup for documents and is expected to allow more flexibility
+  and detail than HTML (Hypertext Markup Language). It serves well as a
+  syntax for metadata.</p>
+<p>By using the XML schema language, MODS defines main elements,
+  child elements (i.e. subelements), and attributes of elements and subelements.
+  Content of elements are included in the lowest level elements so as to
+  avoid &quot;mixed content&quot;, which is when some elements contain character data interspersed with child
+  elements. For instance, if &lt;<a href="titleinfo.html">titleInfo</a>&gt; contains subelements for &lt;title&gt;, &lt;partNumber&gt;, &lt;partName&gt;, then &lt;titleInfo&gt; is only a container tag to include the more specific elements &lt;title&gt;, &lt;partNumber&gt;, &lt;partName&gt; and does not contain any content data. (A &quot;container&quot; tag is one that it used only as an element that binds together child elements,
+  but contains no data other than tags.) </p>
+<p>Attributes may be associated with elements at any level and
+  are defined with the element with which they are associated. They serve
+  to modify the element. Common <a href="generalapp.html#list">attributes that occur throughout the schema</a> include: type, encoding, and authority.</p>
+<p>A MODS document contains a schema declaration that indicates
+  the MODS namespace. Within a record or group of records it is optional
+  to use the &quot;mods&quot; prefix before each element (and before the &quot;mods&quot; namespace declaration), since the MODS namespace is indicated in the record.
+  It is most useful to use the prefix &quot;mods:&quot; before each element when combining a MODS record with XML data from another
+  namespace, e.g. a MODS record within a <a href="http://www.loc.gov/standards/mets/">METS</a> document.</p>
+<p>The schema declaration for MODS Version 3 is:</p>
+<div class="indent1">&lt;mods xmlns:mods=&quot;http://www.loc.gov/mods/v3&quot;&gt; with
+  filename mods-3-5.xsd</div>
+<p>or if using &quot;mods&quot; as a prefix to each element:</p>
+<div class="indent1">&lt;mods: mods xmnls:mods=&quot;http://www.loc.gov/mods/v3&quot;&gt; with
+  filename mods-3-5.xsd</div>
+<p>An &quot;XSLT stylesheet&quot; (Extensible
+  Stylesheet Language Transformation) may be written to transform the MODS
+  data in some way for output. Examples include using a stylesheet to place
+  the record into a template with easy-to-understand element names in XML;
+  using a stylesheet to formulate a display that looks like a catalog card;
+  using a stylesheet to transform coded data into textual form.</p>
+<h2><a id="implementation_notes">Implementation
+  Notes</a></h2>
+<h3>Cataloging Rules</h3>
+<p> Any set of
+  cataloging rules may be used with MODS, as is the case with MARC 21.</p>
+<h3>Punctuation</h3>
+<p> If using International
+  Standard Bibliographic Description (ISBD) punctuation in creating MODS
+  records, punctuation should be retained if it occurs within an element,
+  but should be dropped between elements. If desired, an XSLT stylesheet
+  may be used to generate an ISBD display from the MODS elements and data.</p>
+<h4>EXAMPLES</h4>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;code&quot; authority=&quot;marccountry&quot;&gt;</strong>nyu<strong>&lt;/placeTerm&gt;</strong><br />
+    <strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>Ithaca, NY<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>Cornell University Press<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;copyrightDate&gt;</strong>1999<strong>&lt;/copyrightDate&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<p><strong>ISBD-based Display after XSLT transformation</strong></p>
+<div class="indent1">Ithaca, NY : Cornell University Press, c1999.</div>
+<h3>Relationship between MODS and MARC 21 Elements</h3>
+<p>Most
+  MODS elements have equivalent ones in MARC 21, although there are a few
+  additional elements or attributes in MODS that are particularly
+  important for digital resources, a special target population for MODS. An example
+  is &lt;<a href="physicaldescription.html#digitalorigin">digitalOrigin</a>&gt; under &lt;<a href="physicaldescription.html">physicalDescription</a>&gt;. The MODS Editorial Committee  keeps the MARC and MODS element sets in sync as
+  much as possible. </p>
+<h3>Mapping between MODS and MARC </h3>
+<p>When using the <a href="http://www.loc.gov/standards/marcxml/">MARCXML to MODS</a> stylesheet, 
+  elements not in the mapping will be dropped and some elements will
+  be mapped to a more general MODS element. Since MODS has fewer data elements than MARC,  records converted from MARC to MODS that are then converted
+  back to MARC will lose some data or specificity of tagging.</p>
+<h3>Order of Elements</h3>
+<p>The order of elements in the <a href="http://www.loc.gov/standards/mods/mods-3-0.xsd">MODS schema</a> does not 
+  assume display order. A stylesheet is used to control display order of MODS records.</p>
+<h3>Element Repeatability</h3>
+<p>All MODS top-level elements are repeatable except &lt;recordInfo&gt;. </p>
+<h3>MODS Record Identifier</h3>
+<p>It is expected that a MODS record would have its own unique ID in addition
+  to any other identifiers associated with the resource and indicated under &lt;<a href="http://www.loc.gov/standards/mods/userguide/identifier_2012.html">identifier</a>&gt;. The MODS record identifier is indicated in &lt;<a href="recordinfo.html#recordidentifier">recordInfo&gt;&lt;recordIdentifier</a>&gt;.</p>
+<h3><a name="root-elements" id="root-elements">Root Elements</a></h3>
+<p>All top-level MODS elements (those immediately subordinate to  &lt;MODS&gt;) are declared as global. Thus, they may be root elements  for instance documents, or imported into other schemas. Future work  includes specifying some elements at subsequent levels as global.</p>
+<h3>Mandatory Elements</h3>
+<p>No element is mandatory in a MODS record, however, every MODS record requires
+  at least one element. Applications may wish to develop profiles specifying
+  mandatory elements as needed. The DLF/Aquifer guidelines specify a profile for sharable metadata in the <a href="dlfaquifer.html">DLF/Aquifer Summary of Requirements and Recommendations</a> table  that indicates required, recommended and optional elements. </p>
+
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="introduction.html#skip_menu">Top</a></p>
+ 
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->July 12, 2013<!-- #EndDate -->
+      </p>  
+
+</td>
+</tr>	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->July 12, 2013<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

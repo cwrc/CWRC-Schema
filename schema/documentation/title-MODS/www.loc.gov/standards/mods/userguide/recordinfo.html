@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;recordInfo&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element recordinfo overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;recordInfo&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="recordinfo.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr>
+  <td>&nbsp;</td>
+  <td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;recordInfo&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;recordInfo&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <td scope="col"><strong>&lt;recordInfo&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">Information about the metadata record.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>displayLabel; altRepGroup; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="recordinfo.html#recordcontentsource">recordContentSource</a>&gt; &lt;<a href="recordinfo.html#recordcreationdate">recordCreationDate</a>&gt; &lt;<a href="recordinfo.html#recordchangedate">recordChangeDate</a>&gt; &lt;<a href="recordinfo.html#recordidentifier">recordIdentifier</a>&gt; &lt;<a href="recordinfo.html#recordorigin">recordOrigin</a>&gt;
+        &lt;<a href="recordinfo.html#languageofcataloging">languageOfCataloging</a>&gt; &lt;<a href="recordinfo.html#descriptionstandard">descriptionStandard</a>&gt; </strong></td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="recordinfo.html#guidelines">GUIDELINES</a> | <a href="recordinfo.html#examples">EXAMPLES</a> | <a href="recordinfo.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>&lt;recordInfo&gt; is a container element that includes subelements relating to information necessary for managing metadata. </p>
+<p>This type of administrative information can help establish the provenance of a metadata record and may enable better interpretation of the content of the record. &lt;recordInfo&gt; may also include information that is relevant only to the creating or managing
+  institution.</p>
+<p>&lt;recordInfo&gt; is not repeatable.</p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> require the use of one &lt;recordInfo&gt; element with the subelement &lt;languageOfCataloging&gt; to record the language of the text in the MODS record. See the recommendations for each of
+  the subelements below for specific mention of the types of information useful to service providers.</p>
+<p>Within the OAI context, information about the metadata record may also be recorded in an optional &lt;about&gt; container outside of the &lt;metadata&gt; container. The information contained in the MODS &lt;recordInfo&gt; may be repeated in the &lt;about&gt; container for the MODS
+  record, but is not required.</p>
+<p>See the &lt;<a href="dlfaquifer.html#recordinfo">recordInfo</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Aggregator information: The &lt;recordInfo&gt; field contains information that will be of use to aggregators in determining how best to understand and process a record for use in the aggregation. None of the fields are likely to be displayed to end users of the
+  aggregation interface, or be indexed for end user search.</p>
+<p><a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"><i>The DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" /> discusses issues related to &lt;recordInfo&gt; in the &quot;Providing Supplemental Documentation to OAI Service Providers&quot; section.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">altRepGroup; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p class="nomargin">The following subelements are described below:</p>
+<ul>
+  <li>&lt;<a href="recordinfo.html#recordcontentsource">recordContentSource</a>&gt; </li>
+  <li>&lt;<a href="recordinfo.html#recordcreationdate">recordCreationDate</a>&gt; </li>
+  <li>&lt;<a href="recordinfo.html#recordchangedate">recordChangeDate</a>&gt; </li>
+  <li>&lt;<a href="recordinfo.html#recordidentifier">recordIdentifier</a>&gt; </li>
+  <li>&lt;<a href="recordinfo.html#recordorigin">recordOrigin</a>&gt; </li>
+  <li>&lt;<a href="recordinfo.html#languageofcataloging">languageOfCataloging</a>&gt; </li>
+  <li>&lt;<a href="recordinfo.html#descriptionstandard">descriptionStandard</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 id="recordcontentsource" class="border">Subelement: &lt;recordContentSource&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">The code or name of the organization that either created or modified the original record.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>This information can be useful to trace the provenance of a particular metadata record.</p>
+<p>The name or code should be pulled from an authoritative list and indicated in the <i>authority</i> attribute.</p>
+<p>&lt;recordContentSource&gt; should be repeated for each code or name recorded.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> recommend the use of &lt;recordContentSource&gt; to indicate the code or name of the organization that either created or modified the original record. The use of the <i>authority</i> attribute is also recommended.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken. </div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable, e.g. authority=&quot;naf&quot;.<br />
+  <br />
+  The Library of Congress maintains a list of <a href="http://www.loc.gov/standards/sourcelist/organization.html"> <em>Organization Code Source Codes</em></a><a href="http://www.loc.gov/marc/sourcecode/organization/organizationsource.html"></a>.<br />
+  <br />
+  If &quot;marcorg&quot; is used, the value in &lt;recordContentSource&gt; is from the <a href="http://www.loc.gov/marc/organizations/"> MARC Code List for Organizations</a>.<br />
+  <br />
+  If the <i>authority</i> attribute is not included, the value is presumed to be textual (i.e. a name of an institution).</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;recordContentSource&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 id="recordcreationdate" class="border">Subelement: &lt;recordCreationDate&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">The date or date and time on which the original MODS record was first created.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>If a structured date is used, indicate the formatting source using the <i>encoding</i> attribute.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> make no specific recommendation for the use of &lt;recordCreationDate&gt;.</p>
+<p>Within the OAI context, service providers are more likely to rely on the &lt;datestamp&gt; within the OAI header for information about when the record was created than this date.</p>
+<p>If this subelement is used, follow the DLF/Aquifer guidelines outlined in the date section of the &lt;<a href="origininfo.html">originInfo</a>&gt; element with the exception that this subelement should not be identified as the <i>keyDate</i>.</p>
+<p>The use of the <i>encoding</i> attribute is optional. If used, the RDF/Aquifer guidelines recommend using the following value for the <i>encoding</i> attribute: w3cdtf (see <a href="generalapp.html#list"> Attributes used throughout the schema</a> for description). </p>
+<p>The use of the <i>keyDate</i> is not appropriate. <i>keyDate</i> is used to specify a single date which should be used by OAI service providers for date indexing, sorting, and display. Only one date element should be specified as a key date. The DLF/Aquifer
+  guidelines recommend that the <i>keyDate</i> appear in the &lt;<a href="origininfo.html">originInfo</a>&gt; element.</p>
+<p>The use of the <i>qualifier </i>attribute within date information in &lt;recordInfo&gt; is not recommended. If the creation date is not known or must be inferred, it is probably not useful to include.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;recordCreationDate&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 id="recordchangedate" class="border">Subelement: &lt;recordChangeDate&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">The date or date and time the original MODS record was last modified.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;recordChangeDate&gt; may serve as a version identifier for the record.</p>
+<p>If a structured date is used, indicate the formatting source using the <i>encoding</i> attribute.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> make no specific recommendation on the use of &lt;recordChangeDate&gt;. </p>
+<p>Within the OAI context, service providers are more likely to rely on the &lt;datestamp&gt; within the OAI header for information about when the record was last modified than this date.</p>
+<p>If this subelement is used, follow the DLF/Aquifer guidelines outlined in the date section of the &lt;<a href="origininfo.html">originInfo</a>&gt; element with the exception that this subelement should not be identified as the <i>keyDate</i>. Use of the <i>encoding</i> attribute is optional. If used, the DLF/Aquifer guidelines recommend using the following value for the <i>encoding</i> attribute: w3cdtf (see <a href="generalapp.html#list"> Attributes used throughout the schema</a> for description).</p>
+<p>The use of the <i>keyDate</i> is not appropriate. <i>keyDate</i> is used to specify a single date which should be used by OAI service providers for date indexing, sorting, and display. Only one date element should be specified as a key date. The DLF/Aquifer
+  guidelines recommend that the <i>keyDate</i> appear in the &lt;<a href="origininfo.html">originInfo</a>&gt; element.</p>
+<p>The use of the <i>qualifier</i> attribute within date information in &lt;recordInfo&gt; is not recommended. If the change date is not known or must be inferred, it is probably not useful to include.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;recordChangeDate&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 id="recordidentifier" class="border">Subelement: &lt;recordIdentifier&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains the system control number assigned by the organization creating, using, or distributing the record.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>source; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>There should be only one &lt;recordIdentifier&gt; in a record.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> make no specific recommendation on the use of &lt;recordIdentifier&gt;. Within the OAI context, service providers are likely to rely on the &lt;identifier&gt; in the OAI header, rather than
+  the &lt;recordIdentifier&gt;. </p>
+<p>If &lt;recordIdentifier&gt; is used, the DLF/Aquifer guidelines recommend the use of the <i>source</i> attribute if possible. The source name should be from a controlled list if possible (e.g., <a href="http://www.loc.gov/standards/sourcelist/organization.html"> <em>Organization Code Source Codes</em></a><a href="http://www.loc.gov/marc/sourcecode/organization/organizationsource.html"></a>), although there is not a way to indicate the controlled
+  list.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">source</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Contains the code or name of the organization whose system control number is located in the &lt;recordIdentifier&gt; element.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">The Library of Congress maintains <a href="http://www.loc.gov/standards/sourcelist/organization.html"> <em>Organization Code Source Codes</em></a><a href="http://www.loc.gov/marc/sourcecode/organization/organizationsource.html"></a>, an online listing of source values.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;recordIdentifier&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 id="recordorigin" class="border">Subelement: &lt;recordOrigin&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Shows the origin or provenance of the MODS record. </td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Use this subelement to record information about the origin, or provenance of the MODS record including what methods were used to prepare the MODS record (machine generated or human prepared) and what transformations have been applied (e.g., the result of
+  converting an existing MARC 21 record to MARCXML and to MODS).</p>
+<p>&lt;recordOrigin&gt; can be free text or an institution may establish locally-controlled values for machine processing and consistency.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> recommend the use of &lt;recordOrigin&gt;. The information here can be useful for a service provider to understand specific encoding conventions within element values or why certain types
+  of information appear in certain places (for example, if the MODS record was transformed from a MARC record using the standard Library of Congress stylesheet).</p>
+<p>The DLF/Aquifer guidelines recommend using free text with the stipulation that values be understandable outside of the local context of the creating institution. Institutions may include as much or as little detail as desired in this element; however, information
+  such as whether a transformation was done by machine or by hand, and if a standard set of transformation rules was used are useful to service providers.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;recordOrigin&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 id="languageofcataloging" class="border">Subelement: &lt;languageOfCataloging&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">The language of the text of the cataloging in the MODS record.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>objectPart; usage; displayLabel; altRepGroup</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="recordinfo.html#languageterm">languageTerm</a>&gt;</strong><strong>&lt;<a href="recordinfo.html#scriptterm">scriptTerm</a>&gt;</strong></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;languageOfCataloging&gt; is a container element for the subelement &lt;languageTerm&gt; where the actual language is recorded.</p>
+<p>Language may also be recorded using the <i>lang</i> attribute within each specific top-level element(s) to indicate the language of the metadata in a particular element.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> require the use of this subelement and its subelement &lt;languageTerm&gt; to record the primary language of the values found within MODS elements.</p>
+<p>If additional language(s) are used this should be indicated with the <i>lang</i> attribute within the specific top-level element(s) in which the additional language(s) appears.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">objectPart</p>
+<div class="indent1">Defined for consistency with &lt;language&gt; .  Unlikely to be used with &lt;languageOfCataloging&gt; </div>
+<p class="attribute">usage</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Primacy of the language vis-a-vis the record.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is used with <em>usage</em>=&quot;primary&quot; when the main language of the record is specified in the element.</div>
+<p class="attribute">displayLabel</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Provides additional text associated with the subject information if needed for display purposes.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2"> Include the text preferred and capitalization, but do not include delimiters such as colons.</div>
+<p class="attribute">altRepGroup</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>The following subelements are enumerated below:</p>
+<ul>
+  <li>&lt;<a href="recordinfo.html#languageterm">languageTerm</a>&gt; </li>
+  <li>&lt;<a href="recordinfo.html#scriptterm">scriptTerm</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 id="languageterm" class="border">Subelement of &lt;languageOfCataloging&gt;: &lt;languageTerm&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Contains the language(s) of the metadata record.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;languageTerm&gt; may be expressed in textual or coded form.</p>
+<p>If in coded form, the source of the code is contained in the value of the <i>authority</i> attribute. If no <i>authority</i> is given, it is assumed that the information is textual. </p>
+<p>If there is more than one representation of the same language (e.g., text and code), &lt;languageTerm&gt; is repeated. If the record is in more than one language, &lt;languageOfCataloging&gt; is repeated. </p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> require one pair of &lt;languageTerm&gt; elements representing the primary language of the record wrapped in a single &lt;language&gt; element. One of these &lt;languageTerm&gt; elements should carry
+  the attribute <i>type</i>=&quot;text&quot; and the other should have <i>type</i>=&quot;code&quot;. Additional pairs of &lt;languageTerm&gt; elements representing secondary languages may be included in separate &lt;language&gt; elements.</p>
+<p>The DLF/Aquifer guidelines require using the value &quot;iso639-2b&quot; for the <i>authority</i> attribute of the &lt;languageTerm&gt; element.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Identifies what type of &lt;languageTerm&gt; is recorded.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute may be used with the following values:
+  <ul>
+    <li><strong>text</strong> &#8211; This value is used to express language in a textual form. </li>
+    <li><strong>code</strong> &#8211; This value is used to express language in a coded form. </li>
+  </ul>
+</div>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken. </div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute may contain the following values:
+  <ul>
+    <li><strong>iso639-2b</strong> &#8211; A bibliographic language code from ISO 639-2 (<i>Codes for the representation of names of languages: alpha-3 code</i>). The bibliographic language codes are identical to both NISO Z39.53 and the <a href="http://www.loc.gov/marc/languages/"> MARC Code List for Languages</a>. </li>
+    <li><strong>rfc3066</strong> &#8211; A language identifier as specified by the <i>Internet Best Current Practice</i> specification <a href="http://www.ietf.org/rfc/rfc3066.txt"> RFC3066</a>. This value includes an ISO 639-1 (alpha-2) or ISO 639-2 (alpha-3) language code with optional secondary subtags. </li>
+    <li><strong>iso639-3</strong> &#8211; A language code from <a href="http://www.sil.org/iso639-3/"> ISO 639-3</a> (<i>Codes for the representation of names of languages - Part 3: Alpha-3 code for comprehensive coverage of languages</i>). </li>
+    <li><strong>rfc4646</strong> &#8211; A language identifier as specified by the <i>Internet Best Current Practice</i> specification <a href="http://www.ietf.org/rfc/rfc4646.txt"> RFC4646</a>. This document gives guidance on the use of ISO 639-1, ISO 639-2, and ISO 639-3 language identifiers with optional secondary subtags and extensions.</li>
+  </ul>
+</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">ID; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;languageTerm&gt;.</p>
+
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 id="scriptterm" class="border">Subelement of &lt;languageOfCataloging&gt;: &lt;scriptTerm&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="585" scope="col">Contains the script(s) of the metadata record.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;scriptTerm&gt; may be expressed in textual or coded form.</p>
+<p>If in coded form, the source of the code is contained in the value of the <i>authority</i> attribute. If no <i>authority</i> is given, it is assumed that the content is textual. </p>
+<p>If there is more than one representation of the same script (e.g., text and code), &lt;scriptTerm&gt; is repeated. If the record is in more than one script, &lt;languageOfCataloging&gt; is repeated. </p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Identifies what type of &lt;scriptTerm&gt; is recorded.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute may be used with the following values:
+  <ul>
+    <li><strong>text</strong> &#8211; This value is used to express script in a textual form. </li>
+    <li><strong>code</strong> &#8211; This value is used to express script in a coded form. </li>
+  </ul>
+</div>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable, e.g. <i>authority</i>=&quot;iso15924&quot;. The Library of Congress maintains an online listing: <a href="http://www.loc.gov/standards/sourcelist/script.html"> Script Code and Term Source Codes</a>.</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;scriptTerm&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 id="descriptionstandard" class="border">Subelement: &lt;descriptionStandard&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="497" scope="col">Designates the rules used for the content of the description, if applicable.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Identify in &lt;descriptionStandard&gt; which national or specialized description conventions, such as AACR2-based manuals for special forms of materials, were used, if any.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken. </div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">The name of the authoritative list for a controlled value. The Library of Congress maintains an online listing of <a href="http://www.loc.gov/standards/sourcelist/descriptive-conventions.html"> Description Convention Source Codes</a>.</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;descriptionStandard&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordCreationDate encoding=&quot;marc&quot;&gt;</strong>030211<strong>&lt;/recordCreationDate&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordCreationDate&gt;</strong>October 8, 2002<strong>&lt;/recordCreationDate&gt;</strong><br />
+    <strong>&lt;recordOrigin&gt;</strong>machine generated<strong>&lt;/recordOrigin&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordContentSource authority=&quot;marcorg&quot;&gt;</strong>CStmoGRI<strong>&lt;/recordContentSource&gt;</strong><br />
+    <strong>&lt;descriptionStandard authority=&quot;marcdescription&quot;&gt;</strong>cco<strong>&lt;/descriptionStandard&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong><br />
+    [<i>Record was created by Getty Research Institute using rules specified in Cataloging Cultural Objects</i>]</div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordContentSource&gt;</strong>Library of Congress<strong>&lt;/recordContentSource&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordIdentifier source=&quot;dlc&quot;&gt;</strong>85753651<strong>&lt;/recordIdentifier&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordIdentifier&gt;</strong>2001627090<strong>&lt;/recordIdentifier&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordChangeDate encoding=&quot;iso8601&quot;&gt;</strong>20020311<strong>&lt;/recordChangeDate&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordChangeDate encoding=&quot;iso8601&quot;&gt;</strong>20000406144503.0 <strong>&lt;/recordChangeDate&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordCreationDate encoding=&quot;w3cdtf&quot;&gt;</strong>2001-07-12<strong>&lt;/recordCreationDate&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordContentSource&gt;</strong>Universit&eacute; Ren&eacute; Descartes Biblioth&egrave;que <strong>&lt;/recordContentSource&gt;</strong><br />
+    <strong>&lt;recordOrigin&gt;</strong>human prepared<strong>&lt;/recordOrigin&gt;</strong><br />
+    <strong>&lt;languageOfCataloging authority=&quot;iso639-2b&quot;&gt;</strong>fre<strong>&lt;/languageOfCataloging&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;recordInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;recordContentSource authority=&quot;oclcorg&quot;&gt;</strong>UIU<strong>&lt;/recordContentSource&gt;</strong><br />
+    <strong>&lt;recordOrigin&gt;</strong>Record has been transformed into MODS from a qualified Dublin Core record using a stylesheet available at http://www.sample.edu/. Metadata originally created in a locally modified version of qualified Dublin Core (data dictionary
+    available: http://www.sample.edu/.)<strong>&lt;/recordOrigin&gt;</strong><br />
+    <strong>&lt;languageOfCataloging&gt;</strong></div>
+  <div class="indent3"><strong>&lt;languageTerm authority= &quot;iso639-2&quot;&gt;</strong>eng<strong>&lt;/languageTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/languageOfCataloging&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+</div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;recordInfo&gt;&lt;recordContentSource&gt; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd040.html"> 040</a>, subfield with authority=&quot;marcorg&quot; <br />
+  Note that MODS does not mandate the use of a code from the <a href="http://www.loc.gov/marc/organizations/"> MARC Code List for Organizations</a>.</p>
+<p>&lt;recordInfo&gt;&lt;recordCreationDate&gt; with encoding=&quot;marc&quot; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd008.html"> 008</a>/00-05 </p>
+<p>&lt;recordInfo&gt;&lt;recordChangeDate&gt; with encoding=&quot;iso8601&quot; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd005.html"> 005</a></p>
+<p>&lt;recordInfo&gt;&lt;recordIdentifier&gt; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd001.html"> 001</a>.</p>
+<p>&lt;recordInfo&gt;&lt;recordChangeDate&gt; with the <i>source</i> attribute &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd003.html"> 003</a>, except that MODS does not mandate the use of a code from the <a href="http://www.loc.gov/marc/organizations/"> MARC Code List for Organizations</a>.</p>
+<p>There is no MARC equivalent to &lt;recordInfo&gt;&lt;recordOrigin&gt;.</p>
+<p>&lt;recordInfo&gt;&lt;languageOfCataloging&gt; with the &lt;languageTerm&gt; subelement and authority=&quot;iso 639-2b&quot; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd040.html"> 040</a> subfield b. <br />
+  Note that MODS allows authorities other than ISO 639-2b to be used.</p>
+<p>&lt;recordInfo&gt;&lt;descriptionStandard&gt; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd040.html"> 040$e</a> or <a href="http://www.loc.gov/marc/bibliographic/bdleader.html"> Leader/18</a>. </p>
+<p>See also <a href="http://www.loc.gov/mods/mods-mapping.html#recordinformation"> <i>MARC Mapping to MODS</i> for the &lt;recordInfo&gt; element</a> .</p>
+<h3>Dublin Core Mapping</h3>
+<p>The <i><a href="http://www.loc.gov/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping </a></i>makes no recommendations about mapping &lt;recordInfo&gt; to a simple Dublin Core element.</p>
+<p>For the purposes of the required Dublin Core records within the OAI context, information contained within a MODS &lt;recordInfo&gt; element could be mapped to an OAI &lt;about&gt; container for each OAI Dublin Core record disseminated from a MODS item, or, alternatively,
+  this information is documented in a publicly accessible place and referenced from the &lt;about&gt; container or the &lt;setDescription&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="recordinfo.html#skip_menu">Top</a></p>
+
+
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->September 13, 2012<!-- #EndDate -->
+      </p></td>
+</tr> 	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->September 13, 2012<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

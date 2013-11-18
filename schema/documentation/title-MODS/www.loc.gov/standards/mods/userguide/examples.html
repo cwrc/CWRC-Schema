@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MODS Full Record Examples (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element examples overview metadata object description schema web site library congress xml" />
+<meta name="description" content="MODS Full Record Examples (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="examples.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo;
+  <!-- Update breadcrumb with name of element, class=selected --> 
+      <span class="selected">MODS Full Record Examples</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>MODS Full Record Examples</h1>
+
+<h2>Table of Contents</h2>
+      <p>These examples show how MODS elements are used in a complete record. There are no assumptions about what constitutes &quot;full&quot;; these are not intended to conform to any particular definition of what elements are required in a &quot;full&quot; MODS record (according to the MODS schema, there are not required elements, but at least one element must be present under the &lt;mods&gt; root). Additional MODS examples are found on the <a href="http://www.loc.gov/standards/mods/mods-home.html">MODS homepage</a>. </p>
+
+      <ol style="font-size: 80%">
+        <li><a href="examples.html#archived_website">Archived
+            Website</a></li>
+        <li><a href="examples.html#digitized_book">Digitized Book </a></li>
+        <li><a href="examples.html#digitized_photograph">Digitized Photograph</a></li>
+        <li><a href="examples.html#journal_article">Journal Article</a></li>
+      </ol>
+
+
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="examples.html#skip_menu">Top</a></p>
+<h2 id="archived_website" class="border">Archived Website</h2>
+
+<p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</p>
+
+<p><strong>&lt;modsCollection xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://www.loc.gov/mods/v3&quot; xsi:schemaLocation=&quot;http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd&quot;&gt;<br />
+&lt;mods version=&quot;3.3&quot;&gt;</strong></p>
+
+<div class="indent1"><strong>&lt;titleInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;title&gt;</strong>FranUlmer.com -- Home Page<strong>&lt;/title&gt;</strong></div>
+<div class="indent1"><strong>&lt;/titleInfo&gt;</strong><br />
+<strong>&lt;titleInfo type=&quot;alternative&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;title&gt;</strong>Fran Ulmer, Democratic candidate for Governor, Alaska, 2002<strong>&lt;/title&gt;</strong></div>
+<div class="indent1"><strong>&lt;/titleInfo&gt;</strong><br />
+<strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;namePart&gt;</strong>Ulmer, Fran<strong>&lt;/namePart&gt;</strong></div>
+<div class="indent1"><strong>&lt;/name&gt;</strong><br />
+<strong>&lt;genre&gt;</strong>Website<strong>&lt;/genre&gt;</strong><br />
+<strong>&lt;originInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;dateCaptured point=&quot;start&quot; encoding=&quot;iso8601&quot;&gt;</strong>20020702<strong> &lt;/dateCaptured&gt;</strong><br />
+<strong>&lt;dateCaptured point=&quot;end&quot; encoding=&quot;iso8601&quot;&gt; </strong>20021203<strong>&lt;/dateCaptured&gt;</strong></div>
+<div class="indent1"><strong>&lt;/originInfo&gt;</strong><br />
+<strong>&lt;language&gt;</strong></div>
+<div class="indent2"><strong>&lt;languageTerm</strong> <strong>authority=&quot;iso639-2b&quot;</strong>&gt;eng<strong>&lt;/languageTerm&gt;</strong></div>
+<div class="indent1"><strong>&lt;/language&gt;</strong><br />
+<strong>&lt;physicalDescription&gt;</strong></div>
+<div class="indent2"><strong>&lt;internetMediaType&gt;</strong>text/html<strong>&lt;/internetMediaType&gt;</strong><br />
+<strong>&lt;internetMediaType&gt;</strong>image/jpg<strong>&lt;/internetMediaType&gt;</strong></div>
+<div class="indent1"><strong>&lt;/physicalDescription&gt;</strong><br />
+<strong>&lt;abstract&gt;</strong>Website promoting the candidacy of Fran Ulmer, Democratic candidate for Governor, Alaska, 2002. Includes candidate biography, issue position statements, campaign contact information, privacy policy and campaign news press releases. Site features enable visitors to sign up for campaign email list, volunteer, make campaign contributions and follow links to other internet locations. <strong>&lt;/abstract&gt;</strong><br />
+<strong>&lt;subject&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>Elections<strong>&lt;/topic&gt;</strong><br />
+<strong>&lt;geographic&gt;</strong>Alaska<strong>&lt;/geographic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;subject&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>Governors<strong>&lt;/topic&gt;</strong><br />
+<strong>&lt;geographic&gt;</strong>Alaska<strong>&lt;/geographic&gt;</strong><br />
+<strong>&lt;topic&gt;</strong>Election<strong>&lt;/topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;subject&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>Democratic Party (AK)<strong>&lt;/topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;relatedItem type=&quot;host&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+<div class="indent3"><strong>&lt;title&gt;</strong>Election 2002 Web Archive<strong>&lt;/title&gt;</strong></div>
+<div class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+<strong>&lt;location&gt;</strong></div>
+<div class="indent3"><strong>&lt;url&gt;</strong>http://www.loc.gov/minerva/collect/elec2002/<strong>&lt;/url&gt;</strong></div>
+<div class="indent2"><strong>&lt;/location&gt;</strong></div>
+<div class="indent1"><strong>&lt;/relatedItem&gt;</strong><br />
+&lt;<strong>location&gt;</strong></div>
+<div class="indent2"><strong>&lt;url</strong> <strong>displayLabel=&quot;Active site (if available)&quot;</strong>&gt;http://www.franulmer.com/<strong>&lt;/url&gt;</strong></div>
+<div class="indent1"><strong>&lt;/location&gt;</strong><br />
+<strong>&lt;location&gt;</strong></div>
+<div class="indent2"><strong>&lt;url </strong><strong>displayLabel=&quot;Archived site&quot;&gt;</strong>http://wayback-cgi1.alexa.com/e2002/*/http://www.franulmer.com/<strong>&lt;/url&gt;</strong></div>
+<div class="indent1"><strong>&lt;/location&gt;</strong></div>
+
+<p><strong>&lt;/mods&gt;</strong></p>
+<p><strong>&lt;/modsCollection&gt;</strong></p>
+
+
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="examples.html#skip_menu">Top</a></p>
+<h2 id="digitized_book" class="border">Digitized Book</h2>
+
+<p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; </p>
+
+<p><strong>&lt;modsCollection xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://www.loc.gov/mods/v3&quot; xsi:schemaLocation=&quot;http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd&quot;&gt; </strong></p>
+<p><strong>&lt;mods version=&quot;3.3&quot;&gt;</strong></p>
+
+<div class="indent1"> <strong>&lt;titleInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;title&gt;</strong>At Gettysburg, or, What a Girl Saw and Heard of the Battle: A True Narrative<strong>&lt;/title&gt;</strong></div>
+<div class="indent1"><strong>&lt;/titleInfo&gt;</strong><br />
+<strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;namePart&gt;</strong>Alleman, Tillie Pierce [1848-1914]<strong>&lt;/namePart&gt;</strong><br />
+<strong>&lt;role&gt;</strong></div>
+<div class="indent3"><strong>&lt;roleTerm type=&quot;code&quot; authority=&quot;marcrelator&quot;&gt;</strong>aut<strong>&lt;/roleTerm&gt;</strong><br />
+<strong>&lt;roleTerm type=&quot;text&quot; authority=&quot;marcrelator&quot;&gt;</strong>Author<strong>&lt;/roleTerm&gt;</strong></div>
+<div class="indent2"><strong>&lt;/role&gt;</strong></div>
+<div class="indent1"><strong>&lt;/name&gt;</strong><br />
+<strong>&lt;typeOfResource&gt;</strong>text<strong>&lt;/typeOfResource&gt;</strong><br />
+<strong>&lt;originInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;place&gt;</strong></div>
+<div class="indent3"><strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>New York<strong>&lt;/placeTerm&gt;</strong></div>
+<div class="indent2"><strong>&lt;/place&gt;</strong></div>
+<div class="indent2"><strong>&lt;publisher&gt;</strong>W. Lake Borland<strong>&lt;/publisher&gt;</strong><br />
+<strong>&lt;dateIssued keyDate=&quot;yes&quot; encoding=&quot;w3cdtf&quot;&gt;</strong>1889<strong>&lt;/dateIssued&gt;</strong></div>
+<div class="indent1"><strong>&lt;/originInfo&gt;</strong><br />
+<strong>&lt;language&gt;</strong></div>
+<div class="indent2"><strong>&lt;languageTerm</strong> <strong>authority=&quot;iso639-2b&quot;</strong>&gt;eng<strong>&lt;/languageTerm&gt;</strong><br />
+<strong>&lt;languageTerm type=&quot;text&quot;&gt;</strong>English<strong>&lt;/languageTerm&gt;</strong></div>
+<div class="indent1"><strong>&lt;/language&gt;</strong><br />
+<strong>&lt;physicalDescription&gt;</strong></div>
+<div class="indent2"><strong>&lt;internetMediaType&gt;</strong>text/html<strong>&lt;/internetMediaType&gt;</strong><br />
+<strong>&lt;digitalOrigin&gt;</strong>reformatted digital<strong>&lt;/digitalOrigin&gt;</strong></div>
+<div class="indent1"><strong>&lt;/physicalDescription&gt;</strong><br />
+<strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic &gt;</strong>Gettysburg, Battle of, Gettysburg, Pa., 1863<strong>&lt;/topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>Gettysburg (Pa.) -- History -- Civil War, 1861-1865<strong>&lt;/topic&gt;</strong><br />
+<strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;subject authority=&quot;lcsh&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>United States -- History -- Civil War, 1861-1865 -- Campaigns<strong>&lt;/topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;classification authority=&quot;lcc&quot;&gt;</strong>E475.53 .A42<strong>&lt;/classification&gt;</strong><br />
+<strong>&lt;relatedItem type=&quot;host&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;titleInfo type=&quot;uniform&quot; authority=&quot;dlfaqcoll&quot;&gt;</strong></div>
+<div class="indent3"><strong>&lt;title&gt;</strong>A Celebration of Women Writers: Americana<strong>&lt;/title&gt;</strong></div>
+<div class="indent2"><strong>&lt;/titleInfo&gt;</strong></div>
+<div class="indent1"><strong>&lt;/relatedItem&gt;</strong><br />
+&lt;<strong>location&gt;</strong></div>
+<div class="indent2"><strong>&lt;url usage=&quot;primary display&quot; access=&quot;object in context&quot;&gt;</strong> http://digital.library.upenn.edu/women/alleman/gettysburg/gettysburg.html<br />
+<strong>&lt;/url&gt;</strong></div>
+<div class="indent1"><strong>&lt;/location&gt;</strong><br />
+<strong>&lt;accessCondition&gt;</strong>Personal, noncommercial use of this item is permitted in the United States of America. Please see http://digital.library.upenn.edu/women/ for other rights and restrictions that may apply to this resource.<br />
+<strong>&lt;/accessCondition&gt;</strong><br />
+<strong>&lt;recordInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;recordContentSource&gt;</strong>University of Pennsylvania Digital Library<strong>&lt;/recordContentSource&gt;</strong><br />
+<strong>&lt;recordOrigin&gt;</strong>MODS auto-converted from a simple Online Books Page metadata record. For details, see http://onlinebooks.library.upenn.edu/mods.html<strong>&lt;/recordOrigin&gt;</strong><br />
+<strong>&lt;languageOfCataloging&gt;</strong></div>
+<div class="indent3"><strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;iso639-2b&quot;&gt;</strong>eng<strong>&lt;/languageTerm&gt;</strong></div>
+<div class="indent2"><strong>&lt;/languageOfCataloging&gt;</strong></div>
+<div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+
+<p><strong>&lt;/mods&gt;</strong></p>
+
+
+<p><strong>&lt;/modsCollection&gt;</strong></p>
+
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="examples.html#skip_menu">Top</a></p>
+<h2 id="digitized_photograph" class="border">Digitized Photograph</h2>
+
+<p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; </p>
+
+
+<p><strong>&lt;modsCollection xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://www.loc.gov/mods/v3&quot; xsi:schemaLocation=&quot;http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd&quot;&gt;</strong></p>
+
+<p><strong>&lt;mods version=&quot;3.3&quot;&gt;</strong></p>
+
+<div class="indent1"><strong>&lt;titleInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;title&gt;</strong>Telescope Peak from Zabriskie Point<strong>&lt;/title&gt;</strong></div>
+<div class="indent1"><strong>&lt;/titleInfo&gt;</strong><br />
+<strong>&lt;titleInfo type=&quot;alternative&quot; &gt;</strong></div>
+<div class="indent2"><strong>&lt;title&gt;</strong>Telescope PK from Zabriskie Pt.<strong>&lt;/title&gt;</strong></div>
+<div class="indent1"><strong>&lt;/titleInfo&gt;</strong><br />
+<strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;namePart type=&quot;family&quot;&gt;</strong>Cushman<strong>&lt;/namePart&gt;</strong><br />
+<strong>&lt;namePart type=&quot;given&quot;&gt;</strong>Charles Weever<strong>&lt;/namePart&gt;</strong><br />
+<strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1896-1972<strong>&lt;/namePart&gt;</strong><br />
+<strong>&lt;role&gt;</strong></div>
+<div class="indent3"><strong>&lt;roleTerm type=&quot;code&quot;  authority=&quot;marcrelator&quot;&gt;</strong>pht<strong>&lt;/roleTerm&gt;</strong><br />
+<strong>&lt;roleTerm type=&quot;text&quot; authority=&quot;marcrelator&quot;&gt;</strong>Photographer<strong>&lt;/roleTerm&gt;</strong></div>
+<div class="indent2"><strong>&lt;/role&gt;</strong></div>
+<div class="indent1"><strong>&lt;/name&gt;</strong><br />
+<strong>&lt;typeOfResource&gt;</strong>still image<strong>&lt;/typeOfResource&gt;</strong><br />
+<strong>&lt;genre authority=&quot;gmgpc&quot;&gt;</strong>Landscape photographs<strong>&lt;/genre&gt;</strong><br />
+<strong>&lt;originInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;dateCreated encoding=&quot;w3cdtf&quot; keyDate=&quot;yes&quot;&gt;</strong>1955-03-22<strong>&lt;/dateCreated&gt;</strong><br />
+<strong>&lt;copyrightDate encoding=&quot;w3cdtf&quot;&gt;</strong>2003<strong>&lt;/copyrightDate&gt;</strong></div>
+<div class="indent1"><strong>&lt;/originInfo&gt;</strong><br />
+<strong>&lt;physicalDescription&gt;</strong></div>
+<div class="indent2"><strong>&lt;internetMediaType&gt;</strong>image/jpeg<strong>&lt;/internetMediaType&gt;</strong><br />
+<strong>&lt;digitalOrigin&gt;</strong>reformatted digital<strong>&lt;/digitalOrigin&gt;</strong><br />
+<strong>&lt;note&gt;</strong> Original 35mm slide was digitized in 2003 as a TIFF image. Display versions in JPEG format in three sizes are available.<strong>&lt;/note&gt;</strong><br />
+<strong>&lt;note&gt;</strong>100 f 6.3 tl<strong>&lt;/note&gt;</strong></div>
+<div class="indent1"><strong>&lt;/physicalDescription&gt;</strong><br />
+<strong>&lt;subject authority=&quot;lctgm&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>Mountains<strong>&lt;/topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;subject authority=&quot;lctgm&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>Snow<strong>&lt;/topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;subject&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>Telescope Peak (Inyo County, Calif.)<strong>&lt;/topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;subject&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>Zabriskie Point (Calif.)<strong>&lt;/topic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;subject&gt;</strong></div>
+<div class="indent2"><strong>&lt;hierarchicalGeographic&gt;</strong></div>
+<div class="indent3"><strong>&lt;country&gt;</strong>United States<strong>&lt;/country&gt;</strong><br />
+<strong>&lt;state&gt;</strong>California<strong>&lt;/state&gt;</strong><br />
+<strong>&lt;county&gt;</strong>Inyo<strong>&lt;/county&gt;</strong></div>
+<div class="indent2"><strong>&lt;/hierarchicalGeographic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;relatedItem type=&quot;original&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;originInfo&gt;</strong></div>
+<div class="indent3"><strong>&lt;dateCreated encoding=&quot;w3cdtf&quot; keyDate=&quot;yes&quot;&gt;</strong>1955-03-22<strong>&lt;/dateCreated&gt;</strong></div>
+<div class="indent2"><strong>&lt;/originInfo&gt;</strong><br />
+<strong>&lt;physicalDescription&gt;</strong></div>
+<div class="indent3"><strong>&lt;form authority=&quot;gmd&quot;&gt;</strong>graphic<strong>&lt;/form&gt;</strong><br />
+<strong>&lt;extent&gt;</strong>1 slide : col. ; 35mm<strong>&lt;/extent&gt;</strong><br />
+<strong>&lt;note&gt;</strong>Original 35mm slide was digitized in 2003 as a TIFF image. Display versions in JPEG format in three sizes are available.<strong>&lt;/note&gt;</strong></div>
+<div class="indent2"><strong>&lt;/physicalDescription&gt;</strong><br />
+<strong>&lt;location&gt;</strong></div>
+<div class="indent3"><strong>&lt;physicalLocation displayLabel=&quot;Original slide&quot;&gt;</strong>Indiana University, Bloomington. University Archives P07803<strong>&lt;/physicalLocation&gt;</strong></div>
+<div class="indent2"><strong>&lt;/location&gt;</strong></div>
+<div class="indent1"><strong>&lt;/relatedItem&gt;</strong><br />
+<strong>&lt;relatedItem type=&quot;host&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;titleInfo type=&quot;uniform&quot; authority=&quot;dlfaqcoll&quot;&gt;</strong></div>
+<div class="indent3"><strong>&lt;title&gt;</strong>Indiana University Digital Library Program: Charles W. Cushman Photograph Collection<strong>&lt;/title&gt;</strong></div>
+<div class="indent2"><strong>&lt;/titleInfo&gt;</strong></div>
+<div class="indent1"><strong>&lt;/relatedItem&gt;</strong><br />
+<strong>&lt;identifier displayLabel=&quot;Cushman number&quot; type=&quot;local&quot;&gt;</strong>955.11<strong>&lt;/identifier&gt;</strong><br />
+<strong>&lt;identifier displayLabel=&quot;IU Archives number&quot; type=&quot;local&quot;&gt;</strong>P07803<strong>&lt;/identifier&gt;</strong><br />
+<strong>&lt;location&gt;</strong></div>
+<div class="indent2"><strong>&lt;url&gt;</strong>http://purl.dlib.indiana.edu/iudl/archives/cushman/P07803<strong>&lt;/url&gt;</strong><br />
+<strong>&lt;url access=&quot;preview&quot;&gt;</strong>http://quod.lib.umich.edu/m/mods/thumbs/Indiana/oai.dlib.indiana.edu/ archives/cushman/oai_3Aoai.dlib.indiana.edu_3Aarchives_5Ccushman_5CP07803.png<strong>&lt;/url&gt;</strong></div>
+<div class="indent1"><strong>&lt;/location&gt;</strong><br />
+<strong>&lt;accessCondition&gt;</strong>Copyright and reproduction rights for all Charles W. Cushman photographs are held by Indiana University and administered by the University Archives, Indiana University, Bloomington, IN 47405<strong>&lt;/accessCondition&gt;</strong><br />
+<strong>&lt;recordInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;recordContentSource&gt;</strong>Indiana University Digital Library Program<strong>&lt;/recordContentSource&gt;</strong><br />
+<strong>&lt;recordCreationDate encoding=&quot;w3cdtf&quot;&gt;</strong>2004-09-09<strong>&lt;/recordCreationDate&gt;</strong><br />
+<strong>&lt;recordIdentifier&gt;</strong>archives/cushman/P07803<strong>&lt;/recordIdentifier&gt;</strong></div>
+<div class="indent1"><strong>&lt;/recordInfo&gt;</strong></div>
+
+<p><strong>&lt;/mods&gt;</strong></p>
+<p><strong>&lt;/modsCollection&gt;</strong></p>
+
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="examples.html#skip_menu">Top</a></p>
+<h2 id="journal_article" class="border">Journal Article</h2>
+
+<p><strong>&lt;modsCollection xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://www.loc.gov/mods/v3&quot; xsi:schemaLocation=&quot;http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd&quot;&gt;</strong> </p>
+<p><strong>&lt;mods version=&quot;3.3&quot;&gt;</strong></p>
+
+<div class="indent1"><strong>&lt;titleInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;title&gt;</strong>Hiring and recruitment practices in academic libraries<strong>&lt;/title&gt;</strong></div>
+<div class="indent1"><strong>&lt;/titleInfo&gt;</strong><br />
+<strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;namePart&gt;</strong>Raschke, Gregory K.<strong>&lt;/namePart&gt;</strong><br />
+<strong>&lt;displayForm&gt;</strong>Gregory K. Raschke<strong>&lt;/displayForm&gt;</strong></div>
+<div class="indent1"><strong>&lt;/name&gt;</strong><br />
+<strong>&lt;typeOfResource&gt;</strong>text<strong>&lt;/typeOfResource&gt;</strong>
+<br />
+<strong>&lt;genre&gt;</strong>journal article<strong>&lt;/genre&gt;</strong><br />
+<strong>&lt;originInfo&gt;</strong></div>
+<div class="indent2"><strong>&lt;place&gt;</strong></div>
+<div class="indent3"><strong>&lt;placeTerm&gt;</strong>Baltimore, Md.<strong>&lt;/placeTerm&gt;</strong></div>
+<div class="indent2"><strong>&lt;/place&gt;</strong><br />
+<strong>&lt;publisher&gt;</strong>Johns Hopkins University Press<strong>&lt;/publisher&gt;</strong><br />
+<strong>&lt;dateIssued&gt;</strong>2003<strong>&lt;/dateIssued&gt;</strong><br />
+<strong>&lt;issuance&gt;</strong>monographic<strong>&lt;/issuance&gt;</strong></div>
+<div class="indent1"><strong>&lt;/originInfo&gt;</strong><br />
+<strong>&lt;language&gt;</strong><strong>&lt;languageTerm</strong> <strong>authority=&quot;iso639-2b&quot;</strong>&gt;eng<strong>&lt;/languageTerm&gt;</strong><strong>&lt;/language&gt;</strong><br />
+<strong>&lt;physicalDescription&gt;</strong></div>
+<div class="indent2"><strong>&lt;form authority=&quot;marcform&quot;&gt;</strong>print<strong>&lt;/form&gt;</strong><br />
+<strong>&lt;extent&gt;</strong>15 p.<strong>&lt;/extent&gt;</strong></div>
+<div class="indent1"><strong>&lt;/physicalDescription&gt;</strong><br />
+<strong>&lt;abstract&gt;</strong>Academic libraries need to change their recruiting and hiring procedures to stay competitive in today's changing marketplace. By taking too long to find and to hire talented professionals in a tight labor market, academic libraries are losing out on top candidates and limiting their ability to become innovative and dynamic organizations. Traditional, deliberate, and risk-averse hiring models lead to positions remaining open for long periods, opportunities lost as top prospects find other positions, and a reduction in the overall talent level of the organization. To be more competitive and effective in their recruitment and hiring processes, academic libraries must foster manageable internal solutions, look to other professions for effective hiring techniques and models, and employ innovative concepts from modern personnel management literature. <strong>&lt;/abstract&gt;</strong><br />
+<strong>&lt;subject&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>College librarians<strong>&lt;/topic&gt;</strong><br />
+<strong>&lt;topic&gt;</strong>Recruiting<strong>&lt;/topic&gt;</strong><br />
+<strong>&lt;geographic&gt;</strong>United States<strong>&lt;/geographic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;subject&gt;</strong></div>
+<div class="indent2"><strong>&lt;topic&gt;</strong>College librarians<strong>&lt;/topic&gt;</strong><br />
+<strong>&lt;topic&gt;</strong>Selection and appointment<strong>&lt;/topic&gt;</strong><br />
+<strong>&lt;geographic&gt;</strong>United States<strong>&lt;/geographic&gt;</strong></div>
+<div class="indent1"><strong>&lt;/subject&gt;</strong><br />
+<strong>&lt;relatedItem type=&quot;host&quot;&gt;</strong></div>
+<div class="indent2"><strong>&lt;titleInfo&gt;</strong></div>
+<div class="indent3"><strong>&lt;title&gt;</strong>portal: libraries and the academy<strong>&lt;/title&gt;</strong><br /></div>
+<div class="indent2"><strong>&lt;/titleInfo&gt;</strong><br />
+<strong>&lt;part&gt;</strong></div>
+<div class="indent3"><strong>&lt;detail type=&quot;volume&quot;&gt; </strong></div>
+<div class="indent4"><strong>&lt;number&gt;</strong>3<strong>&lt;/number&gt;</strong><br />
+<strong>&lt;caption&gt;</strong>vol.<strong>&lt;/caption&gt;</strong></div>
+<div class="indent3"><strong>&lt;/detail&gt;</strong><br />
+<strong>&lt;detail type=&quot;number&quot;&gt;</strong></div>
+<div class="indent4"><strong>&lt;number&gt;</strong>1<strong>&lt;/number&gt;</strong><br />
+<strong>&lt;caption&gt;</strong>no.<strong>&lt;/caption&gt;</strong></div>
+<div class="indent3"><strong>&lt;/detail&gt;</strong><br />
+<strong>&lt;extent unit=&quot;page&quot;&gt;</strong></div>
+<div class="indent4"><strong>&lt;start&gt;</strong>53<strong>&lt;/start&gt;</strong><br />
+<strong>&lt;end&gt;</strong>57<strong>&lt;/end&gt;</strong></div>
+<div class="indent3"><strong>&lt;/extent&gt;</strong><br />
+<strong>&lt;date&gt;</strong>Jan. 2003<strong>&lt;/date&gt;</strong></div>
+<div class="indent2"><strong>&lt;/part&gt;</strong><br />
+<strong>&lt;identifier type=&quot;issn&quot;&gt;</strong>1531-2542<strong>&lt;/identifier&gt;</strong></div>
+<div class="indent1"><strong>&lt;/relatedItem&gt;</strong></div>
+<p><strong>&lt;/mods&gt;</strong></p>
+<p><strong>&lt;/modsCollection&gt;</strong></p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="examples.html#skip_menu">Top</a></p>
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->August 12, 2011<!-- #EndDate -->
+      </p>  
+
+</td>
+</tr> 	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->August 12, 2011<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

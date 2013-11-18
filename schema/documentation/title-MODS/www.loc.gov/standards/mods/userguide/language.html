@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;language&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element language overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;language&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+  <tr>
+    <td class="left"><a id="skip" href="language.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right"><form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+        <input type="hidden" name="col" value="loc" />
+        <input type="hidden" name="sc" value="0" />
+        <input type="hidden" name="ws" value="0" />
+        <input type="hidden" name="la" value="en" />
+        <input type="hidden" name="qm" value="0" />
+        <input type="hidden" name="st" value="1" />
+        <input type="hidden" name="nh" value="10" />
+        <input type="hidden" name="lk" value="1" />
+        <input type="hidden" name="rf" value="0" />
+        <input type="hidden" name="oq" value="" />
+        <input type="hidden" name="si" value="0" />
+        <input type="hidden" name="rq" value="0" />
+        <input type="hidden" name="qc" value="" />
+        <select name="qp" tabindex="1">
+          <option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+          <option value="url:/standards/mods">MODS Pages</option>
+          <option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+          <option value="">All Library Pages</option>
+        </select>
+        <input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+        <input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" />
+    </form></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+  <tr>
+    <td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+        <p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+          <!-- Update breadcrumb with name of element, class=selected -->
+          <span class="selected">Top-level Element: &lt;language&gt;</span></p>
+      </div>
+      <!-- End breadcrumb -->
+      <!-- Skip menu anchor -->
+      <a name="skip_menu"></a>
+      <!-- End Skip menu anchor -->
+      <!-- Element in H1 and MODS title inside span -->
+      <h1>Top-level Element: &lt;language&gt;</h1>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th scope="col">Element</th>
+            <td scope="col"><strong>&lt;language&gt;</strong></td>
+          </tr>
+          <tr>
+            <th scope="row">Definition</th>
+            <td scope="col"><span class="definition">A designation of the language in which the content of a resource is expressed.</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Attributes</th>
+            <td>usage; objectPart; displayLabel; <span class="attribute">altRepGroup;</span> lang; xml:lang; script; transliteration</td>
+          </tr>
+          <tr>
+            <th class="noborder" scope="row">Subelements</th>
+            <td class="noborder"><strong>&lt;<a href="language.html#languageterm">languageTerm</a>&gt; </strong><strong>&lt;<a href="language.html#scriptterm">scriptTerm</a>&gt; </strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a href="language.html#guidelines">GUIDELINES</a> | <a href="language.html#examples">EXAMPLES</a> | <a href="language.html#mappings"> MAPPINGS</a></p>
+      <h2 id="guidelines">GUIDELINES FOR USE</h2>
+      <p>&lt;language&gt; is a container element; the actual language values are recorded in the subelement &lt;languageTerm&gt;.</p>
+      <p>If the content of the resource is in more than one language, the <i>objectPart</i> attribute for &lt;language&gt; is used and the &lt;language&gt; element is repeated. </p>
+      <p>&lt;language&gt; may also be expressed in conjunction with each element in a MODS encoding by means of the <i>xml:lang</i> and/or <i>lang</i> attributes to designate the language used in the metadata value; see the section on language in <a href="generalapp.html#list">Attributes Used Throughout the MODS Schema</a> for more information. </p>
+      <p>The subelement &lt;<a href="recordinfo.html#languageofcataloging">languageOfCataloging</a>&gt; under &lt;<a href="recordinfo.html">recordInfo</a>&gt; is used to give the language of the metadata in the record as a whole. It designates the language
+        of the metadata record, while this &lt;language&gt; element designates the language of the resource.</p>
+      <h3>Specific DLF/Aquifer Guidelines</h3>
+      <p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> require at least one &lt;language&gt; element for all resources in which language is primary to understanding the resource. These resources include textual resources, as well as audio
+        and video resources with spoken word components. Although &lt;language&gt; is usually not required for non-textual resources such as images, it could be used effectively for such resources when language is a primary component. Examples of the latter might include
+        a photograph of a sign with text or a monument with an inscription. </p>
+      <p>The &lt;language&gt; element is optional for resources in which language is important to understanding the resource, but not primary. For example, the caption of a photograph may in some instances be important to understanding the photograph, but not primary.
+        Whether to include a &lt;language&gt; element based on the language's importance or primacy is left to the data provider's discretion. Repeat the &lt;language&gt; element as necessary.</p>
+      <p>See the &lt;<a href="dlfaquifer.html#language">language</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations</a> table for further information on requirements of this element, its attributes, and subelements. </p>
+      <p>Language is discussed as a general class of element in the &quot;Language&quot; section of the <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" />. </p>
+      <p>Aggregator information: &lt;language&gt; is a primary descriptive element and is used for narrowing search results.</p>
+      <h2>Element Description</h2>
+      <h3>Attributes</h3>
+      <p class="attribute">usage</p>
+      <div class="indent1"><u>Definition</u></div>
+      <div class="indent2">Primacy of the language vis-a-vis the resource.</div>
+      <div class="indent1"><u>Application</u></div>
+      <div class="indent2">This attribute is used with <em>usage</em>=&quot;primary&quot; when the main language of the resource is specified in the element.</div>
+      <p class="attribute">objectPart</p>
+      <div class="indent1"><u>Definition</u></div>
+      <div class="indent2">Designates which part of the resource is in the language supplied.</div>
+      <div class="indent1"><u>Application</u></div>
+      <div class="indent2">The following example indicates that only the summary is in Spanish:<br />
+        <br />
+        <div class="indent3"><strong>&lt;language objectPart=&quot;summary&quot;&gt;</strong><br />
+        </div>
+        <div class="indent4"><strong>&lt;languageTerm type= &quot;code&quot; authority=&quot;iso639-2b&quot;&gt;</strong>spa<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent3"><strong>&lt;/language&gt;</strong></div>
+        <br />
+        The values of this attribute are not controlled, although it is preferable that institutions use consistent forms.</div>
+      <p class="attribute"> altRepGroup; lang; xml:lang; script; transliteration; displayLabel</p>
+      <p class="indent"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for description for each.</i></p>
+      <h3>Subelements</h3>
+      <p>The following subelement is described below:</p>
+      <ul>
+        <li>&lt;<a href="language.html#languageterm">languageTerm</a>&gt; </li>
+      </ul>
+      <p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="language.html#skip_menu">Top</a></p>
+      <hr noshade="noshade" size="1" />
+      <h2 id="languageterm">Subelement: &lt;languageTerm&gt;</h2>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th scope="col">Definition</th>
+            <td scope="col"><span class="definition">Contains the textual or coded form for the language of the content of the resource.</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Attributes</th>
+            <td>type; authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+          </tr>
+          <tr>
+            <th class="noborder" scope="row">Subelements</th>
+            <td class="noborder">None</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Guidelines for Use</h3>
+      <p>If expressed in coded form, the source of the code is contained in the value of the <i>authority</i> attribute. If no authority is given, it is assumed that the content is textual. </p>
+      <p>If there is more than one representation of the same language, e.g. using different forms of the same language (code or text) or from different authorities, &lt;languageTerm&gt; is repeated within the &lt;language&gt; container. </p>
+      <h4>Specific DLF/Aquifer Guidelines</h4>
+      <p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> require at least one pair of &lt;languageTerm&gt; elements representing the primary language of the text contained in a single &lt;language&gt; element. One of these &lt;languageTerm&gt; elements
+        should carry the attribute <i>type</i>=&quot;text&quot; and the other should have <i>type</i>=&quot;code&quot;. Additional pairs of &lt;languageTerm&gt; elements representing secondary languages may be included in separate &lt;language&gt; elements.</p>
+      <p>These DLF/Aquifer guidelines require using the value &quot;iso639-2b&quot; for the <i>authority</i> attribute in the &lt;languageTerm&gt; element that contains the attribute <i>type</i>=&quot;code&quot;. Do not use an <i>authority</i> attribute in the &lt;languageTerm&gt; element that contains the attribute <i>type</i>=&quot;text&quot;.</p>
+      <h3>Element Description</h3>
+      <h4>Attributes</h4>
+      <p class="attribute">type</p>
+      <div class="indent1"><u>Definition</u></div>
+      <div class="indent2">Indicates whether the language is expressed in a coded or textual form.</div>
+      <div class="indent1"><u>Application</u></div>
+      <div class="indent2">This attribute may be used with the following values:<br />
+        <ul>
+          <li><strong>text</strong> &#8211; This value is used to express language in a textual form. </li>
+          <li><strong>code</strong> &#8211; This value is used to express language in a coded form.</li>
+        </ul>
+      </div>
+      <p class="attribute">authority</p>
+      <div class="indent1"><u>Definition</u></div>
+      <div class="indent2">The controlled list from which the value is taken. </div>
+      <div class="indent1"><u>Application</u></div>
+      <div class="indent2">This attribute may contain the following values:<br />
+        <ul>
+          <li>iso639-2b - A bibliographic language code from <a href="http://www.loc.gov/standards/iso639-2/"> ISO 639-2</a>, <i>Codes for the representation of names of languages: alpha-3 code</i>. The bibliographic language codes are identical to both <a href="http://www.niso.org/standards/z39-53-2001/"> ANSI/NISO Z39.53</a>, <i>Codes for the Representation of Languages for Information Interchange</i> and the <i><a href="http://www.loc.gov/marc/languages/">MARC Code List for Languages</a></i>. </li>
+          <li>rfc3066 - A language identifier as specified by the Internet Best Current Practice specification <a href="http://www.ietf.org/rfc/rfc3066.txt"> RFC3066</a>. This value includes an ISO 639-1 (alpha-2) or ISO 639-2 (alpha-3) language code with optional secondary subtags. </li>
+          <li>iso639-3 - A language code from <a href="http://www.sil.org/iso639-3/"> ISO 639-3</a>, <i>Codes for the representation of names of languages &#8211; Part 3: Alpha-3 code for comprehensive coverage of languages</i>. </li>
+          <li>rfc4646 - A language identifier as specified by the Internet Best Current Practice specification <a href="http://www.ietf.org/rfc/rfc4646.txt"> RFC4646</a>. This document gives guidance on the use of ISO 639-1, ISO 639-2, and ISO 639-3 language identifiers with optional secondary subtags and extensions.</li>
+		  <li>rfc5646 - A language identifier as specified by the Internet Best Current Practice specification <a href="http://www.ietf.org/rfc/rfc5656.txt"> RFC5646</a>. This document gives guidance on the use of ISO 639-1, ISO 639-2, and ISO 639-3 language identifiers with optional secondary subtags and extensions. RFC5646 has superceded RFC4646. </li>
+        </ul>
+      </div>
+      <p class="attribute">authorityURI</p>
+      <div class="indent1"><u>Definition</u></div>
+      <div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+      <div class="indent1"><u>Application</u></div>
+      <div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+      <p class="attribute">valueURI</p>
+      <div class="indent1"><u>Definition</u></div>
+      <div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+      <div class="indent1"><u>Application</u></div>
+      <div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+      <p class="attribute"> lang; xml:lang; script; transliteration</p>
+      <p class="indent"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for description for each.</i></p>
+      <h4>Subelements</h4>
+      <p>There are no subelements for &lt;languageTerm&gt;.</p>
+      <p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="language.html#skip_menu">Top</a></p>
+      <h2 id="scriptterm" class="border">Subelement  &lt;scriptTerm&gt;</h2>
+      <table class="elements">
+        <tbody>
+          <tr>
+            <th width="85" scope="col">Definition</th>
+            <td width="508" scope="col">Contains the script(s) of the resource.</td>
+          </tr>
+          <tr>
+            <th scope="row">Attributes</th>
+            <td>type; authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+          </tr>
+          <tr>
+            <th class="noborder" scope="row">Subelements</th>
+            <td class="noborder">None</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Guidelines for Use</h3>
+      <p>&lt;scriptTerm&gt; may be expressed in textual or coded form.</p>
+      <p>If in coded form, the source of the code is contained in the value of the <i>authority</i> attribute. If no <i>authority</i> is given, it is assumed that the element content is textual. </p>
+      <p>If there is more than one representation of the same script (e.g., text and code), &lt;scriptTerm&gt; is repeated. If the resource is in more than one script, &lt;languageOfCataloging&gt; is repeated. </p>
+      <h3>Element Description</h3>
+      <h4>Attributes</h4>
+      <p class="attribute">type</p>
+      <div class="indent1"><u>Definition</u></div>
+      <div class="indent2">Identifies what type of &lt;scriptTerm&gt; is recorded.</div>
+      <div class="indent1"><u>Application</u></div>
+      <div class="indent2">This attribute may be used with the following values:
+        <ul>
+          <li><strong>text</strong> &#8211; This value is used to express script in a textual form. </li>
+          <li><strong>code</strong> &#8211; This value is used to express script in a coded form. </li>
+        </ul>
+      </div>
+      <p class="attribute">authority</p>
+      <div class="indent1"><u>Definition</u></div>
+      <div class="indent2">The controlled list from which the value is taken.</div>
+      <div class="indent1"><u>Application</u></div>
+      <div class="indent2">Record the name of the authoritative list used, if applicable, e.g. <i>authority</i>=&quot;iso15924&quot;. The Library of Congress maintains an online listing: <a href="http://www.loc.gov/standards/sourcelist/script.html"> Script Code and Term Source Codes</a>.</div>
+      <p class="attribute">authorityURI</p>
+      <div class="indent1"><u>Definition</u></div>
+      <div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+      <div class="indent1"><u>Application</u></div>
+      <div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+      <p class="attribute">valueURI</p>
+      <div class="indent1"><u>Definition</u></div>
+      <div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+      <div class="indent1"><u>Application</u></div>
+      <div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+      <p class="attribute"> lang; xml:lang; script; transliteration</p>
+      <div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+      <h4>Subelements</h4>
+      <p>There are no subelements for &lt;scriptTerm&gt;.</p>
+      <p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="language.html#skip_menu">Top</a></p>
+      <h2 class="border" id="examples">EXAMPLES</h2>
+      <div class="example">
+        <div class="indent1"><strong>&lt;language&gt;</strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;text&quot;&gt;</strong>French<strong>&lt;/languageTerm&gt;</strong><br />
+          <strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;iso639-2b&quot;&gt;</strong>fre<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent1"><strong>&lt;/language&gt;</strong></div>
+      </div>
+      <div class="example">
+        <div class="indent1"><strong>&lt;language&gt;</strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;iso639-2b&quot;&gt;</strong>fre<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent1"><strong>&lt;/language&gt;</strong><br />
+          <i>An XSLT stylesheet could be applied to transform this code to:<br />
+          Language: French</i></div>
+        <div class="example">
+          <div class="indent1"><strong>&lt;language&gt;</strong></div>
+          <div class="indent2"><strong>&lt;languageTerm type=&quot;text&quot; objectPart=&quot;caption&quot;&gt;</strong>English<strong>&lt;/languageTerm&gt;</strong><br />
+            <strong>&lt;languageTerm type=&quot;code&quot; objectPart=&quot;caption&quot; authority=&quot;iso639-2b&quot;&gt;</strong>eng<strong>&lt;/languageTerm&gt;</strong></div>
+          <div class="indent1"><strong>&lt;/language&gt;</strong></div>
+        </div>
+      </div>
+      <div class="example">
+        <p><i>This resource is a Persian/English dictionary:</i></p>
+        <div class="indent1"><strong>&lt;language&gt; </strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;iso639-2b&quot;&gt;</strong>per<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent2"><strong>&lt;scriptTerm type=&quot;code&quot; authority=&quot;iso15924&quot;&gt;</strong>Arab<strong>&lt;/scriptTerm&gt;</strong></div>
+        <div class="indent1"><strong>&lt;/language&gt;</strong></div>
+        <div class="indent1"><strong>&lt;language&gt; </strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;iso639-2b&quot;&gt;</strong>eng<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent2"><strong>&lt;scriptTerm type=&quot;code&quot; authority=&quot;iso15924&quot;&gt;</strong>Latn<strong>&lt;/scriptTerm&gt;</strong></div>
+        <div class="indent1"><strong>&lt;/language&gt;</strong></div>
+      </div>
+      <div class="example">
+        <p><i>This resource contains both English and French text:</i></p>
+        <div class="indent1"><strong>&lt;language&gt;</strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;iso639-2b&quot;&gt;</strong>eng<strong>&lt;languageTerm&gt;</strong></div>
+        <div class="indent1"><strong>&lt;/language&gt;</strong><br />
+          <strong>&lt;language&gt;</strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;iso639-2b&quot;&gt;</strong>fre<strong>&lt;languageTerm&gt;</strong></div>
+        <div class="indent1"><strong>&lt;/language&gt;</strong></div>
+      </div>
+	  
+      <div class="example">
+        <p><i>This resource contains text in Egyptian Arabic, which is coded as an individual language in ISO 639-3:</i></p>
+        <div class="indent1"><strong>&lt;language&gt;</strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;rfc4646&quot; &gt;</strong>zh-Hans<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent1"><strong>&lt;/language&gt;</strong><br />
+          <strong>&lt;language&gt;</strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;iso639-3&quot; &gt;</strong>arz<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent1"><strong>&lt;/language&gt;</strong></div>
+      </div>
+	  
+	        <div class="example">
+        <p><i>This resource contains text in Navajo:</i></p>
+        <div class="indent1"><strong>&lt;language&gt;</strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;rfc5646&quot; &gt;</strong>i-navajo<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent1"><strong>&lt;/language&gt;</strong></div>
+      </div>
+	  
+	  
+      <div class="example">
+        <p><i>This record gives the language of the resource in two languages and a code and also indicates the script of the resource:</i></p>
+        <div class="indent1"><strong>&lt;language&gt;</strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;text" authority=&quot;iso639-2b&quot; lang=&quot;eng&quot; &gt;</strong>German<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;text&quot; authority=&quot;iso639-2b&quot; lang-&quot;fre&quot; &gt;</strong>allemand<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent2"><strong>&lt;languageTerm type=&quot;code&quot; authority=&quot;iso639-2b&quot;&gt;</strong>ger<strong>&lt;/languageTerm&gt;</strong></div>
+        <div class="indent2"><strong>&lt;scriptTerm type=&quot;code&quot; authority=&quot;iso15924&quot; &gt;</strong>Latn<strong>&lt;/scriptTerm&gt;</strong></div>
+        <div class="indent1"><strong>&lt;/language&gt;</strong></div>
+      </div>
+      <p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="language.html#skip_menu">Top</a></p>
+      <h2 class="border" id="mappings">MAPPINGS</h2>
+      <h3>MARC Mapping (Bibliographic)</h3>
+      <p>&lt;languageTerm&gt; = MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd008.html"> 008</a>/35-37 or <a href="http://www.loc.gov/marc/bibliographic/bd041.html"> 041</a> with various subfields, depending on the attribute used.</p>
+      <p>See also <a href="http://www.loc.gov/standards/mods/mods-mapping.html#language"><i>MARC Mapping to MODS</i> for the &lt;language&gt; element</a>.</p>
+      <h3>Dublin Core Mapping</h3>
+      <p>The <i><a href="http://www.loc.gov/standards/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping</a></i> recommends mapping the contents of the &lt;language&gt; element to &lt;dc:language&gt;. These guidelines further recommend mapping each subelement &lt;languageTerm&gt;
+        to a distinct &lt;dc:language&gt; element.</p>
+      <p>MODS examples expressed in Dublin Core:</p>
+      <div class="example">
+        <div class="indent1"><strong>&lt;dc:language&gt;</strong>French<strong>&lt;/dc:language&gt;</strong><br />
+          <strong>&lt;dc:language&gt;</strong>fre<strong>&lt;/dc:language&gt;</strong><br />
+          <br />
+          <strong>&lt;dc:language&gt;</strong>English<strong>&lt;/dc:language&gt;</strong><br />
+          <strong>&lt;dc:language&gt;</strong>eng<strong>&lt;/dc:language&gt;</strong></div>
+      </div>
+      <p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="language.html#skip_menu">Top</a></p>
+      <p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>
+      <p style="text-align: right">Last Updated:
+        <!-- #BeginDate format:Am1 -->March 1, 2013<!-- #EndDate -->
+      </p></td>
+  </tr>
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->March 1, 2013<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>

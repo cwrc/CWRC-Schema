@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Elements and Attributes (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element attribute overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top Level Elements and Attributes (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+  <tr>
+    <td class="left"><a id="skip" href="generalapp.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right"><form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+        <input type="hidden" name="col" value="loc" />
+        <input type="hidden" name="sc" value="0" />
+        <input type="hidden" name="ws" value="0" />
+        <input type="hidden" name="la" value="en" />
+        <input type="hidden" name="qm" value="0" />
+        <input type="hidden" name="st" value="1" />
+        <input type="hidden" name="nh" value="10" />
+        <input type="hidden" name="lk" value="1" />
+        <input type="hidden" name="rf" value="0" />
+        <input type="hidden" name="oq" value="" />
+        <input type="hidden" name="si" value="0" />
+        <input type="hidden" name="rq" value="0" />
+        <input type="hidden" name="qc" value="" />
+        <select name="qp" tabindex="1">
+          <option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+          <option value="url:/standards/mods">MODS Pages</option>
+          <option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+          <option value="">All Library Pages</option>
+        </select>
+        <input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+        <input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" />
+    </form></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+  <tr>
+    <td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+        <p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo;
+          <!-- Update breadcrumb with name of element, class=selected -->
+          <!-- Update breadcrumb with name of element, class=selected -->
+          <span class="selected">Top-level Elements and Attributes</span></p>
+      </div>
+      <!-- End breadcrumb -->
+      <!-- Skip menu anchor -->
+      <a name="skip_menu"></a>
+      <!-- End Skip menu anchor -->
+      <!-- Element in H1 and MODS title inside span -->
+      <h1 id="top_level2">MODS Elements and Attributes</h1>
+      <p>The MODS top-level elements are listed below in the order in which they appear in the <a href="http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">MODS XML schema</a>. All top-level elements are described on individual pages, along with their subelements and attributes. An <a href="generalapp.html#alphalist">Alphabetical List of Top-level Elements </a>is included at the end of this page. A separate list of <em>all</em> MODS elements and subelements is linked: <a href="userguide-index.html"> Alphabetical Index of MODS Elements and Subelements</a>.</p>
+      <h2>Top-level Elements in MODS </h2>
+      <p>(listed in order, read down each column)</p>
+      <table class="element-list">
+        <tbody>
+          <tr>
+            <td><a href="titleinfo.html">titleInfo</a></td>
+            <td><a href="language.html">language</a></td>
+            <td><a href="note.html">note</a></td>
+            <td><a href="location.html">location</a></td>
+          </tr>
+          <tr>
+            <td><a href="name.html">name</a></td>
+            <td><a href="physicaldescription.html">physicalDescription</a></td>
+            <td><a href="subject.html">subject</a></td>
+            <td><a href="accesscondition.html">accessCondition</a></td>
+          </tr>
+          <tr>
+            <td><a href="typeofresource.html">typeOfResource</a></td>
+            <td><a href="abstract.html">abstract</a></td>
+            <td><a href="classification.html">classification</a></td>
+            <td><a href="part.html">part</a></td>
+          </tr>
+          <tr>
+            <td><a href="genre.html">genre</a></td>
+            <td><a href="tableofcontents.html">tableOfContents</a></td>
+            <td><a href="relateditem.html">relatedItem</a></td>
+            <td><a href="extension.html">extension</a></td>
+          </tr>
+          <tr>
+            <td><a href="origininfo.html">originInfo</a></td>
+            <td><a href="targetaudience.html">targetAudience</a></td>
+            <td><a href="identifier.html">identifier</a></td>
+            <td><a href="recordinfo.html">recordInfo</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 id="list">Attributes Used Throughout the MODS Schema</h2>
+      <p>Certain attributes may be applied to multiple MODS elements, as indicated in the <a href="http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">MODS schema</a>.</p>
+      <p><strong>Language-Related and Other Attributes</strong>: <a href="generalapp.html#lang">lang</a> - <a href="http://www.loc.gov/standards/mods/userguide/xmllang">xml:lang</a> - <a href="generalapp.html#script">script</a> - <a href="generalapp.html#transliteration">transliteration</a> - <a href="generalapp.html#altrepgroup">altRepGroup</a> - <a href="generalapp.html#displaylabel">displayLabel</a><br />
+        <strong>Date Attributes</strong>: <a href="generalapp.html#encoding">encoding</a> - <a href="generalapp.html#point">point</a> - <a href="generalapp.html#keydate">keydate</a> - <a href="generalapp.html#qualifier">qualifier</a><br />
+      <strong>Linking Attributes</strong>: <a href="generalapp.html#ID">ID</a> - <a href="generalapp.html#xlink">xlink</a></p>
+      <h3 id="language_attributes">Language-Related and Other Attributes</h3>
+      <p>Certain language and related attributes (e.g., script and transliteration attributes) may be applied to most MODS elements, as indicated in the . They are defined below:</p>
+      <ul>
+        <li><a name="lang" id="lang"></a><strong>lang</strong> &#8211; This attribute is used to specify the language used within individual elements, using the codes from <a href="http://www.loc.gov/standards/iso639-2/"> ISO&nbsp;639-2/b</a>. This is equivalent to authority=&quot;iso639-2b&quot; used with the &lt;<a href="dlfaquifer.html#language">language</a>&gt; element (which gives a language of the resource described in the record), but is applied to the language used as content
+          of the metadata elements. There is no MARC 21 equivalent for this attribute since language cannot be currently indicated at the element level.
+          <div class="indent1"><strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+          <div class="indent2"><strong>&lt;namePart type=&quot;given&quot;&gt;</strong>Jack<strong>&lt;/namePart&gt;</strong><br />
+            <strong>&lt;namePart type=&quot;family&quot;&gt;</strong>May<strong>&lt;/namePart&gt;</strong><br />
+            <strong>&lt;namePart type=&quot;termsOfAddress&quot;&gt;</strong>I<strong>&lt;/namePart&gt;</strong><br />
+            <strong>&lt;description lang=&quot;eng&quot;&gt;</strong>District Commissione<strong>r&lt;/description&gt;</strong><br />
+            <strong>&lt;description lang=&quot;fre&quot;&gt;</strong>Pr&eacute;fet de r&eacute;gion<strong>&lt;/description&gt;</strong></div>
+          <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+        </li>
+        <li><a name="xmllang" id="xmllang"></a><strong>xml:lang</strong> &#8211; In the XML standard, this attribute is used to specify the language used within individual elements, using specifications in <a href="http://www.ietf.org/rfc/rfc3066.txt"> RFC&nbsp;3066</a>.<img src="../../../images/icon-ext2.gif" alt="External Link" width="8" height="10" /> RFC 3066 (&quot;Request for Comments,&quot; which defines Internet practice) uses the two-character ISO 639-1 codes along with three-character ISO 639-2 codes
+          for those languages not given in 639-1. This is equivalent to authority=&quot;rfc3066&quot; used with the &lt;language&gt; element (which gives a language of the resource described in the record), but is applied to the language used as content of the metadata elements. There
+          is no MARC 21 equivalent for this attribute since language cannot be currently indicated at the element level.
+          <div class="indent1"><strong>&lt;titleInfo xml:lang=&quot;fr&quot; type=&quot;translated&quot;&gt;</strong></div>
+          <div class="indent2"><strong>&lt;nonSort&gt;</strong>L'<strong>&lt;/nonSort&gt;</strong><br />
+            <strong>&lt;title&gt;</strong>homme qui voulut &ecirc;tre roi<strong>&lt;/title&gt;</strong></div>
+          <div class="indent1"><strong>&lt;/titleInfo&gt;</strong></div>
+        </li>
+        <li><a name="script" id="script"></a><strong>script</strong> &#8211; This attribute specifies the script used within individual elements, using codes from <a href="http://www.evertype.com/standards/iso15924/"> ISO&nbsp;15924</a> <img src="../../../images/icon-ext2.gif" alt="External Link" width="8" height="10" /> (<i>Code for the representation of names of scripts</i>). There is no MARC 21 equivalent for this attribute. </li>
+        <li><a name="transliteration" id="transliteration"></a><strong>transliteration</strong> &#8211; This attribute specifies the transliteration technique used within individual elements. There is no standard list of transliteration schemes available, although one may be developed. There is no MARC 21 equivalent for
+          this attribute. </li>
+        <li><a name="altrepgroup" id="altrepgroup"></a><strong>altRepGroup</strong> &#8211; This attribute is used to link alternate representations of the same element content, such as different scripts, transliterations, and translations.  The same attribute value is applied to each of the element instances to be linked.  The attribute applies to all MODS top-level elements with the exception of &lt;relatedItem&gt;, however, it applies to those top-level elements when used within &lt;relatedItem&gt;.
+          <div class="indent1"><strong>&lt;name type=&quot;personal&quot; script=&quot;Latn&quot; altRepGroup=&quot;8&quot;&gt;</strong></div>
+          <div class="indent2"><strong>&lt;namePart&gt;</strong>Būrī, Muhammad al-Tihāmī,<strong>&lt;/namePart&gt;</strong></div>
+          <div class="indent2"><strong>&lt;namePart type=&quot;date&quot;&gt;</strong>d. 1827<strong>&lt;/namePart&gt;</strong></div>
+          <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+          <div class="indent1"><strong>&lt;name type=&quot;personal&quot; script=&quot;Arab&quot; altRepGroup=&quot;8&quot;&gt;</strong></div>
+          <div class="indent2"><strong>&lt;namePart&gt;</strong>بوري، محمد التهامي،<strong>&lt;/namePart&gt;</strong></div>
+          <div class="indent2"><strong>&lt;namePart type=&quot;date&quot;&gt;</strong>d. 1827<strong>&lt;/namePart&gt;</strong></div>
+          <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+        </li>
+      </ul>
+	  
+<ul>
+<li><a name="displaylabel" id="displaylabel"></a><strong>displayLabel</strong> &#8211; This attribute provides additional  text associated with the element if needed for display purposes.  The preferred text with its capitalization  should be included, but not delimiters such as colons.<br />
+<div class="indent1"><strong>&lt;titleInfo type=&quot;alternative&quot;  displayLabel=&quot;Spine title&quot;&gt;</strong>
+</div>
+<div class="indent2"><strong>&lt;title&gt;</strong>Science and public  affairs<strong>&lt;/title&gt;</strong></div>
+<div class="indent1"><strong>&lt;/titleInfo&gt;</strong></div>
+<div class="indent1"><strong>&lt;targetAudience displayLabel=&quot;grade  level&quot;&gt;</strong>kindergarten<strong>&lt;targetAudience&gt;</strong></div>
+<div class="indent1"> <strong>&lt;classification authority=&quot;lcc&quot;  displayLabel=&quot;Library of Congress classification&quot;&gt;</strong></strong>ML410.B3<strong>&lt;/classification&gt;</strong></div>
+</li>
+</ul>
+
+<ul>
+<li><a name="altFormat" id="altFormat"></a><strong>altFormat</strong> &#8211; This attribute is used to point to HTML from MODS, linking with @altRepGrp, and indicating the format of the alternative encoding. It applies to those elements that are most likely to have values that need HTML or other formatting that cannot be expressed inside a MODS XML record. Use the altFormat attribute to link out of the record to the same content, formatted or marked up in a different way. Optionally, include the contentType attribute with a media-type as its value (e.g. text/html) to indicate the content type of the target. Where there are multiple alternatives, use the already defined altRepGroup attribute to bind the related instances of each element.
+<br />
+<div class="indent1"><strong>&lt;abstract altRepGroup=&quot;A&quot; altFormat=&quot;http://foo.edu/alternate-markup.html&quot; contentType=&quot;application/xhtml+xml&quot;&gt;</strong></div>
+<div class="indent1"><strong>&lt;abstract altRepGroup=&quot;A&quot;&gt;</strong>l'histoire d'un cheval et un garçon qui aimait<strong>&lt;abstract&gt;</strong></div>
+</li>
+</ul>
+<ul>
+<li><a name="altFormat" id="altFormat"></a><strong>contentType</strong> &#8211; This attribute is used with the attribute altFormat to include. A media-type is used as its value (e.g. text/html) to indicate the content type of the target. Where there are multiple alternatives, use the already defined altRepGroup attribute to bind the related instances of each element.
+<br />
+<div class="indent1"><strong>&lt;abstract altRepGroup=&quot;A&quot; altFormat=&quot;http://foo.edu/alternate-markup.html&quot; contentType=&quot;application/xhtml+xml&quot;&gt;</strong></div>
+<div class="indent1"><strong>&lt;abstract altRepGroup=&quot;A&quot;&gt;</strong>l'histoire d'un cheval et un garçon qui aimait<strong>&lt;abstract&gt;</strong></div>
+</li>
+</ul>
+	  
+	  
+      <h3>Date Attributes</h3>
+      <p class="nomargin">Certain date attributes may be applied to some MODS elements, as indicated in the schema. They are defined below:</p>
+      <ul>
+        <li><a name="encoding" id="encoding"></a><strong>encoding</strong> &#8211; The following values are used with the encoding attribute:
+          <ul>
+            <li><i>w3cdtf</i> &#8211; This value identifies dates following the W3C profile of ISO 8601, <a href="http://www.w3c.org/TR/NOTE-datetime"> Date and Time Formats</a>, that specifies the extended format for dates using the pattern: YYYY-MM-DD. If hours, minutes, and seconds are also needed the following pattern is used: YYYY-MM-DDThh:mm:ss. </li>
+            <li><i>iso8601</i> &#8211; This value identifies formatted dates allowed in ISO 8601 which use the alternative described as &quot;basic&quot; (i.e., with minimum number of separators) rather than &quot;extended&quot; (i.e., with separators). This alternative specified in the standard
+              uses the following date patterns: YYYY; YYYY-MM if only year and month given; YYYYMMDD if year, month, and day are included (hours, minutes, seconds may also be added: Thhmmss.s). It is also used for other encodings specified in ISO 8601, e.g., date ranges,
+              which are in the form of &lt;date/time&gt;/&lt;date/time&gt;. </li>
+            <li><i>marc</i> &#8211; This value identifies formatted according to MARC 21 rules in field 008/07-14 for dates of publication/issuance. Thus, this would only apply to the attribute in &lt;dateIssued&gt;. Examples include: YYYY (for year), MMDD (for month and day), 19uu
+              (MARC convention showing unknown digits in a year date), 9999 (MARC convention showing that the end year date has not occurred or is not known). See Legal Characters section under field 008/06 of <a href="http://www.loc.gov/marc/bibliographic/bd008a.html"> MARC Bibliographic</a></li>
+            <li><i>edtf</i> &#8211; This value is used for dates coded according to <a href="http://www.loc.gov/standards/datetime/">Extended Date/Time Format</a> <img src="../../../images/icon-ext2.gif" alt="External Link" width="8" height="10" /> which in consistent with ISO 8601 but extends it to express special forms of dates that are not covered by w3cdtf and iso8601, such as open ended ranges. </li>
+            <li><i>temper</i> &#8211; This value is used for dates coded according to <a href="http://tools.ietf.org/id/draft-kunze-temper-01.txt">Temporal Enumerated Ranges</a> <img src="../../../images/icon-ext2.gif" alt="External Link" width="8" height="10" />. TEMPER is a simple date and time syntax for  representing points, lists, and ranges of timestamps. The syntax is designed to  be easy to parse and for humans to read, and compatible with basic lexical  sorting algorithms. </li>
+          </ul>
+          <div class="indent1"><strong>&lt;dateIssued encoding=&quot;marc&quot;&gt;</strong>19uu<strong>&lt;/dateIssued&gt;</strong> </div>
+          <div class="indent1"><strong>&lt;dateIssued encoding=&quot;w3cdtf&quot;&gt;</strong>2004-06-04T12:12:12<strong>&lt;/dateIssued&gt;</strong></div>
+          <div class="indent1"><strong>&lt;dateIssued encoding=&quot;iso8601&quot;&gt;</strong>20040604T121212<strong>&lt;/dateIssued&gt;</strong> </div>
+          <div class="indent1"><strong>&lt;dateOther encoding="edtf"&gt;</strong>unknown/2009<strong>&lt;/dateOther&gt;</strong></div>
+          <div class="indent1"><strong>&lt;dateCreated encoding="temper"&gt;</strong>1860~-1872<strong>&lt;/dateCreated&gt;</strong></div>
+        </li>
+        <li><a name="point" id="point"></a><strong>point</strong> &#8211; If no point attribute is specified, date is assumed to be a single date. The following values are used with the point attribute:
+          <ul>
+            <li><i>start</i> &#8211; This value is used for the first date of a range (or a single date, if used). </li>
+            <li><i>end</i> &#8211; This value is used for the end date of a range. </li>
+          </ul>
+          <div class="indent1"><strong>&lt;originInfo&gt;</strong></div>
+          <div class="indent2"><strong>&lt;dateOther point=&quot;start&quot;&gt;</strong>20011008<strong>&lt;/dateOther&gt;</strong><br />
+            <strong>&lt;dateOther point=&quot;end&quot;&gt;</strong>20011027<strong>&lt;/dateOther&gt;</strong></div>
+          <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+        </li>
+        <li><a name="keydate" id="keydate"></a><strong>keyDate</strong> &#8211; The following value is used with the keyDate attribute:
+          <ul>
+            <li><i>yes</i> &#8211; This value is used so that a particular date may be distinguished among several dates. Thus for example, when sorting MODS records by date, a date with keyDate=&quot;yes&quot; would be the date to sort on. It should occur only for one date at most in
+              a given record.</li>
+          </ul>
+          <div class="indent1"><strong>&lt;originInfo&gt;</strong></div>
+          <div class="indent2"><strong>&lt;dateOther keyDate=&quot;yes&quot;&gt;</strong>20030328<strong>&lt;/dateOther&gt;</strong> <strong>&lt;dateOther&gt;</strong>20030427<strong>&lt;/dateOther&gt;</strong></div>
+          <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+        </li>
+        <li><a name="qualifier" id="qualifier"></a><strong>qualifier</strong> &#8211; The following values are used with the qualifier attribute:
+          <ul>
+            <li><em>approximate</em> &#8211; This value is used to identify a date that may not be exact, but is approximated, such as &quot;ca. 1972&quot;. </li>
+            <li><em>inferred</em> &#8211; This value is used to identify a date that has not been transcribed directly from a resource, such as &quot;[not before 1852]&quot;. </li>
+            <li><em>questionable</em> &#8211; This value is used to identify a questionable date for a resource, such as &quot;1972?&quot;. </li>
+          </ul>
+          <div class="indent1"><strong>&lt;originInfo&gt;</strong></div>
+          <div class="indent2"><strong>&lt;dateIssued qualifier=&quot;questionable&quot; point=&quot;start&quot;&gt;</strong>1894?<strong>&lt;/dateIssued&gt;</strong></div>
+          <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+        </li>
+      </ul>
+      <h3>Linking attributes</h3>
+      <p>Certain linking attributes may be applied to some MODS elements, as indicated in the schema. They are defined below:</p>
+      <ul>
+        <li><a name="id" id="id"></a><strong>ID</strong> &#8211; This attribute is used to link internally and to reference an element from outside the instance. </li>
+        <li><a name="xlink" id="xlink"></a><strong>xlink</strong> &#8211; This attribute is used for an external link. It is defined in the  as xlink:simpleLink, (see information about the <a href="http://www.w3.org/TR/xlink/"> XML Linking Language</a> <img src="../../../images/icon-ext2.gif" alt="External Link" width="8" height="10" />), which in the XML schema specification has a further breakdown for different types of xlinks. At this time, only xlink:href is envisioned
+          in MODS records.
+          <div class="indent1"><strong>&lt;abstract xlink:href= &quot;</strong>http://www.ojp.usdoj.gov/bjs/abstract/cchrie98.htm<strong>&quot;/&gt;</strong> </div>
+        </li>
+      </ul>
+
+     
+      <p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="generalapp.html#skip_menu">Top</a></p>
+      <h2 id="alphalist">Alphabetical List of Top Level Elements in MODS</h2>
+      <p>This section provides an alphabetical list of the top-level elements in MODS. All elements, subelements, and attributes are described on their individual pages (click on element link). </p>
+      <ul>
+        <li><a href="abstract.html">abstract</a></li>
+        <li><a href="accesscondition.html">accessCondition</a></li>
+        <li><a href="classification.html">classification</a></li>
+        <li><a href="extension.html">extension</a></li>
+        <li><a href="genre.html">genre</a></li>
+        <li><a href="identifier.html">identifier</a></li>
+        <li><a href="language.html">language</a></li>
+        <li><a href="location.html">location</a></li>
+        <li><a href="name.html">name</a></li>
+        <li><a href="note.html">note</a></li>
+        <li><a href="origininfo.html">originInfo</a></li>
+        <li><a href="part.html">part</a></li>
+        <li><a href="physicaldescription.html">physicalDescription</a></li>
+        <li><a href="recordinfo.html">recordInfo</a></li>
+        <li><a href="relateditem.html">relatedItem</a></li>
+        <li><a href="subject.html">subject</a></li>
+        <li><a href="tableofcontents.html">tableOfContents</a></li>
+        <li><a href="targetaudience.html">targetAudience</a></li>
+        <li><a href="titleinfo.html">titleInfo</a></li>
+        <li><a href="typeofresource.html">typeOfResource</a></li>
+      </ul>
+      <p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="generalapp.html#skip_menu">Top</a></p>
+      <p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>
+      <p style="text-align: right">Last Updated:
+        <!-- #BeginDate format:Am1 -->August 13, 2013<!-- #EndDate -->
+      </p></td>
+  </tr>
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+        Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></div>
+      <br />
+      <span class="sitenav">
+      <!-- #BeginDate format:Am1 -->August 13, 2013<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;accessCondition&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element accesscondition overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;accessCondition&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="accesscondition.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;accessCondition&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;accessCondition&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Element</th>
+      <td width="453" scope="col"><strong>&lt;accessCondition&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">Information about restrictions imposed on access to a resource.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; displayLabel; altRepGroup; altFormat; contentType; xlink; lang; xml:lang; script; transliteration </td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="accesscondition.html#guidelines">GUIDELINES</a> | <a href="accesscondition.html#examples">EXAMPLES</a> | <a href="accesscondition.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>One use of &lt;accessCondition&gt; is to indicate rights relating to access and use of a resource, particularly digital resources. The audience for such rights information is the end user, so rights information should be as free of legalese and technical jargon
+  as possible. State clearly any restrictions on use of the resource, including explicitly mentioning lack of copyright restrictions when the resource is in the public domain. Also provide contact information for use by end users who wish to pursue required
+  permissions for publication, exhibit, or other types of dissemination.</p>
+<p>A link may be supplied in lieu of or in addition to the content. If, for example, you maintain rights information relating to specific resources on a website, you may wish to provide a URL for that website in lieu of a textual rights statement. When doing
+  so, you should provide enough textual explanation, along with the URL, to make the purpose of the URL clear to end users. This element is extensible to allow for using an established XML schema outside of MODS for the information, e.g. the <a href="http://www.cdlib.org/groups/rmg/"> CDL Copyright schema</a>. When used in this manner, &lt;accessCondition&gt; becomes a container element. </p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> require the use of at least one &lt;accessCondition&gt; element with the <i>type</i> attribute containing the value &quot;use and reproduction&quot; in every MODS record.</p>
+<p>Use the <i>type</i> value &quot;restriction on access&quot; only to indicate access restrictions (such as those based on institution affiliation or age) rather than restrictions on use. Other sorts of restrictions, such as government classification, should have no <i>type</i> attribute.</p>
+<p>Whenever possible, consider using a standard license such as <a href="http://creativecommons.org/"> Creative Commons</a> and/or a rights expression language such as the <a href="http://odrl.net/"> Open Digital Rights Language</a> (ODRL) specification.</p>
+<p>In cases where access to a resource is unrestricted, a statement should appear that says so.</p>
+<p>See the &lt;<a href="dlfaquifer.html#accesscondition">accessCondition</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Access condition is addressed in the &quot;Recommendations for classes of data elements&quot; under &quot;Rights for resources&quot; in the <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" />.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Identifies what type of access condition is recorded.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Use the <i>type</i> attribute to indicate the type of restrictions (or lack thereof) on use of the resource and/or restrictions on access to the material. There is no controlled list of types for &lt;accessCondition&gt;. Suggested values are:
+  <ul>
+    <li>restriction on access &#8211; Indicates the information is about restrictions imposed on access to the described materials, e.g., limited distribution. </li>
+    <li>use and reproduction &#8211; Indicates the information is terms governing the use of the materials after access has been provided, e.g., copyrights, film rights, trade restrictions, etc.</li>
+  </ul>
+</div>
+<p class="attribute">altRepGroup; altFormat; contentType; xlink; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p>There are no subelements for &lt;accessCondition&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="accesscondition.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<p><i>Where use of a resource is restricted:</i></p>
+<div class="example">
+  <div class="indent1"><strong>&lt;accessCondition type=&quot;use and reproduction&quot; displayLabel=&quot;Restricted&quot;&gt;</strong>Copying allowed only for non-profit organizations<strong>&lt;/accessCondition&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;accessCondition type=&quot;use and reproduction&quot;&gt;</strong>For rights relating to this resource, visit http://hemi.nyu.edu/rights.html<strong>&lt;/accessCondition&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;accessCondition type=&quot;use and reproduction&quot;&gt;</strong>Use of this resource is governed by the terms and conditions of the Creative Commons &quot;Attribution-NonCommercial-ShareAlike&quot; License (http://creativecommons.org/licenses/by-nc-sa/2.0/)<strong>&lt;/accessCondition&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;accessCondition type=&quot;use and reproduction&quot;&gt;</strong>This video and the performance it captures are the sole property of Grupo Cultural Yuyachkani. Information regarding syndication and/or replication of this work may be obtained
+    by contacting Grupo Cultural Yuyachkani at yuyachkani@terra.com.pe<strong>&lt;/accessCondition&gt;</strong></div>
+</div>
+<p><i>Where use of a public-domain resource is unrestricted:</i></p>
+<div class="example">
+  <div class="indent1"><strong>&lt;accessCondition type=&quot;use and reproduction&quot;&gt;</strong>Use of this public-domain resource is unrestricted.<strong>&lt;/accessCondition&gt;</strong><br />
+    <br />
+    <strong>&lt;accessCondition type=&quot;use and reproduction&quot;&gt;</strong>Literary rights of Carrie Chapman Catt have been dedicated to the public<strong>&lt;/accessCondition&gt;</strong></div>
+</div>
+<p><i>Where a repository wishes to grant unrestricted rights to a resource for which it holds copyright:</i></p>
+<div class="example">
+  <div class="indent1"><strong>&lt;accessCondition type=&quot;use and reproduction&quot;&gt;</strong>This repository grants to all users a free, irrevocable, worldwide, perpetual right of access to, and a license to copy, use, distribute, perform and display the resource publicly
+    and to make and distribute derivative resources in any digital medium for any purpose, as well as the right to make any number of copies for any use.<strong>&lt;/accessCondition&gt;</strong></div>
+</div>
+<p><i>Where access to a resource is restricted:</i></p>
+<div class="example">
+  <div class="indent1"><strong>&lt;accessCondition&gt;</strong>Classified under national security provisions; Department of Defense; Title 50, chapter 401, U.S.C<strong>&lt;/accessCondition&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;accessCondition type=&quot;restriction on access&quot;&gt;</strong>Restricted: cannot be viewed until 2010; Members of donor's family<strong>&lt;/accessCondition&gt;</strong></div>
+</div>
+<p><i>Where access conditions are unknown:</i></p>
+<div class="example">
+  <div class="indent1"><strong>&lt;accessCondition type=&quot;use and reproduction&quot; xlink:href=&quot;http://www.loc.gov/rr/print/res/273_brum.html&quot;&gt;</strong>Rights status not evaluated. For general information see &quot;Copyright and Other Restrictions&quot;.<strong>&lt;/accessCondition&gt;</strong></div>
+</div>
+<p><i>Extension of access conditions using another schema:</i></p>
+<div class="example">
+  <div class="indent1"><strong>&lt;accessCondition&gt;</strong></div>
+  <div class="indent2">
+    <p><strong>&lt;copyright copyright.status=&quot;copyrighted&quot; publication.status=&quot;unpublished&quot; xmlns=&quot;http://www.cdlib.org/inside/diglib/copyrightMD&quot; xsi:schemaLocation=&quot;http://www.cdlib.org/inside/diglib/copyrightMD http://www.cdlib.org/groups/rmg/docs/copyrightMD.xsd</a>&quot;&gt;</strong></p>
+    </div>
+  <div class="indent3"><strong>&lt;creation&gt;</strong></div>
+  <div class="indent4"><strong>&lt;year.creation year.type=&quot;approximate&quot;&gt;</strong>1969?<strong>&lt;/year.creation&gt;</strong><br />
+    <strong>&lt;country.creation iso.code=&quot;us&quot;&gt;</strong>United States<strong>&lt;/country.creation&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/creation&gt;</strong><br />
+    <strong>&lt;creator&gt;</strong></div>
+  <div class="indent4"><strong>&lt;creator.corporate&gt;</strong>Rene Laursen Photography<strong>&lt;/creator.corporate&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/creator&gt;</strong><br />
+    <strong>&lt;rights.holder&gt;</strong></div>
+  <div class="indent4"><strong>&lt;name&gt;</strong>Rene Laursen Photography<strong>&lt;/name&gt;</strong><br />
+    <strong>&lt;contact&gt;</strong>702 North Grand, Santa Ana, CA 92701. 714-547-4604<strong>&lt;/contact&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/rights.holder&gt;</strong><br />
+    <strong>&lt;services&gt;</strong></div>
+  <div class="indent4"><strong>&lt;contact&gt;</strong>Berkeley Public Library<strong>&lt;/contact&gt;</strong><br />
+    <strong>&lt;note&gt;</strong>Consult institution: 2090 Kittredge St., Berkeley, CA 94704. Phone: (510) 981-6100, TDD: (510) 981-6100), Web: http://www.berkeleypubliclibrary.org<strong>&lt;/note&gt;</strong></div>
+  <div class="indent3"><strong>&lt;/services&gt;</strong><br />
+    <strong>&lt;general.note&gt;</strong>Transmission or reproduction of materials protected by copyright beyond that allowed by fair use requires the written permission of the copyright owners. In addition, the reproduction of some materials may be restricted by terms
+    of gift of purchase agreements, donor restrictions, privacy and publicity rights, licensing and trademarks. Works not in the public domain cannot be commercially exploited without permission of the copyright owner. Responsibility for any use rests exclusively
+    with the user.<strong>&lt;/general.note&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/copyright&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/accessCondition&gt;</strong></div>
+</div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="accesscondition.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;accessCondition&gt; &#8776; MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd506.html"> 506</a> and <a href="http://www.loc.gov/marc/bibliographic/bd540.html"> 540</a></p>
+<p>&lt;accessCondition&gt; with type=&quot;restriction on access&quot; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd506.html"> 506</a></p>
+<p>&lt;accessCondition&gt; with type=&quot;use and reproduction&quot; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd540.html"> 540</a></p>
+<p>See also <a href="http://www.loc.gov/mods/mods-mapping.html#accesscondition"> <i>MARC Mapping to MODS</i> for the &lt;accessCondition&gt; element</a>.</p>
+<h3>Dublin Core Mapping</h3>
+<p>The <i><a href="http://www.loc.gov/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping </a></i>recommends mapping &lt;accessCondition&gt; to &lt;dc:rights&gt;.</p>
+<p>MODS examples expressed in Dublin Core:</p>
+<div class="indent1">
+  <p><strong>&lt;dc:rights&gt;</strong>For rights relating to this resource, visit http://hemi.nyu.edu/rights.html<strong>&lt;/dc:rights&gt;</strong></p>
+  <p><strong>&lt;dc:rights&gt;</strong>Use of this resource is governed by the terms and conditions of the Creative Commons &quot;Attribution-NonCommercial-ShareAlike&quot; License (http://creativecommons.org/licenses/by-nc-sa/2.0/)<strong>&lt;/dc:rights&gt;</strong></p>
+  <p><strong>&lt;dc:rights&gt;</strong>Use of this public-domain resource is unrestricted. <strong>&lt;/dc:rights&gt;</strong></p>
+</div>
+<div class="indent1">
+	  </div>
+				
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="accesscondition.html#skip_menu">Top</a></p>
+
+
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->February 19, 2013<!-- #EndDate -->
+      </p>  
+
+</td>
+</tr> 	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->February 19, 2013<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

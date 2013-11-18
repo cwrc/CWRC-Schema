@@ -1,0 +1,308 @@
+body { 
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	background: #ffffff;
+}
+a:link {
+	color: #000099;
+}
+a:visited {
+	color: #0066CC;
+}
+a:hover {
+	color: #000099;
+	background: #eeeeee;
+}
+.selected {
+	font: Verdana, Arial, Helvetica, sans-serif;
+	color: #333399;
+	font-weight:600;
+}
+a#skip {
+	position: absolute;
+	top:-100px;
+}
+table.header {
+	display: none;
+}
+table.footer {
+	display: none;
+}
+/* Start Elements Table */
+table.layout {
+	width: 99% !important;
+	padding: 0px;
+	margin: 0px;
+	border: 0px none #ffffff !important;
+	text-align: left;
+}
+table.layout tr td div.header {
+	display: none;
+}
+table.layout p.top-menu {
+	margin: 0px 0px 10px 10px;
+	padding: 0px;
+	border: 0px;
+}
+table.layout p {
+	font: 9pt/12pt Verdana, Arial, Helvetica, sans-serif !important;
+	margin: 10px 10px 10px 10px;
+	padding-top: 0px;
+}
+table.layout tr td div.example {
+	margin: 10px 10px 10px 5px;
+	padding: 0px;
+}
+table.layout tr td div.indent1 {
+	font: 100% Verdana, Arial, Helvetica, sans-serif !important;
+	margin: 0px 0px 5px 25px;
+}
+table.layout tr td div.indent2 {
+	font: 100% Verdana, Arial, Helvetica, sans-serif !important;
+	margin: 0px 0px 5px 40px;
+}
+table.layout ul {
+	font: 100% Verdana, Arial, Helvetica, sans-serif !important;
+	margin: 0px 0px 10px 30px;
+	padding: 0px;
+}
+table.layout ul li {
+	font: 95% Verdana, Arial, Helvetica, sans-serif !important;
+	margin: 4px 0px 0px 0px !important;
+}
+table.layout ol {
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-left: 5px;
+	font: 85% Verdana, Arial, Helvetica, sans-serif;
+}
+table.layout ol li {
+	margin-left: 10px;
+	font: 100%/140% Verdana, Arial, Helvetica, sans-serif;
+}
+table.layout tr td ul li div.indent1 {
+	font: 95% Verdana, Arial, Helvetica, sans-serif !important;
+	margin: 5px 0px 5px 25px;
+}
+table.layout tr td ul li div.indent2 {
+	font: 95% Verdana, Arial, Helvetica, sans-serif !important;
+	margin: 0px 0px 5px 40px;
+}
+table.layout ul li ul {
+	margin-left: 15px;
+	font: 95%/130% Verdana, Arial, Helvetica, sans-serif;
+	list-style-type: square;
+}
+table.layout p.attribute {
+	font: bold 100% "Courier New", Courier, monospace;
+	color: #000;
+}
+table.layout p.top {
+	font: 85% Verdana, Arial, Helvetica, sans-serif;
+}
+table.layout tr td div.example div.indent1 {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0px 0px 0px 25px;
+}
+table.layout tr td div.example div.indent2 {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0px 0px 0px 40px;
+}
+table.layout p.attribute {
+	font: bold 100% Verdana, Arial, Helvetica, sans-serif;
+}
+table.layout p.top {
+	display: none;
+}
+/* End Layout Table */
+/* Start Elements Table */
+table.elements {
+	width: 95%;
+	border: solid 1px #666666;
+	align: left;
+	margin: 10px;
+}
+table.elements th {
+	font: bold 120% Verdana, Arial, Helvetica, sans-serif;
+	text-align: right;
+	vertical-align: bottom;
+	border-bottom: dotted 1px #666666 !important;
+	border-right: dotted 1px #666666;
+	padding: 5px;
+}
+table.elements td {
+	font: 120% Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	vertical-align: bottom;
+	background-color: #ffffff;
+	border-bottom: dotted 1px #666666;
+	padding: 5px;
+}
+table.elements td.noborder, table.elements th.noborder {
+	border-bottom: none 0px !important;
+}
+/* End Elements Table */
+/* Start Element-List Table */
+table.element-list {
+	width: 75%;
+	border-left: dotted 1px #999999;
+	border-top: dotted 1px #999999;
+	align: left;
+	margin: 10px;
+}
+table.element-list td {
+	width: 25%;
+	font: 85%/130% Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	border-bottom: dotted 1px #999999;
+	border-right: dotted 1px #999999;
+	padding: 5px;
+}
+table.element-list td.noborder {
+	border-bottom: none 0px;
+}
+/* End Elements Table */
+/* Start DLF-Acquifer Table */
+table.dlf-aquifer {
+	width: 98%;
+	border-left: dotted 1px #999999;
+	border-top: dotted 1px #999999;
+	align: left;
+	margin: 10px;
+}
+table.dlf-aquifer td {
+	font: 80%/130% Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	border-bottom: dotted 1px #999999;
+	border-right: dotted 1px #999999;
+	padding: 5px;
+}
+table.dlf-aquifer th {
+	width: 15%;
+	font: bold 80%/130% Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	vertical-align: bottom;
+	background-color: #dddddd;
+	border-bottom: solid 1px #999999;
+	border-right: dotted 1px #999999;
+	padding: 5px;
+}
+table.dlf-aquifer td.noborder {
+	border-bottom: none 0px;
+}
+/* End DLF/Aquifer Table */
+
+/* Start Dublin Core Table */
+table.dc-core {
+	width: 65%;
+	border-left: dotted 1px #999999;
+	border-top: dotted 1px #999999;
+	align: left;
+	margin: 10px;
+}
+table.dc-core td {
+	font: 80%/130% Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	border-bottom: dotted 1px #999999;
+	border-right: dotted 1px #999999;
+	padding: 5px;
+}
+table.dc-core th {
+	width: 50%;
+	font: bold 80%/130% Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	vertical-align: bottom;
+	background-color: #dddddd;
+	border-bottom: solid 1px #999999;
+	border-right: dotted 1px #999999;
+	padding: 5px;
+}
+table.dc-core td.noborder {
+	border-bottom: none 0px;
+}
+/* End Dublin Core Table */
+
+form {
+	margin-bottom: 0;
+}
+.contactus {
+	float: right;
+	text-align: right;
+	font: 80% Arial, Helvetica, sans-serif;
+}
+h1 {
+	font: bold 16pt Arial, Helvetica, sans-serif;
+	color: #333399;
+	padding: 0px;
+	margin: 0px 0px 0px 10px;
+}
+h1 span {
+	font: bold italic 12pt Georgia, "Times New Roman", Times, serif;
+	color: #6666CC;
+	margin-left: 10px;
+	padding: 0px;
+}
+h2 {
+	font: bold 13pt Georgia, "Times New Roman", Times, serif;
+	/*font-size: 16pt;*/
+	color: #6666CC;
+	padding: 0px;
+	margin: 15px 0px 0px 10px;
+}
+h2.border {
+	font: bold 13pt Georgia, "Times New Roman", Times, serif;
+	color: #6666CC;
+	padding: 10px 0px 0px 0px;
+	margin: 15px 10px 0px 10px;
+	background: transparent url(../images/dot.gif) top left repeat-x;
+}
+h3 {
+	font: bold 11pt Arial, Helvetica, sans-serif;
+	/*font-size: 14pt;*/
+	color: #333333;
+	padding: 0px;
+	margin: 10px 0px 0px 10px;
+}
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	/*font-size: 13pt;*/
+	font-size: 10pt;
+	font-weight: bold;
+	color: #666666;
+	padding: 0px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+	font-style: italic;
+}
+.indent {  
+	text-indent: 10pt; 
+}
+.selected {
+	font: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #000066;
+}
+th {
+	color: #3366CC;
+}
+
+hr.dashed {
+	border: none 0; 
+	border-top: 2px dashed #333399;/*the border*/
+	width: 100%;
+	height: 2px;/*whatever the total width of the border-top and border-bottom equal*/
+} 
+
+

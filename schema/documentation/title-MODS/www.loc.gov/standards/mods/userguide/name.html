@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;name&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element name overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;name&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="name.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo;
+  <!-- Update breadcrumb with name of element, class=selected -->
+  <!-- Update breadcrumb with name of element, class=selected -->
+  <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+  <!-- Update breadcrumb with name of element, class=selected -->
+  <span class="selected">Top-level Element: </span>
+  <!-- Update breadcrumb with name of element, class=selected --> 
+      <span class="selected">&lt;name&gt;</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;name&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <td scope="col"><strong>&lt;name&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">The name of a person, organization, or event (conference, meeting, etc.) associated in some way with the resource.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; authority; authorityURI; valueURI; usage; displayLabel; nameTitleGroup;<span class="attribute"> altRepGroup;</span> xlink; ID; lang; xml:lang; script; transliteration; etal </td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>
+	  &lt;<a href="name.html#namepart">namePart</a>&gt; 
+	  &lt;<a href="name.html#displayform">displayForm</a>&gt; 
+	  &lt;<a href="name.html#affiliation">affiliation</a>&gt; 
+	  &lt;<a href="name.html#role">role</a>&gt; 
+	  &lt;<a href="name.html#description">description</a>&gt; 
+	  &lt;<a href="name.html#etal">etal</a>&gt; 
+	  </strong></td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="name.html#guidelines">GUIDELINES</a> | <a href="name.html#examples">EXAMPLES</a> | <a href="name.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>&lt;name&gt; is a container element that contains all subelements related to name information.</p>
+<p>Role values are used to indicate the particular relationship between the name and the resource. Some implementors have used the &lt;<a href="name.html#role">role</a>&gt; subelement with the value &quot;creator&quot;. to retain the concept of main entry.</p>
+<p>In addition to describing creators, &lt;name&gt; is used as a subelement of &lt;subject&gt;. For names used as subjects, see the &lt;<a href="subject.html">subject</a>&gt; section of the guidelines.</p>
+<p>A name may be linked to a uniform title in the record using the <em>nameTitleGroup</em> attribute. A name may be designated as the citation or &quot;main&quot; entry name using the <em>usage</em> attribute.</p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> recommend the use of at least one &lt;name&gt; element to describe the creator of the intellectual content of the resource, if available.</p>
+<p>Include as many &lt;name&gt; elements for contributors as are readily available. (Do not be constrained by the Anglo-American Cataloging Rules, 2nd edition (AACR2) practice of limiting authors or contributors to three or fewer names.) For textual materials, include
+  the names of all known authors, translators, and/or editors. </p>
+<p>For images, include the name of the creator of the original intellectual content (photographer, painter, architect, etc.) and the name of anyone capturing that content in a new medium (for a photograph of a building, include both the architect and the photographer).
+  If the creator is unknown or anonymous, do not include &quot;unknown,&quot; &quot;anonymous,&quot; or a similar indication in the MODS records for aggregation.</p>
+<p>The DLF/Aquifer guidelines recommend the use of the <i>type</i> attribute with all &lt;name&gt; elements whenever possible for greater control and interoperability.</p>
+<p>The <i>authority</i> attribute is also recommended. Use the form of a name taken from the authority file most appropriate to the resource and intended audience. The value for the <i>authority</i> attribute should come from the <a href="http://www.loc.gov/standards/sourcelist/name-title.html"> Name and Title Authority Source Codes</a> maintained by the Library of Congress. Use the value &quot;local&quot; if a locally-developed name authority file is in use. If there is no name authority file in use, the <i>authority</i> attribute should not be used.</p>
+<p>See the &lt;<a href="dlfaquifer.html#name">name</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Aggregator information: Aggregators commonly use the &lt;name&gt; field as a target for author or subject searching. Even the simplest interfaces offer an author/creator search. In cases of unknown or anonymous creators of resources, aggregators generally remove
+  values indicating this and rely on institutions' local records to convey this information if necessary.</p>
+<p>The &quot;Name Practices&quot; section in the <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" width="8" height="10" /> discusses the use of names.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Optionally, indicates what type of name is recorded.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">The following values may be used with type:
+  <ul>
+    <li><strong>personal</strong> &#8211; Indicates the name is that of a person. </li>
+    <li><strong>corporate</strong> &#8211; Indicates the name is that of a company, institution, or other organization. </li>
+    <li><strong>conference</strong> &#8211; Indicates the name is that of a conference or related type of meeting. </li>
+    <li><strong>family</strong> &#8211; Indicates the name is that of a family. </li>
+  </ul>
+</div>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name of the authoritative list used, if applicable, e.g. <i>authority</i>=&quot;naf&quot;. The Library of Congress maintains a list of authority files: <a href="http://www.loc.gov/standards/sourcelist/name-title.html"> Name and Title Authority Source Codes</a>.</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">usage</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Use of the name in the resource description.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2"> This attribute is used with <em>usage</em>=&quot;primary&quot; when when there are several names in a record and for citation purposes one is to be selected.  This is useful for the designation of one name as the &quot;main entry&quot; (in MARC 21, 1XX) while other names are cited as added entries (in MARC 21, 7XX).  The &quot;primary&quot; name would be used with the resource title for a citation, and also would be the name that would be associated with the uniform title when one is present.</div>
+<p class="attribute">nameTitleGroup</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Provides an explicit link between a name and a uniform title  when  that is needed. </div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">The same value is assigned to this attribute for  the two elements. This attribute is used to link names to uniform titles when  the name-uniform title combination is an authority controlled heading.&nbsp; </div>
+
+<p class="attribute">etal</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The &lt;etal&gt; subelement is added to the list of &lt;name&gt; subelements to indicate that there are one or more names that, for whatever reason, cannot be explicitily included in another name element.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">xxx</div>
+
+
+
+<p class="attribute">altRepGroup; xlink; ID; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p class="nomargin">The following subelements are described below:</p>
+<ul>
+  <li>&lt;<a href="name.html#namepart">namePart</a>&gt; </li>
+  <li>&lt;<a href="name.html#displayform">displayForm</a>&gt; </li>
+  <li>&lt;<a href="name.html#affiliation">affiliation</a>&gt; </li>
+  <li>&lt;<a href="name.html#role">role</a>&gt; </li>
+  <li>&lt;<a href="name.html#description">description</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="name.html#skip_menu">Top</a></p>
+<h2 id="namepart" class="border">Subelement: &lt;namePart&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">The individual parsed parts that together make up the full name.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>The name itself is always contained in a &lt;namePart&gt; element. MODS allows for either breaking up parts of the name (given and family, for example) in different &lt;namePart&gt; elements or enclosing the entire name in one element. Use of the former method affords
+  more control in sorting and display and should be used if the data is readily available. Either method is acceptable.</p>
+<p>For greater interoperability, name elements should appear in the same order as in their authorized form (the authority cited in the &lt;name&gt; <i>authority</i> attribute). If no authority is used for personal names, last name or family name should appear first, followed by a comma, followed by first or given names.</p>
+<p>Parsing can be used to indicate a date associated with the name, to parse the parts of a corporate name, or to parse parts of a personal name if desired. </p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> require the use of &lt;namePart&gt; as a subelement of &lt;name&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Identifies which part of the parsed name is recorded in the &lt;namePart&gt;.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">When breaking a &lt;name&gt; element into constituent &lt;namePart&gt; elements, the <i>type</i> attribute should be used whenever applicable. The following values may be used with the <i>type</i> attribute:
+  <ul>
+    <li><strong>date</strong> &#8211; Used to parse dates that are not integral parts of a name. Dates that are part of a name, e.g. dates within a conference name, do not use this attribute to separate the date, since it is an integral part of the name string. The birthdate
+      associated with a personal name, however, is not an integral part of the name but added to distinguish the name from others, so it does include a separate &lt;namePart&gt; with type=&quot;date&quot;. This attribute is not used when parsing the components of a corporate name. </li>
+    <li><strong>family</strong> &#8211; Used for the surname used to identify members of the same family. </li>
+    <li><strong>given</strong> &#8211; Used for a forename or first name. </li>
+    <li><strong>termsOfAddress</strong> &#8211; Used to record titles and enumeration associated with a name, such as Jr., II, etc. </li>
+  </ul>
+</div>
+<p class="attribute"> lang; xml:lang; script; transliteration</p>
+<p class="indent"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for description for each.</i></p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;namePart&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="name.html#skip_menu">Top</a></p>
+<h2 id="displayform" class="border">Subelement: &lt;displayForm&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">The unstructured form of the name as given on the resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>The &lt;displayForm&gt; element makes it possible to display personal names in direct order rather than inverted.</p>
+<p>For some applications, contractual agreements require that the form of the name provided on the resource be provided. </p>
+<p>If the display name is an entire statement of responsibility, &lt;displayForm&gt; may be indicated in a note (with type=&quot;statement of responsibility&quot;) along with any other text in the statement of responsibility and also repeated here if desired.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The DLF/Aquifer guidelines allow the use of &lt;displayForm&gt; if desired.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute"> lang; xml:lang; script; transliteration</p>
+<p class="indent"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for description for each.</i></p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;displayForm&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="name.html#skip_menu">Top</a></p>
+<h2 id="affiliation" class="border">Subelement: &lt;affiliation&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">The name of an organization, institution, etc. with which the entity recorded in &lt;name&gt; was associated at the time that the resource was created.</td>
+    </tr>
+    <tr>
+      <th scope="col">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th scope="col" class="noborder">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;affiliation&gt; may also contain other elements that are part of the affiliation, such as email address, street address, job title, etc.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>If the information is readily available, &lt;affiliation&gt; may optionally be included. </p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute"> lang; xml:lang; script; transliteration</p>
+<p class="indent"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for description for each.</i></p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;affiliation&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="name.html#skip_menu">Top</a></p>
+<h2 id="role" class="border">Subelement: &lt;role&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Designates the relationship (role) of the entity recorded in name to the resource describedin the record.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="name.html#roleterm">roleTerm</a>&gt;</strong></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;role&gt; is a container element for the role recorded in one or more &lt;roleTerm&gt; subelements.</p>
+<p>If there are different roles, repeat &lt;role&gt;&lt;roleTerm&gt; as needed. </p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> recommend using this element primarily with personal names. The DLF/Aquifer guidelines leave it up to the institution whether or not to generate &quot;creator&quot; as a &lt;roleTerm&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>There are no attributes for &lt;role&gt;.</p>
+<h4>Subelements</h4>
+<p>The following subelement is described below:</p>
+<ul>
+  <li>&lt;<a href="name.html#roleterm">roleTerm</a>&gt;</li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="name.html#skip_menu">Top</a></p>
+<h2 id="roleterm" class="border">Subelement: &lt;role&gt;&lt;roleTerm&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="389" scope="col">Contains the textual or coded form of a relator/role.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>An <i>authority</i> attribute should be indicated if the role is in coded form or in textual form from a controlled term list. The Library of Congress maintains a list of sources for codes and terms, <a href="http://www.loc.gov/standards/sourcelist/relator-role.html"> Relator and Role Code and Term Source Codes</a>, and a relator code and term value list, <a href="http://www.loc.gov/marc/relators/"> MARC Code list for Relators</a>. </p>
+<p>If both a code and a term are given that represent the same role, use one &lt;role&gt; and multiple occurrences of &lt;roleTerm&gt;. If different roles are given, repeat &lt;role&gt;&lt;roleTerm&gt;.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The DLF/Aquifer guidelines leave it up to the institution whether or not to generate &quot;creator&quot; as a &lt;roleTerm&gt; and recommend that, if &lt;role&gt; is used, that at least a textual version of the role is given using type=&quot;text&quot;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Indicates whether the role is expressed in a coded or textual form.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">The <i>type</i> attribute may be used with the following values:
+  <ul>
+    <li><b>text</b> &#8211; This value is used to express a role in a textual form. The <i> authority</i> attribute may be used to indicate the source of the term. </li>
+    <li><b>code</b> &#8211; This value is used to express a role in a coded form. The <i>authority</i> attribute should be used to indicate the source of the code. </li>
+  </ul>
+</div>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">Record the name in textual or coded form of the authoritative list. For codes for authoritative sources, see <a href="http://www.loc.gov/standards/sourcelist/relator-role.html"> Relator and Role Code and Term Source Code</a>. To indicate the MARC relators list, use <i>authority</i>=&quot;marcrelator&quot;.</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute"> lang; xml:lang; script; transliteration</p>
+<p class="indent"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for description for each.</i></p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;roleTerm&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="name.html#skip_menu">Top</a></p>
+
+
+<h2 id="description" class="border">Subelement: &lt;description&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">A textual description for a name when necessary, for example, to distinguish from other names.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Used for job titles for persons or other information about the name entity. </p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>Use of this subelement is not recommended in the DLF/Aquifer guidelines.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute"> lang; xml:lang; script; transliteration</p>
+<p class="indent"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for description for each.</i></p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;description&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="name.html#skip_menu">Top</a></p>
+
+<h2 id="etal" class="border">Subelement: &lt;etal&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Indicates that there are one or more names that, for whatever reason, cannot be explicitly included in another name element.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Used for one of more names that, for whatever reason, cannot be included in another name element.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>None.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute"> lang; xml:lang; script; transliteration</p>
+<p class="indent"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for description for each.</i></p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;etal&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="name.html#skip_menu">Top</a></p>
+
+
+
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart type=&quot;termsOfAddress&quot;&gt;</strong>Dr.<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart&gt;</strong>Brown, B. F.<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;affiliation&gt;</strong>Chemistry Dept., American University<strong>&lt;/affiliation&gt;</strong><br />
+    <strong>&lt;role&gt;</strong></div>
+  <div class="indent3"><strong>&lt;roleTerm type=&quot;text&quot; authroity=&quot;marcrelator&quot;&gt;</strong>creator<strong>&lt;/roleTerm&gt;</strong><br />
+    <strong>&lt;roleTerm type=&quot;code&quot; authority=&quot;marcrelator&quot;&gt;</strong>cre<strong>&lt;/roleTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/role&gt;</strong><br />
+    <strong>&lt;role&gt;</strong></div>
+  <div class="indent3"><strong>&lt;roleTerm type=&quot;text&quot; authority=&quot;marcrelator&quot;&gt;</strong>author<strong>&lt;/roleTerm&gt;</strong><br />
+    <strong>&lt;roleTerm type=&quot;code&quot; authority=&quot;marcrelator&quot;&gt;</strong>aut<strong>&lt;/roleTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/role&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart&gt;</strong>Abrams, Michael<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;description&gt;</strong>American artist, 20th c.<strong>&lt;/description&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart&gt;</strong>Alterman, Eric<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;displayForm&gt;</strong>Eric Alterman<strong>&lt;/displayForm&gt;</strong><br />
+    <strong>&lt;role&gt;</strong></div>
+  <div class="indent3"><strong>&lt;roleTerm type=&quot;text&quot;&gt;</strong>creator<strong>&lt;/roleTerm&gt;</strong><br />
+    <strong>&lt;roleTerm type=&quot;code&quot;&gt;</strong>cre<strong>&lt;/roleTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/role&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart type=&quot;given&quot;&gt;</strong>John<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;family&quot;&gt;</strong>Huston<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;role&gt;</strong></div>
+  <div class="indent3"><strong>&lt;roleTerm type=&quot;code&quot; authority=&quot;marcrelator&quot;&gt;</strong>drt<strong>&lt;/roleTerm&gt;</strong><br />
+    <strong>&lt;roleTerm type=&quot;text&quot; authority=&quot;marcrelator&quot;&gt;</strong>director<strong>&lt;/roleTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/role&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name authority=&quot;naf&quot; type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart&gt;</strong>Evans, Walker, 1903-1975<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;role&gt;</strong></div>
+  <div class="indent3"><strong>&lt;roleTerm type=&quot;code&quot; authority=&quot;marcrelator&quot;&gt;</strong>pht<strong>&lt;/roleTerm&gt;</strong><br />
+    <strong>&lt;roleTerm type=&quot;text&quot; authority=&quot;marcrelator&quot;&gt;</strong>Photographer <strong> &lt;/roleTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/role&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart type=&quot;given&quot;&gt;</strong>John Paul<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;termsOfAddress&quot;&gt;</strong>II<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;termsOfAddress&quot;&gt;</strong>Pope<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1920-<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name authority=&quot;naf&quot; type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart type=&quot;family&quot;&gt;</strong>Mattox<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;given&quot;&gt;</strong>Douglas E.<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;given&quot;&gt;</strong>(Douglas Ernest)<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1947-<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;conference&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart&gt;</strong>International Workshop on Plasma-Based Ion Implantation (1993 : University of Wisconsin--Madison)<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart type=&quot;given&quot;&gt;</strong>Jack<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;family&quot;&gt;</strong>May<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;termsOfAddress&quot;&gt;</strong>I<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;description&gt;</strong>District Commissioner<strong>&lt;/description&gt;</strong><br />
+    <strong>&lt;description&gt;</strong>Pr&eacute;fet de r&eacute;gion<strong>&lt;/description&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;corporate&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart&gt;</strong>United States<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart&gt;</strong>Court of Appeals (2nd Circuit)<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;conference&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart&gt;</strong>Paris Peace Conference (1919-1920)<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;personal&quot; authority=&quot;naf&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart&gt;</strong>Woolf, Virginia<strong>&lt;/namePart&gt;</strong><br />
+    <strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1882-1941<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;personal&quot; nameTitleGroup=&quot;1&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart&gt;</strong> Shakespeare, William <strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1564-1616<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+
+  <div class="indent1"><strong>&lt;titleInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;nonSort&gt;</strong>The <strong>&lt;/nonSort&gt;&lt;title&gt;</strong>tragedy of Hamlet <strong>&lt;/title&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/titleInfo&gt;</strong></div>
+
+  <div class="indent1"><strong>&lt;titleInfo type=&quot;uniform&quot; nameTitleGroup=&quot;1&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;title&gt;</strong>Hamlet<strong>&lt;/title&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/titleInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;name type=&quot;personal&quot; usage=&quot;primary&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart&gt;</strong>Owens, Mark<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent2"><strong>&lt;namePart type=&quot;date&quot;&gt;</strong>1944-<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+
+  <div class="indent1"><strong>&lt;name type=&quot;personal&quot;&gt;</strong></div>
+  <div class="indent2"> <strong>&lt;namePart&gt;</strong>Owens, Delia<strong>&lt;/namePart&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/name&gt;</strong></div>
+
+  <div class="indent1"><strong>&lt;titleInfo&gt;</strong></div>
+  <div class="indent2"><strong>&lt;title&gt;</strong>Cry of the Kalahari<strong>&lt;/title&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/titleInfo&gt;</strong></div>
+</div>
+
+<div class="example">
+<div class="indent1"><strong>&lt;name&gt;</strong></div>
+<div class="indent2"><strong>&lt;namePart type=&quot;family&quot;&gt;</strong>Fox<strong>&lt;/namePart&gt;</strong></div>
+<div class="indent2"><strong>&lt;namePart type=&quot;given&quot;&gt;</strong>Nellie<strong>&lt;/namePart&gt;</strong></div>
+<div class="indent1"><strong>&lt;/name&gt;</strong></div>
+<div class="indent1"><strong>&lt;name&gt;</strong></div>
+<div class="indent2"><strong>&lt;namePart type=&quot;family&quot;&gt;</strong>Phillips<strong>&lt;/namePart&gt;</strong></div>
+<div class="indent2"><strong>&lt;namePart type=&quot;given&quot;&gt;</strong>Bubba<strong>&lt;/namePart&gt;</strong></div>
+<div class="indent1"><strong>&lt;/name&gt;</strong></div>
+<div class="indent1"><strong>&lt;name&gt;</strong></div>
+<div class="indent2"><strong>&lt;etal/&gt;</strong></div>
+<div class="indent1"><strong>&lt;/name&gt;</strong></div>
+</div>
+
+
+
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="name.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;name&gt; = MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd1xx.html"> 1XX</a> and <a href="http://www.loc.gov/marc/bibliographic/bd70x75x.html"> 7XX</a></p>
+<p>When used with &lt;name type=&quot;personal&quot;&gt;, &lt;namePart&gt; = MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd100.html"> 100</a>, <a href="http://www.loc.gov/marc/bibliographic/bd700.html"> 700</a></p>
+<p>When used with &lt;name type=&quot;family&quot;&gt;, &lt;namePart&gt; = MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd110.html"> 100</a>, <a href="http://www.loc.gov/marc/bibliographic/bd710.html"> 700</a></p>
+<p>When used with &lt;name type=&quot;corporate&quot;&gt;, &lt;namePart&gt; = MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd110.html"> 110</a>, <a href="http://www.loc.gov/marc/bibliographic/bd710.html"> 710</a></p>
+<p>When used with &lt;name type=&quot;conference&quot;&gt;, &lt;namePart&gt; = MARC 21 fields <a href="http://www.loc.gov/marc/bibliographic/bd111.html"> 111</a>, <a href="http://www.loc.gov/marc/bibliographic/bd711.html"> 711</a></p>
+<p>&lt;name&gt;&lt;namePart type=&quot;termsOfAddress&quot;&gt; &#8776; MARC X00 subfields b and c </p>
+<p>&lt;name&gt;&lt;displayForm&gt; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd245.html"> 245</a> subfield c (This subfield may include other information in addition to the display form of the name.)</p>
+<p>&lt;name&gt;&lt;role&gt; = MARC relator code or its textual form.</p>
+<p>See also <a href="http://www.loc.gov/standards/mods/mods-mapping.html#name"><i>MARC Mapping to MODS</i> for the &lt;name&gt; element</a>.</p>
+<h3>Dublin Core Mapping</h3>
+<p>The <i><a href="http://www.loc.gov/standards/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping</a></i> recommends mapping &lt;name&gt;&lt;namePart&gt; to either &lt;dc:creator&gt; or &lt;dc:contributor&gt; in Dublin Core.</p>
+<p>The DLF/Aquifer guidelines recommend mapping &lt;name&gt; elements to &lt;dc:contributor&gt; as the default, using &lt;dc:creator&gt; only if the source data clearly identifies the name as creator.</p>
+<p>MODS example expressed in Dublin Core:</p>
+<div class="indent1"><strong>&lt;dc:creator&gt;</strong>Faulkner, William, 1897-1962<strong>&lt;/dc:creator&gt;</strong><br />
+  <strong>&lt;dc:contributor&gt;</strong>Mattox, Douglas E. (Douglas Ernest), 1947-<strong>&lt;/dc:contributor&gt;</strong><br />
+  <strong>&lt;dc:contributor&gt;</strong>Digital Library Federation<strong>&lt;/dc:contributor&gt;</strong> </div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="name.html#skip_menu">Top</a></p>
+<h1><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></h1>      
+<p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->July 12, 2013<!-- #EndDate -->
+      </p>  
+
+</td>
+</tr> 	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->July 12, 2013<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

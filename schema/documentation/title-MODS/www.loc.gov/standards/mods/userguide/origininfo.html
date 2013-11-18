@@ -1,0 +1,809 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Top-level Element: &lt;originInfo&gt; (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element origininfo overview metadata object description schema web site library congress xml" />
+<meta name="description" content="Top-level Element: &lt;originInfo&gt; (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="origininfo.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+  <p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Top-level Element: &lt;originInfo&gt;</span></p>
+</div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>Top-level Element: &lt;originInfo&gt; </h1>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <td scope="col"><strong>&lt;originInfo&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Definition</th>
+      <td scope="col"><span class="definition">Information about the origin of the resource, including place of origin or publication, publisher/originator, and dates associated with the resource.</span></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td><span class="attribute">eventType; displayLabel; altRepGroup;</span> lang; xml:lang; script; transliteration </td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="origininfo.html#place">place</a>&gt; &lt;<a href="origininfo.html#publisher">publisher</a>&gt; &lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; &lt;<a href="origininfo.html#datecreated">dateCreated</a>&gt; &lt;<a href="origininfo.html#datecaptured">dateCaptured</a>&gt; &lt;<a href="origininfo.html#datevalid">dateValid</a>&gt; &lt;<a href="origininfo.html#datemodified">dateModified</a>&gt;
+        &lt;<a href="origininfo.html#copyrightdate">copyrightDate</a>&gt; &lt;<a href="origininfo.html#dateother">dateOther</a>&gt; &lt;<a href="origininfo.html#edition">edition</a>&gt; &lt;<a href="origininfo.html#issuance">issuance</a>&gt; &lt;<a href="origininfo.html#frequency">frequency</a>&gt; </strong></td>
+    </tr>
+  </tbody>
+</table>
+<p><a href="origininfo.html#guidelines">GUIDELINES</a> | <a href="origininfo.html#examples">EXAMPLES</a> | <a href="origininfo.html#mappings"> MAPPINGS</a></p>
+<h2 id="guidelines">GUIDELINES FOR USE</h2>
+<p>&lt;originInfo&gt; is a container element that contains all subelements related to publication and origination information. It includes all dates associated with the creation, issuance, and/or publication of the resource. Dates associated with the temporal content
+  of the resource go under &lt;<a href="subject.html">subject</a>&gt;, and dates associated with the metadata go in &lt;<a href="recordinfo.html">recordInfo</a>&gt;. Data is input only within each subelement.</p>
+<h3>Specific DLF/Aquifer Guidelines</h3>
+<p>The <i>DLF/Aquifer Implementation Guidelines for Shareable MODS Records</i> require the use of at least one &lt;originInfo&gt; element with at least one date subelement in every record, one of which must be marked as a key date.</p>
+<p>Use of the &lt;<a href="origininfo.html#place">place</a>&gt;, &lt;<a href="origininfo.html#publisher">publisher</a>&gt;, and &lt;<a href="origininfo.html#edition">edition</a>&gt; subelements are recommended if applicable. The DLF/Aquifer guidelines make no recommendation on the use of the elements &lt;<a href="origininfo.html#issuance">issuance</a>&gt;
+  and &lt;<a href="origininfo.html#frequency">frequency</a>&gt;. </p>
+<p>The examples given in the DLF/Aquifer guidelines represent a sample of the types of decisions a metadata provider might make about which data is important to expose.</p>
+<p>See the &lt;<a href="dlfaquifer.html#origininfo">originInfo</a>&gt; entry in the <a href="dlfaquifer.html">DLF/Aquifer Summary of MODS Requirements and Recommendations Table</a> for further information on requirements of this element, its attributes, and subelements. </p>
+<p>Aggregator information: Aggregators in the current environment will likely use dates for providing access to materials by their creation date, including limiting searches to resources created within a certain date range, or browsing by the date of creation
+  of a resource. The <i>keyDate </i>attribute signifies to an aggregator which date is most important, but aggregators should also make use of indication of date ranges, uncertain dates, and the like to improve end user discovery. Other dates and other &lt;originInfo&gt;
+  data would likely be displayed to a user, to give that user the information he or she needs to determine if the resource is of interest.</p>
+<p>The &quot;Date Practices&quot; section of the <a href="http://webservices.itcs.umich.edu/mediawiki/oaibp/index.php/ShareableMetadataPublic"> <i>DLF/NSDL Best Practices for Shareable Metadata</i></a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" /> discusses the use of dates. Other elements in &lt;originInfo&gt; are not covered.</p>
+<h2>Element Description</h2>
+<h3>Attributes</h3>
+<p class="attribute">eventType</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Identifies a type of event.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">
+  <p>There is no controlled list of identifier eventTypes. Suggested values include, but are not limited to, the following values: 'production', 'publication', 'distribution', 'manufacture'.</p>
+</div>
+
+
+
+
+
+<p class="attribute">altRepGroup; lang; xml:lang; script; transliteration; displayLabel</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h3>Subelements</h3>
+<p class="nomargin">The following subelements are described below:</p>
+<ul>
+  <li>&lt;<a href="origininfo.html#place">place</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#publisher">publisher</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#datecreated">dateCreated</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#datecaptured">dateCaptured</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#datevalid">dateValid</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#datemodified">dateModified</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#copyrightdate">copyrightDate</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#dateother">dateOther</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#edition">edition</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#issuance">issuance</a>&gt; </li>
+  <li>&lt;<a href="origininfo.html#frequency">frequency</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="place">Subelement: &lt;place&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Name of a place associated with the issuing, publication, release, distribution, manufacture, production, or origin of a resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>supplied</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder"><strong>&lt;<a href="origininfo.html#placeterm">placeTerm</a>&gt; </strong></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;place&gt; is a container element for &lt;placeTerm&gt; to indicate place of publication/origin. &lt;place&gt; is used in connection with the origin of a resource, i.e., creation, publication, issuance, etc. The &lt;place&gt; element should be omitted if no information about
+  the originating place of the resource is known.</p>
+<p>Descriptive standards such as AACR2 may be used to determine which places to record for published resources. If a place of origin is known for an unpublished resource, it should also be recorded in &lt;place&gt;&lt;placeTerm&gt;. </p>
+<p>Places as subjects are included under &lt;<a href="subject.html#geographic">subject&gt;&lt;geographic</a>&gt; or &lt;<a href="subject.html#hierarchicalgeographic">subject&gt;&lt;hierarchicalGeographic</a>&gt;.</p>
+<p>Repeat &lt;place&gt; for recording multiple places.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">supplied</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">An indication that the place information did not come from the resource itself.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is used as <i>supplied</i>=&quot;yes&quot; when the place information has been supplied from an external source, not from the resource.</div>
+<h4>Subelements</h4>
+<p class="nomargin">The following subelement is described below:</p>
+<ul>
+  <li>&lt;<a href="origininfo.html#placeterm">placeTerm</a>&gt; </li>
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="placeterm">Subelement: &lt;place&gt;&lt;placeTerm&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="386" scope="col">Used to express place in a textual or coded form.</td>
+    </tr>
+    <tr>
+      <th>Element</th>
+      <td scope="col"><strong>&lt;placeTerm&gt;</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>If both a code and a term are given that represent the same place, use one &lt;place&gt; and multiple occurrences of &lt;placeTerm&gt;. If different places, repeat &lt;place&gt;&lt;placeTerm&gt;.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>If &lt;placeTerm&gt; is used, the DLF/Aquifer guidelines require the use of the <i>type</i> attribute.</p>
+<p>For each &lt;placeTerm&gt; given, the DLF/Aquifer guidelines require including, at a minimum, a textual version of the place, with the attribute <i>type</i>=&quot;text&quot;.</p>
+<p>If the place given is a country, and the name of that country has been selected from the MARC country code list or the ISO3166 standard list of country names, add an <i>authority</i> attribute to &lt;placeTerm&gt; indicating the source of the country name, and add a second &lt;placeTerm&gt; subelement within &lt;place&gt; indicating the coded version of that country name from the chosen authoritative list, with the attribute <i>type</i>=&quot;code&quot; and an <i>authority</i> attribute indicating the source of the country code.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Indicates whether the place is expressed in a coded or textual form.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute may be used with the following values:<br />
+  <ul>
+    <li><strong>text</strong> &#8211; This value is used to express place in a textual form. </li>
+    <li><strong>code</strong> &#8211; This value is used to express place in a coded form. </li>
+  </ul>
+</div>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">The controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute may be used with the following values:
+  <ul>
+    <li><strong>marccountry</strong> &#8211; This source code is used for the MARC country codes. See the <a href="http://www.loc.gov/marc/countries/"> MARC Code List for Countries</a> for a listing of the codes and place names. </li>
+    <li><strong>iso3166</strong> &#8211; This source code is used with country codes from ISO 3166. See the <a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm"> ISO 3166 Code Lists</a> <img src="../../../images/icon-ext2.gif" alt="External Link" border="0" width="8" height="10" /> for a listing of the codes. </li>
+  </ul>
+</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute"> lang; xml:lang; script; transliteration</p>
+<p class="indent"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for description for each.</i></p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;placeTerm&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="publisher">Subelement: &lt;publisher&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">The name of the entity that published, printed, distributed, released, issued, or produced the resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>supplied; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Record in &lt;publisher&gt; a named entity determined to be the publisher/originator for a resource or a statement about publication/origin. Descriptive standards such as AACR2 may be used to format the name of the publisher.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>Information about an institution responsible for digitizing and delivering online a previously published resource should be included in &lt;<a href="note.html">note</a>&gt;, rather than &lt;originInfo&gt;&lt;publisher&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">supplied</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">An indication that the publisher information did not come from the resource itself.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is used as <i>supplied</i>=&quot;yes&quot; when the publisher information has been supplied from an external source, not from the resource.</div>
+<p class="attribute"> lang; xml:lang; script; transliteration</p>
+<p class="indent"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for description for each.</i></p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;publisher&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 id="dateissued" class="border">Subelement: &lt;dateIssued&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="441" scope="col">The date that the resource was published, released, or issued.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>The date may be in textual or structured form. If it is structured, the <em>encoding</em> attribute should specify the format. No good standard for encoding BCE dates in a structured form currently exists; until such time as these recommendations emerge,
+  BCE dates may be represented in textual forms only.</p>
+<p>The MODS schema includes several date elements intended to record different events that may be important in the life of a resource. When multiple date elements apply but would contain identical data, institutions may choose to use only one of the relevant
+  date elements. Mark one and only one date as a key date using <i>keyDate</i>=&quot;yes&quot; attribute.</p>
+<p>When a date is uncertain or cataloger-supplied, indicate this through the use of the <i>qualifier</i> attribute rather than inserting characters such as &quot;ca.&quot;, brackets, or a question mark as part of the date string. When only a decade is known, enter a date range for the entire decade and mark the date as questionable. When only a century
+  is known, enter a date range for the entire century and mark the date as questionable.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The use of &lt;dateIssued&gt; and the recording of each date in a structured form rather than a textual form are recommended. </p>
+<p>Use of the <i>encoding</i> attribute is recommended. If an exact year is known, the DLF/Aquifer guidelines recommend representing the value using the W3CDTF encoding, which also allows month and day to be specified if known. The W3CDTF encoding is a profile
+  of the more flexible ISO 8601 standard. Using W3CDTF ensures a more predictable format for dates. The DLF/Aquifer guidelines recommend using ISO 8601 encoding only when a date cannot be expressed using W3CDTF.</p>
+<p>Use of the <i>point</i> attribute is recommended, if applicable. The <i>point</i> attribute is used to specify whether a date is a start date or an end date if the resource is best described by a date range. Best practice is to use the <i>point</i> attribute only when a date range is indicated, not for single dates.</p>
+<p>The DLF/Aquifer guidelines require that every MODS record containing at least one date must have one and only one date element with the attribute <i>keyDate</i>=&quot;yes&quot;. The key date will be used by aggregators for date indexing, sorting, and display. The date marked as the key date should be the date considered by the metadata provider as the most important for end user access. Frequently this will be
+  the date the item was created or issued. For date ranges, mark the start date of the range intended for date searching as the <i>keyDate</i>.</p>
+<p>Use of the <i>qualifier</i> attribute is recommended, if applicable. Best practice is to use this attribute with the appropriate value when a date is approximate, inferred, or questionable, rather than inserting characters such as &quot;ca.&quot;, brackets, or a question
+  mark within the date string.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;dateIssued&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="datecreated">Subelement: &lt;dateCreated&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="482" scope="col">The date of creation of the resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>See &lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; for the following information on recording dates: date structure, recording multiple dates, key date marking, and recording unknown date components.</p>
+<p>If creation date is also the origination date (as in MARC 21 field 260 subfield $c), use the &lt;dateIssued&gt; element or repeat both &lt;dateCreated&gt; and &lt;dateIssued&gt;.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The use of &lt;dateCreated&gt; and the recording of each date in a structured form rather than a textual form are recommended.</p>
+<p>See &lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; for the following additional information from the DLF/Aquifer guidelines on recording dates: use of W3CDTF for encoding dates, recording date ranges, key dates, and use of the point attribute. </p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;dateCreated&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="datecaptured">Subelement: &lt;dateCaptured&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">The date on which the resource was digitized or a subsequent snapshot was taken.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>&lt;dateCaptured&gt; is particularly useful for Web resources because of their changeability. This would be a date that the resource was captured and archived. </p>
+<p>See &lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; for the following information on recording dates: date structure, recording multiple dates, key date marking, and recording unknown date components.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>Use of &lt;dateCaptured&gt; is not recommended by the DLF/Aquifer guidelines. </p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration </p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;dateCaptured&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="datevalid">Subelement: &lt;dateValid&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="556" scope="col">A date in which the content of a resource is valid.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>See &lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; for the following information on recording dates: date structure, recording multiple dates, key date marking, and recording unknown date components.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>Use of &lt;dateValid&gt; is not recommended by the DLF/Aquifer guidelines.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;dateValid&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="datemodified">Subelement: &lt;dateModified&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="554" scope="col">The date in which a resource is modified or changed.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>See &lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; for the following information on recording dates: date structure, recording multiple dates, key date marking, and recording unknown date components.</p>
+<p>Note that &lt;dateModified&gt;is used for modification of the resource, not of the metadata. In some cases a modified resource may be considered a new resource and described as such.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>Use of &lt;dateModified&gt; is not recommended by the DLF/Aquifer guidelines.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;dateModified&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="copyrightdate">Subelement: &lt;copyrightDate&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="519" scope="col">A date in which a resource is copyrighted.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>See &lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; for the following information on recording dates: date structure, recording multiple dates, key date marking, and recording unknown date components.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The use of &lt;copyrightDate&gt; and the recording of each date in a structured form rather than a textual form are recommended.</p>
+<p>See &lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; for the following additoinal information from the DLF/Aquifer guidelines on recording dates: use of W3CDTF for encoding dates, recording date ranges, key dates, and use of the point attribute. </p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;copyrightDate&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="dateother">Subelement: &lt;dateOther&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="546" scope="col">A date that does not fall into another category but is important to record.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>type; encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>See &lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; for the following information on recording dates: date structure, recording multiple dates, key date marking, and recording unknown date components.</p>
+<p>&lt;dateOther&gt; may be used with the <i>type</i> attribute to designate a specific kind of date which was not deemed of sufficient general use to have its own date element.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The use of &lt;dateOther&gt; and the recording of each date in a structured form rather than a textual form are recommended.</p>
+<p>See &lt;<a href="origininfo.html#dateissued">dateIssued</a>&gt; for the following additoinal information from the DLF/Aquifer guidelines on recording dates: use of W3CDTF for encoding dates, recording date ranges, key dates, and use of the point attribute. </p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">type</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Indicates the kind of date being recorded in this element.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute allows for extensibility of date types so that other specific date types may be designated if not given a separate element in MODS.</div>
+<p class="attribute">encoding; point; keyDate; qualifier; lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;dateOther&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="edition">Subelement: &lt;edition&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th scope="col">Definition</th>
+      <td scope="col">Information identifying the version of the resource.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>supplied; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Resources that constitute the same &quot;edition&quot; generally embody essentially the same content. If no edition statement applies to the resource, do not include the &lt;edition&gt; element.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>Descriptive standards such as AACR2 and DACS may be used to determine if an edition statement should be recorded and in what format.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">supplied</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">An indication that the edition information did not come from the resource itself.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">This attribute is used as <i>supplied</i>=&quot;yes&quot; when the edition information has been supplied from an external source, not from the resource.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;edition&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="issuance">Subelement: &lt;issuance&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="481" scope="col">A term that designates how the resource is issued.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p class="nomargin">&lt;issuance&gt; may be used with the following values:</p>
+<ul>
+  <li><strong>monographic</strong> &#8211; A resource that is either complete in one part or intended to be completed in a finite number of separate parts. Alternatively, more specific values distinguishing &quot;single unit&quot; from &quot;multipart monograph&quot; may be used. </li>
+  <li><strong>single unit</strong> &#8211; A type of monographic resource that is issued either as a single physical unit (e.g., as a single-volume monograph) or, in the case of an intangible resource, as a single logical unit (e.g., as a PDF file mounted on the Web). </li>
+  <li><strong>multipart monograph</strong> &#8211; A type of monographic resource issued in two or more parts (either simultaneously or successively) that is complete or intended to be completed within a finite number of parts (e.g., a dictionary in two volumes or three audiocassettes issued as a set). </li>
+</ul>
+<ul>
+  <li><strong>continuing</strong> &#8211; A resource that is issued over time with no predetermined conclusion. Continuing resources include serials and ongoing integrating resources, i.e. those that are continuously updated. Alternatively, more specific values distinguishing &quot;serial&quot; from &quot;integrating resource&quot; may be used. </li>
+  <li><strong>serial</strong> &#8211; A type of continuing resource issued in successive parts, usually bearing numbering, that has no predetermined conclusion (e.g., a periodical, a monographic series, or a newspaper). Includes resources that exhibit characteristics of serials, such as successive issues, numbering, and frequency, but whose duration is limited (e.g., newsletters of events) and reproductions of serials. </li>
+  <li><strong>integrating resource</strong> &#8211; A type of continuing resource that is added to or changed by means of updates that do not remain discrete and are integrated into the whole. An integrating resource may be tangible (e.g., a loose-leaf manual that is updated by means of replacement pages) or intangible (e.g., a Web site that is updated either continuously or on a cyclical basis). </li>
+</ul>
+<p>Collection, which designates an aggregation level, is included in the collection attribute in the &lt;<a href="typeofresource.html">typeOfResource</a>&gt; element.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The DLF/Aquifer guidelines offer no specific guidance on the use of &lt;issuance&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p>There are no attributes for &lt;issuance&gt;.</p>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;issuance&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="frequency">Subelement: &lt;frequency&gt;</h2>
+<table class="elements">
+  <tbody>
+    <tr>
+      <th width="85" scope="col">Definition</th>
+      <td width="534" scope="col">A statement of publication frequency in textual form.</td>
+    </tr>
+    <tr>
+      <th scope="row">Attributes</th>
+      <td>authority; authorityURI; valueURI; lang; xml:lang; script; transliteration</td>
+    </tr>
+    <tr>
+      <th class="noborder" scope="row">Subelements</th>
+      <td class="noborder">None</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Guidelines for Use</h3>
+<p>Use to define the publication pattern of the item.</p>
+<h4>Specific DLF/Aquifer Guidelines</h4>
+<p>The DLF/Aquifer guidelines offer no specific guidance on the use of &lt;frequency&gt;.</p>
+<h3>Element Description</h3>
+<h4>Attributes</h4>
+<p class="attribute">authority</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">Indicates the controlled list from which the value is taken.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">The name of the authoritative list for a controlled value is recorded here. See <a href="http://www.loc.gov/standards/sourcelist/frequency.html"> Frequency of Issue Code and Term Source Codes</a> for a list of authority sources. Use the value of &quot;marcfrequency&quot; if the authority used is <a href="http://www.loc.gov/standards/valuelist/marcfrequency.html"> MARC Frequency of Issue Term List</a>.</div>
+<p class="attribute">authorityURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the vocabulary from which the controlled term has been selected, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying authorities may or may not be dereferenceable to human- or machine-readable information on the authority file, controlled vocabulary, or thesaurus.</div>
+<p class="attribute">valueURI</p>
+<div class="indent1"><u>Definition</u></div>
+<div class="indent2">A URI uniquely identifying the term or controlled value from a vocabulary, as assigned by the body responsible for the maintenance of the vocabulary.</div>
+<div class="indent1"><u>Application</u></div>
+<div class="indent2">URIs identifying terms may or may not be dereferenceable to human- or machine-readable records for the term.</div>
+<p class="attribute">lang; xml:lang; script; transliteration</p>
+<div class="indent1"><i>See the <a href="generalapp.html#list">Attributes used throughout the schema</a> for descriptions of each.</i></div>
+<h4>Subelements</h4>
+<p>There are no subelements for &lt;frequency&gt;.</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="examples">EXAMPLES</h2>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;publisher&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;code&quot; authority=&quot;marccountry&quot;&gt;</strong>dcu<strong>&lt;/placeTerm&gt;</strong><br />
+    <strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>Washington, DC<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>Library of Congress, Cataloging Distribution Service, in collaboration with Follett Software Company<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;dateIssued&gt;</strong>2003<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;edition&gt;</strong>7th ed.<strong>&lt;/edition&gt;</strong><br />
+    <strong>&lt;issuance&gt;</strong>monographic<strong>&lt;/issuance&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;manufacture&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>Cambridge<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>Kinsey Printing Company<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;dateOther type=&quot;manufacture&quot; keyDate=&quot;yes&quot; qualifier=&quot;inferred&quot;&gt;</strong>1922<strong>&lt;/copyrightDate&gt;</strong><br />
+    
+   </div>
+    
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;publication&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;copyrightDate encoding=&quot;iso8601&quot;&gt;</strong>20000122<strong>&lt;/copyrightDate&gt;</strong><br />
+    <strong>&lt;dateCaptured encoding=&quot;iso8601&quot;&gt;</strong>20010712<strong>&lt;/dateCaptured&gt;</strong><br />
+    <strong>&lt;issuance&gt;</strong>continuing<strong>&lt;/issuance&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;production&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;dateValid encoding=&quot;iso8601&quot; point=&quot;start&quot;&gt;</strong>20011008<strong>&lt;/dateValid&gt;</strong><br />
+    <strong>&lt;dateValid encoding=&quot;iso8601&quot; point=&quot;end&quot;&gt;</strong>20011027<strong>&lt;/dateValid&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;publication&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>Milan<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>F. Lucca<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>Florence<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>Ducci<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>Chiasso<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>Euterpe Ticinese<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>Naples<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>Girard et C.<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;dateIssued&gt;</strong>between 1856 and 1862<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;dateIssued encoding=&quot;marc&quot; point=&quot;start&quot;&gt;</strong>1856<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;dateIssued encoding=&quot;marc&quot; point=&quot;end&quot;&gt;</strong>1862<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;issuance&gt;</strong>monographic<strong>&lt;/issuance&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=publication&gt;</strong></div>
+  <div class="indent2"><strong>&lt;place supplied=&quot;yes&quot;&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;code&quot; authority=&quot;marccountry&quot;&gt;</strong>nyu<strong>&lt;/placeTerm&gt;</strong><br />
+    <strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>New York<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>Published for the American Vacuum Society by the American Institute of Physics<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;dateIssued&gt;</strong>1994<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;issuance&gt;</strong>monographic<strong>&lt;/issuance&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;manufacture&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;dateModified encoding=&quot;iso8601&quot;&gt;</strong>20031008<strong>&lt;/dateModified&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;manufacture&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;dateCreated keyDate=&quot;yes&quot;&gt;</strong>1972-10-08<strong>&lt;/dateCreated&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;production&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;dateCreated encoding=&quot;iso8601&quot; keyDate=&quot;yes&quot; qualifier=&quot;inferred&quot;&gt;</strong>1916<strong>&lt;/dateCreated&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;publication&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;code&quot; authority=&quot;iso3166&quot;&gt;</strong>usa<strong>&lt;/placeTerm&gt;</strong><br />
+    <strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>United States<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;dateIssued&gt;</strong>1975<strong>&lt;/dateIssued&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;publication&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;code&quot; authority=&quot;marccountry&quot;&gt;</strong>dcu<strong>&lt;/placeTerm&gt;</strong><br />
+    <strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>Washington, D.C<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>Library of Congress<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;dateIssued&gt;</strong>1998-<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;dateIssued encoding=&quot;marc&quot; point=&quot;start&quot;&gt;</strong>1998<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;dateIssued encoding=&quot;marc&quot; point=&quot;end&quot;&gt;</strong>9999<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;issuance&gt;</strong>monographic<strong>&lt;/issuance&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=&quot;publication&gt;</strong></div>
+  <div class="indent2"><strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;code&quot; authority=&quot;marccountry&quot;&gt;</strong>cau<strong>&lt;/placeTerm&gt;</strong><br />
+    <strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>Menlo Park, CA<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;publisher&gt;</strong>Center for Computer Assisted Research in the Humanities<strong>&lt;/publisher&gt;</strong><br />
+    <strong>&lt;dateIssued&gt;</strong>1985-1988<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;dateIssued encoding=&quot;marc&quot; point=&quot;start&quot;&gt;</strong>1985<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;dateIssued encoding=&quot;marc&quot; point=&quot;end&quot;&gt;</strong>1988<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;issuance&gt;</strong>continuing<strong>&lt;/issuance&gt;</strong><br />
+    <strong>&lt;frequency authority=&quot;marcfrequency&quot;&gt;</strong>Annual<strong>&lt;/frequency&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo eventType=publication&gt;</strong></div>
+  <div class="indent2"><strong>&lt;place&gt;</strong></div>
+  <div class="indent3"><strong>&lt;placeTerm type=&quot;code&quot; authority=&quot;marccountry&quot;&gt;</strong>enk<strong>&lt;/placeTerm&gt;</strong><br />
+    <strong>&lt;placeTerm type=&quot;text&quot;&gt;</strong>England<strong>&lt;/placeTerm&gt;</strong></div>
+  <div class="indent2"><strong>&lt;/place&gt;</strong><br />
+    <strong>&lt;dateIssued encoding=&quot;w3cdtf&quot; keyDate=&quot;yes&quot; qualifier=&quot;inferred&quot;&gt;</strong>1855<strong>&lt;/dateIssued&gt;</strong><br />
+    <strong>&lt;issuance&gt;</strong>monographic<strong>&lt;/issuance&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<div class="example">
+  <div class="indent1"><strong>&lt;originInfo venetType=&quot;publication&quot;&gt;</strong></div>
+  <div class="indent2"><strong>&lt;dateOther point=&quot;start&quot;&gt;</strong>20011008<strong>&lt;/dateOther&gt;</strong><br />
+    <strong>&lt;dateOther point=&quot;end&quot;&gt;</strong>20011027<strong>&lt;/dateOther&gt;</strong></div>
+  <div class="indent1"><strong>&lt;/originInfo&gt;</strong></div>
+</div>
+<p><br>
+</p>
+<p>&nbsp;</p>
+<p><br>
+  </li>
+  <br>
+  
+</p>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+<h2 class="border" id="mappings">MAPPINGS</h2>
+<h3>MARC Mapping (Bibliographic)</h3>
+<p>&lt;originInfo&gt;&lt;place&gt;&lt;placeTerm&gt; with type=&quot;text&quot; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd260.html"> 260</a> subfield a </p>
+<p>&lt;originInfo&gt;&lt;place&gt;&lt;placeTerm&gt; with type=&quot;code&quot; and authority=&quot;marccountry&quot; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd008.html"> 008</a>/15-17 </p>
+<p>&lt;originInfo&gt;&lt;place&gt;&lt;placeTerm&gt; with type=&quot;code&quot; and authority=&quot;iso3166&quot; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd044.html"> 044</a> subfield c </p>
+<p>&lt;originInfo&gt;&lt;publisher&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd260.html"> 260</a> subfield b </p>
+<p>&lt;originInfo&gt;&lt;dateIssued&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd260.html"> 260</a> subfield c </p>
+<p>&lt;originInfo&gt;&lt;dateIssued&gt; with encoding=&quot;marc&quot; = MARC 21 <a href="http://www.loc.gov/marc/bibliographic/bd008.html"> 008</a>/07-14 </p>
+<p class="nomargin">&lt;originInfo&gt;&lt;dateCreated&gt; is recorded in various places in MARC 21:</p>
+<ul>
+  <li>in general = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd260.html"> 260</a> subfield g </li>
+  <li>where date of manufacture is substituted for the date of publication = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd260.html"> 260</a> subfield c </li>
+  <li>for date of original publication = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd534.html"> 534</a> subfield c </li>
+  <li>for date of reproduction = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd533.html"> 533</a> subfield d </li>
+</ul>
+<p>&lt;originInfo&gt;&lt;dateCaptured&gt; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd033.html"> 033</a></p>
+<p>&lt;originInfo&gt;&lt;dateValid&gt; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd046.html"> 046</a> subfields m and n </p>
+<p>&lt;originInfo&gt;&lt;dateModified&gt; &#8776; MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd046.html"> 046</a> subfield j</p>
+<p>&lt;originInfo&gt;&lt;dateCopyright&gt; does not have a single MARC 21 equivalent. A copyright date may be used in <a href="http://www.loc.gov/marc/bibliographic/bd260.html"> 260</a> subfield c preceded by the letter &quot;c&quot; if it appears that way on the resource. </p>
+<p>&lt;originInfo&gt;&lt;edition&gt; = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd250.html"> 250</a></p>
+<p>&lt;originInfo&gt;&lt;issuance&gt; with value of &quot;continuing&quot; = <a href="http://www.loc.gov/marc/bibliographic/bd007.html"> Leader/07</a>, codes &quot;b,&quot; &quot;i&quot;, and &quot;s&quot; </p>
+<p>&lt;originInfo&gt;&lt;issuance&gt; with value of &quot;monographic&quot; = <a href="http://www.loc.gov/marc/bibliographic/bd007.html"> Leader/07</a>, codes &quot;a,&quot; &quot;c,&quot; &quot;d&quot;, and &quot;m&quot;</p>
+<p>&lt;originInfo&gt;&lt;frequency&gt; for continuing resources in coded form = MARC 21 008/18 or MARC 21 holdings fields <a href="http://www.loc.gov/marc/holdings/hd853.html"> 853</a>, <a href="http://www.loc.gov/marc/holdings/hd854.html"> 854</a>, and <a href="http://www.loc.gov/marc/holdings/hd855.html"> 855</a> subfield w, frequency</p>
+<p>&lt;originInfo&gt;&lt;frequency&gt; for continuing resources in textual form = MARC 21 field <a href="http://www.loc.gov/marc/bibliographic/bd310.html"> 310</a></p>
+<p>See also <a href="http://www.loc.gov/standards/mods/mods-mapping.html#publication"><i>MARC Mapping to MODS</i> for the &lt;originInfo&gt; element</a>.</p>
+<h3>Dublin Core Mapping</h3>
+<p>As the <i><a href="http://www.loc.gov/standards/mods/mods-dcsimple.html">MODS to Dublin Core Metadata Element Set Mapping</a></i> makes clear, subelements of &lt;originInfo&gt; map incompletely to Dublin Core elements.</p>
+<p>The MODS subelements &lt;place&gt;, &lt;edition&gt;, &lt;issuance&gt;, and &lt;frequency&gt; do not map directly to simple Dublin Core elements. However, a &lt;place&gt; element in combination with a &lt;publisher&gt; element may be combined to map to &lt;dc:publisher&gt; following the AACR2 convention.</p>
+<p>All of the date subelements map to &lt;dc:date&gt;. If multiple dates are present in the MODS record, data providers may want to consider mapping only the date indicated as the <i>keyDate</i> to the &lt;dc:date&gt; element.</p>
+<p>MODS example expressed in Dublin Core:</p>
+<div class="indent1"><strong>&lt;dc:publisher&gt;</strong>New York: MacMillan<strong>&lt;/dc:publisher&gt;</strong><br />
+  <strong>&lt;dc:date&gt;</strong>1922<strong>&lt;/dc:date&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:date&gt;</strong>1857-1860<strong>&lt;/dc:date&gt;</strong><br />
+  <strong>&lt;dc:date&gt;</strong>2500 B.C.E.<strong>&lt;/dc:date&gt;</strong><br />
+  <br />
+  <strong>&lt;dc:date&gt;</strong>1855<strong>&lt;/dc:date&gt;</strong></div>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="origininfo.html#skip_menu">Top</a></p>
+
+
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->August 14, 2013<!-- #EndDate -->
+      </p>  
+
+</td>
+</tr> </table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->August 14, 2013<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+

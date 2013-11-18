@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>From the Introduction to the Digital Library Federation / Aquifer Implementation Guidelines for Shareable MODS Records (MODS Ver. 3 User Guidelines: Metadata Object Description Schema, Library of Congress)</title>
+<meta name="keywords" content="mods 3 v3 element note overview metadata object description schema web site library congress xml" />
+<meta name="description" content="From the Introduction to the Digital Library Federation / Aquifer Implementation Guidelines for Shareable MODS Records (MODS User Guidelines, Version 3, Metadata Object Description Schema (MODS), Library of Congress" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="print" type="text/css" href="css/mods-v3-print.css" />
+<style type="text/css">
+@import url(./css/mods-v3.css);
+</style>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/global/foresee/foresee-trigger.js"></script></head>
+<body>
+<!-- Begin Header Table -->
+<table class="header">
+
+  <tr><td class="left"><a id="skip" href="dlfintro.html#skip_menu">skip navigation</a><a href="http://www.loc.gov/">The
+      Library of Congress</a> &raquo; <a href="http://www.loc.gov/standards/">Standards</a> &raquo; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a></td>
+    <td class="right">
+	<form action="http://search.loc.gov:8765/query.html" accept-charset="utf-8" name="seek1" method="get">
+<input type="hidden" name="col" value="loc" />
+<input type="hidden" name="sc" value="0" />
+<input type="hidden" name="ws" value="0" />
+<input type="hidden" name="la" value="en" />
+
+<input type="hidden" name="qm" value="0" />
+<input type="hidden" name="st" value="1" />
+<input type="hidden" name="nh" value="10" />
+<input type="hidden" name="lk" value="1" />
+<input type="hidden" name="rf" value="0" />
+<input type="hidden" name="oq" value="" />
+<input type="hidden" name="si" value="0" />
+<input type="hidden" name="rq" value="0" />
+<input type="hidden" name="qc" value="" />
+<select name="qp" tabindex="1">
+<option value="url:/standards/mods/userguide" selected="selected">MODS User Guidelines</option>
+<option value="url:/standards/mods">MODS Pages</option>
+<option value="url:/standards url:/ead url:/marc">Standards Pages</option>
+<option value="">All Library Pages</option>
+
+</select>
+<input type="text" name="qt" id="keyword" size="18" value="" tabindex="2" />
+<input name="search_button" id="search_button" tabindex="3" type="submit" value="GO" /></form></td>
+</tr>
+</table>
+<!-- End Header Table -->
+<table class="layout">
+<tr><td><div class="header"><a href="http://www.loc.gov/standards/mods/"><img src="../images/mods-bar-760.gif" alt="Metadata Object Description Schema: Official Web Site" width="760" height="41" border="0" /></a>
+<p class="top-menu"><a href="index.html">MODS User Guidelines (ver. 3) Home</a> &raquo; <a href="generalapp.html">Top-level Elements and Attributes</a> &raquo;
+    <!-- Update breadcrumb with name of element, class=selected -->
+    <span class="selected">Introduction to the DLF / Aquifer Guidelines</span></p></div>
+
+    <!-- End breadcrumb -->
+<!-- Skip menu anchor -->
+<a name="skip_menu"></a>
+<!-- End Skip menu anchor -->
+<!-- Element in H1 and MODS title inside span -->
+<h1>From
+  the Introduction to the <i>Digital Library Federation / Aquifer Implementation
+    Guidelines for Shareable MODS Records</i></h1>
+<p>The
+  primary goal of the Digital Library Federation’s Aquifer Initiative is to
+  enable distributed content to be used effectively by libraries and scholars for
+  teaching, learning, and research. The provision of rich, shareable metadata for
+  this distributed content is an important step towards this goal. </p>
+<p>To
+  this end, the Metadata Working Group of the DLF Aquifer Initiative has
+  developed a set of implementation guidelines of the Metadata Object Description
+  Schema (MODS) specifically for use in describing digital cultural heritage and
+  humanities-based scholarly resources that are to be shared within the Aquifer
+  Initiative and beyond. The authors of the implementation guidelines are aware
+  that the requirements and recommendations set forth are not currently met by
+  most current and potential Aquifer participants. However, we developed these as
+  a set of guidelines for creating rich, shareable metadata that is coherent and
+  consistent, and, thus, useful to aggregators and end users. We do not intend
+  these guidelines to dictate local metadata practices, but we do hope that these
+  guidelines will help Aquifer participants share metadata among themselves and
+  with other institutions.</p>
+<ul>
+  <li>The
+    joint DLF and NSDL <i>Best Practices for Shareable Metadata </i>document
+    provides overall guidance on interoperability of metadata. We recommend that
+    metadata authors be familiar with these best practices in addition to these implementation
+    guidelines. Other guiding principles and conditions that have informed the DLF
+    MODS Implementation Guidelines are: </li>
+  <li>They are currently based on the MODS Schema
+    version 3.2.</li>
+  <li>The resources to be described are digital
+    (either born digital or digitized from analog originals) cultural heritage and
+    humanities-based materials in keeping with the Aquifer collection focus on
+    American life and culture. </li>
+  <li>Keeping in mind the needs of end users and
+    aggregators, these guidelines seek to provide as simple a structure as possible
+    for presenting metadata. They recommend that metadata about content and digital
+    and analog carriers all appear in the main record. The guidelines try to make
+    clear how an aggregator might use the metadata in services for end users and
+    make recommendations for the inclusion or exclusion of information based on
+    that use. </li>
+  <li>The guidelines are specifically meant for
+    metadata that will be shared with others (whether through the Open Archives
+    Initiative Protocol for Metadata Harvesting (OAI-PMH) or some other means),
+    and, as such, is focused on how to derive metadata that will make sense and be
+    useful outside of its local context. </li>
+  <li>Because the first phase of the Aquifer
+    Initiative is focused on using the OAI PMH to aggregate metadata, suggested
+    mappings from MODS to simple Dublin Core have been provided. However, this is
+    only to assist participants in meeting the simple Dublin Core requirement of
+    the OAI protocol, and is not a recommendation to provide simple Dublin Core as
+    the primary metadata format. </li>
+  <li>The members of the Aquifer Metadata
+    Working Group were: 
+    <ul><li>Sarah L. Shreeves (University of
+    Illinois at Urbana-Champaign): 2005-2009; Chair, 2005-2007 </li>
+  <li>Jenn Riley (Indiana University): 2005-2009; Chair, 2007-2009 </li>
+  <li>Laura Akerman (Emory University):
+    2006-2009 </li>
+  <li>John Chapman (University of Minnesota): 2005-2008 </li>
+  <li>Melanie Feltner-Reichert
+    (University of Tennessee): 2006-2008 </li>
+  <li>Kat Hagedorn (University of
+    Michigan): 2007-2009; ASHO Core Team Liaison, 2006 </li>
+  <li>Bill Landis (California Digital Library/Yale University):
+    2005-2006, 2007-2009 </li>
+  <li>Tracy Meehleib (Library of
+    Congress): 2006-2009 </li>
+  <li>Elizabeth Milewicz (Emory
+    University): 2005-2006 </li>
+  <li>David Reynolds (Johns Hopkins University): 2005-2009 </li>
+  <li>Gary Shawver (New York
+    University): 2005-2008 </li></ul>
+    </li>
+  
+</ul>
+<p class="top"><img src="images/arrow_up.gif" alt="" />&nbsp;<a href="dlfintro.html#skip_menu">Top</a></p>
+
+
+<p style="text-align: right"><a href="http://www.loc.gov/global/disclaim.html"><img src="../../../images/disclaimer.gif" alt="Disclaimer" border="0" /></a></p>      <p style="text-align: right">Last Updated: 
+        <!-- #BeginDate format:Am1 -->October 18, 2010<!-- #EndDate -->
+      </p>  
+</td>
+</tr> 
+
+	
+</table>
+<!-- Begin Footer Table -->
+<table align="center" class="footer" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top">
+    <td width="439"><div class="sitenav"><a href="http://www.loc.gov/">The
+      Library of Congress</a> &gt;&gt; <a href="http://www.loc.gov/standards/">Standards</a> &gt;&gt; <a href="http://www.loc.gov/standards/mods/">MODS Official Web Site</a><a href="http://www.loc.gov/mods/"></a></div>
+      <br />
+      <span class="sitenav">
+        <!-- #BeginDate format:Am1 -->October 18, 2010<!-- #EndDate -->
+      </span></td>
+    <td width="213"><div class="sitenav"><a href="http://www.loc.gov/homepage/legal.html">Legal</a> | <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a></div></td>
+    <td width="108" align="right"><div class="contactus"><a href="mailto:ndmso@loc.gov">Contact Us</a></div></td>
+  </tr>
+</table>
+<!-- End Header Table -->
+
+<script type='text/javascript' src='http://cdn.loc.gov/js/global/metrics/sc/v25.2/2.0/s_code.js'></script></body>
+</html>
+
