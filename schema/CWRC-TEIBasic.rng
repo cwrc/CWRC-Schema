@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2013-11-18T17:39:00Z. 
+Schema generated from ODD source 2013-11-18T17:47:01Z. 
 Edition: 2.5.0. Last updated on
 	26th July 2013.
 Edition Location: http://www.tei-c.org/Vault/P5/2.5.0/
@@ -6973,7 +6973,7 @@ Sample values include: 1] TEI; 2] DBK(docbook) ; 3] XX(unknown) ; 4] Schematron;
          <ref name="att.sortable.attributes"/>
          <optional>
             <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The type of event. Please select an event type value from the enumerated list of event type values: bibliographical, biographical, cultural, literary, political, or social.The type of event; please select an event type value from the enumerated list of event type values.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The type of event. Please select an event type value from the enumerated list of event type values: bibliographical, biographical, cultural, literary, political, or social.The type of event; please select an event type value from the enumerated list of event type values.The type of event; please select an event type value from the enumerated list of event type values: bibliographical, biographical, cultural, literary, political, or social.</a:documentation>
                <list>
                   <oneOrMore>
                      <choice>
