@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- MRB: Mon 28-Oct-2013
+<!-- 
+     MRB: Tue 19-Nov-2013: The <access> element in the XPath /cwrc/entity/person/recordInfo/access has been replaced
+     with the <accessCondition> element in the XPath /cwrc/entity/person/recordInfo/accessCondition
+     MRB: Mon 28-Oct-2013
      Revised the following:
      * Changed <standardDate> from a required element to an optional element.
      * Changed <note><access> from a required element to an optional element.
     
      MRB: Mon 09-Sep-2013: Revised <relation> element section so that relation references to person and organization follow
-     the approach adopted in the placeRef/place approach, i.e., now have personRef/person and organizationRef/organization.
+     the approach adopted in the placeRef/URI approach, i.e., now have personRef/URI and organizationRef/URI.
      
      MRB: July 2013: The entity schema now includes the person, organization, and place entity types; i.e., a place entity
      code section was developed.  The title entity is defined by the MODS schema mods.xsd.  The events entity schema will
@@ -788,7 +791,7 @@
     <define name="URI-element">
         <a:documentation>URI of a linked resource that describes a geographical location associated with the
             described place entity.</a:documentation>
-        <element name="placeURI">
+        <element name="URI">
             <data type="anyURI"/>
         </element>
     </define>
@@ -823,7 +826,7 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field path="entity/person|organization/recordInfo/originInfo">
+                    <interface-field path="entity/person|organization|place/recordInfo/originInfo">
                         <label xml:lang="en">Record Origin</label>
                     </interface-field>
 
@@ -855,7 +858,7 @@
                 <xs:appinfo>
 
                     <interface-field
-                        path="entity/person|organization/recordInfo/originInfo/projectId">
+                        path="entity/person|organization|place/recordInfo/originInfo/projectId">
                         <label xml:lang="en">Collection</label>
                         <help-text xml:lang="en"
                             >Select one or more collections to associate
@@ -2137,15 +2140,6 @@
                         <input>radioButton</input>
                     </interface-field>
 
-
-                    <interface-field path="entity/person|organization/recordInfo/access">
-                        <label>Record Access</label>
-                        <help-text>Public access is default. You may elect to limit acces to this
-                            record but please recognize that this limits interoperability: use
-                            sparingly. NB: limitation of access not yet implemented.</help-text>
-                        <input>radioButton</input>
-                    </interface-field>
-
                     <values>
                         <optional>
                             <choice>
@@ -2177,12 +2171,21 @@
                 <xs:appinfo>
 
                     <interface-field path="entity/person|organization|place/recordInfo/access">
-                        <label>Record Access</label>
-                        <help-text>Public access is default. You may elect to limit acces to this
-                            record but please recognize that this limits interoperability: use
-                            sparingly. NB: limitation of access not yet implemented.</help-text>
                         <input>hidden</input>
                     </interface-field>
+
+                    <attribute name="type">
+                        <value a:en="use and reproduction">
+                            use and reproduction
+                        </value>
+                    </attribute>
+                    
+                    <value a:en="cc_by-nc_3.0">
+                        Use of this public-domain resource is governed by the 
+                        &lt;a href="http://creativecommons.org/licenses/by-nc/3.0/" 
+                        rel="license"&gt;Creative Commons Attribution-NonCommercial 
+                        3.0 Unported License&lt;/a&gt;.
+                    </value>
 
                 </xs:appinfo>
             </xs:annotation>
