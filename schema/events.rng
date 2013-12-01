@@ -50,13 +50,16 @@
                 <interleave>
                     <group>
                         <choice>
-                            <ref name="dateRange-element"></ref>
-                            <ref name="dateStruct-element"></ref>
-                            <ref name="date-element"></ref>
+                            <ref name="dateRange-element"/>
+                            <ref name="dateStruct-element"/>
+                            <ref name="date-element"/>
                         </choice>
-                        <ref name="chronProse-element"></ref>
+                        <ref name="chronProse-element"/>
+                        <optional>
+                            <ref name="shortProse-element"/>
+                        </optional>
                     </group>
-                    <ref name="Div0-inclusion"></ref>
+                    <ref name="Div0-inclusion"/>
                     <zeroOrMore>
                         <choice>
                             <ref name="name-element"/>

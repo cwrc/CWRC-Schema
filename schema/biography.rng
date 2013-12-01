@@ -67,7 +67,6 @@
                 <choice>
                     <ref name="researchNote-element"/>
                     <ref name="title-element"/>
-                    <ref name="bibCit-element"/>
                     <ref name="bibCits-element"/>
                     <ref name="lb-element"/>
                     <ref name="rs-element"/>
@@ -114,7 +113,7 @@
         </element>
     </define>
     
-    <define name="bio-chronStruct-element" combine="choice">            
+    <define name="chronStruct-element" combine="choice">            
         <!-- commented more overlapping elements-->
         <element name="CHRONSTRUCT">
             <!-- Already described in common schema. This definition includes biography semantic elements -->
@@ -128,16 +127,17 @@
             <optional>
                 <ref name="resp-attribute"/>
             </optional>
-            <zeroOrMore>
-                <group>
-                    <choice>
-                        <ref name="dateRange-element"/>
-                        <ref name="dateStruct-element"/>
-                        <ref name="date-element"/>
-                    </choice>
-                    <ref name="chronProse-element"/>
-                </group>
-            </zeroOrMore>
+            <group>
+                <choice>
+                    <ref name="dateRange-element"/>
+                    <ref name="dateStruct-element"/>
+                    <ref name="date-element"/>
+                </choice>
+                <ref name="chronProse-element"/>
+                <optional>
+                    <ref name="shortProse-element"/>
+                </optional>
+            </group>
             <zeroOrMore>
                 <choice>
                     <ref name="chronProse-element"/>
@@ -215,6 +215,21 @@
                         <ref name="narrow-inclusion"/>
                     </choice>
                 </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+    
+    <define name="shortProse-element" combine="choice">
+        <element name="SHORTPROSE">
+            <!-- LS to MP: No documentation for this even though it is mentioned many times in the documentation for other tags. -->
+            <ref name="ID-attribute"/>
+            <interleave>
+                <oneOrMore>
+                    <ref name="p-element"/>
+                </oneOrMore>
+                <ref name="Div0-inclusion"/>
+                <ref name="Div1-narrow-inclusion"/>
+                <ref name="anyBio"/>
             </interleave>
         </element>
     </define>
@@ -367,7 +382,9 @@
             <xhtml:p>Each quote should have the direct attribute filled in.</xhtml:p>
             <xhtml:p>Spacing should read properly when the bibCit is removed.</xhtml:p>
             <ref name="ID-attribute"/>
-            <ref name="direct-attribute"/>
+            <optional>
+                <ref name="direct-attribute"/>
+            </optional>
             <interleave>
                 <zeroOrMore>
                     <choice>
@@ -423,6 +440,9 @@
                     </zeroOrMore>
                     <optional>
                         <ref name="standard-element"/>
+                    </optional>
+                    <optional>
+                        <ref name="authorSummary-element"/>
                     </optional>
                     <zeroOrMore>
                         <ref name="worksCited-element"/>
@@ -557,7 +577,7 @@
                             </optional>
                             <oneOrMore>
                                 <choice>
-                                    <ref name="bio-chronStruct-element"/>
+                                    <ref name="chronStruct-element"/>
                                     <ref name="bio-dataStruct-element"/>
                                     <ref name="shortProse-element"/>
                                     <zeroOrMore>
@@ -588,7 +608,7 @@
                             </optional>
                             <oneOrMore>
                                 <choice>
-                                    <ref name="bio-chronStruct-element"/>
+                                    <ref name="chronStruct-element"/>
                                     <ref name="dataStruct-element"/>
                                     <ref name="shortProse-element"/>
                                     <!-- test include by checking what paragraph definition is embedded in shortprose -->
@@ -671,7 +691,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                         <ref name="Div0-inclusion"/>
@@ -706,7 +726,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>                        
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                         <!-- first occurrence of birth-inclusion -->
@@ -748,7 +768,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>                        
                         <!-- first occurrence of death-inclusion -->
@@ -787,8 +807,8 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="p-element"/>
                         <ref name="classIssue-element"/>
                         <ref name="nationalityIssue-element"/>
@@ -860,7 +880,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                     </choice>
@@ -901,7 +921,7 @@
                     <zeroOrMore>
                         <choice>
                             <ref name="member-element"/>
-                            <ref name="bio-chronStruct-element"/>
+                            <ref name="chronStruct-element"/>
                             <ref name="Div2-element"/>
                             <ref name="p-element"/>
                         </choice>
@@ -939,7 +959,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                         <ref name="marriage-element"/>
@@ -976,7 +996,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                         <ref name="family-inclusion"/>
@@ -1026,7 +1046,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                     </choice>
@@ -1093,7 +1113,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                     </choice>
@@ -1156,7 +1176,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                     </choice>
@@ -1203,7 +1223,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                     </choice>
@@ -1249,7 +1269,7 @@
             <interleave>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>                        
                         <ref name="occupation-inclusion"/>
@@ -1309,7 +1329,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                     </choice>
@@ -1370,7 +1390,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                     </choice>
@@ -1400,7 +1420,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                     </choice>
@@ -1435,7 +1455,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                     </choice>
@@ -1467,7 +1487,7 @@
                 <text/>
                 <zeroOrMore>
                     <choice>
-                        <ref name="bio-chronStruct-element"/>
+                        <ref name="chronStruct-element"/>
                         <ref name="Div2-element"/>
                         <ref name="p-element"/>
                     </choice>
@@ -2118,7 +2138,7 @@
     <define name="culturalFormation-content">
         <zeroOrMore>
             <choice>
-                <ref name="bio-chronStruct-element"/>
+                <ref name="chronStruct-element"/>
                 <ref name="Div2-element"/>
                 <ref name="p-element"/>
             </choice>
