@@ -894,7 +894,6 @@
                         <ref name="lg-element"/>
                         <ref name="time-element"/>                        
                         <ref name="title-element"/>
-                        <ref name="bibCit-element"/>
                         <ref name="bibCits-element"/>
                         <ref name="lb-element"/>-->
                     </choice>
@@ -2745,7 +2744,9 @@
             <xhtml:p>&lt;BIBCITS&gt;&lt;BIBCIT PLACEHOLDER="Watkins" DBREF="69025"&gt;&lt;/BIBCIT&gt;&lt;/BIBCITS&gt;</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <ref name="bibCit-element"/>
+                <oneOrMore>
+                    <ref name="bibCit-element"/>
+                </oneOrMore>
                 <zeroOrMore>
                     <choice>
                         <ref name="researchNote-element"/>
