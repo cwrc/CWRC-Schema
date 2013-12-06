@@ -73,6 +73,9 @@
               <ref name="date-element"/>
             </choice>
             <ref name="chronProse-element"/>
+            <optional>
+              <ref name="shortProse-element"/>
+            </optional>
           </group>
           <ref name="Div0-inclusion"/>
           <ref name="Div1-inclusion"/>
@@ -191,23 +194,6 @@
             <ref name="Div1-inclusion"/>
           </choice>          
         </zeroOrMore>     
-    </element>
-  </define>
-  
-  <define name="ExtentOfOeuvre-element" combine="choice">
-    <element name="EXTENTOFOEUVRE">
-      <ref name="attlist.ExtentOfOeuvre"/>
-      <interleave>
-        <text/>
-        <zeroOrMore>
-          <choice>
-            <ref name="genericRange-element"/>
-            <ref name="tGenre-element"/>
-            <ref name="Div0-inclusion"/>
-            <ref name="Div1-inclusion"/>
-          </choice>
-        </zeroOrMore>
-      </interleave>
     </element>
   </define>
   
@@ -359,7 +345,6 @@
       <!-- LS to MP: No documentation for this even though it is mentioned many times in the documentation for other tags. -->
       <ref name="ID-attribute"/>
       <interleave>
-        <text/>
         <oneOrMore>
           <ref name="p-element"/>
         </oneOrMore>
@@ -422,36 +407,6 @@
             <text/>
             <ref name="narrow-inclusion"/>
             <ref name="anyWri"/>
-          </choice>
-        </zeroOrMore>
-      </interleave>
-    </element>
-  </define>
-  
-  <!-- authorSummary: +(ExtentOfOeuvre , tGenre , genericRange , dateStruct , date , dateRange , time , name , place , orgName , emph , foreign , quote , soCalled , sic , corr , rs , lg , l , topic) -->
-  <define name="authorSummary-element" combine="choice">
-    <element name="AUTHORSUMMARY">
-      <ref name="attlist.authorSummary"/>
-      <zeroOrMore>
-        <choice>
-          <ref name="p-element"/>
-          <ref name="authorSummary-inclusion"/>
-          <ref name="Div0-inclusion"/>
-          <ref name="shortProse-element"/>
-        </choice>
-      </zeroOrMore>
-    </element>
-  </define>  
-  
-  <define name="genericRange-element" combine="choice">
-    <element name="GENERICRANGE">
-      <ref name="attlist.genericRange"/>
-      <interleave>
-        <zeroOrMore>
-          <choice>
-            <text/>
-            <ref name="authorSummary-inclusion"/>
-            <ref name="Div0-inclusion"/>
           </choice>
         </zeroOrMore>
       </interleave>
@@ -1576,19 +1531,6 @@
   
   
   
-  <define name="authorSummary-inclusion" combine="choice">
-    <zeroOrMore>
-      <choice>
-        <ref name="ExtentOfOeuvre-element"/>
-        <ref name="genericRange-element"/>
-        <ref name="tGenre-element"/>
-        <ref name="Div1-inclusion"/>
-      </choice>
-    </zeroOrMore>
-  </define>
-  
-  
-  
   
   
   
@@ -1629,10 +1571,6 @@
     <ref name="ID-attribute"/>
   </define>
   
-  <define name="attlist.ExtentOfOeuvre" combine="interleave">
-    <ref name="ID-attribute"/>
-  </define>
-  
   <define name="attlist.Writing" combine="interleave">
     <optional>
       <ref name="ID-attribute"/>
@@ -1644,22 +1582,9 @@
       <ref name="person-attribute"/>
     </optional>
   </define>
-    
-  <define name="attlist.authorSummary" combine="interleave">
-    <ref name="ID-attribute"/>
-  </define>
   
   <define name="attlist.chronProse" combine="interleave">
     <ref name="ID-attribute"/>
-  </define>
-  
-  <define name="attlist.genericRange" combine="interleave">
-    <optional>
-      <ref name="ID-attribute"/>
-      <zeroOrMore>
-        <ref name="tGenre-element"/>
-      </zeroOrMore>
-    </optional>
   </define>
   
   <define name="attlist.nonStandardDescriptor" combine="interleave">
@@ -1902,7 +1827,9 @@
    
   <define name="attlist.quote" combine="interleave">
     <ref name="ID-attribute"/>
-    <ref name="direct-attribute"/>
+    <optional>
+      <ref name="direct-attribute"/>
+    </optional>
   </define>
   
   <define name="attlist.rBestKnownWork" combine="interleave">

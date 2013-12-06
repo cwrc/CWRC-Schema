@@ -9,6 +9,7 @@
      revised 2013-08-20: changed @dbRef attribute data type from "Name" to "string" [JCA & MRB]
      revised 2013-08-21: added new @resp attribute values [JCA & MRB]
      revised 2013-09-03: added new @resp attribute values [JCA & MRB]
+     revised 2013-12-01: revised bibCit, Div0 (authorSummary), moved authorSummary associated patterns over from writing schema [MPO]
  -->
 
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
@@ -45,6 +46,21 @@
             </optional>            
         </element>
     </define>
+    
+    <!-- authorSummary: +(ExtentOfOeuvre , tGenre , genericRange , dateStruct , date , dateRange , time , name , place , orgName , emph , foreign , quote , soCalled , sic , corr , rs , lg , l , topic) -->
+    <define name="authorSummary-element" combine="choice">
+        <element name="AUTHORSUMMARY">
+            <ref name="ID-attribute"/>
+            <zeroOrMore>
+                <choice>
+                    <ref name="p-element"/>
+                    <ref name="authorSummary-inclusion"/>
+                    <ref name="Div0-inclusion"/>
+                    <ref name="shortProse-element"/>
+                </choice>
+            </zeroOrMore>
+        </element>
+    </define>  
 
     <define combine="choice" name="fileDesc-element">
         <element name="FILEDESC">
@@ -457,7 +473,9 @@
             <optional>
                 <ref name="ID-attribute"/>
             </optional>
-            <ref name="direct-attribute"/>
+            <optional>
+                <ref name="direct-attribute"/>
+            </optional>
             <interleave>
                 <zeroOrMore>
                     <choice>
@@ -876,7 +894,6 @@
                         <ref name="lg-element"/>
                         <ref name="time-element"/>                        
                         <ref name="title-element"/>
-                        <ref name="bibCit-element"/>
                         <ref name="bibCits-element"/>
                         <ref name="lb-element"/>-->
                     </choice>
@@ -2246,20 +2263,19 @@
             <optional>
                 <ref name="resp-attribute"/>
             </optional>
-            <interleave>
+            <group>
+                <choice>
+                    <ref name="dateRange-element"/>
+                    <ref name="dateStruct-element"/>
+                    <ref name="date-element"/>
+                </choice>
+                <ref name="chronProse-element"/>
                 <optional>
-                    <ref name="chronProse-element"/>
+                    <ref name="shortProse-element"/>
                 </optional>
-                <!--<group>
-                    <choice>
-                        <ref name="dateRange-element"/>
-                        <ref name="dateStruct-element"/>
-                        <ref name="date-element"/>
-                    </choice>                   
-                </group>-->
-                <ref name="Div0-inclusion"/>
-                <ref name="Div1-inclusion"/>
-            </interleave>
+            </group>
+            <ref name="Div0-inclusion"/>
+            <ref name="Div1-inclusion"/>
         </element>
     </define>
 
@@ -2490,7 +2506,6 @@
             <!-- LS to MP: No documentation for this even though it is mentioned many times in the documentation for other tags. -->
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
                 <oneOrMore>
                     <ref name="p-element"/>
                 </oneOrMore>
@@ -2728,15 +2743,19 @@
             <xhtml:h3>Examples</xhtml:h3>
             <xhtml:p>&lt;BIBCITS&gt;&lt;BIBCIT PLACEHOLDER="Watkins" DBREF="69025"&gt;&lt;/BIBCIT&gt;&lt;/BIBCITS&gt;</xhtml:p>
             <ref name="ID-attribute"/>
-            <zeroOrMore>
-                <choice>
+            <interleave>
+                <oneOrMore>
                     <ref name="bibCit-element"/>
-                    <ref name="researchNote-element"/>
-                    <ref name="bibCits-element"/> <!-- mpo: this item is here to validate existing documents but should be removed after batch change -->
-                    <ref name="scholarNote-element"/>
-                    <ref name="keywordClass-element"/>
-                </choice>
-            </zeroOrMore>
+                </oneOrMore>
+                <zeroOrMore>
+                    <choice>
+                        <ref name="researchNote-element"/>
+                        <ref name="bibCits-element"/> <!-- mpo: this item is here to validate existing documents but should be removed after batch change -->
+                        <ref name="scholarNote-element"/>
+                        <ref name="keywordClass-element"/>
+                    </choice>
+                </zeroOrMore>
+            </interleave>
         </element>
     </define>
 
@@ -3027,13 +3046,55 @@
     </define>
 
     <!-- Inclusions start -->
+    
+    <define name="authorSummary-inclusion" combine="choice">
+        <zeroOrMore>
+            <choice>
+                <ref name="ExtentOfOeuvre-element"/>
+                <ref name="genericRange-element"/>
+                <ref name="tGenre-element"/>
+                <ref name="Div1-inclusion"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+    
+    <define name="ExtentOfOeuvre-element" combine="choice">
+        <element name="EXTENTOFOEUVRE">
+            <ref name="ID-attribute"/>
+            <interleave>
+                <text/>
+                <zeroOrMore>
+                    <choice>
+                        <ref name="genericRange-element"/>
+                        <ref name="tGenre-element"/>
+                        <ref name="Div0-inclusion"/>
+                        <ref name="Div1-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+    <define name="genericRange-element" combine="choice">
+        <element name="GENERICRANGE">
+            <ref name="ID-attribute"/>
+            <interleave>
+                <zeroOrMore>
+                    <choice>
+                        <text/>
+                        <ref name="authorSummary-inclusion"/>
+                        <ref name="Div0-inclusion"/>
+                    </choice>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
 
     <define combine="choice" name="Div0-inclusion">
         <zeroOrMore>
             <choice>
                 <ref name="researchNote-element"/>
                 <ref name="title-element"/>
-                <ref name="bibCit-element"/>
                 <ref name="scholarNote-element"/>
                 <ref name="keywordClass-element"/>
                 <ref name="bibCits-element"/>
@@ -3105,7 +3166,6 @@
             <choice>
                 <ref name="researchNote-element"/>
                 <ref name="title-element"/>
-                <ref name="bibCit-element"/>
                 <ref name="bibCits-element"/>
                 <ref name="lb-element"/>
                 <ref name="rs-element"/>
@@ -3133,7 +3193,6 @@
             <choice>
                 <ref name="researchNote-element"/>
                 <ref name="title-element"/>
-                <ref name="bibCit-element"/>
                 <ref name="bibCits-element"/>
                 <ref name="lb-element"/>
             </choice>

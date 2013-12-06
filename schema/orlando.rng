@@ -15,18 +15,21 @@
     revised 2013-02-19
     revised 2013-03-23
     revised 2013-10-02: relative URLs [MPO]
+    revised 2013-12-01: changed included schemas vs. externalRef calls to separate validation rules between
+    different Orlando schemas [MPO]
 
   -->
   
   <include href="orlando_common_schema.rng">
     <start>
-      <ref name="orlando-element"/>
+      <choice>
+        <ref name="orlando-element"/>
+        <externalRef href="biography.rng"/>
+        <externalRef href="writing.rng"/>
+        <externalRef href="events.rng"/>
+      </choice>
     </start>
   </include>
-  <include href="biography.rng"/>
-  <include href="writing.rng"/>
-  <!--<include href="entry.rng"/>-->
-  <include href="events.rng"/>
   
   
   <define name="orlando-element">
@@ -37,10 +40,9 @@
       </optional>
       <zeroOrMore>
         <choice>
-          <ref name="Biography-element"/>
-          <ref name="Writing-element"/>
-          <!--<ref name="Entry-element"/>-->
-          <ref name="Events-element"/>
+          <externalRef href="biography.rng"/>
+          <externalRef href="writing.rng"/>
+          <externalRef href="events.rng"/>
         </choice>
       </zeroOrMore>
     </element>
