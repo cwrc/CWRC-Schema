@@ -27,6 +27,8 @@
 				'properties_access', 
 				'properties_recordChangeDate', 
 				'properties_entityId', 
+				'properties_accessCondition', 
+				'properties_a', 
 				'properties_identity-element_identity', 
 				'properties_preferredForm', 
 				'properties_namePart', 
@@ -57,7 +59,8 @@
 				'properties_relations', 
 				'properties_relation', 
 				'properties_personRef', 
-				'properties_placeURI', 
+				'properties_name', 
+				'properties_uri', 
 				'properties_organizationRef', 
 				'properties_placeRef', 
 				'properties_organization', 
@@ -83,6 +86,9 @@
 				'properties_lang', 
 				'properties_NO_NAMESPACE_date-pattern_cert', 
 				'properties_recordChangeDate_source', 
+				'properties_href-attribute_href', 
+				'properties_a_rel', 
+				'properties_accessCondition_type', 
 				'properties_namePart_partType', 
 				'properties_sameAs_cert', 
 				'properties_gender_cert', 
@@ -91,10 +97,12 @@
 				'properties_type-attribute_type', 
 				'properties_source-attribute_source', 
 				'properties_partType-attribute_partType', 
-				'properties_cert-attribute_cert');
+				'properties_cert-attribute_cert', 
+				'properties_rel-attribute_rel');
 
         
-        
+        var facetsBoxes= new Array('facets_accessCondition_type');
+
         var usedByBoxes= new Array('usedBy_entity', 
 				'usedBy_person', 
 				'usedBy_personTypes', 
@@ -112,6 +120,8 @@
 				'usedBy_access', 
 				'usedBy_recordChangeDate', 
 				'usedBy_entityId', 
+				'usedBy_accessCondition', 
+				'usedBy_a', 
 				'usedBy_preferredForm', 
 				'usedBy_namePart', 
 				'usedBy_displayLabel', 
@@ -140,7 +150,8 @@
 				'usedBy_relations', 
 				'usedBy_relation', 
 				'usedBy_personRef', 
-				'usedBy_placeURI', 
+				'usedBy_name', 
+				'usedBy_uri', 
 				'usedBy_organizationRef', 
 				'usedBy_placeRef', 
 				'usedBy_organization', 
@@ -159,6 +170,9 @@
 				'usedBy_lang', 
 				'usedBy_NO_NAMESPACE_date-pattern_cert', 
 				'usedBy_recordChangeDate_source', 
+				'usedBy_href-attribute_href', 
+				'usedBy_a_rel', 
+				'usedBy_accessCondition_type', 
 				'usedBy_namePart_partType', 
 				'usedBy_sameAs_cert', 
 				'usedBy_gender_cert', 
@@ -168,6 +182,7 @@
 				'usedBy_source-attribute_source', 
 				'usedBy_partType-attribute_partType', 
 				'usedBy_cert-attribute_cert', 
+				'usedBy_rel-attribute_rel', 
 				'usedBy_personRecordInfo-element', 
 				'usedBy_date-pattern', 
 				'usedBy_identity-element', 
@@ -176,7 +191,8 @@
 				'usedBy_orgDescription-element', 
 				'usedBy_placeRecordInfo-element', 
 				'usedBy_placeDescription-element', 
-				'usedBy_NO_NAMESPACE_date-pattern');
+				'usedBy_NO_NAMESPACE_date-pattern', 
+				'usedBy_href-attribute');
 
         var sourceBoxes= new Array('source_cwrc', 
 				'source_entity', 
@@ -197,6 +213,8 @@
 				'source_access', 
 				'source_recordChangeDate', 
 				'source_entityId', 
+				'source_accessCondition', 
+				'source_a', 
 				'source_identity-element_identity', 
 				'source_preferredForm', 
 				'source_namePart', 
@@ -227,7 +245,8 @@
 				'source_relations', 
 				'source_relation', 
 				'source_personRef', 
-				'source_placeURI', 
+				'source_name', 
+				'source_uri', 
 				'source_organizationRef', 
 				'source_placeRef', 
 				'source_organization', 
@@ -253,6 +272,9 @@
 				'source_lang', 
 				'source_NO_NAMESPACE_date-pattern_cert', 
 				'source_recordChangeDate_source', 
+				'source_href-attribute_href', 
+				'source_a_rel', 
+				'source_accessCondition_type', 
 				'source_namePart_partType', 
 				'source_sameAs_cert', 
 				'source_gender_cert', 
@@ -262,6 +284,7 @@
 				'source_source-attribute_source', 
 				'source_partType-attribute_partType', 
 				'source_cert-attribute_cert', 
+				'source_rel-attribute_rel', 
 				'source_personRecordInfo-element', 
 				'source_date-pattern', 
 				'source_identity-element', 
@@ -273,11 +296,13 @@
 				'source_recordInfo-element', 
 				'source_titleIdentity-element', 
 				'source_NO_NAMESPACE_date-pattern', 
+				'source_href-attribute', 
 				'source_type-attribute', 
 				'source_source-attribute', 
 				'source_partType-attribute', 
 				'source_cert-attribute', 
 				'source_id-attribute', 
+				'source_rel-attribute', 
 				'source_lang-attribute');
 
         var instanceBoxes= new Array('instance_cwrc', 
@@ -290,6 +315,7 @@
 				'instance_dateSingle', 
 				'instance_note', 
 				'instance_recordChangeDate', 
+				'instance_accessCondition', 
 				'instance_identity-element_identity', 
 				'instance_preferredForm', 
 				'instance_variantForms', 
@@ -343,6 +369,8 @@
 				'diagram_access', 
 				'diagram_recordChangeDate', 
 				'diagram_entityId', 
+				'diagram_accessCondition', 
+				'diagram_a', 
 				'diagram_identity-element_identity', 
 				'diagram_preferredForm', 
 				'diagram_namePart', 
@@ -373,7 +401,8 @@
 				'diagram_relations', 
 				'diagram_relation', 
 				'diagram_personRef', 
-				'diagram_placeURI', 
+				'diagram_name', 
+				'diagram_uri', 
 				'diagram_organizationRef', 
 				'diagram_placeRef', 
 				'diagram_organization', 
@@ -405,11 +434,13 @@
 				'diagram_recordInfo-element', 
 				'diagram_titleIdentity-element', 
 				'diagram_NO_NAMESPACE_date-pattern', 
+				'diagram_href-attribute', 
 				'diagram_type-attribute', 
 				'diagram_source-attribute', 
 				'diagram_partType-attribute', 
 				'diagram_cert-attribute', 
 				'diagram_id-attribute', 
+				'diagram_rel-attribute', 
 				'diagram_lang-attribute');
 
         var annotationBoxes= new Array('annotations_cwrc', 
@@ -490,6 +521,8 @@
 				'attributes_note', 
 				'attributes_recordChangeDate', 
 				'attributes_entityId', 
+				'attributes_accessCondition', 
+				'attributes_a', 
 				'attributes_identity-element_identity', 
 				'attributes_preferredForm', 
 				'attributes_namePart', 
@@ -518,11 +551,13 @@
 				'attributes_level', 
 				'attributes_link', 
 				'attributes_NO_NAMESPACE_date-pattern', 
+				'attributes_href-attribute', 
 				'attributes_type-attribute', 
 				'attributes_source-attribute', 
 				'attributes_partType-attribute', 
 				'attributes_cert-attribute', 
 				'attributes_id-attribute', 
+				'attributes_rel-attribute', 
 				'attributes_lang-attribute');
 
         
@@ -538,6 +573,7 @@
 				'model_dateSingle', 
 				'model_note', 
 				'model_recordChangeDate', 
+				'model_accessCondition', 
 				'model_identity-element_identity', 
 				'model_preferredForm', 
 				'model_namePart', 
@@ -836,6 +872,9 @@
                         <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
                      </tr>
                      <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, facetsBoxes);" class="control" /></span><span class="globalControlName">Facets </span></td>
+                     </tr>
+                     <tr>
                         <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, instanceBoxes);" class="control" /></span><span class="globalControlName">Instances</span></td>
                      </tr>
                      <tr>
@@ -897,7 +936,9 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#a" target="_self" title="No namespace">a</a></b></div>
                                                 <div><b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                                                <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                                 <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                                 <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
                                                 <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
@@ -916,6 +957,7 @@
                                                 <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
                                                 <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                                 <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                                <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                                 <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                                 <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
                                                 <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
@@ -939,7 +981,6 @@
                                                 <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
                                                 <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                                 <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
-                                                <div><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></div>
                                                 <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                                 <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
                                                 <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
@@ -955,6 +996,7 @@
                                                 <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
                                                 <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
                                                 <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
+                                                <div><b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                                                 <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                                 <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                                 <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
@@ -1044,9 +1086,11 @@
                                              <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
                                                 <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                                <div><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b></div>
                                                 <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
                                                 <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
                                                 <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                                <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                                 <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                              </div>
@@ -1138,7 +1182,9 @@
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Element" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#a" target="_self" title="No namespace">a</a></b></div>
                                           <div><b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                                          <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                           <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                           <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
                                           <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
@@ -1157,6 +1203,7 @@
                                           <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
                                           <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                           <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                          <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                           <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                           <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
                                           <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
@@ -1180,7 +1227,6 @@
                                           <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
                                           <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                           <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
-                                          <div><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></div>
                                           <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                           <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
                                           <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
@@ -1196,6 +1242,7 @@
                                           <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
                                           <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
                                           <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
+                                          <div><b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                                           <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                           <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                           <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
@@ -1324,9 +1371,11 @@
                                        <div id="Attribute_Group" class="componentGroup" style="display:block">
                                           <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
                                           <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                          <div><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b></div>
                                           <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
                                           <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
                                           <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                          <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                           <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                           <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                        </div>
@@ -1374,7 +1423,9 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_entities.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#a" target="_self" title="No namespace">a</a></b></div>
                                                 <div><b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                                                <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                                 <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                                 <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
                                                 <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
@@ -1393,6 +1444,7 @@
                                                 <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
                                                 <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                                 <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                                <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                                 <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                                 <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
                                                 <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
@@ -1416,7 +1468,6 @@
                                                 <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
                                                 <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                                 <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
-                                                <div><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></div>
                                                 <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                                 <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
                                                 <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
@@ -1432,6 +1483,7 @@
                                                 <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
                                                 <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
                                                 <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
+                                                <div><b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                                                 <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                                 <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                                 <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
@@ -1521,9 +1573,11 @@
                                              <div id="gr_entities.xsdAttribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
                                                 <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                                <div><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b></div>
                                                 <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
                                                 <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
                                                 <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                                <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                                 <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                              </div>
@@ -2229,7 +2283,7 @@
                                  <area alt="index.tmp#personTypes" href="index.html#personTypes" coords="220,83,315,108" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,163,295,188" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,257,411,301" />
-                                 <area alt="index.tmp#access" href="index.html#access" coords="220,356,558,400" /></map></div>
+                                 <area alt="index.tmp#accessCondition" href="index.html#accessCondition" coords="220,356,331,381" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -2252,12 +2306,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_personRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('model_personRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_personRecordInfo-element_recordInfo" style="display:block"><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b> | <b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b> | <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b> | <b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                           <div id="model_personRecordInfo-element_recordInfo" style="display:block"><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b> | <b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b> | <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b> | <b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#access" target="_self" title="No namespace">access</a></b>, <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b>, <b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b>, <b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></td>
+                        <td><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b>, <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b>, <b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b>, <b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -2272,7 +2326,7 @@
   </span><span class="tEl">&lt;personTypes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/personTypes&gt;</span><span class="tI">
   </span><span class="tEl">&lt;originInfo</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/originInfo&gt;</span><span class="tI">
   </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;access</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/access&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;accessCondition</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/accessCondition&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/recordInfo&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -2325,7 +2379,7 @@
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"personTypes"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"originInfo"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"entityId"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"access"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"accessCondition"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -2650,7 +2704,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Record origin information. Equivalent to MADS recordInfo element, similar to EAC-CPF\'s control element.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Record origin information. Equivalent to MADS recordInfo element, similar to EAC-CPF\'s</span><span class="tI">
+</span><span class="tT">control element.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -2798,7 +2853,7 @@
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">Similar to EAC-CPF\'s agencyCode. In CWRC\'s context, projectId</span><span class="tI">
-</span><span class="tT">captures an identifieer for the originating project or collection. Subsequent modifications of the record</span><span class="tI">
+</span><span class="tT">captures an identifier for the originating project or collection. Subsequent modifications of the record</span><span class="tI">
 </span><span class="tT">should be captured in FOXML\'s datastreams</span></pre></td>
                                     </tr>
                                  </table>
@@ -2891,7 +2946,7 @@
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"projectId"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Similar to EAC-CPF\'s agencyCode. In CWRC\'s context, projectId captures an identifieer for the originating project or collection. Subsequent modifications of the record should be captured in FOXML\'s datastreams</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Similar to EAC-CPF\'s agencyCode. In CWRC\'s context, projectId captures an identifier for the originating project or collection. Subsequent modifications of the record should be captured in FOXML\'s datastreams</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:simpleContent</span><span class="tEl">&gt;</span><span class="tI">
@@ -2943,7 +2998,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Provenance field used to capture original record identifiers. CWRC record identifiers are captured in entityId and in FOXML.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Provenance field used to capture original record identifiers. CWRC record</span><span class="tI">
+</span><span class="tT">identifiers are captured in entityId and in FOXML.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -3020,7 +3076,8 @@
                                        <div class="annotation">
                                           <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                              <tr>
-                                                <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or modification of an entity record.</span></pre></td>
+                                                <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or</span><span class="tI">
+</span><span class="tT">modification of an entity record.</span></pre></td>
                                              </tr>
                                           </table>
                                        </div>
@@ -3097,7 +3154,10 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Provenance field used to capture the original creation date of an entity instance deposited in CWRC. Dates of creation for new entities created in CWRC are captured in FOXML. Equivalent to MADS recordCreationDate and EAC-CPF's maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime .</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Provenance field used to capture the original creation date of an entity instance</span><span class="tI">
+</span><span class="tT">deposited in CWRC. Dates of creation for new entities created in CWRC are captured in FOXML.</span><span class="tI">
+</span><span class="tT">Equivalent to MADS recordCreationDate and EAC-CPF's</span><span class="tI">
+</span><span class="tT">maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime .</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -3671,7 +3731,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Captures a date type in relation to its association with the entity described. Recommended values - Person: birth, death, marriage, flourish, circa.</span><span class="tI">
+                                       <td width="100%"><pre><span class="tT">Captures a date type in relation to its association with the entity described.</span><span class="tI">
+</span><span class="tT">Recommended values - Person: birth, death, marriage, flourish, circa.</span><span class="tI">
 </span><span class="tT">Organization: start, end, flourish, circa. Works: original issuance, edition,</span><span class="tI">
 </span><span class="tT">reprint.</span></pre></td>
                                     </tr>
@@ -4065,8 +4126,8 @@
                            <div id="usedBy_access" style="display:block">
                               <table class="usedByTable">
                                  <tr>
-                                    <td class="firstColumn">Elements </td>
-                                    <td><b><a href="index.html#note" target="_self" title="No namespace">note</a></b>, <b><a href="index.html#orgRecordInfo-element_recordInfo" target="_self" title="No namespace">orgRecordInfo-element/recordInfo</a></b>, <b><a href="index.html#personRecordInfo-element_recordInfo" target="_self" title="No namespace">personRecordInfo-element/recordInfo</a></b>, <b><a href="index.html#placeRecordInfo-element_recordInfo" target="_self" title="No namespace">placeRecordInfo-element/recordInfo</a></b>, <b><a href="index.html#recordInfo-element_recordInfo" target="_self" title="No namespace">recordInfo-element/recordInfo</a></b></td>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -4141,7 +4202,10 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Provenance field used to capture the original modification dates of an entity instance deposited in CWRC. Subsequent dates of modification in CWRC are captured in FOXML. Equivalent to MADS recordChangeDate and EAC-CPF's maintenanceHistory/maintenance/Event/eventType/eventDateTime .</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Provenance field used to capture the original modification dates of an entity</span><span class="tI">
+</span><span class="tT">instance deposited in CWRC. Subsequent dates of modification in CWRC are captured in FOXML.</span><span class="tI">
+</span><span class="tT">Equivalent to MADS recordChangeDate and EAC-CPF's</span><span class="tI">
+</span><span class="tT">maintenanceHistory/maintenance/Event/eventType/eventDateTime .</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -4243,7 +4307,8 @@
                                        <div class="annotation">
                                           <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                              <tr>
-                                                <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or modification of an entity record.</span></pre></td>
+                                                <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or</span><span class="tI">
+</span><span class="tT">modification of an entity record.</span></pre></td>
                                              </tr>
                                           </table>
                                        </div>
@@ -4319,7 +4384,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Optional CWRC record identifier. This information is captured in FOXML. Equivalent to EAC-CPF\'s recordId.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Optional CWRC record identifier. This information is captured in FOXML. Equivalent</span><span class="tI">
+</span><span class="tT">to EAC-CPF\'s recordId.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -4446,6 +4512,298 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="accessCondition"></a><div class="componentTitle">Element <span class="qname">accessCondition</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_accessCondition" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_accessCondition');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_accessCondition" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_accessCondition.jpeg" usemap="#entities_xsd_Element_accessCondition" /><map name="entities_xsd_Element_accessCondition" id="entities_xsd_Element_accessCondition">
+                                 <area alt="index.tmp#accessCondition_type" href="index.html#accessCondition_type" coords="153,41,328,85" />
+                                 <area alt="index.tmp#a" href="index.html#a" coords="230,102,401,146" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_accessCondition" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_accessCondition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_accessCondition" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">mixed</td>
+                                    <td><b>true</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_accessCondition" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_accessCondition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_accessCondition" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="index.html#orgRecordInfo-element_recordInfo" target="_self" title="No namespace">orgRecordInfo-element/recordInfo</a></b>, <b><a href="index.html#personRecordInfo-element_recordInfo" target="_self" title="No namespace">personRecordInfo-element/recordInfo</a></b>, <b><a href="index.html#placeRecordInfo-element_recordInfo" target="_self" title="No namespace">placeRecordInfo-element/recordInfo</a></b>, <b><a href="index.html#recordInfo-element_recordInfo" target="_self" title="No namespace">recordInfo-element/recordInfo</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_accessCondition" type="image" src="img/btM.gif" value="-" onclick="switchState('model_accessCondition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_accessCondition" style="display:block"><b><a href="index.html#a" target="_self" title="No namespace">a*</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="index.html#a" target="_self" title="No namespace">a</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_accessCondition" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_accessCondition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_accessCondition" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;accessCondition</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;a</span><span class="tT"> </span><span class="tAN">href=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">rel=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/a&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/accessCondition&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_accessCondition" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_accessCondition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_accessCondition" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#accessCondition_type" target="_self" title="No namespace">type</a></b></td>
+                                    <td>restriction of <b>xs:token</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_accessCondition" type="image" src="img/btM.gif" value="-" onclick="switchState('source_accessCondition');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_accessCondition" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"accessCondition"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tAN"> mixed=</span><span class="tAV">"true"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> ref=</span><span class="tAV">"a"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"type"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"use and reproduction"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="a"></a><div class="componentTitle">Element <span class="qname">a</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_a" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_a');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_a" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_a.jpeg" usemap="#entities_xsd_Element_a" /><map name="entities_xsd_Element_a" id="entities_xsd_Element_a">
+                                 <area alt="index.tmp#href-attribute" href="index.html#href-attribute" coords="216,139,334,165" />
+                                 <area alt="index.tmp#a_rel" href="index.html#a_rel" coords="213,180,317,224" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b>xs:token</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_a" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_a');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_a" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_a" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_a');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_a" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_a" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_a');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_a" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#href-attribute_href" target="_self" title="No namespace">href</a></b></td>
+                                    <td><b>xs:anyURI</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#a_rel" target="_self" title="No namespace">rel</a></b></td>
+                                    <td><b>xs:token</b></td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_a" type="image" src="img/btM.gif" value="-" onclick="switchState('source_a');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_a" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"a"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:simpleContent</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"href-attribute"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"rel"</span><span class="tAN"> type=</span><span class="tAV">"xs:token"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:simpleContent&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
       <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="identity-element_identity"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#identity-element" target="_self" title="No namespace">identity-element</a></b> / identity</span></div>
       <table class="rt">
          <tr>
@@ -4486,7 +4844,7 @@
                            <div class="floatRight"><input id="button_diagram_identity-element_identity" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_identity-element_identity');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_identity-element_identity" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_identity.jpeg" usemap="#entities_xsd_Element_identity" /><map name="entities_xsd_Element_identity" id="entities_xsd_Element_identity">
+                           <div id="diagram_identity-element_identity" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_identity_1.jpeg" usemap="#entities_xsd_Element_identity_1" /><map name="entities_xsd_Element_identity_1" id="entities_xsd_Element_identity_1">
                                  <area alt="index.tmp#id" href="index.html#id" coords="147,41,224,66" />
                                  <area alt="index.tmp#preferredForm" href="index.html#preferredForm" coords="204,83,305,108" />
                                  <area alt="index.tmp#displayLabel" href="index.html#displayLabel" coords="204,163,309,207" />
@@ -4806,7 +5164,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Used to distinguish components of the name of the entity. Equivalent to MADS\'s namePart and to EAC-CPF\'s part element.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Used to distinguish components of the name of the entity. Equivalent to MADS\'s namePart and</span><span class="tI">
+</span><span class="tT">to EAC-CPF\'s part element.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -5426,7 +5785,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Captures tname type to describe contexts in which this name was used to refer to the present entity.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Captures tname type to describe contexts in which this name was used to refer to the</span><span class="tI">
+</span><span class="tT">present entity.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -6408,7 +6768,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Dates of existence of the entity described (i.e. birth, death, fl., etc.), of the present entity.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Dates of existence of the entity described (i.e. birth, death, fl., etc.), of the</span><span class="tI">
+</span><span class="tT">present entity.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -7132,7 +7493,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">A group of gender terms associated with a CWRC entity record. For more information see gender element.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">A group of gender terms associated with a CWRC entity record. For more</span><span class="tI">
+</span><span class="tT">information see gender element.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -7475,7 +7837,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">A group of occupation terms associated with a CWRC entity record. For more information see occupation element.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">A group of occupation terms associated with a CWRC entity record. For more</span><span class="tI">
+</span><span class="tT">information see occupation element.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -7613,7 +7976,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Occupation captures relevant paid occupations held by the person described in an entity record.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Occupation captures relevant paid occupations held by the person described in</span><span class="tI">
+</span><span class="tT">an entity record.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -7760,7 +8124,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Term works as a generic field to capture terms associated with an entity in terms of occupation, activity, research interests, and gender.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Term works as a generic field to capture terms associated with an entity in terms</span><span class="tI">
+</span><span class="tT">of occupation, activity, research interests, and gender.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -7935,7 +8300,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">A group of activity terms associated with a CWRC entity record. For more information see activity element.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">A group of activity terms associated with a CWRC entity record. For more</span><span class="tI">
+</span><span class="tT">information see activity element.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -7977,8 +8343,8 @@
                            <div id="usedBy_activities" style="display:block">
                               <table class="usedByTable">
                                  <tr>
-                                    <td class="firstColumn">Elements </td>
-                                    <td><b><a href="index.html#orgDescription-element_description" target="_self" title="No namespace">orgDescription-element/description</a></b>, <b><a href="index.html#personDescription-element_description" target="_self" title="No namespace">personDescription-element/description</a></b></td>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#personDescription-element_description" target="_self" title="No namespace">personDescription-element/description</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -8073,7 +8439,9 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Activity captures all unpaid work or function such as volunteer work or other significant activity that a person was engaged in. Examples: parenting, unpaid  domestic labour, nursing, as well as philantropic, missionary, or other political activities.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Activity captures all unpaid work or function such as volunteer work or other</span><span class="tI">
+</span><span class="tT">significant activity that a person was engaged in. Examples: parenting, unpaid  domestic labour,</span><span class="tI">
+</span><span class="tT">nursing, as well as philantropic, missionary, or other political activities.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -8211,7 +8579,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">A group of research interest terms associated with a CWRC entity record. For more information see researchInterest element.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">A group of research interest terms associated with a CWRC entity record.</span><span class="tI">
+</span><span class="tT">For more information see interest element.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -8299,7 +8668,7 @@
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"researchInterests"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A group of research interest terms associated with a CWRC entity record. For more information see researchInterest element.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A group of research interest terms associated with a CWRC entity record. For more information see interest element.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
@@ -8349,7 +8718,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">This field can capture a topic of interest associated with an entity (person or organization).</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">This field can capture a topic of interest associated with an entity (person</span><span class="tI">
+</span><span class="tT">or organization).</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -8605,7 +8975,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">A source of evidence used in describing the entity or entities instances. Equivalent to EAC-CFPF\'s source element.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">A source of evidence used in describing the entity or entities instances. Equivalent</span><span class="tI">
+</span><span class="tT">to EAC-CFPF\'s source element.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -8713,7 +9084,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">A group of relations between a given entity and other entities. Equivalent to EAC-CPF\'s relation element, used as a wrapper for grouping one or more specific relations.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">A group of relations between a given entity and other entities. Equivalent to EAC-CPF\'s</span><span class="tI">
+</span><span class="tT">relation element, used as a wrapper for grouping one or more specific relations.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -8891,7 +9263,9 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Captures a relation between a given entity and other entities. For example, an organization, person, work, or place related to the described entity. Equivalent to EAC-CPF\'s cpfRelation (if the relation is to organizations and persons) or to resourceRelation (if the relation involves a work or title).</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Captures a relation between a given entity and other entities. For example, an organization,</span><span class="tI">
+</span><span class="tT">person, work, or place related to the described entity. Equivalent to EAC-CPF\'s cpfRelation (if the relation</span><span class="tI">
+</span><span class="tT">is to organizations and persons) or to resourceRelation (if the relation involves a work or title).</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -9075,7 +9449,7 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">A person entity associated with the described entity. Used in relations section.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">A person entity associated with the described entity.  Used in relations section.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -9089,7 +9463,8 @@
                         </td>
                         <td class="diagram">
                            <div id="diagram_personRef" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_personRef.jpeg" usemap="#entities_xsd_Element_personRef" /><map name="entities_xsd_Element_personRef" id="entities_xsd_Element_personRef">
-                                 <area alt="index.tmp#placeURI" href="index.html#placeURI" coords="201,2,313,46" /></map></div>
+                                 <area alt="index.tmp#name" href="index.html#name" coords="221,2,326,46" />
+                                 <area alt="index.tmp#uri" href="index.html#uri" coords="221,56,333,100" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -9128,12 +9503,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_personRef" type="image" src="img/btM.gif" value="-" onclick="switchState('model_personRef');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_personRef" style="display:block"><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI{0,1}</a></b></div>
+                           <div id="model_personRef" style="display:block"><b><a href="index.html#name" target="_self" title="No namespace">name</a></b> | <b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></td>
+                        <td><b><a href="index.html#name" target="_self" title="No namespace">name</a></b>, <b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -9145,7 +9520,8 @@
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;personRef</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;placeURI</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/placeURI&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;uri</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/uri&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/personRef&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -9166,9 +9542,10 @@
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A person entity associated with the described entity. Used in relations section.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"placeURI"</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"name"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"uri"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -9187,7 +9564,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="placeURI"></a><div class="componentTitle">Element <span class="qname">placeURI</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="name"></a><div class="componentTitle">Element <span class="qname">name</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -9206,23 +9583,23 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_placeURI" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeURI');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_name" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_name');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeURI" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_placeURI.jpeg" /></div>
+                           <div id="diagram_name" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_name.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td><b>xs:anyURI</b></td>
+                        <td><b>xs:string</b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_placeURI" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_placeURI');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_name" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_name');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_placeURI" style="display:block">
+                           <div id="properties_name" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -9235,10 +9612,10 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_placeURI" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_placeURI');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_name" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_name');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_placeURI" style="display:block">
+                           <div id="usedBy_name" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Elements </td>
@@ -9251,13 +9628,100 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_placeURI" type="image" src="img/btM.gif" value="-" onclick="switchState('source_placeURI');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_name" type="image" src="img/btM.gif" value="-" onclick="switchState('source_name');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_placeURI" style="display:block">
+                           <div id="source_name" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"placeURI"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tEl">/&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"name"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="uri"></a><div class="componentTitle">Element <span class="qname">uri</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_uri" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_uri');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_uri" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_uri.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:anyURI</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_uri" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_uri');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_uri" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_uri" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_uri');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_uri" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="index.html#organizationRef" target="_self" title="No namespace">organizationRef</a></b>, <b><a href="index.html#personRef" target="_self" title="No namespace">personRef</a></b>, <b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_uri" type="image" src="img/btM.gif" value="-" onclick="switchState('source_uri');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_uri" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"uri"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tEl">/&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -9300,7 +9764,7 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">An organization entity associated with the described entity. Used in relations section.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">An organization entity associated with the described entity.  Used in relations section.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -9314,7 +9778,8 @@
                         </td>
                         <td class="diagram">
                            <div id="diagram_organizationRef" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_organizationRef.jpeg" usemap="#entities_xsd_Element_organizationRef" /><map name="entities_xsd_Element_organizationRef" id="entities_xsd_Element_organizationRef">
-                                 <area alt="index.tmp#placeURI" href="index.html#placeURI" coords="226,2,338,46" /></map></div>
+                                 <area alt="index.tmp#name" href="index.html#name" coords="246,2,351,46" />
+                                 <area alt="index.tmp#uri" href="index.html#uri" coords="246,56,358,100" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -9353,12 +9818,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_organizationRef" type="image" src="img/btM.gif" value="-" onclick="switchState('model_organizationRef');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_organizationRef" style="display:block"><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI{0,1}</a></b></div>
+                           <div id="model_organizationRef" style="display:block"><b><a href="index.html#name" target="_self" title="No namespace">name</a></b> | <b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></td>
+                        <td><b><a href="index.html#name" target="_self" title="No namespace">name</a></b>, <b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -9370,7 +9835,8 @@
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;organizationRef</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;placeURI</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/placeURI&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;uri</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/uri&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/organizationRef&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -9391,9 +9857,10 @@
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">An organization entity associated with the described entity. Used in relations section.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"placeURI"</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"name"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"uri"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -9438,7 +9905,7 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">A place entity associated with the described entity. Used in relations section.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">A place entity associated with the described entity.  Used in relations section.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -9452,7 +9919,8 @@
                         </td>
                         <td class="diagram">
                            <div id="diagram_placeRef" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_placeRef.jpeg" usemap="#entities_xsd_Element_placeRef" /><map name="entities_xsd_Element_placeRef" id="entities_xsd_Element_placeRef">
-                                 <area alt="index.tmp#placeURI" href="index.html#placeURI" coords="193,2,305,46" /></map></div>
+                                 <area alt="index.tmp#name" href="index.html#name" coords="213,2,318,46" />
+                                 <area alt="index.tmp#uri" href="index.html#uri" coords="213,56,325,100" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -9491,12 +9959,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_placeRef" type="image" src="img/btM.gif" value="-" onclick="switchState('model_placeRef');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_placeRef" style="display:block"><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI{0,1}</a></b></div>
+                           <div id="model_placeRef" style="display:block"><b><a href="index.html#name" target="_self" title="No namespace">name</a></b> | <b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></td>
+                        <td><b><a href="index.html#name" target="_self" title="No namespace">name</a></b>, <b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -9508,7 +9976,8 @@
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;placeRef</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;placeURI</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/placeURI&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;uri</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/uri&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/placeRef&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -9529,9 +9998,10 @@
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A place entity associated with the described entity. Used in relations section.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"placeURI"</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"name"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"uri"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -9777,7 +10247,7 @@
                                  <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,83,295,108" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,177,411,221" />
-                                 <area alt="index.tmp#access" href="index.html#access" coords="220,276,558,320" /></map></div>
+                                 <area alt="index.tmp#accessCondition" href="index.html#accessCondition" coords="220,276,331,301" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -9800,12 +10270,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_orgRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('model_orgRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_orgRecordInfo-element_recordInfo" style="display:block"><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b> | <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b> | <b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                           <div id="model_orgRecordInfo-element_recordInfo" style="display:block"><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b> | <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b> | <b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#access" target="_self" title="No namespace">access</a></b>, <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b>, <b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></td>
+                        <td><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b>, <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b>, <b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -9819,7 +10289,7 @@
                                     <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;originInfo</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/originInfo&gt;</span><span class="tI">
   </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;access</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/access&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;accessCondition</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/accessCondition&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/recordInfo&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -9871,7 +10341,7 @@
     </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"originInfo"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"entityId"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"access"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"accessCondition"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -9935,10 +10405,9 @@
                                  <area alt="index.tmp#id" href="index.html#id" coords="166,41,243,66" />
                                  <area alt="index.tmp#orgTypes" href="index.html#orgTypes" coords="223,83,300,108" />
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,163,305,188" />
-                                 <area alt="index.tmp#activities" href="index.html#activities" coords="223,243,296,268" />
-                                 <area alt="index.tmp#researchInterests" href="index.html#researchInterests" coords="223,337,340,362" />
-                                 <area alt="index.tmp#descriptiveNotes" href="index.html#descriptiveNotes" coords="223,417,335,442" />
-                                 <area alt="index.tmp#relatedResources" href="index.html#relatedResources" coords="223,452,340,477" /></map></div>
+                                 <area alt="index.tmp#researchInterests" href="index.html#researchInterests" coords="223,243,340,268" />
+                                 <area alt="index.tmp#descriptiveNotes" href="index.html#descriptiveNotes" coords="223,323,335,348" />
+                                 <area alt="index.tmp#relatedResources" href="index.html#relatedResources" coords="223,358,340,383" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -9961,12 +10430,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_orgDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('model_orgDescription-element_description');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_orgDescription-element_description" style="display:block"><b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b> | <b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b> | <b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b> | <b><a href="index.html#researchInterests" target="_self" title="No namespace">researchInterests</a></b> | <b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b> | <b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b></div>
+                           <div id="model_orgDescription-element_description" style="display:block"><b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b> | <b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b> | <b><a href="index.html#researchInterests" target="_self" title="No namespace">researchInterests</a></b> | <b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b> | <b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b>, <b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b>, <b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b>, <b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b>, <b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b>, <b><a href="index.html#researchInterests" target="_self" title="No namespace">researchInterests</a></b></td>
+                        <td><b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b>, <b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b>, <b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b>, <b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b>, <b><a href="index.html#researchInterests" target="_self" title="No namespace">researchInterests</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -9980,7 +10449,6 @@
                                     <td width="100%"><pre><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;orgTypes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/orgTypes&gt;</span><span class="tI">
   </span><span class="tEl">&lt;existDates</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/existDates&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;activities</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/activities&gt;</span><span class="tI">
   </span><span class="tEl">&lt;researchInterests</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/researchInterests&gt;</span><span class="tI">
   </span><span class="tEl">&lt;descriptiveNotes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/descriptiveNotes&gt;</span><span class="tI">
   </span><span class="tEl">&lt;relatedResources</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/relatedResources&gt;</span><span class="tI">
@@ -10035,7 +10503,6 @@
     </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"orgTypes"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"existDates"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"activities"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"researchInterests"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"descriptiveNotes"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"relatedResources"</span><span class="tEl">/&gt;</span><span class="tI">
@@ -10728,7 +11195,7 @@
                                  <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,83,295,108" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,177,411,221" />
-                                 <area alt="index.tmp#access" href="index.html#access" coords="220,276,558,320" /></map></div>
+                                 <area alt="index.tmp#accessCondition" href="index.html#accessCondition" coords="220,276,331,301" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -10751,12 +11218,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_placeRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('model_placeRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_placeRecordInfo-element_recordInfo" style="display:block"><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b> | <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b> | <b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                           <div id="model_placeRecordInfo-element_recordInfo" style="display:block"><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b> | <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b> | <b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#access" target="_self" title="No namespace">access</a></b>, <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b>, <b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></td>
+                        <td><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b>, <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b>, <b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -10770,7 +11237,7 @@
                                     <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;originInfo</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/originInfo&gt;</span><span class="tI">
   </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;access</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/access&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;accessCondition</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/accessCondition&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/recordInfo&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -10822,7 +11289,7 @@
     </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"originInfo"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"entityId"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"access"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"accessCondition"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -11607,7 +12074,7 @@
                                  <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,83,295,108" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,177,411,221" />
-                                 <area alt="index.tmp#access" href="index.html#access" coords="220,276,558,320" /></map></div>
+                                 <area alt="index.tmp#accessCondition" href="index.html#accessCondition" coords="220,276,331,301" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -11630,12 +12097,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_recordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('model_recordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_recordInfo-element_recordInfo" style="display:block"><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b> | <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b> | <b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                           <div id="model_recordInfo-element_recordInfo" style="display:block"><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b> | <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b> | <b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#access" target="_self" title="No namespace">access</a></b>, <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b>, <b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></td>
+                        <td><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b>, <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b>, <b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -11649,7 +12116,7 @@
                                     <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;originInfo</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/originInfo&gt;</span><span class="tI">
   </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;access</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/access&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;accessCondition</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/accessCondition&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/recordInfo&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -11701,7 +12168,7 @@
     </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"originInfo"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"entityId"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"access"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"accessCondition"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -11762,7 +12229,7 @@
                            <div class="floatRight"><input id="button_diagram_titleIdentity-element_identity" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_titleIdentity-element_identity');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_titleIdentity-element_identity" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_identity_1.jpeg" usemap="#entities_xsd_Element_identity_1" /><map name="entities_xsd_Element_identity_1" id="entities_xsd_Element_identity_1">
+                           <div id="diagram_titleIdentity-element_identity" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_identity.jpeg" usemap="#entities_xsd_Element_identity" /><map name="entities_xsd_Element_identity" id="entities_xsd_Element_identity">
                                  <area alt="index.tmp#id" href="index.html#id" coords="147,41,224,66" />
                                  <area alt="index.tmp#preferredForm" href="index.html#preferredForm" coords="204,83,305,108" />
                                  <area alt="index.tmp#level" href="index.html#level" coords="204,163,395,207" />
@@ -12277,7 +12744,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or modification of an entity record.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or</span><span class="tI">
+</span><span class="tT">modification of an entity record.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -12575,7 +13043,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or modification of an entity record.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or</span><span class="tI">
+</span><span class="tT">modification of an entity record.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -12631,6 +13100,265 @@
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Provenance field used to capture the source responsible for the publication or modification of an entity record.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="href-attribute_href"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b> / @href</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:anyURI</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_href-attribute_href" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_href-attribute_href');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_href-attribute_href" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_href-attribute_href" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_href-attribute_href');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_href-attribute_href" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Attribute Group </td>
+                                    <td><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_href-attribute_href" type="image" src="img/btM.gif" value="-" onclick="switchState('source_href-attribute_href');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_href-attribute_href" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"href"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="a_rel"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#a" target="_self" title="No namespace">a</a></b> / @rel</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:token</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_a_rel" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_a_rel');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_a_rel" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_a_rel" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_a_rel');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_a_rel" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#a" target="_self" title="No namespace">a</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_a_rel" type="image" src="img/btM.gif" value="-" onclick="switchState('source_a_rel');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_a_rel" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"rel"</span><span class="tAN"> type=</span><span class="tAV">"xs:token"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="accessCondition_type"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b> / @type</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>restriction of <b>xs:token</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_accessCondition_type" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_accessCondition_type');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_accessCondition_type" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_accessCondition_type" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_accessCondition_type');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_accessCondition_type" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>use and reproduction</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_accessCondition_type" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_accessCondition_type');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_accessCondition_type" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_accessCondition_type" type="image" src="img/btM.gif" value="-" onclick="switchState('source_accessCondition_type');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_accessCondition_type" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"type"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"use and reproduction"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -13422,7 +14150,8 @@
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or modification of an entity record.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or</span><span class="tI">
+</span><span class="tT">modification of an entity record.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -13811,6 +14540,84 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="rel-attribute_rel"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b> / @rel</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:token</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_rel-attribute_rel" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_rel-attribute_rel');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_rel-attribute_rel" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_rel-attribute_rel" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_rel-attribute_rel');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_rel-attribute_rel" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Attribute Group </td>
+                                    <td><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_rel-attribute_rel" type="image" src="img/btM.gif" value="-" onclick="switchState('source_rel-attribute_rel');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_rel-attribute_rel" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"rel"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:token"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
       <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="personRecordInfo-element"></a><div class="componentTitle">Element Group <span class="qname">personRecordInfo-element</span></div>
       <table class="rt">
          <tr>
@@ -13884,7 +14691,7 @@
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"personTypes"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"originInfo"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"entityId"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"access"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"accessCondition"</span><span class="tEl">/&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -14266,7 +15073,7 @@
         </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"originInfo"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"entityId"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"access"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"accessCondition"</span><span class="tEl">/&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -14361,7 +15168,6 @@
         </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"orgTypes"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"existDates"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"activities"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"researchInterests"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"descriptiveNotes"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"relatedResources"</span><span class="tEl">/&gt;</span><span class="tI">
@@ -14459,7 +15265,7 @@
         </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"originInfo"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"entityId"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"access"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"accessCondition"</span><span class="tEl">/&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -14639,7 +15445,7 @@
         </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"originInfo"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"entityId"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"access"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"accessCondition"</span><span class="tEl">/&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -14869,6 +15675,104 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="href-attribute"></a><div class="componentTitle">Attribute Group <span class="qname">href-attribute</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_href-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_href-attribute');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_href-attribute" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Attribute_Group_href-attribute.jpeg" usemap="#entities_xsd_Attribute_Group_href-attribute" /><map name="entities_xsd_Attribute_Group_href-attribute" id="entities_xsd_Attribute_Group_href-attribute">
+                                 <area alt="index.tmp#href-attribute_href" href="index.html#href-attribute_href" coords="146,0,258,44" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_href-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_href-attribute');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_href-attribute" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#a" target="_self" title="No namespace">a</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_href-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_href-attribute');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_href-attribute" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#href-attribute_href" target="_self" title="No namespace">href</a></b></td>
+                                    <td><b>xs:anyURI</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_href-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('source_href-attribute');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_href-attribute" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> name=</span><span class="tAV">"href-attribute"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"href"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attributeGroup&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
       <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="type-attribute"></a><div class="componentTitle">Attribute Group <span class="qname">type-attribute</span></div>
       <table class="rt">
          <tr>
@@ -15011,7 +15915,8 @@
                                        <div class="annotation">
                                           <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                              <tr>
-                                                <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or modification of an entity record.</span></pre></td>
+                                                <td width="100%"><pre><span class="tT">Provenance field used to capture the source responsible for the publication or</span><span class="tI">
+</span><span class="tT">modification of an entity record.</span></pre></td>
                                              </tr>
                                           </table>
                                        </div>
@@ -15420,6 +16325,88 @@
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> name=</span><span class="tAV">"id-attribute"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attributeGroup&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="rel-attribute"></a><div class="componentTitle">Attribute Group <span class="qname">rel-attribute</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_rel-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_rel-attribute');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_rel-attribute" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Attribute_Group_rel-attribute.jpeg" usemap="#entities_xsd_Attribute_Group_rel-attribute" /><map name="entities_xsd_Attribute_Group_rel-attribute" id="entities_xsd_Attribute_Group_rel-attribute">
+                                 <area alt="index.tmp#rel-attribute_rel" href="index.html#rel-attribute_rel" coords="138,0,242,44" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_rel-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_rel-attribute');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_rel-attribute" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#rel-attribute_rel" target="_self" title="No namespace">rel</a></b></td>
+                                    <td><b>xs:token</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_rel-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('source_rel-attribute');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_rel-attribute" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> name=</span><span class="tAV">"rel-attribute"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"rel"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:token"</span><span class="tEl">/&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attributeGroup&gt;</span></pre></td>
                                  </tr>
                               </table>

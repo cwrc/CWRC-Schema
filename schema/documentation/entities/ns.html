@@ -27,6 +27,8 @@
 				'properties_access', 
 				'properties_recordChangeDate', 
 				'properties_entityId', 
+				'properties_accessCondition', 
+				'properties_a', 
 				'properties_identity-element_identity', 
 				'properties_preferredForm', 
 				'properties_namePart', 
@@ -57,7 +59,8 @@
 				'properties_relations', 
 				'properties_relation', 
 				'properties_personRef', 
-				'properties_placeURI', 
+				'properties_name', 
+				'properties_uri', 
 				'properties_organizationRef', 
 				'properties_placeRef', 
 				'properties_organization', 
@@ -83,6 +86,9 @@
 				'properties_lang', 
 				'properties_NO_NAMESPACE_date-pattern_cert', 
 				'properties_recordChangeDate_source', 
+				'properties_href-attribute_href', 
+				'properties_a_rel', 
+				'properties_accessCondition_type', 
 				'properties_namePart_partType', 
 				'properties_sameAs_cert', 
 				'properties_gender_cert', 
@@ -91,10 +97,12 @@
 				'properties_type-attribute_type', 
 				'properties_source-attribute_source', 
 				'properties_partType-attribute_partType', 
-				'properties_cert-attribute_cert');
+				'properties_cert-attribute_cert', 
+				'properties_rel-attribute_rel');
 
         
-        
+        var facetsBoxes= new Array('facets_accessCondition_type');
+
         var usedByBoxes= new Array('usedBy_entity', 
 				'usedBy_person', 
 				'usedBy_personTypes', 
@@ -112,6 +120,8 @@
 				'usedBy_access', 
 				'usedBy_recordChangeDate', 
 				'usedBy_entityId', 
+				'usedBy_accessCondition', 
+				'usedBy_a', 
 				'usedBy_preferredForm', 
 				'usedBy_namePart', 
 				'usedBy_displayLabel', 
@@ -140,7 +150,8 @@
 				'usedBy_relations', 
 				'usedBy_relation', 
 				'usedBy_personRef', 
-				'usedBy_placeURI', 
+				'usedBy_name', 
+				'usedBy_uri', 
 				'usedBy_organizationRef', 
 				'usedBy_placeRef', 
 				'usedBy_organization', 
@@ -159,6 +170,9 @@
 				'usedBy_lang', 
 				'usedBy_NO_NAMESPACE_date-pattern_cert', 
 				'usedBy_recordChangeDate_source', 
+				'usedBy_href-attribute_href', 
+				'usedBy_a_rel', 
+				'usedBy_accessCondition_type', 
 				'usedBy_namePart_partType', 
 				'usedBy_sameAs_cert', 
 				'usedBy_gender_cert', 
@@ -168,6 +182,7 @@
 				'usedBy_source-attribute_source', 
 				'usedBy_partType-attribute_partType', 
 				'usedBy_cert-attribute_cert', 
+				'usedBy_rel-attribute_rel', 
 				'usedBy_personRecordInfo-element', 
 				'usedBy_date-pattern', 
 				'usedBy_identity-element', 
@@ -176,7 +191,8 @@
 				'usedBy_orgDescription-element', 
 				'usedBy_placeRecordInfo-element', 
 				'usedBy_placeDescription-element', 
-				'usedBy_NO_NAMESPACE_date-pattern');
+				'usedBy_NO_NAMESPACE_date-pattern', 
+				'usedBy_href-attribute');
 
         var sourceBoxes= new Array('source_cwrc', 
 				'source_entity', 
@@ -197,6 +213,8 @@
 				'source_access', 
 				'source_recordChangeDate', 
 				'source_entityId', 
+				'source_accessCondition', 
+				'source_a', 
 				'source_identity-element_identity', 
 				'source_preferredForm', 
 				'source_namePart', 
@@ -227,7 +245,8 @@
 				'source_relations', 
 				'source_relation', 
 				'source_personRef', 
-				'source_placeURI', 
+				'source_name', 
+				'source_uri', 
 				'source_organizationRef', 
 				'source_placeRef', 
 				'source_organization', 
@@ -253,6 +272,9 @@
 				'source_lang', 
 				'source_NO_NAMESPACE_date-pattern_cert', 
 				'source_recordChangeDate_source', 
+				'source_href-attribute_href', 
+				'source_a_rel', 
+				'source_accessCondition_type', 
 				'source_namePart_partType', 
 				'source_sameAs_cert', 
 				'source_gender_cert', 
@@ -262,6 +284,7 @@
 				'source_source-attribute_source', 
 				'source_partType-attribute_partType', 
 				'source_cert-attribute_cert', 
+				'source_rel-attribute_rel', 
 				'source_personRecordInfo-element', 
 				'source_date-pattern', 
 				'source_identity-element', 
@@ -273,11 +296,13 @@
 				'source_recordInfo-element', 
 				'source_titleIdentity-element', 
 				'source_NO_NAMESPACE_date-pattern', 
+				'source_href-attribute', 
 				'source_type-attribute', 
 				'source_source-attribute', 
 				'source_partType-attribute', 
 				'source_cert-attribute', 
 				'source_id-attribute', 
+				'source_rel-attribute', 
 				'source_lang-attribute');
 
         var instanceBoxes= new Array('instance_cwrc', 
@@ -290,6 +315,7 @@
 				'instance_dateSingle', 
 				'instance_note', 
 				'instance_recordChangeDate', 
+				'instance_accessCondition', 
 				'instance_identity-element_identity', 
 				'instance_preferredForm', 
 				'instance_variantForms', 
@@ -343,6 +369,8 @@
 				'diagram_access', 
 				'diagram_recordChangeDate', 
 				'diagram_entityId', 
+				'diagram_accessCondition', 
+				'diagram_a', 
 				'diagram_identity-element_identity', 
 				'diagram_preferredForm', 
 				'diagram_namePart', 
@@ -373,7 +401,8 @@
 				'diagram_relations', 
 				'diagram_relation', 
 				'diagram_personRef', 
-				'diagram_placeURI', 
+				'diagram_name', 
+				'diagram_uri', 
 				'diagram_organizationRef', 
 				'diagram_placeRef', 
 				'diagram_organization', 
@@ -405,11 +434,13 @@
 				'diagram_recordInfo-element', 
 				'diagram_titleIdentity-element', 
 				'diagram_NO_NAMESPACE_date-pattern', 
+				'diagram_href-attribute', 
 				'diagram_type-attribute', 
 				'diagram_source-attribute', 
 				'diagram_partType-attribute', 
 				'diagram_cert-attribute', 
 				'diagram_id-attribute', 
+				'diagram_rel-attribute', 
 				'diagram_lang-attribute');
 
         var annotationBoxes= new Array('annotations_cwrc', 
@@ -490,6 +521,8 @@
 				'attributes_note', 
 				'attributes_recordChangeDate', 
 				'attributes_entityId', 
+				'attributes_accessCondition', 
+				'attributes_a', 
 				'attributes_identity-element_identity', 
 				'attributes_preferredForm', 
 				'attributes_namePart', 
@@ -518,11 +551,13 @@
 				'attributes_level', 
 				'attributes_link', 
 				'attributes_NO_NAMESPACE_date-pattern', 
+				'attributes_href-attribute', 
 				'attributes_type-attribute', 
 				'attributes_source-attribute', 
 				'attributes_partType-attribute', 
 				'attributes_cert-attribute', 
 				'attributes_id-attribute', 
+				'attributes_rel-attribute', 
 				'attributes_lang-attribute');
 
         
@@ -538,6 +573,7 @@
 				'model_dateSingle', 
 				'model_note', 
 				'model_recordChangeDate', 
+				'model_accessCondition', 
 				'model_identity-element_identity', 
 				'model_preferredForm', 
 				'model_namePart', 
@@ -849,7 +885,9 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#a" target="_self" title="No namespace">a</a></b></div>
                                                 <div><b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                                                <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                                 <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                                 <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
                                                 <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
@@ -868,6 +906,7 @@
                                                 <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
                                                 <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                                 <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                                <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                                 <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                                 <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
                                                 <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
@@ -891,7 +930,6 @@
                                                 <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
                                                 <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                                 <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
-                                                <div><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></div>
                                                 <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                                 <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
                                                 <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
@@ -907,6 +945,7 @@
                                                 <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
                                                 <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
                                                 <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
+                                                <div><b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                                                 <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                                 <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                                 <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
@@ -996,9 +1035,11 @@
                                              <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
                                                 <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                                <div><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b></div>
                                                 <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
                                                 <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
                                                 <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                                <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                                 <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                              </div>
@@ -1090,7 +1131,9 @@
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Element" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#a" target="_self" title="No namespace">a</a></b></div>
                                           <div><b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                                          <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                           <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                           <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
                                           <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
@@ -1109,6 +1152,7 @@
                                           <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
                                           <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                           <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                          <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                           <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                           <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
                                           <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
@@ -1132,7 +1176,6 @@
                                           <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
                                           <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                           <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
-                                          <div><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></div>
                                           <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                           <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
                                           <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
@@ -1148,6 +1191,7 @@
                                           <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
                                           <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
                                           <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
+                                          <div><b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                                           <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                           <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                           <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
@@ -1276,9 +1320,11 @@
                                        <div id="Attribute_Group" class="componentGroup" style="display:block">
                                           <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
                                           <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                          <div><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b></div>
                                           <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
                                           <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
                                           <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                          <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                           <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                           <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                        </div>
@@ -1326,7 +1372,9 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_entities.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#a" target="_self" title="No namespace">a</a></b></div>
                                                 <div><b><a href="index.html#access" target="_self" title="No namespace">access</a></b></div>
+                                                <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                                 <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                                 <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
                                                 <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
@@ -1345,6 +1393,7 @@
                                                 <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
                                                 <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                                 <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                                <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                                 <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                                 <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
                                                 <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
@@ -1368,7 +1417,6 @@
                                                 <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
                                                 <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                                 <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
-                                                <div><b><a href="index.html#placeURI" target="_self" title="No namespace">placeURI</a></b></div>
                                                 <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                                 <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
                                                 <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
@@ -1384,6 +1432,7 @@
                                                 <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
                                                 <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
                                                 <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
+                                                <div><b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                                                 <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                                 <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                                 <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
@@ -1473,9 +1522,11 @@
                                              <div id="gr_entities.xsdAttribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
                                                 <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
+                                                <div><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b></div>
                                                 <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
                                                 <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
                                                 <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                                <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                                 <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                              </div>
