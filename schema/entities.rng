@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
+     MRB: Wed 18-Dec-2013: added @url attribute to provide a link to various server-side lists of values
      MRB: Mon 16-Dec-2013: Added additional interface annotation code
      MRB: Mon 09-Dec-2013: Added interface annotation code for various elements and attributes
      MRB: Thu 05-Dec-2013
@@ -8,25 +9,14 @@
      repeatable child element of <name> as well as a repeatable child element of <uri>.
      * Added an <accessCondition> element, along with its required attribute @type, and its optional
      child element <a>, which has a required attribute of @href and an optional attribute of @rel.
-    
      MRB: Tue 19-Nov-2013: The <access> element in the XPath /cwrc/entity/*/recordInfo/access has been eliminated and will
      be replaced with the <accessCondition> element in the XPath /cwrc/entity/*/recordInfo/accessCondition
-     
-     MRB: Mon 28-Oct-2013Hi Susan,
-
-Re interview(s) today:
-
-Jeff has set up the computer in the meeting room, so we are ready to conduct an interview anytime today if that's the plan.
-
-Keep us posted . . .
-
+     MRB: Mon 28-Oct-2013
      Revised the following:
      * Changed <standardDate> from a required element to an optional element.
      * Changed <note><access> from a required element to an optional element.
-    
      MRB: Mon 09-Sep-2013: Revised <relation> element section so that relation references to person and organization follow
      the approach adopted in the placeRef/uri approach, i.e., now have personRef/uri and organizationRef/uri.
-     
      MRB: July 2013: The entity schema now includes the person, organization, and place entity types; i.e., a place entity
      code section was developed.  The title entity is defined by the MODS schema mods.xsd.  The events entity schema will
      eventually be developed in RDF by JS.
@@ -456,10 +446,10 @@ Keep us posted . . .
                     <ref name="longitude-element"/>
                 </optional>
                 <optional>
-                    <ref name="featureType-element"/>
+                    <ref name="altitude-element"/>
                 </optional>
                 <optional>
-                    <ref name="altitude-element"/>
+                    <ref name="featureClass-element"/>
                 </optional>
                 <optional>
                     <ref name="administrativeDivision-element"/>
@@ -626,7 +616,6 @@ Keep us posted . . .
             <xs:annotation>
                 <xs:appinfo>
 
-
                     <interface-field path="entity/person/description/occupations/occupation/term">
                         <help-text xml:lang="en"
                             >This field can capture relevant paid occupations held by
@@ -764,6 +753,21 @@ Keep us posted . . .
     <define name="name-element">
         <a:documentation>Name of a linked resource that is associated with the described entity.</a:documentation>
         <element name="name">
+
+            <xs:annotation>
+                <xs:appinfo>
+
+                    <interface-field
+                        path="entity/person/relations/relation/personRef|organizationRef|placeRef/name">
+                        <help-text xml:lang="en"
+                            >Name of a linked resource that is associated with the described entity</help-text>
+                        <label xml:lang="en">Name</label>
+                        <input>textField</input>
+                    </interface-field>
+
+                </xs:appinfo>
+            </xs:annotation>
+
             <data type="string"/>
         </element>
     </define>
@@ -771,126 +775,212 @@ Keep us posted . . .
     <define name="uri-element">
         <a:documentation>URI of a linked resource that is associated with the described entity.</a:documentation>
         <element name="uri">
+
+            <xs:annotation>
+                <xs:appinfo>
+
+                    <interface-field
+                        path="entity/person/relations/relation/personRef|organizationRef|placeRef/uri">
+                        <help-text xml:lang="en"
+                            >URI of a linked resource that is associated with the described entity</help-text>
+                        <label xml:lang="en">Name</label>
+                        <input>textField</input>
+                    </interface-field>
+
+                </xs:appinfo>
+            </xs:annotation>
+
             <data type="anyURI"/>
         </element>
     </define>
 
+    <!-- MRB: Wed 18-Dec-2013: added @url attribute to provide a link to various server-side lists of values -->
+    <define name="url-attribute">
+        <a:documentation>URL attribute to provide a link to a server-side list of values.</a:documentation>
+        <attribute name="url">
+            <data type="anyURI"/>
+        </attribute>
+    </define>
 
-    <!-- MRB: July 2013: added definitions for various child elements of the <placeDescription> element;
-         MRB: 16 December 2013: added interface annotation code -->
+
+    <!-- MRB: July 2013: added definitions for various child elements of the <placeDescription> element
+         MRB: Mon 16-Dec-2013: made changes, and added interface annotation code -->
 
     <define name="latitude-element">
         <element name="latitude">
-            <a:documentation>Latitude in decimal degress of the place entity.</a:documentation>
+            <a:documentation>Latitude in decimal degrees of the place entity.  Example: for the place entity
+                Edmonton, the latitude in decimal degrees is 53.55014.</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/place/description/latitude">
                         <label xml:lang="en">Latitude</label>
                         <help-text xml:lang="en"
-                            >Latitude in decimal degrees of the place entity.</help-text>
+                            >Latitude in decimal degrees of the place entity.  Example: for the place entity
+                            Edmonton, the latitude in decimal degrees is 53.55014.</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
 
-            <data type="string"/>
+            <data type="decimal"/>
         </element>
     </define>
 
     <define name="longitude-element">
         <element name="longitude">
-            <a:documentation>Longitude in decimal degrees of the place entity.</a:documentation>
+            <a:documentation>Longitude in decimal degrees of the place entity.  Example: for the place entity
+                Edmonton, the longitude in decimal degrees is -113.46871.</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/place/description/longitude">
                         <label xml:lang="en">Longitude</label>
                         <help-text xml:lang="en"
-                            >Longitude in decimal degrees of the place entity.</help-text>
+                            >Longitude in decimal degrees of the place entity.  Example: for the place entity
+                            Edmonton, the longitude in decimal degrees is -113.46871.</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
 
-            <data type="string"/>
-        </element>
-    </define>
-
-    <define name="featureType-element">
-        <element name="featureType">
-            <a:documentation>Feature type of the place entity (e.g., populated place).</a:documentation>
-
-            <xs:annotation>
-                <xs:appinfo>
-                    <interface-field path="entity/place/description/featureType">
-                        <label xml:lang="en">Feature type</label>
-                        <help-text xml:lang="en"
-                            >Feature type of the place entity (e.g., populated place).</help-text>
-                        <input>textField</input>
-                    </interface-field>
-                </xs:appinfo>
-            </xs:annotation>
-
-            <data type="string"/>
+            <data type="decimal"/>
         </element>
     </define>
 
     <define name="altitude-element">
         <element name="altitude">
-            <a:documentation>Altitude in meters of the place entity.</a:documentation>
-            
+            <a:documentation>Altitude in meters of the place entity.  Example: for the place entity
+                Edmonton, the altitude in meters is 668.</a:documentation>
+
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/place/description/altitude">
                         <label xml:lang="en">Altitude</label>
                         <help-text xml:lang="en"
-                            >Altitude in meters of the place entity.</help-text>
+                            >Altitude in meters of the place entity.  Example: for the place entity
+                            Edmonton, the altitude in meters is 668.</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
-            
-            <data type="string"/>
+
+            <data type="integer"/>
+        </element>
+    </define>
+
+    <define name="featureClass-element">
+        <element name="featureClass">
+            <a:documentation>The GeoNames feature class of the place entity.  Example: for the place
+                entity Edmonton, the GeoNames feature class is Populated Place Feature.</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+
+                    <interface-field path="entity/place/description/featureClass">
+                        <label xml:lang="en">Feature class</label>
+                        <help-text xml:lang="en"
+                            >The GeoNames feature class of the place entity.  Example: for the place
+                            entity Edmonton, the GeoNames feature class is Populated Place Feature.</help-text>
+                        <input>textField</input>
+                    </interface-field>
+
+                    <values>
+                        <choice>
+                            <value a:en="Populated Place Feature" default="yes"
+                                >Populated Place Feature</value>
+                            <a:documentation>Select this value for populated places, such as cities, towns, and villages.</a:documentation>
+                            <value a:en="Administrative Boundary Feature"
+                                >Administrative Boundary Feature</value>
+                            <a:documentation>Select this value for administrative divisions, such as countries, provinces, states, counties, and other political regions.</a:documentation>
+                            <value a:en="Area Feature">Area Feature</value>
+                            <a:documentation>Select this value for area or polygon features, such as parks, reserves, and historical regions.</a:documentation>
+                            <value a:en="Hydrographic Feature">Hydrographic Feature</value>
+                            <a:documentation>Select this value for water features, such as streams, rivers, and lakes.</a:documentation>
+                            <value a:en="Hypsographic Feature">Hypsographic Feature</value>
+                            <a:documentation>Select this value for elevated features, such as mountains, hills, and rocks.</a:documentation>
+                            <value a:en="Road/Railroad Feature">Road/Railroad Feature</value>
+                            <a:documentation>Select this value for linear features, such as roads, streets, railroads, and trails.</a:documentation>
+                            <value a:en="Spot Feature">Spot Feature</value>
+                            <a:documentation>Select this value for spot or point features, such as buildings, facilities, and structures.</a:documentation>
+                            <value a:en="Undersea Feature">Undersea Feature</value>
+                            <a:documentation>Select this value for undersea features, such as canyons, reefs, and shoals.</a:documentation>
+                            <value a:en="Vegetation Feature">Vegetation Feature</value>
+                            <a:documentation>Select this value for vegetation features, such as forests, heaths, and meadows.</a:documentation>
+                        </choice>
+                    </values>
+
+                </xs:appinfo>
+            </xs:annotation>
+
+            <optional>
+                <choice>
+                    <value>Populated Place Feature</value>
+                    <a:documentation>Select this value for populated places, such as cities, towns, and villages.</a:documentation>
+                    <value>Administrative Boundary Feature</value>
+                    <a:documentation>Select this value for administrative divisions, such as countries, provinces, states, counties, and other political regions.</a:documentation>
+                    <value>Area Feature</value>
+                    <a:documentation>Select this value for area or polygon features, such as parks, reserves, and historical regions.</a:documentation>
+                    <value>Hydrographic Feature</value>
+                    <a:documentation>Select this value for water features, such as streams, rivers, and lakes.</a:documentation>
+                    <value>Hypsographic Feature</value>
+                    <a:documentation>Select this value for elevated features, such as mountains, hills, and rocks.</a:documentation>
+                    <value>Road/Railroad Feature</value>
+                    <a:documentation>Select this value for linear features, such as roads, streets, railroads, and trails.</a:documentation>
+                    <value>Spot Feature</value>
+                    <a:documentation>Select this value for spot or point features, such as buildings, facilities, and structures.</a:documentation>
+                    <value>Undersea Feature</value>
+                    <a:documentation>Select this value for undersea features, such as canyons, reefs, and shoals.</a:documentation>
+                    <value>Vegetation Feature</value>
+                    <a:documentation>Select this value for vegetation features, such as forests, heaths, and meadows.</a:documentation>
+                </choice>
+            </optional>
+
         </element>
     </define>
 
     <define name="administrativeDivision-element">
         <element name="administrativeDivision">
             <a:documentation>The ISO 3166-2 country subdivision name, or first-order administrative division name
-                (e.g., provinces or states) that contains the place entity.</a:documentation>
-            
+                (e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2).
+                 Example: for the place entity Edmonton, the country subdivision name is Alberta.</a:documentation>
+
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/place/description/administrativeDivision">
                         <label xml:lang="en">Administrative division</label>
                         <help-text xml:lang="en"
                             >The ISO 3166-2 country subdivision name, or first-order administrative division name
-                            (e.g., provinces or states) that contains the place entity.</help-text>
+                            (e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2).
+                            Example: for the place entity Edmonton, the country subdivision name is Alberta.</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
-            
+
             <data type="string"/>
         </element>
     </define>
 
     <define name="country-element">
         <element name="country">
-            <a:documentation>The ISO 3166-1 country name that contains the place entity.</a:documentation>
-            
+            <a:documentation>The ISO 3166-1 country name that contains the place entity 
+                (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).  Example: for the
+                 place entity Edmonton, the country name is Canada.</a:documentation>
+
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/place/description/country">
                         <label xml:lang="en">Country</label>
                         <help-text xml:lang="en"
-                            >The ISO 3166-1 country name that contains the place entity.</help-text>
+                            >The ISO 3166-1 country name that contains the place entity 
+                            (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).  Example:
+                             for the place entity Edmonton, the country name is Canada.</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
-            
+
             <data type="string"/>
         </element>
     </define>
@@ -1063,6 +1153,21 @@ Keep us posted . . .
         <element name="resource">
             <a:documentation>A source of evidence used in describing the entity or entities instances. Equivalent
                 to EAC-CFPF\'s source element.</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+
+                    <interface-field path="entity/person/description/relatedResources/resource">
+                        <help-text xml:lang="en"
+                            >A source of evidence used in describing the entity or entities instances. Equivalent
+                            to EAC-CFPF\'s source element.</help-text>
+                        <label xml:lang="en">Resource</label>
+                        <input>textField</input>
+                    </interface-field>
+
+                </xs:appinfo>
+            </xs:annotation>
+
             <data type="string"/>
         </element>
     </define>
@@ -2261,13 +2366,11 @@ Keep us posted . . .
                     </interface-field>
 
                     <values>
-                        <optional>
-                            <choice>
-                                <value a:en="public" default="yes">public</value>
-                                <value a:en="project">project</value>
-                                <value a:en="private">private</value>
-                            </choice>
-                        </optional>
+                        <choice>
+                            <value a:en="public" default="yes">public</value>
+                            <value a:en="project">project</value>
+                            <value a:en="private">private</value>
+                        </choice>
                     </values>
 
                 </xs:appinfo>
@@ -2453,12 +2556,10 @@ Keep us posted . . .
                     </interface-field>
 
                     <values>
-                        <optional>
-                            <choice>
-                                <value a:en="English" default="yes">en</value>
-                                <value a:en="French">fr</value>
-                            </choice>
-                        </optional>
+                        <choice>
+                            <value a:en="English" default="yes">en</value>
+                            <value a:en="French">fr</value>
+                        </choice>
                     </values>
 
                     <!--<values url="http://www.loc.gov/standards/iso639-2/ISO-639-2_8859-1.txt"/>-->
@@ -2571,7 +2672,6 @@ Keep us posted . . .
 
                 </interface-order>
 
-
                 <interface-order type="organization" path="entity/organization">
 
                     <ref name="orgRecordInfo-element"/>
@@ -2580,7 +2680,8 @@ Keep us posted . . .
                     <ref name="relations-element"/>
 
                 </interface-order>
-
+                
+                <!-- MRB: 16 December 2013: added interface order for four top-level elements for place entities -->
                 <interface-order type="place" path="entity/place">
 
                     <ref name="placeRecordInfo-element"/>
@@ -2592,10 +2693,8 @@ Keep us posted . . .
 
             </interface>
 
-
         </xs:appinfo>
     </xs:annotation>
-
 
 
 </grammar>

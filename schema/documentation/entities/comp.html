@@ -71,12 +71,12 @@
 				'properties_place', 
 				'properties_placeRecordInfo-element_recordInfo', 
 				'properties_placeDescription-element_description', 
-				'properties_placeLat', 
-				'properties_placeLong', 
-				'properties_placeFeatureType', 
-				'properties_placeAltitude', 
-				'properties_placeAdministrativeDivision', 
-				'properties_placeCountry', 
+				'properties_latitude', 
+				'properties_longitude', 
+				'properties_altitude', 
+				'properties_featureClass', 
+				'properties_administrativeDivision', 
+				'properties_country', 
 				'properties_recordInfo-element_recordInfo', 
 				'properties_titleIdentity-element_identity', 
 				'properties_level', 
@@ -94,6 +94,7 @@
 				'properties_gender_cert', 
 				'properties_term_cert', 
 				'properties_relation_type', 
+				'properties_url-attribute_url', 
 				'properties_type-attribute_type', 
 				'properties_source-attribute_source', 
 				'properties_partType-attribute_partType', 
@@ -158,12 +159,12 @@
 				'usedBy_orgTypes', 
 				'usedBy_orgType', 
 				'usedBy_place', 
-				'usedBy_placeLat', 
-				'usedBy_placeLong', 
-				'usedBy_placeFeatureType', 
-				'usedBy_placeAltitude', 
-				'usedBy_placeAdministrativeDivision', 
-				'usedBy_placeCountry', 
+				'usedBy_latitude', 
+				'usedBy_longitude', 
+				'usedBy_altitude', 
+				'usedBy_featureClass', 
+				'usedBy_administrativeDivision', 
+				'usedBy_country', 
 				'usedBy_level', 
 				'usedBy_id', 
 				'usedBy_recordIdentifier_source', 
@@ -178,6 +179,7 @@
 				'usedBy_gender_cert', 
 				'usedBy_term_cert', 
 				'usedBy_relation_type', 
+				'usedBy_url-attribute_url', 
 				'usedBy_type-attribute_type', 
 				'usedBy_source-attribute_source', 
 				'usedBy_partType-attribute_partType', 
@@ -257,12 +259,12 @@
 				'source_place', 
 				'source_placeRecordInfo-element_recordInfo', 
 				'source_placeDescription-element_description', 
-				'source_placeLat', 
-				'source_placeLong', 
-				'source_placeFeatureType', 
-				'source_placeAltitude', 
-				'source_placeAdministrativeDivision', 
-				'source_placeCountry', 
+				'source_latitude', 
+				'source_longitude', 
+				'source_altitude', 
+				'source_featureClass', 
+				'source_administrativeDivision', 
+				'source_country', 
 				'source_recordInfo-element_recordInfo', 
 				'source_titleIdentity-element_identity', 
 				'source_level', 
@@ -280,6 +282,7 @@
 				'source_gender_cert', 
 				'source_term_cert', 
 				'source_relation_type', 
+				'source_url-attribute_url', 
 				'source_type-attribute_type', 
 				'source_source-attribute_source', 
 				'source_partType-attribute_partType', 
@@ -297,6 +300,7 @@
 				'source_titleIdentity-element', 
 				'source_NO_NAMESPACE_date-pattern', 
 				'source_href-attribute', 
+				'source_url-attribute', 
 				'source_type-attribute', 
 				'source_source-attribute', 
 				'source_partType-attribute', 
@@ -413,12 +417,12 @@
 				'diagram_place', 
 				'diagram_placeRecordInfo-element_recordInfo', 
 				'diagram_placeDescription-element_description', 
-				'diagram_placeLat', 
-				'diagram_placeLong', 
-				'diagram_placeFeatureType', 
-				'diagram_placeAltitude', 
-				'diagram_placeAdministrativeDivision', 
-				'diagram_placeCountry', 
+				'diagram_latitude', 
+				'diagram_longitude', 
+				'diagram_altitude', 
+				'diagram_featureClass', 
+				'diagram_administrativeDivision', 
+				'diagram_country', 
 				'diagram_recordInfo-element_recordInfo', 
 				'diagram_titleIdentity-element_identity', 
 				'diagram_level', 
@@ -435,6 +439,7 @@
 				'diagram_titleIdentity-element', 
 				'diagram_NO_NAMESPACE_date-pattern', 
 				'diagram_href-attribute', 
+				'diagram_url-attribute', 
 				'diagram_type-attribute', 
 				'diagram_source-attribute', 
 				'diagram_partType-attribute', 
@@ -494,7 +499,12 @@
 				'annotations_place', 
 				'annotations_placeRecordInfo-element_recordInfo', 
 				'annotations_placeDescription-element_description', 
-				'annotations_placeLat', 
+				'annotations_latitude', 
+				'annotations_longitude', 
+				'annotations_altitude', 
+				'annotations_featureClass', 
+				'annotations_administrativeDivision', 
+				'annotations_country', 
 				'annotations_recordInfo-element_recordInfo', 
 				'annotations_titleIdentity-element_identity', 
 				'annotations_level', 
@@ -509,7 +519,8 @@
 				'annotations_type-attribute_type', 
 				'annotations_source-attribute_source', 
 				'annotations_partType-attribute_partType', 
-				'annotations_cert-attribute_cert');
+				'annotations_cert-attribute_cert', 
+				'annotations_url-attribute');
 
         var attributesBoxes= new Array('attributes_cwrc', 
 				'attributes_person', 
@@ -552,6 +563,7 @@
 				'attributes_link', 
 				'attributes_NO_NAMESPACE_date-pattern', 
 				'attributes_href-attribute', 
+				'attributes_url-attribute', 
 				'attributes_type-attribute', 
 				'attributes_source-attribute', 
 				'attributes_partType-attribute', 
@@ -890,7 +902,10 @@
                                                 <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                                 <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                                 <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                                <div><b><a href="index.html#administrativeDivision" target="_self" title="No namespace">administrativeDivision</a></b></div>
+                                                <div><b><a href="index.html#altitude" target="_self" title="No namespace">altitude</a></b></div>
                                                 <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
+                                                <div><b><a href="index.html#country" target="_self" title="No namespace">country</a></b></div>
                                                 <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
                                                 <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
                                                 <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
@@ -900,12 +915,15 @@
                                                 <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
                                                 <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
                                                 <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                                <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                                 <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
                                                 <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
                                                 <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
                                                 <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
+                                                <div><b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b></div>
                                                 <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                                 <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                                <div><b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b></div>
                                                 <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                                 <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                                 <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
@@ -923,12 +941,6 @@
                                                 <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
                                                 <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
                                                 <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
-                                                <div><b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b></div>
-                                                <div><b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b></div>
-                                                <div><b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b></div>
-                                                <div><b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b></div>
-                                                <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
-                                                <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                                 <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
                                                 <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                                 <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
@@ -1042,6 +1054,7 @@
                                                 <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                                 <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
+                                                <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -1136,7 +1149,10 @@
                                           <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                           <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                           <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                          <div><b><a href="index.html#administrativeDivision" target="_self" title="No namespace">administrativeDivision</a></b></div>
+                                          <div><b><a href="index.html#altitude" target="_self" title="No namespace">altitude</a></b></div>
                                           <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
+                                          <div><b><a href="index.html#country" target="_self" title="No namespace">country</a></b></div>
                                           <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
                                           <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
                                           <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
@@ -1146,12 +1162,15 @@
                                           <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
                                           <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
                                           <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                          <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                           <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
                                           <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
                                           <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
                                           <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
+                                          <div><b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b></div>
                                           <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                           <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                          <div><b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b></div>
                                           <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                           <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                           <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
@@ -1169,12 +1188,6 @@
                                           <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
                                           <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
                                           <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
-                                          <div><b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b></div>
-                                          <div><b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b></div>
-                                          <div><b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b></div>
-                                          <div><b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b></div>
-                                          <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
-                                          <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                           <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
                                           <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                           <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
@@ -1327,6 +1340,7 @@
                                           <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                           <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                           <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
+                                          <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -1377,7 +1391,10 @@
                                                 <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                                 <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                                 <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                                <div><b><a href="index.html#administrativeDivision" target="_self" title="No namespace">administrativeDivision</a></b></div>
+                                                <div><b><a href="index.html#altitude" target="_self" title="No namespace">altitude</a></b></div>
                                                 <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
+                                                <div><b><a href="index.html#country" target="_self" title="No namespace">country</a></b></div>
                                                 <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
                                                 <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
                                                 <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
@@ -1387,12 +1404,15 @@
                                                 <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
                                                 <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
                                                 <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                                <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                                 <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
                                                 <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
                                                 <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
                                                 <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
+                                                <div><b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b></div>
                                                 <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                                 <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                                <div><b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b></div>
                                                 <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                                 <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                                 <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
@@ -1410,12 +1430,6 @@
                                                 <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
                                                 <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
                                                 <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
-                                                <div><b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b></div>
-                                                <div><b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b></div>
-                                                <div><b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b></div>
-                                                <div><b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b></div>
-                                                <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
-                                                <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                                 <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
                                                 <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                                 <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
@@ -1529,6 +1543,7 @@
                                                 <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                                 <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
+                                                <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
                                              </div>
                                           </td>
                                        </tr>

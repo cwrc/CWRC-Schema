@@ -71,12 +71,12 @@
 				'properties_place', 
 				'properties_placeRecordInfo-element_recordInfo', 
 				'properties_placeDescription-element_description', 
-				'properties_placeLat', 
-				'properties_placeLong', 
-				'properties_placeFeatureType', 
-				'properties_placeAltitude', 
-				'properties_placeAdministrativeDivision', 
-				'properties_placeCountry', 
+				'properties_latitude', 
+				'properties_longitude', 
+				'properties_altitude', 
+				'properties_featureClass', 
+				'properties_administrativeDivision', 
+				'properties_country', 
 				'properties_recordInfo-element_recordInfo', 
 				'properties_titleIdentity-element_identity', 
 				'properties_level', 
@@ -94,6 +94,7 @@
 				'properties_gender_cert', 
 				'properties_term_cert', 
 				'properties_relation_type', 
+				'properties_url-attribute_url', 
 				'properties_type-attribute_type', 
 				'properties_source-attribute_source', 
 				'properties_partType-attribute_partType', 
@@ -158,12 +159,12 @@
 				'usedBy_orgTypes', 
 				'usedBy_orgType', 
 				'usedBy_place', 
-				'usedBy_placeLat', 
-				'usedBy_placeLong', 
-				'usedBy_placeFeatureType', 
-				'usedBy_placeAltitude', 
-				'usedBy_placeAdministrativeDivision', 
-				'usedBy_placeCountry', 
+				'usedBy_latitude', 
+				'usedBy_longitude', 
+				'usedBy_altitude', 
+				'usedBy_featureClass', 
+				'usedBy_administrativeDivision', 
+				'usedBy_country', 
 				'usedBy_level', 
 				'usedBy_id', 
 				'usedBy_recordIdentifier_source', 
@@ -178,6 +179,7 @@
 				'usedBy_gender_cert', 
 				'usedBy_term_cert', 
 				'usedBy_relation_type', 
+				'usedBy_url-attribute_url', 
 				'usedBy_type-attribute_type', 
 				'usedBy_source-attribute_source', 
 				'usedBy_partType-attribute_partType', 
@@ -257,12 +259,12 @@
 				'source_place', 
 				'source_placeRecordInfo-element_recordInfo', 
 				'source_placeDescription-element_description', 
-				'source_placeLat', 
-				'source_placeLong', 
-				'source_placeFeatureType', 
-				'source_placeAltitude', 
-				'source_placeAdministrativeDivision', 
-				'source_placeCountry', 
+				'source_latitude', 
+				'source_longitude', 
+				'source_altitude', 
+				'source_featureClass', 
+				'source_administrativeDivision', 
+				'source_country', 
 				'source_recordInfo-element_recordInfo', 
 				'source_titleIdentity-element_identity', 
 				'source_level', 
@@ -280,6 +282,7 @@
 				'source_gender_cert', 
 				'source_term_cert', 
 				'source_relation_type', 
+				'source_url-attribute_url', 
 				'source_type-attribute_type', 
 				'source_source-attribute_source', 
 				'source_partType-attribute_partType', 
@@ -297,6 +300,7 @@
 				'source_titleIdentity-element', 
 				'source_NO_NAMESPACE_date-pattern', 
 				'source_href-attribute', 
+				'source_url-attribute', 
 				'source_type-attribute', 
 				'source_source-attribute', 
 				'source_partType-attribute', 
@@ -413,12 +417,12 @@
 				'diagram_place', 
 				'diagram_placeRecordInfo-element_recordInfo', 
 				'diagram_placeDescription-element_description', 
-				'diagram_placeLat', 
-				'diagram_placeLong', 
-				'diagram_placeFeatureType', 
-				'diagram_placeAltitude', 
-				'diagram_placeAdministrativeDivision', 
-				'diagram_placeCountry', 
+				'diagram_latitude', 
+				'diagram_longitude', 
+				'diagram_altitude', 
+				'diagram_featureClass', 
+				'diagram_administrativeDivision', 
+				'diagram_country', 
 				'diagram_recordInfo-element_recordInfo', 
 				'diagram_titleIdentity-element_identity', 
 				'diagram_level', 
@@ -435,6 +439,7 @@
 				'diagram_titleIdentity-element', 
 				'diagram_NO_NAMESPACE_date-pattern', 
 				'diagram_href-attribute', 
+				'diagram_url-attribute', 
 				'diagram_type-attribute', 
 				'diagram_source-attribute', 
 				'diagram_partType-attribute', 
@@ -494,7 +499,12 @@
 				'annotations_place', 
 				'annotations_placeRecordInfo-element_recordInfo', 
 				'annotations_placeDescription-element_description', 
-				'annotations_placeLat', 
+				'annotations_latitude', 
+				'annotations_longitude', 
+				'annotations_altitude', 
+				'annotations_featureClass', 
+				'annotations_administrativeDivision', 
+				'annotations_country', 
 				'annotations_recordInfo-element_recordInfo', 
 				'annotations_titleIdentity-element_identity', 
 				'annotations_level', 
@@ -509,7 +519,8 @@
 				'annotations_type-attribute_type', 
 				'annotations_source-attribute_source', 
 				'annotations_partType-attribute_partType', 
-				'annotations_cert-attribute_cert');
+				'annotations_cert-attribute_cert', 
+				'annotations_url-attribute');
 
         var attributesBoxes= new Array('attributes_cwrc', 
 				'attributes_person', 
@@ -552,6 +563,7 @@
 				'attributes_link', 
 				'attributes_NO_NAMESPACE_date-pattern', 
 				'attributes_href-attribute', 
+				'attributes_url-attribute', 
 				'attributes_type-attribute', 
 				'attributes_source-attribute', 
 				'attributes_partType-attribute', 
@@ -941,7 +953,10 @@
                                                 <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                                 <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                                 <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                                <div><b><a href="index.html#administrativeDivision" target="_self" title="No namespace">administrativeDivision</a></b></div>
+                                                <div><b><a href="index.html#altitude" target="_self" title="No namespace">altitude</a></b></div>
                                                 <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
+                                                <div><b><a href="index.html#country" target="_self" title="No namespace">country</a></b></div>
                                                 <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
                                                 <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
                                                 <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
@@ -951,12 +966,15 @@
                                                 <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
                                                 <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
                                                 <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                                <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                                 <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
                                                 <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
                                                 <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
                                                 <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
+                                                <div><b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b></div>
                                                 <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                                 <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                                <div><b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b></div>
                                                 <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                                 <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                                 <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
@@ -974,12 +992,6 @@
                                                 <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
                                                 <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
                                                 <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
-                                                <div><b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b></div>
-                                                <div><b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b></div>
-                                                <div><b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b></div>
-                                                <div><b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b></div>
-                                                <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
-                                                <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                                 <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
                                                 <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                                 <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
@@ -1093,6 +1105,7 @@
                                                 <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                                 <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
+                                                <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -1187,7 +1200,10 @@
                                           <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                           <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                           <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                          <div><b><a href="index.html#administrativeDivision" target="_self" title="No namespace">administrativeDivision</a></b></div>
+                                          <div><b><a href="index.html#altitude" target="_self" title="No namespace">altitude</a></b></div>
                                           <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
+                                          <div><b><a href="index.html#country" target="_self" title="No namespace">country</a></b></div>
                                           <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
                                           <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
                                           <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
@@ -1197,12 +1213,15 @@
                                           <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
                                           <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
                                           <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                          <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                           <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
                                           <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
                                           <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
                                           <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
+                                          <div><b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b></div>
                                           <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                           <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                          <div><b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b></div>
                                           <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                           <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                           <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
@@ -1220,12 +1239,6 @@
                                           <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
                                           <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
                                           <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
-                                          <div><b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b></div>
-                                          <div><b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b></div>
-                                          <div><b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b></div>
-                                          <div><b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b></div>
-                                          <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
-                                          <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                           <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
                                           <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                           <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
@@ -1378,6 +1391,7 @@
                                           <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                           <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                           <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
+                                          <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -1428,7 +1442,10 @@
                                                 <div><b><a href="index.html#accessCondition" target="_self" title="No namespace">accessCondition</a></b></div>
                                                 <div><b><a href="index.html#activities" target="_self" title="No namespace">activities</a></b></div>
                                                 <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                                <div><b><a href="index.html#administrativeDivision" target="_self" title="No namespace">administrativeDivision</a></b></div>
+                                                <div><b><a href="index.html#altitude" target="_self" title="No namespace">altitude</a></b></div>
                                                 <div><b><a href="index.html#authorizedBy" target="_self" title="No namespace">authorizedBy</a></b></div>
+                                                <div><b><a href="index.html#country" target="_self" title="No namespace">country</a></b></div>
                                                 <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
                                                 <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
                                                 <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
@@ -1438,12 +1455,15 @@
                                                 <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
                                                 <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
                                                 <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                                <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                                 <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
                                                 <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
                                                 <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
                                                 <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
+                                                <div><b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b></div>
                                                 <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                                 <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
+                                                <div><b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b></div>
                                                 <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                                 <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                                 <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
@@ -1461,12 +1481,6 @@
                                                 <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
                                                 <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
                                                 <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
-                                                <div><b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b></div>
-                                                <div><b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b></div>
-                                                <div><b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b></div>
-                                                <div><b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b></div>
-                                                <div><b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b></div>
-                                                <div><b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b></div>
                                                 <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
                                                 <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                                 <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
@@ -1580,6 +1594,7 @@
                                                 <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                                 <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
+                                                <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -2278,7 +2293,7 @@
                            <div class="floatRight"><input id="button_diagram_personRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_personRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
+                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
                                  <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#personTypes" href="index.html#personTypes" coords="220,83,315,108" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,163,295,188" />
@@ -3733,7 +3748,7 @@
                                     <tr>
                                        <td width="100%"><pre><span class="tT">Captures a date type in relation to its association with the entity described.</span><span class="tI">
 </span><span class="tT">Recommended values - Person: birth, death, marriage, flourish, circa.</span><span class="tI">
-</span><span class="tT">Organization: start, end, flourish, circa. Works: original issuance, edition,</span><span class="tI">
+</span><span class="tT">Organization, and place: start, end, flourish, circa. Works: original issuance, edition,</span><span class="tI">
 </span><span class="tT">reprint.</span></pre></td>
                                     </tr>
                                  </table>
@@ -3797,7 +3812,7 @@
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"dateType"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Captures a date type in relation to its association with the entity described. Recommended values - Person: birth, death, marriage, flourish, circa. Organization: start, end, flourish, circa. Works: original issuance, edition, reprint.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Captures a date type in relation to its association with the entity described. Recommended values - Person: birth, death, marriage, flourish, circa. Organization, and place: start, end, flourish, circa. Works: original issuance, edition, reprint.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -5301,7 +5316,7 @@
                 </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"forename"</span><span class="tEl">&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Monica</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Monica</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5310,7 +5325,7 @@
                 </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"surname"</span><span class="tEl">&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Johnson</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Johnson</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5319,7 +5334,7 @@
                 </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"date"</span><span class="tEl">&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. fl. 1780</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., fl. 1780</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5328,7 +5343,7 @@
                 </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"salutation"</span><span class="tEl">&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Ms.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Ms.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5337,7 +5352,7 @@
                 </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"qualification"</span><span class="tEl">&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Reverend</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Reverend</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5346,7 +5361,7 @@
                 </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"initials"</span><span class="tEl">&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. J.C.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., J.C.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5355,7 +5370,7 @@
                 </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"suffix"</span><span class="tEl">&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Jr.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Jr.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5364,7 +5379,7 @@
                 </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"geographic"</span><span class="tEl">&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. "Canada" in "Conseil des Arts du Canada"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., "Canada" in "Conseil des Arts du Canada"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5373,7 +5388,7 @@
                 </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"person"</span><span class="tEl">&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. "Ellington" in "Ellington Fund"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., "Ellington" in "Ellington Fund"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5949,7 +5964,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"descriptive"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Women's Aid Society</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Women's Aid Society</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5958,7 +5973,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"popular"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. "Wrens" for "Women's Royal Naval Service"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., "Wrens" for "Women's Royal Naval Service"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -5967,7 +5982,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"acronym"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. OCLC</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., OCLC</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -6265,7 +6280,7 @@
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">Captures a link to a resource that contains</span><span class="tI">
-</span><span class="tT">information about this entity (e. g. an article about the</span><span class="tI">
+</span><span class="tT">information about this entity (e.g., an article about the</span><span class="tI">
 </span><span class="tT">entity that is subject of a record). This field is also useful to declare that the present</span><span class="tI">
 </span><span class="tT">entity likely refers to the same entity represented in another</span><span class="tI">
 </span><span class="tT">resource.</span></pre></td>
@@ -6376,7 +6391,7 @@
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"sameAs"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Captures a link to a resource that contains information about this entity (e. g. an article about the entity that is subject of a record). This field is also useful to declare that the present entity likely refers to the same entity represented in another resource.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Captures a link to a resource that contains information about this entity (e.g., an article about the entity that is subject of a record). This field is also useful to declare that the present entity likely refers to the same entity represented in another resource.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:simpleContent</span><span class="tEl">&gt;</span><span class="tI">
@@ -6463,7 +6478,7 @@
                            <div class="floatRight"><input id="button_diagram_personDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_personDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_personDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_1.jpeg" usemap="#entities_xsd_Element_description_1" /><map name="entities_xsd_Element_description_1" id="entities_xsd_Element_description_1">
+                           <div id="diagram_personDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description.jpeg" usemap="#entities_xsd_Element_description" /><map name="entities_xsd_Element_description" id="entities_xsd_Element_description">
                                  <area alt="index.tmp#id" href="index.html#id" coords="166,41,243,66" />
                                  <area alt="index.tmp#descriptiveNotes" href="index.html#descriptiveNotes" coords="223,83,335,108" />
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,118,305,143" />
@@ -10243,7 +10258,7 @@
                            <div class="floatRight"><input id="button_diagram_orgRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_orgRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
+                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
                                  <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,83,295,108" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,177,411,221" />
@@ -10401,7 +10416,7 @@
                            <div class="floatRight"><input id="button_diagram_orgDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_orgDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_orgDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description.jpeg" usemap="#entities_xsd_Element_description" /><map name="entities_xsd_Element_description" id="entities_xsd_Element_description">
+                           <div id="diagram_orgDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_2.jpeg" usemap="#entities_xsd_Element_description_2" /><map name="entities_xsd_Element_description_2" id="entities_xsd_Element_description_2">
                                  <area alt="index.tmp#id" href="index.html#id" coords="166,41,243,66" />
                                  <area alt="index.tmp#orgTypes" href="index.html#orgTypes" coords="223,83,300,108" />
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,163,305,188" />
@@ -11349,17 +11364,17 @@
                            <div class="floatRight"><input id="button_diagram_placeDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_2.jpeg" usemap="#entities_xsd_Element_description_2" /><map name="entities_xsd_Element_description_2" id="entities_xsd_Element_description_2">
+                           <div id="diagram_placeDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_1.jpeg" usemap="#entities_xsd_Element_description_1" /><map name="entities_xsd_Element_description_1" id="entities_xsd_Element_description_1">
                                  <area alt="index.tmp#id" href="index.html#id" coords="166,41,243,66" />
                                  <area alt="index.tmp#descriptiveNotes" href="index.html#descriptiveNotes" coords="223,83,335,108" />
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,118,305,143" />
                                  <area alt="index.tmp#relatedResources" href="index.html#relatedResources" coords="223,198,340,223" />
-                                 <area alt="index.tmp#placeLat" href="index.html#placeLat" coords="223,233,328,277" />
-                                 <area alt="index.tmp#placeLong" href="index.html#placeLong" coords="223,332,328,376" />
-                                 <area alt="index.tmp#placeFeatureType" href="index.html#placeFeatureType" coords="223,386,341,430" />
-                                 <area alt="index.tmp#placeAltitude" href="index.html#placeAltitude" coords="223,440,328,484" />
-                                 <area alt="index.tmp#placeAdministrativeDivision" href="index.html#placeAdministrativeDivision" coords="223,494,385,538" />
-                                 <area alt="index.tmp#placeCountry" href="index.html#placeCountry" coords="223,548,328,592" /></map></div>
+                                 <area alt="index.tmp#latitude" href="index.html#latitude" coords="223,233,337,277" />
+                                 <area alt="index.tmp#longitude" href="index.html#longitude" coords="223,332,337,376" />
+                                 <area alt="index.tmp#altitude" href="index.html#altitude" coords="223,431,334,475" />
+                                 <area alt="index.tmp#featureClass" href="index.html#featureClass" coords="223,530,561,574" />
+                                 <area alt="index.tmp#administrativeDivision" href="index.html#administrativeDivision" coords="223,629,357,673" />
+                                 <area alt="index.tmp#country" href="index.html#country" coords="223,728,328,772" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -11382,12 +11397,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_placeDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('model_placeDescription-element_description');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_placeDescription-element_description" style="display:block"><b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b> | <b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b> | <b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b> | <b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b> | <b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b> | <b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b> | <b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b> | <b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b> | <b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b></div>
+                           <div id="model_placeDescription-element_description" style="display:block"><b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b> | <b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b> | <b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b> | <b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b> | <b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b> | <b><a href="index.html#altitude" target="_self" title="No namespace">altitude</a></b> | <b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b> | <b><a href="index.html#administrativeDivision" target="_self" title="No namespace">administrativeDivision</a></b> | <b><a href="index.html#country" target="_self" title="No namespace">country</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b>, <b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b>, <b><a href="index.html#placeAdministrativeDivision" target="_self" title="No namespace">placeAdministrativeDivision</a></b>, <b><a href="index.html#placeAltitude" target="_self" title="No namespace">placeAltitude</a></b>, <b><a href="index.html#placeCountry" target="_self" title="No namespace">placeCountry</a></b>, <b><a href="index.html#placeFeatureType" target="_self" title="No namespace">placeFeatureType</a></b>, <b><a href="index.html#placeLat" target="_self" title="No namespace">placeLat</a></b>, <b><a href="index.html#placeLong" target="_self" title="No namespace">placeLong</a></b>, <b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b></td>
+                        <td><b><a href="index.html#administrativeDivision" target="_self" title="No namespace">administrativeDivision</a></b>, <b><a href="index.html#altitude" target="_self" title="No namespace">altitude</a></b>, <b><a href="index.html#country" target="_self" title="No namespace">country</a></b>, <b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b>, <b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b>, <b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b>, <b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b>, <b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b>, <b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -11402,12 +11417,12 @@
   </span><span class="tEl">&lt;descriptiveNotes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/descriptiveNotes&gt;</span><span class="tI">
   </span><span class="tEl">&lt;existDates</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/existDates&gt;</span><span class="tI">
   </span><span class="tEl">&lt;relatedResources</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/relatedResources&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;placeLat</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/placeLat&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;placeLong</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/placeLong&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;placeFeatureType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/placeFeatureType&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;placeAltitude</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/placeAltitude&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;placeAdministrativeDivision</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/placeAdministrativeDivision&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;placeCountry</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/placeCountry&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;latitude</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/latitude&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;longitude</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/longitude&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;altitude</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/altitude&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;featureClass</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/featureClass&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;administrativeDivision</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/administrativeDivision&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;country</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/country&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/description&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -11460,12 +11475,12 @@
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"descriptiveNotes"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"existDates"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"relatedResources"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeLat"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeLong"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeFeatureType"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeAltitude"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeAdministrativeDivision"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeCountry"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"latitude"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"longitude"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"altitude"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"featureClass"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"administrativeDivision"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"country"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -11486,7 +11501,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="placeLat"></a><div class="componentTitle">Element <span class="qname">placeLat</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="latitude"></a><div class="componentTitle">Element <span class="qname">latitude</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -11505,14 +11520,15 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_placeLat" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_placeLat');" class="control" /></div>
+                           <div class="floatRight"><input id="button_annotations_latitude" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_latitude');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="annotations_placeLat" style="display:block">
+                           <div id="annotations_latitude" style="display:block">
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Latitude of the place associated with the described place entity.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Latitude in decimal degrees of the place entity.  Example: for the place entity</span><span class="tI">
+</span><span class="tT">Edmonton, the latitude in decimal degrees is 53.55014.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -11522,23 +11538,23 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_placeLat" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeLat');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_latitude" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_latitude');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeLat" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_placeLat.jpeg" /></div>
+                           <div id="diagram_latitude" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_latitude.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td><b>xs:string</b></td>
+                        <td><b>xs:decimal</b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_placeLat" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_placeLat');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_latitude" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_latitude');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_placeLat" style="display:block">
+                           <div id="properties_latitude" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -11551,10 +11567,10 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_placeLat" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_placeLat');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_latitude" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_latitude');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_placeLat" style="display:block">
+                           <div id="usedBy_latitude" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
@@ -11567,15 +11583,15 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_placeLat" type="image" src="img/btM.gif" value="-" onclick="switchState('source_placeLat');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_latitude" type="image" src="img/btM.gif" value="-" onclick="switchState('source_latitude');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_placeLat" style="display:block">
+                           <div id="source_latitude" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"placeLat"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"latitude"</span><span class="tAN"> type=</span><span class="tAV">"xs:decimal"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Latitude of the place associated with the described place entity.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Latitude in decimal degrees of the place entity. Example: for the place entity Edmonton, the latitude in decimal degrees is 53.55014.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -11594,7 +11610,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="placeLong"></a><div class="componentTitle">Element <span class="qname">placeLong</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="longitude"></a><div class="componentTitle">Element <span class="qname">longitude</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -11612,24 +11628,42 @@
                      </tr>
                      <tr>
                         <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_longitude" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_longitude');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_longitude" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Longitude in decimal degrees of the place entity.  Example: for the place entity</span><span class="tI">
+</span><span class="tT">Edmonton, the longitude in decimal degrees is -113.46871.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_placeLong" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeLong');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_longitude" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_longitude');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeLong" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_placeLong.jpeg" /></div>
+                           <div id="diagram_longitude" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_longitude.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td><b>xs:string</b></td>
+                        <td><b>xs:decimal</b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_placeLong" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_placeLong');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_longitude" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_longitude');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_placeLong" style="display:block">
+                           <div id="properties_longitude" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -11642,10 +11676,10 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_placeLong" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_placeLong');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_longitude" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_longitude');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_placeLong" style="display:block">
+                           <div id="usedBy_longitude" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
@@ -11658,13 +11692,17 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_placeLong" type="image" src="img/btM.gif" value="-" onclick="switchState('source_placeLong');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_longitude" type="image" src="img/btM.gif" value="-" onclick="switchState('source_longitude');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_placeLong" style="display:block">
+                           <div id="source_longitude" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"placeLong"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">/&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"longitude"</span><span class="tAN"> type=</span><span class="tAV">"xs:decimal"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Longitude in decimal degrees of the place entity. Example: for the place entity Edmonton, the longitude in decimal degrees is -113.46871.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -11681,7 +11719,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="placeFeatureType"></a><div class="componentTitle">Element <span class="qname">placeFeatureType</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="altitude"></a><div class="componentTitle">Element <span class="qname">altitude</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -11699,24 +11737,42 @@
                      </tr>
                      <tr>
                         <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_altitude" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_altitude');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_altitude" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Altitude in meters of the place entity.  Example: for the place entity</span><span class="tI">
+</span><span class="tT">Edmonton, the altitude in meters is 668.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_placeFeatureType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeFeatureType');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_altitude" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_altitude');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeFeatureType" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_placeFeatureType.jpeg" /></div>
+                           <div id="diagram_altitude" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_altitude.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td><b>xs:string</b></td>
+                        <td><b>xs:integer</b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_placeFeatureType" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_placeFeatureType');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_altitude" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_altitude');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_placeFeatureType" style="display:block">
+                           <div id="properties_altitude" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -11729,10 +11785,10 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_placeFeatureType" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_placeFeatureType');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_altitude" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_altitude');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_placeFeatureType" style="display:block">
+                           <div id="usedBy_altitude" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
@@ -11745,13 +11801,17 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_placeFeatureType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_placeFeatureType');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_altitude" type="image" src="img/btM.gif" value="-" onclick="switchState('source_altitude');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_placeFeatureType" style="display:block">
+                           <div id="source_altitude" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"placeFeatureType"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">/&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"altitude"</span><span class="tAN"> type=</span><span class="tAV">"xs:integer"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Altitude in meters of the place entity. Example: for the place entity Edmonton, the altitude in meters is 668.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -11768,7 +11828,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="placeAltitude"></a><div class="componentTitle">Element <span class="qname">placeAltitude</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="featureClass"></a><div class="componentTitle">Element <span class="qname">featureClass</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -11786,24 +11846,43 @@
                      </tr>
                      <tr>
                         <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_featureClass" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_featureClass');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_featureClass" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">The GeoNames feature class of the place entity.  Example: for the place</span><span class="tI">
+</span><span class="tT">entity Edmonton, the GeoNames feature class is Populated Place Feature.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_placeAltitude" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeAltitude');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_featureClass" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_featureClass');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeAltitude" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_placeAltitude.jpeg" /></div>
+                           <div id="diagram_featureClass" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_featureClass.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td><b>xs:string</b></td>
+                        <td>union of(restriction of <b>xs:token</b>, restriction of <b>xs:token</b>)
+                        </td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_placeAltitude" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_placeAltitude');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_featureClass" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_featureClass');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_placeAltitude" style="display:block">
+                           <div id="properties_featureClass" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -11816,10 +11895,10 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_placeAltitude" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_placeAltitude');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_featureClass" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_featureClass');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_placeAltitude" style="display:block">
+                           <div id="usedBy_featureClass" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
@@ -11832,13 +11911,75 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_placeAltitude" type="image" src="img/btM.gif" value="-" onclick="switchState('source_placeAltitude');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_featureClass" type="image" src="img/btM.gif" value="-" onclick="switchState('source_featureClass');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_placeAltitude" style="display:block">
+                           <div id="source_featureClass" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"placeAltitude"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">/&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"featureClass"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The GeoNames feature class of the place entity. Example: for the place entity Edmonton, the GeoNames feature class is Populated Place Feature.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Populated Place Feature"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Select this value for populated places, such as cities, towns, and villages.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Administrative Boundary Feature"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Select this value for administrative divisions, such as countries, provinces, states, counties, and other political regions.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Area Feature"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Select this value for area or polygon features, such as parks, reserves, and historical regions.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Hydrographic Feature"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Select this value for water features, such as streams, rivers, and lakes.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Hypsographic Feature"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Select this value for elevated features, such as mountains, hills, and rocks.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Road/Railroad Feature"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Select this value for linear features, such as roads, streets, railroads, and trails.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Spot Feature"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Select this value for spot or point features, such as buildings, facilities, and structures.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Undersea Feature"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Select this value for undersea features, such as canyons, reefs, and shoals.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Vegetation Feature"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Select this value for vegetation features, such as forests, heaths, and meadows.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:length</span><span class="tAN"> value=</span><span class="tAV">"0"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -11855,7 +11996,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="placeAdministrativeDivision"></a><div class="componentTitle">Element <span class="qname">placeAdministrativeDivision</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="administrativeDivision"></a><div class="componentTitle">Element <span class="qname">administrativeDivision</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -11873,11 +12014,30 @@
                      </tr>
                      <tr>
                         <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_administrativeDivision" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_administrativeDivision');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_administrativeDivision" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">The ISO 3166-2 country subdivision name, or first-order administrative division name</span><span class="tI">
+</span><span class="tT">(e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2).</span><span class="tI">
+</span><span class="tT"> Example: for the place entity Edmonton, the country subdivision name is Alberta.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_placeAdministrativeDivision" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeAdministrativeDivision');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_administrativeDivision" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_administrativeDivision');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeAdministrativeDivision" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_placeAdministrativeDivision.jpeg" /></div>
+                           <div id="diagram_administrativeDivision" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_administrativeDivision.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -11887,10 +12047,10 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_placeAdministrativeDivision" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_placeAdministrativeDivision');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_administrativeDivision" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_administrativeDivision');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_placeAdministrativeDivision" style="display:block">
+                           <div id="properties_administrativeDivision" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -11903,10 +12063,10 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_placeAdministrativeDivision" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_placeAdministrativeDivision');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_administrativeDivision" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_administrativeDivision');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_placeAdministrativeDivision" style="display:block">
+                           <div id="usedBy_administrativeDivision" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
@@ -11919,13 +12079,17 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_placeAdministrativeDivision" type="image" src="img/btM.gif" value="-" onclick="switchState('source_placeAdministrativeDivision');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_administrativeDivision" type="image" src="img/btM.gif" value="-" onclick="switchState('source_administrativeDivision');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_placeAdministrativeDivision" style="display:block">
+                           <div id="source_administrativeDivision" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"placeAdministrativeDivision"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">/&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"administrativeDivision"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The ISO 3166-2 country subdivision name, or first-order administrative division name (e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2). Example: for the place entity Edmonton, the country subdivision name is Alberta.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -11942,7 +12106,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="placeCountry"></a><div class="componentTitle">Element <span class="qname">placeCountry</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="country"></a><div class="componentTitle">Element <span class="qname">country</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -11960,11 +12124,30 @@
                      </tr>
                      <tr>
                         <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_country" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_country');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_country" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">The ISO 3166-1 country name that contains the place entity </span><span class="tI">
+</span><span class="tT">(see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).  Example: for the</span><span class="tI">
+</span><span class="tT"> place entity Edmonton, the country name is Canada.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_placeCountry" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeCountry');" class="control" /></div>
+                           <div class="floatRight"><input id="button_diagram_country" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_country');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeCountry" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_placeCountry.jpeg" /></div>
+                           <div id="diagram_country" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_country.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -11974,10 +12157,10 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_placeCountry" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_placeCountry');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_country" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_country');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_placeCountry" style="display:block">
+                           <div id="properties_country" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
@@ -11990,10 +12173,10 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_placeCountry" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_placeCountry');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_country" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_country');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_placeCountry" style="display:block">
+                           <div id="usedBy_country" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
@@ -12006,13 +12189,17 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_placeCountry" type="image" src="img/btM.gif" value="-" onclick="switchState('source_placeCountry');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_country" type="image" src="img/btM.gif" value="-" onclick="switchState('source_country');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_placeCountry" style="display:block">
+                           <div id="source_country" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"placeCountry"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">/&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"country"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The ISO 3166-1 country name that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Example: for the place entity Edmonton, the country name is Canada.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -13472,7 +13659,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"forename"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Monica</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Monica</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -13481,7 +13668,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"surname"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Johnson</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Johnson</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -13490,7 +13677,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"date"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. fl. 1780</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., fl. 1780</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -13499,7 +13686,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"salutation"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Ms.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Ms.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -13508,7 +13695,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"qualification"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Reverend</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Reverend</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -13517,7 +13704,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"initials"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. J.C.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., J.C.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -13526,7 +13713,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"suffix"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Jr.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Jr.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -13535,7 +13722,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"geographic"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. "Canada" in "Conseil des Arts du Canada"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., "Canada" in "Conseil des Arts du Canada"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -13544,7 +13731,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"person"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. "Ellington" in "Ellington Fund"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., "Ellington" in "Ellington Fund"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -14025,6 +14212,84 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="url-attribute_url"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b> / @url</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:anyURI</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_url-attribute_url" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_url-attribute_url');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_url-attribute_url" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_url-attribute_url" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_url-attribute_url');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_url-attribute_url" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Attribute Group </td>
+                                    <td><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_url-attribute_url" type="image" src="img/btM.gif" value="-" onclick="switchState('source_url-attribute_url');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_url-attribute_url" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"url"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
       <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="type-attribute_type"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b> / @type</span></div>
       <table class="rt">
          <tr>
@@ -14320,7 +14585,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"forename"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Monica</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Monica</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -14329,7 +14594,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"surname"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Johnson</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Johnson</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -14338,7 +14603,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"date"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. fl. 1780</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., fl. 1780</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -14347,7 +14612,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"salutation"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Ms.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Ms.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -14356,7 +14621,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"qualification"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Reverend</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Reverend</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -14365,7 +14630,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"initials"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. J.C.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., J.C.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -14374,7 +14639,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"suffix"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Jr.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Jr.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -14383,7 +14648,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"geographic"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. "Canada" in "Conseil des Arts du Canada"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., "Canada" in "Conseil des Arts du Canada"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -14392,7 +14657,7 @@
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"person"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. "Ellington" in "Ellington Fund"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., "Ellington" in "Ellington Fund"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -15361,12 +15626,12 @@
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"descriptiveNotes"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"existDates"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"relatedResources"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeLat"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeLong"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeFeatureType"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeAltitude"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeAdministrativeDivision"</span><span class="tEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"placeCountry"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"latitude"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"longitude"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"altitude"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"featureClass"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"administrativeDivision"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"country"</span><span class="tEl">/&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> ref=</span><span class="tAV">"xml:id"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -15773,6 +16038,108 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="url-attribute"></a><div class="componentTitle">Attribute Group <span class="qname">url-attribute</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_url-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_url-attribute');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_url-attribute" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">URL attribute to provide a link to a server-side list of values.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_url-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_url-attribute');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_url-attribute" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Attribute_Group_url-attribute.jpeg" usemap="#entities_xsd_Attribute_Group_url-attribute" /><map name="entities_xsd_Attribute_Group_url-attribute" id="entities_xsd_Attribute_Group_url-attribute">
+                                 <area alt="index.tmp#url-attribute_url" href="index.html#url-attribute_url" coords="158,0,270,44" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_url-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_url-attribute');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_url-attribute" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#url-attribute_url" target="_self" title="No namespace">url</a></b></td>
+                                    <td><b>xs:anyURI</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_url-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('source_url-attribute');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_url-attribute" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> name=</span><span class="tAV">"url-attribute"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">URL attribute to provide a link to a server-side list of values.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"url"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attributeGroup&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
       <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="type-attribute"></a><div class="componentTitle">Attribute Group <span class="qname">type-attribute</span></div>
       <table class="rt">
          <tr>
@@ -16046,7 +16413,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"forename"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Monica</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Monica</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -16055,7 +16422,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"surname"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Johnson</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Johnson</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -16064,7 +16431,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"date"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. fl. 1780</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., fl. 1780</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -16073,7 +16440,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"salutation"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Ms.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Ms.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -16082,7 +16449,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"qualification"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Reverend</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Reverend</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -16091,7 +16458,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"initials"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. J.C.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., J.C.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -16100,7 +16467,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"suffix"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. Jr.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., Jr.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -16109,7 +16476,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"geographic"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. "Canada" in "Conseil des Arts du Canada"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., "Canada" in "Conseil des Arts du Canada"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -16118,7 +16485,7 @@
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"person"</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e. g. "Ellington" in "Ellington Fund"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">e.g., "Ellington" in "Ellington Fund"</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
