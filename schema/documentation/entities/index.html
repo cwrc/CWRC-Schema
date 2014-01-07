@@ -2315,7 +2315,7 @@
                            <div class="floatRight"><input id="button_diagram_personRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_personRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
+                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_3.jpeg" usemap="#entities_xsd_Element_recordInfo_3" /><map name="entities_xsd_Element_recordInfo_3" id="entities_xsd_Element_recordInfo_3">
                                  <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#personTypes" href="index.html#personTypes" coords="220,83,315,108" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,163,295,188" />
@@ -2758,8 +2758,8 @@
                            <div id="diagram_originInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_originInfo.jpeg" usemap="#entities_xsd_Element_originInfo" /><map name="entities_xsd_Element_originInfo" id="entities_xsd_Element_originInfo">
                                  <area alt="index.tmp#projectId" href="index.html#projectId" coords="214,2,386,46" />
                                  <area alt="index.tmp#recordIdentifier" href="index.html#recordIdentifier" coords="214,101,386,145" />
-                                 <area alt="index.tmp#recordCreationDate" href="index.html#recordCreationDate" coords="214,200,495,244" />
-                                 <area alt="index.tmp#recordChangeDate" href="index.html#recordChangeDate" coords="214,299,495,343" /></map></div>
+                                 <area alt="index.tmp#recordCreationDate" href="index.html#recordCreationDate" coords="214,200,660,244" />
+                                 <area alt="index.tmp#recordChangeDate" href="index.html#recordChangeDate" coords="214,285,660,329" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -3213,7 +3213,7 @@
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td>union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>)
+                        <td>union of(union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>), restriction of <b>xs:token</b>)
                         </td>
                      </tr>
                      <tr>
@@ -3262,7 +3262,16 @@
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Provenance field used to capture the original creation date of an entity instance deposited in CWRC. Dates of creation for new entities created in CWRC are captured in FOXML. Equivalent to MADS recordCreationDate and EAC-CPF's maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime . Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:length</span><span class="tAN"> value=</span><span class="tAV">"0"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -3329,7 +3338,7 @@
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td>union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>)
+                        <td>union of(union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>), restriction of <b>xs:token</b>)
                         </td>
                      </tr>
                      <tr>
@@ -3378,7 +3387,16 @@
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Provenance field used to capture the original modification dates of an entity instance deposited in CWRC. Subsequent dates of modification in CWRC are captured in FOXML. Equivalent to MADS recordChangeDate and EAC-CPF's maintenanceHistory/maintenance/Event/eventType/eventDateTime . Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:length</span><span class="tAN"> value=</span><span class="tAV">"0"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -10219,7 +10237,7 @@
                            <div class="floatRight"><input id="button_diagram_orgRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_orgRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_3.jpeg" usemap="#entities_xsd_Element_recordInfo_3" /><map name="entities_xsd_Element_recordInfo_3" id="entities_xsd_Element_recordInfo_3">
+                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
                                  <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,83,295,108" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,177,411,221" />
@@ -10377,7 +10395,7 @@
                            <div class="floatRight"><input id="button_diagram_orgDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_orgDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_orgDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_1.jpeg" usemap="#entities_xsd_Element_description_1" /><map name="entities_xsd_Element_description_1" id="entities_xsd_Element_description_1">
+                           <div id="diagram_orgDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description.jpeg" usemap="#entities_xsd_Element_description" /><map name="entities_xsd_Element_description" id="entities_xsd_Element_description">
                                  <area alt="index.tmp#id" href="index.html#id" coords="166,41,243,66" />
                                  <area alt="index.tmp#orgTypes" href="index.html#orgTypes" coords="223,83,300,108" />
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,163,305,188" />
@@ -11165,7 +11183,7 @@
                            <div class="floatRight"><input id="button_diagram_placeRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
+                           <div id="diagram_placeRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_1.jpeg" usemap="#entities_xsd_Element_recordInfo_1" /><map name="entities_xsd_Element_recordInfo_1" id="entities_xsd_Element_recordInfo_1">
                                  <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,83,295,108" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,177,411,221" />
@@ -11323,7 +11341,7 @@
                            <div class="floatRight"><input id="button_diagram_placeDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description.jpeg" usemap="#entities_xsd_Element_description" /><map name="entities_xsd_Element_description" id="entities_xsd_Element_description">
+                           <div id="diagram_placeDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_1.jpeg" usemap="#entities_xsd_Element_description_1" /><map name="entities_xsd_Element_description_1" id="entities_xsd_Element_description_1">
                                  <area alt="index.tmp#id" href="index.html#id" coords="166,41,243,66" />
                                  <area alt="index.tmp#descriptiveNotes" href="index.html#descriptiveNotes" coords="223,83,335,108" />
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,118,305,143" />
@@ -12667,7 +12685,7 @@
                            <div class="floatRight"><input id="button_diagram_recordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_recordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_recordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_1.jpeg" usemap="#entities_xsd_Element_recordInfo_1" /><map name="entities_xsd_Element_recordInfo_1" id="entities_xsd_Element_recordInfo_1">
+                           <div id="diagram_recordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
                                  <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,83,295,108" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,177,411,221" />
