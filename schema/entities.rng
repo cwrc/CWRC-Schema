@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-     MRB: Wed 18-Dec-2013: added @url attribute to provide a link to various server-side lists of values
+     MRB: Mon 06-Jan-2014: Revised the <recordCreationDate> and <recordChangeDate> elements
+     MRB: Fri 27-Dec-2013: Revised and added to place entity section
+     MRB: Wed 18-Dec-2013: Added @url attribute to provide a link to various server-side lists of values
      MRB: Mon 16-Dec-2013: Added additional interface annotation code
      MRB: Mon 09-Dec-2013: Added interface annotation code for various elements and attributes
      MRB: Thu 05-Dec-2013
@@ -135,10 +137,10 @@
                 <optional>
                     <ref name="personDescription-element"/>
                 </optional>
+                <optional>
+                    <ref name="relations-element"/>
+                </optional>
             </interleave>
-            <optional>
-                <ref name="relations-element"/>
-            </optional>
         </element>
     </define>
 
@@ -157,10 +159,10 @@
                 <optional>
                     <ref name="orgDescription-element"/>
                 </optional>
+                <optional>
+                    <ref name="relations-element"/>
+                </optional>
             </interleave>
-            <optional>
-                <ref name="relations-element"/>
-            </optional>
         </element>
     </define>
 
@@ -179,10 +181,10 @@
                 <optional>
                     <ref name="placeDescription-element"/>
                 </optional>
+                <optional>
+                    <ref name="relations-element"/>
+                </optional>
             </interleave>
-            <optional>
-                <ref name="relations-element"/>
-            </optional>
         </element>
     </define>
 
@@ -199,10 +201,10 @@
                 <optional>
                     <ref name="orgDescription-element"/>
                 </optional>
+                <optional>
+                    <ref name="relations-element"/>
+                </optional>
             </interleave>
-            <optional>
-                <ref name="relations-element"/>
-            </optional>
         </element>
     </define>-->
 
@@ -422,10 +424,11 @@
         </element>
     </define>
 
-    <!-- MRB: July 2013: added various child elements of the <placeDescription> element -->
+    <!-- MRB: July 2013: added various child elements of the <placeDescription> element 
+         MRB: Fri 27-Dec-2013: Revised and added to place entity section -->
     <define name="placeDescription-element">
         <element name="description">
-            <a:documentation>This section captures descriptive data about a CWRC place entity record</a:documentation>
+            <a:documentation>This section captures descriptive data about a CWRC entity record</a:documentation>
             <optional>
                 <ref name="id-attribute"/>
             </optional>
@@ -446,16 +449,28 @@
                     <ref name="longitude-element"/>
                 </optional>
                 <optional>
-                    <ref name="altitude-element"/>
-                </optional>
-                <optional>
                     <ref name="featureClass-element"/>
                 </optional>
                 <optional>
-                    <ref name="administrativeDivision-element"/>
+                    <ref name="featureCode-element"/>
                 </optional>
                 <optional>
                     <ref name="country-element"/>
+                </optional>
+                <optional>
+                    <ref name="firstAdministrativeDivision-element"/>
+                </optional>
+                <optional>
+                    <ref name="secondAdministrativeDivision-element"/>
+                </optional>
+                <optional>
+                    <ref name="elevation-element"/>
+                </optional>
+                <optional>
+                    <ref name="averageElevation-element"/>
+                </optional>
+                <optional>
+                    <ref name="timeZone-element"/>
                 </optional>
             </interleave>
         </element>
@@ -804,12 +819,13 @@
 
 
     <!-- MRB: July 2013: added definitions for various child elements of the <placeDescription> element
-         MRB: Mon 16-Dec-2013: made changes, and added interface annotation code -->
+         MRB: Mon 16-Dec-2013: made changes, and added interface annotation code 
+         MRB: Fri 27-Dec-2013: Revised and added to place entity section -->
 
     <define name="latitude-element">
         <element name="latitude">
             <a:documentation>Latitude in decimal degrees of the place entity.  Example: for the place entity
-                Edmonton, the latitude in decimal degrees is 53.55014.</a:documentation>
+                Edmonton, the latitude in decimal degrees is "53.55014".</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
@@ -817,7 +833,7 @@
                         <label xml:lang="en">Latitude</label>
                         <help-text xml:lang="en"
                             >Latitude in decimal degrees of the place entity.  Example: for the place entity
-                            Edmonton, the latitude in decimal degrees is 53.55014.</help-text>
+                            Edmonton, the latitude in decimal degrees is "53.55014".</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
@@ -830,7 +846,7 @@
     <define name="longitude-element">
         <element name="longitude">
             <a:documentation>Longitude in decimal degrees of the place entity.  Example: for the place entity
-                Edmonton, the longitude in decimal degrees is -113.46871.</a:documentation>
+                Edmonton, the longitude in decimal degrees is "-113.46871".</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
@@ -838,7 +854,7 @@
                         <label xml:lang="en">Longitude</label>
                         <help-text xml:lang="en"
                             >Longitude in decimal degrees of the place entity.  Example: for the place entity
-                            Edmonton, the longitude in decimal degrees is -113.46871.</help-text>
+                            Edmonton, the longitude in decimal degrees is "-113.46871".</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
@@ -848,31 +864,10 @@
         </element>
     </define>
 
-    <define name="altitude-element">
-        <element name="altitude">
-            <a:documentation>Altitude in meters of the place entity.  Example: for the place entity
-                Edmonton, the altitude in meters is 668.</a:documentation>
-
-            <xs:annotation>
-                <xs:appinfo>
-                    <interface-field path="entity/place/description/altitude">
-                        <label xml:lang="en">Altitude</label>
-                        <help-text xml:lang="en"
-                            >Altitude in meters of the place entity.  Example: for the place entity
-                            Edmonton, the altitude in meters is 668.</help-text>
-                        <input>textField</input>
-                    </interface-field>
-                </xs:appinfo>
-            </xs:annotation>
-
-            <data type="integer"/>
-        </element>
-    </define>
-
     <define name="featureClass-element">
         <element name="featureClass">
             <a:documentation>The GeoNames feature class of the place entity.  Example: for the place
-                entity Edmonton, the GeoNames feature class is Populated Place Feature.</a:documentation>
+                entity Edmonton, the GeoNames feature class is "Populated Place Feature".</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
@@ -881,7 +876,7 @@
                         <label xml:lang="en">Feature class</label>
                         <help-text xml:lang="en"
                             >The GeoNames feature class of the place entity.  Example: for the place
-                            entity Edmonton, the GeoNames feature class is Populated Place Feature.</help-text>
+                            entity Edmonton, the GeoNames feature class is "Populated Place Feature".</help-text>
                         <input>textField</input>
                     </interface-field>
 
@@ -939,20 +934,20 @@
         </element>
     </define>
 
-    <define name="administrativeDivision-element">
-        <element name="administrativeDivision">
-            <a:documentation>The ISO 3166-2 country subdivision name, or first-order administrative division name
-                (e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2).
-                 Example: for the place entity Edmonton, the country subdivision name is Alberta.</a:documentation>
+    <define name="featureCode-element">
+        <element name="featureCode">
+            <a:documentation>The GeoNames feature code label of the place entity (see http://www.geonames.org/export/codes.html).
+                Example: for the place entity Edmonton, the GeoNames feature code label is "seat of a first-order 
+                administrative division".</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
-                    <interface-field path="entity/place/description/administrativeDivision">
-                        <label xml:lang="en">Administrative division</label>
+                    <interface-field path="entity/place/description/featureCode">
+                        <label xml:lang="en">Feature code</label>
                         <help-text xml:lang="en"
-                            >The ISO 3166-2 country subdivision name, or first-order administrative division name
-                            (e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2).
-                            Example: for the place entity Edmonton, the country subdivision name is Alberta.</help-text>
+                            >The GeoNames feature code label of the place entity (see http://www.geonames.org/export/codes.html).
+                            Example: for the place entity Edmonton, the GeoNames feature code label is "seat of a first-order
+                            administrative division".</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
@@ -966,7 +961,7 @@
         <element name="country">
             <a:documentation>The ISO 3166-1 country name that contains the place entity 
                 (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).  Example: for the
-                 place entity Edmonton, the country name is Canada.</a:documentation>
+                place entity Edmonton, the country name is "Canada".</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
@@ -975,13 +970,124 @@
                         <help-text xml:lang="en"
                             >The ISO 3166-1 country name that contains the place entity 
                             (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).  Example:
-                             for the place entity Edmonton, the country name is Canada.</help-text>
+                            for the place entity Edmonton, the country name is "Canada".</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
 
             <data type="string"/>
+        </element>
+    </define>
+
+    <define name="firstAdministrativeDivision-element">
+        <element name="firstAdministrativeDivision">
+            <a:documentation>The ISO 3166-2 country subdivision name, or first-level administrative division name
+                (e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2).
+                 Example: for the place entity Edmonton, the first-level administrative division name is "Alberta".</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/place/description/firstAdministrativeDivision">
+                        <label xml:lang="en">First-level administrative division</label>
+                        <help-text xml:lang="en"
+                            >The ISO 3166-2 country subdivision name, or first-level administrative division name
+                            (e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2).
+                            Example: for the place entity Edmonton, the first-level administrative division name is "Alberta".</help-text>
+                        <input>textField</input>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
+
+            <data type="string"/>
+        </element>
+    </define>
+
+    <define name="secondAdministrativeDivision-element">
+        <element name="secondAdministrativeDivision">
+            <a:documentation>The second-level) administrative division name (e.g., county) that contains the place entity 
+                (see http://en.wikipedia.org/wiki/Table_of_administrative_divisions_by_country).  Example: for the place 
+                entity Arva, Ontario, the second-level administrative division name is "Middlesex County".</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/place/description/secondAdministrativeDivision">
+                        <label xml:lang="en">Second-level administrative division</label>
+                        <help-text xml:lang="en"
+                            >The second-level) administrative division name (e.g., county) that contains the place entity 
+                            (see http://en.wikipedia.org/wiki/Table_of_administrative_divisions_by_country).  Example: for the place 
+                            entity Arva, Ontario, the second-level administrative division name is "Middlesex County".</help-text>
+                        <input>textField</input>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
+
+            <data type="string"/>
+        </element>
+    </define>
+
+    <define name="elevation-element">
+        <element name="elevation">
+            <a:documentation>Elevation in meters of the place entity.  Example: for the place entity
+                Mount Logan, the elevation in meters is "5,959".</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/place/description/elevation">
+                        <label xml:lang="en">Elevation</label>
+                        <help-text xml:lang="en"
+                            >Elevation in meters of the place entity.  Example: for the place entity
+                            Mount Logan, the elevation in meters is "5,959".</help-text>
+                        <input>textField</input>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
+
+            <data type="integer"/>
+        </element>
+    </define>
+
+    <define name="averageElevation-element">
+        <element name="averageElevation">
+            <a:documentation>Using a digital elevation model (srtm3 or gtopo30), average elevation of a
+                3''x3'' (ca 90mx90m) or 30''x30'' (ca 900mx900m) area in meters.  Example: for the place 
+                entity Edmonton, the average elevation in meters is "610".</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/place/description/averageElevation">
+                        <label xml:lang="en">Average elevation</label>
+                        <help-text xml:lang="en"
+                            >Using a digital elevation model (srtm3 or gtopo30), average elevation of a
+                            3''x3'' (ca 90mx90m) or 30''x30'' (ca 900mx900m) area in meters.  Example: for 
+                            the place entity Edmonton, the average elevation in meters is "610".</help-text>
+                        <input>textField</input>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
+
+            <data type="integer"/>
+        </element>
+    </define>
+
+    <define name="timeZone-element">
+        <element name="timeZone">
+            <a:documentation>The time zone UTM standard time offset that contains the place entity.  Example: 
+                for the place entity Edmonton, the time zone UTM standard time offset is "-7.0".</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/place/description/timeZone">
+                        <label xml:lang="en">Time zone</label>
+                        <help-text xml:lang="en"
+                            >The time zone UTM standard time offset that contains the place entity.  Example: 
+                            for the place entity Edmonton, the time zone UTM standard time offset is "-7.0".</help-text>
+                        <input>textField</input>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
+
+            <data type="decimal"/>
         </element>
     </define>
 
@@ -1029,9 +1135,9 @@
             <zeroOrMore>
                 <ref name="recordIdentifier-element"/>
             </zeroOrMore>
-            <zeroOrMore>
+            <optional>
                 <ref name="recordCreationDate-element"/>
-            </zeroOrMore>
+            </optional>
             <zeroOrMore>
                 <ref name="recordChangeDate-element"/>
             </zeroOrMore>
@@ -1126,10 +1232,25 @@
             <a:documentation>Provenance field used to capture the original creation date of an entity instance
                 deposited in CWRC. Dates of creation for new entities created in CWRC are captured in FOXML.
                 Equivalent to MADS recordCreationDate and EAC-CPF's
-                maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime .</a:documentation>
-            <zeroOrMore>
-                <ref name="dateSingle-element"/>
-            </zeroOrMore>
+                maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime .  
+                Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field
+                        path="entity/person|organization|place/recordInfo/originInfo/recordCreationDate">
+                        <input>hidden</input>
+                        <value>Today's date generated via JavaScript in YYYY-MM-DD format (automatically 
+                            generated when new entities are created)</value>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
+
+            <choice>
+                <data type="date"/>
+                <data type="gYearMonth"/>
+                <data type="gYear"/>
+            </choice>
         </element>
     </define>
 
@@ -1138,13 +1259,25 @@
             <a:documentation>Provenance field used to capture the original modification dates of an entity
                 instance deposited in CWRC. Subsequent dates of modification in CWRC are captured in FOXML.
                 Equivalent to MADS recordChangeDate and EAC-CPF's
-                maintenanceHistory/maintenance/Event/eventType/eventDateTime .</a:documentation>
-            <zeroOrMore>
-                <ref name="dateSingle-element"/>
-            </zeroOrMore>
-            <optional>
-                <ref name="source-attribute"/>
-            </optional>
+                maintenanceHistory/maintenance/Event/eventType/eventDateTime .  
+                Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field
+                        path="entity/person|organization|place/recordInfo/originInfo/recordChangeDate">
+                        <input>hidden</input>
+                        <value>Today's date generated via JavaScript in YYYY-MM-DD format (automatically 
+                            generated when existing entities are modified)</value>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
+
+            <choice>
+                <data type="date"/>
+                <data type="gYearMonth"/>
+                <data type="gYear"/>
+            </choice>
         </element>
     </define>
 
@@ -1374,7 +1507,6 @@
                         </choice>
                     </values>
 
-
                 </xs:appinfo>
             </xs:annotation>
 
@@ -1414,7 +1546,7 @@
 
     <define name="variantType-element">
         <element name="variantType" a:defaultValue="undefined">
-            <a:documentation>Captures tname type to describe contexts in which this name was used to refer to the
+            <a:documentation>Captures name type to describe contexts in which this name was used to refer to the
                 present entity.</a:documentation>
 
             <xs:annotation>
@@ -1463,6 +1595,13 @@
                         </choice>
                     </values>
 
+                    <values type="place">
+                        <choice>
+                            <value a:en="alternate names">alternate names</value>
+                            <a:documentation>e.g., Edmonton,Edmontona,Edmontonas</a:documentation>
+                        </choice>
+                    </values>
+
                 </xs:appinfo>
             </xs:annotation>
 
@@ -1491,6 +1630,10 @@
                     Service"</a:documentation>
                 <value a:en="Acronym - organization">acronym</value>
                 <a:documentation>e.g., OCLC</a:documentation>
+
+                <value a:en="alternate names - place">alternate names</value>
+                <a:documentation>e.g., Edmonton,Edmontona,Edmontonas,Edmontono,Edmundopolis,Edmuntun,Ehdmonton</a:documentation>
+
                 <data type="string"/>
             </choice>
 
@@ -1501,8 +1644,8 @@
 
     <define name="existDates-element">
         <element name="existDates">
-            <a:documentation>Dates of existence of the entity described (i.e. birth, death, fl., etc.), of the
-                present entity.</a:documentation>
+            <a:documentation>Dates of existence of the entity described (i.e. birth, death, fl., 
+                incorporation, establishment, etc.), of the present entity.</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
@@ -2094,12 +2237,6 @@
                         <input>datePicker</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization|place/recordInfo/originInfo/recordCreationDate/dateSingle/standardDate">
-                        <input>hidden</input>
-                        <value>Today's date generated via JavaScript in YYYY-MM-DD format</value>
-                    </interface-field>
-
                 </xs:appinfo>
             </xs:annotation>
 
@@ -2392,6 +2529,11 @@
 
     <define name="accessCondition-element">
         <element name="accessCondition" a:defaultValue="cc_by-nc_3.0">
+            <a:documentation>Use the following access condition statement:
+                Use of this public-domain resource is governed by the &lt;a
+                href="http://creativecommons.org/licenses/by-nc/3.0/" rel="license"
+                &gt;Creative Commons Attribution-NonCommercial 3.0 Unported License&lt;/a&gt;.
+            </a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
@@ -2680,7 +2822,7 @@
                     <ref name="relations-element"/>
 
                 </interface-order>
-                
+
                 <!-- MRB: 16 December 2013: added interface order for four top-level elements for place entities -->
                 <interface-order type="place" path="entity/place">
 

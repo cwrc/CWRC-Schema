@@ -21,11 +21,11 @@
 				'properties_attribute-status_status', 
 				'properties_activity_stamp', 
 				'properties_assigned_process', 
-				'properties_workflow_date', 
-				'properties_workflow_workflowID', 
-				'properties_workflow_userID', 
-				'properties_workflow_toolID', 
 				'properties_attribute-date_date', 
+				'properties_workflow_time', 
+				'properties_workflow_workflowID', 
+				'properties_workflow_toolID', 
+				'properties_attribute-time_time', 
 				'properties_attribute-workflowID_workflowID', 
 				'properties_attribute-toolID_toolID', 
 				'properties_attribute-process_process', 
@@ -50,18 +50,19 @@
 				'usedBy_attribute-status_status', 
 				'usedBy_activity_stamp', 
 				'usedBy_assigned_process', 
-				'usedBy_workflow_date', 
-				'usedBy_workflow_workflowID', 
-				'usedBy_workflow_userID', 
-				'usedBy_workflow_toolID', 
 				'usedBy_attribute-date_date', 
+				'usedBy_workflow_time', 
+				'usedBy_workflow_workflowID', 
+				'usedBy_workflow_toolID', 
+				'usedBy_attribute-time_time', 
 				'usedBy_attribute-workflowID_workflowID', 
 				'usedBy_attribute-toolID_toolID', 
 				'usedBy_attribute-process_process', 
 				'usedBy_attribute-stamp_stamp', 
 				'usedBy_attribute-userID', 
 				'usedBy_attribute-category', 
-				'usedBy_attribute-status');
+				'usedBy_attribute-status', 
+				'usedBy_attribute-date');
 
         var sourceBoxes= new Array('source_cwrc', 
 				'source_workflow', 
@@ -77,11 +78,11 @@
 				'source_attribute-status_status', 
 				'source_activity_stamp', 
 				'source_assigned_process', 
-				'source_workflow_date', 
-				'source_workflow_workflowID', 
-				'source_workflow_userID', 
-				'source_workflow_toolID', 
 				'source_attribute-date_date', 
+				'source_workflow_time', 
+				'source_workflow_workflowID', 
+				'source_workflow_toolID', 
+				'source_attribute-time_time', 
 				'source_attribute-workflowID_workflowID', 
 				'source_attribute-toolID_toolID', 
 				'source_attribute-process_process', 
@@ -90,6 +91,7 @@
 				'source_attribute-category', 
 				'source_attribute-status', 
 				'source_attribute-date', 
+				'source_attribute-time', 
 				'source_attribute-workflowID', 
 				'source_attribute-toolID', 
 				'source_attribute-process', 
@@ -114,6 +116,7 @@
 				'diagram_attribute-category', 
 				'diagram_attribute-status', 
 				'diagram_attribute-date', 
+				'diagram_attribute-time', 
 				'diagram_attribute-workflowID', 
 				'diagram_attribute-toolID', 
 				'diagram_attribute-process', 
@@ -133,11 +136,11 @@
 				'annotations_attribute-status_status', 
 				'annotations_activity_stamp', 
 				'annotations_assigned_process', 
-				'annotations_workflow_date', 
-				'annotations_workflow_workflowID', 
-				'annotations_workflow_userID', 
-				'annotations_workflow_toolID', 
 				'annotations_attribute-date_date', 
+				'annotations_workflow_time', 
+				'annotations_workflow_workflowID', 
+				'annotations_workflow_toolID', 
+				'annotations_attribute-time_time', 
 				'annotations_attribute-workflowID_workflowID', 
 				'annotations_attribute-toolID_toolID', 
 				'annotations_attribute-process_process', 
@@ -151,6 +154,7 @@
 				'attributes_attribute-category', 
 				'attributes_attribute-status', 
 				'attributes_attribute-date', 
+				'attributes_attribute-time', 
 				'attributes_attribute-workflowID', 
 				'attributes_attribute-toolID', 
 				'attributes_attribute-process', 
@@ -406,7 +410,7 @@
          <div class="level1" id="toc_group_by_namespace" style="display:block">
             <div>
                <div class="level2">
-                  <p><input id="button_boxIdNamespace1" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1');" class="control" /><span class="indexGroupTitle">cwrc.ca/workflow</span></p>
+                  <p><input id="button_boxIdNamespace1" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1');" class="control" /><span class="indexGroupTitle">No namespace</span></p>
                   <div id="boxIdNamespace1" style="display:block">
                      <div class="horizontalLayout">
                         <table class="rt">
@@ -430,15 +434,15 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></div>
-                                                <div><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></div>
-                                                <div><b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b></div>
-                                                <div><b><a href="index.html#cwrc" target="_self" title="cwrc.ca/workflow">workflow:cwrc</a></b></div>
-                                                <div><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
-                                                <div><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></div>
-                                                <div><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b></div>
-                                                <div><b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b></div>
-                                                <div><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></div>
+                                                <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                                <div><b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></div>
+                                                <div><b><a href="index.html#body" target="_self" title="No namespace">body</a></b></div>
+                                                <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
+                                                <div><b><a href="index.html#message" target="_self" title="No namespace">message</a></b></div>
+                                                <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
+                                                <div><b><a href="index.html#recipient" target="_self" title="No namespace">recipient</a></b></div>
+                                                <div><b><a href="index.html#subject" target="_self" title="No namespace">subject</a></b></div>
+                                                <div><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -476,14 +480,15 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b></div>
-                                                <div><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b></div>
-                                                <div><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b></div>
-                                                <div><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b></div>
-                                                <div><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b></div>
-                                                <div><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b></div>
-                                                <div><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b></div>
-                                                <div><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b></div>
+                                                <div><b><a href="index.html#attribute-category" target="_self" title="No namespace">attribute-category</a></b></div>
+                                                <div><b><a href="index.html#attribute-date" target="_self" title="No namespace">attribute-date</a></b></div>
+                                                <div><b><a href="index.html#attribute-process" target="_self" title="No namespace">attribute-process</a></b></div>
+                                                <div><b><a href="index.html#attribute-stamp" target="_self" title="No namespace">attribute-stamp</a></b></div>
+                                                <div><b><a href="index.html#attribute-status" target="_self" title="No namespace">attribute-status</a></b></div>
+                                                <div><b><a href="index.html#attribute-time" target="_self" title="No namespace">attribute-time</a></b></div>
+                                                <div><b><a href="index.html#attribute-toolID" target="_self" title="No namespace">attribute-toolID</a></b></div>
+                                                <div><b><a href="index.html#attribute-userID" target="_self" title="No namespace">attribute-userID</a></b></div>
+                                                <div><b><a href="index.html#attribute-workflowID" target="_self" title="No namespace">attribute-workflowID</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -528,15 +533,15 @@
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Element" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></div>
-                                          <div><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></div>
-                                          <div><b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b></div>
-                                          <div><b><a href="index.html#cwrc" target="_self" title="cwrc.ca/workflow">workflow:cwrc</a></b></div>
-                                          <div><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
-                                          <div><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></div>
-                                          <div><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b></div>
-                                          <div><b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b></div>
-                                          <div><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></div>
+                                          <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                          <div><b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></div>
+                                          <div><b><a href="index.html#body" target="_self" title="No namespace">body</a></b></div>
+                                          <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
+                                          <div><b><a href="index.html#message" target="_self" title="No namespace">message</a></b></div>
+                                          <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
+                                          <div><b><a href="index.html#recipient" target="_self" title="No namespace">recipient</a></b></div>
+                                          <div><b><a href="index.html#subject" target="_self" title="No namespace">subject</a></b></div>
+                                          <div><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -574,14 +579,15 @@
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Attribute_Group" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b></div>
-                                          <div><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b></div>
-                                          <div><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b></div>
-                                          <div><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b></div>
-                                          <div><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b></div>
-                                          <div><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b></div>
-                                          <div><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b></div>
-                                          <div><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b></div>
+                                          <div><b><a href="index.html#attribute-category" target="_self" title="No namespace">attribute-category</a></b></div>
+                                          <div><b><a href="index.html#attribute-date" target="_self" title="No namespace">attribute-date</a></b></div>
+                                          <div><b><a href="index.html#attribute-process" target="_self" title="No namespace">attribute-process</a></b></div>
+                                          <div><b><a href="index.html#attribute-stamp" target="_self" title="No namespace">attribute-stamp</a></b></div>
+                                          <div><b><a href="index.html#attribute-status" target="_self" title="No namespace">attribute-status</a></b></div>
+                                          <div><b><a href="index.html#attribute-time" target="_self" title="No namespace">attribute-time</a></b></div>
+                                          <div><b><a href="index.html#attribute-toolID" target="_self" title="No namespace">attribute-toolID</a></b></div>
+                                          <div><b><a href="index.html#attribute-userID" target="_self" title="No namespace">attribute-userID</a></b></div>
+                                          <div><b><a href="index.html#attribute-workflowID" target="_self" title="No namespace">attribute-workflowID</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -627,15 +633,15 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_workflow.xsdElement" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></div>
-                                                <div><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></div>
-                                                <div><b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b></div>
-                                                <div><b><a href="index.html#cwrc" target="_self" title="cwrc.ca/workflow">workflow:cwrc</a></b></div>
-                                                <div><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
-                                                <div><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></div>
-                                                <div><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b></div>
-                                                <div><b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b></div>
-                                                <div><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></div>
+                                                <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                                <div><b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></div>
+                                                <div><b><a href="index.html#body" target="_self" title="No namespace">body</a></b></div>
+                                                <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
+                                                <div><b><a href="index.html#message" target="_self" title="No namespace">message</a></b></div>
+                                                <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
+                                                <div><b><a href="index.html#recipient" target="_self" title="No namespace">recipient</a></b></div>
+                                                <div><b><a href="index.html#subject" target="_self" title="No namespace">subject</a></b></div>
+                                                <div><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -673,14 +679,15 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_workflow.xsdAttribute_Group" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b></div>
-                                                <div><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b></div>
-                                                <div><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b></div>
-                                                <div><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b></div>
-                                                <div><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b></div>
-                                                <div><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b></div>
-                                                <div><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b></div>
-                                                <div><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b></div>
+                                                <div><b><a href="index.html#attribute-category" target="_self" title="No namespace">attribute-category</a></b></div>
+                                                <div><b><a href="index.html#attribute-date" target="_self" title="No namespace">attribute-date</a></b></div>
+                                                <div><b><a href="index.html#attribute-process" target="_self" title="No namespace">attribute-process</a></b></div>
+                                                <div><b><a href="index.html#attribute-stamp" target="_self" title="No namespace">attribute-stamp</a></b></div>
+                                                <div><b><a href="index.html#attribute-status" target="_self" title="No namespace">attribute-status</a></b></div>
+                                                <div><b><a href="index.html#attribute-time" target="_self" title="No namespace">attribute-time</a></b></div>
+                                                <div><b><a href="index.html#attribute-toolID" target="_self" title="No namespace">attribute-toolID</a></b></div>
+                                                <div><b><a href="index.html#attribute-userID" target="_self" title="No namespace">attribute-userID</a></b></div>
+                                                <div><b><a href="index.html#attribute-workflowID" target="_self" title="No namespace">attribute-workflowID</a></b></div>
                                              </div>
                                           </td>
                                        </tr>

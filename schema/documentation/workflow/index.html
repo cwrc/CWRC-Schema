@@ -21,11 +21,11 @@
 				'properties_attribute-status_status', 
 				'properties_activity_stamp', 
 				'properties_assigned_process', 
-				'properties_workflow_date', 
-				'properties_workflow_workflowID', 
-				'properties_workflow_userID', 
-				'properties_workflow_toolID', 
 				'properties_attribute-date_date', 
+				'properties_workflow_time', 
+				'properties_workflow_workflowID', 
+				'properties_workflow_toolID', 
+				'properties_attribute-time_time', 
 				'properties_attribute-workflowID_workflowID', 
 				'properties_attribute-toolID_toolID', 
 				'properties_attribute-process_process', 
@@ -50,18 +50,19 @@
 				'usedBy_attribute-status_status', 
 				'usedBy_activity_stamp', 
 				'usedBy_assigned_process', 
-				'usedBy_workflow_date', 
-				'usedBy_workflow_workflowID', 
-				'usedBy_workflow_userID', 
-				'usedBy_workflow_toolID', 
 				'usedBy_attribute-date_date', 
+				'usedBy_workflow_time', 
+				'usedBy_workflow_workflowID', 
+				'usedBy_workflow_toolID', 
+				'usedBy_attribute-time_time', 
 				'usedBy_attribute-workflowID_workflowID', 
 				'usedBy_attribute-toolID_toolID', 
 				'usedBy_attribute-process_process', 
 				'usedBy_attribute-stamp_stamp', 
 				'usedBy_attribute-userID', 
 				'usedBy_attribute-category', 
-				'usedBy_attribute-status');
+				'usedBy_attribute-status', 
+				'usedBy_attribute-date');
 
         var sourceBoxes= new Array('source_cwrc', 
 				'source_workflow', 
@@ -77,11 +78,11 @@
 				'source_attribute-status_status', 
 				'source_activity_stamp', 
 				'source_assigned_process', 
-				'source_workflow_date', 
-				'source_workflow_workflowID', 
-				'source_workflow_userID', 
-				'source_workflow_toolID', 
 				'source_attribute-date_date', 
+				'source_workflow_time', 
+				'source_workflow_workflowID', 
+				'source_workflow_toolID', 
+				'source_attribute-time_time', 
 				'source_attribute-workflowID_workflowID', 
 				'source_attribute-toolID_toolID', 
 				'source_attribute-process_process', 
@@ -90,6 +91,7 @@
 				'source_attribute-category', 
 				'source_attribute-status', 
 				'source_attribute-date', 
+				'source_attribute-time', 
 				'source_attribute-workflowID', 
 				'source_attribute-toolID', 
 				'source_attribute-process', 
@@ -114,6 +116,7 @@
 				'diagram_attribute-category', 
 				'diagram_attribute-status', 
 				'diagram_attribute-date', 
+				'diagram_attribute-time', 
 				'diagram_attribute-workflowID', 
 				'diagram_attribute-toolID', 
 				'diagram_attribute-process', 
@@ -133,11 +136,11 @@
 				'annotations_attribute-status_status', 
 				'annotations_activity_stamp', 
 				'annotations_assigned_process', 
-				'annotations_workflow_date', 
-				'annotations_workflow_workflowID', 
-				'annotations_workflow_userID', 
-				'annotations_workflow_toolID', 
 				'annotations_attribute-date_date', 
+				'annotations_workflow_time', 
+				'annotations_workflow_workflowID', 
+				'annotations_workflow_toolID', 
+				'annotations_attribute-time_time', 
 				'annotations_attribute-workflowID_workflowID', 
 				'annotations_attribute-toolID_toolID', 
 				'annotations_attribute-process_process', 
@@ -151,6 +154,7 @@
 				'attributes_attribute-category', 
 				'attributes_attribute-status', 
 				'attributes_attribute-date', 
+				'attributes_attribute-time', 
 				'attributes_attribute-workflowID', 
 				'attributes_attribute-toolID', 
 				'attributes_attribute-process', 
@@ -457,7 +461,7 @@
          <div class="level1" id="toc_group_by_namespace" style="display:block">
             <div>
                <div class="level2">
-                  <p><input id="button_boxIdNamespace1" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1');" class="control" /><span class="indexGroupTitle">cwrc.ca/workflow</span></p>
+                  <p><input id="button_boxIdNamespace1" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1');" class="control" /><span class="indexGroupTitle">No namespace</span></p>
                   <div id="boxIdNamespace1" style="display:block">
                      <div class="horizontalLayout">
                         <table class="rt">
@@ -481,15 +485,15 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></div>
-                                                <div><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></div>
-                                                <div><b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b></div>
-                                                <div><b><a href="index.html#cwrc" target="_self" title="cwrc.ca/workflow">workflow:cwrc</a></b></div>
-                                                <div><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
-                                                <div><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></div>
-                                                <div><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b></div>
-                                                <div><b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b></div>
-                                                <div><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></div>
+                                                <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                                <div><b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></div>
+                                                <div><b><a href="index.html#body" target="_self" title="No namespace">body</a></b></div>
+                                                <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
+                                                <div><b><a href="index.html#message" target="_self" title="No namespace">message</a></b></div>
+                                                <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
+                                                <div><b><a href="index.html#recipient" target="_self" title="No namespace">recipient</a></b></div>
+                                                <div><b><a href="index.html#subject" target="_self" title="No namespace">subject</a></b></div>
+                                                <div><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -527,14 +531,15 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b></div>
-                                                <div><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b></div>
-                                                <div><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b></div>
-                                                <div><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b></div>
-                                                <div><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b></div>
-                                                <div><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b></div>
-                                                <div><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b></div>
-                                                <div><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b></div>
+                                                <div><b><a href="index.html#attribute-category" target="_self" title="No namespace">attribute-category</a></b></div>
+                                                <div><b><a href="index.html#attribute-date" target="_self" title="No namespace">attribute-date</a></b></div>
+                                                <div><b><a href="index.html#attribute-process" target="_self" title="No namespace">attribute-process</a></b></div>
+                                                <div><b><a href="index.html#attribute-stamp" target="_self" title="No namespace">attribute-stamp</a></b></div>
+                                                <div><b><a href="index.html#attribute-status" target="_self" title="No namespace">attribute-status</a></b></div>
+                                                <div><b><a href="index.html#attribute-time" target="_self" title="No namespace">attribute-time</a></b></div>
+                                                <div><b><a href="index.html#attribute-toolID" target="_self" title="No namespace">attribute-toolID</a></b></div>
+                                                <div><b><a href="index.html#attribute-userID" target="_self" title="No namespace">attribute-userID</a></b></div>
+                                                <div><b><a href="index.html#attribute-workflowID" target="_self" title="No namespace">attribute-workflowID</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -579,15 +584,15 @@
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Element" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></div>
-                                          <div><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></div>
-                                          <div><b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b></div>
-                                          <div><b><a href="index.html#cwrc" target="_self" title="cwrc.ca/workflow">workflow:cwrc</a></b></div>
-                                          <div><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
-                                          <div><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></div>
-                                          <div><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b></div>
-                                          <div><b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b></div>
-                                          <div><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></div>
+                                          <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                          <div><b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></div>
+                                          <div><b><a href="index.html#body" target="_self" title="No namespace">body</a></b></div>
+                                          <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
+                                          <div><b><a href="index.html#message" target="_self" title="No namespace">message</a></b></div>
+                                          <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
+                                          <div><b><a href="index.html#recipient" target="_self" title="No namespace">recipient</a></b></div>
+                                          <div><b><a href="index.html#subject" target="_self" title="No namespace">subject</a></b></div>
+                                          <div><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -625,14 +630,15 @@
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Attribute_Group" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b></div>
-                                          <div><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b></div>
-                                          <div><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b></div>
-                                          <div><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b></div>
-                                          <div><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b></div>
-                                          <div><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b></div>
-                                          <div><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b></div>
-                                          <div><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b></div>
+                                          <div><b><a href="index.html#attribute-category" target="_self" title="No namespace">attribute-category</a></b></div>
+                                          <div><b><a href="index.html#attribute-date" target="_self" title="No namespace">attribute-date</a></b></div>
+                                          <div><b><a href="index.html#attribute-process" target="_self" title="No namespace">attribute-process</a></b></div>
+                                          <div><b><a href="index.html#attribute-stamp" target="_self" title="No namespace">attribute-stamp</a></b></div>
+                                          <div><b><a href="index.html#attribute-status" target="_self" title="No namespace">attribute-status</a></b></div>
+                                          <div><b><a href="index.html#attribute-time" target="_self" title="No namespace">attribute-time</a></b></div>
+                                          <div><b><a href="index.html#attribute-toolID" target="_self" title="No namespace">attribute-toolID</a></b></div>
+                                          <div><b><a href="index.html#attribute-userID" target="_self" title="No namespace">attribute-userID</a></b></div>
+                                          <div><b><a href="index.html#attribute-workflowID" target="_self" title="No namespace">attribute-workflowID</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -678,15 +684,15 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_workflow.xsdElement" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></div>
-                                                <div><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></div>
-                                                <div><b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b></div>
-                                                <div><b><a href="index.html#cwrc" target="_self" title="cwrc.ca/workflow">workflow:cwrc</a></b></div>
-                                                <div><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
-                                                <div><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></div>
-                                                <div><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b></div>
-                                                <div><b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b></div>
-                                                <div><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></div>
+                                                <div><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></div>
+                                                <div><b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></div>
+                                                <div><b><a href="index.html#body" target="_self" title="No namespace">body</a></b></div>
+                                                <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
+                                                <div><b><a href="index.html#message" target="_self" title="No namespace">message</a></b></div>
+                                                <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
+                                                <div><b><a href="index.html#recipient" target="_self" title="No namespace">recipient</a></b></div>
+                                                <div><b><a href="index.html#subject" target="_self" title="No namespace">subject</a></b></div>
+                                                <div><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -724,14 +730,15 @@
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_workflow.xsdAttribute_Group" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b></div>
-                                                <div><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b></div>
-                                                <div><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b></div>
-                                                <div><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b></div>
-                                                <div><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b></div>
-                                                <div><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b></div>
-                                                <div><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b></div>
-                                                <div><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b></div>
+                                                <div><b><a href="index.html#attribute-category" target="_self" title="No namespace">attribute-category</a></b></div>
+                                                <div><b><a href="index.html#attribute-date" target="_self" title="No namespace">attribute-date</a></b></div>
+                                                <div><b><a href="index.html#attribute-process" target="_self" title="No namespace">attribute-process</a></b></div>
+                                                <div><b><a href="index.html#attribute-stamp" target="_self" title="No namespace">attribute-stamp</a></b></div>
+                                                <div><b><a href="index.html#attribute-status" target="_self" title="No namespace">attribute-status</a></b></div>
+                                                <div><b><a href="index.html#attribute-time" target="_self" title="No namespace">attribute-time</a></b></div>
+                                                <div><b><a href="index.html#attribute-toolID" target="_self" title="No namespace">attribute-toolID</a></b></div>
+                                                <div><b><a href="index.html#attribute-userID" target="_self" title="No namespace">attribute-userID</a></b></div>
+                                                <div><b><a href="index.html#attribute-workflowID" target="_self" title="No namespace">attribute-workflowID</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -766,7 +773,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -799,7 +806,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="cwrc"></a><div class="componentTitle">Element <span class="qname">workflow:cwrc</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="cwrc"></a><div class="componentTitle">Element <span class="qname">cwrc</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -813,7 +820,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -838,8 +845,8 @@
                            <div class="floatRight"><input id="button_diagram_cwrc" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_cwrc');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_cwrc" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_workflow_cwrc.jpeg" usemap="#workflow_xsd_Element_workflow_cwrc" /><map name="workflow_xsd_Element_workflow_cwrc" id="workflow_xsd_Element_workflow_cwrc">
-                                 <area alt="index.tmp#workflow" href="index.html#workflow" coords="196,6,324,31" /></map></div>
+                           <div id="diagram_cwrc" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_cwrc.jpeg" usemap="#workflow_xsd_Element_cwrc" /><map name="workflow_xsd_Element_cwrc" id="workflow_xsd_Element_cwrc">
+                                 <area alt="index.tmp#workflow" href="index.html#workflow" coords="196,6,274,31" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -862,12 +869,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_cwrc" type="image" src="img/btM.gif" value="-" onclick="switchState('model_cwrc');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_cwrc" style="display:block"><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow+</a></b></div>
+                           <div id="model_cwrc" style="display:block"><b><a href="index.html#workflow" target="_self" title="No namespace">workflow+</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></td>
+                        <td><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -878,9 +885,9 @@
                            <div id="instance_cwrc" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;workflow:cwrc</span><span class="tT"> </span><span class="tAN">xmlns:workflow=</span><span class="tAV">"cwrc.ca/workflow"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;workflow:workflow</span><span class="tT"> </span><span class="tAN">date=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">toolID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">userID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">workflowID=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/workflow:workflow&gt;</span><span class="tI">
-</span><span class="tEl">&lt;/workflow:cwrc&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;cwrc</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;workflow</span><span class="tT"> </span><span class="tAN">date=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">time=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">toolID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">userID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">workflowID=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/workflow&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/cwrc&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -901,7 +908,7 @@
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> ref=</span><span class="tAV">"workflow:workflow"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> ref=</span><span class="tAV">"workflow"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
@@ -921,7 +928,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="workflow"></a><div class="componentTitle">Element <span class="qname">workflow:workflow</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="workflow"></a><div class="componentTitle">Element <span class="qname">workflow</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -935,7 +942,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -962,13 +969,14 @@
                            <div class="floatRight"><input id="button_diagram_workflow" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_workflow');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_workflow" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_workflow_workflow.jpeg" usemap="#workflow_xsd_Element_workflow_workflow" /><map name="workflow_xsd_Element_workflow_workflow" id="workflow_xsd_Element_workflow_workflow">
-                                 <area alt="index.tmp#workflow_date" href="index.html#workflow_date" coords="140,41,261,85" />
-                                 <area alt="index.tmp#workflow_workflowID" href="index.html#workflow_workflowID" coords="140,126,246,170" />
-                                 <area alt="index.tmp#workflow_userID" href="index.html#workflow_userID" coords="140,225,259,269" />
-                                 <area alt="index.tmp#workflow_toolID" href="index.html#workflow_toolID" coords="140,310,259,354" />
-                                 <area alt="index.tmp#activity" href="index.html#activity" coords="197,402,312,427" />
-                                 <area alt="index.tmp#assigned" href="index.html#assigned" coords="197,482,322,507" /></map></div>
+                           <div id="diagram_workflow" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_workflow.jpeg" usemap="#workflow_xsd_Element_workflow" /><map name="workflow_xsd_Element_workflow" id="workflow_xsd_Element_workflow">
+                                 <area alt="index.tmp#attribute-date" href="index.html#attribute-date" coords="143,44,262,70" />
+                                 <area alt="index.tmp#workflow_time" href="index.html#workflow_time" coords="140,85,237,129" />
+                                 <area alt="index.tmp#workflow_workflowID" href="index.html#workflow_workflowID" coords="140,198,246,242" />
+                                 <area alt="index.tmp#attribute-userID" href="index.html#attribute-userID" coords="143,300,272,326" />
+                                 <area alt="index.tmp#workflow_toolID" href="index.html#workflow_toolID" coords="140,341,259,385" />
+                                 <area alt="index.tmp#activity" href="index.html#activity" coords="197,433,262,458" />
+                                 <area alt="index.tmp#assigned" href="index.html#assigned" coords="197,527,272,552" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -997,7 +1005,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#cwrc" target="_self" title="cwrc.ca/workflow">workflow:cwrc</a></b></td>
+                                    <td><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1007,12 +1015,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_workflow" type="image" src="img/btM.gif" value="-" onclick="switchState('model_workflow');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_workflow" style="display:block"><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity{0,1}</a></b> , <b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned{0,1}</a></b></div>
+                           <div id="model_workflow" style="display:block"><b><a href="index.html#activity" target="_self" title="No namespace">activity{0,1}</a></b> , <b><a href="index.html#assigned" target="_self" title="No namespace">assigned{0,1}</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b>, <b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></td>
+                        <td><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b>, <b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1023,10 +1031,10 @@
                            <div id="instance_workflow" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;workflow:workflow</span><span class="tT"> </span><span class="tAN">date=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">toolID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">userID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">workflowID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xmlns:workflow=</span><span class="tAV">"cwrc.ca/workflow"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;workflow:activity</span><span class="tT"> </span><span class="tAN">category=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">stamp=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">status=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/workflow:activity&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;workflow:assigned</span><span class="tT"> </span><span class="tAN">category=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">process=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/workflow:assigned&gt;</span><span class="tI">
-</span><span class="tEl">&lt;/workflow:workflow&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;workflow</span><span class="tT"> </span><span class="tAN">date=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">time=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">toolID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">userID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">workflowID=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;activity</span><span class="tT"> </span><span class="tAN">category=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">stamp=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">status=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/activity&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;assigned</span><span class="tT"> </span><span class="tAN">category=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">process=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/assigned&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/workflow&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -1049,14 +1057,28 @@
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#workflow_date" target="_self" title="No namespace">date</a></b></td>
-                                    <td><b>xs:dateTime</b></td>
+                                    <td class="firstColumn"><b><a href="index.html#attribute-date_date" target="_self" title="No namespace">date</a></b></td>
+                                    <td><b>xs:date</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Date format in the form of YYYY-MM-DD</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#workflow_time" target="_self" title="No namespace">time</a></b></td>
+                                    <td><b>xs:time</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation">
                                           <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                              <tr>
-                                                <td width="100%"><pre><span class="tT">Date/time format in the form of YYYY-MM-DDThh:mm:ss</span></pre></td>
+                                                <td width="100%"><pre><span class="tT">Time format in the form of hh:mm:ss.  Note: can append an optional timezone offset to the time value: -07:00 for MST, and -06:00 for MDT</span></pre></td>
                                              </tr>
                                           </table>
                                        </div>
@@ -1077,9 +1099,9 @@
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b><a href="index.html#workflow_userID" target="_self" title="No namespace">userID</a></b></td>
+                                    <td class="firstColumn"><b><a href="index.html#attribute-userID_userID" target="_self" title="No namespace">userID</a></b></td>
                                     <td><b>xs:NCName</b></td>
-                                    <td>optional</td>
+                                    <td>required</td>
                                     <td>
                                        <div class="annotation">
                                           <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
@@ -1123,12 +1145,13 @@
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"workflow:activity"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"workflow:assigned"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"activity"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"assigned"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"date"</span><span class="tAN"> type=</span><span class="tAV">"xs:dateTime"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"attribute-date"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"time"</span><span class="tAN"> type=</span><span class="tAV">"xs:time"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Date/time format in the form of YYYY-MM-DDThh:mm:ss</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Time format in the form of hh:mm:ss. Note: can append an optional timezone offset to the time value: -07:00 for MST, and -06:00 for MDT</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"workflowID"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
@@ -1136,11 +1159,7 @@
         </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Attribute workflowID captures a string that identifies a particular workflow (set of processes to be tracked by workflow system) defined by users.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"userID"</span><span class="tAN"> type=</span><span class="tAV">"xs:NCName"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">User ID</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"attribute-userID"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"toolID"</span><span class="tAN"> type=</span><span class="tAV">"xs:NCName"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Tool ID</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
@@ -1164,7 +1183,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="activity"></a><div class="componentTitle">Element <span class="qname">workflow:activity</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="activity"></a><div class="componentTitle">Element <span class="qname">activity</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1178,7 +1197,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1204,12 +1223,12 @@
                            <div class="floatRight"><input id="button_diagram_activity" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_activity');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_activity" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_workflow_activity.jpeg" usemap="#workflow_xsd_Element_workflow_activity" /><map name="workflow_xsd_Element_workflow_activity" id="workflow_xsd_Element_workflow_activity">
-                                 <area alt="index.tmp#attribute-category" href="index.html#attribute-category" coords="150,44,341,70" />
-                                 <area alt="index.tmp#attribute-status" href="index.html#attribute-status" coords="150,88,328,114" />
+                           <div id="diagram_activity" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_activity.jpeg" usemap="#workflow_xsd_Element_activity" /><map name="workflow_xsd_Element_activity" id="workflow_xsd_Element_activity">
+                                 <area alt="index.tmp#attribute-category" href="index.html#attribute-category" coords="150,44,291,70" />
+                                 <area alt="index.tmp#attribute-status" href="index.html#attribute-status" coords="150,88,278,114" />
                                  <area alt="index.tmp#activity_stamp" href="index.html#activity_stamp" coords="147,129,322,173" />
                                  <area alt="index.tmp#note" href="index.html#note" coords="204,235,309,279" />
-                                 <area alt="index.tmp#message" href="index.html#message" coords="204,334,329,359" /></map></div>
+                                 <area alt="index.tmp#message" href="index.html#message" coords="204,334,279,359" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -1238,7 +1257,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></td>
+                                    <td><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1248,12 +1267,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_activity" type="image" src="img/btM.gif" value="-" onclick="switchState('model_activity');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_activity" style="display:block"><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b> | <b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
+                           <div id="model_activity" style="display:block"><b><a href="index.html#note" target="_self" title="No namespace">note</a></b> | <b><a href="index.html#message" target="_self" title="No namespace">message</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b>, <b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></td>
+                        <td><b><a href="index.html#message" target="_self" title="No namespace">message</a></b>, <b><a href="index.html#note" target="_self" title="No namespace">note</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1264,10 +1283,10 @@
                            <div id="instance_activity" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;workflow:activity</span><span class="tT"> </span><span class="tAN">category=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">stamp=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">status=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xmlns:workflow=</span><span class="tAV">"cwrc.ca/workflow"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;workflow:note</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/workflow:note&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;workflow:message</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/workflow:message&gt;</span><span class="tI">
-</span><span class="tEl">&lt;/workflow:activity&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;activity</span><span class="tT"> </span><span class="tAN">category=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">stamp=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">status=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;note</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;message</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/message&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/activity&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -1355,11 +1374,11 @@
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"workflow:note"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"workflow:message"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"note"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"message"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"workflow:attribute-category"</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"workflow:attribute-status"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"attribute-category"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"attribute-status"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"stamp"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Activity types or stamps. These finer categories can be created on a project-specific basis, and particular projects may wish to rename these categories (i.e. Orlando may want to have ‘cas’ instead of ‘ckd’, another project may want to give it a stamp that according to a French name), but the basic activities categories (primitives) should stay the same. NOTE: the values in the Activity type column are not exhaustive--more values can be created. The included values represent a minimum of stamps that can be offered as default to all projects.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
@@ -1532,7 +1551,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="note"></a><div class="componentTitle">Element <span class="qname">workflow:note</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="note"></a><div class="componentTitle">Element <span class="qname">note</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1546,7 +1565,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1571,7 +1590,7 @@
                            <div class="floatRight"><input id="button_diagram_note" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_note');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_note" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_workflow_note.jpeg" /></div>
+                           <div id="diagram_note" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_note.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -1604,7 +1623,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Elements </td>
-                                    <td><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b>, <b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></td>
+                                    <td><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b>, <b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1640,7 +1659,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="message"></a><div class="componentTitle">Element <span class="qname">workflow:message</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="message"></a><div class="componentTitle">Element <span class="qname">message</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1654,7 +1673,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1679,10 +1698,10 @@
                            <div class="floatRight"><input id="button_diagram_message" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_message');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_message" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_workflow_message.jpeg" usemap="#workflow_xsd_Element_workflow_message" /><map name="workflow_xsd_Element_workflow_message" id="workflow_xsd_Element_workflow_message">
-                                 <area alt="index.tmp#recipient" href="index.html#recipient" coords="214,2,336,27" />
-                                 <area alt="index.tmp#subject" href="index.html#subject" coords="214,82,330,126" />
-                                 <area alt="index.tmp#body" href="index.html#body" coords="214,167,319,211" /></map></div>
+                           <div id="diagram_message" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_message.jpeg" usemap="#workflow_xsd_Element_message" /><map name="workflow_xsd_Element_message" id="workflow_xsd_Element_message">
+                                 <area alt="index.tmp#recipient" href="index.html#recipient" coords="214,2,286,27" />
+                                 <area alt="index.tmp#subject" href="index.html#subject" coords="214,96,319,140" />
+                                 <area alt="index.tmp#body" href="index.html#body" coords="214,181,319,225" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -1711,7 +1730,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Elements </td>
-                                    <td><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b>, <b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></td>
+                                    <td><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b>, <b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1721,12 +1740,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_message" type="image" src="img/btM.gif" value="-" onclick="switchState('model_message');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_message" style="display:block"><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b> | <b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b> | <b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b></div>
+                           <div id="model_message" style="display:block"><b><a href="index.html#recipient" target="_self" title="No namespace">recipient</a></b> | <b><a href="index.html#subject" target="_self" title="No namespace">subject</a></b> | <b><a href="index.html#body" target="_self" title="No namespace">body</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#body" target="_self" title="cwrc.ca/workflow">workflow:body</a></b>, <b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b>, <b><a href="index.html#subject" target="_self" title="cwrc.ca/workflow">workflow:subject</a></b></td>
+                        <td><b><a href="index.html#body" target="_self" title="No namespace">body</a></b>, <b><a href="index.html#recipient" target="_self" title="No namespace">recipient</a></b>, <b><a href="index.html#subject" target="_self" title="No namespace">subject</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1737,11 +1756,11 @@
                            <div id="instance_message" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;workflow:message</span><span class="tT"> </span><span class="tAN">xmlns:workflow=</span><span class="tAV">"cwrc.ca/workflow"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;workflow:recipient</span><span class="tT"> </span><span class="tAN">userID=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/workflow:recipient&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;workflow:subject</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/workflow:subject&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;workflow:body</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/workflow:body&gt;</span><span class="tI">
-</span><span class="tEl">&lt;/workflow:message&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;message</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;recipient</span><span class="tT"> </span><span class="tAN">userID=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/recipient&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;subject</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/subject&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;body</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/body&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/message&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -1762,9 +1781,9 @@
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"workflow:recipient"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"workflow:subject"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"workflow:body"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"recipient"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"subject"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"body"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
@@ -1784,7 +1803,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="recipient"></a><div class="componentTitle">Element <span class="qname">workflow:recipient</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="recipient"></a><div class="componentTitle">Element <span class="qname">recipient</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1798,7 +1817,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1823,8 +1842,8 @@
                            <div class="floatRight"><input id="button_diagram_recipient" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_recipient');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_recipient" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_workflow_recipient.jpeg" usemap="#workflow_xsd_Element_workflow_recipient" /><map name="workflow_xsd_Element_workflow_recipient" id="workflow_xsd_Element_workflow_recipient">
-                                 <area alt="index.tmp#attribute-userID" href="index.html#attribute-userID" coords="137,44,316,70" /></map></div>
+                           <div id="diagram_recipient" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_recipient.jpeg" usemap="#workflow_xsd_Element_recipient" /><map name="workflow_xsd_Element_recipient" id="workflow_xsd_Element_recipient">
+                                 <area alt="index.tmp#attribute-userID" href="index.html#attribute-userID" coords="137,44,266,70" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -1853,7 +1872,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></td>
+                                    <td><b><a href="index.html#message" target="_self" title="No namespace">message</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -1907,7 +1926,7 @@
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">To send a message to recipients, element recipient captures a user's ID in the element's @userID attribute.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"workflow:attribute-userID"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"attribute-userID"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -1926,7 +1945,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="subject"></a><div class="componentTitle">Element <span class="qname">workflow:subject</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="subject"></a><div class="componentTitle">Element <span class="qname">subject</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1940,7 +1959,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1965,7 +1984,7 @@
                            <div class="floatRight"><input id="button_diagram_subject" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_subject');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_subject" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_workflow_subject.jpeg" /></div>
+                           <div id="diagram_subject" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_subject.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -1998,7 +2017,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></td>
+                                    <td><b><a href="index.html#message" target="_self" title="No namespace">message</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -2034,7 +2053,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="body"></a><div class="componentTitle">Element <span class="qname">workflow:body</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="body"></a><div class="componentTitle">Element <span class="qname">body</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -2048,7 +2067,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -2073,7 +2092,7 @@
                            <div class="floatRight"><input id="button_diagram_body" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_body');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_body" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_workflow_body.jpeg" /></div>
+                           <div id="diagram_body" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_body.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -2106,7 +2125,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></td>
+                                    <td><b><a href="index.html#message" target="_self" title="No namespace">message</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -2142,7 +2161,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="assigned"></a><div class="componentTitle">Element <span class="qname">workflow:assigned</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="assigned"></a><div class="componentTitle">Element <span class="qname">assigned</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -2156,7 +2175,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -2182,11 +2201,11 @@
                            <div class="floatRight"><input id="button_diagram_assigned" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_assigned');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_assigned" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_workflow_assigned.jpeg" usemap="#workflow_xsd_Element_workflow_assigned" /><map name="workflow_xsd_Element_workflow_assigned" id="workflow_xsd_Element_workflow_assigned">
-                                 <area alt="index.tmp#attribute-category" href="index.html#attribute-category" coords="160,44,351,70" />
+                           <div id="diagram_assigned" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Element_assigned.jpeg" usemap="#workflow_xsd_Element_assigned" /><map name="workflow_xsd_Element_assigned" id="workflow_xsd_Element_assigned">
+                                 <area alt="index.tmp#attribute-category" href="index.html#attribute-category" coords="160,44,301,70" />
                                  <area alt="index.tmp#assigned_process" href="index.html#assigned_process" coords="157,85,262,129" />
                                  <area alt="index.tmp#note" href="index.html#note" coords="214,177,319,221" />
-                                 <area alt="index.tmp#message" href="index.html#message" coords="214,276,339,301" /></map></div>
+                                 <area alt="index.tmp#message" href="index.html#message" coords="214,276,289,301" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -2215,7 +2234,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></td>
+                                    <td><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -2225,12 +2244,12 @@
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_assigned" type="image" src="img/btM.gif" value="-" onclick="switchState('model_assigned');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_assigned" style="display:block"><b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b> | <b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b></div>
+                           <div id="model_assigned" style="display:block"><b><a href="index.html#note" target="_self" title="No namespace">note</a></b> | <b><a href="index.html#message" target="_self" title="No namespace">message</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#message" target="_self" title="cwrc.ca/workflow">workflow:message</a></b>, <b><a href="index.html#note" target="_self" title="cwrc.ca/workflow">workflow:note</a></b></td>
+                        <td><b><a href="index.html#message" target="_self" title="No namespace">message</a></b>, <b><a href="index.html#note" target="_self" title="No namespace">note</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -2241,10 +2260,10 @@
                            <div id="instance_assigned" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;workflow:assigned</span><span class="tT"> </span><span class="tAN">category=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">process=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xmlns:workflow=</span><span class="tAV">"cwrc.ca/workflow"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;workflow:note</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/workflow:note&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;workflow:message</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/workflow:message&gt;</span><span class="tI">
-</span><span class="tEl">&lt;/workflow:assigned&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tEl">&lt;assigned</span><span class="tT"> </span><span class="tAN">category=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">process=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;note</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;message</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/message&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/assigned&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -2315,10 +2334,10 @@
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"workflow:note"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"workflow:message"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"note"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"message"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"workflow:attribute-category"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> ref=</span><span class="tAV">"attribute-category"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"process"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Some id used to trigger a process by some tool.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
@@ -2342,7 +2361,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-userID_userID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b> / @userID</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-userID_userID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-userID" target="_self" title="No namespace">attribute-userID</a></b> / @userID</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -2405,7 +2424,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Attribute Group </td>
-                                    <td><b><a href="index.html#attribute-userID" target="_self" title="cwrc.ca/workflow">workflow:attribute-userID</a></b></td>
+                                    <td><b><a href="index.html#attribute-userID" target="_self" title="No namespace">attribute-userID</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -2441,7 +2460,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-category_category"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b> / @category</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-category_category"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-category" target="_self" title="No namespace">attribute-category</a></b> / @category</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -2674,7 +2693,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Attribute Group </td>
-                                    <td><b><a href="index.html#attribute-category" target="_self" title="cwrc.ca/workflow">workflow:attribute-category</a></b></td>
+                                    <td><b><a href="index.html#attribute-category" target="_self" title="No namespace">attribute-category</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -2774,7 +2793,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-status_status"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b> / @status</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-status_status"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-status" target="_self" title="No namespace">attribute-status</a></b> / @status</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -2901,7 +2920,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Attribute Group </td>
-                                    <td><b><a href="index.html#attribute-status" target="_self" title="cwrc.ca/workflow">workflow:attribute-status</a></b></td>
+                                    <td><b><a href="index.html#attribute-status" target="_self" title="No namespace">attribute-status</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -2961,7 +2980,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="activity_stamp"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b> / @stamp</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="activity_stamp"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b> / @stamp</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -3416,7 +3435,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></td>
+                                    <td><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -3601,7 +3620,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="assigned_process"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b> / @process</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="assigned_process"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b> / @process</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -3664,7 +3683,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></td>
+                                    <td><b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -3700,7 +3719,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="workflow_date"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b> / @date</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-date_date"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-date" target="_self" title="No namespace">attribute-date</a></b> / @date</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -3719,14 +3738,14 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_workflow_date" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_workflow_date');" class="control" /></div>
+                           <div class="floatRight"><input id="button_annotations_attribute-date_date" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_attribute-date_date');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="annotations_workflow_date" style="display:block">
+                           <div id="annotations_attribute-date_date" style="display:block">
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Date/time format in the form of YYYY-MM-DDThh:mm:ss</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Date format in the form of YYYY-MM-DD</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -3735,19 +3754,19 @@
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td><b>xs:dateTime</b></td>
+                        <td><b>xs:date</b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_workflow_date" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_workflow_date');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_attribute-date_date" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_attribute-date_date');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_workflow_date" style="display:block">
+                           <div id="properties_attribute-date_date" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
-                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
-                                    <td><b>simple</b></td>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
                                  </tr>
                               </table>
                            </div>
@@ -3756,14 +3775,14 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_workflow_date" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_workflow_date');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_attribute-date_date" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_attribute-date_date');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_workflow_date" style="display:block">
+                           <div id="usedBy_attribute-date_date" style="display:block">
                               <table class="usedByTable">
                                  <tr>
-                                    <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></td>
+                                    <td class="firstColumn">Attribute Group </td>
+                                    <td><b><a href="index.html#attribute-date" target="_self" title="No namespace">attribute-date</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -3772,15 +3791,15 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_workflow_date" type="image" src="img/btM.gif" value="-" onclick="switchState('source_workflow_date');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_attribute-date_date" type="image" src="img/btM.gif" value="-" onclick="switchState('source_attribute-date_date');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_workflow_date" style="display:block">
+                           <div id="source_attribute-date_date" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"date"</span><span class="tAN"> type=</span><span class="tAV">"xs:dateTime"</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"date"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Date/time format in the form of YYYY-MM-DDThh:mm:ss</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Date format in the form of YYYY-MM-DD</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
@@ -3799,7 +3818,106 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="workflow_workflowID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b> / @workflowID</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="workflow_time"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b> / @time</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_workflow_time" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_workflow_time');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_workflow_time" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Time format in the form of hh:mm:ss.  Note: can append an optional timezone offset to the time value: -07:00 for MST, and -06:00 for MDT</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:time</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_workflow_time" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_workflow_time');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_workflow_time" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_workflow_time" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_workflow_time');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_workflow_time" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_workflow_time" type="image" src="img/btM.gif" value="-" onclick="switchState('source_workflow_time');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_workflow_time" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"time"</span><span class="tAN"> type=</span><span class="tAV">"xs:time"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Time format in the form of hh:mm:ss. Note: can append an optional timezone offset to the time value: -07:00 for MST, and -06:00 for MDT</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="workflow_workflowID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b> / @workflowID</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -3862,7 +3980,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></td>
+                                    <td><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -3898,106 +4016,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="workflow_userID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b> / @userID</span></div>
-      <table class="rt">
-         <tr>
-            <td class="rt_cornerTopLeft"></td>
-            <td class="rt_lineTop"></td>
-            <td class="rt_cornerTopRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_lineLeft"></td>
-            <td class="rt_content">
-               <table class="component">
-                  <tbody>
-                     <tr>
-                        <td class="firstColumn"><b>Namespace</b></td>
-                        <td>No namespace</td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_workflow_userID" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_workflow_userID');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="annotations_workflow_userID" style="display:block">
-                              <div class="annotation">
-                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                    <tr>
-                                       <td width="100%"><pre><span class="tT">User ID</span></pre></td>
-                                    </tr>
-                                 </table>
-                              </div>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn"><b>Type</b></td>
-                        <td><b>xs:NCName</b></td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_workflow_userID" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_workflow_userID');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="properties_workflow_userID" style="display:block">
-                              <table class="propertiesTable">
-                                 <tr>
-                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
-                                    <td><b>simple</b></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_workflow_userID" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_workflow_userID');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="usedBy_workflow_userID" style="display:block">
-                              <table class="usedByTable">
-                                 <tr>
-                                    <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_workflow_userID" type="image" src="img/btM.gif" value="-" onclick="switchState('source_workflow_userID');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="source_workflow_userID" style="display:block">
-                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                 <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"userID"</span><span class="tAN"> type=</span><span class="tAV">"xs:NCName"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">User ID</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-</span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
-            </td>
-            <td class="rt_lineRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_cornerBottomLeft"></td>
-            <td class="rt_lineBottom"></td>
-            <td class="rt_cornerBottomRight"></td>
-         </tr>
-      </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="workflow_toolID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b> / @toolID</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="workflow_toolID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b> / @toolID</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -4060,7 +4079,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#workflow" target="_self" title="cwrc.ca/workflow">workflow:workflow</a></b></td>
+                                    <td><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -4096,7 +4115,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-date_date"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b> / @date</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-time_time"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-time" target="_self" title="No namespace">attribute-time</a></b> / @time</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -4115,14 +4134,14 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_attribute-date_date" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_attribute-date_date');" class="control" /></div>
+                           <div class="floatRight"><input id="button_annotations_attribute-time_time" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_attribute-time_time');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="annotations_attribute-date_date" style="display:block">
+                           <div id="annotations_attribute-time_time" style="display:block">
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">Date/time format in the form of YYYY-MM-DDThh:mm:ss</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">Time format in the form of hh:mm:ss.  Note: can append an optional timezone offset to the time value: -07:00 for MST, and -06:00 for MDT</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -4131,15 +4150,15 @@
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td><b>xs:dateTime</b></td>
+                        <td><b>xs:time</b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_attribute-date_date" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_attribute-date_date');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_attribute-time_time" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_attribute-time_time');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_attribute-date_date" style="display:block">
+                           <div id="properties_attribute-time_time" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">use</td>
@@ -4152,14 +4171,14 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_attribute-date_date" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_attribute-date_date');" class="control" /></div>
+                           <div class="floatRight"><input id="button_usedBy_attribute-time_time" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_attribute-time_time');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="usedBy_attribute-date_date" style="display:block">
+                           <div id="usedBy_attribute-time_time" style="display:block">
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Attribute Group </td>
-                                    <td><b><a href="index.html#attribute-date" target="_self" title="cwrc.ca/workflow">workflow:attribute-date</a></b></td>
+                                    <td><b><a href="index.html#attribute-time" target="_self" title="No namespace">attribute-time</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -4168,15 +4187,15 @@
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_attribute-date_date" type="image" src="img/btM.gif" value="-" onclick="switchState('source_attribute-date_date');" class="control" /></div>
+                           <div class="floatRight"><input id="button_source_attribute-time_time" type="image" src="img/btM.gif" value="-" onclick="switchState('source_attribute-time_time');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="source_attribute-date_date" style="display:block">
+                           <div id="source_attribute-time_time" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"date"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:dateTime"</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"time"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:time"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Date/time format in the form of YYYY-MM-DDThh:mm:ss</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Time format in the form of hh:mm:ss. Note: can append an optional timezone offset to the time value: -07:00 for MST, and -06:00 for MDT</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
@@ -4195,7 +4214,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-workflowID_workflowID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b> / @workflowID</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-workflowID_workflowID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-workflowID" target="_self" title="No namespace">attribute-workflowID</a></b> / @workflowID</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -4258,7 +4277,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Attribute Group </td>
-                                    <td><b><a href="index.html#attribute-workflowID" target="_self" title="cwrc.ca/workflow">workflow:attribute-workflowID</a></b></td>
+                                    <td><b><a href="index.html#attribute-workflowID" target="_self" title="No namespace">attribute-workflowID</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -4294,7 +4313,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-toolID_toolID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b> / @toolID</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-toolID_toolID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-toolID" target="_self" title="No namespace">attribute-toolID</a></b> / @toolID</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -4357,7 +4376,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Attribute Group </td>
-                                    <td><b><a href="index.html#attribute-toolID" target="_self" title="cwrc.ca/workflow">workflow:attribute-toolID</a></b></td>
+                                    <td><b><a href="index.html#attribute-toolID" target="_self" title="No namespace">attribute-toolID</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -4393,7 +4412,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-process_process"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b> / @process</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-process_process"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-process" target="_self" title="No namespace">attribute-process</a></b> / @process</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -4456,7 +4475,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Attribute Group </td>
-                                    <td><b><a href="index.html#attribute-process" target="_self" title="cwrc.ca/workflow">workflow:attribute-process</a></b></td>
+                                    <td><b><a href="index.html#attribute-process" target="_self" title="No namespace">attribute-process</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -4492,7 +4511,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-stamp_stamp"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b> / @stamp</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-stamp_stamp"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#attribute-stamp" target="_self" title="No namespace">attribute-stamp</a></b> / @stamp</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -4947,7 +4966,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Attribute Group </td>
-                                    <td><b><a href="index.html#attribute-stamp" target="_self" title="cwrc.ca/workflow">workflow:attribute-stamp</a></b></td>
+                                    <td><b><a href="index.html#attribute-stamp" target="_self" title="No namespace">attribute-stamp</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -5132,7 +5151,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-userID"></a><div class="componentTitle">Attribute Group <span class="qname">workflow:attribute-userID</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-userID"></a><div class="componentTitle">Attribute Group <span class="qname">attribute-userID</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -5146,7 +5165,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -5154,7 +5173,7 @@
                            <div class="floatRight"><input id="button_diagram_attribute-userID" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_attribute-userID');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_attribute-userID" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_workflow_attribute-userID.jpeg" usemap="#workflow_xsd_Attribute_Group_workflow_attribute-userID" /><map name="workflow_xsd_Attribute_Group_workflow_attribute-userID" id="workflow_xsd_Attribute_Group_workflow_attribute-userID">
+                           <div id="diagram_attribute-userID" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_attribute-userID.jpeg" usemap="#workflow_xsd_Attribute_Group_attribute-userID" /><map name="workflow_xsd_Attribute_Group_attribute-userID" id="workflow_xsd_Attribute_Group_attribute-userID">
                                  <area alt="index.tmp#attribute-userID_userID" href="index.html#attribute-userID_userID" coords="157,0,276,44" /></map></div>
                         </td>
                      </tr>
@@ -5167,8 +5186,8 @@
                            <div id="usedBy_attribute-userID" style="display:block">
                               <table class="usedByTable">
                                  <tr>
-                                    <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#recipient" target="_self" title="cwrc.ca/workflow">workflow:recipient</a></b></td>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="index.html#recipient" target="_self" title="No namespace">recipient</a></b>, <b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -5240,7 +5259,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-category"></a><div class="componentTitle">Attribute Group <span class="qname">workflow:attribute-category</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-category"></a><div class="componentTitle">Attribute Group <span class="qname">attribute-category</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -5254,7 +5273,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -5262,7 +5281,7 @@
                            <div class="floatRight"><input id="button_diagram_attribute-category" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_attribute-category');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_attribute-category" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_workflow_attribute-category.jpeg" usemap="#workflow_xsd_Attribute_Group_workflow_attribute-category" /><map name="workflow_xsd_Attribute_Group_workflow_attribute-category" id="workflow_xsd_Attribute_Group_workflow_attribute-category">
+                           <div id="diagram_attribute-category" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_attribute-category.jpeg" usemap="#workflow_xsd_Attribute_Group_attribute-category" /><map name="workflow_xsd_Attribute_Group_attribute-category" id="workflow_xsd_Attribute_Group_attribute-category">
                                  <area alt="index.tmp#attribute-category_category" href="index.html#attribute-category_category" coords="169,0,344,44" /></map></div>
                         </td>
                      </tr>
@@ -5276,7 +5295,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Elements </td>
-                                    <td><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b>, <b><a href="index.html#assigned" target="_self" title="cwrc.ca/workflow">workflow:assigned</a></b></td>
+                                    <td><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b>, <b><a href="index.html#assigned" target="_self" title="No namespace">assigned</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -5414,7 +5433,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-status"></a><div class="componentTitle">Attribute Group <span class="qname">workflow:attribute-status</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-status"></a><div class="componentTitle">Attribute Group <span class="qname">attribute-status</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -5428,7 +5447,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -5436,7 +5455,7 @@
                            <div class="floatRight"><input id="button_diagram_attribute-status" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_attribute-status');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_attribute-status" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_workflow_attribute-status.jpeg" usemap="#workflow_xsd_Attribute_Group_workflow_attribute-status" /><map name="workflow_xsd_Attribute_Group_workflow_attribute-status" id="workflow_xsd_Attribute_Group_workflow_attribute-status">
+                           <div id="diagram_attribute-status" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_attribute-status.jpeg" usemap="#workflow_xsd_Attribute_Group_attribute-status" /><map name="workflow_xsd_Attribute_Group_attribute-status" id="workflow_xsd_Attribute_Group_attribute-status">
                                  <area alt="index.tmp#attribute-status_status" href="index.html#attribute-status_status" coords="156,0,346,44" /></map></div>
                         </td>
                      </tr>
@@ -5450,7 +5469,7 @@
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#activity" target="_self" title="cwrc.ca/workflow">workflow:activity</a></b></td>
+                                    <td><b><a href="index.html#activity" target="_self" title="No namespace">activity</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -5546,7 +5565,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-date"></a><div class="componentTitle">Attribute Group <span class="qname">workflow:attribute-date</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-date"></a><div class="componentTitle">Attribute Group <span class="qname">attribute-date</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -5560,7 +5579,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -5568,8 +5587,24 @@
                            <div class="floatRight"><input id="button_diagram_attribute-date" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_attribute-date');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_attribute-date" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_workflow_attribute-date.jpeg" usemap="#workflow_xsd_Attribute_Group_workflow_attribute-date" /><map name="workflow_xsd_Attribute_Group_workflow_attribute-date" id="workflow_xsd_Attribute_Group_workflow_attribute-date">
-                                 <area alt="index.tmp#attribute-date_date" href="index.html#attribute-date_date" coords="147,0,268,44" /></map></div>
+                           <div id="diagram_attribute-date" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_attribute-date.jpeg" usemap="#workflow_xsd_Attribute_Group_attribute-date" /><map name="workflow_xsd_Attribute_Group_attribute-date" id="workflow_xsd_Attribute_Group_attribute-date">
+                                 <area alt="index.tmp#attribute-date_date" href="index.html#attribute-date_date" coords="147,0,246,44" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_attribute-date" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_attribute-date');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_attribute-date" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#workflow" target="_self" title="No namespace">workflow</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
                         </td>
                      </tr>
                      <tr>
@@ -5590,13 +5625,13 @@
                                  </thead>
                                  <tr>
                                     <td class="firstColumn"><b><a href="index.html#attribute-date_date" target="_self" title="No namespace">date</a></b></td>
-                                    <td><b>xs:dateTime</b></td>
+                                    <td><b>xs:date</b></td>
                                     <td>required</td>
                                     <td>
                                        <div class="annotation">
                                           <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                              <tr>
-                                                <td width="100%"><pre><span class="tT">Date/time format in the form of YYYY-MM-DDThh:mm:ss</span></pre></td>
+                                                <td width="100%"><pre><span class="tT">Date format in the form of YYYY-MM-DD</span></pre></td>
                                              </tr>
                                           </table>
                                        </div>
@@ -5616,9 +5651,9 @@
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> name=</span><span class="tAV">"attribute-date"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"date"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:dateTime"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"date"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Date/time format in the form of YYYY-MM-DDThh:mm:ss</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Date format in the form of YYYY-MM-DD</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attributeGroup&gt;</span></pre></td>
@@ -5638,7 +5673,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-workflowID"></a><div class="componentTitle">Attribute Group <span class="qname">workflow:attribute-workflowID</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-time"></a><div class="componentTitle">Attribute Group <span class="qname">attribute-time</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -5652,7 +5687,99 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_attribute-time" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_attribute-time');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_attribute-time" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_attribute-time.jpeg" usemap="#workflow_xsd_Attribute_Group_attribute-time" /><map name="workflow_xsd_Attribute_Group_attribute-time" id="workflow_xsd_Attribute_Group_attribute-time">
+                                 <area alt="index.tmp#attribute-time_time" href="index.html#attribute-time_time" coords="145,0,242,44" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_attribute-time" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_attribute-time');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_attribute-time" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th>Annotation</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#attribute-time_time" target="_self" title="No namespace">time</a></b></td>
+                                    <td><b>xs:time</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Time format in the form of hh:mm:ss.  Note: can append an optional timezone offset to the time value: -07:00 for MST, and -06:00 for MDT</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_attribute-time" type="image" src="img/btM.gif" value="-" onclick="switchState('source_attribute-time');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_attribute-time" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> name=</span><span class="tAV">"attribute-time"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"time"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:time"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Time format in the form of hh:mm:ss. Note: can append an optional timezone offset to the time value: -07:00 for MST, and -06:00 for MDT</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attributeGroup&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-workflowID"></a><div class="componentTitle">Attribute Group <span class="qname">attribute-workflowID</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -5660,7 +5787,7 @@
                            <div class="floatRight"><input id="button_diagram_attribute-workflowID" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_attribute-workflowID');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_attribute-workflowID" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_workflow_attribute-workflowID.jpeg" usemap="#workflow_xsd_Attribute_Group_workflow_attribute-workflowID" /><map name="workflow_xsd_Attribute_Group_workflow_attribute-workflowID" id="workflow_xsd_Attribute_Group_workflow_attribute-workflowID">
+                           <div id="diagram_attribute-workflowID" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_attribute-workflowID.jpeg" usemap="#workflow_xsd_Attribute_Group_attribute-workflowID" /><map name="workflow_xsd_Attribute_Group_attribute-workflowID" id="workflow_xsd_Attribute_Group_attribute-workflowID">
                                  <area alt="index.tmp#attribute-workflowID_workflowID" href="index.html#attribute-workflowID_workflowID" coords="182,0,288,44" /></map></div>
                         </td>
                      </tr>
@@ -5730,7 +5857,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-toolID"></a><div class="componentTitle">Attribute Group <span class="qname">workflow:attribute-toolID</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-toolID"></a><div class="componentTitle">Attribute Group <span class="qname">attribute-toolID</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -5744,7 +5871,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -5752,7 +5879,7 @@
                            <div class="floatRight"><input id="button_diagram_attribute-toolID" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_attribute-toolID');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_attribute-toolID" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_workflow_attribute-toolID.jpeg" usemap="#workflow_xsd_Attribute_Group_workflow_attribute-toolID" /><map name="workflow_xsd_Attribute_Group_workflow_attribute-toolID" id="workflow_xsd_Attribute_Group_workflow_attribute-toolID">
+                           <div id="diagram_attribute-toolID" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_attribute-toolID.jpeg" usemap="#workflow_xsd_Attribute_Group_attribute-toolID" /><map name="workflow_xsd_Attribute_Group_attribute-toolID" id="workflow_xsd_Attribute_Group_attribute-toolID">
                                  <area alt="index.tmp#attribute-toolID_toolID" href="index.html#attribute-toolID_toolID" coords="152,0,271,44" /></map></div>
                         </td>
                      </tr>
@@ -5822,7 +5949,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-process"></a><div class="componentTitle">Attribute Group <span class="qname">workflow:attribute-process</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-process"></a><div class="componentTitle">Attribute Group <span class="qname">attribute-process</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -5836,7 +5963,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -5844,7 +5971,7 @@
                            <div class="floatRight"><input id="button_diagram_attribute-process" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_attribute-process');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_attribute-process" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_workflow_attribute-process.jpeg" usemap="#workflow_xsd_Attribute_Group_workflow_attribute-process" /><map name="workflow_xsd_Attribute_Group_workflow_attribute-process" id="workflow_xsd_Attribute_Group_workflow_attribute-process">
+                           <div id="diagram_attribute-process" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_attribute-process.jpeg" usemap="#workflow_xsd_Attribute_Group_attribute-process" /><map name="workflow_xsd_Attribute_Group_attribute-process" id="workflow_xsd_Attribute_Group_attribute-process">
                                  <area alt="index.tmp#attribute-process_process" href="index.html#attribute-process_process" coords="166,0,271,44" /></map></div>
                         </td>
                      </tr>
@@ -5914,7 +6041,7 @@
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
-      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-stamp"></a><div class="componentTitle">Attribute Group <span class="qname">workflow:attribute-stamp</span></div>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="attribute-stamp"></a><div class="componentTitle">Attribute Group <span class="qname">attribute-stamp</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -5928,7 +6055,7 @@
                   <tbody>
                      <tr>
                         <td class="firstColumn"><b>Namespace</b></td>
-                        <td>cwrc.ca/workflow</td>
+                        <td>No namespace</td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -5936,7 +6063,7 @@
                            <div class="floatRight"><input id="button_diagram_attribute-stamp" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_attribute-stamp');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_attribute-stamp" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_workflow_attribute-stamp.jpeg" usemap="#workflow_xsd_Attribute_Group_workflow_attribute-stamp" /><map name="workflow_xsd_Attribute_Group_workflow_attribute-stamp" id="workflow_xsd_Attribute_Group_workflow_attribute-stamp">
+                           <div id="diagram_attribute-stamp" style="display:block"><img alt="Diagram" border="0" src="img/workflow_xsd_Attribute_Group_attribute-stamp.jpeg" usemap="#workflow_xsd_Attribute_Group_attribute-stamp" /><map name="workflow_xsd_Attribute_Group_attribute-stamp" id="workflow_xsd_Attribute_Group_attribute-stamp">
                                  <area alt="index.tmp#attribute-stamp_stamp" href="index.html#attribute-stamp_stamp" coords="155,0,330,44" /></map></div>
                         </td>
                      </tr>
