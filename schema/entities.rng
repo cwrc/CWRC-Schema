@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
+     MRB: Tue 07-Jan-2014: Revised and added to place entity section
      MRB: Mon 06-Jan-2014: Revised the <recordCreationDate> and <recordChangeDate> elements
      MRB: Fri 27-Dec-2013: Revised and added to place entity section
      MRB: Wed 18-Dec-2013: Added @url attribute to provide a link to various server-side lists of values
@@ -452,10 +453,10 @@
                     <ref name="featureClass-element"/>
                 </optional>
                 <optional>
-                    <ref name="featureCode-element"/>
+                    <ref name="featureCodeLabel-element"/>
                 </optional>
                 <optional>
-                    <ref name="country-element"/>
+                    <ref name="countryName-element"/>
                 </optional>
                 <optional>
                     <ref name="firstAdministrativeDivision-element"/>
@@ -470,7 +471,7 @@
                     <ref name="averageElevation-element"/>
                 </optional>
                 <optional>
-                    <ref name="timeZone-element"/>
+                    <ref name="timeZoneOffset-element"/>
                 </optional>
             </interleave>
         </element>
@@ -820,7 +821,8 @@
 
     <!-- MRB: July 2013: added definitions for various child elements of the <placeDescription> element
          MRB: Mon 16-Dec-2013: made changes, and added interface annotation code 
-         MRB: Fri 27-Dec-2013: Revised and added to place entity section -->
+         MRB: Fri 27-Dec-2013: Revised and added to place entity section 
+         MRB: Tue 07-Jan-2014: Revised and added to place entity section -->
 
     <define name="latitude-element">
         <element name="latitude">
@@ -934,16 +936,16 @@
         </element>
     </define>
 
-    <define name="featureCode-element">
-        <element name="featureCode">
+    <define name="featureCodeLabel-element">
+        <element name="featureCodeLabel">
             <a:documentation>The GeoNames feature code label of the place entity (see http://www.geonames.org/export/codes.html).
                 Example: for the place entity Edmonton, the GeoNames feature code label is "seat of a first-order 
                 administrative division".</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
-                    <interface-field path="entity/place/description/featureCode">
-                        <label xml:lang="en">Feature code</label>
+                    <interface-field path="entity/place/description/featureCodeLabel">
+                        <label xml:lang="en">Feature code label</label>
                         <help-text xml:lang="en"
                             >The GeoNames feature code label of the place entity (see http://www.geonames.org/export/codes.html).
                             Example: for the place entity Edmonton, the GeoNames feature code label is "seat of a first-order
@@ -957,20 +959,20 @@
         </element>
     </define>
 
-    <define name="country-element">
-        <element name="country">
-            <a:documentation>The ISO 3166-1 country name that contains the place entity 
-                (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).  Example: for the
-                place entity Edmonton, the country name is "Canada".</a:documentation>
+    <define name="countryName-element">
+        <element name="countryName">
+            <a:documentation>The ISO 3166-1 English country name that contains the place entity 
+                (see http://en.wikipedia.org/wiki/ISO_3166-1).  Example: for the
+                place entity Edmonton, the English country name is "Canada".</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
-                    <interface-field path="entity/place/description/country">
-                        <label xml:lang="en">Country</label>
+                    <interface-field path="entity/place/description/countryName">
+                        <label xml:lang="en">Country name</label>
                         <help-text xml:lang="en"
-                            >The ISO 3166-1 country name that contains the place entity 
-                            (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).  Example:
-                            for the place entity Edmonton, the country name is "Canada".</help-text>
+                            >The ISO 3166-1 English country name that contains the place entity 
+                            (see http://en.wikipedia.org/wiki/ISO_3166-1).  Example:
+                            for the place entity Edmonton, the English country name is "Canada".</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
@@ -982,7 +984,7 @@
 
     <define name="firstAdministrativeDivision-element">
         <element name="firstAdministrativeDivision">
-            <a:documentation>The ISO 3166-2 country subdivision name, or first-level administrative division name
+            <a:documentation>The ISO 3166-2 country subdivision name, or first-level (first-order) administrative division name
                 (e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2).
                  Example: for the place entity Edmonton, the first-level administrative division name is "Alberta".</a:documentation>
 
@@ -991,7 +993,7 @@
                     <interface-field path="entity/place/description/firstAdministrativeDivision">
                         <label xml:lang="en">First-level administrative division</label>
                         <help-text xml:lang="en"
-                            >The ISO 3166-2 country subdivision name, or first-level administrative division name
+                            >The ISO 3166-2 country subdivision name, or first-level (first-order) administrative division name
                             (e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2).
                             Example: for the place entity Edmonton, the first-level administrative division name is "Alberta".</help-text>
                         <input>textField</input>
@@ -1005,8 +1007,8 @@
 
     <define name="secondAdministrativeDivision-element">
         <element name="secondAdministrativeDivision">
-            <a:documentation>The second-level) administrative division name (e.g., county) that contains the place entity 
-                (see http://en.wikipedia.org/wiki/Table_of_administrative_divisions_by_country).  Example: for the place 
+            <a:documentation>The second-level (second-order) administrative division name (e.g., county) that contains the place 
+                entity (see http://en.wikipedia.org/wiki/Table_of_administrative_divisions_by_country).  Example: for the place 
                 entity Arva, Ontario, the second-level administrative division name is "Middlesex County".</a:documentation>
 
             <xs:annotation>
@@ -1014,7 +1016,7 @@
                     <interface-field path="entity/place/description/secondAdministrativeDivision">
                         <label xml:lang="en">Second-level administrative division</label>
                         <help-text xml:lang="en"
-                            >The second-level) administrative division name (e.g., county) that contains the place entity 
+                            >The second-level (second-order) administrative division name (e.g., county) that contains the place entity 
                             (see http://en.wikipedia.org/wiki/Table_of_administrative_divisions_by_country).  Example: for the place 
                             entity Arva, Ontario, the second-level administrative division name is "Middlesex County".</help-text>
                         <input>textField</input>
@@ -1029,7 +1031,7 @@
     <define name="elevation-element">
         <element name="elevation">
             <a:documentation>Elevation in meters of the place entity.  Example: for the place entity
-                Mount Logan, the elevation in meters is "5,959".</a:documentation>
+                Mount Logan (in Yukon), the elevation in meters is "5,959".</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
@@ -1037,7 +1039,7 @@
                         <label xml:lang="en">Elevation</label>
                         <help-text xml:lang="en"
                             >Elevation in meters of the place entity.  Example: for the place entity
-                            Mount Logan, the elevation in meters is "5,959".</help-text>
+                            Mount Logan (in Yukon), the elevation in meters is "5,959".</help-text>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
@@ -1070,17 +1072,17 @@
         </element>
     </define>
 
-    <define name="timeZone-element">
-        <element name="timeZone">
-            <a:documentation>The time zone UTM standard time offset that contains the place entity.  Example: 
+    <define name="timeZoneOffset-element">
+        <element name="timeZoneOffset">
+            <a:documentation>The time zone UTC standard time offset that contains the place entity.  Example: 
                 for the place entity Edmonton, the time zone UTM standard time offset is "-7.0".</a:documentation>
 
             <xs:annotation>
                 <xs:appinfo>
-                    <interface-field path="entity/place/description/timeZone">
-                        <label xml:lang="en">Time zone</label>
+                    <interface-field path="entity/place/description/timeZoneOffset">
+                        <label xml:lang="en">Time zone UTC offset</label>
                         <help-text xml:lang="en"
-                            >The time zone UTM standard time offset that contains the place entity.  Example: 
+                            >The time zone UTC standard time offset that contains the place entity.  Example: 
                             for the place entity Edmonton, the time zone UTM standard time offset is "-7.0".</help-text>
                         <input>textField</input>
                     </interface-field>
