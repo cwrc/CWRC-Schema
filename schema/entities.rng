@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
+     MRB: Thu 16-Jan-2014: Added a originInfo/recordOrigin element
      MRB: Tue 07-Jan-2014: Revised and added to place entity section
      MRB: Mon 06-Jan-2014: Revised the <recordCreationDate> and <recordChangeDate> elements
      MRB: Fri 27-Dec-2013: Revised and added to place entity section
@@ -1143,6 +1144,9 @@
             <zeroOrMore>
                 <ref name="recordChangeDate-element"/>
             </zeroOrMore>
+            <optional>
+                <ref name="recordOrigin-element"/>
+            </optional>
         </element>
     </define>
 
@@ -1257,6 +1261,7 @@
         </element>
     </define>
 
+
     <define name="recordChangeDate-element">
         <element name="recordChangeDate">
             <a:documentation>Provenance field used to capture the original modification dates of an entity
@@ -1283,6 +1288,16 @@
                 <data type="gYear"/>
             </choice>
         </element>
+    </define>
+
+
+    <!-- MRB: Thu 16-Jan-2014: Added a originInfo/recordOrigin element -->
+    <define name="recordOrigin-element">
+        <element name="recordOrigin">
+            <a:documentation>Field that records the origin or provenance of the entity record.</a:documentation>
+            <data type="string"/>
+        </element>
+        <!-- mads -->
     </define>
 
 
