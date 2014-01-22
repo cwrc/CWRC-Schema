@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-     MRB: Thu 16-Jan-2014: Added a originInfo/recordOrigin element
+     MRB: Wed 22-Jan-2014
+     * Deleted child elements of the <note> element, <access> and <p> elements, and allowed text content to be
+     written to the <note> element text node.
+     * Removed three "hidden" interface annotation code elements: the <accessCondition>, <recordChangeDate>, and
+     <recordCreationDate> elements.
+     MRB: Thu 16-Jan-2014: Added an originInfo/recordOrigin element
      MRB: Tue 07-Jan-2014: Revised and added to place entity section
      MRB: Mon 06-Jan-2014: Revised the <recordCreationDate> and <recordChangeDate> elements
      MRB: Fri 27-Dec-2013: Revised and added to place entity section
@@ -1240,18 +1245,6 @@
                 Equivalent to MADS recordCreationDate and EAC-CPF's
                 maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime .  
                 Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
-
-            <xs:annotation>
-                <xs:appinfo>
-                    <interface-field
-                        path="entity/person|organization|place/recordInfo/originInfo/recordCreationDate">
-                        <input>hidden</input>
-                        <value>Today's date generated via JavaScript in YYYY-MM-DD format (automatically 
-                            generated when new entities are created)</value>
-                    </interface-field>
-                </xs:appinfo>
-            </xs:annotation>
-
             <choice>
                 <empty/>
                 <data type="date"/>
@@ -1269,19 +1262,7 @@
                 Equivalent to MADS recordChangeDate and EAC-CPF's
                 maintenanceHistory/maintenance/Event/eventType/eventDateTime .  
                 Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
-
-            <xs:annotation>
-                <xs:appinfo>
-                    <interface-field
-                        path="entity/person|organization|place/recordInfo/originInfo/recordChangeDate">
-                        <input>hidden</input>
-                        <value>Today's date generated via JavaScript in YYYY-MM-DD format (automatically 
-                            generated when existing entities are modified)</value>
-                    </interface-field>
-                </xs:appinfo>
-            </xs:annotation>
-
-            <choice>
+             <choice>
                 <empty/>
                 <data type="date"/>
                 <data type="gYearMonth"/>
@@ -2553,24 +2534,6 @@
                 href="http://creativecommons.org/licenses/by-nc/3.0/" rel="license"
                 &gt;Creative Commons Attribution-NonCommercial 3.0 Unported License&lt;/a&gt;.
             </a:documentation>
-
-            <xs:annotation>
-                <xs:appinfo>
-
-                    <interface-field
-                        path="entity/person|organization|place/recordInfo/accessCondition">
-                        <input>hidden</input>
-                        <attribute name="type">
-                            <value a:en="use and reproduction">use and reproduction</value>
-                        </attribute>
-                        <value a:en="cc_by-nc_3.0"
-                            >Use of this public-domain resource is governed by the <a
-                            href="http://creativecommons.org/licenses/by-nc/3.0/" rel="license"
-                            >Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</value>
-                    </interface-field>
-
-                </xs:appinfo>
-            </xs:annotation>
 
             <attribute name="type">
                 <value a:en="use and reproduction">use and reproduction</value>
