@@ -387,6 +387,10 @@
 			<Boolean>true</Boolean>
 		</entry>
 		<entry>
+			<String>editor.format.indent.inline.elements</String>
+			<Boolean>false</Boolean>
+		</entry>
+		<entry>
 			<String>editor.format.whitespace</String>
 			<String-array>
 				<String>0009</String>
@@ -434,7 +438,19 @@
 		</entry>
 		<entry>
 			<String>editor.states.info</String>
-			<editorStatesInfo-array/>
+			<editorStatesInfo-array>
+				<editorStatesInfo>
+					<field name="systemID">
+						<String>file:/C:/Users/jefferya.ARTSRN/Downloads/CWRCOrlando_Global_Options.xml</String>
+					</field>
+					<field name="contentType">
+						<String>text/xml</String>
+					</field>
+					<field name="pageID">
+						<String>Text</String>
+					</field>
+				</editorStatesInfo>
+			</editorStatesInfo-array>
 		</entry>
 		<entry>
 			<String>find.options</String>
@@ -601,6 +617,21 @@
 									<String>text/xml</String>
 								</field>
 								<field name="pageID">
+									<String>Author</String>
+								</field>
+							</contentTypePageAssociation>
+							<list>
+								<String>Outline</String>
+								<String>Attributes</String>
+								<String>Entities</String>
+							</list>
+						</entry>
+						<entry>
+							<contentTypePageAssociation>
+								<field name="contentType">
+									<String>text/xml</String>
+								</field>
+								<field name="pageID">
 									<String>Text</String>
 								</field>
 							</contentTypePageAssociation>
@@ -662,7 +693,83 @@
 			<prjState-array>
 				<prjState>
 					<field name="projectURL">
-						<URL>file:/Applications/oxygen/samples/sample.xpr</URL>
+						<URL>file:/H:/transformations/project.xpr</URL>
+					</field>
+					<field name="bookMarkLocations">
+						<map/>
+					</field>
+					<field name="breakPointLocations">
+						<markLocation-array/>
+					</field>
+					<field name="lastOpenedFiles">
+						<openedFileInfo-array>
+							<openedFileInfo>
+								<field name="systemID">
+									<URL>file:/C:/Users/jefferya.ARTSRN/Downloads/kendma-w.sgm_2014-01-21_checkout.sgm</URL>
+								</field>
+								<field name="timeStamp">
+									<Long>1390923736581</Long>
+								</field>
+								<field name="selected">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="caretPosition">
+									<Integer>28164</Integer>
+								</field>
+								<field name="hInfo">
+									<scrollInfo>
+										<field name="value">
+											<Integer>0</Integer>
+										</field>
+										<field name="extent">
+											<Integer>1116</Integer>
+										</field>
+										<field name="min">
+											<Integer>0</Integer>
+										</field>
+										<field name="max">
+											<Integer>1116</Integer>
+										</field>
+									</scrollInfo>
+								</field>
+								<field name="vInfo">
+									<scrollInfo>
+										<field name="value">
+											<Integer>8355</Integer>
+										</field>
+										<field name="extent">
+											<Integer>543</Integer>
+										</field>
+										<field name="min">
+											<Integer>0</Integer>
+										</field>
+										<field name="max">
+											<Integer>15827</Integer>
+										</field>
+									</scrollInfo>
+								</field>
+							</openedFileInfo>
+						</openedFileInfo-array>
+					</field>
+					<field name="lastDITAOpenedFiles">
+						<openedFileInfo-array/>
+					</field>
+					<field name="archiveURL">
+						<null/>
+					</field>
+					<field name="openFindResourcesHistory">
+						<String-array/>
+					</field>
+					<field name="openFindResourcesExpressionsHistory">
+						<String-array/>
+					</field>
+					<field name="searchComponentScope">
+						<null/>
+					</field>
+				</prjState>
+				<prjState>
+					<field name="projectURL">
+						<null/>
 					</field>
 					<field name="bookMarkLocations">
 						<map/>
@@ -691,7 +798,7 @@
 				</prjState>
 				<prjState>
 					<field name="projectURL">
-						<null/>
+						<URL>file:/Applications/oxygen/samples/sample.xpr</URL>
 					</field>
 					<field name="bookMarkLocations">
 						<map/>
@@ -754,7 +861,7 @@
 			<treeStateInfo-array>
 				<treeStateInfo>
 					<field name="systemID">
-						<URL>file:/Applications/oxygen/samples/sample.xpr</URL>
+						<URL>file:/H:/transformations/project.xpr</URL>
 					</field>
 					<field name="currentSelectionPath">
 						<list>
@@ -767,7 +874,7 @@
 				</treeStateInfo>
 				<treeStateInfo>
 					<field name="systemID">
-						<URL>file:/H:/transformations/project.xpr</URL>
+						<URL>file:/Applications/oxygen/samples/sample.xpr</URL>
 					</field>
 					<field name="currentSelectionPath">
 						<list>
@@ -775,11 +882,7 @@
 						</list>
 					</field>
 					<field name="expandedPaths">
-						<list>
-							<list>
-								<Integer>0</Integer>
-							</list>
-						</list>
+						<list/>
 					</field>
 				</treeStateInfo>
 				<treeStateInfo>
@@ -1243,6 +1346,10 @@
 			<Boolean>false</Boolean>
 		</entry>
 		<entry>
+			<String>show.start.page.card</String>
+			<Boolean>false</Boolean>
+		</entry>
+		<entry>
 			<String>spell.check.dictionaries.additional.folder</String>
 			<String></String>
 		</entry>
@@ -1263,7 +1370,7 @@
 		</entry>
 		<entry>
 			<String>tipoftheday.count</String>
-			<Integer>27</Integer>
+			<Integer>28</Integer>
 		</entry>
 		<entry>
 			<String>transformation_scenarios_dialog_column_model_info.v14.0.3</String>
@@ -1539,12 +1646,8 @@
 			</groupTableColumnModelInfo>
 		</entry>
 		<entry>
-			<String>version.checker.sessions.counter</String>
-			<Integer>3</Integer>
-		</entry>
-		<entry>
 			<String>window.location.&lt;oXygen/> XML Author</String>
-			<String>249,137</String>
+			<String>235,169</String>
 		</entry>
 		<entry>
 			<String>window.location.&lt;oXygen/> XML Editor</String>
