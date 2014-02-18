@@ -387,6 +387,10 @@
 			<Boolean>true</Boolean>
 		</entry>
 		<entry>
+			<String>editor.format.break.long.attributes</String>
+			<Boolean>false</Boolean>
+		</entry>
+		<entry>
 			<String>editor.format.indent.inline.elements</String>
 			<Boolean>false</Boolean>
 		</entry>
@@ -395,146 +399,150 @@
 			<String-array>
 				<String>CHRONPROSE</String>
 				<String>CHRONSTRUCT</String>
-<String>P</String>
-<String>HEADING</String>
-<String>MARRIAGE</String>
-<String>CORR</String>
-<String>MARRIED</String>
-<String>RELIGIOUSNAME</String>
-<String>ROYAL</String>
-<String>STYLED</String>
-<String>SURNAME</String>
-<String>TITLED</String>
-<String>ADDRESS</String>
-<String>ADDRLINE</String>
-<String>AREA</String>
-<String>AWARD</String>
-<String>BIBCIT</String>
-<String>BIBCITS</String>
-<String>BIRTHNAME</String>
-<String>BIRTHPOSITION</String>
-<String>CAUSE</String>
-<String>CHILDLESSNESS</String>
-<String>CHILDREN</String>
-<String>CLASS</String>
-<String>COMPANION</String>
-<String>CONTESTEDBEHAVIOUR</String>
-<String>DATE</String>
-<String>DAY</String>
-<String>DEGREE</String>
-<String>DENOMINATION</String>
-<String>DIVORCE</String>
-<String>EMPH</String>
-<String>EMPLOYER</String>
-<String>ETHNICITY</String>
-<String>EXTENTOFOEUVRE</String>
-<String>FOREIGN</String>
-<String>GENERICRANGE</String>
-<String>GEOG</String>
-<String>GEOGHERITAGE</String>
-<String>GIVEN</String>
-<String>HEAD</String>
-<String>INDEXED</String>
-<String>INSTRUCTOR</String>
-<String>JOB</String>
-<String>KEYWORDCLASS</String>
-<String>L</String>
-<String>LANGUAGE</String>
-<String>LB</String>
-<String>LG</String>
-<String>LIVESWITH</String>
-<String>MONTH</String>
-<String>NAME</String>
-<String>NATIONALHERITAGE</String>
-<String>NATIONALITY</String>
-<String>NICKNAME</String>
-<String>OCCASION</String>
-<String>ORGNAME</String>
-<String>PADVERTISING</String>
-<String>PANTHOLOGIZATION</String>
-<String>PARCHIVALLOCATION</String>
-<String>PATTITUDES</String>
-<String>PAUTHORSHIP</String>
-<String>PCIRCULATION</String>
-<String>PCONTRACT</String>
-<String>PCOPYRIGHT</String>
-<String>PDEDICATION</String>
-<String>PEARNINGS</String>
-<String>PEDITIONS</String>
-<String>PFIRSTLITERARYACTIVITY</String>
-<String>PINFLUENCESHER</String>
-<String>PLACE</String>
-<String>PLACENAME</String>
-<String>PLASTLITERARYACTIVITY</String>
-<String>PLITERARYSCHOOLS</String>
-<String>PMANUSCRIPTHISTORY</String>
-<String>PMATERIALCONDITIONS</String>
-<String>PMODEOFPUBLICATION</String>
-<String>PMOTIVES</String>
-<String>PNONBOOKMEDIA</String>
-<String>PNONSURVIVAL</String>
-<String>POLITICALAFFILIATION</String>
-<String>PPERFORMANCE</String>
-<String>PPERIODICALPUBLICATION</String>
-<String>PPLACEOFPUBLICATION</String>
-<String>PPRESSRUN</String>
-<String>PPRICE</String>
-<String>PRARITIESFEATURESDECORATIONS</String>
-<String>PRELATIONSWITHPUBLISHER</String>
-<String>PSERIALIZATION</String>
-<String>PSEUDONYM</String>
-<String>PSUBMISSIONSREJECTIONS</String>
-<String>PTYPEOFPRESS</String>
-<String>QUOTE</String>
-<String>RACECOLOUR</String>
-<String>RBESTKNOWNWORK</String>
-<String>RDESTRUCTIONOFWORK</String>
-<String>REGION</String>
-<String>REMUNERATION</String>
-<String>RFICTIONALIZATION</String>
-<String>RLANDMARKTEXT</String>
-<String>RPENALTIES</String>
-<String>RRECOGNITIONNAME</String>
-<String>RRECOGNITIONS</String>
-<String>RRECOGNITIONVALUE</String>
-<String>RRESPONSES</String>
-<String>RS</String>
-<String>RSELFDESCRIPTION</String>
-<String>RSHEINFLUENCED</String>
-<String>RWRITINGMILESTONE</String>
-<String>SCHOLARNOTE</String>
-<String>SCHOOL</String>
-<String>SEASON</String>
-<String>SELFCONSTRUCTED</String>
-<String>SEPARATION</String>
-<String>SETTLEMENT</String>
-<String>SEXUALIDENTITY</String>
-<String>SIC</String>
-<String>SIGNIFICANTACTIVITY</String>
-<String>SOCALLED</String>
-<String>SUBJECT</String>
-<String>TCHARACTERIZATION</String>
-<String>TCHARACTERNAME</String>
-<String>TCHARACTERTYPEROLE</String>
-<String>TEXT</String>
-<String>TGENRE</String>
-<String>TGENREISSUE</String>
-<String>TIME</String>
-<String>TINTERTEXTUALITY</String>
-<String>TITLE</String>
-<String>TMOTIF</String>
-<String>TOPIC</String>
-<String>TPLOT</String>
-<String>TSETTINGDATE</String>
-<String>TSETTINGPLACE</String>
-<String>TTECHNIQUES</String>
-<String>TTHEMETOPIC</String>
-<String>TTONESTYLE</String>
-<String>TVOICENARRATION</String>
-<String>WEEK</String>
-<String>XREF</String>
-<String>YEAR</String>
+				<String>P</String>
+				<String>HEADING</String>
+				<String>MARRIAGE</String>
+				<String>CORR</String>
+				<String>MARRIED</String>
+				<String>RELIGIOUSNAME</String>
+				<String>ROYAL</String>
+				<String>STYLED</String>
+				<String>SURNAME</String>
+				<String>TITLED</String>
+				<String>ADDRESS</String>
+				<String>ADDRLINE</String>
+				<String>AREA</String>
+				<String>AWARD</String>
+				<String>BIBCIT</String>
+				<String>BIBCITS</String>
+				<String>BIRTHNAME</String>
+				<String>BIRTHPOSITION</String>
+				<String>CAUSE</String>
+				<String>CHILDLESSNESS</String>
+				<String>CHILDREN</String>
+				<String>CLASS</String>
+				<String>COMPANION</String>
+				<String>CONTESTEDBEHAVIOUR</String>
+				<String>DATE</String>
+				<String>DAY</String>
+				<String>DEGREE</String>
+				<String>DENOMINATION</String>
+				<String>DIVORCE</String>
+				<String>EMPH</String>
+				<String>EMPLOYER</String>
+				<String>ETHNICITY</String>
+				<String>EXTENTOFOEUVRE</String>
+				<String>FOREIGN</String>
+				<String>GENERICRANGE</String>
+				<String>GEOG</String>
+				<String>GEOGHERITAGE</String>
+				<String>GIVEN</String>
+				<String>HEAD</String>
+				<String>INDEXED</String>
+				<String>INSTRUCTOR</String>
+				<String>JOB</String>
+				<String>KEYWORDCLASS</String>
+				<String>L</String>
+				<String>LANGUAGE</String>
+				<String>LB</String>
+				<String>LG</String>
+				<String>LIVESWITH</String>
+				<String>MONTH</String>
+				<String>NAME</String>
+				<String>NATIONALHERITAGE</String>
+				<String>NATIONALITY</String>
+				<String>NICKNAME</String>
+				<String>OCCASION</String>
+				<String>ORGNAME</String>
+				<String>PADVERTISING</String>
+				<String>PANTHOLOGIZATION</String>
+				<String>PARCHIVALLOCATION</String>
+				<String>PATTITUDES</String>
+				<String>PAUTHORSHIP</String>
+				<String>PCIRCULATION</String>
+				<String>PCONTRACT</String>
+				<String>PCOPYRIGHT</String>
+				<String>PDEDICATION</String>
+				<String>PEARNINGS</String>
+				<String>PEDITIONS</String>
+				<String>PFIRSTLITERARYACTIVITY</String>
+				<String>PINFLUENCESHER</String>
+				<String>PLACE</String>
+				<String>PLACENAME</String>
+				<String>PLASTLITERARYACTIVITY</String>
+				<String>PLITERARYSCHOOLS</String>
+				<String>PMANUSCRIPTHISTORY</String>
+				<String>PMATERIALCONDITIONS</String>
+				<String>PMODEOFPUBLICATION</String>
+				<String>PMOTIVES</String>
+				<String>PNONBOOKMEDIA</String>
+				<String>PNONSURVIVAL</String>
+				<String>POLITICALAFFILIATION</String>
+				<String>PPERFORMANCE</String>
+				<String>PPERIODICALPUBLICATION</String>
+				<String>PPLACEOFPUBLICATION</String>
+				<String>PPRESSRUN</String>
+				<String>PPRICE</String>
+				<String>PRARITIESFEATURESDECORATIONS</String>
+				<String>PRELATIONSWITHPUBLISHER</String>
+				<String>PSERIALIZATION</String>
+				<String>PSEUDONYM</String>
+				<String>PSUBMISSIONSREJECTIONS</String>
+				<String>PTYPEOFPRESS</String>
+				<String>QUOTE</String>
+				<String>RACECOLOUR</String>
+				<String>RBESTKNOWNWORK</String>
+				<String>RDESTRUCTIONOFWORK</String>
+				<String>REGION</String>
+				<String>REMUNERATION</String>
+				<String>RFICTIONALIZATION</String>
+				<String>RLANDMARKTEXT</String>
+				<String>RPENALTIES</String>
+				<String>RRECOGNITIONNAME</String>
+				<String>RRECOGNITIONS</String>
+				<String>RRECOGNITIONVALUE</String>
+				<String>RRESPONSES</String>
+				<String>RS</String>
+				<String>RSELFDESCRIPTION</String>
+				<String>RSHEINFLUENCED</String>
+				<String>RWRITINGMILESTONE</String>
+				<String>SCHOLARNOTE</String>
+				<String>SCHOOL</String>
+				<String>SEASON</String>
+				<String>SELFCONSTRUCTED</String>
+				<String>SEPARATION</String>
+				<String>SETTLEMENT</String>
+				<String>SEXUALIDENTITY</String>
+				<String>SIC</String>
+				<String>SIGNIFICANTACTIVITY</String>
+				<String>SOCALLED</String>
+				<String>SUBJECT</String>
+				<String>TCHARACTERIZATION</String>
+				<String>TCHARACTERNAME</String>
+				<String>TCHARACTERTYPEROLE</String>
+				<String>TEXT</String>
+				<String>TGENRE</String>
+				<String>TGENREISSUE</String>
+				<String>TIME</String>
+				<String>TINTERTEXTUALITY</String>
+				<String>TITLE</String>
+				<String>TMOTIF</String>
+				<String>TOPIC</String>
+				<String>TPLOT</String>
+				<String>TSETTINGDATE</String>
+				<String>TSETTINGPLACE</String>
+				<String>TTECHNIQUES</String>
+				<String>TTHEMETOPIC</String>
+				<String>TTONESTYLE</String>
+				<String>TVOICENARRATION</String>
+				<String>WEEK</String>
+				<String>XREF</String>
+				<String>YEAR</String>
 			</String-array>
+		</entry>
+		<entry>
+			<String>editor.format.preserve.not.normalize.attribute.values</String>
+			<Boolean>false</Boolean>
 		</entry>
 		<entry>
 			<String>editor.format.schema.aware</String>
@@ -708,7 +716,7 @@
 		</entry>
 		<entry>
 			<String>last.directory</String>
-			<File>C:/Users/jefferya.ARTSRN/Downloads</File>
+			<File>C:/Users/jefferya.ARTSRN/Desktop/GitHub/CWRC-Schema/templates</File>
 		</entry>
 		<entry>
 			<String>last.project</String>
@@ -759,8 +767,8 @@
 								</field>
 							</contentTypePageAssociation>
 							<list>
+								<String>Outline</String>
 								<String>Attributes</String>
-								<String>Elements</String>
 								<String>Entities</String>
 							</list>
 						</entry>
@@ -774,8 +782,8 @@
 								</field>
 							</contentTypePageAssociation>
 							<list>
+								<String>Outline</String>
 								<String>Attributes</String>
-								<String>Elements</String>
 								<String>Entities</String>
 							</list>
 						</entry>
@@ -1737,8 +1745,12 @@
 			</groupTableColumnModelInfo>
 		</entry>
 		<entry>
+			<String>version.checker.sessions.counter</String>
+			<Integer>1</Integer>
+		</entry>
+		<entry>
 			<String>window.location.&lt;oXygen/> XML Author</String>
-			<String>563,63</String>
+			<String>464,3</String>
 		</entry>
 		<entry>
 			<String>window.location.&lt;oXygen/> XML Editor</String>
@@ -1746,7 +1758,7 @@
 		</entry>
 		<entry>
 			<String>window.size.v11.&lt;oXygen/> XML Author</String>
-			<String>1355,943</String>
+			<String>1355,1073</String>
 		</entry>
 		<entry>
 			<String>window.size.v11.&lt;oXygen/> XML Editor</String>
