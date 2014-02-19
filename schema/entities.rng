@@ -2126,19 +2126,17 @@
 
     <define name="date-pattern">
         <interleave>
-            <optional>
+            <choice>
                 <ref name="standardDate-element"/>
-            </optional>
-            <optional>
                 <ref name="textDate-element"/>
-            </optional>
-            <optional>
-                <ref name="dateType-element"/>
-            </optional>
-            <optional>
-                <ref name="note-element"/>
-            </optional>
+            </choice>
         </interleave>
+        <optional>
+            <ref name="dateType-element"/>
+        </optional>
+        <optional>
+            <ref name="note-element"/>
+        </optional>
         <optional>
             <ref name="cert-attribute"/>
         </optional>
