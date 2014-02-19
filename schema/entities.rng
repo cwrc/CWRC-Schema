@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-     MRB: Wed 22-Jan-2014
-     * Deleted child elements of the <note> element, <access> and <p> elements, and allowed text content to be
-     written to the <note> element text node.
+     MRB: Mon 18-Feb-2014
+     * Deleted child elements of the <note> element, the <access>, <p>, and <projectId> elements, and also made
+     these changes in the interface annotation code; deleted the <note> element attributes of @xml:id and @xml:lang
+     from the interface annotation code; and allowed text content to be written to the <note> element text node.
      * Removed three "hidden" interface annotation code elements: the <accessCondition>, <recordChangeDate>, and
      <recordCreationDate> elements.
      MRB: Thu 16-Jan-2014: Added an originInfo/recordOrigin element
@@ -89,10 +90,7 @@
     ->  in define node
 -->
 
-<grammar xmlns="http://relaxng.org/ns/structure/1.0"
-    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
 
     <start>
         <choice>
@@ -591,8 +589,7 @@
                 <xs:appinfo>
 
                     <interface-field path="entity/person/description/genders/gender">
-                        <help-text xml:lang="en"
-                            >An optional field to capture gender terms the
+                        <help-text xml:lang="en">An optional field to capture gender terms the
                             present person is associated with.</help-text>
                         <label xml:lang="en">Gender</label>
                         <input>combobox</input>
@@ -639,16 +636,14 @@
                 <xs:appinfo>
 
                     <interface-field path="entity/person/description/occupations/occupation/term">
-                        <help-text xml:lang="en"
-                            >This field can capture relevant paid occupations held by
+                        <help-text xml:lang="en">This field can capture relevant paid occupations held by
                             the person described in the present record.</help-text>
                         <label xml:lang="en">Occupation</label>
                         <input>textField</input>
                     </interface-field>
 
                     <interface-field path="entity/person/description/activities/activity/term">
-                        <help-text xml:lang="en"
-                            >The activity field captures all unpaid work or
+                        <help-text xml:lang="en">The activity field captures all unpaid work or
                             function such as volunteer work or other significant
                             activity that a person was engaged in. Example: parenting, unpaid
                             domestic labour, nursing, as well as philantropic, missionary, or other
@@ -657,10 +652,8 @@
                         <input>textField</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization/description/researchInterests/interest/term">
-                        <help-text xml:lang="en"
-                            >This field can capture a topic of interest to the
+                    <interface-field path="entity/person|organization/description/researchInterests/interest/term">
+                        <help-text xml:lang="en">This field can capture a topic of interest to the
                             present entity. </help-text>
                         <label xml:lang="en">Research Interest</label>
                         <input>textField</input>
@@ -779,10 +772,8 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person/relations/relation/personRef|organizationRef|placeRef/name">
-                        <help-text xml:lang="en"
-                            >Name of a linked resource that is associated with the described entity</help-text>
+                    <interface-field path="entity/person/relations/relation/personRef|organizationRef|placeRef/name">
+                        <help-text xml:lang="en">Name of a linked resource that is associated with the described entity</help-text>
                         <label xml:lang="en">Name</label>
                         <input>textField</input>
                     </interface-field>
@@ -801,10 +792,8 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person/relations/relation/personRef|organizationRef|placeRef/uri">
-                        <help-text xml:lang="en"
-                            >URI of a linked resource that is associated with the described entity</help-text>
+                    <interface-field path="entity/person/relations/relation/personRef|organizationRef|placeRef/uri">
+                        <help-text xml:lang="en">URI of a linked resource that is associated with the described entity</help-text>
                         <label xml:lang="en">Name</label>
                         <input>textField</input>
                     </interface-field>
@@ -839,8 +828,7 @@
                 <xs:appinfo>
                     <interface-field path="entity/place/description/latitude">
                         <label xml:lang="en">Latitude</label>
-                        <help-text xml:lang="en"
-                            >Latitude in decimal degrees of the place entity.  Example: for the place entity
+                        <help-text xml:lang="en">Latitude in decimal degrees of the place entity.  Example: for the place entity
                             Edmonton, the latitude in decimal degrees is "53.55014".</help-text>
                         <input>textField</input>
                     </interface-field>
@@ -860,8 +848,7 @@
                 <xs:appinfo>
                     <interface-field path="entity/place/description/longitude">
                         <label xml:lang="en">Longitude</label>
-                        <help-text xml:lang="en"
-                            >Longitude in decimal degrees of the place entity.  Example: for the place entity
+                        <help-text xml:lang="en">Longitude in decimal degrees of the place entity.  Example: for the place entity
                             Edmonton, the longitude in decimal degrees is "-113.46871".</help-text>
                         <input>textField</input>
                     </interface-field>
@@ -882,19 +869,16 @@
 
                     <interface-field path="entity/place/description/featureClass">
                         <label xml:lang="en">Feature class</label>
-                        <help-text xml:lang="en"
-                            >The GeoNames feature class of the place entity.  Example: for the place
+                        <help-text xml:lang="en">The GeoNames feature class of the place entity.  Example: for the place
                             entity Edmonton, the GeoNames feature class is "Populated Place Feature".</help-text>
                         <input>textField</input>
                     </interface-field>
 
                     <values>
                         <choice>
-                            <value a:en="Populated Place Feature" default="yes"
-                                >Populated Place Feature</value>
+                            <value a:en="Populated Place Feature" default="yes">Populated Place Feature</value>
                             <a:documentation>Select this value for populated places, such as cities, towns, and villages.</a:documentation>
-                            <value a:en="Administrative Boundary Feature"
-                                >Administrative Boundary Feature</value>
+                            <value a:en="Administrative Boundary Feature">Administrative Boundary Feature</value>
                             <a:documentation>Select this value for administrative divisions, such as countries, provinces, states, counties, and other political regions.</a:documentation>
                             <value a:en="Area Feature">Area Feature</value>
                             <a:documentation>Select this value for area or polygon features, such as parks, reserves, and historical regions.</a:documentation>
@@ -952,8 +936,7 @@
                 <xs:appinfo>
                     <interface-field path="entity/place/description/featureCodeLabel">
                         <label xml:lang="en">Feature code label</label>
-                        <help-text xml:lang="en"
-                            >The GeoNames feature code label of the place entity (see http://www.geonames.org/export/codes.html).
+                        <help-text xml:lang="en">The GeoNames feature code label of the place entity (see http://www.geonames.org/export/codes.html).
                             Example: for the place entity Edmonton, the GeoNames feature code label is "seat of a first-order
                             administrative division".</help-text>
                         <input>textField</input>
@@ -975,8 +958,7 @@
                 <xs:appinfo>
                     <interface-field path="entity/place/description/countryName">
                         <label xml:lang="en">Country name</label>
-                        <help-text xml:lang="en"
-                            >The ISO 3166-1 English country name that contains the place entity 
+                        <help-text xml:lang="en">The ISO 3166-1 English country name that contains the place entity 
                             (see http://en.wikipedia.org/wiki/ISO_3166-1).  Example:
                             for the place entity Edmonton, the English country name is "Canada".</help-text>
                         <input>textField</input>
@@ -998,8 +980,7 @@
                 <xs:appinfo>
                     <interface-field path="entity/place/description/firstAdministrativeDivision">
                         <label xml:lang="en">First-level administrative division</label>
-                        <help-text xml:lang="en"
-                            >The ISO 3166-2 country subdivision name, or first-level (first-order) administrative division name
+                        <help-text xml:lang="en">The ISO 3166-2 country subdivision name, or first-level (first-order) administrative division name
                             (e.g., province or state) that contains the place entity (see http://en.wikipedia.org/wiki/ISO_3166-2).
                             Example: for the place entity Edmonton, the first-level administrative division name is "Alberta".</help-text>
                         <input>textField</input>
@@ -1021,8 +1002,7 @@
                 <xs:appinfo>
                     <interface-field path="entity/place/description/secondAdministrativeDivision">
                         <label xml:lang="en">Second-level administrative division</label>
-                        <help-text xml:lang="en"
-                            >The second-level (second-order) administrative division name (e.g., county) that contains the place entity 
+                        <help-text xml:lang="en">The second-level (second-order) administrative division name (e.g., county) that contains the place entity 
                             (see http://en.wikipedia.org/wiki/Table_of_administrative_divisions_by_country).  Example: for the place 
                             entity Arva, Ontario, the second-level administrative division name is "Middlesex County".</help-text>
                         <input>textField</input>
@@ -1043,8 +1023,7 @@
                 <xs:appinfo>
                     <interface-field path="entity/place/description/elevation">
                         <label xml:lang="en">Elevation</label>
-                        <help-text xml:lang="en"
-                            >Elevation in meters of the place entity.  Example: for the place entity
+                        <help-text xml:lang="en">Elevation in meters of the place entity.  Example: for the place entity
                             Mount Logan (in Yukon), the elevation in meters is "5,959".</help-text>
                         <input>textField</input>
                     </interface-field>
@@ -1065,8 +1044,7 @@
                 <xs:appinfo>
                     <interface-field path="entity/place/description/averageElevation">
                         <label xml:lang="en">Average elevation</label>
-                        <help-text xml:lang="en"
-                            >Using a digital elevation model (srtm3 or gtopo30), average elevation of a
+                        <help-text xml:lang="en">Using a digital elevation model (srtm3 or gtopo30), average elevation of a
                             3''x3'' (ca 90mx90m) or 30''x30'' (ca 900mx900m) area in meters.  Example: for 
                             the place entity Edmonton, the average elevation in meters is "610".</help-text>
                         <input>textField</input>
@@ -1087,8 +1065,7 @@
                 <xs:appinfo>
                     <interface-field path="entity/place/description/timeZoneOffset">
                         <label xml:lang="en">Time zone UTC offset</label>
-                        <help-text xml:lang="en"
-                            >The time zone UTC standard time offset that contains the place entity.  Example: 
+                        <help-text xml:lang="en">The time zone UTC standard time offset that contains the place entity.  Example: 
                             for the place entity Edmonton, the time zone UTM standard time offset is "-7.0".</help-text>
                         <input>textField</input>
                     </interface-field>
@@ -1164,11 +1141,9 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person|organization|place/recordInfo/originInfo/projectId">
+                    <interface-field path="entity/person|organization|place/recordInfo/originInfo/projectId">
                         <label xml:lang="en">Collection</label>
-                        <help-text xml:lang="en"
-                            >Select one or more collections to associate
+                        <help-text xml:lang="en">Select one or more collections to associate
                             the present entity record with a project.</help-text>
                         <input>textField</input>
                         <!-- mpo: ideally dynamic
@@ -1177,10 +1152,8 @@
                         <!-- mpo: to be changed to drop-down once we get project ids from Fedora -->
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization|place/identity/variantForms/variant/authorizedBy/projectId">
-                        <help-text xml:lang="en"
-                            >Optional. Specify a project that uses this as the
+                    <interface-field path="entity/person|organization|place/identity/variantForms/variant/authorizedBy/projectId">
+                        <help-text xml:lang="en">Optional. Specify a project that uses this as the
                             preferred form of the name.</help-text>
                         <label xml:lang="en">Preferred name for</label>
                         <input>textField</input>
@@ -1189,6 +1162,7 @@
                             identifiers and option to enter text -->
                     </interface-field>
 
+                    <!--
                     <interface-field
                         path="entity/person|organization|place/description/descriptiveNotes/note/projectId">
                         <help-text xml:lang="en"
@@ -1196,10 +1170,11 @@
                             note.</help-text>
                         <label xml:lang="en">Note created by project</label>
                         <input>textField</input>
-                        <!-- mpo: ideally dynamic
+                         mpo: ideally dynamic
                             dropDown (combobox) populated with cwrc project
-                            identifiers and option to enter text -->
+                            identifiers and option to enter text
                     </interface-field>
+                    -->
 
                     <!--<interface-field
                         path="entity/person|organization/description/existDates/dateSingle/note/projectId">
@@ -1262,7 +1237,7 @@
                 Equivalent to MADS recordChangeDate and EAC-CPF's
                 maintenanceHistory/maintenance/Event/eventType/eventDateTime .  
                 Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
-             <choice>
+            <choice>
                 <empty/>
                 <data type="date"/>
                 <data type="gYearMonth"/>
@@ -1291,8 +1266,7 @@
                 <xs:appinfo>
 
                     <interface-field path="entity/person/description/relatedResources/resource">
-                        <help-text xml:lang="en"
-                            >A source of evidence used in describing the entity or entities instances. Equivalent
+                        <help-text xml:lang="en">A source of evidence used in describing the entity or entities instances. Equivalent
                             to EAC-CFPF\'s source element.</help-text>
                         <label xml:lang="en">Resource</label>
                         <input>textField</input>
@@ -1338,8 +1312,7 @@
 
                     <interface-field path="entity/person|organization|place/identity/preferredForm">
                         <label xml:lang="en">Standard Name</label>
-                        <help-text xml:lang="en"
-                            >Use this section to flag a name as a preferred form
+                        <help-text xml:lang="en">Use this section to flag a name as a preferred form
                             to identify a person, organization, or place.</help-text>
                     </interface-field>
 
@@ -1375,11 +1348,9 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person|organization|place/identity/preferredForm/namePart">
+                    <interface-field path="entity/person|organization|place/identity/preferredForm/namePart">
                         <label xml:lang="en">Name Part</label>
-                        <help-text xml:lang="en"
-                            >Required. Provide the person's, organization's, or place's
+                        <help-text xml:lang="en">Required. Provide the person's, organization's, or place's
                             standard name, by part, in natural order. Add more name parts if
                             necessary. Person name example: Joyce (forename), Carol (middlename),
                             Oates (surname). Organization name example: Conseil des Arts du
@@ -1387,11 +1358,9 @@
                         <input>textField</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization|place/identity/variantForms/variant/namePart">
+                    <interface-field path="entity/person|organization|place/identity/variantForms/variant/namePart">
                         <label xml:lang="en">Name Part</label>
-                        <help-text xml:lang="en"
-                            >Optional. Record one or more alternative names
+                        <help-text xml:lang="en">Optional. Record one or more alternative names
                             here, in natural order. Add more name parts if necessary. Sample person
                             variant name: Mary Shelley's birth name should be entered as Mary
                             (forename), Wollstonecraft (middlename), Godwin (surname). Sample
@@ -1455,19 +1424,15 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person|organization/identity/preferredForm/namePart/@partType">
-                        <help-text xml:lang="en"
-                            >Optional. Select a type of name part from the
+                    <interface-field path="entity/person|organization/identity/preferredForm/namePart/@partType">
+                        <help-text xml:lang="en">Optional. Select a type of name part from the
                             list.</help-text>
                         <label xml:lang="en">Name Part Type</label>
                         <input>dropDown</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization/identity/variantForms/variant/namePart/@partType">
-                        <help-text xml:lang="en"
-                            >Optional. Select a type of name part from the
+                    <interface-field path="entity/person|organization/identity/variantForms/variant/namePart/@partType">
+                        <help-text xml:lang="en">Optional. Select a type of name part from the
                             list.</help-text>
                         <label xml:lang="en">Name Part Type</label>
                         <input>dropDown</input>
@@ -1552,10 +1517,8 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person|organization/identity/variantForms/variant/variantType">
-                        <help-text xml:lang="en"
-                            >If applicable, select a name type to describe
+                    <interface-field path="entity/person|organization/identity/variantForms/variant/variantType">
+                        <help-text xml:lang="en">If applicable, select a name type to describe
                             contexts in which this name was used to refer to the present
                             entity.</help-text>
                         <label xml:lang="en">Variant Name Type</label>
@@ -1651,8 +1614,7 @@
                 <xs:appinfo>
 
                     <interface-field path="entity/person|organization/description/existDates">
-                        <help-text xml:lang="en"
-                            >If known, enter dates of existence (i.e. birth,
+                        <help-text xml:lang="en">If known, enter dates of existence (i.e. birth,
                             death, fl., incorporation, establishment, etc.), of the present 
                             entity.</help-text>
                         <label xml:lang="en">Dates of Existence</label>
@@ -1714,8 +1676,7 @@
                 <xs:appinfo>
 
                     <interface-field path="entity/person/recordInfo/personTypes/personType">
-                        <help-text xml:lang="en"
-                            >Generic person types defined by projects. Select a
+                        <help-text xml:lang="en">Generic person types defined by projects. Select a
                             category from the list or specify a custom value.</help-text>
                         <label xml:lang="en">Person Type</label>
                         <input>dynamicCheckbox</input>
@@ -1725,17 +1686,13 @@
                         <choice>
                             <value a:en="undefined" default="yes">undefined</value>
                             <value a:fr="" a:en="Writer">writer</value>
-                            <value a:fr=""
-                                a:en="Canada's Early Women
-                                Writer"
-                                >ceww:earlyWomenWriter</value>
+                            <value a:fr="" a:en="Canada's Early Women
+                                Writer">ceww:earlyWomenWriter</value>
                             <!-- check with Carole
                                     Gerson -->
                             <value a:fr="" a:en="British Woman Writer (Orlando)">orl:BWW</value>
-                            <value a:fr="" a:en="International-British Women Writer (Orlando)"
-                                >orl:IBW</value>
-                            <value a:fr="" a:en="International Women Writer (Orlando)"
-                                >orl:IWW</value>
+                            <value a:fr="" a:en="International-British Women Writer (Orlando)">orl:IBW</value>
+                            <value a:fr="" a:en="International Women Writer (Orlando)">orl:IWW</value>
                             <value a:fr="" a:en="Male Writer (Orlando)">orl:MW</value>
                             <value a:fr="" a:en="Creator (CanWWr)">canwwr:creator</value>
                             <value a:fr="" a:en="Critic (CanWWr)">canwwr:critic</value>
@@ -1849,8 +1806,7 @@
                 <xs:appinfo>
 
                     <interface-field path="entity/organization/description/orgTypes/orgType">
-                        <help-text xml:lang="en"
-                            >Generic organization types defined by projects.
+                        <help-text xml:lang="en">Generic organization types defined by projects.
                             Select a category from the list or specify a custom value.</help-text>
                         <label xml:lang="en">Organization Type</label>
                         <input>dynamicCheckbox</input>
@@ -1949,8 +1905,7 @@
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person|organization|place/identity/sameAs">
-                        <help-text xml:lang="en"
-                            >Enter a link to a resource that contains
+                        <help-text xml:lang="en">Enter a link to a resource that contains
                             information about this entity (e.g., a Wikipedia article about the
                             person, organization, title, place, or event that is subject of the
                             present record). This field is also useful to declare that the present
@@ -1982,10 +1937,8 @@
                 <xs:appinfo>
 
 
-                    <interface-field
-                        path="entity/person|organization|place/identity/variantForms/variant/@cert">
-                        <help-text xml:lang="en"
-                            >By selecting a certainty level you can specify an
+                    <interface-field path="entity/person|organization|place/identity/variantForms/variant/@cert">
+                        <help-text xml:lang="en">By selecting a certainty level you can specify an
                             approximate degree of confidence on a given piece of information about
                             this entity. Definite is default.</help-text>
                         <label xml:lang="en">Certainty</label>
@@ -1993,38 +1946,31 @@
                     </interface-field>
 
                     <interface-field path="entity/person|organization|place/identity/sameAs/@cert">
-                        <help-text xml:lang="en"
-                            >By selecting a certainty level you can specify an
+                        <help-text xml:lang="en">By selecting a certainty level you can specify an
                             approximate degree of confidence on a given piece of information about
                             this entity. Definite is default.</help-text>
                         <label xml:lang="en">Certainty</label>
                         <input>slider</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateSingle/@cert">
-                        <help-text xml:lang="en"
-                            >By selecting a certainty level you can specify an
+                    <interface-field path="entity/person|organization|place/description/existDates/dateSingle/@cert">
+                        <help-text xml:lang="en">By selecting a certainty level you can specify an
                             approximate degree of confidence on a given piece of information about
                             this entity. Definite is default.</help-text>
                         <label xml:lang="en">Certainty</label>
                         <input>slider</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateRange/fromDate/@cert">
-                        <help-text xml:lang="en"
-                            >By selecting a certainty level you can specify an
+                    <interface-field path="entity/person|organization|place/description/existDates/dateRange/fromDate/@cert">
+                        <help-text xml:lang="en">By selecting a certainty level you can specify an
                             approximate degree of confidence on a given piece of information about
                             this entity. Definite is default.</help-text>
                         <label xml:lang="en">Certainty</label>
                         <input>slider</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateRange/toDate/@cert">
-                        <help-text xml:lang="en"
-                            >By selecting a certainty level you can specify an
+                    <interface-field path="entity/person|organization|place/description/existDates/dateRange/toDate/@cert">
+                        <help-text xml:lang="en">By selecting a certainty level you can specify an
                             approximate degree of confidence on a given piece of information about
                             this entity. Definite is default.</help-text>
                         <label xml:lang="en">Certainty</label>
@@ -2032,18 +1978,15 @@
                     </interface-field>
 
                     <interface-field path="entity/person/description/genders/gender/@cert">
-                        <help-text xml:lang="en"
-                            >By selecting a certainty level you can specify an
+                        <help-text xml:lang="en">By selecting a certainty level you can specify an
                             approximate degree of confidence on a given piece of information about
                             this entity. Definite is default.</help-text>
                         <label xml:lang="en">Certainty</label>
                         <input>slider</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization/description/occupations|activities|researchInterests/occupation|activity|interest/term/@cert">
-                        <help-text xml:lang="en"
-                            >By selecting a certainty level you can specify an
+                    <interface-field path="entity/person|organization/description/occupations|activities|researchInterests/occupation|activity|interest/term/@cert">
+                        <help-text xml:lang="en">By selecting a certainty level you can specify an
                             approximate degree of confidence on a given piece of information about
                             this entity. Definite is default.</help-text>
                         <label xml:lang="en">Certainty</label>
@@ -2089,8 +2032,7 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateSingle">
+                    <interface-field path="entity/person|organization|place/description/existDates/dateSingle">
                         <label xml:lang="en">Date</label>
                         <input label="Add">dialogue</input>
                     </interface-field>
@@ -2116,8 +2058,7 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateRange">
+                    <interface-field path="entity/person|organization|place/description/existDates/dateRange">
                         <label xml:lang="en">Date Range</label>
                         <input label="Add">dialogue</input>
                     </interface-field>
@@ -2211,27 +2152,21 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateSingle/standardDate">
-                        <help-text xml:lang="en"
-                            >Select a date from date picker or enter a date in
+                    <interface-field path="entity/person|organization|place/description/existDates/dateSingle/standardDate">
+                        <help-text xml:lang="en">Select a date from date picker or enter a date in
                             the format yyyy-mm-dd, yyyy-mm, or yyyy.</help-text>
                         <input>datePicker</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateRange/fromDate/standardDate">
-                        <help-text xml:lang="en"
-                            >If known, add date ranges of existence (i.e. birth,
+                    <interface-field path="entity/person|organization|place/description/existDates/dateRange/fromDate/standardDate">
+                        <help-text xml:lang="en">If known, add date ranges of existence (i.e. birth,
                             death, fl., incorporation, establishment, etc.).</help-text>
                         <label xml:lang="en">From</label>
                         <input>datePicker</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateRange/toDate/standardDate">
-                        <help-text xml:lang="en"
-                            >If known, add date ranges of existence (i.e. birth,
+                    <interface-field path="entity/person|organization|place/description/existDates/dateRange/toDate/standardDate">
+                        <help-text xml:lang="en">If known, add date ranges of existence (i.e. birth,
                             death, fl., incorporation, establishment, etc.).</help-text>
                         <label xml:lang="en">To</label>
                         <input>datePicker</input>
@@ -2248,8 +2183,7 @@
                 <data type="dateTime"/>
                 <data type="string">
                     <!-- mpo: regex - orlando dates; check datatype -->
-                    <param name="pattern"
-                        >((\d{4})\D(0[1-9]|1[0-2])\D([12]\d|0[1-9]|3[01])|(\d{4})(0[1-9]|1[0-2])([12]\d|0[1-9]|3[01]))</param>
+                    <param name="pattern">((\d{4})\D(0[1-9]|1[0-2])\D([12]\d|0[1-9]|3[01])|(\d{4})(0[1-9]|1[0-2])([12]\d|0[1-9]|3[01]))</param>
                     <!-- mpo: check if replace \d for hyphens -->
                 </data>
                 <data type="string">
@@ -2314,30 +2248,24 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateSingle/dateType">
-                        <help-text xml:lang="en"
-                            >Select a term from the list or add a custom keyword
+                    <interface-field path="entity/person|organization|place/description/existDates/dateSingle/dateType">
+                        <help-text xml:lang="en">Select a term from the list or add a custom keyword
                             that best describes the context in which this date is relevant to the
                             present entity.</help-text>
                         <label xml:lang="en">Date Type</label>
                         <input>combobox</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateRange/fromDate/dateType">
-                        <help-text xml:lang="en"
-                            >Select a term from the list or add a custom keyword
+                    <interface-field path="entity/person|organization|place/description/existDates/dateRange/fromDate/dateType">
+                        <help-text xml:lang="en">Select a term from the list or add a custom keyword
                             to best describes the context in which this date is relevant to the
                             present entity.</help-text>
                         <label xml:lang="en">Date Type</label>
                         <input>combobox</input>
                     </interface-field>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/existDates/dateRange/toDate/dateType">
-                        <help-text xml:lang="en"
-                            >Select a term from the list or add a custom keyword
+                    <interface-field path="entity/person|organization|place/description/existDates/dateRange/toDate/dateType">
+                        <help-text xml:lang="en">Select a term from the list or add a custom keyword
                             to best describes the context in which this date is relevant to the
                             present entity.</help-text>
                         <label xml:lang="en">Date Type</label>
@@ -2381,8 +2309,7 @@
                     <values type="title">
                         <choice>
                             <value a:en="undefined" default="yes">undefined</value>
-                            <value a:fr="" a:en="original publication or issuance"
-                                >original
+                            <value a:fr="" a:en="original publication or issuance">original
                                 issuance</value>
                             <value a:fr="" a:en="edition">edition</value>
                             <value a:fr="" a:en="reprint">reprint</value>
@@ -2404,8 +2331,7 @@
             <data type="NCName">
                 <!-- Because of restrictions in Relax NG, the expression of this attribute is NCName. 
                     This is not strictly conformant to the xml:id specification, though necessary in order for
-                    to validate. The XML Schema version of this attribute should be defined as ID -->
-            </data>
+                    to validate. The XML Schema version of this attribute should be defined as ID --> </data>
         </attribute>
     </define>
 
@@ -2413,11 +2339,12 @@
 
     <define name="descriptiveNotes-element">
         <element name="descriptiveNotes">
+            <a:documentation>A container element to hold one or more general notes about the present entity.</a:documentation>
+
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person|organization|place/description/descriptiveNotes">
+                    <interface-field path="entity/person|organization|place/description/descriptiveNotes">
                         <label>Summary</label>
                     </interface-field>
 
@@ -2437,9 +2364,11 @@
 
     <define name="p-element">
         <element name="p">
+            <!--
             <xs:annotation>
                 <xs:appinfo>
 
+                    
                     <interface-field
                         path="entity/person|organization|place/description/existDates/dateSingle/note/p">
                         <help-text xml:lang="en"
@@ -2466,7 +2395,7 @@
                         <label xml:lang="en">Note</label>
                         <input>textArea</input>
                     </interface-field>
-
+                    
                     <interface-field
                         path="entity/person|organization|place/description/descriptiveNotes/note/p">
                         <help-text xml:lang="en"
@@ -2476,17 +2405,18 @@
                         <input>textArea</input>
                     </interface-field>
 
-                    <!--mpo: interface: notes in existDates context are not represented in interface-->
+                    mpo: interface: notes in existDates context are not represented in interface
 
                 </xs:appinfo>
             </xs:annotation>
+            -->
 
             <text/>
         </element>
     </define>
 
 
-
+    <!--
     <define name="access-element">
         <element name="access" a:defaultValue="public">
 
@@ -2523,6 +2453,7 @@
 
         </element>
     </define>
+    -->
 
     <!-- MRB: Thu 05-Dec-2013: Added an <accessCondition> element, along with its required attribute @type, and its optional
     child element <a>, which has a required attribute of @href and an optional attribute of @rel -->
@@ -2573,22 +2504,60 @@
 
     <define name="note-element">
         <element name="note">
+            <a:documentation>A field to record a note about some aspect of the present entity.</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+
+                    <interface-field path="entity/person|organization|place/description/existDates/dateSingle/note">
+                        <help-text xml:lang="en">Enter one or more notes about this
+                            date.</help-text>
+                        <label xml:lang="en">Note</label>
+                        <input>textArea</input>
+                    </interface-field>
+
+                    <interface-field path="entity/person|organization|place/description/existDates/dateRange/fromDate/note">
+                        <help-text xml:lang="en">Enter one or more notes about this
+                            date.</help-text>
+                        <label xml:lang="en">Note</label>
+                        <input>textArea</input>
+                    </interface-field>
+
+                    <interface-field path="entity/person|organization|place/description/existDates/dateRange/toDate/note">
+                        <help-text xml:lang="en">Enter one or more notes about this
+                            date.</help-text>
+                        <label xml:lang="en">Note</label>
+                        <input>textArea</input>
+                    </interface-field>
+
+                    <interface-field path="entity/person|organization|place/description/descriptiveNotes/note">
+                        <help-text xml:lang="en">Enter a descriptive summary about the present
+                            entity.</help-text>
+                        <label xml:lang="en">Brief Description</label>
+                        <input>textArea</input>
+                    </interface-field>
+
+                    <!--mpo: interface: notes in existDates context are not represented in interface-->
+
+                </xs:appinfo>
+            </xs:annotation>
 
             <optional>
                 <ref name="id-attribute"/>
+            </optional>
+            <optional>
+                <ref name="lang-attribute"/>
             </optional>
             <!--<optional>
                 <ref name="noteType-attribute"/>
                 </optional>-->
 
+            <!--
             <interleave>
                 <optional>
                     <oneOrMore>
                         <ref name="p-element"/>
                     </oneOrMore>
-                </optional>
-                <optional>
-                    <ref name="lang-attribute"/>
                 </optional>
                 <optional>
                     <ref name="projectId-element"/>
@@ -2597,6 +2566,9 @@
                     <ref name="access-element"/>
                 </optional>
             </interleave>
+            -->
+
+            <data type="string"/>
         </element>
     </define>
 
@@ -2647,6 +2619,7 @@
     <define name="lang-attribute" ns="http://www.w3.org/XML/1998/namespace">
         <attribute name="xml:lang">
 
+            <!--
             <xs:annotation>
                 <xs:appinfo>
 
@@ -2686,10 +2659,11 @@
                         </choice>
                     </values>
 
-                    <!--<values url="http://www.loc.gov/standards/iso639-2/ISO-639-2_8859-1.txt"/>-->
+                    COMMENT: <values url="http://www.loc.gov/standards/iso639-2/ISO-639-2_8859-1.txt"/>
 
                 </xs:appinfo>
             </xs:annotation>
+            -->
 
             <data type="language"/>
         </attribute>
@@ -2713,10 +2687,8 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field
-                        path="entity/person|organization|place/identity/variantForms/variant">
-                        <help-text xml:lang="en"
-                            >If known, indicate one or more alternative name
+                    <interface-field path="entity/person|organization|place/identity/variantForms/variant">
+                        <help-text xml:lang="en">If known, indicate one or more alternative name
                             forms used to refer to this entity.</help-text>
                         <label xml:lang="en">Variant Names</label>
                         <input label="Add">dialogue</input>
