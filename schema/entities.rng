@@ -7,7 +7,7 @@
      from the interface annotation code; and allowed text content to be written to the <note> element text node.
      * Removed three "hidden" interface annotation code elements: the <accessCondition>, <recordChangeDate>, and
      <recordCreationDate> elements.
-     MRB: Thu 16-Jan-2014: Added an originInfo/recordOrigin element
+     MRB: Thu 16-Jan-2014: Added an originInfo/recordOrigin elem/ent
      MRB: Tue 07-Jan-2014: Revised and added to place entity section
      MRB: Mon 06-Jan-2014: Revised the <recordCreationDate> and <recordChangeDate> elements
      MRB: Fri 27-Dec-2013: Revised and added to place entity section
@@ -2153,6 +2153,7 @@
                     <interface-field path="entity/person|organization|place/description/existDates/dateSingle/standardDate">
                         <help-text xml:lang="en">Select a date from date picker or enter a date in
                             the format yyyy-mm-dd, yyyy-mm, or yyyy.</help-text>
+                        <label xml:lang="en">Date</label>
                         <input>datePicker</input>
                     </interface-field>
 
