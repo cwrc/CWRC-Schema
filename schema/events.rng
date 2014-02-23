@@ -54,10 +54,12 @@
                             <ref name="dateStruct-element"/>
                             <ref name="date-element"/>
                         </choice>
-                        <ref name="chronProse-element"/>
-                        <optional>
-                            <ref name="shortProse-element"/>
-                        </optional>
+                        <group>
+                            <ref name="chronProse-element"/>
+                            <optional>
+                                <ref name="shortProse-element"/>
+                            </optional>
+                        </group>
                     </group>
                     <ref name="Div0-inclusion"/>
                     <zeroOrMore>

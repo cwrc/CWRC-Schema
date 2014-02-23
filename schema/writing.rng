@@ -64,24 +64,45 @@
   <define name="chronStruct-element" combine="choice">
     <element name="CHRONSTRUCT">
       <!-- Already documented in common schema. This definition includes writing semantic elements -->
-      <zeroOrMore>
-        <choice>
+      <interleave>
+        <group>
+          <choice>
+            <ref name="dateRange-element"/>
+            <ref name="dateStruct-element"/>
+            <ref name="date-element"/>
+          </choice>
           <group>
-            <choice>
-              <ref name="dateRange-element"/>
-              <ref name="dateStruct-element"/>
-              <ref name="date-element"/>
-            </choice>
             <ref name="chronProse-element"/>
             <optional>
               <ref name="shortProse-element"/>
             </optional>
           </group>
-          <ref name="Div0-inclusion"/>
-          <ref name="Div1-inclusion"/>
-          <ref name="anyWri"/>
-        </choice>
-      </zeroOrMore>
+        </group>
+        <ref name="anyWri"/>
+        <ref name="Div0-inclusion"/>
+        <zeroOrMore>
+          <choice>
+            <ref name="name-element"/>
+            <ref name="place-element"/>
+            <ref name="orgName-element"/>
+            <ref name="rs-element"/>
+            <ref name="sic-element"/>
+            <ref name="corr-element"/>
+            <ref name="emph-element"/>
+            <ref name="quote-element"/>
+            <ref name="foreign-element"/>
+            <ref name="soCalled-element"/>
+            <ref name="topic-element"/>
+            <ref name="tGenre-element"/>
+            <ref name="job-element"/>
+            <ref name="xptr-element"/>
+            <ref name="xref-element"/>
+            <ref name="l-element"/>
+            <ref name="lg-element"/>
+            <ref name="time-element"/>                
+          </choice>
+        </zeroOrMore>
+      </interleave>
     </element>
   </define>
   
