@@ -244,6 +244,7 @@
             <!-- LS to MP: No documentation for this even though it is mentioned many times in the documentation for other tags. -->
             <ref name="ID-attribute"/>
             <interleave>
+                <text/>
                 <oneOrMore>
                     <ref name="p-element"/>
                 </oneOrMore>
@@ -708,7 +709,6 @@
             <xhtml:p>Use WroteOrPublishedAs attribute. All personName content sub-elements have an attribute for WroteOrPublishedAs to be used when the writer published under the name within the element.</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -743,7 +743,7 @@
             <xhtml:p>Answer: Since birth is a required element, include a sentence reading &quot;Birth date unknown.&quot; In these instances, it is suggested that the researcher include a research note detailing the sources they have checked trying to locate a date so that research will not be duplicated.</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>                        
                         <ref name="chronStruct-element"/>
@@ -785,7 +785,7 @@
             <xhtml:p>Answer: To the best of your ability, include a &quot;roughly dated&quot; ballpark date for when you reasonably think the event could be slotted into the chronology (eg. a 17th-century writer did not die in the 19th-century). Leave the prose of the date empty and include a chronology sentence reading &quot;The date of her death is unknown.&quot;</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -824,7 +824,7 @@
             <xhtml:p>All information contained within this element, specifically the sub-elements directed towards identifying categories, apply to the person who is the subject of the biography. Do NOT use, for example, geogheritage to tag the fact that her employer was Carribean.</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -897,7 +897,7 @@
                 </attribute>
             </optional>
             <interleave> <!--revise: text is not allowed in dtd-->
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -937,15 +937,15 @@
             <xhtml:p>Unless the sub-headings &quot;mother&quot; and &quot;father&quot; are required because of the length of the discussion, do not include.</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
-                    <zeroOrMore>
-                        <choice>
-                            <ref name="member-element"/>
-                            <ref name="chronStruct-element"/>
-                            <ref name="Div2-element"/>
-                            <ref name="p-element"/>
-                        </choice>
-                    </zeroOrMore>
+                <!--<text/>-->
+                <zeroOrMore>
+                    <choice>
+                        <ref name="member-element"/>
+                        <ref name="chronStruct-element"/>
+                        <ref name="Div2-element"/>
+                        <ref name="p-element"/>
+                    </choice>
+                </zeroOrMore>
                 <!-- first occurrence of family inclusion -->
                 <!--<ref name="family-inclusion"/>-->
                 <ref name="Div0-inclusion"/>
@@ -1063,7 +1063,7 @@
             <xhtml:p>Answer: See IntimateRelationships.</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -1130,7 +1130,7 @@
                 </attribute>
             </optional>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -1193,7 +1193,7 @@
                 </attribute>
             </optional>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -1240,7 +1240,7 @@
             <ref name="ID-attribute"/>
             <ref name="relationTo-attribute"/>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -1296,7 +1296,7 @@
                         <!-- first occurrence of occupation inclusion -->
                         <ref name="Div0-inclusion"/>
                         <ref name="Div1-inclusion"/>
-                        <text/>
+                        <!--<text/>-->
                     </choice>
                 </zeroOrMore>                
             </interleave>
@@ -1346,7 +1346,7 @@
             <xhtml:p>Answer: You will often find yourself making such judgement calls and the answer will depend on the context. But if she, herself, was pro-choice then the activity should be included under Politics. If your document flow allows, you may wish to include this information in different ways in two elements.</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -1407,7 +1407,7 @@
             <xhtml:p>Answer: Occupation with a Significant Activity attribute.</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -1437,7 +1437,7 @@
             <xhtml:p>&lt;violence&gt;&lt;Div2&gt;&lt;chronStruct&gt;&lt;date&gt;29 July 1901&lt;/&gt;&lt;chronProse&gt;Walter Chapman, the mentally unstable postmaster at Grayshott, murdered his wife Emily, not long after FT ceased working at the Grayshott Post Office.&lt;/&gt;&lt;/&gt;&lt;shortProse&gt;&lt;p&gt;When FT worked in Grayshott, she initially had a room in the living quarters behind the post office, where the Chapmans lived, and overheard loud domestic strife between Walter and his wife. FT was also present when Walter fired a revolver at imaginary burglars, and spoke wildly of enemies, with whom he thought FT was in league, but she left the employ of the post office before the murder occurred. FT was deeply disturbed upon reading reports of the murder, feeling that if she had reported Walter&apos;s violent behaviour to the police, she might have prevented Emily&apos;s death. Given the current attitudes to marriage and domestic violence in the village, FT knew that the police would likely be unsympathetic and unwilling to interfere in domestic strife but felt that she bore some portion of the blame for Emily's death by having said nothing.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -1472,7 +1472,7 @@
             <xhtml:p>Answer: See class</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -1504,7 +1504,7 @@
             <xhtml:p>Do not use for non-literary cultural activities, such as art exhibits. Include such activities in LeisureAndSociety.</xhtml:p>
             <ref name="ID-attribute"/>
             <interleave>
-                <text/>
+                <!--<text/>-->
                 <zeroOrMore>
                     <choice>
                         <ref name="chronStruct-element"/>
@@ -3499,7 +3499,7 @@
                     <ref name="styled-element"/>
                     <ref name="titled-element"/>
                     <ref name="birthPosition-element"/>
-<!--                    <ref name="cause-element"/>-->
+                    <!--<ref name="cause-element"/>-->
                     <ref name="raceColour-element"/>
                     <ref name="class-element"/>
                     <ref name="nationalHeritage-element"/>
