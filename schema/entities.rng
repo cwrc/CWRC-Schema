@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
+     MRB: Mon 03-Mar-2014: Revised the <relations> element section's interface annotation code
+     MRB: Sat 01-Mar-2014: Eliminated the <access> element
      MRB: Mon 18-Feb-2014
      * Deleted child elements of the <note> element, the <access>, <p>, and <projectId> elements, and also made
      these changes in the interface annotation code; deleted the <note> element attributes of @xml:id and @xml:lang
@@ -700,6 +702,18 @@
             <a:documentation>Captures a relation between a given entity and other entities. For example, an organization,
                 person, work, or place related to the described entity. Equivalent to EAC-CPF\'s cpfRelation (if the relation
                 is to organizations and persons) or to resourceRelation (if the relation involves a work or title).</a:documentation>
+
+            <xs:annotation>
+                <xs:appinfo>
+
+                    <interface-field path="entity/person|organization|place/relations/relation">
+                        <help-text xml:lang="en">Captures a relation between a given entity and other entities.</help-text>
+                        <label>Relations</label>
+                    </interface-field>
+
+                </xs:appinfo>
+            </xs:annotation>
+
             <optional>
                 <ref name="type-attribute"/>
             </optional>
@@ -772,9 +786,21 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field path="entity/person/relations/relation/personRef|organizationRef|placeRef/name">
-                        <help-text xml:lang="en">Name of a linked resource that is associated with the described entity</help-text>
-                        <label xml:lang="en">Name</label>
+                    <interface-field path="entity/person/relations/relation/personRef/name">
+                        <help-text xml:lang="en">Name of a linked resource person entity that is associated with the described entity</help-text>
+                        <label xml:lang="en">Person's name</label>
+                        <input>textField</input>
+                    </interface-field>
+
+                    <interface-field path="entity/organization/relations/relation/organizationRef/name">
+                        <help-text xml:lang="en">Name of a linked resource organization entity that is associated with the described entity</help-text>
+                        <label xml:lang="en">Organization's name</label>
+                        <input>textField</input>
+                    </interface-field>
+
+                    <interface-field path="entity/place/relations/relation/placeRef/name">
+                        <help-text xml:lang="en">Name of a linked resource place entity that is associated with the described entity</help-text>
+                        <label xml:lang="en">Place's name</label>
                         <input>textField</input>
                     </interface-field>
 
@@ -792,9 +818,21 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field path="entity/person/relations/relation/personRef|organizationRef|placeRef/uri">
-                        <help-text xml:lang="en">URI of a linked resource that is associated with the described entity</help-text>
-                        <label xml:lang="en">Name</label>
+                    <interface-field path="entity/person/relations/relation/personRef/uri">
+                        <help-text xml:lang="en">URI of a linked resource place entity that is associated with the described entity</help-text>
+                        <label xml:lang="en">Person's URI</label>
+                        <input>textField</input>
+                    </interface-field>
+
+                    <interface-field path="entity/organization/relations/relation/organizationRef/uri">
+                        <help-text xml:lang="en">URI of a linked resource organization entity that is associated with the described entity</help-text>
+                        <label xml:lang="en">Organization's URI</label>
+                        <input>textField</input>
+                    </interface-field>
+
+                    <interface-field path="entity/place/relations/relation/placeRef/uri">
+                        <help-text xml:lang="en">URI of a linked resource place entity that is associated with the described entity</help-text>
+                        <label xml:lang="en">Place's URI</label>
                         <input>textField</input>
                     </interface-field>
 
@@ -2033,7 +2071,7 @@
                 <xs:appinfo>
 
                     <interface-field path="entity/person|organization|place/description/existDates/dateSingle">
-                        <label xml:lang="en">Date</label>
+                        <label xml:lang="en">Date Single</label>
                         <input label="Add">dialogue</input>
                     </interface-field>
 
@@ -2416,6 +2454,10 @@
 
 
     <!--
+        
+    MRB: Sat 01-Mar-2014: the <access> element has been eliminated; access conditions to the
+    entire entity are governed by the <accessCondition> element
+        
     <define name="access-element">
         <element name="access" a:defaultValue="public">
 
