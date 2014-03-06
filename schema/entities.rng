@@ -786,19 +786,19 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field path="entity/person/relations/relation/personRef/name">
+                    <interface-field path="entity/person|organization|place/relations/relation/personRef/name">
                         <help-text xml:lang="en">Name of a linked resource person entity that is associated with the described entity</help-text>
                         <label xml:lang="en">Person's name</label>
                         <input>textField</input>
                     </interface-field>
 
-                    <interface-field path="entity/organization/relations/relation/organizationRef/name">
+                    <interface-field path="entity/person|organization|place/relations/relation/organizationRef/name">
                         <help-text xml:lang="en">Name of a linked resource organization entity that is associated with the described entity</help-text>
                         <label xml:lang="en">Organization's name</label>
                         <input>textField</input>
                     </interface-field>
 
-                    <interface-field path="entity/place/relations/relation/placeRef/name">
+                    <interface-field path="entity/person|organization|place/relations/relation/placeRef/name">
                         <help-text xml:lang="en">Name of a linked resource place entity that is associated with the described entity</help-text>
                         <label xml:lang="en">Place's name</label>
                         <input>textField</input>
@@ -818,19 +818,19 @@
             <xs:annotation>
                 <xs:appinfo>
 
-                    <interface-field path="entity/person/relations/relation/personRef/uri">
+                    <interface-field path="entity/person|organization|place/relations/relation/personRef/uri">
                         <help-text xml:lang="en">URI of a linked resource place entity that is associated with the described entity</help-text>
                         <label xml:lang="en">Person's URI</label>
                         <input>textField</input>
                     </interface-field>
 
-                    <interface-field path="entity/organization/relations/relation/organizationRef/uri">
+                    <interface-field path="entity/person|organization|place/relations/relation/organizationRef/uri">
                         <help-text xml:lang="en">URI of a linked resource organization entity that is associated with the described entity</help-text>
                         <label xml:lang="en">Organization's URI</label>
                         <input>textField</input>
                     </interface-field>
 
-                    <interface-field path="entity/place/relations/relation/placeRef/uri">
+                    <interface-field path="entity/person|organization|place/relations/relation/placeRef/uri">
                         <help-text xml:lang="en">URI of a linked resource place entity that is associated with the described entity</help-text>
                         <label xml:lang="en">Place's URI</label>
                         <input>textField</input>
@@ -1823,7 +1823,7 @@
 
     <define name="orgTypes-element">
         <element name="orgTypes">
-            <a:documentation>Captures generic person types defined by each project. Based on
+            <a:documentation>Captures generic organization types defined by each project. Based on
                 WEAC-CPF\'s @localType.</a:documentation>
             <optional>
                 <ref name="id-attribute"/>
