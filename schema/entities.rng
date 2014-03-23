@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
+     MRB: Fri 14-Mar-2014: Added two new values to the <gender> element: "transgendered male-to-female", and
+     "transgendered female-to-male"
      MRB: Mon 03-Mar-2014: Revised the <relations> element section's interface annotation code
      MRB: Sat 01-Mar-2014: Eliminated the <access> element
      MRB: Mon 18-Feb-2014
@@ -583,6 +585,8 @@
         </element>
     </define>
 
+    <!-- MRB: Fri 14-Mar-2014: Added two new values to the <gender" element: "transgendered male-to-female", and
+    "transgendered female-to-male" -->
     <define name="gender-element">
         <element name="gender" a:defaultValue="undefined">
             <a:documentation>Gender captures a group of gender terms associated with a person entity.</a:documentation>
@@ -603,6 +607,8 @@
                             <value a:en="female">female</value>
                             <value a:en="male">male</value>
                             <value a:en="transgendered">transgendered</value>
+                            <value a:en="transgendered">transgendered male-to-female</value>
+                            <value a:en="transgendered">transgendered female-to-male</value>
                             <data a:en="other" type="string"/>
                         </choice>
                     </values>
@@ -617,6 +623,8 @@
                     <value>male</value>
                     <value>undefined</value>
                     <value>transgendered</value>
+                    <value>transgendered male-to-female</value>
+                    <value>transgendered female-to-male</value>
                     <data a:en="Specify" type="string"/>
                 </choice>
             </optional>
