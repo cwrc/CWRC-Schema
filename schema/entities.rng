@@ -881,7 +881,10 @@
                 </xs:appinfo>
             </xs:annotation>
 
-            <data type="decimal"/>
+            <choice>
+                <empty/>
+                <data type="decimal"/>
+            </choice>
         </element>
     </define>
 
@@ -901,7 +904,10 @@
                 </xs:appinfo>
             </xs:annotation>
 
-            <data type="decimal"/>
+            <choice>
+                <empty/>
+                <data type="decimal"/>
+            </choice>
         </element>
     </define>
 
@@ -1076,7 +1082,10 @@
                 </xs:appinfo>
             </xs:annotation>
 
-            <data type="integer"/>
+            <choice>
+                <empty/>
+                <data type="integer"/>
+            </choice>
         </element>
     </define>
 
@@ -1098,7 +1107,10 @@
                 </xs:appinfo>
             </xs:annotation>
 
-            <data type="integer"/>
+            <choice>
+                <empty/>
+                <data type="integer"/>
+            </choice>
         </element>
     </define>
 
@@ -1118,7 +1130,10 @@
                 </xs:appinfo>
             </xs:annotation>
 
-            <data type="decimal"/>
+            <choice>
+                <empty/>
+                <data type="decimal"/>
+            </choice>
         </element>
     </define>
 
@@ -1885,6 +1900,7 @@
                             <value a:fr="" a:en="musical">musical</value>
                             <value a:fr="" a:en="religious">religious</value>
                             <value a:fr="" a:en="publishing">publishing</value>
+                            <value a:fr="" a:en="school">school</value>
                             <data a:fr="" a:en="other" type="string"/>
                         </choice>
                     </values>
@@ -1923,6 +1939,7 @@
                     <value a:fr="" a:en="musical">musical</value>
                     <value a:fr="" a:en="religious">religious</value>
                     <value a:fr="" a:en="publishing">publishing</value>
+                    <value a:fr="" a:en="school">school</value>
                     <data a:fr="" a:en="other" type="string"/>
                     <!--<value>financial</value>-->
                     <!--<value>non-governmental</value>-->
