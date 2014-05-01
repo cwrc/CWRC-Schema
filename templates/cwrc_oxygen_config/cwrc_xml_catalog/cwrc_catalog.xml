@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<!--
+     * 2014-04-01
+     * purpose: use of an XML Catalog becomes a necessity when Internet access is not available or the Internet connection is slow.
+     * http://www.oxygenxml.com/doc/ug-editor/topics/using-XML-Catalogs.html
+     *
+     * NOTE: these local schemas are only used when Oxygen can not resolve the server stored files
+     *
+     * install:
+     ** copy 'this file'
+     ** create a sub-directory 'cwrc_schemas' (as referenced below) and copy all the cwrc schema into that directory
+     ** from oxygen
+     **** options==>preferences==>XML==>XML Catalog==>
+     **** "add" button
+     **** and select the "cwrc_catalog.xml" file by clicking on the folder icon
+     ** test
+     *
+     * TODO
+     * NOTE: 2014-04-10 this is just a partial implementation and needs to be extented to work with other schemas and possibily the CSS
+     * NOTE: because the schemas are stored on the local laptop harddrive, they will not be automatically updated when the ones on the server are updated.  the local ones will need to be updated manually.
+     -->
+
+<!DOCTYPE catalog 
+ PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN"
+ "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+	<uri name="http://cwrc.ca/schema/orlando.rng" uri="./cwrc_schemas/orlando.rng"/>
+	<uri name="http://cwrc.ca/schema/character_entities.dtd" uri="./cwrc_schemas/character_entities.dtd"/>
+	
+</catalog
