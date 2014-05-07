@@ -31,8 +31,7 @@
 -->
 
 <!-- root <grammar> element -->
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
 
     <!-- <start> element pattern -->
     <start>
@@ -8498,6 +8497,10 @@
                 <a:documentation>Cameron Kroetsch</a:documentation>
                 <value type="token">OAI</value>
                 <a:documentation>Olga Ivanova</a:documentation>
+                <value type="token">SJA</value>
+                <a:documentation>Stacey Aspinall</a:documentation>
+                <value type="token">GRH</value>
+                <a:documentation>Gordon Harper</a:documentation>
                 <!-- Insert new @RESP attribute values here -->
             </choice>
         </attribute>
