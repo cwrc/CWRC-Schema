@@ -3,11 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Schema documentation for </title>
+      <title>Schema documentation for entities.xsd</title>
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
         var propertiesBoxes= new Array('properties_entities.xsd', 
-				'properties_xml.xsd', 
 				'properties_cwrc', 
 				'properties_entity', 
 				'properties_person', 
@@ -55,6 +54,7 @@
 				'properties_interest', 
 				'properties_relatedResources', 
 				'properties_resource', 
+				'properties_factuality', 
 				'properties_relations', 
 				'properties_relation', 
 				'properties_personRef', 
@@ -85,14 +85,12 @@
 				'properties_level', 
 				'properties_p', 
 				'properties_link', 
-				'properties_id', 
 				'properties_recordIdentifier_source', 
 				'properties_href-attribute_href', 
 				'properties_a_rel', 
 				'properties_accessCondition_type', 
 				'properties_namePart_partType', 
 				'properties_sameAs_cert', 
-				'properties_lang', 
 				'properties_NO_NAMESPACE_date-pattern_cert', 
 				'properties_gender_cert', 
 				'properties_term_cert', 
@@ -103,11 +101,8 @@
 				'properties_partType-attribute_partType', 
 				'properties_cert-attribute_cert', 
 				'properties_rel-attribute_rel');
-
-        
-        var facetsBoxes= new Array('facets_accessCondition_type');
-
-        var usedByBoxes= new Array('usedBy_entity', 
+var facetsBoxes= new Array('facets_accessCondition_type');
+var usedByBoxes= new Array('usedBy_entity', 
 				'usedBy_person', 
 				'usedBy_personTypes', 
 				'usedBy_personType', 
@@ -150,6 +145,7 @@
 				'usedBy_interest', 
 				'usedBy_relatedResources', 
 				'usedBy_resource', 
+				'usedBy_factuality', 
 				'usedBy_relations', 
 				'usedBy_relation', 
 				'usedBy_personRef', 
@@ -172,14 +168,12 @@
 				'usedBy_averageElevation', 
 				'usedBy_timeZoneOffset', 
 				'usedBy_level', 
-				'usedBy_id', 
 				'usedBy_recordIdentifier_source', 
 				'usedBy_href-attribute_href', 
 				'usedBy_a_rel', 
 				'usedBy_accessCondition_type', 
 				'usedBy_namePart_partType', 
 				'usedBy_sameAs_cert', 
-				'usedBy_lang', 
 				'usedBy_NO_NAMESPACE_date-pattern_cert', 
 				'usedBy_gender_cert', 
 				'usedBy_term_cert', 
@@ -200,8 +194,7 @@
 				'usedBy_placeDescription-element', 
 				'usedBy_href-attribute', 
 				'usedBy_NO_NAMESPACE_date-pattern');
-
-        var sourceBoxes= new Array('source_cwrc', 
+var sourceBoxes= new Array('source_cwrc', 
 				'source_entity', 
 				'source_person', 
 				'source_personRecordInfo-element_recordInfo', 
@@ -248,6 +241,7 @@
 				'source_interest', 
 				'source_relatedResources', 
 				'source_resource', 
+				'source_factuality', 
 				'source_relations', 
 				'source_relation', 
 				'source_personRef', 
@@ -278,14 +272,12 @@
 				'source_level', 
 				'source_p', 
 				'source_link', 
-				'source_id', 
 				'source_recordIdentifier_source', 
 				'source_href-attribute_href', 
 				'source_a_rel', 
 				'source_accessCondition_type', 
 				'source_namePart_partType', 
 				'source_sameAs_cert', 
-				'source_lang', 
 				'source_NO_NAMESPACE_date-pattern_cert', 
 				'source_gender_cert', 
 				'source_term_cert', 
@@ -316,8 +308,7 @@
 				'source_id-attribute', 
 				'source_rel-attribute', 
 				'source_lang-attribute');
-
-        var instanceBoxes= new Array('instance_cwrc', 
+var instanceBoxes= new Array('instance_cwrc', 
 				'instance_entity', 
 				'instance_person', 
 				'instance_personRecordInfo-element_recordInfo', 
@@ -358,8 +349,7 @@
 				'instance_placeDescription-element_description', 
 				'instance_recordInfo-element_recordInfo', 
 				'instance_titleIdentity-element_identity');
-
-        var diagramBoxes= new Array('diagram_cwrc', 
+var diagramBoxes= new Array('diagram_cwrc', 
 				'diagram_entity', 
 				'diagram_person', 
 				'diagram_personRecordInfo-element_recordInfo', 
@@ -406,6 +396,7 @@
 				'diagram_interest', 
 				'diagram_relatedResources', 
 				'diagram_resource', 
+				'diagram_factuality', 
 				'diagram_relations', 
 				'diagram_relation', 
 				'diagram_personRef', 
@@ -456,8 +447,7 @@
 				'diagram_id-attribute', 
 				'diagram_rel-attribute', 
 				'diagram_lang-attribute');
-
-        var annotationBoxes= new Array('annotations_cwrc', 
+var annotationBoxes= new Array('annotations_cwrc', 
 				'annotations_entity', 
 				'annotations_person', 
 				'annotations_personRecordInfo-element_recordInfo', 
@@ -499,6 +489,7 @@
 				'annotations_researchInterests', 
 				'annotations_interest', 
 				'annotations_resource', 
+				'annotations_factuality', 
 				'annotations_relations', 
 				'annotations_relation', 
 				'annotations_personRef', 
@@ -537,8 +528,7 @@
 				'annotations_partType-attribute_partType', 
 				'annotations_cert-attribute_cert', 
 				'annotations_url-attribute');
-
-        var attributesBoxes= new Array('attributes_cwrc', 
+var attributesBoxes= new Array('attributes_cwrc', 
 				'attributes_person', 
 				'attributes_personRecordInfo-element_recordInfo', 
 				'attributes_personTypes', 
@@ -586,11 +576,7 @@
 				'attributes_id-attribute', 
 				'attributes_rel-attribute', 
 				'attributes_lang-attribute');
-
-        
-        
-        
-        var modelBoxes= new Array('model_cwrc', 
+var modelBoxes= new Array('model_cwrc', 
 				'model_entity', 
 				'model_person', 
 				'model_personRecordInfo-element_recordInfo', 
@@ -644,6 +630,7 @@
 				'model_recordInfo-element', 
 				'model_titleIdentity-element');
 
+      
         var button_prefix = 'button_';
         
         /**
@@ -872,7 +859,8 @@
          }
           
 
-    --></script></head>
+    
+                        //--></script></head>
    <body>
       <h2><a id="INDEX">Table of Contents</a></h2>
       <div class="toc">
@@ -926,6 +914,7 @@
                                                 <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
                                                 <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
                                                 <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                                <div><b><a href="index.html#factuality" target="_self" title="No namespace">factuality</a></b></div>
                                                 <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                                 <div><b><a href="index.html#featureCodeLabel" target="_self" title="No namespace">featureCodeLabel</a></b></div>
                                                 <div><b><a href="index.html#firstAdministrativeDivision" target="_self" title="No namespace">firstAdministrativeDivision</a></b></div>
@@ -1089,51 +1078,6 @@
                      <div style="clear:left"></div>
                   </div>
                </div>
-               <div class="level2">
-                  <p><input id="button_boxIdNamespace2" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2');" class="control" /><span class="indexGroupTitle">http://www.w3.org/XML/1998/namespace</span></p>
-                  <div id="boxIdNamespace2" style="display:block">
-                     <div class="horizontalLayout">
-                        <table class="rt">
-                           <tr>
-                              <td class="rt_cornerTopLeft"></td>
-                              <td class="rt_lineTop"></td>
-                              <td class="rt_cornerTopRight"></td>
-                           </tr>
-                           <tr>
-                              <td class="rt_lineLeft"></td>
-                              <td class="rt_content">
-                                 <table class="componentGroup">
-                                    <tbody>
-                                       <tr>
-                                          <td class="componentGroup"><input id="button_boxIdNamespace2Attribute" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2Attribute');" class="control" /></td>
-                                          <td class="componentGroup">
-                                             <div class="componentGroupTitle">Attributes</div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <td class="componentGroup"></td>
-                                          <td class="componentGroup">
-                                             <div id="boxIdNamespace2Attribute" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
-                                                <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
-                                             </div>
-                                          </td>
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </td>
-                              <td class="rt_lineRight"></td>
-                           </tr>
-                           <tr>
-                              <td class="rt_cornerBottomLeft"></td>
-                              <td class="rt_lineBottom"></td>
-                              <td class="rt_cornerBottomRight"></td>
-                           </tr>
-                        </table>
-                     </div>
-                     <div style="clear:left"></div>
-                  </div>
-               </div>
             </div>
          </div>
          <div class="level1" id="toc_group_by_component_type" style="display:none">
@@ -1177,6 +1121,7 @@
                                           <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
                                           <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
                                           <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                          <div><b><a href="index.html#factuality" target="_self" title="No namespace">factuality</a></b></div>
                                           <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                           <div><b><a href="index.html#featureCodeLabel" target="_self" title="No namespace">featureCodeLabel</a></b></div>
                                           <div><b><a href="index.html#firstAdministrativeDivision" target="_self" title="No namespace">firstAdministrativeDivision</a></b></div>
@@ -1228,45 +1173,6 @@
                                           <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                           <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                           <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
-                                       </div>
-                                    </td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </td>
-                        <td class="rt_lineRight"></td>
-                     </tr>
-                     <tr>
-                        <td class="rt_cornerBottomLeft"></td>
-                        <td class="rt_lineBottom"></td>
-                        <td class="rt_cornerBottomRight"></td>
-                     </tr>
-                  </table>
-               </div>
-               <div class="horizontalLayout">
-                  <table class="rt">
-                     <tr>
-                        <td class="rt_cornerTopLeft"></td>
-                        <td class="rt_lineTop"></td>
-                        <td class="rt_cornerTopRight"></td>
-                     </tr>
-                     <tr>
-                        <td class="rt_lineLeft"></td>
-                        <td class="rt_content">
-                           <table class="componentGroup">
-                              <tbody>
-                                 <tr>
-                                    <td class="componentGroup"><input id="button_Attribute" type="image" value="-" src="img/btM.gif" onclick="switchState('Attribute');" class="control" /></td>
-                                    <td class="componentGroup">
-                                       <div class="componentGroupTitle">Attributes</div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td class="componentGroup"></td>
-                                    <td class="componentGroup">
-                                       <div id="Attribute" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
-                                          <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -1423,6 +1329,7 @@
                                                 <div><b><a href="index.html#entity" target="_self" title="No namespace">entity</a></b></div>
                                                 <div><b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b></div>
                                                 <div><b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b></div>
+                                                <div><b><a href="index.html#factuality" target="_self" title="No namespace">factuality</a></b></div>
                                                 <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                                 <div><b><a href="index.html#featureCodeLabel" target="_self" title="No namespace">featureCodeLabel</a></b></div>
                                                 <div><b><a href="index.html#firstAdministrativeDivision" target="_self" title="No namespace">firstAdministrativeDivision</a></b></div>
@@ -1568,51 +1475,6 @@
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                                 <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                                 <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
-                                             </div>
-                                          </td>
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </td>
-                              <td class="rt_lineRight"></td>
-                           </tr>
-                           <tr>
-                              <td class="rt_cornerBottomLeft"></td>
-                              <td class="rt_lineBottom"></td>
-                              <td class="rt_cornerBottomRight"></td>
-                           </tr>
-                        </table>
-                     </div>
-                     <div style="clear:left"></div>
-                  </div>
-               </div>
-               <div class="level2">
-                  <p><input id="button_gr_xml.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsd');" class="control" /><span class="indexGroupTitle">xml.xsd</span></p>
-                  <div id="gr_xml.xsd" style="display:block">
-                     <div class="horizontalLayout">
-                        <table class="rt">
-                           <tr>
-                              <td class="rt_cornerTopLeft"></td>
-                              <td class="rt_lineTop"></td>
-                              <td class="rt_cornerTopRight"></td>
-                           </tr>
-                           <tr>
-                              <td class="rt_lineLeft"></td>
-                              <td class="rt_content">
-                                 <table class="componentGroup">
-                                    <tbody>
-                                       <tr>
-                                          <td class="componentGroup"><input id="button_gr_xml.xsdAttribute" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsdAttribute');" class="control" /></td>
-                                          <td class="componentGroup">
-                                             <div class="componentGroupTitle">Attributes</div>
-                                          </td>
-                                       </tr>
-                                       <tr>
-                                          <td class="componentGroup"></td>
-                                          <td class="componentGroup">
-                                             <div id="gr_xml.xsdAttribute" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
-                                                <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
