@@ -14,14 +14,17 @@
 
     <!-- <start> element pattern -->
     <start>
+
         <element name="record">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">record is the root element for each library or archive
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">record is the root element for each library or archives
                 record.</a:documentation>
+
             <element name="label">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">label is the name of the library or
-                    archive.</a:documentation>
+                    archives.</a:documentation>
                 <text/>
             </element>
+
             <element name="institutionType">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">institution is the institution type: Library, Archives, or
                     Combined.</a:documentation>
@@ -31,6 +34,7 @@
                     <value>Combined</value>
                 </choice>
             </element>
+
             <element name="group">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">group is the group type: Libraries, Archives, or
                     Combined.</a:documentation>
@@ -40,32 +44,40 @@
                     <value>Combined</value>
                 </choice>
             </element>
-            <element name="libraryType">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">libraryType is the type of library: Academic, Public, or
-                    Special.</a:documentation>
-                <choice>
-                    <value>Academic</value>
-                    <value>Public</value>
-                    <value>Special</value>
-                </choice>
-            </element>
+
+            <optional>
+                <element name="libraryType">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">libraryType is the type of library: Academic, Public,
+                        or Special.</a:documentation>
+                    <choice>
+                        <value>Academic</value>
+                        <value>Public</value>
+                        <value>Special</value>
+                        <empty/>
+                    </choice>
+                </element>
+            </optional>
+
             <element name="subGroup">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">subGroup is the subgroup type: Academic libraries, Public
-                    libraries, or Special libraries.</a:documentation>
+                    libraries, Special libraries, or Archives.</a:documentation>
                 <choice>
                     <value>Academic libraries</value>
                     <value>Public libraries</value>
                     <value>Special libraries</value>
+                    <value>Archives</value>
                 </choice>
             </element>
+
             <element name="community">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">community is the name of the community that the library
-                    or archive is located in.</a:documentation>
+                    or archives is located in.</a:documentation>
                 <text/>
             </element>
+
             <element name="provCode">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provCode is the two-letter provincial or territorial code
-                    for the province or territory that the library or archive is located in.</a:documentation>
+                    for the province or territory that the library or archives is located in.</a:documentation>
                 <choice>
                     <value>AB</value>
                     <value>BC</value>
@@ -82,9 +94,10 @@
                     <value>YT</value>
                 </choice>
             </element>
+
             <element name="province">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">province is the name of the province or territory that the
-                    library or archive is located in.</a:documentation>
+                    library or archives is located in.</a:documentation>
                 <choice>
                     <value>Alberta</value>
                     <value>British Columbia</value>
@@ -101,37 +114,52 @@
                     <value>Yukon</value>
                 </choice>
             </element>
-            <element name="population">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">population is the population served of the library or
-                    archive.</a:documentation>
-                <text/>
-            </element>
-            <element name="startDate">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">startDate is the year of establishment of the library or
-                    archive.</a:documentation>
-                <text/>
-            </element>
-            <element name="url">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">url is the URL (uniform resource locator) or Web address
-                    of the library or archive.</a:documentation>
-                <data type="anyURI"/>
-            </element>
+
+            <optional>
+                <element name="population">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">population is the population served of the library or
+                    archives.</a:documentation>
+                    <text/>
+                </element>
+            </optional>
+
+            <optional>
+                <element name="startDate">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">startDate is the year of establishment of the library
+                        or archives.</a:documentation>
+                    <text/>
+                </element>
+            </optional>
+
+            <optional>
+                <element name="url">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">url is the URL (uniform resource locator) or Web
+                        address of the library or archives.</a:documentation>
+                    <data type="anyURI"/>
+                </element>
+            </optional>
+
             <element name="latitude">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">latitude is the geographic coordinate of latitude in
-                    decimal degrees of the centroid of the community that the library or archive is located in.</a:documentation>
+                    decimal degrees of the centroid of the community that the library or archives is located in.</a:documentation>
                 <data type="decimal"/>
             </element>
+
             <element name="longitude">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">longitude is the geographic coordinate of longitude in
-                    decimal degrees of the centroid of the community that the library or archive is located in.</a:documentation>
+                    decimal degrees of the centroid of the community that the library or archives is located in.</a:documentation>
                 <data type="decimal"/>
             </element>
+
             <element name="latLng">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">latLng is the geographic coordinates of latitude and
-                    longitude in decimal degress, separated by a comma, of the centroid of the community that the library or archive is located
+                    longitude in decimal degress, separated by a comma, of the centroid of the community that the library or archives is located
                     in.</a:documentation>
                 <text/>
             </element>
+
         </element>
+
     </start>
+
 </grammar>

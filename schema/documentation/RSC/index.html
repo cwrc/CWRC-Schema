@@ -24,7 +24,6 @@
 				'properties_latLng');
 var facetsBoxes= new Array('facets_institutionType', 
 				'facets_group', 
-				'facets_libraryType', 
 				'facets_subGroup', 
 				'facets_provCode', 
 				'facets_province');
@@ -632,7 +631,7 @@ var modelBoxes= new Array('model_record');
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">record is the root element for each library or archive</span><span class="tI">
+                                       <td width="100%"><pre><span class="tT">record is the root element for each library or archives</span><span class="tI">
 </span><span class="tT">record.</span></pre></td>
                                     </tr>
                                  </table>
@@ -650,17 +649,17 @@ var modelBoxes= new Array('model_record');
                                  <area alt="index.tmp#label" href="index.html#label" coords="182,2,287,46" />
                                  <area alt="index.tmp#institutionType" href="index.html#institutionType" coords="182,87,357,131" />
                                  <area alt="index.tmp#group" href="index.html#group" coords="182,172,357,216" />
-                                 <area alt="index.tmp#libraryType" href="index.html#libraryType" coords="182,257,357,301" />
+                                 <area alt="index.tmp#libraryType" href="index.html#libraryType" coords="182,257,520,301" />
                                  <area alt="index.tmp#subGroup" href="index.html#subGroup" coords="182,342,357,386" />
                                  <area alt="index.tmp#community" href="index.html#community" coords="182,441,287,485" />
                                  <area alt="index.tmp#provCode" href="index.html#provCode" coords="182,540,357,584" />
                                  <area alt="index.tmp#province" href="index.html#province" coords="182,639,357,683" />
                                  <area alt="index.tmp#population" href="index.html#population" coords="182,738,287,782" />
-                                 <area alt="index.tmp#startDate" href="index.html#startDate" coords="182,823,287,867" />
-                                 <area alt="index.tmp#url" href="index.html#url" coords="182,922,294,966" />
-                                 <area alt="index.tmp#latitude" href="index.html#latitude" coords="182,1021,296,1065" />
-                                 <area alt="index.tmp#longitude" href="index.html#longitude" coords="182,1120,296,1164" />
-                                 <area alt="index.tmp#latLng" href="index.html#latLng" coords="182,1219,287,1263" /></map></div>
+                                 <area alt="index.tmp#startDate" href="index.html#startDate" coords="182,837,287,881" />
+                                 <area alt="index.tmp#url" href="index.html#url" coords="182,936,294,980" />
+                                 <area alt="index.tmp#latitude" href="index.html#latitude" coords="182,1035,296,1079" />
+                                 <area alt="index.tmp#longitude" href="index.html#longitude" coords="182,1134,296,1178" />
+                                 <area alt="index.tmp#latLng" href="index.html#latLng" coords="182,1233,287,1277" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -683,7 +682,7 @@ var modelBoxes= new Array('model_record');
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_record" type="image" src="img/btM.gif" value="-" onclick="switchState('model_record');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_record" style="display:block"><b><a href="index.html#label" target="_self" title="No namespace">label</a></b> , <b><a href="index.html#institutionType" target="_self" title="No namespace">institutionType</a></b> , <b><a href="index.html#group" target="_self" title="No namespace">group</a></b> , <b><a href="index.html#libraryType" target="_self" title="No namespace">libraryType</a></b> , <b><a href="index.html#subGroup" target="_self" title="No namespace">subGroup</a></b> , <b><a href="index.html#community" target="_self" title="No namespace">community</a></b> , <b><a href="index.html#provCode" target="_self" title="No namespace">provCode</a></b> , <b><a href="index.html#province" target="_self" title="No namespace">province</a></b> , <b><a href="index.html#population" target="_self" title="No namespace">population</a></b> , <b><a href="index.html#startDate" target="_self" title="No namespace">startDate</a></b> , <b><a href="index.html#url" target="_self" title="No namespace">url</a></b> , <b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b> , <b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b> , <b><a href="index.html#latLng" target="_self" title="No namespace">latLng</a></b></div>
+                           <div id="model_record" style="display:block"><b><a href="index.html#label" target="_self" title="No namespace">label</a></b> , <b><a href="index.html#institutionType" target="_self" title="No namespace">institutionType</a></b> , <b><a href="index.html#group" target="_self" title="No namespace">group</a></b> , <b><a href="index.html#libraryType" target="_self" title="No namespace">libraryType{0,1}</a></b> , <b><a href="index.html#subGroup" target="_self" title="No namespace">subGroup</a></b> , <b><a href="index.html#community" target="_self" title="No namespace">community</a></b> , <b><a href="index.html#provCode" target="_self" title="No namespace">provCode</a></b> , <b><a href="index.html#province" target="_self" title="No namespace">province</a></b> , <b><a href="index.html#population" target="_self" title="No namespace">population{0,1}</a></b> , <b><a href="index.html#startDate" target="_self" title="No namespace">startDate{0,1}</a></b> , <b><a href="index.html#url" target="_self" title="No namespace">url{0,1}</a></b> , <b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b> , <b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b> , <b><a href="index.html#latLng" target="_self" title="No namespace">latLng</a></b></div>
                         </td>
                      </tr>
                      <tr>
@@ -703,14 +702,14 @@ var modelBoxes= new Array('model_record');
   </span><span class="tEl">&lt;label</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/label&gt;</span><span class="tI">
   </span><span class="tEl">&lt;institutionType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/institutionType&gt;</span><span class="tI">
   </span><span class="tEl">&lt;group</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/group&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;libraryType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/libraryType&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;libraryType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/libraryType&gt;</span><span class="tI">
   </span><span class="tEl">&lt;subGroup</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/subGroup&gt;</span><span class="tI">
   </span><span class="tEl">&lt;community</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/community&gt;</span><span class="tI">
   </span><span class="tEl">&lt;provCode</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/provCode&gt;</span><span class="tI">
   </span><span class="tEl">&lt;province</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/province&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;population</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/population&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;startDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/startDate&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;url</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/url&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;population</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/population&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;startDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/startDate&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;url</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/url&gt;</span><span class="tI">
   </span><span class="tEl">&lt;latitude</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/latitude&gt;</span><span class="tI">
   </span><span class="tEl">&lt;longitude</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/longitude&gt;</span><span class="tI">
   </span><span class="tEl">&lt;latLng</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/latLng&gt;</span><span class="tI">
@@ -731,21 +730,21 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"record"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">record is the root element for each library or archive record.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">record is the root element for each library or archives record.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"label"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"institutionType"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"group"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"libraryType"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"libraryType"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"subGroup"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"community"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"provCode"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"province"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"population"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"startDate"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"url"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"population"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"startDate"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"url"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"latitude"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"longitude"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"latLng"</span><span class="tEl">/&gt;</span><span class="tI">
@@ -795,7 +794,7 @@ var modelBoxes= new Array('model_record');
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">label is the name of the library or</span><span class="tI">
-</span><span class="tT">archive.</span></pre></td>
+</span><span class="tT">archives.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -858,7 +857,7 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"label"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">label is the name of the library or archive.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">label is the name of the library or archives.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -1201,8 +1200,8 @@ var modelBoxes= new Array('model_record');
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">libraryType is the type of library: Academic, Public, or</span><span class="tI">
-</span><span class="tT">Special.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">libraryType is the type of library: Academic, Public,</span><span class="tI">
+</span><span class="tT">or Special.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -1220,7 +1219,8 @@ var modelBoxes= new Array('model_record');
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td>restriction of <b>xs:token</b></td>
+                        <td>union of(restriction of <b>xs:token</b>, restriction of <b>xs:token</b>)
+                        </td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1233,39 +1233,6 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
                                     <td><b>simple</b></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Facets</b></div>
-                           <div class="floatRight"><input id="button_facets_libraryType" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_libraryType');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="facets_libraryType" style="display:block">
-                              <table class="facetsTable">
-                                 <tr>
-                                    <td class="firstColumn">enumeration</td>
-                                    <td width="30%"><b>Academic</b></td>
-                                    <td>
-                                       <div class="annotation"></div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td class="firstColumn">enumeration</td>
-                                    <td width="30%"><b>Public</b></td>
-                                    <td>
-                                       <div class="annotation"></div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td class="firstColumn">enumeration</td>
-                                    <td width="30%"><b>Special</b></td>
-                                    <td>
-                                       <div class="annotation"></div>
-                                    </td>
                                  </tr>
                               </table>
                            </div>
@@ -1301,11 +1268,20 @@ var modelBoxes= new Array('model_record');
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">libraryType is the type of library: Academic, Public, or Special.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Academic"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Public"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Special"</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Academic"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Public"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Special"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:length</span><span class="tAN"> value=</span><span class="tAV">"0"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -1351,7 +1327,7 @@ var modelBoxes= new Array('model_record');
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">subGroup is the subgroup type: Academic libraries, Public</span><span class="tI">
-</span><span class="tT">libraries, or Special libraries.</span></pre></td>
+</span><span class="tT">libraries, Special libraries, or Archives.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -1416,6 +1392,13 @@ var modelBoxes= new Array('model_record');
                                        <div class="annotation"></div>
                                     </td>
                                  </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>Archives</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
                               </table>
                            </div>
                         </td>
@@ -1447,13 +1430,14 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"subGroup"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">subGroup is the subgroup type: Academic libraries, Public libraries, or Special libraries.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">subGroup is the subgroup type: Academic libraries, Public libraries, Special libraries, or Archives.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Academic libraries"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Public libraries"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Special libraries"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"Archives"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
@@ -1500,7 +1484,7 @@ var modelBoxes= new Array('model_record');
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">community is the name of the community that the library</span><span class="tI">
-</span><span class="tT">or archive is located in.</span></pre></td>
+</span><span class="tT">or archives is located in.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -1563,7 +1547,7 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"community"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">community is the name of the community that the library or archive is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">community is the name of the community that the library or archives is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -1609,7 +1593,7 @@ var modelBoxes= new Array('model_record');
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">provCode is the two-letter provincial or territorial code</span><span class="tI">
-</span><span class="tT">for the province or territory that the library or archive is located in.</span></pre></td>
+</span><span class="tT">for the province or territory that the library or archives is located in.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -1775,7 +1759,7 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"provCode"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">provCode is the two-letter provincial or territorial code for the province or territory that the library or archive is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">provCode is the two-letter provincial or territorial code for the province or territory that the library or archives is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
@@ -1838,7 +1822,7 @@ var modelBoxes= new Array('model_record');
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">province is the name of the province or territory that the</span><span class="tI">
-</span><span class="tT">library or archive is located in.</span></pre></td>
+</span><span class="tT">library or archives is located in.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -2004,7 +1988,7 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"province"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">province is the name of the province or territory that the library or archive is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">province is the name of the province or territory that the library or archives is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
@@ -2067,7 +2051,7 @@ var modelBoxes= new Array('model_record');
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">population is the population served of the library or</span><span class="tI">
-</span><span class="tT">archive.</span></pre></td>
+</span><span class="tT">archives.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -2130,7 +2114,7 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"population"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">population is the population served of the library or archive.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">population is the population served of the library or archives.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -2175,8 +2159,8 @@ var modelBoxes= new Array('model_record');
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">startDate is the year of establishment of the library or</span><span class="tI">
-</span><span class="tT">archive.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">startDate is the year of establishment of the library</span><span class="tI">
+</span><span class="tT">or archives.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -2239,7 +2223,7 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"startDate"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">startDate is the year of establishment of the library or archive.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">startDate is the year of establishment of the library or archives.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -2284,8 +2268,8 @@ var modelBoxes= new Array('model_record');
                               <div class="annotation">
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
-                                       <td width="100%"><pre><span class="tT">url is the URL (uniform resource locator) or Web address</span><span class="tI">
-</span><span class="tT">of the library or archive.</span></pre></td>
+                                       <td width="100%"><pre><span class="tT">url is the URL (uniform resource locator) or Web</span><span class="tI">
+</span><span class="tT">address of the library or archives.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -2348,7 +2332,7 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"url"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">url is the URL (uniform resource locator) or Web address of the library or archive.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">url is the URL (uniform resource locator) or Web address of the library or archives.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -2394,7 +2378,7 @@ var modelBoxes= new Array('model_record');
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">latitude is the geographic coordinate of latitude in</span><span class="tI">
-</span><span class="tT">decimal degrees of the centroid of the community that the library or archive is located in.</span></pre></td>
+</span><span class="tT">decimal degrees of the centroid of the community that the library or archives is located in.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -2457,7 +2441,7 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"latitude"</span><span class="tAN"> type=</span><span class="tAV">"xs:decimal"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">latitude is the geographic coordinate of latitude in decimal degrees of the centroid of the community that the library or archive is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">latitude is the geographic coordinate of latitude in decimal degrees of the centroid of the community that the library or archives is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -2503,7 +2487,7 @@ var modelBoxes= new Array('model_record');
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">longitude is the geographic coordinate of longitude in</span><span class="tI">
-</span><span class="tT">decimal degrees of the centroid of the community that the library or archive is located in.</span></pre></td>
+</span><span class="tT">decimal degrees of the centroid of the community that the library or archives is located in.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -2566,7 +2550,7 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"longitude"</span><span class="tAN"> type=</span><span class="tAV">"xs:decimal"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">longitude is the geographic coordinate of longitude in decimal degrees of the centroid of the community that the library or archive is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">longitude is the geographic coordinate of longitude in decimal degrees of the centroid of the community that the library or archives is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -2612,7 +2596,7 @@ var modelBoxes= new Array('model_record');
                                  <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                     <tr>
                                        <td width="100%"><pre><span class="tT">latLng is the geographic coordinates of latitude and</span><span class="tI">
-</span><span class="tT">longitude in decimal degress, separated by a comma, of the centroid of the community that the library or archive is located</span><span class="tI">
+</span><span class="tT">longitude in decimal degress, separated by a comma, of the centroid of the community that the library or archives is located</span><span class="tI">
 </span><span class="tT">in.</span></pre></td>
                                     </tr>
                                  </table>
@@ -2676,7 +2660,7 @@ var modelBoxes= new Array('model_record');
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"latLng"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">latLng is the geographic coordinates of latitude and longitude in decimal degress, separated by a comma, of the centroid of the community that the library or archive is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">latLng is the geographic coordinates of latitude and longitude in decimal degress, separated by a comma, of the centroid of the community that the library or archives is located in.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
