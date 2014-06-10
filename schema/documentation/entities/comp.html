@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
         var propertiesBoxes= new Array('properties_entities.xsd', 
+				'properties_xml.xsd', 
 				'properties_cwrc', 
 				'properties_entity', 
 				'properties_person', 
@@ -85,12 +86,14 @@
 				'properties_level', 
 				'properties_p', 
 				'properties_link', 
+				'properties_id', 
 				'properties_recordIdentifier_source', 
 				'properties_href-attribute_href', 
 				'properties_a_rel', 
 				'properties_accessCondition_type', 
 				'properties_namePart_partType', 
 				'properties_sameAs_cert', 
+				'properties_lang', 
 				'properties_NO_NAMESPACE_date-pattern_cert', 
 				'properties_gender_cert', 
 				'properties_term_cert', 
@@ -168,12 +171,14 @@ var usedByBoxes= new Array('usedBy_entity',
 				'usedBy_averageElevation', 
 				'usedBy_timeZoneOffset', 
 				'usedBy_level', 
+				'usedBy_id', 
 				'usedBy_recordIdentifier_source', 
 				'usedBy_href-attribute_href', 
 				'usedBy_a_rel', 
 				'usedBy_accessCondition_type', 
 				'usedBy_namePart_partType', 
 				'usedBy_sameAs_cert', 
+				'usedBy_lang', 
 				'usedBy_NO_NAMESPACE_date-pattern_cert', 
 				'usedBy_gender_cert', 
 				'usedBy_term_cert', 
@@ -272,12 +277,14 @@ var sourceBoxes= new Array('source_cwrc',
 				'source_level', 
 				'source_p', 
 				'source_link', 
+				'source_id', 
 				'source_recordIdentifier_source', 
 				'source_href-attribute_href', 
 				'source_a_rel', 
 				'source_accessCondition_type', 
 				'source_namePart_partType', 
 				'source_sameAs_cert', 
+				'source_lang', 
 				'source_NO_NAMESPACE_date-pattern_cert', 
 				'source_gender_cert', 
 				'source_term_cert', 
@@ -1078,6 +1085,51 @@ var modelBoxes= new Array('model_cwrc',
                      <div style="clear:left"></div>
                   </div>
                </div>
+               <div class="level2">
+                  <p><input id="button_boxIdNamespace2" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2');" class="control" /><span class="indexGroupTitle">http://www.w3.org/XML/1998/namespace</span></p>
+                  <div id="boxIdNamespace2" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace2Attribute" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2Attribute');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attributes</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace2Attribute" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
+                                                <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
             </div>
          </div>
          <div class="level1" id="toc_group_by_component_type" style="display:none">
@@ -1173,6 +1225,45 @@ var modelBoxes= new Array('model_cwrc',
                                           <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                           <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                           <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Attribute" type="image" value="-" src="img/btM.gif" onclick="switchState('Attribute');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Attributes</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Attribute" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
+                                          <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -1475,6 +1566,51 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
                                                 <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                                 <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+               <div class="level2">
+                  <p><input id="button_gr_xml.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsd');" class="control" /><span class="indexGroupTitle">xml.xsd</span></p>
+                  <div id="gr_xml.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_xml.xsdAttribute" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsdAttribute');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attributes</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_xml.xsdAttribute" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
+                                                <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
                                              </div>
                                           </td>
                                        </tr>

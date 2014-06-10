@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
         var propertiesBoxes= new Array('properties_entities.xsd', 
+				'properties_xml.xsd', 
 				'properties_cwrc', 
 				'properties_entity', 
 				'properties_person', 
@@ -85,12 +86,14 @@
 				'properties_level', 
 				'properties_p', 
 				'properties_link', 
+				'properties_id', 
 				'properties_recordIdentifier_source', 
 				'properties_href-attribute_href', 
 				'properties_a_rel', 
 				'properties_accessCondition_type', 
 				'properties_namePart_partType', 
 				'properties_sameAs_cert', 
+				'properties_lang', 
 				'properties_NO_NAMESPACE_date-pattern_cert', 
 				'properties_gender_cert', 
 				'properties_term_cert', 
@@ -168,12 +171,14 @@ var usedByBoxes= new Array('usedBy_entity',
 				'usedBy_averageElevation', 
 				'usedBy_timeZoneOffset', 
 				'usedBy_level', 
+				'usedBy_id', 
 				'usedBy_recordIdentifier_source', 
 				'usedBy_href-attribute_href', 
 				'usedBy_a_rel', 
 				'usedBy_accessCondition_type', 
 				'usedBy_namePart_partType', 
 				'usedBy_sameAs_cert', 
+				'usedBy_lang', 
 				'usedBy_NO_NAMESPACE_date-pattern_cert', 
 				'usedBy_gender_cert', 
 				'usedBy_term_cert', 
@@ -272,12 +277,14 @@ var sourceBoxes= new Array('source_cwrc',
 				'source_level', 
 				'source_p', 
 				'source_link', 
+				'source_id', 
 				'source_recordIdentifier_source', 
 				'source_href-attribute_href', 
 				'source_a_rel', 
 				'source_accessCondition_type', 
 				'source_namePart_partType', 
 				'source_sameAs_cert', 
+				'source_lang', 
 				'source_NO_NAMESPACE_date-pattern_cert', 
 				'source_gender_cert', 
 				'source_term_cert', 
@@ -1129,6 +1136,51 @@ var modelBoxes= new Array('model_cwrc',
                      <div style="clear:left"></div>
                   </div>
                </div>
+               <div class="level2">
+                  <p><input id="button_boxIdNamespace2" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2');" class="control" /><span class="indexGroupTitle">http://www.w3.org/XML/1998/namespace</span></p>
+                  <div id="boxIdNamespace2" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace2Attribute" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2Attribute');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attributes</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace2Attribute" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
+                                                <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
             </div>
          </div>
          <div class="level1" id="toc_group_by_component_type" style="display:none">
@@ -1224,6 +1276,45 @@ var modelBoxes= new Array('model_cwrc',
                                           <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                           <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                           <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Attribute" type="image" value="-" src="img/btM.gif" onclick="switchState('Attribute');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Attributes</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Attribute" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
+                                          <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -1544,9 +1635,74 @@ var modelBoxes= new Array('model_cwrc',
                      <div style="clear:left"></div>
                   </div>
                </div>
+               <div class="level2">
+                  <p><input id="button_gr_xml.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsd');" class="control" /><span class="indexGroupTitle">xml.xsd</span></p>
+                  <div id="gr_xml.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_xml.xsdAttribute" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_xml.xsdAttribute');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attributes</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_xml.xsdAttribute" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
+                                                <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
             </div>
          </div>
-      </div><a id="entities.xsd"></a><div class="componentTitle">Main schema <span class="qname">entities.xsd</span></div>
+      </div>
+      <p class="sHierarchyTitle">Resource hierarchy:</p>
+      <ul class="schemaHierarchy">
+         <li>
+            <p class="componentTitle"><input id="button_sHentities.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('sHentities.xsd');" class="control" /><a href="index.html#entities.xsd" target="_self">entities.xsd</a></p>
+            <div id="sHentities.xsd" style="display:block">
+               <ul>
+                  <li class="schemaHierarchy">
+                     <p><input id="button_sHentities.xsdxml.xsd" type="image" value="-" src="img/btP.gif" onclick="switchState('sHentities.xsdxml.xsd');" class="control" /><img src="img/HierarchyArrow12.jpg" /> <img src="img/Import12.gif" title="Imported by  'entities.xsd'." /> <a href="index.html#xml.xsd" target="_self" title="Imported by  'entities.xsd'.">xml.xsd</a></p>
+                     <div id="sHentities.xsdxml.xsd" style="display:none">
+                        <ul>
+                           <li class="schemaHierarchy">
+                              <p><img src="img/Cycle12.png" title="Imported by  'xml.xsd'. Cycle detected." /> <img src="img/Import12.gif" title="Imported by  'xml.xsd'." /> <a href="index.html#entities.xsd" target="_self" title="Imported by  'xml.xsd'.">entities.xsd</a></p>
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </li>
+      </ul><a id="entities.xsd"></a><div class="componentTitle">Main schema <span class="qname">entities.xsd</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1569,6 +1725,53 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td>
                            <div id="properties_entities.xsd" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">attribute form default</td>
+                                    <td><b>unqualified</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">element form default</td>
+                                    <td><b>qualified</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="xml.xsd"></a><div class="componentTitle">Imported schema <span class="qname">xml.xsd</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.w3.org/XML/1998/namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_xml.xsd" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_xml.xsd');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_xml.xsd" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">attribute form default</td>
@@ -1633,6 +1836,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_cwrc" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_cwrc.jpeg" usemap="#entities_xsd_Element_cwrc" /><map name="entities_xsd_Element_cwrc" id="entities_xsd_Element_cwrc">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="119,41,196,66" />
                                  <area alt="index.tmp#entity" href="index.html#entity" coords="196,87,253,112" /></map></div>
                         </td>
                      </tr>
@@ -1672,7 +1876,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_cwrc" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;cwrc</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;cwrc</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;entity</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/entity&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/cwrc&gt;</span></pre></td>
                                  </tr>
@@ -1697,8 +1901,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -1842,9 +2046,9 @@ var modelBoxes= new Array('model_cwrc',
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;entity</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;person</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/person&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;organization</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/organization&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;place</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/place&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;person</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/person&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;organization</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/organization&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;place</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/place&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/entity&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -1928,6 +2132,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_person" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_person.jpeg" usemap="#entities_xsd_Element_person" /><map name="entities_xsd_Element_person" id="entities_xsd_Element_person">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="147,41,224,66" />
                                  <area alt="index.tmp#personRecordInfo-element_recordInfo" href="index.html#personRecordInfo-element_recordInfo" coords="289,131,370,156" />
                                  <area alt="index.tmp#personRecordInfo-element" href="index.html#personRecordInfo-element" coords="207,86,390,112" />
                                  <area alt="index.tmp#identity-element_identity" href="index.html#identity-element_identity" coords="289,280,354,305" />
@@ -1989,11 +2194,11 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_person" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;person</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/recordInfo&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;identity</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/identity&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;relations</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/relations&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;person</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/recordInfo&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;identity</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/identity&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;relations</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/relations&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/person&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -2017,8 +2222,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -2108,7 +2313,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_personRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_personRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
+                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#personTypes" href="index.html#personTypes" coords="220,83,315,108" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,163,295,188" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,257,411,301" />
@@ -2151,10 +2357,10 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_personRecordInfo-element_recordInfo" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;personTypes</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/personTypes&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;personTypes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/personTypes&gt;</span><span class="tI">
   </span><span class="tEl">&lt;originInfo</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/originInfo&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
   </span><span class="tEl">&lt;accessCondition</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/accessCondition&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/recordInfo&gt;</span></pre></td>
                                  </tr>
@@ -2179,8 +2385,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -2270,6 +2476,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_personTypes" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_personTypes.jpeg" usemap="#entities_xsd_Element_personTypes" /><map name="entities_xsd_Element_personTypes" id="entities_xsd_Element_personTypes">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="157,41,234,66" />
                                  <area alt="index.tmp#personType" href="index.html#personType" coords="234,83,339,127" /></map></div>
                         </td>
                      </tr>
@@ -2325,7 +2532,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_personTypes" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;personTypes</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;personTypes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;personType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/personType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/personTypes&gt;</span></pre></td>
                                  </tr>
@@ -2350,8 +2557,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -2607,7 +2814,7 @@ var modelBoxes= new Array('model_cwrc',
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;originInfo</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;projectId</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/projectId&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;projectId</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/projectId&gt;</span><span class="tI">
   </span><span class="tEl">&lt;recordIdentifier</span><span class="tT"> </span><span class="tAN">source=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/recordIdentifier&gt;</span><span class="tI">
   </span><span class="tEl">&lt;recordCreationDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/recordCreationDate&gt;</span><span class="tI">
   </span><span class="tEl">&lt;recordChangeDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/recordChangeDate&gt;</span><span class="tI">
@@ -2698,7 +2905,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_projectId" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_projectId');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_projectId" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_projectId.jpeg" usemap="#entities_xsd_Element_projectId" /><map name="entities_xsd_Element_projectId" id="entities_xsd_Element_projectId"></map></div>
+                           <div id="diagram_projectId" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_projectId.jpeg" usemap="#entities_xsd_Element_projectId" /><map name="entities_xsd_Element_projectId" id="entities_xsd_Element_projectId">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="234,122,311,147" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -2754,8 +2962,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -3356,7 +3564,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_entityId" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_entityId');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_entityId" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_entityId.jpeg" usemap="#entities_xsd_Element_entityId" /><map name="entities_xsd_Element_entityId" id="entities_xsd_Element_entityId"></map></div>
+                           <div id="diagram_entityId" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_entityId.jpeg" usemap="#entities_xsd_Element_entityId" /><map name="entities_xsd_Element_entityId" id="entities_xsd_Element_entityId">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="253,256,330,281" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -3412,8 +3621,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -3825,6 +4034,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_identity-element_identity" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_identity_1.jpeg" usemap="#entities_xsd_Element_identity_1" /><map name="entities_xsd_Element_identity_1" id="entities_xsd_Element_identity_1">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="147,41,224,66" />
                                  <area alt="index.tmp#preferredForm" href="index.html#preferredForm" coords="204,83,305,108" />
                                  <area alt="index.tmp#displayLabel" href="index.html#displayLabel" coords="204,163,309,207" />
                                  <area alt="index.tmp#variantForms" href="index.html#variantForms" coords="204,262,298,287" />
@@ -3867,11 +4077,11 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_identity-element_identity" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;identity</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;preferredForm</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/preferredForm&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;identity</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;preferredForm</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/preferredForm&gt;</span><span class="tI">
   </span><span class="tEl">&lt;displayLabel</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/displayLabel&gt;</span><span class="tI">
   </span><span class="tEl">&lt;variantForms</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/variantForms&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;sameAs</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/sameAs&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;sameAs</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/sameAs&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/identity&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -3895,8 +4105,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -3986,6 +4196,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_preferredForm" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_preferredForm.jpeg" usemap="#entities_xsd_Element_preferredForm" /><map name="entities_xsd_Element_preferredForm" id="entities_xsd_Element_preferredForm">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#namePart" href="index.html#namePart" coords="240,83,316,108" />
                                  <area alt="index.tmp#displayLabel" href="index.html#displayLabel" coords="240,177,345,221" /></map></div>
                         </td>
@@ -4042,8 +4253,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_preferredForm" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;preferredForm</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;namePart</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">partType=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/namePart&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;preferredForm</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;namePart</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">partType=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/namePart&gt;</span><span class="tI">
   </span><span class="tEl">&lt;displayLabel</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/displayLabel&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/preferredForm&gt;</span></pre></td>
                                  </tr>
@@ -4068,8 +4279,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -4157,6 +4368,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_namePart" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_namePart.jpeg" usemap="#entities_xsd_Element_namePart" /><map name="entities_xsd_Element_namePart" id="entities_xsd_Element_namePart">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="138,41,215,66" />
                                  <area alt="index.tmp#namePart_partType" href="index.html#namePart_partType" coords="138,76,1609,120" /></map></div>
                         </td>
                      </tr>
@@ -4220,14 +4432,6 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
-                                    <td>optional</td>
-                                    <td>
-                                       <div class="annotation"></div>
-                                    </td>
-                                 </tr>
-                                 <tr>
                                     <td class="firstColumn"><b><a href="index.html#namePart_partType" target="_self" title="No namespace">partType</a></b></td>
                                     <td>union of(union of(<b>xs:string</b>, restriction of <b>xs:token</b>, restriction of <b>xs:token</b>, restriction of <b>xs:token</b>, restriction of <b>xs:token</b>, restriction of <b>xs:token</b>, restriction of <b>xs:token</b>, restriction of <b>xs:token</b>, restriction of <b>xs:token</b>, restriction of <b>xs:token</b>, restriction of <b>xs:token</b>), restriction of <b>xs:token</b>)
                                     </td>
@@ -4240,6 +4444,14 @@ var modelBoxes= new Array('model_cwrc',
                                              </tr>
                                           </table>
                                        </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation"></div>
                                     </td>
                                  </tr>
                               </table>
@@ -4691,8 +4903,8 @@ var modelBoxes= new Array('model_cwrc',
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;variant</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;namePart</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">partType=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/namePart&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;variantType</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/variantType&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;namePart</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">partType=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/namePart&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;variantType</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/variantType&gt;</span><span class="tI">
   </span><span class="tEl">&lt;authorizedBy</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/authorizedBy&gt;</span><span class="tI">
   </span><span class="tEl">&lt;picklist</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/picklist&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/variant&gt;</span></pre></td>
@@ -4776,7 +4988,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_variantType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_variantType');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_variantType" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_variantType.jpeg" usemap="#entities_xsd_Element_variantType" /><map name="entities_xsd_Element_variantType" id="entities_xsd_Element_variantType"></map></div>
+                           <div id="diagram_variantType" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_variantType.jpeg" usemap="#entities_xsd_Element_variantType" /><map name="entities_xsd_Element_variantType" id="entities_xsd_Element_variantType">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="253,256,330,281" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -4832,8 +5045,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -5078,7 +5291,7 @@ var modelBoxes= new Array('model_cwrc',
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;authorizedBy</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;projectId</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/projectId&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;projectId</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/projectId&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/authorizedBy&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -5267,6 +5480,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_sameAs" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_sameAs.jpeg" usemap="#entities_xsd_Element_sameAs" /><map name="entities_xsd_Element_sameAs" id="entities_xsd_Element_sameAs">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="241,122,318,147" />
                                  <area alt="index.tmp#sameAs_cert" href="index.html#sameAs_cert" coords="241,157,579,201" /></map></div>
                         </td>
                      </tr>
@@ -5338,8 +5552,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -5448,6 +5662,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_personDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description.jpeg" usemap="#entities_xsd_Element_description" /><map name="entities_xsd_Element_description" id="entities_xsd_Element_description">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="166,41,243,66" />
                                  <area alt="index.tmp#descriptiveNotes" href="index.html#descriptiveNotes" coords="223,83,335,108" />
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,163,305,188" />
                                  <area alt="index.tmp#genders" href="index.html#genders" coords="223,257,294,282" />
@@ -5494,9 +5709,9 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_personDescription-element_description" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;descriptiveNotes</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/descriptiveNotes&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;existDates</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/existDates&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;descriptiveNotes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/descriptiveNotes&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;existDates</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/existDates&gt;</span><span class="tI">
   </span><span class="tEl">&lt;genders</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/genders&gt;</span><span class="tI">
   </span><span class="tEl">&lt;occupations</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/occupations&gt;</span><span class="tI">
   </span><span class="tEl">&lt;activities</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/activities&gt;</span><span class="tI">
@@ -5526,8 +5741,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -5620,6 +5835,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_descriptiveNotes" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_descriptiveNotes.jpeg" usemap="#entities_xsd_Element_descriptiveNotes" /><map name="entities_xsd_Element_descriptiveNotes" id="entities_xsd_Element_descriptiveNotes">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="174,41,251,66" />
                                  <area alt="index.tmp#note" href="index.html#note" coords="251,83,423,127" /></map></div>
                         </td>
                      </tr>
@@ -5675,8 +5891,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_descriptiveNotes" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;descriptiveNotes</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;note</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;descriptiveNotes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;note</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/descriptiveNotes&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -5700,8 +5916,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -5786,7 +6002,9 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_note" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_note');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_note" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_note.jpeg" usemap="#entities_xsd_Element_note" /><map name="entities_xsd_Element_note" id="entities_xsd_Element_note"></map></div>
+                           <div id="diagram_note" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_note.jpeg" usemap="#entities_xsd_Element_note" /><map name="entities_xsd_Element_note" id="entities_xsd_Element_note">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="234,122,311,147" />
+                                 <area alt="index.tmp#lang" href="index.html#lang" coords="234,157,323,182" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -5846,16 +6064,16 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b>lang</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:lang</a></b></td>
+                                    <td><b>xs:language</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -5944,6 +6162,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_existDates" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_existDates.jpeg" usemap="#entities_xsd_Element_existDates" /><map name="entities_xsd_Element_existDates" id="entities_xsd_Element_existDates">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="164,41,241,66" />
                                  <area alt="index.tmp#dateSingle" href="index.html#dateSingle" coords="221,83,302,108" />
                                  <area alt="index.tmp#dateRange" href="index.html#dateRange" coords="221,163,304,188" /></map></div>
                         </td>
@@ -6000,9 +6219,9 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_existDates" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;existDates</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;dateSingle</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/dateSingle&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;dateRange</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/dateRange&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;existDates</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;dateSingle</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/dateSingle&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;dateRange</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/dateRange&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/existDates&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -6026,8 +6245,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -6114,6 +6333,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_dateSingle" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_dateSingle.jpeg" usemap="#entities_xsd_Element_dateSingle" /><map name="entities_xsd_Element_dateSingle" id="entities_xsd_Element_dateSingle">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="143,41,220,66" />
                                  <area alt="index.tmp#NO_NAMESPACE_date-pattern" href="index.html#NO_NAMESPACE_date-pattern" coords="146,79,260,105" />
                                  <area alt="index.tmp#standardDate" href="index.html#standardDate" coords="285,171,1143,215" />
                                  <area alt="index.tmp#textDate" href="index.html#textDate" coords="285,256,390,300" />
@@ -6174,11 +6394,11 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_dateSingle" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;dateSingle</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;dateSingle</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;standardDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/standardDate&gt;</span><span class="tI">
   </span><span class="tEl">&lt;textDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/textDate&gt;</span><span class="tI">
   </span><span class="tEl">&lt;dateType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/dateType&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;note</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;note</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/dateSingle&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -6217,8 +6437,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -6659,6 +6879,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_dateRange" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_dateRange.jpeg" usemap="#entities_xsd_Element_dateRange" /><map name="entities_xsd_Element_dateRange" id="entities_xsd_Element_dateRange">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="165,41,242,66" />
                                  <area alt="index.tmp#fromDate" href="index.html#fromDate" coords="222,83,297,108" />
                                  <area alt="index.tmp#toDate" href="index.html#toDate" coords="222,163,284,188" /></map></div>
                         </td>
@@ -6715,9 +6936,9 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_dateRange" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;dateRange</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;fromDate</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/fromDate&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;toDate</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/toDate&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;dateRange</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;fromDate</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/fromDate&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;toDate</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/toDate&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/dateRange&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -6741,8 +6962,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -6829,6 +7050,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_fromDate" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_fromDate.jpeg" usemap="#entities_xsd_Element_fromDate" /><map name="entities_xsd_Element_fromDate" id="entities_xsd_Element_fromDate">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="137,41,214,66" />
                                  <area alt="index.tmp#NO_NAMESPACE_date-pattern" href="index.html#NO_NAMESPACE_date-pattern" coords="140,79,254,105" />
                                  <area alt="index.tmp#standardDate" href="index.html#standardDate" coords="279,171,1137,215" />
                                  <area alt="index.tmp#textDate" href="index.html#textDate" coords="279,256,384,300" />
@@ -6889,11 +7111,11 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_fromDate" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;fromDate</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;fromDate</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;standardDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/standardDate&gt;</span><span class="tI">
   </span><span class="tEl">&lt;textDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/textDate&gt;</span><span class="tI">
   </span><span class="tEl">&lt;dateType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/dateType&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;note</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;note</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/fromDate&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -6932,8 +7154,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -7018,6 +7240,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_toDate" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_toDate.jpeg" usemap="#entities_xsd_Element_toDate" /><map name="entities_xsd_Element_toDate" id="entities_xsd_Element_toDate">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="124,41,201,66" />
                                  <area alt="index.tmp#NO_NAMESPACE_date-pattern" href="index.html#NO_NAMESPACE_date-pattern" coords="127,79,241,105" />
                                  <area alt="index.tmp#standardDate" href="index.html#standardDate" coords="266,171,1124,215" />
                                  <area alt="index.tmp#textDate" href="index.html#textDate" coords="266,256,371,300" />
@@ -7078,11 +7301,11 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_toDate" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;toDate</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;toDate</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;standardDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/standardDate&gt;</span><span class="tI">
   </span><span class="tEl">&lt;textDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/textDate&gt;</span><span class="tI">
   </span><span class="tEl">&lt;dateType</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/dateType&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;note</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;note</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/toDate&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -7121,8 +7344,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -7761,9 +7984,9 @@ var modelBoxes= new Array('model_cwrc',
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;occupation</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;term</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/term&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;dateSingle</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/dateSingle&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;dateRange</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/dateRange&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;note</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;dateSingle</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/dateSingle&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;dateRange</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/dateRange&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;note</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/note&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/occupation&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -8934,6 +9157,8 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_relations" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_relations.jpeg" usemap="#entities_xsd_Element_relations" /><map name="entities_xsd_Element_relations" id="entities_xsd_Element_relations">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="134,41,211,66" />
+                                 <area alt="index.tmp#lang" href="index.html#lang" coords="134,76,223,101" />
                                  <area alt="index.tmp#relation" href="index.html#relation" coords="211,122,277,147" /></map></div>
                         </td>
                      </tr>
@@ -8989,7 +9214,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_relations" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;relations</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;relations</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;relation</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/relation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/relations&gt;</span></pre></td>
                                  </tr>
@@ -9014,16 +9239,16 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="firstColumn"><b>lang</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:lang</a></b></td>
+                                    <td><b>xs:language</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -9893,6 +10118,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_organization" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_organization.jpeg" usemap="#entities_xsd_Element_organization" /><map name="entities_xsd_Element_organization" id="entities_xsd_Element_organization">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="172,41,249,66" />
                                  <area alt="index.tmp#orgRecordInfo-element_recordInfo" href="index.html#orgRecordInfo-element_recordInfo" coords="314,131,395,156" />
                                  <area alt="index.tmp#orgRecordInfo-element" href="index.html#orgRecordInfo-element" coords="232,86,397,112" />
                                  <area alt="index.tmp#identity-element_identity" href="index.html#identity-element_identity" coords="314,280,379,305" />
@@ -9954,11 +10180,11 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_organization" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;organization</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/recordInfo&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;identity</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/identity&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;relations</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/relations&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;organization</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/recordInfo&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;identity</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/identity&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;relations</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/relations&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/organization&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -9982,8 +10208,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -10073,7 +10299,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_orgRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_orgRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_1.jpeg" usemap="#entities_xsd_Element_recordInfo_1" /><map name="entities_xsd_Element_recordInfo_1" id="entities_xsd_Element_recordInfo_1">
+                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,83,295,108" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,177,411,221" />
                                  <area alt="index.tmp#accessCondition" href="index.html#accessCondition" coords="220,276,331,301" /></map></div>
@@ -10115,9 +10342,9 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_orgRecordInfo-element_recordInfo" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;originInfo</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/originInfo&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
   </span><span class="tEl">&lt;accessCondition</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/accessCondition&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/recordInfo&gt;</span></pre></td>
                                  </tr>
@@ -10142,8 +10369,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -10230,7 +10457,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_orgDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_orgDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_orgDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_2.jpeg" usemap="#entities_xsd_Element_description_2" /><map name="entities_xsd_Element_description_2" id="entities_xsd_Element_description_2">
+                           <div id="diagram_orgDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_1.jpeg" usemap="#entities_xsd_Element_description_1" /><map name="entities_xsd_Element_description_1" id="entities_xsd_Element_description_1">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="166,41,243,66" />
                                  <area alt="index.tmp#orgTypes" href="index.html#orgTypes" coords="223,83,300,108" />
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,163,305,188" />
                                  <area alt="index.tmp#descriptiveNotes" href="index.html#descriptiveNotes" coords="223,257,335,282" />
@@ -10274,10 +10502,10 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_orgDescription-element_description" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;orgTypes</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/orgTypes&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;existDates</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/existDates&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;descriptiveNotes</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/descriptiveNotes&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;orgTypes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/orgTypes&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;existDates</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/existDates&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;descriptiveNotes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/descriptiveNotes&gt;</span><span class="tI">
   </span><span class="tEl">&lt;relatedResources</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/relatedResources&gt;</span><span class="tI">
   </span><span class="tEl">&lt;factuality</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/factuality&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/description&gt;</span></pre></td>
@@ -10303,8 +10531,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -10395,6 +10623,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_orgTypes" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_orgTypes.jpeg" usemap="#entities_xsd_Element_orgTypes" /><map name="entities_xsd_Element_orgTypes" id="entities_xsd_Element_orgTypes">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="139,41,216,66" />
                                  <area alt="index.tmp#orgType" href="index.html#orgType" coords="216,83,407,127" /></map></div>
                         </td>
                      </tr>
@@ -10450,8 +10679,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_orgTypes" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;orgTypes</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;orgType</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/orgType&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;orgTypes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;orgType</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/orgType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/orgTypes&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -10475,8 +10704,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -10562,7 +10791,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_orgType" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_orgType');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_orgType" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_orgType.jpeg" usemap="#entities_xsd_Element_orgType" /><map name="entities_xsd_Element_orgType" id="entities_xsd_Element_orgType"></map></div>
+                           <div id="diagram_orgType" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_orgType.jpeg" usemap="#entities_xsd_Element_orgType" /><map name="entities_xsd_Element_orgType" id="entities_xsd_Element_orgType">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="253,256,330,281" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -10618,8 +10848,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -10839,6 +11069,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_place" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_place.jpeg" usemap="#entities_xsd_Element_place" /><map name="entities_xsd_Element_place" id="entities_xsd_Element_place">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="139,41,216,66" />
                                  <area alt="index.tmp#placeRecordInfo-element_recordInfo" href="index.html#placeRecordInfo-element_recordInfo" coords="281,131,362,156" />
                                  <area alt="index.tmp#placeRecordInfo-element" href="index.html#placeRecordInfo-element" coords="199,86,374,112" />
                                  <area alt="index.tmp#identity-element_identity" href="index.html#identity-element_identity" coords="281,280,346,305" />
@@ -10900,11 +11131,11 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_place" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;place</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/recordInfo&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;identity</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/identity&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;relations</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/relations&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;place</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/recordInfo&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;identity</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/identity&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/description&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;relations</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:lang=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/relations&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/place&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -10928,8 +11159,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -11019,7 +11250,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_placeRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_3.jpeg" usemap="#entities_xsd_Element_recordInfo_3" /><map name="entities_xsd_Element_recordInfo_3" id="entities_xsd_Element_recordInfo_3">
+                           <div id="diagram_placeRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_1.jpeg" usemap="#entities_xsd_Element_recordInfo_1" /><map name="entities_xsd_Element_recordInfo_1" id="entities_xsd_Element_recordInfo_1">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,83,295,108" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,177,411,221" />
                                  <area alt="index.tmp#accessCondition" href="index.html#accessCondition" coords="220,276,331,301" /></map></div>
@@ -11061,9 +11293,9 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_placeRecordInfo-element_recordInfo" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;originInfo</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/originInfo&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
   </span><span class="tEl">&lt;accessCondition</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/accessCondition&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/recordInfo&gt;</span></pre></td>
                                  </tr>
@@ -11088,8 +11320,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -11176,7 +11408,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_placeDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_1.jpeg" usemap="#entities_xsd_Element_description_1" /><map name="entities_xsd_Element_description_1" id="entities_xsd_Element_description_1">
+                           <div id="diagram_placeDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_2.jpeg" usemap="#entities_xsd_Element_description_2" /><map name="entities_xsd_Element_description_2" id="entities_xsd_Element_description_2">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="166,41,243,66" />
                                  <area alt="index.tmp#descriptiveNotes" href="index.html#descriptiveNotes" coords="223,83,335,108" />
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,163,305,188" />
                                  <area alt="index.tmp#relatedResources" href="index.html#relatedResources" coords="223,257,340,282" />
@@ -11229,9 +11462,9 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_placeDescription-element_description" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;descriptiveNotes</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/descriptiveNotes&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;existDates</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/existDates&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;description</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;descriptiveNotes</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/descriptiveNotes&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;existDates</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/existDates&gt;</span><span class="tI">
   </span><span class="tEl">&lt;relatedResources</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/relatedResources&gt;</span><span class="tI">
   </span><span class="tEl">&lt;latitude</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/latitude&gt;</span><span class="tI">
   </span><span class="tEl">&lt;longitude</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/longitude&gt;</span><span class="tI">
@@ -11267,8 +11500,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -12572,7 +12805,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_recordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_recordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_recordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
+                           <div id="diagram_recordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_3.jpeg" usemap="#entities_xsd_Element_recordInfo_3" /><map name="entities_xsd_Element_recordInfo_3" id="entities_xsd_Element_recordInfo_3">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="163,41,240,66" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,83,295,108" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,177,411,221" />
                                  <area alt="index.tmp#accessCondition" href="index.html#accessCondition" coords="220,276,331,301" /></map></div>
@@ -12614,9 +12848,9 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_recordInfo-element_recordInfo" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;recordInfo</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;originInfo</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/originInfo&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;entityId</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/entityId&gt;</span><span class="tI">
   </span><span class="tEl">&lt;accessCondition</span><span class="tT"> </span><span class="tAN">type=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/accessCondition&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/recordInfo&gt;</span></pre></td>
                                  </tr>
@@ -12641,8 +12875,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -12731,6 +12965,7 @@ var modelBoxes= new Array('model_cwrc',
                         </td>
                         <td class="diagram">
                            <div id="diagram_titleIdentity-element_identity" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_identity.jpeg" usemap="#entities_xsd_Element_identity" /><map name="entities_xsd_Element_identity" id="entities_xsd_Element_identity">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="147,41,224,66" />
                                  <area alt="index.tmp#preferredForm" href="index.html#preferredForm" coords="204,83,305,108" />
                                  <area alt="index.tmp#level" href="index.html#level" coords="204,163,395,207" />
                                  <area alt="index.tmp#displayLabel" href="index.html#displayLabel" coords="204,248,309,292" />
@@ -12774,12 +13009,12 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="instance_titleIdentity-element_identity" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;identity</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;preferredForm</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/preferredForm&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;level</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/level&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;identity</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;preferredForm</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/preferredForm&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;level</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/level&gt;</span><span class="tI">
   </span><span class="tEl">&lt;displayLabel</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/displayLabel&gt;</span><span class="tI">
   </span><span class="tEl">&lt;variantForms</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/variantForms&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;sameAs</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/sameAs&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;sameAs</span><span class="tT"> </span><span class="tAN">cert=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xml:id=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/sameAs&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/identity&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -12803,8 +13038,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -12893,7 +13128,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_level" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_level');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_level" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_level.jpeg" usemap="#entities_xsd_Element_level" /><map name="entities_xsd_Element_level" id="entities_xsd_Element_level"></map></div>
+                           <div id="diagram_level" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_level.jpeg" usemap="#entities_xsd_Element_level" /><map name="entities_xsd_Element_level" id="entities_xsd_Element_level">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="253,256,330,281" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -12949,8 +13185,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -13120,7 +13356,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_link" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_link');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_link" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_link.jpeg" usemap="#entities_xsd_Element_link" /><map name="entities_xsd_Element_link" id="entities_xsd_Element_link"></map></div>
+                           <div id="diagram_link" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_link.jpeg" usemap="#entities_xsd_Element_link" /><map name="entities_xsd_Element_link" id="entities_xsd_Element_link">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="221,122,298,147" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -13160,8 +13397,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>optional</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -13189,6 +13426,88 @@ var modelBoxes= new Array('model_cwrc',
     </span><span class="tEl">&lt;/xs:simpleContent&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="id"></a><div class="componentTitle">Attribute <span class="qname">@xml:id</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.w3.org/XML/1998/namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:NCName</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_id" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_id" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_id" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_id" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b>, <b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b>, <b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b>, <b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b>, <b><a href="index.html#entityId" target="_self" title="No namespace">entityId</a></b>, <b><a href="index.html#existDates" target="_self" title="No namespace">existDates</a></b>, <b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b>, <b><a href="index.html#identity-element_identity" target="_self" title="No namespace">identity-element/identity</a></b>, <b><a href="index.html#level" target="_self" title="No namespace">level</a></b>, <b><a href="index.html#link" target="_self" title="No namespace">link</a></b>, <b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b>, <b><a href="index.html#note" target="_self" title="No namespace">note</a></b>, <b><a href="index.html#orgDescription-element_description" target="_self" title="No namespace">orgDescription-element/description</a></b>, <b><a href="index.html#orgRecordInfo-element_recordInfo" target="_self" title="No namespace">orgRecordInfo-element/recordInfo</a></b>, <b><a href="index.html#orgType" target="_self" title="No namespace">orgType</a></b>, <b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b>, <b><a href="index.html#organization" target="_self" title="No namespace">organization</a></b>, <b><a href="index.html#person" target="_self" title="No namespace">person</a></b>, <b><a href="index.html#personDescription-element_description" target="_self" title="No namespace">personDescription-element/description</a></b>, <b><a href="index.html#personRecordInfo-element_recordInfo" target="_self" title="No namespace">personRecordInfo-element/recordInfo</a></b>, <b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b>, <b><a href="index.html#place" target="_self" title="No namespace">place</a></b>, <b><a href="index.html#placeDescription-element_description" target="_self" title="No namespace">placeDescription-element/description</a></b>, <b><a href="index.html#placeRecordInfo-element_recordInfo" target="_self" title="No namespace">placeRecordInfo-element/recordInfo</a></b>, <b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b>, <b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b>, <b><a href="index.html#recordInfo-element_recordInfo" target="_self" title="No namespace">recordInfo-element/recordInfo</a></b>, <b><a href="index.html#relations" target="_self" title="No namespace">relations</a></b>, <b><a href="index.html#sameAs" target="_self" title="No namespace">sameAs</a></b>, <b><a href="index.html#titleIdentity-element_identity" target="_self" title="No namespace">titleIdentity-element/identity</a></b>, <b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b>, <b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">Attribute Group </td>
+                                    <td><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_id" type="image" src="img/btM.gif" value="-" onclick="switchState('source_id');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_id" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"id"</span><span class="tAN"> type=</span><span class="tAV">"xs:NCName"</span><span class="tEl">/&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -13864,6 +14183,88 @@ var modelBoxes= new Array('model_cwrc',
     </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="lang"></a><div class="componentTitle">Attribute <span class="qname">@xml:lang</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.w3.org/XML/1998/namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:language</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_lang" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_lang');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_lang" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_lang" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_lang');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_lang" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="index.html#note" target="_self" title="No namespace">note</a></b>, <b><a href="index.html#relations" target="_self" title="No namespace">relations</a></b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">Attribute Group </td>
+                                    <td><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_lang" type="image" src="img/btM.gif" value="-" onclick="switchState('source_lang');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_lang" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"lang"</span><span class="tAN"> type=</span><span class="tAV">"xs:language"</span><span class="tEl">/&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -16772,7 +17173,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_id-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_id-attribute');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_id-attribute" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Attribute_Group_id-attribute.jpeg" usemap="#entities_xsd_Attribute_Group_id-attribute" /><map name="entities_xsd_Attribute_Group_id-attribute" id="entities_xsd_Attribute_Group_id-attribute"></map></div>
+                           <div id="diagram_id-attribute" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Attribute_Group_id-attribute.jpeg" usemap="#entities_xsd_Attribute_Group_id-attribute" /><map name="entities_xsd_Attribute_Group_id-attribute" id="entities_xsd_Attribute_Group_id-attribute">
+                                 <area alt="index.tmp#id" href="index.html#id" coords="134,1,211,26" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -16792,8 +17194,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>id</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:id</a></b></td>
+                                    <td><b>xs:NCName</b></td>
                                     <td>required</td>
                                     <td>
                                        <div class="annotation"></div>
@@ -16935,7 +17337,8 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_lang-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_lang-attribute');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_lang-attribute" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Attribute_Group_lang-attribute.jpeg" usemap="#entities_xsd_Attribute_Group_lang-attribute" /><map name="entities_xsd_Attribute_Group_lang-attribute" id="entities_xsd_Attribute_Group_lang-attribute"></map></div>
+                           <div id="diagram_lang-attribute" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Attribute_Group_lang-attribute.jpeg" usemap="#entities_xsd_Attribute_Group_lang-attribute" /><map name="entities_xsd_Attribute_Group_lang-attribute" id="entities_xsd_Attribute_Group_lang-attribute">
+                                 <area alt="index.tmp#lang" href="index.html#lang" coords="146,1,235,26" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -16955,8 +17358,8 @@ var modelBoxes= new Array('model_cwrc',
                                     </tr>
                                  </thead>
                                  <tr>
-                                    <td class="firstColumn"><b>lang</b></td>
-                                    <td></td>
+                                    <td class="firstColumn"><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">xml:lang</a></b></td>
+                                    <td><b>xs:language</b></td>
                                     <td>required</td>
                                     <td>
                                        <div class="annotation"></div>
