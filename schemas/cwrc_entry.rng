@@ -27,6 +27,7 @@
 
 <!-- 
 *** Revisions ***
+* MRB: Thu 12-Jun-2014: Added new elements of ANIMALS, ENVIRONMENT, and FOOD, and new attributes of MEDIATYPE and ROLE
 * MRB: June 2014: Major architectural redesign, e.g.,
   - Renamed DIV0 to ENTRY.
   - Deleted DIV3.
@@ -213,14 +214,10 @@
                 otherwise, that all types of information can be contained in other types of information. For CWRC projects, ENTRY is the element that
                 contains everything in a document except the cataloguing information that is contained in the CWRCHEADER element.</a:documentation>
             <interleave>
-                <zeroOrMore>
-
+                <optional>
                     <ref name="HEADING"/>
-                    <ref name="KEYWORDCLASS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
-                    <ref name="BIBCITS"/>
-
+                </optional>
+                <optional>
                     <element name="AUTHORSUMMARY">
                         <optional>
                             <ref name="HEADING"/>
@@ -229,32 +226,77 @@
                             <ref name="P"/>
                         </optional>
                     </element>
-
-                    <ref name="BIRTH"/>
-                    <ref name="CULTURALFORMATION"/>
-                    <ref name="DEATH"/>
-                    <ref name="EDUCATION"/>
-                    <ref name="FAMILY"/>
-                    <ref name="FRIENDSASSOCIATES"/>
-                    <ref name="HEALTH"/>
-                    <ref name="INTIMATERELATIONSHIPS"/>
-                    <ref name="LEISUREANDSOCIETY"/>
-                    <ref name="LOCATION"/>
-                    <ref name="OCCUPATION"/>
-                    <ref name="OTHERLIFEEVENT"/>
-                    <ref name="PERSONNAME"/>
-                    <ref name="POLITICS"/>
-                    <ref name="VIOLENCE"/>
-                    <ref name="WEALTH"/>
-
-                    <ref name="TEXTSCOPE"/>
-
-                    <ref name="STANDARD"/>
-                    <ref name="WORKSCITED"/>
-
+                </optional>
+                <zeroOrMore>
+                    <ref name="BIBCITS"/>
                 </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="BIRTH"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="CULTURALFORMATION"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="DEATH"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="EDUCATION"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="FAMILY"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="FRIENDSASSOCIATES"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="HEALTH"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="INTIMATERELATIONSHIPS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="LEISUREANDSOCIETY"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="LOCATION"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="OCCUPATION"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="OTHERLIFEEVENT"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="PERSONNAME"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="POLITICS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="VIOLENCE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="WEALTH"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="TEXTSCOPE"/>
+                </zeroOrMore>
+                <optional>
+                    <ref name="STANDARD"/>
+                </optional>
+                <optional>
+                    <ref name="WORKSCITED"/>
+                </optional>
             </interleave>
-
         </element>
     </define>
     <!-- end <ENTRY> pattern -->
@@ -268,16 +310,32 @@
             birth position and context of a person&apos;s birth. Birthdates should be entered in chronology form and will be
             extracted from individual biography documents to be placed within other general chronologies.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIRTHPOSITION"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="BIRTHPOSITION"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -303,20 +361,38 @@
             end users with a complex weave of information through which to analyse the construction of
             subjectivity.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIRTHPOSITION"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="RACECOLOUR"/>
-                    <element name="CLASSISSUE">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ClassIssue, a significant
+                </zeroOrMore>
+                <element name="CLASSISSUE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ClassIssue, a significant
                         sub-element within culturalFormation, is used to discuss the importance of class within a
                         person&apos;s life. In conjunction with the class element, classIssue allows us to capture
                         information about how the socio-economic conditions of her family and herself affected her life and
@@ -325,11 +401,12 @@
                         categories are historically and culturally specific. The classIssue element is meant to capture
                         discussions of these complexities and allow for the historical and biographical specificities of
                         one&apos;s relation to class.</a:documentation>
-                        <choice>
-                            <ref name="CHRONSTRUCT"/>
-                            <ref name="P"/>
-                        </choice>
-                    </element>
+                    <choice>
+                        <ref name="CHRONSTRUCT"/>
+                        <ref name="P"/>
+                    </choice>
+                </element>
+                <zeroOrMore>
                     <element name="NATIONALITYISSUE">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">NationalityIssue is a
                         significant sub-element within culturalFormation which captures a discussion about her nationality.
@@ -343,6 +420,8 @@
                             <ref name="P"/>
                         </optional>
                     </element>
+                </zeroOrMore>
+                <zeroOrMore>
                     <element name="RACEANDETHNICITY">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">RaceAndEthnicity is a
                         significant sub-element within culturalFormation. It captures information and discussions of a
@@ -382,6 +461,8 @@
                             <ref name="P"/>
                         </choice>
                     </element>
+                </zeroOrMore>
+                <zeroOrMore>
                     <element name="RELIGION">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Religion is one of the
                         issues (along with sexuality, race and ethnicity, language, class, and nationality) we have defined
@@ -404,6 +485,8 @@
                             <ref name="KEYWORDCLASS"/>
                         </optional>
                     </element>
+                </zeroOrMore>
+                <zeroOrMore>
                     <element name="SEXUALITY">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sexuality is one of the
                         issues (along with religion, race and ethnicity, language, class, and nationality) we have defined as
@@ -435,14 +518,30 @@
             individual biography documents to be placed within other general chronologies.</a:documentation>
             <interleave>
                 <zeroOrMore>
-                    <ref name="HEADING"/>
-                    <ref name="P"/>
-                    <ref name="DATASTRUCT"/>
-                    <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
-                    <ref name="KEYWORDCLASS"/>
+                    <optional>
+                        <ref name="HEADING"/>
+                    </optional>
+                    <zeroOrMore>
+                        <ref name="P"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="DATASTRUCT"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="CHRONSTRUCT"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="BIBCITS"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="KEYWORDCLASS"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="SCHOLARNOTE"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="RESEARCHNOTE"/>
+                    </zeroOrMore>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -473,14 +572,30 @@
             </optional>
             <interleave>
                 <zeroOrMore>
-                    <ref name="HEADING"/>
-                    <ref name="P"/>
-                    <ref name="DATASTRUCT"/>
-                    <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
-                    <ref name="KEYWORDCLASS"/>
+                    <optional>
+                        <ref name="HEADING"/>
+                    </optional>
+                    <zeroOrMore>
+                        <ref name="P"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="DATASTRUCT"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="CHRONSTRUCT"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="BIBCITS"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="KEYWORDCLASS"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="SCHOLARNOTE"/>
+                    </zeroOrMore>
+                    <zeroOrMore>
+                        <ref name="RESEARCHNOTE"/>
+                    </zeroOrMore>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -509,26 +624,42 @@
                 </attribute>
             </optional>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
-                    <element name="MEMBER">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Member, a significant
-                        sub-element within Family, captures a discussion of a specific family member. For general
-                        discussions of family life, do not open a member sub-element but remain within Family. Member
-                        allows us to structure information concerning particular family relations; for example, by
-                        including a member element for the mother of a British woman writer, we will be able to generate
-                        a list for our end users of all the jobs of these mothers. We hope to make interesting
-                        connections between women writer&apos;s relationships to particular family members (for example,
-                        group information concerning the relationship of eighteenth-century women writers to their aunts)
-                        but in order to do so we must systematize the discussions of these specific
-                        members.</a:documentation>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <element name="FAMILYMEMBER">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FamilyMember, a
+                            significant sub-element within Family, captures a discussion of a specific family member. For
+                            general discussions of family life, do not open a FamilyMember sub-element but remain within
+                            Family. FamilyMember allows us to structure information concerning particular family relations;
+                            for example, by including a FamilyMember element for the mother of a British woman writer, we
+                            will be able to generate a list for our end users of all the jobs of these mothers. We hope to
+                            make interesting connections between women writer&apos;s relationships to particular family
+                            members (for example, group information concerning the relationship of eighteenth-century women
+                            writers to their aunts) but in order to do so we must systematize the discussions of these
+                            specific family members.</a:documentation>
                         <attribute name="RELATION" a:defaultValue="MOTHER">
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relation is a
                             required attribute attached to member. It specifies how the family member discussed within
@@ -623,15 +754,29 @@
             Discussions of friendships or relationships that impinged upon the woman&apos;s sense of her own sexuality, would
             be best captured within either sexuality or intimateRelationships.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -663,15 +808,29 @@
                 </attribute>
             </optional>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -713,15 +872,29 @@
                 </attribute>
             </optional>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -738,15 +911,29 @@
             because this assumes a gendered and classed notion of labour. &quot;Society&quot; in this context refers to the
             larger community and her social life within it, not an elite, fashionable social circle.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -773,15 +960,29 @@
                 </choice>
             </attribute>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -796,15 +997,29 @@
             the sexual division of labour and hope to track the types of jobs women held and how these jobs change and
             develop across historical periods.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -817,15 +1032,29 @@
                 events not covered by any of the other major biography elements.  This is the place to dicuss what does not fit
                 anywhere else.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -838,15 +1067,29 @@
             a person&apos;s (specifically, writer&apos;s) name. While the name element indexes all standard names, personName
             allows the researcher to provide the details and all the variants of one person&apos;s name.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -862,15 +1105,29 @@
             priority we attach to political involvement, wherever possible include information concerning her political life,
             however minimal.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -886,15 +1143,29 @@
             person either committed or was the victim of, but it can include a discussion of the effect of an exposure to
             violence on her life.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -909,15 +1180,29 @@
             emphasize inclusion of her financial status. Information concerning inheritance, pensions and personal financial
             disasters should be captured here.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -934,17 +1219,37 @@
                 <attribute name="PLACEHOLDER"/>
             </optional>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="PRODUCTION"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="RECEPTION"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="TEXTUALFEATURES"/>
                 </zeroOrMore>
             </interleave>
@@ -959,18 +1264,51 @@
                 covered by the biography section. Production addresses the facts and factors of text creation and distribution, and the
                 description of the text as object (bibliographic description). This category can address a singular text or a group of texts
                 in cases where you want to make generalizations about oeuvre.</a:documentation>
+            <optional>
+                <attribute name="MEDIATYPE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">MRB: Mediatype documentation here.</a:documentation>
+                    <choice>
+                        <value>DIGITAL</value>
+                        <value>ORAL</value>
+                        <value>MULTIMEDIA</value>
+                        <value>PERFORMANCE</value>
+                        <value>PNONBOOKMEDIA</value>
+                        <data type="string"/>
+                    </choice>
+                </attribute>
+            </optional>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="SHORTPROSE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="RECEPTION"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="TEXTUALFEATURES"/>
                 </zeroOrMore>
             </interleave>
@@ -983,17 +1321,37 @@
                 the writing section (in addition to TextualFeatures and Production). Reception charts the effects and results of an
                 individual's writing, and the responses of self and others to an individual's writing.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="SHORTPROSE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="PRODUCTION"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="TEXTUALFEATURES"/>
                 </zeroOrMore>
             </interleave>
@@ -1006,22 +1364,59 @@
                 element addresses features of critical interest in texts and provides space for textual analysis/close readings as perceived by project
                 members.</a:documentation>
             <interleave>
-                <zeroOrMore>
+                <optional>
                     <ref name="HEADING"/>
+                </optional>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="DATASTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="CHRONSTRUCT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="RESEARCHNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="TMOTIF"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="TPLOT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="TSETTINGDATE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="TTHEMETOPIC"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="TVOICENARRATION"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="PRODUCTION"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="RECEPTION"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="ANIMALS"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="ENVIRONMENT"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="FOOD"/>
                 </zeroOrMore>
             </interleave>
         </element>
@@ -1145,143 +1540,145 @@
                 </attribute>
             </optional>
             <interleave>
-                <zeroOrMore>
-                    <text/>
-                    <ref name="AWARD"/>
-                    <ref name="BIBCITS"/>
-                    <ref name="BIRTH"/>
-                    <ref name="BIRTHNAME"/>
-                    <ref name="BIRTHPOSITION"/>
-                    <ref name="CAUSE"/>
-                    <ref name="CHILDLESSNESS"/>
-                    <ref name="CHILDREN"/>
-                    <ref name="CLASS"/>
-                    <ref name="COMPANION"/>
-                    <ref name="CONTESTEDBEHAVIOUR"/>
-                    <ref name="CULTURALFORMATION"/>
-                    <ref name="DATE"/>
-                    <ref name="DATERANGE"/>
-                    <ref name="DEATH"/>
-                    <ref name="DEGREE"/>
-                    <ref name="DENOMINATION"/>
-                    <ref name="DIVORCE"/>
-                    <ref name="EDUCATION"/>
-                    <ref name="EMPH"/>
-                    <ref name="EMPLOYER"/>
-                    <ref name="ETHNICITY"/>
-                    <ref name="EXTENTOFOEUVRE"/>
-                    <ref name="FAMILY"/>
-                    <ref name="FOREIGN"/>
-                    <ref name="FRIENDSASSOCIATES"/>
-                    <ref name="GENERICRANGE"/>
-                    <ref name="GEOGHERITAGE"/>
-                    <ref name="HEADING"/>
-                    <ref name="HEALTH"/>
-                    <ref name="INDEXED"/>
-                    <ref name="INSTRUCTOR"/>
-                    <ref name="INTIMATERELATIONSHIPS"/>
-                    <ref name="JOB"/>
-                    <ref name="KEYWORDCLASS"/>
-                    <ref name="L"/>
-                    <ref name="LANGUAGE"/>
-                    <ref name="LEISUREANDSOCIETY"/>
-                    <ref name="LIVESWITH"/>
-                    <ref name="LOCATION"/>
-                    <ref name="NAME"/>
-                    <ref name="NATIONALHERITAGE"/>
-                    <ref name="NATIONALITY"/>
-                    <ref name="NICKNAME"/>
-                    <ref name="OCCUPATION"/>
-                    <ref name="ORGNAME"/>
-                    <ref name="OTHERLIFEEVENT"/>
-                    <ref name="PADVERTISING"/>
-                    <ref name="PANTHOLOGIZATION"/>
-                    <ref name="PARCHIVALLOCATION"/>
-                    <ref name="PATTITUDES"/>
-                    <ref name="PAUTHORSHIP"/>
-                    <ref name="PCIRCULATION"/>
-                    <ref name="PCONTRACT"/>
-                    <ref name="PCOPYRIGHT"/>
-                    <ref name="PDEDICATION"/>
-                    <ref name="PEARNINGS"/>
-                    <ref name="PEDITIONS"/>
-                    <ref name="PERSONNAME"/>
-                    <ref name="PFIRSTLITERARYACTIVITY"/>
-                    <ref name="PINFLUENCESHER"/>
-                    <ref name="PLACE"/>
-                    <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
-                    <ref name="PMANUSCRIPTHISTORY"/>
-                    <ref name="PMATERIALCONDITIONS"/>
-                    <ref name="PMODEOFPUBLICATION"/>
-                    <ref name="PMOTIVES"/>
-                    <ref name="PNONBOOKMEDIA"/>
-                    <ref name="PNONSURVIVAL"/>
-                    <ref name="POLITICALAFFILIATION"/>
-                    <ref name="POLITICS"/>
-                    <ref name="PPERFORMANCE"/>
-                    <ref name="PPERIODICALPUBLICATION"/>
-                    <ref name="PPLACEOFPUBLICATION"/>
-                    <ref name="PPRESSRUN"/>
-                    <ref name="PPRICE"/>
-                    <ref name="PRARITIESFEATURESDECORATIONS"/>
-                    <ref name="PRELATIONSWITHPUBLISHER"/>
-                    <ref name="PRODUCTION"/>
-                    <ref name="PSERIALIZATION"/>
-                    <ref name="PSEUDONYM"/>
-                    <ref name="PSUBMISSIONSREJECTIONS"/>
-                    <ref name="PTYPEOFPRESS"/>
-                    <ref name="QUOTE"/>
-                    <ref name="RACECOLOUR"/>
-                    <ref name="RBESTKNOWNWORK"/>
-                    <ref name="RDESTRUCTIONOFWORK"/>
-                    <ref name="RECEPTION"/>
-                    <ref name="REMUNERATION"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="RFICTIONALIZATION"/>
-                    <ref name="RLANDMARKTEXT"/>
-                    <ref name="ROYAL"/>
-                    <ref name="RPENALTIES"/>
-                    <ref name="RRECOGNITIONNAME"/>
-                    <ref name="RRECOGNITIONS"/>
-                    <ref name="RRECOGNITIONVALUE"/>
-                    <ref name="RRESPONSES"/>
-                    <ref name="RS"/>
-                    <ref name="RSELFDESCRIPTION"/>
-                    <ref name="RSHEINFLUENCED"/>
-                    <ref name="RWRITINGMILESTONE"/>
-                    <ref name="SCHOLARNOTE"/>
-                    <ref name="SCHOOL"/>
-                    <ref name="SELFCONSTRUCTED"/>
-                    <ref name="SEPARATION"/>
-                    <ref name="SEXUALIDENTITY"/>
-                    <ref name="SIC"/>
-                    <ref name="SIGNIFICANTACTIVITY"/>
-                    <ref name="SOCALLED"/>
-                    <ref name="SUBJECT"/>
-                    <ref name="TCHARACTERIZATION"/>
-                    <ref name="TCHARACTERNAME"/>
-                    <ref name="TCHARACTERTYPEROLE"/>
-                    <ref name="TEXT"/>
-                    <ref name="TEXTSCOPE"/>
-                    <ref name="TEXTUALFEATURES"/>
-                    <ref name="TGENRE"/>
-                    <ref name="TGENREISSUE"/>
-                    <ref name="TINTERTEXTUALITY"/>
-                    <ref name="TITLE"/>
-                    <ref name="TMOTIF"/>
-                    <ref name="TOPIC"/>
-                    <ref name="TPLOT"/>
-                    <ref name="TSETTINGDATE"/>
-                    <ref name="TSETTINGPLACE"/>
-                    <ref name="TTECHNIQUES"/>
-                    <ref name="TTHEMETOPIC"/>
-                    <ref name="TTONESTYLE"/>
-                    <ref name="TVOICENARRATION"/>
-                    <ref name="VIOLENCE"/>
-                    <ref name="WEALTH"/>
-                    <ref name="XREF"/>
-                </zeroOrMore>
+                <oneOrMore>
+                    <choice>
+                        <text/>
+                        <ref name="AWARD"/>
+                        <ref name="BIBCITS"/>
+                        <ref name="BIRTH"/>
+                        <ref name="BIRTHNAME"/>
+                        <ref name="BIRTHPOSITION"/>
+                        <ref name="CAUSE"/>
+                        <ref name="CHILDLESSNESS"/>
+                        <ref name="CHILDREN"/>
+                        <ref name="CLASS"/>
+                        <ref name="COMPANION"/>
+                        <ref name="CONTESTEDBEHAVIOUR"/>
+                        <ref name="CULTURALFORMATION"/>
+                        <ref name="DATE"/>
+                        <ref name="DATERANGE"/>
+                        <ref name="DEATH"/>
+                        <ref name="DEGREE"/>
+                        <ref name="DENOMINATION"/>
+                        <ref name="DIVORCE"/>
+                        <ref name="EDUCATION"/>
+                        <ref name="EMPH"/>
+                        <ref name="EMPLOYER"/>
+                        <ref name="ETHNICITY"/>
+                        <ref name="EXTENTOFOEUVRE"/>
+                        <ref name="FAMILY"/>
+                        <ref name="FOREIGN"/>
+                        <ref name="FRIENDSASSOCIATES"/>
+                        <ref name="GENERICRANGE"/>
+                        <ref name="GEOGHERITAGE"/>
+                        <ref name="HEADING"/>
+                        <ref name="HEALTH"/>
+                        <ref name="INDEXED"/>
+                        <ref name="INSTRUCTOR"/>
+                        <ref name="INTIMATERELATIONSHIPS"/>
+                        <ref name="JOB"/>
+                        <ref name="KEYWORDCLASS"/>
+                        <ref name="L"/>
+                        <ref name="LANGUAGE"/>
+                        <ref name="LEISUREANDSOCIETY"/>
+                        <ref name="LIVESWITH"/>
+                        <ref name="LOCATION"/>
+                        <ref name="NAME"/>
+                        <ref name="NATIONALHERITAGE"/>
+                        <ref name="NATIONALITY"/>
+                        <ref name="NICKNAME"/>
+                        <ref name="OCCUPATION"/>
+                        <ref name="ORGNAME"/>
+                        <ref name="OTHERLIFEEVENT"/>
+                        <ref name="PADVERTISING"/>
+                        <ref name="PANTHOLOGIZATION"/>
+                        <ref name="PARCHIVALLOCATION"/>
+                        <ref name="PATTITUDES"/>
+                        <ref name="PAUTHORSHIP"/>
+                        <ref name="PCIRCULATION"/>
+                        <ref name="PCONTRACT"/>
+                        <ref name="PCOPYRIGHT"/>
+                        <ref name="PDEDICATION"/>
+                        <ref name="PEARNINGS"/>
+                        <ref name="PEDITIONS"/>
+                        <ref name="PERSONNAME"/>
+                        <ref name="PFIRSTLITERARYACTIVITY"/>
+                        <ref name="PINFLUENCESHER"/>
+                        <ref name="PLACE"/>
+                        <ref name="PLASTLITERARYACTIVITY"/>
+                        <ref name="PLITERARYSCHOOLS"/>
+                        <ref name="PMANUSCRIPTHISTORY"/>
+                        <ref name="PMATERIALCONDITIONS"/>
+                        <ref name="PMODEOFPUBLICATION"/>
+                        <ref name="PMOTIVES"/>
+                        <ref name="PNONBOOKMEDIA"/>
+                        <ref name="PNONSURVIVAL"/>
+                        <ref name="POLITICALAFFILIATION"/>
+                        <ref name="POLITICS"/>
+                        <ref name="PPERFORMANCE"/>
+                        <ref name="PPERIODICALPUBLICATION"/>
+                        <ref name="PPLACEOFPUBLICATION"/>
+                        <ref name="PPRESSRUN"/>
+                        <ref name="PPRICE"/>
+                        <ref name="PRARITIESFEATURESDECORATIONS"/>
+                        <ref name="PRELATIONSWITHPUBLISHER"/>
+                        <ref name="PRODUCTION"/>
+                        <ref name="PSERIALIZATION"/>
+                        <ref name="PSEUDONYM"/>
+                        <ref name="PSUBMISSIONSREJECTIONS"/>
+                        <ref name="PTYPEOFPRESS"/>
+                        <ref name="QUOTE"/>
+                        <ref name="RACECOLOUR"/>
+                        <ref name="RBESTKNOWNWORK"/>
+                        <ref name="RDESTRUCTIONOFWORK"/>
+                        <ref name="RECEPTION"/>
+                        <ref name="REMUNERATION"/>
+                        <ref name="RESEARCHNOTE"/>
+                        <ref name="RFICTIONALIZATION"/>
+                        <ref name="RLANDMARKTEXT"/>
+                        <ref name="ROLE"/>
+                        <ref name="ROYAL"/>
+                        <ref name="RPENALTIES"/>
+                        <ref name="RRECOGNITIONNAME"/>
+                        <ref name="RRECOGNITIONS"/>
+                        <ref name="RRECOGNITIONVALUE"/>
+                        <ref name="RRESPONSES"/>
+                        <ref name="RS"/>
+                        <ref name="RSELFDESCRIPTION"/>
+                        <ref name="RSHEINFLUENCED"/>
+                        <ref name="RWRITINGMILESTONE"/>
+                        <ref name="SCHOLARNOTE"/>
+                        <ref name="SCHOOL"/>
+                        <ref name="SELFCONSTRUCTED"/>
+                        <ref name="SEPARATION"/>
+                        <ref name="SEXUALIDENTITY"/>
+                        <ref name="SIC"/>
+                        <ref name="SIGNIFICANTACTIVITY"/>
+                        <ref name="SOCALLED"/>
+                        <ref name="SUBJECT"/>
+                        <ref name="TCHARACTERIZATION"/>
+                        <ref name="TCHARACTERNAME"/>
+                        <ref name="TCHARACTERTYPEROLE"/>
+                        <ref name="TEXT"/>
+                        <ref name="TEXTSCOPE"/>
+                        <ref name="TEXTUALFEATURES"/>
+                        <ref name="TGENRE"/>
+                        <ref name="TGENREISSUE"/>
+                        <ref name="TINTERTEXTUALITY"/>
+                        <ref name="TITLE"/>
+                        <ref name="TMOTIF"/>
+                        <ref name="TOPIC"/>
+                        <ref name="TPLOT"/>
+                        <ref name="TSETTINGDATE"/>
+                        <ref name="TSETTINGPLACE"/>
+                        <ref name="TTECHNIQUES"/>
+                        <ref name="TTHEMETOPIC"/>
+                        <ref name="TTONESTYLE"/>
+                        <ref name="TVOICENARRATION"/>
+                        <ref name="VIOLENCE"/>
+                        <ref name="WEALTH"/>
+                    </choice>
+                </oneOrMore>
             </interleave>
         </element>
     </define>
@@ -1291,13 +1688,29 @@
             <interleave>
                 <zeroOrMore>
                     <ref name="BIBCITS"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="KEYWORDCLASS"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="P"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="PARCHIVALLOCATION"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="RESEARCHNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="RRESPONSES"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="SCHOLARNOTE"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="TPLOT"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="TSETTINGDATE"/>
                 </zeroOrMore>
             </interleave>
@@ -1452,8 +1865,8 @@
             <optional>
                 <ref name="DATERANGE"/>
             </optional>
-            <interleave>
-                <zeroOrMore>
+            <oneOrMore>
+                <choice>
                     <ref name="BIBCITS"/>
                     <ref name="DATE"/>
                     <ref name="KEYWORDCLASS"/>
@@ -1462,8 +1875,8 @@
                     <element name="CHRONPROSE">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
                             the essential facts of a chronology event.</a:documentation>
-                        <interleave>
-                            <zeroOrMore>
+                        <oneOrMore>
+                            <choice>
                                 <text/>
                                 <ref name="AWARD"/>
                                 <ref name="BIBCITS"/>
@@ -1528,6 +1941,7 @@
                                 <ref name="RESEARCHNOTE"/>
                                 <ref name="RFICTIONALIZATION"/>
                                 <ref name="RLANDMARKTEXT"/>
+                                <ref name="ROLE"/>
                                 <ref name="RPENALTIES"/>
                                 <ref name="RRECOGNITIONNAME"/>
                                 <ref name="RRECOGNITIONS"/>
@@ -1563,11 +1977,11 @@
                                 <ref name="TTHEMETOPIC"/>
                                 <ref name="TTONESTYLE"/>
                                 <ref name="TVOICENARRATION"/>
-                            </zeroOrMore>
-                        </interleave>
+                            </choice>
+                        </oneOrMore>
                     </element>
-                </zeroOrMore>
-            </interleave>
+                </choice>
+            </oneOrMore>
         </element>
     </define>
 
@@ -1575,8 +1989,8 @@
         <element name="DATASTRUCT">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A dataStruct is a container element for one or
             more individual pieces of tabular data in the document.</a:documentation>
-            <interleave>
-                <zeroOrMore>
+            <oneOrMore>
+                <choice>
                     <ref name="BIBCITS"/>
                     <ref name="INDEXED"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1585,8 +1999,8 @@
                     <element name="DATAITEM">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dataItem is an element that contains
                         an individual piece of tabular information.</a:documentation>
-                        <interleave>
-                            <zeroOrMore>
+                        <oneOrMore>
+                            <choice>
                                 <text/>
                                 <ref name="BIBCITS"/>
                                 <ref name="BIRTHNAME"/>
@@ -1633,11 +2047,11 @@
                                         </choice>
                                     </oneOrMore>
                                 </element>
-                            </zeroOrMore>
-                        </interleave>
+                            </choice>
+                        </oneOrMore>
                     </element>
-                </zeroOrMore>
-            </interleave>
+                </choice>
+            </oneOrMore>
             <optional>
                 <choice>
                     <ref name="MARRIED"/>
@@ -1651,8 +2065,8 @@
         <element name="HEADING">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">head (or heading) contains any type of heading, for example
                 the title of a section, or the heading of a list, glossary, manuscript description, etc.</a:documentation>
-            <interleave>
-                <zeroOrMore>
+            <oneOrMore>
+                <choice>
                     <text/>
                     <ref name="FOREIGN"/>
                     <ref name="POLITICALAFFILIATION"/>
@@ -1661,8 +2075,8 @@
                     <ref name="SCHOOL"/>
                     <ref name="SOCALLED"/>
                     <ref name="TITLE"/>
-                </zeroOrMore>
-            </interleave>
+                </choice>
+            </oneOrMore>
         </element>
     </define>
 
@@ -7820,6 +8234,35 @@
                     <value>WROTEPUBLISHEDASYES</value>
                 </attribute>
             </optional>
+            <text/>
+        </element>
+    </define>
+
+    <define name="ANIMALS">
+        <element name="ANIMALS">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">MRB: Animals element documentation here.</a:documentation>
+            <text/>
+        </element>
+    </define>
+
+    <define name="ENVIRONMENT">
+        <element name="ENVIRONMENT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Environment is a sub-element of TextualFeatures that contains
+                discussions of a writer's relationships to the natural world, the urban environment, a particular milieau, etc.</a:documentation>
+            <text/>
+        </element>
+    </define>
+
+    <define name="FOOD">
+        <element name="FOOD">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">MRB: Food element documentation here.</a:documentation>
+            <text/>
+        </element>
+    </define>
+
+    <define name="ROLE">
+        <element name="ROLE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Role element documentation here.</a:documentation>
             <text/>
         </element>
     </define>
