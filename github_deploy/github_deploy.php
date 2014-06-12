@@ -1,5 +1,6 @@
 <?php
 
+// interact with GitHub WebHook
 // https://jonathanstark.com/blog/deploying-code-automatically-with-github-webhooks
 
 // Init vars
