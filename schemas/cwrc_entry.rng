@@ -26,7 +26,7 @@
 -->
 
 <!-- 
-**** Revisions ****
+*** Revisions ***
 * MRB: Thu 12-Jun-2014: Addressed GitHub issues associated with the CWRC entry schema:
   - Added new elements of ANIMALS, ENVIRONMENT, and FOOD to the TEXTUALFEATURES element.
   - Added ROLE element to the elements P and CHRONPROSE.
@@ -219,6 +219,7 @@
             </element>
         </element>
     </define>
+    <!-- end <CWRCHEADER> pattern -->
 
     <!-- <ENTRY> pattern -->
     <define name="ENTRY">
@@ -2903,7 +2904,7 @@
                     <ref name="FOREIGN"/>
                     <ref name="NAME"/>
                     <ref name="QUOTE"/>
-                    <ref name="SEXUALIDENTITY"/>
+                    <ref name="RESEARCHNOTE"/>
                     <ref name="SOCALLED"/>
                 </choice>
             </oneOrMore>
@@ -3059,6 +3060,7 @@
                     <ref name="NATIONALHERITAGE"/>
                     <ref name="ORGNAME"/>
                     <ref name="QUOTE"/>
+                    <ref name="RESEARCHNOTE"/>
                     <ref name="SOCALLED"/>
                 </choice>
             </oneOrMore>
@@ -4695,6 +4697,7 @@
                     <ref name="NATIONALHERITAGE"/>
                     <ref name="PLACE"/>
                     <ref name="POLITICALAFFILIATION"/>
+                    <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -6811,6 +6814,7 @@
                     <ref name="PLACE"/>
                     <ref name="QUOTE"/>
                     <ref name="RACECOLOUR"/>
+                    <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
         </element>
