@@ -146,7 +146,12 @@
                     <element name="AUTHORITY">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The authority element contains the name of the
                             person or organization responsible for the construction of an XML file.</a:documentation>
-                        <text/>
+                        <oneOrMore>
+                            <choice>
+                                <text/>
+                                <ref name="RESEARCHNOTE"/>
+                            </choice>
+                        </oneOrMore>
                     </element>
                 </element>
                 <element name="SOURCEDESC">
@@ -706,15 +711,17 @@
                             details of married life. For this reason, do not use this element for a detailed
                             discussion of her married life but place such discussions within the general family/
                             member=husband element.</a:documentation>
-                        <zeroOrMore>
-                            <choice>
-                                <ref name="CHRONSTRUCT"/>
-                                <ref name="P"/>
-                            </choice>
-                        </zeroOrMore>
-                        <optional>
-                            <ref name="RESEARCHNOTE"/>
-                        </optional>
+                        <interleave>
+                            <zeroOrMore>
+                                <choice>
+                                    <ref name="CHRONSTRUCT"/>
+                                    <ref name="P"/>
+                                </choice>
+                            </zeroOrMore>
+                            <zeroOrMore>
+                                <ref name="RESEARCHNOTE"/>
+                            </zeroOrMore>
+                        </interleave>
                     </element>
                 </zeroOrMore>
             </interleave>
@@ -1970,7 +1977,10 @@
             <oneOrMore>
                 <choice>
                     <text/>
+                    <ref name="DATE"/>
                     <ref name="FOREIGN"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
                     <ref name="POLITICALAFFILIATION"/>
                     <ref name="QUOTE"/>
                     <ref name="RESEARCHNOTE"/>
