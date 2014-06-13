@@ -643,8 +643,8 @@
                             specific family members.</a:documentation>
                         <attribute name="RELATION" a:defaultValue="MOTHER">
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relation is a
-                            required attribute attached to member. It specifies how the family member discussed within
-                            the member element is related to the person.</a:documentation>
+                                required attribute attached to member. It specifies how the family member discussed within
+                                the member element is related to the person.</a:documentation>
                             <choice>
                                 <value>MOTHER</value>
                                 <value>FATHER</value>
@@ -686,25 +686,6 @@
                             <zeroOrMore>
                                 <ref name="CHRONSTRUCT"/>
                                 <ref name="P"/>
-                                <element name="MARRIAGE">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
-                                    marriage element is used to capture the event of a person&apos;s wedding ceremony or
-                                    the fact of her marriage. Marriage is often a central and defining moment in a woman
-                                    writer's life and we want to systematize this event. Because of the institutional
-                                    definition of marriage, we want to separate out the legal act of marriage from the
-                                    details of married life. For this reason, do not use this element for a detailed
-                                    discussion of her married life but place such discussions within the general family/
-                                    member=husband element.</a:documentation>
-                                    <zeroOrMore>
-                                        <choice>
-                                            <ref name="CHRONSTRUCT"/>
-                                            <ref name="P"/>
-                                        </choice>
-                                    </zeroOrMore>
-                                    <optional>
-                                        <ref name="RESEARCHNOTE"/>
-                                    </optional>
-                                </element>
                             </zeroOrMore>
                             <optional>
                                 <choice>
@@ -713,6 +694,27 @@
                                 </choice>
                             </optional>
                         </interleave>
+                    </element>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <element name="MARRIAGE">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
+                            marriage element is used to capture the event of a person&apos;s wedding ceremony or
+                            the fact of her marriage. Marriage is often a central and defining moment in a woman
+                            writer's life and we want to systematize this event. Because of the institutional
+                            definition of marriage, we want to separate out the legal act of marriage from the
+                            details of married life. For this reason, do not use this element for a detailed
+                            discussion of her married life but place such discussions within the general family/
+                            member=husband element.</a:documentation>
+                        <zeroOrMore>
+                            <choice>
+                                <ref name="CHRONSTRUCT"/>
+                                <ref name="P"/>
+                            </choice>
+                        </zeroOrMore>
+                        <optional>
+                            <ref name="RESEARCHNOTE"/>
+                        </optional>
                     </element>
                 </zeroOrMore>
             </interleave>
