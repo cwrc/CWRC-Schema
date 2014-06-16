@@ -1105,8 +1105,6 @@
                     <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="SHORTPROSE"/>
-                    <ref name="RECEPTION"/>
-                    <ref name="TEXTUALFEATURES"/>
                     <ref name="PADVERTISING"/>
                     <ref name="PANTHOLOGIZATION"/>
                     <ref name="PARCHIVALLOCATION"/>
@@ -1187,8 +1185,6 @@
                     <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="SHORTPROSE"/>
-                    <ref name="PRODUCTION"/>
-                    <ref name="TEXTUALFEATURES"/>
                     <ref name="PADVERTISING"/>
                     <ref name="PANTHOLOGIZATION"/>
                     <ref name="PARCHIVALLOCATION"/>
@@ -1268,8 +1264,6 @@
                     <ref name="KEYWORDCLASS"/>
                     <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="PRODUCTION"/>
-                    <ref name="RECEPTION"/>
                     <ref name="PADVERTISING"/>
                     <ref name="PANTHOLOGIZATION"/>
                     <ref name="PARCHIVALLOCATION"/>
@@ -1456,7 +1450,7 @@
             <oneOrMore>
                 <choice>
                     <text/>
-                    <ref name="AWARD"/>
+                    <ref name="AWARDSNONLITERARY"/>
                     <ref name="BIBCITS"/>
                     <ref name="BIRTH"/>
                     <ref name="BIRTHNAME"/>
@@ -1774,7 +1768,7 @@
                         <oneOrMore>
                             <choice>
                                 <text/>
-                                <ref name="AWARD"/>
+                                <ref name="AWARDSNONLITERARY"/>
                                 <ref name="BIBCITS"/>
                                 <ref name="CAUSE"/>
                                 <ref name="CHILDLESSNESS"/>
@@ -2612,7 +2606,7 @@
             <oneOrMore>
                 <choice>
                     <text/>
-                    <ref name="AWARD"/>
+                    <ref name="AWARDSNONLITERARY"/>
                     <ref name="BIBCITS"/>
                     <ref name="CAUSE"/>
                     <ref name="CHILDREN"/>
@@ -3788,8 +3782,8 @@
         </element>
     </define>
 
-    <define name="AWARD">
-        <element name="AWARD">
+    <define name="AWARDSNONLITERARY">
+        <element name="AWARDSNONLITERARY">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element captures important educational awards given to
                 women writers.</a:documentation>
             <optional>
@@ -6550,6 +6544,9 @@
                         regularization) contains a reading which has been regularized or normalized in some
                         sense.</a:documentation>
                 </attribute>
+                <optional>
+                    <ref name="RESEARCHNOTE"/>
+                </optional>
             </optional>
             <oneOrMore>
                 <choice>
