@@ -27,11 +27,13 @@
 
 <!-- 
 *** Revisions ***
-* MRB: Thu 12-Jun-2014: Addressed GitHub issues associated with the CWRC entry schema:
+* MRB: June 2014: Addressed GitHub issues associated with the CWRC entry schema:
   - Added new elements of ANIMALS, ENVIRONMENT, and FOOD to the TEXTUALFEATURES element.
   - Added ROLE element to the elements P and CHRONPROSE.
   - Added new attribute of MEDIATYPE to PRODUCTION element.
   - Added new attribute of STATUS to the element DEGREE.
+  - Added RESEARCHNOTE to various elements.
+  - Changed attribute values 
 * MRB: June 2014: Major architectural redesign, e.g.,
   - Renamed DIV0 to ENTRY.
   - Deleted DIV3.
@@ -1669,44 +1671,20 @@
             <optional>
                 <attribute name="CHRONCOLUMN">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given
-                        chronology item as belonging to a subject-specific column of the Orlando print (and possibly electronic)
-                        chronology.</a:documentation>
-                    <choice>
-                        <value>NATIONALINTERNATIONAL</value>
-                        <value>BRITISHWOMENWRITERS</value>
-                        <value>WRITINGCLIMATE</value>
-                        <value>SOCIALCLIMATE</value>
-                    </choice>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="CHRONCOLUMN1">
-                    <choice>
-                        <value>NATIONALINTERNATIONAL1</value>
-                        <value>BRITISHWOMENWRITERS1</value>
-                        <value>WRITINGCLIMATE1</value>
-                        <value>SOCIALCLIMATE1</value>
-                    </choice>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="CHRONCOLUMN2">
-                    <choice>
-                        <value>NATIONALINTERNATIONAL2</value>
-                        <value>BRITISHWOMENWRITERS2</value>
-                        <value>WRITINGCLIMATE2</value>
-                        <value>SOCIALCLIMATE2</value>
-                    </choice>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="CHRONCOLUMN3">
-                    <choice>
-                        <value>NATIONALINTERNATIONAL3</value>
-                        <value>BRITISHWOMENWRITERS3</value>
-                        <value>WRITINGCLIMATE3</value>
-                        <value>SOCIALCLIMATE3</value>
-                    </choice>
+                        chronology item as belonging to a particular type of event: bibliographical, biographical, cultural, literary, political, and
+                        social.</a:documentation>
+                    <list>
+                        <oneOrMore>
+                            <choice>
+                                <value>BIBLIOGRAPHICAL</value>
+                                <value>BIOGRAPHICAL</value>
+                                <value>CULTURAL</value>
+                                <value>LITERARY</value>
+                                <value>POLITICAL</value>
+                                <value>SOCIAL</value>
+                            </choice>
+                        </oneOrMore>
+                    </list>
                 </attribute>
             </optional>
             <optional>
