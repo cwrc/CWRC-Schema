@@ -34,7 +34,7 @@
 				'properties_CHILDREN', 
 				'properties_CHILDLESSNESS', 
 				'properties_DIVORCE', 
-				'properties_JOB', 
+				'properties_JOBTITLE', 
 				'properties_DATERANGE', 
 				'properties_EMPLOYER', 
 				'properties_ORGNAME', 
@@ -46,7 +46,7 @@
 				'properties_SUBJECT', 
 				'properties_TEXT', 
 				'properties_TITLE', 
-				'properties_PLITERARYSCHOOLS', 
+				'properties_PLITERARYMOVEMENTS', 
 				'properties_TGENRE', 
 				'properties_TCHARACTERNAME', 
 				'properties_TCHARACTERTYPEROLE', 
@@ -123,6 +123,7 @@
 				'properties_LG', 
 				'properties_HEAD', 
 				'properties_SEXUALIDENTITY', 
+				'properties_GENDER', 
 				'properties_NICKNAME', 
 				'properties_PSEUDONYM', 
 				'properties_MARRIED', 
@@ -153,6 +154,7 @@
 				'properties_RELIGION', 
 				'properties_SEXUALITY', 
 				'properties_DEATH', 
+				'properties_ECONOMICS', 
 				'properties_EDUCATION', 
 				'properties_FAMILY', 
 				'properties_FAMILYMEMBER', 
@@ -161,7 +163,7 @@
 				'properties_HEALTH', 
 				'properties_INTIMATERELATIONSHIPS', 
 				'properties_LEISUREANDSOCIETY', 
-				'properties_LOCATION', 
+				'properties_RESIDENCEANDMOBILITY', 
 				'properties_OCCUPATION', 
 				'properties_OTHERLIFEEVENT', 
 				'properties_PERSONNAME', 
@@ -175,7 +177,6 @@
 				'properties_ENVIRONMENT', 
 				'properties_FOOD', 
 				'properties_VIOLENCE', 
-				'properties_WEALTH', 
 				'properties_BIBCIT', 
 				'properties_SOURCEDESC', 
 				'properties_REVISIONDESC', 
@@ -233,7 +234,7 @@
 				'properties_TINTERTEXTUALITY_INTERTEXTTYPE', 
 				'properties_TCHARACTERTYPEROLE_PROTAGONIST', 
 				'properties_TGENRE_GENRENAME', 
-				'properties_PLITERARYSCHOOLS_INVOLVEMENT', 
+				'properties_PLITERARYMOVEMENTS_INVOLVEMENT', 
 				'properties_TITLE_TITLETYPE', 
 				'properties_SCHOOL_INSTITUTION', 
 				'properties_SCHOOL_INSTITUTIONLEVEL', 
@@ -246,12 +247,14 @@
 				'properties_POLITICALAFFILIATION_MEMBERSHIP', 
 				'properties_POLITICALAFFILIATION_WOMAN-GENDERISSUE', 
 				'properties_SIGNIFICANTACTIVITY_PHILANTHROPYVOLUNTEER', 
-				'properties_JOB_FAMILYBUSINESS', 
-				'properties_JOB_ID', 
+				'properties_JOBTITLE_FAMILYBUSINESS', 
+				'properties_JOBTITLE_ID', 
 				'properties_CHILDREN_NUMBER', 
 				'properties_DEGREE_STATUS', 
 				'properties_LANGUAGE_COMPETENCE', 
 				'properties_LG_TYPE', 
+				'properties_GENDER_CURRENTALTERNATIVETERM', 
+				'properties_GENDER_SELF-DEFINED', 
 				'properties_SEXUALIDENTITY_CURRENTALTERNATIVETERM', 
 				'properties_SEXUALIDENTITY_SELF-DEFINED', 
 				'properties_QUOTE_DIRECT', 
@@ -298,7 +301,7 @@
 				'properties_FAMILY_ID', 
 				'properties_HEALTH_ISSUE', 
 				'properties_INTIMATERELATIONSHIPS_EROTIC', 
-				'properties_LOCATION_RELATIONTO', 
+				'properties_RESIDENCEANDMOBILITY_RELATIONTO', 
 				'properties_PRODUCTION_MEDIATYPE', 
 				'properties_P_ID', 
 				'properties_BIBCIT_ID', 
@@ -310,7 +313,8 @@
 				'properties_STANDARD_WROTEORPUBLISHEDAS', 
 				'properties_CWRC_ID', 
 				'properties_CWRC_SEX', 
-				'properties_CWRC_PERSON');
+				'properties_CWRC_PERSON', 
+				'properties_CWRC_NATIONALITYCATEGORY');
 var facetsBoxes= new Array('facets_DATERANGE_CALENDAR', 
 				'facets_DATERANGE_CERTAINTY', 
 				'facets_DATERANGE_EXACT', 
@@ -349,7 +353,7 @@ var facetsBoxes= new Array('facets_DATERANGE_CALENDAR',
 				'facets_TINTERTEXTUALITY_INTERTEXTTYPE', 
 				'facets_TCHARACTERTYPEROLE_PROTAGONIST', 
 				'facets_TGENRE_GENRENAME', 
-				'facets_PLITERARYSCHOOLS_INVOLVEMENT', 
+				'facets_PLITERARYMOVEMENTS_INVOLVEMENT', 
 				'facets_TITLE_TITLETYPE', 
 				'facets_SCHOOL_INSTITUTION', 
 				'facets_SCHOOL_INSTITUTIONLEVEL', 
@@ -360,9 +364,10 @@ var facetsBoxes= new Array('facets_DATERANGE_CALENDAR',
 				'facets_POLITICALAFFILIATION_MEMBERSHIP', 
 				'facets_POLITICALAFFILIATION_WOMAN-GENDERISSUE', 
 				'facets_SIGNIFICANTACTIVITY_PHILANTHROPYVOLUNTEER', 
-				'facets_JOB_FAMILYBUSINESS', 
+				'facets_JOBTITLE_FAMILYBUSINESS', 
 				'facets_DEGREE_STATUS', 
 				'facets_LANGUAGE_COMPETENCE', 
+				'facets_GENDER_SELF-DEFINED', 
 				'facets_SEXUALIDENTITY_SELF-DEFINED', 
 				'facets_QUOTE_DIRECT', 
 				'facets_NICKNAME_NAMECONNOTATION', 
@@ -400,12 +405,13 @@ var facetsBoxes= new Array('facets_DATERANGE_CALENDAR',
 				'facets_FAMILYMEMBER_RELATION', 
 				'facets_HEALTH_ISSUE', 
 				'facets_INTIMATERELATIONSHIPS_EROTIC', 
-				'facets_LOCATION_RELATIONTO', 
+				'facets_RESIDENCEANDMOBILITY_RELATIONTO', 
 				'facets_BIBCIT_QTDIN', 
 				'facets_RESPONSIBILITY_WORKSTATUS', 
 				'facets_RESPONSIBILITY_WORKVALUE', 
 				'facets_STANDARD_WROTEORPUBLISHEDAS', 
-				'facets_CWRC_PERSON');
+				'facets_CWRC_PERSON', 
+				'facets_CWRC_NATIONALITYCATEGORY');
 var usedByBoxes= new Array('usedBy_CWRCHEADER', 
 				'usedBy_FILEDESC', 
 				'usedBy_TITLESTMT', 
@@ -432,7 +438,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_CHILDREN', 
 				'usedBy_CHILDLESSNESS', 
 				'usedBy_DIVORCE', 
-				'usedBy_JOB', 
+				'usedBy_JOBTITLE', 
 				'usedBy_DATERANGE', 
 				'usedBy_EMPLOYER', 
 				'usedBy_ORGNAME', 
@@ -444,7 +450,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_SUBJECT', 
 				'usedBy_TEXT', 
 				'usedBy_TITLE', 
-				'usedBy_PLITERARYSCHOOLS', 
+				'usedBy_PLITERARYMOVEMENTS', 
 				'usedBy_TGENRE', 
 				'usedBy_TCHARACTERNAME', 
 				'usedBy_TCHARACTERTYPEROLE', 
@@ -521,6 +527,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_LG', 
 				'usedBy_HEAD', 
 				'usedBy_SEXUALIDENTITY', 
+				'usedBy_GENDER', 
 				'usedBy_NICKNAME', 
 				'usedBy_PSEUDONYM', 
 				'usedBy_MARRIED', 
@@ -551,6 +558,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_RELIGION', 
 				'usedBy_SEXUALITY', 
 				'usedBy_DEATH', 
+				'usedBy_ECONOMICS', 
 				'usedBy_EDUCATION', 
 				'usedBy_FAMILY', 
 				'usedBy_FAMILYMEMBER', 
@@ -559,7 +567,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_HEALTH', 
 				'usedBy_INTIMATERELATIONSHIPS', 
 				'usedBy_LEISUREANDSOCIETY', 
-				'usedBy_LOCATION', 
+				'usedBy_RESIDENCEANDMOBILITY', 
 				'usedBy_OCCUPATION', 
 				'usedBy_OTHERLIFEEVENT', 
 				'usedBy_PERSONNAME', 
@@ -573,7 +581,6 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_ENVIRONMENT', 
 				'usedBy_FOOD', 
 				'usedBy_VIOLENCE', 
-				'usedBy_WEALTH', 
 				'usedBy_BIBCIT', 
 				'usedBy_SOURCEDESC', 
 				'usedBy_REVISIONDESC', 
@@ -610,6 +617,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_NATIONALHERITAGE_FOREBEAR', 
 				'usedBy_NATIONALHERITAGE_REG', 
 				'usedBy_NATIONALHERITAGE_SELF-DEFINED', 
+				'usedBy_TTONESTYLE_EXPERIMENTAL', 
 				'usedBy_TTECHNIQUES_TECHNIQUETYPE', 
 				'usedBy_TSETTINGPLACE_SETTINGCLASS', 
 				'usedBy_TSETTINGPLACE_SETTINGPLACETYPE', 
@@ -619,6 +627,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_RESP-attribute_RESP', 
 				'usedBy_XREF_URL', 
 				'usedBy_RPENALTIES_CENSORSHIP', 
+				'usedBy_RPENALTIES_CONTROVERSY', 
 				'usedBy_RDESTRUCTIONOFWORK_DESTROYEDBY', 
 				'usedBy_RRESPONSES_FORMALITY', 
 				'usedBy_RRESPONSES_GENDEREDRESPONSE', 
@@ -645,8 +654,8 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_TCHARACTERNAME_REG', 
 				'usedBy_TGENRE_GENRENAME', 
 				'usedBy_TGENRE_PROPOSEDALTERNATIVENAME', 
-				'usedBy_PLITERARYSCHOOLS_INVOLVEMENT', 
-				'usedBy_PLITERARYSCHOOLS_REG', 
+				'usedBy_PLITERARYMOVEMENTS_INVOLVEMENT', 
+				'usedBy_PLITERARYMOVEMENTS_REG', 
 				'usedBy_TITLE_REG', 
 				'usedBy_TITLE_REND', 
 				'usedBy_TITLE_STANDARD', 
@@ -672,18 +681,21 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_ORGNAME_URI', 
 				'usedBy_SIGNIFICANTACTIVITY_PHILANTHROPYVOLUNTEER', 
 				'usedBy_SIGNIFICANTACTIVITY_REG', 
-				'usedBy_JOB_CURRENTALTERNATIVETERM', 
-				'usedBy_JOB_FAMILYBUSINESS', 
-				'usedBy_JOB_HISTORICALTERM', 
-				'usedBy_JOB_HISTORICALTERMCONTEXTDATE', 
-				'usedBy_JOB_ID', 
-				'usedBy_JOB_REG', 
+				'usedBy_JOBTITLE_CURRENTALTERNATIVETERM', 
+				'usedBy_JOBTITLE_FAMILYBUSINESS', 
+				'usedBy_JOBTITLE_HISTORICALTERM', 
+				'usedBy_JOBTITLE_HISTORICALTERMCONTEXTDATE', 
+				'usedBy_JOBTITLE_ID', 
+				'usedBy_JOBTITLE_REG', 
 				'usedBy_CHILDREN_NUMBER', 
 				'usedBy_DEGREE_REG', 
 				'usedBy_DEGREE_STATUS', 
 				'usedBy_LANGUAGE_COMPETENCE', 
 				'usedBy_LANGUAGE_REG', 
 				'usedBy_LG_TYPE', 
+				'usedBy_GENDER_CURRENTALTERNATIVETERM', 
+				'usedBy_GENDER_REG', 
+				'usedBy_GENDER_SELF-DEFINED', 
 				'usedBy_SEXUALIDENTITY_CURRENTALTERNATIVETERM', 
 				'usedBy_SEXUALIDENTITY_REG', 
 				'usedBy_SEXUALIDENTITY_SELF-DEFINED', 
@@ -751,7 +763,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_FAMILY_ID', 
 				'usedBy_HEALTH_ISSUE', 
 				'usedBy_INTIMATERELATIONSHIPS_EROTIC', 
-				'usedBy_LOCATION_RELATIONTO', 
+				'usedBy_RESIDENCEANDMOBILITY_RELATIONTO', 
 				'usedBy_PRODUCTION_MEDIATYPE', 
 				'usedBy_TEXTSCOPE_DBREF', 
 				'usedBy_TEXTSCOPE_PLACEHOLDER', 
@@ -768,6 +780,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_CWRC_ID', 
 				'usedBy_CWRC_SEX', 
 				'usedBy_CWRC_PERSON', 
+				'usedBy_CWRC_NATIONALITYCATEGORY', 
 				'usedBy_RESP-attribute');
 var sourceBoxes= new Array('source_CWRC', 
 				'source_CWRCHEADER', 
@@ -796,7 +809,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_CHILDREN', 
 				'source_CHILDLESSNESS', 
 				'source_DIVORCE', 
-				'source_JOB', 
+				'source_JOBTITLE', 
 				'source_DATERANGE', 
 				'source_EMPLOYER', 
 				'source_ORGNAME', 
@@ -808,7 +821,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_SUBJECT', 
 				'source_TEXT', 
 				'source_TITLE', 
-				'source_PLITERARYSCHOOLS', 
+				'source_PLITERARYMOVEMENTS', 
 				'source_TGENRE', 
 				'source_TCHARACTERNAME', 
 				'source_TCHARACTERTYPEROLE', 
@@ -885,6 +898,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_LG', 
 				'source_HEAD', 
 				'source_SEXUALIDENTITY', 
+				'source_GENDER', 
 				'source_NICKNAME', 
 				'source_PSEUDONYM', 
 				'source_MARRIED', 
@@ -915,6 +929,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_RELIGION', 
 				'source_SEXUALITY', 
 				'source_DEATH', 
+				'source_ECONOMICS', 
 				'source_EDUCATION', 
 				'source_FAMILY', 
 				'source_FAMILYMEMBER', 
@@ -923,7 +938,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_HEALTH', 
 				'source_INTIMATERELATIONSHIPS', 
 				'source_LEISUREANDSOCIETY', 
-				'source_LOCATION', 
+				'source_RESIDENCEANDMOBILITY', 
 				'source_OCCUPATION', 
 				'source_OTHERLIFEEVENT', 
 				'source_PERSONNAME', 
@@ -937,7 +952,6 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_ENVIRONMENT', 
 				'source_FOOD', 
 				'source_VIOLENCE', 
-				'source_WEALTH', 
 				'source_BIBCIT', 
 				'source_SOURCEDESC', 
 				'source_REVISIONDESC', 
@@ -974,6 +988,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_NATIONALHERITAGE_FOREBEAR', 
 				'source_NATIONALHERITAGE_REG', 
 				'source_NATIONALHERITAGE_SELF-DEFINED', 
+				'source_TTONESTYLE_EXPERIMENTAL', 
 				'source_TTECHNIQUES_TECHNIQUETYPE', 
 				'source_TSETTINGPLACE_SETTINGCLASS', 
 				'source_TSETTINGPLACE_SETTINGPLACETYPE', 
@@ -983,6 +998,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_RESP-attribute_RESP', 
 				'source_XREF_URL', 
 				'source_RPENALTIES_CENSORSHIP', 
+				'source_RPENALTIES_CONTROVERSY', 
 				'source_RDESTRUCTIONOFWORK_DESTROYEDBY', 
 				'source_RRESPONSES_FORMALITY', 
 				'source_RRESPONSES_GENDEREDRESPONSE', 
@@ -1009,8 +1025,8 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_TCHARACTERNAME_REG', 
 				'source_TGENRE_GENRENAME', 
 				'source_TGENRE_PROPOSEDALTERNATIVENAME', 
-				'source_PLITERARYSCHOOLS_INVOLVEMENT', 
-				'source_PLITERARYSCHOOLS_REG', 
+				'source_PLITERARYMOVEMENTS_INVOLVEMENT', 
+				'source_PLITERARYMOVEMENTS_REG', 
 				'source_TITLE_REG', 
 				'source_TITLE_REND', 
 				'source_TITLE_STANDARD', 
@@ -1036,18 +1052,21 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_ORGNAME_URI', 
 				'source_SIGNIFICANTACTIVITY_PHILANTHROPYVOLUNTEER', 
 				'source_SIGNIFICANTACTIVITY_REG', 
-				'source_JOB_CURRENTALTERNATIVETERM', 
-				'source_JOB_FAMILYBUSINESS', 
-				'source_JOB_HISTORICALTERM', 
-				'source_JOB_HISTORICALTERMCONTEXTDATE', 
-				'source_JOB_ID', 
-				'source_JOB_REG', 
+				'source_JOBTITLE_CURRENTALTERNATIVETERM', 
+				'source_JOBTITLE_FAMILYBUSINESS', 
+				'source_JOBTITLE_HISTORICALTERM', 
+				'source_JOBTITLE_HISTORICALTERMCONTEXTDATE', 
+				'source_JOBTITLE_ID', 
+				'source_JOBTITLE_REG', 
 				'source_CHILDREN_NUMBER', 
 				'source_DEGREE_REG', 
 				'source_DEGREE_STATUS', 
 				'source_LANGUAGE_COMPETENCE', 
 				'source_LANGUAGE_REG', 
 				'source_LG_TYPE', 
+				'source_GENDER_CURRENTALTERNATIVETERM', 
+				'source_GENDER_REG', 
+				'source_GENDER_SELF-DEFINED', 
 				'source_SEXUALIDENTITY_CURRENTALTERNATIVETERM', 
 				'source_SEXUALIDENTITY_REG', 
 				'source_SEXUALIDENTITY_SELF-DEFINED', 
@@ -1115,7 +1134,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_FAMILY_ID', 
 				'source_HEALTH_ISSUE', 
 				'source_INTIMATERELATIONSHIPS_EROTIC', 
-				'source_LOCATION_RELATIONTO', 
+				'source_RESIDENCEANDMOBILITY_RELATIONTO', 
 				'source_PRODUCTION_MEDIATYPE', 
 				'source_TEXTSCOPE_DBREF', 
 				'source_TEXTSCOPE_PLACEHOLDER', 
@@ -1132,6 +1151,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_CWRC_ID', 
 				'source_CWRC_SEX', 
 				'source_CWRC_PERSON', 
+				'source_CWRC_NATIONALITYCATEGORY', 
 				'source_RESP-attribute');
 var instanceBoxes= new Array('instance_CWRC', 
 				'instance_CWRCHEADER', 
@@ -1158,7 +1178,7 @@ var instanceBoxes= new Array('instance_CWRC',
 				'instance_CHILDREN', 
 				'instance_CHILDLESSNESS', 
 				'instance_DIVORCE', 
-				'instance_JOB', 
+				'instance_JOBTITLE', 
 				'instance_DATERANGE', 
 				'instance_EMPLOYER', 
 				'instance_ORGNAME', 
@@ -1169,7 +1189,7 @@ var instanceBoxes= new Array('instance_CWRC',
 				'instance_SUBJECT', 
 				'instance_TEXT', 
 				'instance_TITLE', 
-				'instance_PLITERARYSCHOOLS', 
+				'instance_PLITERARYMOVEMENTS', 
 				'instance_TGENRE', 
 				'instance_TCHARACTERNAME', 
 				'instance_TCHARACTERTYPEROLE', 
@@ -1271,6 +1291,7 @@ var instanceBoxes= new Array('instance_CWRC',
 				'instance_RELIGION', 
 				'instance_SEXUALITY', 
 				'instance_DEATH', 
+				'instance_ECONOMICS', 
 				'instance_EDUCATION', 
 				'instance_FAMILY', 
 				'instance_FAMILYMEMBER', 
@@ -1279,7 +1300,7 @@ var instanceBoxes= new Array('instance_CWRC',
 				'instance_HEALTH', 
 				'instance_INTIMATERELATIONSHIPS', 
 				'instance_LEISUREANDSOCIETY', 
-				'instance_LOCATION', 
+				'instance_RESIDENCEANDMOBILITY', 
 				'instance_OCCUPATION', 
 				'instance_OTHERLIFEEVENT', 
 				'instance_PERSONNAME', 
@@ -1290,7 +1311,6 @@ var instanceBoxes= new Array('instance_CWRC',
 				'instance_TEXTSCOPE', 
 				'instance_TEXTUALFEATURES', 
 				'instance_VIOLENCE', 
-				'instance_WEALTH', 
 				'instance_BIBCIT', 
 				'instance_REVISIONDESC', 
 				'instance_RESPONSIBILITY', 
@@ -1325,7 +1345,7 @@ var diagramBoxes= new Array('diagram_CWRC',
 				'diagram_CHILDREN', 
 				'diagram_CHILDLESSNESS', 
 				'diagram_DIVORCE', 
-				'diagram_JOB', 
+				'diagram_JOBTITLE', 
 				'diagram_DATERANGE', 
 				'diagram_EMPLOYER', 
 				'diagram_ORGNAME', 
@@ -1337,7 +1357,7 @@ var diagramBoxes= new Array('diagram_CWRC',
 				'diagram_SUBJECT', 
 				'diagram_TEXT', 
 				'diagram_TITLE', 
-				'diagram_PLITERARYSCHOOLS', 
+				'diagram_PLITERARYMOVEMENTS', 
 				'diagram_TGENRE', 
 				'diagram_TCHARACTERNAME', 
 				'diagram_TCHARACTERTYPEROLE', 
@@ -1414,6 +1434,7 @@ var diagramBoxes= new Array('diagram_CWRC',
 				'diagram_LG', 
 				'diagram_HEAD', 
 				'diagram_SEXUALIDENTITY', 
+				'diagram_GENDER', 
 				'diagram_NICKNAME', 
 				'diagram_PSEUDONYM', 
 				'diagram_MARRIED', 
@@ -1444,6 +1465,7 @@ var diagramBoxes= new Array('diagram_CWRC',
 				'diagram_RELIGION', 
 				'diagram_SEXUALITY', 
 				'diagram_DEATH', 
+				'diagram_ECONOMICS', 
 				'diagram_EDUCATION', 
 				'diagram_FAMILY', 
 				'diagram_FAMILYMEMBER', 
@@ -1452,7 +1474,7 @@ var diagramBoxes= new Array('diagram_CWRC',
 				'diagram_HEALTH', 
 				'diagram_INTIMATERELATIONSHIPS', 
 				'diagram_LEISUREANDSOCIETY', 
-				'diagram_LOCATION', 
+				'diagram_RESIDENCEANDMOBILITY', 
 				'diagram_OCCUPATION', 
 				'diagram_OTHERLIFEEVENT', 
 				'diagram_PERSONNAME', 
@@ -1466,7 +1488,6 @@ var diagramBoxes= new Array('diagram_CWRC',
 				'diagram_ENVIRONMENT', 
 				'diagram_FOOD', 
 				'diagram_VIOLENCE', 
-				'diagram_WEALTH', 
 				'diagram_BIBCIT', 
 				'diagram_SOURCEDESC', 
 				'diagram_REVISIONDESC', 
@@ -1503,7 +1524,7 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_CHILDREN', 
 				'annotations_CHILDLESSNESS', 
 				'annotations_DIVORCE', 
-				'annotations_JOB', 
+				'annotations_JOBTITLE', 
 				'annotations_DATERANGE', 
 				'annotations_EMPLOYER', 
 				'annotations_ORGNAME', 
@@ -1534,6 +1555,7 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_LG', 
 				'annotations_HEAD', 
 				'annotations_SEXUALIDENTITY', 
+				'annotations_GENDER', 
 				'annotations_NICKNAME', 
 				'annotations_PSEUDONYM', 
 				'annotations_MARRIED', 
@@ -1563,6 +1585,7 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_RELIGION', 
 				'annotations_SEXUALITY', 
 				'annotations_DEATH', 
+				'annotations_ECONOMICS', 
 				'annotations_EDUCATION', 
 				'annotations_FAMILY', 
 				'annotations_FAMILYMEMBER', 
@@ -1571,7 +1594,7 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_HEALTH', 
 				'annotations_INTIMATERELATIONSHIPS', 
 				'annotations_LEISUREANDSOCIETY', 
-				'annotations_LOCATION', 
+				'annotations_RESIDENCEANDMOBILITY', 
 				'annotations_OCCUPATION', 
 				'annotations_OTHERLIFEEVENT', 
 				'annotations_PERSONNAME', 
@@ -1584,7 +1607,6 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_ENVIRONMENT', 
 				'annotations_FOOD', 
 				'annotations_VIOLENCE', 
-				'annotations_WEALTH', 
 				'annotations_BIBCIT', 
 				'annotations_SOURCEDESC', 
 				'annotations_REVISIONDESC', 
@@ -1623,8 +1645,8 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_TCHARACTERNAME_REG', 
 				'annotations_TGENRE_GENRENAME', 
 				'annotations_TGENRE_PROPOSEDALTERNATIVENAME', 
-				'annotations_PLITERARYSCHOOLS_INVOLVEMENT', 
-				'annotations_PLITERARYSCHOOLS_REG', 
+				'annotations_PLITERARYMOVEMENTS_INVOLVEMENT', 
+				'annotations_PLITERARYMOVEMENTS_REG', 
 				'annotations_TITLE_REG', 
 				'annotations_TITLE_REND', 
 				'annotations_TITLE_STANDARD', 
@@ -1645,16 +1667,19 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_ORGNAME_STANDARD', 
 				'annotations_ORGNAME_URI', 
 				'annotations_SIGNIFICANTACTIVITY_REG', 
-				'annotations_JOB_CURRENTALTERNATIVETERM', 
-				'annotations_JOB_FAMILYBUSINESS', 
-				'annotations_JOB_HISTORICALTERM', 
-				'annotations_JOB_HISTORICALTERMCONTEXTDATE', 
-				'annotations_JOB_REG', 
+				'annotations_JOBTITLE_CURRENTALTERNATIVETERM', 
+				'annotations_JOBTITLE_FAMILYBUSINESS', 
+				'annotations_JOBTITLE_HISTORICALTERM', 
+				'annotations_JOBTITLE_HISTORICALTERMCONTEXTDATE', 
+				'annotations_JOBTITLE_REG', 
 				'annotations_DEGREE_REG', 
 				'annotations_DEGREE_STATUS', 
 				'annotations_LANGUAGE_COMPETENCE', 
 				'annotations_LANGUAGE_REG', 
 				'annotations_LG_TYPE', 
+				'annotations_GENDER_CURRENTALTERNATIVETERM', 
+				'annotations_GENDER_REG', 
+				'annotations_GENDER_SELF-DEFINED', 
 				'annotations_SEXUALIDENTITY_CURRENTALTERNATIVETERM', 
 				'annotations_SEXUALIDENTITY_REG', 
 				'annotations_SEXUALIDENTITY_SELF-DEFINED', 
@@ -1718,7 +1743,8 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_CWRCHEADER_TYPE', 
 				'annotations_STANDARD_WROTEORPUBLISHEDAS', 
 				'annotations_CWRC_SEX', 
-				'annotations_CWRC_PERSON');
+				'annotations_CWRC_PERSON', 
+				'annotations_CWRC_NATIONALITYCATEGORY');
 var attributesBoxes= new Array('attributes_CWRC', 
 				'attributes_CWRCHEADER', 
 				'attributes_BIBCITS', 
@@ -1733,7 +1759,7 @@ var attributesBoxes= new Array('attributes_CWRC',
 				'attributes_CAUSE', 
 				'attributes_QUOTE', 
 				'attributes_CHILDREN', 
-				'attributes_JOB', 
+				'attributes_JOBTITLE', 
 				'attributes_DATERANGE', 
 				'attributes_ORGNAME', 
 				'attributes_POLITICALAFFILIATION', 
@@ -1743,7 +1769,7 @@ var attributesBoxes= new Array('attributes_CWRC',
 				'attributes_SUBJECT', 
 				'attributes_TEXT', 
 				'attributes_TITLE', 
-				'attributes_PLITERARYSCHOOLS', 
+				'attributes_PLITERARYMOVEMENTS', 
 				'attributes_TGENRE', 
 				'attributes_TCHARACTERNAME', 
 				'attributes_TCHARACTERTYPEROLE', 
@@ -1774,12 +1800,14 @@ var attributesBoxes= new Array('attributes_CWRC',
 				'attributes_TSETTINGDATE', 
 				'attributes_TSETTINGPLACE', 
 				'attributes_TTECHNIQUES', 
+				'attributes_TTONESTYLE', 
 				'attributes_XREF', 
 				'attributes_SIGNIFICANTACTIVITY', 
 				'attributes_DEGREE', 
 				'attributes_LANGUAGE', 
 				'attributes_LG', 
 				'attributes_SEXUALIDENTITY', 
+				'attributes_GENDER', 
 				'attributes_NICKNAME', 
 				'attributes_PSEUDONYM', 
 				'attributes_MARRIED', 
@@ -1801,7 +1829,7 @@ var attributesBoxes= new Array('attributes_CWRC',
 				'attributes_FAMILYMEMBER', 
 				'attributes_HEALTH', 
 				'attributes_INTIMATERELATIONSHIPS', 
-				'attributes_LOCATION', 
+				'attributes_RESIDENCEANDMOBILITY', 
 				'attributes_PRODUCTION', 
 				'attributes_TEXTSCOPE', 
 				'attributes_BIBCIT', 
@@ -1833,7 +1861,7 @@ var modelBoxes= new Array('model_CWRC',
 				'model_CHILDREN', 
 				'model_CHILDLESSNESS', 
 				'model_DIVORCE', 
-				'model_JOB', 
+				'model_JOBTITLE', 
 				'model_DATERANGE', 
 				'model_EMPLOYER', 
 				'model_ORGNAME', 
@@ -1844,7 +1872,7 @@ var modelBoxes= new Array('model_CWRC',
 				'model_SUBJECT', 
 				'model_TEXT', 
 				'model_TITLE', 
-				'model_PLITERARYSCHOOLS', 
+				'model_PLITERARYMOVEMENTS', 
 				'model_TGENRE', 
 				'model_TCHARACTERNAME', 
 				'model_TCHARACTERTYPEROLE', 
@@ -1949,6 +1977,7 @@ var modelBoxes= new Array('model_CWRC',
 				'model_RELIGION', 
 				'model_SEXUALITY', 
 				'model_DEATH', 
+				'model_ECONOMICS', 
 				'model_EDUCATION', 
 				'model_FAMILY', 
 				'model_FAMILYMEMBER', 
@@ -1957,7 +1986,7 @@ var modelBoxes= new Array('model_CWRC',
 				'model_HEALTH', 
 				'model_INTIMATERELATIONSHIPS', 
 				'model_LEISUREANDSOCIETY', 
-				'model_LOCATION', 
+				'model_RESIDENCEANDMOBILITY', 
 				'model_OCCUPATION', 
 				'model_OTHERLIFEEVENT', 
 				'model_PERSONNAME', 
@@ -1968,7 +1997,6 @@ var modelBoxes= new Array('model_CWRC',
 				'model_TEXTSCOPE', 
 				'model_TEXTUALFEATURES', 
 				'model_VIOLENCE', 
-				'model_WEALTH', 
 				'model_BIBCIT', 
 				'model_REVISIONDESC', 
 				'model_RESPONSIBILITY', 
@@ -2276,6 +2304,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#DIVORCE" target="_self" title="No namespace">DIVORCE</a></b></div>
                                                 <div><b><a href="index.html#DOCAUTHOR" target="_self" title="No namespace">DOCAUTHOR</a></b></div>
                                                 <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
+                                                <div><b><a href="index.html#ECONOMICS" target="_self" title="No namespace">ECONOMICS</a></b></div>
                                                 <div><b><a href="index.html#EDUCATION" target="_self" title="No namespace">EDUCATION</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                                 <div><b><a href="index.html#EMPLOYER" target="_self" title="No namespace">EMPLOYER</a></b></div>
@@ -2289,6 +2318,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#FOOD" target="_self" title="No namespace">FOOD</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#FRIENDSASSOCIATES" target="_self" title="No namespace">FRIENDSASSOCIATES</a></b></div>
+                                                <div><b><a href="index.html#GENDER" target="_self" title="No namespace">GENDER</a></b></div>
                                                 <div><b><a href="index.html#GENERICRANGE" target="_self" title="No namespace">GENERICRANGE</a></b></div>
                                                 <div><b><a href="index.html#GEOGHERITAGE" target="_self" title="No namespace">GEOGHERITAGE</a></b></div>
                                                 <div><b><a href="index.html#GIVEN" target="_self" title="No namespace">GIVEN</a></b></div>
@@ -2299,7 +2329,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#INSTRUCTOR" target="_self" title="No namespace">INSTRUCTOR</a></b></div>
                                                 <div><b><a href="index.html#INTIMATERELATIONSHIPS" target="_self" title="No namespace">INTIMATERELATIONSHIPS</a></b></div>
                                                 <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
-                                                <div><b><a href="index.html#JOB" target="_self" title="No namespace">JOB</a></b></div>
+                                                <div><b><a href="index.html#JOBTITLE" target="_self" title="No namespace">JOBTITLE</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                                 <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
                                                 <div><b><a href="index.html#LANGUAGE" target="_self" title="No namespace">LANGUAGE</a></b></div>
@@ -2307,7 +2337,6 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#LEISUREANDSOCIETY" target="_self" title="No namespace">LEISUREANDSOCIETY</a></b></div>
                                                 <div><b><a href="index.html#LG" target="_self" title="No namespace">LG</a></b></div>
                                                 <div><b><a href="index.html#LIVESWITH" target="_self" title="No namespace">LIVESWITH</a></b></div>
-                                                <div><b><a href="index.html#LOCATION" target="_self" title="No namespace">LOCATION</a></b></div>
                                                 <div><b><a href="index.html#MARRIAGE" target="_self" title="No namespace">MARRIAGE</a></b></div>
                                                 <div><b><a href="index.html#MARRIED" target="_self" title="No namespace">MARRIED</a></b></div>
                                                 <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
@@ -2335,7 +2364,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#PINFLUENCESHER" target="_self" title="No namespace">PINFLUENCESHER</a></b></div>
                                                 <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
                                                 <div><b><a href="index.html#PLASTLITERARYACTIVITY" target="_self" title="No namespace">PLASTLITERARYACTIVITY</a></b></div>
-                                                <div><b><a href="index.html#PLITERARYSCHOOLS" target="_self" title="No namespace">PLITERARYSCHOOLS</a></b></div>
+                                                <div><b><a href="index.html#PLITERARYMOVEMENTS" target="_self" title="No namespace">PLITERARYMOVEMENTS</a></b></div>
                                                 <div><b><a href="index.html#PMANUSCRIPTHISTORY" target="_self" title="No namespace">PMANUSCRIPTHISTORY</a></b></div>
                                                 <div><b><a href="index.html#PMATERIALCONDITIONS" target="_self" title="No namespace">PMATERIALCONDITIONS</a></b></div>
                                                 <div><b><a href="index.html#PMODEOFPUBLICATION" target="_self" title="No namespace">PMODEOFPUBLICATION</a></b></div>
@@ -2367,6 +2396,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#RELIGIOUSNAME" target="_self" title="No namespace">RELIGIOUSNAME</a></b></div>
                                                 <div><b><a href="index.html#REMUNERATION" target="_self" title="No namespace">REMUNERATION</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
+                                                <div><b><a href="index.html#RESIDENCEANDMOBILITY" target="_self" title="No namespace">RESIDENCEANDMOBILITY</a></b></div>
                                                 <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
                                                 <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
                                                 <div><b><a href="index.html#RFICTIONALIZATION" target="_self" title="No namespace">RFICTIONALIZATION</a></b></div>
@@ -2421,7 +2451,6 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#TTONESTYLE" target="_self" title="No namespace">TTONESTYLE</a></b></div>
                                                 <div><b><a href="index.html#TVOICENARRATION" target="_self" title="No namespace">TVOICENARRATION</a></b></div>
                                                 <div><b><a href="index.html#VIOLENCE" target="_self" title="No namespace">VIOLENCE</a></b></div>
-                                                <div><b><a href="index.html#WEALTH" target="_self" title="No namespace">WEALTH</a></b></div>
                                                 <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
                                                 <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
                                              </div>
@@ -2537,6 +2566,7 @@ var modelBoxes= new Array('model_CWRC',
                                           <div><b><a href="index.html#DIVORCE" target="_self" title="No namespace">DIVORCE</a></b></div>
                                           <div><b><a href="index.html#DOCAUTHOR" target="_self" title="No namespace">DOCAUTHOR</a></b></div>
                                           <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
+                                          <div><b><a href="index.html#ECONOMICS" target="_self" title="No namespace">ECONOMICS</a></b></div>
                                           <div><b><a href="index.html#EDUCATION" target="_self" title="No namespace">EDUCATION</a></b></div>
                                           <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                           <div><b><a href="index.html#EMPLOYER" target="_self" title="No namespace">EMPLOYER</a></b></div>
@@ -2550,6 +2580,7 @@ var modelBoxes= new Array('model_CWRC',
                                           <div><b><a href="index.html#FOOD" target="_self" title="No namespace">FOOD</a></b></div>
                                           <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                           <div><b><a href="index.html#FRIENDSASSOCIATES" target="_self" title="No namespace">FRIENDSASSOCIATES</a></b></div>
+                                          <div><b><a href="index.html#GENDER" target="_self" title="No namespace">GENDER</a></b></div>
                                           <div><b><a href="index.html#GENERICRANGE" target="_self" title="No namespace">GENERICRANGE</a></b></div>
                                           <div><b><a href="index.html#GEOGHERITAGE" target="_self" title="No namespace">GEOGHERITAGE</a></b></div>
                                           <div><b><a href="index.html#GIVEN" target="_self" title="No namespace">GIVEN</a></b></div>
@@ -2560,7 +2591,7 @@ var modelBoxes= new Array('model_CWRC',
                                           <div><b><a href="index.html#INSTRUCTOR" target="_self" title="No namespace">INSTRUCTOR</a></b></div>
                                           <div><b><a href="index.html#INTIMATERELATIONSHIPS" target="_self" title="No namespace">INTIMATERELATIONSHIPS</a></b></div>
                                           <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
-                                          <div><b><a href="index.html#JOB" target="_self" title="No namespace">JOB</a></b></div>
+                                          <div><b><a href="index.html#JOBTITLE" target="_self" title="No namespace">JOBTITLE</a></b></div>
                                           <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                           <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
                                           <div><b><a href="index.html#LANGUAGE" target="_self" title="No namespace">LANGUAGE</a></b></div>
@@ -2568,7 +2599,6 @@ var modelBoxes= new Array('model_CWRC',
                                           <div><b><a href="index.html#LEISUREANDSOCIETY" target="_self" title="No namespace">LEISUREANDSOCIETY</a></b></div>
                                           <div><b><a href="index.html#LG" target="_self" title="No namespace">LG</a></b></div>
                                           <div><b><a href="index.html#LIVESWITH" target="_self" title="No namespace">LIVESWITH</a></b></div>
-                                          <div><b><a href="index.html#LOCATION" target="_self" title="No namespace">LOCATION</a></b></div>
                                           <div><b><a href="index.html#MARRIAGE" target="_self" title="No namespace">MARRIAGE</a></b></div>
                                           <div><b><a href="index.html#MARRIED" target="_self" title="No namespace">MARRIED</a></b></div>
                                           <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
@@ -2596,7 +2626,7 @@ var modelBoxes= new Array('model_CWRC',
                                           <div><b><a href="index.html#PINFLUENCESHER" target="_self" title="No namespace">PINFLUENCESHER</a></b></div>
                                           <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
                                           <div><b><a href="index.html#PLASTLITERARYACTIVITY" target="_self" title="No namespace">PLASTLITERARYACTIVITY</a></b></div>
-                                          <div><b><a href="index.html#PLITERARYSCHOOLS" target="_self" title="No namespace">PLITERARYSCHOOLS</a></b></div>
+                                          <div><b><a href="index.html#PLITERARYMOVEMENTS" target="_self" title="No namespace">PLITERARYMOVEMENTS</a></b></div>
                                           <div><b><a href="index.html#PMANUSCRIPTHISTORY" target="_self" title="No namespace">PMANUSCRIPTHISTORY</a></b></div>
                                           <div><b><a href="index.html#PMATERIALCONDITIONS" target="_self" title="No namespace">PMATERIALCONDITIONS</a></b></div>
                                           <div><b><a href="index.html#PMODEOFPUBLICATION" target="_self" title="No namespace">PMODEOFPUBLICATION</a></b></div>
@@ -2628,6 +2658,7 @@ var modelBoxes= new Array('model_CWRC',
                                           <div><b><a href="index.html#RELIGIOUSNAME" target="_self" title="No namespace">RELIGIOUSNAME</a></b></div>
                                           <div><b><a href="index.html#REMUNERATION" target="_self" title="No namespace">REMUNERATION</a></b></div>
                                           <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
+                                          <div><b><a href="index.html#RESIDENCEANDMOBILITY" target="_self" title="No namespace">RESIDENCEANDMOBILITY</a></b></div>
                                           <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
                                           <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
                                           <div><b><a href="index.html#RFICTIONALIZATION" target="_self" title="No namespace">RFICTIONALIZATION</a></b></div>
@@ -2682,7 +2713,6 @@ var modelBoxes= new Array('model_CWRC',
                                           <div><b><a href="index.html#TTONESTYLE" target="_self" title="No namespace">TTONESTYLE</a></b></div>
                                           <div><b><a href="index.html#TVOICENARRATION" target="_self" title="No namespace">TVOICENARRATION</a></b></div>
                                           <div><b><a href="index.html#VIOLENCE" target="_self" title="No namespace">VIOLENCE</a></b></div>
-                                          <div><b><a href="index.html#WEALTH" target="_self" title="No namespace">WEALTH</a></b></div>
                                           <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
                                           <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
                                        </div>
@@ -2799,6 +2829,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#DIVORCE" target="_self" title="No namespace">DIVORCE</a></b></div>
                                                 <div><b><a href="index.html#DOCAUTHOR" target="_self" title="No namespace">DOCAUTHOR</a></b></div>
                                                 <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
+                                                <div><b><a href="index.html#ECONOMICS" target="_self" title="No namespace">ECONOMICS</a></b></div>
                                                 <div><b><a href="index.html#EDUCATION" target="_self" title="No namespace">EDUCATION</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                                 <div><b><a href="index.html#EMPLOYER" target="_self" title="No namespace">EMPLOYER</a></b></div>
@@ -2812,6 +2843,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#FOOD" target="_self" title="No namespace">FOOD</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#FRIENDSASSOCIATES" target="_self" title="No namespace">FRIENDSASSOCIATES</a></b></div>
+                                                <div><b><a href="index.html#GENDER" target="_self" title="No namespace">GENDER</a></b></div>
                                                 <div><b><a href="index.html#GENERICRANGE" target="_self" title="No namespace">GENERICRANGE</a></b></div>
                                                 <div><b><a href="index.html#GEOGHERITAGE" target="_self" title="No namespace">GEOGHERITAGE</a></b></div>
                                                 <div><b><a href="index.html#GIVEN" target="_self" title="No namespace">GIVEN</a></b></div>
@@ -2822,7 +2854,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#INSTRUCTOR" target="_self" title="No namespace">INSTRUCTOR</a></b></div>
                                                 <div><b><a href="index.html#INTIMATERELATIONSHIPS" target="_self" title="No namespace">INTIMATERELATIONSHIPS</a></b></div>
                                                 <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
-                                                <div><b><a href="index.html#JOB" target="_self" title="No namespace">JOB</a></b></div>
+                                                <div><b><a href="index.html#JOBTITLE" target="_self" title="No namespace">JOBTITLE</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                                 <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
                                                 <div><b><a href="index.html#LANGUAGE" target="_self" title="No namespace">LANGUAGE</a></b></div>
@@ -2830,7 +2862,6 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#LEISUREANDSOCIETY" target="_self" title="No namespace">LEISUREANDSOCIETY</a></b></div>
                                                 <div><b><a href="index.html#LG" target="_self" title="No namespace">LG</a></b></div>
                                                 <div><b><a href="index.html#LIVESWITH" target="_self" title="No namespace">LIVESWITH</a></b></div>
-                                                <div><b><a href="index.html#LOCATION" target="_self" title="No namespace">LOCATION</a></b></div>
                                                 <div><b><a href="index.html#MARRIAGE" target="_self" title="No namespace">MARRIAGE</a></b></div>
                                                 <div><b><a href="index.html#MARRIED" target="_self" title="No namespace">MARRIED</a></b></div>
                                                 <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
@@ -2858,7 +2889,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#PINFLUENCESHER" target="_self" title="No namespace">PINFLUENCESHER</a></b></div>
                                                 <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
                                                 <div><b><a href="index.html#PLASTLITERARYACTIVITY" target="_self" title="No namespace">PLASTLITERARYACTIVITY</a></b></div>
-                                                <div><b><a href="index.html#PLITERARYSCHOOLS" target="_self" title="No namespace">PLITERARYSCHOOLS</a></b></div>
+                                                <div><b><a href="index.html#PLITERARYMOVEMENTS" target="_self" title="No namespace">PLITERARYMOVEMENTS</a></b></div>
                                                 <div><b><a href="index.html#PMANUSCRIPTHISTORY" target="_self" title="No namespace">PMANUSCRIPTHISTORY</a></b></div>
                                                 <div><b><a href="index.html#PMATERIALCONDITIONS" target="_self" title="No namespace">PMATERIALCONDITIONS</a></b></div>
                                                 <div><b><a href="index.html#PMODEOFPUBLICATION" target="_self" title="No namespace">PMODEOFPUBLICATION</a></b></div>
@@ -2890,6 +2921,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#RELIGIOUSNAME" target="_self" title="No namespace">RELIGIOUSNAME</a></b></div>
                                                 <div><b><a href="index.html#REMUNERATION" target="_self" title="No namespace">REMUNERATION</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
+                                                <div><b><a href="index.html#RESIDENCEANDMOBILITY" target="_self" title="No namespace">RESIDENCEANDMOBILITY</a></b></div>
                                                 <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
                                                 <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
                                                 <div><b><a href="index.html#RFICTIONALIZATION" target="_self" title="No namespace">RFICTIONALIZATION</a></b></div>
@@ -2944,7 +2976,6 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#TTONESTYLE" target="_self" title="No namespace">TTONESTYLE</a></b></div>
                                                 <div><b><a href="index.html#TVOICENARRATION" target="_self" title="No namespace">TVOICENARRATION</a></b></div>
                                                 <div><b><a href="index.html#VIOLENCE" target="_self" title="No namespace">VIOLENCE</a></b></div>
-                                                <div><b><a href="index.html#WEALTH" target="_self" title="No namespace">WEALTH</a></b></div>
                                                 <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
                                                 <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
                                              </div>

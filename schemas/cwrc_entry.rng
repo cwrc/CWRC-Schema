@@ -28,12 +28,23 @@
 <!-- 
 *** Revisions ***
 * MRB: June 2014: Addressed GitHub issues associated with the CWRC entry schema:
+  - Renamed the element AWARD to AWARDSNONLITERARY, as well as associated REFs.
+  - Renamed the element JOB to JOBTITLE, as well as associated REFs.
+  - Renamed the element LOCATION to RESIDENCEANDMOBILITY, as well as associated REFs.
+  - Renamed the element MEMBER to FAMILYMEMBER, as well as associated REFs.
+  - Renamed the element PLITERARYSCHOOLS to PLITERARYMOVEMENTS, as well as associated REFs.
+  - Renamed the element RRECOGNITIONS to RRECOGNITIONSANDAWARDS, as well as associated REFs.
+  - Renamed the element WEALTH to ECONOMICS, as well as associated REFs.
+  - Added new element called GENDER, which is a child element of CULTURALFORMATION; GENDER has the same enumerated list of values as the attribute SEX, with
+    the addition of UNGENDERED and UNKNOWN; used the documentation from SEX for now, but with prefatory changes outlined by Susan.
+  - Added two new attribute values to SEX, TRANSGENDERED MALE-TO-FEMALE and TRANSGENDERED FEMALE-TO-MALE.
   - Added new elements of ANIMALS, ENVIRONMENT, and FOOD to the TEXTUALFEATURES element.
-  - Added ROLE element to the elements P and CHRONPROSE.
+  - Added new attribute of ROLE to the CWRC element; values come from the MARC roles supplemented with CWRC category values.
+  - Added new atttribute of NATIONALITYCATEGORY to the CWRC element; has values of BRITISH, CANADIAN, and INTERNATIONAL; can have multiple values.
   - Added new attribute of MEDIATYPE to PRODUCTION element.
   - Added new attribute of STATUS to the element DEGREE.
   - Added RESEARCHNOTE to various elements.
-  - Changed attribute values 
+  - Renamed and reworked RESPONSIBILITY element: renamed to WORKACTIVITY; added attributes with enumerated lists of WORKSTATUS, WORKCATEGORY, and WORKSTAMP.
 * MRB: June 2014: Major architectural redesign, e.g.,
   - Renamed DIV0 to ENTRY.
   - Deleted DIV3.
@@ -69,7 +80,7 @@
                 <optional>
                     <attribute name="SEX">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sex is an attribute applied to the CWRC
-                            document as a whole and specifies whether the individual who is the subject of the document is female, male, transgendered,
+                            document as a whole, and specifies whether the individual who is the subject of the document is female, male, transgendered,
                             transgendered male-to-female, transgendered female-to-male, or undefined.</a:documentation>
                         <choice>
                             <value>FEMALE</value>
@@ -84,15 +95,32 @@
                 </optional>
                 <optional>
                     <attribute name="PERSON">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Person provides information about an identifiable
-                            individual, for example a participant in a language interaction, or a person referred to in a historical
-                            source.</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Person is an attribute applied to the CWRC document as a
+                            whole, and specifies information about the type of person who is the subject of the document; for example, if they are a writer or
+                            an historical figure.</a:documentation>
                         <choice>
                             <value>HISTORICALFIGURE</value>
                             <value>WRITER</value>
                             <value>BRWWRITER</value>
                             <value>IBRWRITER</value>
                         </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="NATIONALITYCATEGORY">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">NationalityCategory is an attribute applied to the CWRC
+                            document as a whole, and specifies nationality information about the individual who is the subject of the document; for example,
+                            if she or he is British or Canadian.  Note: more than one value can be selected for this attribute -- each attribute value should
+                            be separated by a blank space.</a:documentation>
+                        <list>
+                            <oneOrMore>
+                                <choice>
+                                    <value>BRITISH</value>
+                                    <value>CANADIAN</value>
+                                    <value>INTERNATIONAL</value>
+                                </choice>
+                            </oneOrMore>
+                        </list>
                     </attribute>
                 </optional>
                 <ref name="CWRCHEADER"/>
@@ -271,6 +299,9 @@
                     <ref name="DEATH"/>
                 </zeroOrMore>
                 <zeroOrMore>
+                    <ref name="ECONOMICS"/>
+                </zeroOrMore>
+                <zeroOrMore>
                     <ref name="EDUCATION"/>
                 </zeroOrMore>
                 <zeroOrMore>
@@ -289,7 +320,7 @@
                     <ref name="LEISUREANDSOCIETY"/>
                 </zeroOrMore>
                 <zeroOrMore>
-                    <ref name="LOCATION"/>
+                    <ref name="RESIDENCEANDMOBILITY"/>
                 </zeroOrMore>
                 <zeroOrMore>
                     <ref name="OCCUPATION"/>
@@ -305,9 +336,6 @@
                 </zeroOrMore>
                 <zeroOrMore>
                     <ref name="VIOLENCE"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="WEALTH"/>
                 </zeroOrMore>
                 <zeroOrMore>
                     <ref name="PRODUCTION"/>
@@ -536,6 +564,29 @@
             elements defined as integral to mapping a woman&apos;s life. It captures information concerning the date, place,
             and cause of a person&apos;s death. Death dates should be entered in chronology form and will be extracted from
             individual biography documents to be placed within other general chronologies.</a:documentation>
+            <oneOrMore>
+                <choice>
+                    <ref name="HEADING"/>
+                    <ref name="P"/>
+                    <ref name="DATASTRUCT"/>
+                    <ref name="CHRONSTRUCT"/>
+                    <ref name="BIBCITS"/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="SCHOLARNOTE"/>
+                    <ref name="RESEARCHNOTE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="ECONOMICS">
+        <element name="ECONOMICS">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Economics is one of the 16 major biography
+                elements defined as integral to mapping a woman&apos;s life. This element captures information about a person's
+                economic standing that cannot be adequately conveyed using the class and occupation elements. We are particularly
+                interested in whether her financial status provided the material conditions necessary for writing and therefore
+                emphasize inclusion of her financial status. Information concerning inheritance, pensions and personal financial
+                disasters should be captured here.</a:documentation>
             <oneOrMore>
                 <choice>
                     <ref name="HEADING"/>
@@ -875,9 +926,9 @@
         </element>
     </define>
 
-    <define name="LOCATION">
-        <element name="LOCATION">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Location is one of the 16 major
+    <define name="RESIDENCEANDMOBILITY">
+        <element name="RESIDENCEANDMOBILITY">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ResidenceAndMobility is one of the 16 major
             biography elements defined as integral to mapping a woman&apos;s life. One of the strengths of our electronic
             literary history will be its ability to make connections between people and places hitherto unknown. Researchers
             will be able to use our resource to discover who was living in a particular place at the same time or to make
@@ -1023,29 +1074,6 @@
         </element>
     </define>
 
-    <define name="WEALTH">
-        <element name="WEALTH">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Wealth is one of the 16 major biography
-            elements defined as integral to mapping a woman&apos;s life. This element captures information about a person's
-            economic standing that cannot be adequately conveyed using the class and occupation elements. We are particularly
-            interested in whether her financial status provided the material conditions necessary for writing and therefore
-            emphasize inclusion of her financial status. Information concerning inheritance, pensions and personal financial
-            disasters should be captured here.</a:documentation>
-            <oneOrMore>
-                <choice>
-                    <ref name="HEADING"/>
-                    <ref name="P"/>
-                    <ref name="DATASTRUCT"/>
-                    <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
-                    <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
-                    <ref name="RESEARCHNOTE"/>
-                </choice>
-            </oneOrMore>
-        </element>
-    </define>
-
     <define name="TEXTSCOPE">
         <element name="TEXTSCOPE">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Textscope is the container element for the three major
@@ -1121,7 +1149,7 @@
                     <ref name="PFIRSTLITERARYACTIVITY"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -1201,7 +1229,7 @@
                     <ref name="PFIRSTLITERARYACTIVITY"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -1280,7 +1308,7 @@
                     <ref name="PFIRSTLITERARYACTIVITY"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -1470,6 +1498,7 @@
                     <ref name="DEGREE"/>
                     <ref name="DENOMINATION"/>
                     <ref name="DIVORCE"/>
+                    <ref name="ECONOMICS"/>
                     <ref name="EDUCATION"/>
                     <ref name="EMPH"/>
                     <ref name="EMPLOYER"/>
@@ -1479,19 +1508,20 @@
                     <ref name="FOREIGN"/>
                     <ref name="FRIENDSASSOCIATES"/>
                     <ref name="GENERICRANGE"/>
+                    <ref name="GENDER"/>
                     <ref name="GEOGHERITAGE"/>
                     <ref name="HEADING"/>
                     <ref name="HEALTH"/>
                     <ref name="INDEXED"/>
                     <ref name="INSTRUCTOR"/>
                     <ref name="INTIMATERELATIONSHIPS"/>
-                    <ref name="JOB"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="L"/>
                     <ref name="LANGUAGE"/>
                     <ref name="LEISUREANDSOCIETY"/>
                     <ref name="LIVESWITH"/>
-                    <ref name="LOCATION"/>
+                    <ref name="RESIDENCEANDMOBILITY"/>
                     <ref name="NAME"/>
                     <ref name="NATIONALHERITAGE"/>
                     <ref name="NATIONALITY"/>
@@ -1515,7 +1545,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -1585,7 +1615,6 @@
                     <ref name="TTONESTYLE"/>
                     <ref name="TVOICENARRATION"/>
                     <ref name="VIOLENCE"/>
-                    <ref name="WEALTH"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1672,7 +1701,8 @@
                 <attribute name="CHRONCOLUMN">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given
                         chronology item as belonging to a particular type of event: bibliographical, biographical, cultural, literary, political, and
-                        social.</a:documentation>
+                        social.  Note: more than one value can be selected for this attribute -- each attribute value should be separated by a blank
+                        space.</a:documentation>
                     <list>
                         <oneOrMore>
                             <choice>
@@ -1762,8 +1792,9 @@
                                 <ref name="EMPH"/>
                                 <ref name="EMPLOYER"/>
                                 <ref name="FOREIGN"/>
+                                <ref name="GENDER"/>
                                 <ref name="INSTRUCTOR"/>
-                                <ref name="JOB"/>
+                                <ref name="JOBTITLE"/>
                                 <ref name="KEYWORDCLASS"/>
                                 <ref name="LIVESWITH"/>
                                 <ref name="NAME"/>
@@ -1784,7 +1815,7 @@
                                 <ref name="PINFLUENCESHER"/>
                                 <ref name="PLACE"/>
                                 <ref name="PLASTLITERARYACTIVITY"/>
-                                <ref name="PLITERARYSCHOOLS"/>
+                                <ref name="PLITERARYMOVEMENTS"/>
                                 <ref name="PMANUSCRIPTHISTORY"/>
                                 <ref name="PMATERIALCONDITIONS"/>
                                 <ref name="PMODEOFPUBLICATION"/>
@@ -1992,7 +2023,7 @@
                     <ref name="DATERANGE"/>
                     <ref name="EMPLOYER"/>
                     <ref name="FOREIGN"/>
-                    <ref name="JOB"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
@@ -2004,9 +2035,9 @@
         </element>
     </define>
 
-    <define name="JOB">
-        <element name="JOB">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Job is meant to capture the types of employment done by women
+    <define name="JOBTITLE">
+        <element name="JOBTITLE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">JobTitle is meant to capture the types of employment done by women
                 writers and their families. We are interested in comparing the kinds of jobs women did in different historical periods and the kinds of
                 jobs family members did. We want to facilitate research, for example, on the influence of living in a parsonage on women writers and
                 would therefore like to track women who had fathers and mothers who were preachers.</a:documentation>
@@ -2082,7 +2113,7 @@
                     <text/>
                     <ref name="BIBCITS"/>
                     <ref name="DATE"/>
-                    <ref name="JOB"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
@@ -2235,7 +2266,7 @@
                     <ref name="CHILDLESSNESS"/>
                     <ref name="DATE"/>
                     <ref name="DATERANGE"/>
-                    <ref name="JOB"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
@@ -2262,7 +2293,7 @@
                     <text/>
                     <ref name="BIBCITS"/>
                     <ref name="DATE"/>
-                    <ref name="JOB"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
@@ -2291,7 +2322,7 @@
                     <ref name="DATERANGE"/>
                     <ref name="DIVORCE"/>
                     <ref name="FOREIGN"/>
-                    <ref name="JOB"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
@@ -2451,13 +2482,14 @@
                     <ref name="EMPH"/>
                     <ref name="EMPLOYER"/>
                     <ref name="FOREIGN"/>
-                    <ref name="JOB"/>
+                    <ref name="GENDER"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="NAME"/>
                     <ref name="NATIONALITY"/>
                     <ref name="NICKNAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="POLITICALAFFILIATION"/>
                     <ref name="PSEUDONYM"/>
                     <ref name="PTYPEOFPRESS"/>
@@ -2525,11 +2557,11 @@
                     <ref name="EMPH"/>
                     <ref name="EMPLOYER"/>
                     <ref name="FOREIGN"/>
-                    <ref name="JOB"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMOTIVES"/>
                     <ref name="POLITICALAFFILIATION"/>
@@ -2602,7 +2634,7 @@
                     <ref name="FOREIGN"/>
                     <ref name="GEOGHERITAGE"/>
                     <ref name="INSTRUCTOR"/>
-                    <ref name="JOB"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="L"/>
                     <ref name="LANGUAGE"/>
@@ -2619,7 +2651,7 @@
                     <ref name="PEARNINGS"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -2887,12 +2919,68 @@
                     <ref name="BIBCITS"/>
                     <ref name="DENOMINATION"/>
                     <ref name="FOREIGN"/>
+                    <ref name="GENDER"/>
                     <ref name="NAME"/>
                     <ref name="QUOTE"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="SOCALLED"/>
                 </choice>
             </oneOrMore>
+        </element>
+    </define>
+
+    <define name="GENDER">
+        <element name="GENDER">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element is designed to capture the gender of the subject of an
+                entry. Gender is a historically constructed and linguistically complex category that can shift over the course of a person's lifetime, in
+                which case multiple values can be applied to this element. The values associated with this element are meant to capture the most common forms
+                of gender identity; other terms may be provided in the prose content of the element.  The values are the following: female, male, 
+                transgendered, transgendered male-to-female, transgendered female-to-male, undefined, ungendered, or unknown.</a:documentation>
+            <optional>
+                <attribute name="CURRENTALTERNATIVETERM">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute allows you to capture changes in
+                        terminology over time. The older name in your prose may not be familiar to your reader nor helpful for indexing purposes and
+                        therefore needs explanation.</a:documentation>
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                        regularization) contains a reading which has been regularized or normalized in some
+                        sense.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="SELF-DEFINED" a:defaultValue="SELFUNKNOWN">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Self-defined is an attribute attached to all identity
+                        categories within biography. Its purpose is to distinguish between people who place themselves within an identity category (i.e.,
+                        &quot;Jeannette Winterson identifies as lesbian&quot;) and those whom we place in that category though they themselves did not
+                        (i.e., &quot;While she denied being a lesbian, she maintained relationships with women throughout her life&quot;). This attribute
+                        acknowledges the importance of personal, political and historical placements of one&apos;s own subject position; it assumes that
+                        identities are not simply labels we assign to other people but shifting categories which we both place ourselves within, and, in
+                        which history places us.</a:documentation>
+                    <choice>
+                        <value>SELFYES</value>
+                        <value>SELFNO</value>
+                        <value>SELFUNKNOWN</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <list>
+                <oneOrMore>
+                    <choice>
+                        <value>FEMALE</value>
+                        <value>MALE</value>
+                        <value>TRANSGENDERED</value>
+                        <value>TRANSGENDERED MALE-TO-FEMALE</value>
+                        <value>TRANSGENDERED FEMALE-TO-MALE</value>
+                        <value>UNDEFINED</value>
+                        <value>UNGENDERED</value>
+                        <value>UNKNOWN</value>
+                    </choice>
+                </oneOrMore>
+            </list>
         </element>
     </define>
 
@@ -3356,7 +3444,7 @@
                     <ref name="ORGNAME"/>
                     <ref name="PADVERTISING"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="QUOTE"/>
                     <ref name="RBESTKNOWNWORK"/>
                     <ref name="RESEARCHNOTE"/>
@@ -3561,7 +3649,7 @@
                     <ref name="PDEDICATION"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMOTIVES"/>
                     <ref name="PPERFORMANCE"/>
@@ -4137,7 +4225,7 @@
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="QUOTE"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="SIC"/>
@@ -4187,7 +4275,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMODEOFPUBLICATION"/>
                     <ref name="PMOTIVES"/>
@@ -4404,7 +4492,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -4718,7 +4806,7 @@
                     <ref name="PDEDICATION"/>
                     <ref name="PFIRSTLITERARYACTIVITY"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -4841,7 +4929,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -5017,7 +5105,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -5198,7 +5286,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -5279,7 +5367,7 @@
                     <ref name="PCIRCULATION"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMOTIVES"/>
@@ -5403,7 +5491,7 @@
                     <ref name="PFIRSTLITERARYACTIVITY"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
                     <ref name="PMOTIVES"/>
@@ -5602,7 +5690,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -5765,7 +5853,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -5887,7 +5975,7 @@
                     <ref name="PFIRSTLITERARYACTIVITY"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
                     <ref name="PNONBOOKMEDIA"/>
@@ -6012,7 +6100,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
                     <ref name="PMOTIVES"/>
@@ -6152,7 +6240,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -6370,7 +6458,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -6459,7 +6547,7 @@
                     <ref name="DATERANGE"/>
                     <ref name="EMPLOYER"/>
                     <ref name="FOREIGN"/>
-                    <ref name="JOB"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
@@ -6522,9 +6610,6 @@
                         regularization) contains a reading which has been regularized or normalized in some
                         sense.</a:documentation>
                 </attribute>
-                <optional>
-                    <ref name="RESEARCHNOTE"/>
-                </optional>
             </optional>
             <oneOrMore>
                 <choice>
@@ -6536,6 +6621,7 @@
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
                     <ref name="QUOTE"/>
+                    <ref name="RESEARCHNOTE"/>
                     <ref name="RRECOGNITIONSANDAWARDS"/>
                     <ref name="RRECOGNITIONVALUE"/>
                     <ref name="SOCALLED"/>
@@ -6572,7 +6658,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMODEOFPUBLICATION"/>
                     <ref name="PMOTIVES"/>
@@ -6619,6 +6705,9 @@
 
     <define name="TTONESTYLE">
         <element name="TTONESTYLE">
+            <optional>
+                <attribute name="EXPERIMENTAL"/>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -6637,7 +6726,7 @@
                     <ref name="PFIRSTLITERARYACTIVITY"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMOTIVES"/>
@@ -6698,7 +6787,7 @@
                     <ref name="PEDITIONS"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PNONBOOKMEDIA"/>
                     <ref name="PPERFORMANCE"/>
@@ -6829,7 +6918,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMODEOFPUBLICATION"/>
                     <ref name="PMOTIVES"/>
                     <ref name="PPERFORMANCE"/>
@@ -6991,7 +7080,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -7059,7 +7148,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -7121,7 +7210,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMOTIVES"/>
@@ -7207,7 +7296,7 @@
                     <ref name="DATERANGE"/>
                     <ref name="EMPH"/>
                     <ref name="FOREIGN"/>
-                    <ref name="JOB"/>
+                    <ref name="JOBTITLE"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
@@ -7224,7 +7313,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -7295,7 +7384,7 @@
                     <ref name="PFIRSTLITERARYACTIVITY"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMOTIVES"/>
@@ -7502,7 +7591,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
@@ -7553,6 +7642,9 @@
                 <attribute name="CENSORSHIP">
                     <value>CENSORSHIPYES</value>
                 </attribute>
+            </optional>
+            <optional>
+                <attribute name="CONTROVERSY"/>
             </optional>
             <oneOrMore>
                 <choice>
@@ -7612,12 +7704,12 @@
         </element>
     </define>
 
-    <define name="PLITERARYSCHOOLS">
-        <element name="PLITERARYSCHOOLS">
+    <define name="PLITERARYMOVEMENTS">
+        <element name="PLITERARYMOVEMENTS">
             <optional>
                 <attribute name="INVOLVEMENT" a:defaultValue="INVOLVEMENTYES">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute attached to
-                        politicalAffiliation in Biography and PLiterarySchools in Writing, in conjunction with its sibling attributes, designates the
+                        politicalAffiliation in Biography and PLiteraryMovements in Writing, in conjunction with its sibling attributes, designates the
                         degree of political engagement with the political affiliation or literary school specified. Involvement denotes an intermediate
                         level of activity between activism and membership; the political activities involves more than simply being a member of the
                         Labour Party but does not entail sustained activism. Examples might include participating (but not in a leadership role) in a
@@ -7713,7 +7805,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMOTIVES"/>
@@ -7785,7 +7877,7 @@
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
                     <ref name="PLASTLITERARYACTIVITY"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
                     <ref name="PMOTIVES"/>
@@ -7914,7 +8006,7 @@
                     <ref name="PEDITIONS"/>
                     <ref name="PINFLUENCESHER"/>
                     <ref name="PLACE"/>
-                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PLITERARYMOVEMENTS"/>
                     <ref name="PMANUSCRIPTHISTORY"/>
                     <ref name="PMATERIALCONDITIONS"/>
                     <ref name="PMODEOFPUBLICATION"/>
