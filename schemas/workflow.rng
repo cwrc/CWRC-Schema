@@ -25,19 +25,15 @@
 	* Made the <note> element a child element of the <assigned> element.
 -->
 
-<grammar
-	xmlns="http://relaxng.org/ns/structure/1.0"
-	xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
-	
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
 	<start>
 		<choice>
 			<ref name="element-cwrc"/>
 			<ref name="element-workflow"/>
 		</choice>
 	</start>
-	
+
 	<define name="element-cwrc">
 		<element name="cwrc">
 			<a:documentation>Element cwrc can hold a collection of workflow elements.</a:documentation>
@@ -46,7 +42,7 @@
 			</oneOrMore>
 		</element>
 	</define>
-	
+
 	<define name="element-workflow">
 		<element name="workflow">
 			<a:documentation>Element workflow contains a workflow record containing an activity element
@@ -71,14 +67,14 @@
 			</optional>
 		</element>
 	</define>
-	
+
 	<!-- main element <activity> -->
-	
+
 	<define name="element-activity">
 		<element name="activity">
 			<a:documentation>Element activity captures information on a workflow category and/or stamp process and its completion status, as well 
 				as an activity note, and message to users about the completed workflow process. </a:documentation>
-			<ref name="attribute-category"/>			
+			<ref name="attribute-category"/>
 			<ref name="attribute-status"/>
 			<optional>
 				<ref name="attribute-stamp"/>
@@ -93,9 +89,9 @@
 			</interleave>
 		</element>
 	</define>
-	
+
 	<!-- main element <assigned> -->
-	
+
 	<define name="element-assigned">
 		<element name="assigned">
 			<a:documentation>Element assigned records message information to be sent to one or more assigned recipient users about the next
@@ -114,16 +110,16 @@
 			</interleave>
 		</element>
 	</define>
-	
+
 	<!-- elements -->
-	
+
 	<define name="element-note">
 		<element name="note">
 			<a:documentation>Element note captures workflow notes for future reference of processes executed.</a:documentation>
 			<text/>
 		</element>
 	</define>
-	
+
 	<define name="element-message">
 		<element name="message">
 			<a:documentation>Element message captures notification messages to be sent to recipient users.  Contains recipients, a subject, and a body.</a:documentation>
@@ -131,56 +127,56 @@
 				<oneOrMore>
 					<ref name="element-recipient"/>
 				</oneOrMore>
-			<ref name="element-subject"/>
-			<ref name="element-body"/>
+				<ref name="element-subject"/>
+				<ref name="element-body"/>
 			</interleave>
 		</element>
 	</define>
-	
+
 	<define name="element-recipient">
 		<element name="recipient">
 			<a:documentation>To send a message to recipients, element recipient captures a user's ID in the element's @userID attribute.</a:documentation>
 			<ref name="attribute-userID"/>
 		</element>
 	</define>
-	
+
 	<define name="element-subject">
 		<element name="subject">
 			<a:documentation>Message subject</a:documentation>
-			<text></text>
+			<text/>
 		</element>
 	</define>
-	
+
 	<define name="element-body">
 		<element name="body">
 			<a:documentation>Message body</a:documentation>
-			<text></text>
+			<text/>
 		</element>
 	</define>
 
 	<!-- attributes -->
-	
+
 	<define name="attribute-date">
 		<attribute name="date">
 			<a:documentation>Date format in the form of YYYY-MM-DD</a:documentation>
 			<data type="date"/>
 		</attribute>
 	</define>
-	
+
 	<define name="attribute-time">
 		<attribute name="time">
 			<a:documentation>Time format in the form of hh:mm:ss.  Note: can append an optional timezone offset to the time value: -07:00 for MST, and -06:00 for MDT</a:documentation>
 			<data type="time"/>
 		</attribute>
 	</define>
-	
+
 	<define name="attribute-workflowID">
 		<attribute name="workflowID">
 			<a:documentation>Attribute workflowID captures a string that identifies a particular workflow (set of processes to be tracked by workflow system) defined by users.</a:documentation>
 			<data type="string"/>
 		</attribute>
 	</define>
-	
+
 	<define name="attribute-userID">
 		<attribute name="userID">
 			<a:documentation>User ID</a:documentation>
@@ -188,25 +184,26 @@
 		</attribute>
 	</define>
 	<!-- check: user management namespace -->
-	
+
 	<define name="attribute-toolID">
 		<attribute name="toolID">
 			<a:documentation>Tool ID</a:documentation>
 			<data type="NCName"/>
 		</attribute>
 	</define>
-	
+
 	<define name="attribute-process">
 		<attribute name="process">
 			<a:documentation>Some id used to trigger a process by some tool.</a:documentation>
 			<data type="string"/>
 		</attribute>
 	</define>
-	
+
 	<define name="attribute-category">
 		<attribute name="category">
-			<a:documentation>Activity categories or ‘primitives’ put together during workflow meetings in October 2010 (re: SB, SF, MP meeting on workflow values), 
-				and revised in November 2011 (MP). The categories are meant to represent a set of constant values to be used across projects to allow workflow 
+			<!-- Activity categories or ‘primitives’ put together during workflow meetings in October 2010 (re: SB, SF, MP meeting on workflow values), 
+				and revised in November 2011 (MP).  -->
+			<a:documentation>The workflow category attribute is designed to provide a set of constant values to be used across projects to allow workflow 
 				general procedures to be applied to objects CWRC-wide without restricting workflow stamps (see stamp attribute).</a:documentation>
 			<choice>
 				<value>created</value>
@@ -238,17 +235,17 @@
 			<!-- check: revise categories: maybe we need categories only to enable cross-projects workflow and content management? -->
 		</attribute>
 	</define>
-	
+
 	<define name="attribute-stamp">
-		<!-- check: stamps namespace to be removed and replaced by documentation? -->
-		<attribute name="stamp">
-			<a:documentation>Activity types or stamps. These finer categories can be created on a project-specific basis, and particular projects may wish to rename 
-				these categories (i.e. Orlando may want to have ‘cas’ instead of ‘ckd’, another project may want to give it a stamp that according to a French name), 
-				but the basic activities categories (primitives) should stay the same. NOTE: the values in the Activity type column are not exhaustive--more values 
-				can be created. The included values represent a minimum of stamps that can be offered as default to all projects.</a:documentation>
-			<a:documentation>NISO values from Journal Article Version - NISO Recommendations 2008
+		<!--    NOTE: the values in the Activity type column are not exhaustive: more values 
+				can be created. The included values represent a minimum of stamps that can be offered as a default to all projects
+				NISO values from Journal Article Version - NISO Recommendations 2008
 				Orlando values from Orlando DTDs. TC and PUBR are not currently used (as of Nov 2011) but were added for workflow definition
-				CWRC values from workflow meetings held in October 2010 (re: SB, SF, MP meeting on workflow values), revised November 2011 (MP)</a:documentation>
+				CWRC values from workflow meetings held in October 2010 (re: SB, SF, MP meeting on workflow values), revised November 2011 (MP) -->
+		<attribute name="stamp">
+			<a:documentation>Workflow stamps are finer-grained workflow category information that can be created on a project-specific basis; in addition, particular
+				projects may wish to rename these existing stamp values (i.e. Orlando may want to use "CAS" instead of "CKD", another project may want to apply
+				a stamp according to a French name, etc.), but the basic workflow categories will remain static.</a:documentation>
 			<choice>
 				<value>niso:AO</value>
 				<a:documentation>Author's Original (AO)</a:documentation>
@@ -316,15 +313,15 @@
 			-->
 		</attribute>
 	</define>
-	
+
 	<define name="attribute-status">
 		<attribute name="status">
-			<a:documentation>Attribute status captures completion information on a particular process.</a:documentation>
+			<a:documentation>The status attribute records the completion information of particular work status phase of a document.</a:documentation>
 			<choice>
 				<value type="NCName">c</value>
 				<a:documentation>Complete</a:documentation>
 				<value type="NCName">ipr</value>
-				<a:documentation>In Progress</a:documentation>
+				<a:documentation>In progress</a:documentation>
 				<value type="NCName">p</value>
 				<a:documentation>Pending</a:documentation>
 				<value type="NCName">i</value>
@@ -333,5 +330,5 @@
 		</attribute>
 	</define>
 	<!-- check: ipr (in progress) and i (incomplete) -->
-	
+
 </grammar>
