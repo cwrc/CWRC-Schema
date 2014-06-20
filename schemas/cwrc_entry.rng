@@ -239,75 +239,77 @@
                                 <a:documentation>deleted - Deleted from the repository - equivalent to stamp cwrc:del</a:documentation>
                             </choice>
                         </attribute>
-                        <attribute name="WORKSTAMP">
-                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The workstamp attribute records finer-grained
+                        <optional>
+                            <attribute name="WORKSTAMP">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The workstamp attribute records finer-grained
                                 workflow category information that can be created on a project-specific basis; in addition, particular projects may wish to rename
                                 these existing stamp values (i.e. Orlando may want to use "CAS" instead of "CKD", another project may want to apply a stamp
                                 according to a French name, etc.), but the basic workflow categories will remain static.</a:documentation>
-                            <choice>
-                                <value>niso:AO</value>
-                                <a:documentation>Author's Original (AO)</a:documentation>
-                                <value>niso:SMUR</value>
-                                <a:documentation>Submitted Manuscript Under Review (SMUR)</a:documentation>
-                                <value>niso:AM</value>
-                                <a:documentation>Accepted Manuscript (AM)</a:documentation>
-                                <value>niso:P</value>
-                                <a:documentation>Proof (P)</a:documentation>
-                                <value>niso:VoR</value>
-                                <a:documentation>Version of Record (VoR)</a:documentation>
-                                <value>niso:CVoR</value>
-                                <a:documentation>Corrected Version of Record (CVoR)</a:documentation>
-                                <value>niso:EVoR</value>
-                                <a:documentation>Enhanced Version of Record (EVoR)</a:documentation>
-                                <value>orl:SUB</value>
-                                <a:documentation>Submitted (SUB)</a:documentation>
-                                <value>orl:RWT</value>
-                                <a:documentation>Researched / Written / Tagged (RWT)</a:documentation>
-                                <value>orl:REV</value>
-                                <a:documentation>Revised (REV)</a:documentation>
-                                <value>orl:RBV</value>
-                                <a:documentation>Reviewed by Volume Author (RVB)</a:documentation>
-                                <value>orl:CAS</value>
-                                <a:documentation>Checked Against Sources (CAS)</a:documentation>
-                                <value>orl:CFT</value>
-                                <a:documentation>Checked for Tagging (CFT)</a:documentation>
-                                <value>orl:CFB</value>
-                                <a:documentation>Checked for Bibliographic Practices (CFB)</a:documentation>
-                                <value>orl:PUB</value>
-                                <a:documentation>Published (PUB)</a:documentation>
-                                <value>orl:ENH</value>
-                                <a:documentation>Enhanced (ENH)</a:documentation>
-                                <value>orl:TC</value>
-                                <a:documentation>Tag Cleanup (TC)</a:documentation>
-                                <value>orl:PUBR</value>
-                                <a:documentation>Publication Readthrough (PUBR)</a:documentation>
-                                <value>cwrc:cre</value>
-                                <a:documentation>repository item created (original version of repository object) - equivalent to category created
+                                <choice>
+                                    <value>niso:AO</value>
+                                    <a:documentation>Author's Original (AO)</a:documentation>
+                                    <value>niso:SMUR</value>
+                                    <a:documentation>Submitted Manuscript Under Review (SMUR)</a:documentation>
+                                    <value>niso:AM</value>
+                                    <a:documentation>Accepted Manuscript (AM)</a:documentation>
+                                    <value>niso:P</value>
+                                    <a:documentation>Proof (P)</a:documentation>
+                                    <value>niso:VoR</value>
+                                    <a:documentation>Version of Record (VoR)</a:documentation>
+                                    <value>niso:CVoR</value>
+                                    <a:documentation>Corrected Version of Record (CVoR)</a:documentation>
+                                    <value>niso:EVoR</value>
+                                    <a:documentation>Enhanced Version of Record (EVoR)</a:documentation>
+                                    <value>orl:SUB</value>
+                                    <a:documentation>Submitted (SUB)</a:documentation>
+                                    <value>orl:RWT</value>
+                                    <a:documentation>Researched / Written / Tagged (RWT)</a:documentation>
+                                    <value>orl:REV</value>
+                                    <a:documentation>Revised (REV)</a:documentation>
+                                    <value>orl:RBV</value>
+                                    <a:documentation>Reviewed by Volume Author (RVB)</a:documentation>
+                                    <value>orl:CAS</value>
+                                    <a:documentation>Checked Against Sources (CAS)</a:documentation>
+                                    <value>orl:CFT</value>
+                                    <a:documentation>Checked for Tagging (CFT)</a:documentation>
+                                    <value>orl:CFB</value>
+                                    <a:documentation>Checked for Bibliographic Practices (CFB)</a:documentation>
+                                    <value>orl:PUB</value>
+                                    <a:documentation>Published (PUB)</a:documentation>
+                                    <value>orl:ENH</value>
+                                    <a:documentation>Enhanced (ENH)</a:documentation>
+                                    <value>orl:TC</value>
+                                    <a:documentation>Tag Cleanup (TC)</a:documentation>
+                                    <value>orl:PUBR</value>
+                                    <a:documentation>Publication Readthrough (PUBR)</a:documentation>
+                                    <value>cwrc:cre</value>
+                                    <a:documentation>repository item created (original version of repository object) - equivalent to category created
                                 </a:documentation>
-                                <value>cwrc:dep</value>
-                                <a:documentation>repository item deposited (an existing file) - equivalent to category deposited</a:documentation>
-                                <value>cwrc:cvr</value>
-                                <a:documentation>object content edited - cvr (corrected version of record)</a:documentation>
-                                <value>cwrc:evr</value>
-                                <a:documentation>object content added evr (enhanced version of record)</a:documentation>
-                                <value>cwrc:ckd</value>
-                                <a:documentation>Checked/corrected - equivalent to category checked</a:documentation>
-                                <value>cwrc:tag</value>
-                                <a:documentation>tagged by member of general public (i.e. subject keywords/ folksonomic descriptors  added) - equivalent to
+                                    <value>cwrc:dep</value>
+                                    <a:documentation>repository item deposited (an existing file) - equivalent to category deposited</a:documentation>
+                                    <value>cwrc:cvr</value>
+                                    <a:documentation>object content edited - cvr (corrected version of record)</a:documentation>
+                                    <value>cwrc:evr</value>
+                                    <a:documentation>object content added evr (enhanced version of record)</a:documentation>
+                                    <value>cwrc:ckd</value>
+                                    <a:documentation>Checked/corrected - equivalent to category checked</a:documentation>
+                                    <value>cwrc:tag</value>
+                                    <a:documentation>tagged by member of general public (i.e. subject keywords/ folksonomic descriptors  added) - equivalent to
                                     category tagged</a:documentation>
-                                <value>cwrc:rights_asg</value>
-                                <a:documentation>Copyright/license terms attached to object - equivalent to category rights_assigned</a:documentation>
-                                <value>cwrc:pub</value>
-                                <a:documentation>repository item under ongoing publishing procedures - equivalent to category published</a:documentation>
-                                <value>cwrc:rev</value>
-                                <a:documentation>peer-review as opposed to internal editing/revision - equivalent to category
+                                    <value>cwrc:rights_asg</value>
+                                    <a:documentation>Copyright/license terms attached to object - equivalent to category rights_assigned</a:documentation>
+                                    <value>cwrc:pub</value>
+                                    <a:documentation>repository item under ongoing publishing procedures - equivalent to category published</a:documentation>
+                                    <value>cwrc:rev</value>
+                                    <a:documentation>peer-review as opposed to internal editing/revision - equivalent to category
                                     peer-reviewed/evaluated</a:documentation>
-                                <value>cwrc:wdr</value>
-                                <a:documentation>Removed from published state - equivalent to category withdrawn</a:documentation>
-                                <value>cwrc:del</value>
-                                <a:documentation>Deleted from the repository - equivalent to category deleted</a:documentation>
-                            </choice>
-                        </attribute>
+                                    <value>cwrc:wdr</value>
+                                    <a:documentation>Removed from published state - equivalent to category withdrawn</a:documentation>
+                                    <value>cwrc:del</value>
+                                    <a:documentation>Deleted from the repository - equivalent to category deleted</a:documentation>
+                                </choice>
+                            </attribute>
+                        </optional>
                         <attribute name="WORKSTATUS" a:defaultValue="I">
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Workstatus records the completion information of a
                                 particular work status phase of a document.</a:documentation>
