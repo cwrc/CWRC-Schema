@@ -35,16 +35,18 @@
   - Renamed the element PLITERARYSCHOOLS to PLITERARYMOVEMENTS, as well as associated REFs.
   - Renamed the element RRECOGNITIONS to RRECOGNITIONSANDAWARDS, as well as associated REFs.
   - Renamed the element WEALTH to ECONOMICS, as well as associated REFs.
-  - Added new element called GENDER, which is a child element of CULTURALFORMATION; GENDER has the same enumerated list of values as the attribute SEX, with
-    the addition of UNGENDERED and UNKNOWN; used the documentation from SEX for now, but with prefatory changes outlined by Susan.
-  - Added two new attribute values to SEX, TRANSGENDERED MALE-TO-FEMALE and TRANSGENDERED FEMALE-TO-MALE.
+  - Renamed and reworked RESPONSIBILITY element: renamed to WORKFLOW; added attributes with enumerated lists of WORKCATEGORY, WORKSTAMP,
+     and WORKSTATUS.
+  - Added new element of GENDER, which is a child element of CULTURALFORMATION; GENDER has the same enumerated list of values as the attribute SEX,
+    with the addition of UNGENDERED and UNKNOWN; can have multiple values.
   - Added new elements of ANIMALS, ENVIRONMENT, and FOOD to the TEXTUALFEATURES element.
-  - Added new attribute of ROLE to the CWRC element; values come from the MARC roles supplemented with CWRC category values.
+  - Added new element of ROLE to the P and CHRONPROSE elements; values come from the MARC roles supplemented with CWRC category values.
+  - Added element RESEARCHNOTE to various elements.
   - Added new atttribute of NATIONALITYCATEGORY to the CWRC element; has values of BRITISH, CANADIAN, and INTERNATIONAL; can have multiple values.
   - Added new attribute of MEDIATYPE to PRODUCTION element.
   - Added new attribute of STATUS to the element DEGREE.
-  - Added RESEARCHNOTE to various elements.
-  - Renamed and reworked RESPONSIBILITY element: renamed to WORKFLOW; added attributes with enumerated lists of WORKSTATUS, WORKCATEGORY, and WORKSTAMP.
+  - Added two new attribute values to SEX, TRANSGENDERED MALE-TO-FEMALE and TRANSGENDERED FEMALE-TO-MALE.
+  - Revised the attribute values of PERSON to just two: WRITER, and NON-WRITER.
 * MRB: June 2014: Major architectural redesign, e.g.,
   - Renamed DIV0 to ENTRY.
   - Deleted DIV3.
@@ -60,13 +62,14 @@
   - Added REFs to 16 major biography elements, TEXTSCOPE, and its child elements of PRODUCTION, RECEPTION, and TEXTUALFEATURES, to P.
   - Eliminated BIOGPROSE, DATESTRUCT, and child elements of PLACE.
 * MRB: Sun 30-Mar-2014: Added new definitions for some elements and attributes.
-* MRB: Mon 24-Mar-2014: Added two new attribute values to the @SEX attribute: TRANSGENDERED MALE-TO-FEMALE, and TRANSGENDERED FEMALE-TO-MALE.
+* MRB: Mon 24-Mar-2014: Added two new attribute values to the @SEX attribute: TRANSGENDERED MALE-TO-FEMALE, and TRANSGENDERED
+   FEMALE-TO-MALE.
 -->
 
-<!-- root <grammar> element -->
+<!-- begin root <grammar> element -->
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
 
-    <!-- <start> element pattern -->
+    <!-- begin <start> element pattern -->
     <start>
         <choice>
             <element name="CWRC">
@@ -86,8 +89,8 @@
                             <value>FEMALE</value>
                             <value>MALE</value>
                             <value>TRANSGENDERED</value>
-                            <value>TRANSGENDERED MALE-TO-FEMALE</value>
                             <value>TRANSGENDERED FEMALE-TO-MALE</value>
+                            <value>TRANSGENDERED MALE-TO-FEMALE</value>
                             <value>UNDEFINED</value>
                             <data type="string"/>
                         </choice>
@@ -96,13 +99,11 @@
                 <optional>
                     <attribute name="PERSON">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Person is an attribute applied to the CWRC document as a
-                            whole, and specifies information about the type of person who is the subject of the document; for example, if they are a writer or
-                            an historical figure.</a:documentation>
+                            whole, and specifies information about the type of person who is the subject of the document, and specifically, if they are a writer or
+                            a nonwriter.</a:documentation>
                         <choice>
-                            <value>HISTORICALFIGURE</value>
+                            <value>NON-WRITER</value>
                             <value>WRITER</value>
-                            <value>BRWWRITER</value>
-                            <value>IBRWRITER</value>
                         </choice>
                     </attribute>
                 </optional>
@@ -128,8 +129,9 @@
             </element>
         </choice>
     </start>
+    <!-- end <start> element pattern -->
 
-    <!-- <CWRCHEADER> pattern -->
+    <!-- begin <CWRCHEADER> element pattern -->
     <define name="CWRCHEADER">
         <element name="CWRCHEADER">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Equivalent to TEI\'s TEIHeader, CWRCHeader supplies the
@@ -232,7 +234,6 @@
                                 <value>peer-reviewed/evaluated</value>
                                 <a:documentation>peer_reviewed - peer-review as opposed to internal editing/revision - equivalent to stamp
                                     cwrc:rev</a:documentation>
-                                <!-- check: spilt? of merge? -->
                                 <value>withdrawn</value>
                                 <a:documentation>withdrawn - Removed from published state - equivalent to stamp cwrc:wdr</a:documentation>
                                 <value>deleted</value>
@@ -337,9 +338,9 @@
             </element>
         </element>
     </define>
-    <!-- end <CWRCHEADER> pattern -->
+    <!-- end <CWRCHEADER> element pattern -->
 
-    <!-- <ENTRY> pattern -->
+    <!-- begin <ENTRY> element pattern -->
     <define name="ENTRY">
         <element name="ENTRY">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ENTRY (level-0 text division) is the largest structural
@@ -357,81 +358,35 @@
                         </optional>
                     </element>
                 </optional>
-                <zeroOrMore>
-                    <ref name="HEADING"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="BIBCITS"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="KEYWORDCLASS"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="SCHOLARNOTE"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="RESEARCHNOTE"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="BIRTH"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="CULTURALFORMATION"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="DEATH"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="ECONOMICS"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="EDUCATION"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="FAMILY"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="FRIENDSASSOCIATES"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="HEALTH"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="INTIMATERELATIONSHIPS"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="LEISUREANDSOCIETY"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="RESIDENCEANDMOBILITY"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="OCCUPATION"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="OTHERLIFEEVENT"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="PERSONNAME"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="POLITICS"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="VIOLENCE"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="PRODUCTION"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="RECEPTION"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="TEXTUALFEATURES"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="TEXTSCOPE"/>
-                </zeroOrMore>
+                <oneOrMore>
+                    <choice>
+                        <ref name="HEADING"/>
+                        <ref name="BIBCITS"/>
+                        <ref name="KEYWORDCLASS"/>
+                        <ref name="SCHOLARNOTE"/>
+                        <ref name="RESEARCHNOTE"/>
+                        <ref name="BIRTH"/>
+                        <ref name="CULTURALFORMATION"/>
+                        <ref name="DEATH"/>
+                        <ref name="ECONOMICS"/>
+                        <ref name="EDUCATION"/>
+                        <ref name="FAMILY"/>
+                        <ref name="FRIENDSASSOCIATES"/>
+                        <ref name="HEALTH"/>
+                        <ref name="INTIMATERELATIONSHIPS"/>
+                        <ref name="LEISUREANDSOCIETY"/>
+                        <ref name="RESIDENCEANDMOBILITY"/>
+                        <ref name="OCCUPATION"/>
+                        <ref name="OTHERLIFEEVENT"/>
+                        <ref name="PERSONNAME"/>
+                        <ref name="POLITICS"/>
+                        <ref name="VIOLENCE"/>
+                        <ref name="PRODUCTION"/>
+                        <ref name="RECEPTION"/>
+                        <ref name="TEXTUALFEATURES"/>
+                        <ref name="TEXTSCOPE"/>
+                    </choice>
+                </oneOrMore>
                 <optional>
                     <ref name="STANDARD"/>
                 </optional>
@@ -441,9 +396,9 @@
             </interleave>
         </element>
     </define>
-    <!-- end <ENTRY> pattern -->
+    <!-- end <ENTRY> element pattern -->
 
-    <!-- begin globally defined elements -->
+    <!-- *** begin globally defined elements *** -->
 
     <define name="BIRTH">
         <element name="BIRTH">
@@ -490,36 +445,19 @@
                 <optional>
                     <ref name="HEADING"/>
                 </optional>
-                <zeroOrMore>
-                    <ref name="P"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="DATASTRUCT"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="CHRONSTRUCT"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="BIBCITS"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="KEYWORDCLASS"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="SCHOLARNOTE"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="RESEARCHNOTE"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="CLASS"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="RACECOLOUR"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <element name="CLASSISSUE">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ClassIssue, a significant
+                <oneOrMore>
+                    <choice>
+                        <ref name="P"/>
+                        <ref name="DATASTRUCT"/>
+                        <ref name="CHRONSTRUCT"/>
+                        <ref name="BIBCITS"/>
+                        <ref name="KEYWORDCLASS"/>
+                        <ref name="SCHOLARNOTE"/>
+                        <ref name="RESEARCHNOTE"/>
+                        <ref name="CLASS"/>
+                        <ref name="RACECOLOUR"/>
+                        <element name="CLASSISSUE">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ClassIssue, a significant
                         sub-element within culturalFormation, is used to discuss the importance of class within a
                         person&apos;s life. In conjunction with the class element, classIssue allows us to capture
                         information about how the socio-economic conditions of her family and herself affected her life and
@@ -528,15 +466,13 @@
                         categories are historically and culturally specific. The classIssue element is meant to capture
                         discussions of these complexities and allow for the historical and biographical specificities of
                         one&apos;s relation to class.</a:documentation>
-                        <choice>
-                            <ref name="CHRONSTRUCT"/>
-                            <ref name="P"/>
-                        </choice>
-                    </element>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <element name="NATIONALITYISSUE">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">NationalityIssue is a
+                            <choice>
+                                <ref name="CHRONSTRUCT"/>
+                                <ref name="P"/>
+                            </choice>
+                        </element>
+                        <element name="NATIONALITYISSUE">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">NationalityIssue is a
                         significant sub-element within culturalFormation which captures a discussion about her nationality.
                         It works in conjunction with the nationality element to structure the national subject positions of
                         women writers. Use to discuss issues of importance around a woman&apos;s nationality as it impinges
@@ -544,14 +480,12 @@
                         the element &quot;nationalityIssue,&quot; we can discuss or name a writer&apos;s nationality as
                         English, Irish, Scottish, Welsh. Avoid using British in the nationality tag, and use more specific
                         designations when you can because these probably mattered more.</a:documentation>
-                        <optional>
-                            <ref name="P"/>
-                        </optional>
-                    </element>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <element name="RACEANDETHNICITY">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">RaceAndEthnicity is a
+                            <optional>
+                                <ref name="P"/>
+                            </optional>
+                        </element>
+                        <element name="RACEANDETHNICITY">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">RaceAndEthnicity is a
                         significant sub-element within culturalFormation. It captures information and discussions of a
                         person&apos;s subject position with regards to race and ethnicity by working in conjunction with
                         subject specific sub-elements (raceColour, nationalHeritage, geogHeritage, ethnicity). The following
@@ -585,14 +519,12 @@
                         &quot;Jewish&quot; will appear in both &quot;race/colour&quot; and &quot;ethnicity&quot; tag lists,
                         &quot;Ukrainian&quot; may appear in both &quot;national-heritage&quot; and &quot;ethnicity&quot; tag
                         lists.</a:documentation>
-                        <choice>
-                            <ref name="P"/>
-                        </choice>
-                    </element>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <element name="RELIGION">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Religion is one of the
+                            <choice>
+                                <ref name="P"/>
+                            </choice>
+                        </element>
+                        <element name="RELIGION">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Religion is one of the
                         issues (along with sexuality, race and ethnicity, language, class, and nationality) we have defined
                         as significant in discussing the cultural formation of a person. This element captures discussions of
                         her religion as an identity, as an issue in her life and her religious beliefs and affiliations. We
@@ -603,23 +535,21 @@
                         institutions. We are also interested in the crucial role religious movements have had in women&apos;s
                         writing, particularly in the early modern periods, and envision our end users being able to trace the
                         influence of Quakerism, for example, on women&apos;s writing and lives.</a:documentation>
-                        <optional>
-                            <ref name="CHRONSTRUCT"/>
-                        </optional>
-                        <zeroOrMore>
-                            <ref name="P"/>
-                        </zeroOrMore>
-                        <zeroOrMore>
-                            <ref name="DENOMINATION"/>
-                        </zeroOrMore>
-                        <optional>
-                            <ref name="KEYWORDCLASS"/>
-                        </optional>
-                    </element>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <element name="SEXUALITY">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sexuality is one of the
+                            <optional>
+                                <ref name="CHRONSTRUCT"/>
+                            </optional>
+                            <zeroOrMore>
+                                <ref name="P"/>
+                            </zeroOrMore>
+                            <zeroOrMore>
+                                <ref name="DENOMINATION"/>
+                            </zeroOrMore>
+                            <optional>
+                                <ref name="KEYWORDCLASS"/>
+                            </optional>
+                        </element>
+                        <element name="SEXUALITY">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sexuality is one of the
                         issues (along with religion, race and ethnicity, language, class, and nationality) we have defined as
                         significant in discussing the cultural formation of a woman. This element captures discussions of her
                         sexuality as an identity or as an issue in her life. It is not meant to capture individual sexual
@@ -632,11 +562,12 @@
                         one&apos;s own sexuality. Capturing discussions of her sexuality within this element, will help
                         researchers interested in the historical, ideological and gendered constructions of
                         sexuality.</a:documentation>
-                        <zeroOrMore>
-                            <ref name="P"/>
-                        </zeroOrMore>
-                    </element>
-                </zeroOrMore>
+                            <zeroOrMore>
+                                <ref name="P"/>
+                            </zeroOrMore>
+                        </element>
+                    </choice>
+                </oneOrMore>
             </interleave>
         </element>
     </define>
@@ -749,30 +680,17 @@
                 <optional>
                     <ref name="HEADING"/>
                 </optional>
-                <zeroOrMore>
-                    <ref name="P"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="DATASTRUCT"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="CHRONSTRUCT"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="BIBCITS"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="KEYWORDCLASS"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="SCHOLARNOTE"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="RESEARCHNOTE"/>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <element name="FAMILYMEMBER">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FamilyMember, a
+                <oneOrMore>
+                    <choice>
+                        <ref name="P"/>
+                        <ref name="DATASTRUCT"/>
+                        <ref name="CHRONSTRUCT"/>
+                        <ref name="BIBCITS"/>
+                        <ref name="KEYWORDCLASS"/>
+                        <ref name="SCHOLARNOTE"/>
+                        <ref name="RESEARCHNOTE"/>
+                        <element name="FAMILYMEMBER">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FamilyMember, a
                             significant sub-element within Family, captures a discussion of a specific family member. For
                             general discussions of family life, do not open a FamilyMember sub-element but remain within
                             Family. FamilyMember allows us to structure information concerning particular family relations;
@@ -782,64 +700,62 @@
                             members (for example, group information concerning the relationship of eighteenth-century women
                             writers to their aunts) but in order to do so we must systematize the discussions of these
                             specific family members.</a:documentation>
-                        <attribute name="RELATION" a:defaultValue="MOTHER">
-                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relation is a
+                            <attribute name="RELATION" a:defaultValue="MOTHER">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relation is a
                                 required attribute attached to member. It specifies how the family member discussed within
                                 the member element is related to the person.</a:documentation>
-                            <choice>
-                                <value>MOTHER</value>
-                                <value>FATHER</value>
-                                <value>SISTER</value>
-                                <value>BROTHER</value>
-                                <value>AUNT</value>
-                                <value>UNCLE</value>
-                                <value>GRANDFATHER</value>
-                                <value>GRANDMOTHER</value>
-                                <value>GRANDDAUGHTER</value>
-                                <value>GRANDSON</value>
-                                <value>NEPHEW</value>
-                                <value>STEPSISTER</value>
-                                <value>STEPBROTHER</value>
-                                <value>STEPFATHER</value>
-                                <value>STEPMOTHER</value>
-                                <value>COUSIN</value>
-                                <value>FOREBEAR</value>
-                                <value>OTHER</value>
-                                <value>SON</value>
-                                <value>DAUGHTER</value>
-                                <value>STEPSON</value>
-                                <value>STEPDAUGHTER</value>
-                                <value>GUARDIAN</value>
-                                <value>NIECE</value>
-                                <value>HUSBAND</value>
-                                <value>WIFE</value>
-                                <value>CHILD</value>
-                                <value>PARTNER</value>
-                            </choice>
-                        </attribute>
-                        <interleave>
-                            <optional>
                                 <choice>
-                                    <ref name="CHILDREN"/>
-                                    <ref name="PLACE"/>
+                                    <value>MOTHER</value>
+                                    <value>FATHER</value>
+                                    <value>SISTER</value>
+                                    <value>BROTHER</value>
+                                    <value>AUNT</value>
+                                    <value>UNCLE</value>
+                                    <value>GRANDFATHER</value>
+                                    <value>GRANDMOTHER</value>
+                                    <value>GRANDDAUGHTER</value>
+                                    <value>GRANDSON</value>
+                                    <value>NEPHEW</value>
+                                    <value>STEPSISTER</value>
+                                    <value>STEPBROTHER</value>
+                                    <value>STEPFATHER</value>
+                                    <value>STEPMOTHER</value>
+                                    <value>COUSIN</value>
+                                    <value>FOREBEAR</value>
+                                    <value>OTHER</value>
+                                    <value>SON</value>
+                                    <value>DAUGHTER</value>
+                                    <value>STEPSON</value>
+                                    <value>STEPDAUGHTER</value>
+                                    <value>GUARDIAN</value>
+                                    <value>NIECE</value>
+                                    <value>HUSBAND</value>
+                                    <value>WIFE</value>
+                                    <value>CHILD</value>
+                                    <value>PARTNER</value>
                                 </choice>
-                            </optional>
-                            <zeroOrMore>
-                                <ref name="CHRONSTRUCT"/>
-                                <ref name="P"/>
-                            </zeroOrMore>
-                            <optional>
-                                <choice>
-                                    <ref name="BIBCITS"/>
-                                    <ref name="SCHOLARNOTE"/>
-                                </choice>
-                            </optional>
-                        </interleave>
-                    </element>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <element name="MARRIAGE">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
+                            </attribute>
+                            <interleave>
+                                <optional>
+                                    <choice>
+                                        <ref name="CHILDREN"/>
+                                        <ref name="PLACE"/>
+                                    </choice>
+                                </optional>
+                                <zeroOrMore>
+                                    <ref name="CHRONSTRUCT"/>
+                                    <ref name="P"/>
+                                </zeroOrMore>
+                                <optional>
+                                    <choice>
+                                        <ref name="BIBCITS"/>
+                                        <ref name="SCHOLARNOTE"/>
+                                    </choice>
+                                </optional>
+                            </interleave>
+                        </element>
+                        <element name="MARRIAGE">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
                             marriage element is used to capture the event of a person&apos;s wedding ceremony or
                             the fact of her marriage. Marriage is often a central and defining moment in a woman
                             writer's life and we want to systematize this event. Because of the institutional
@@ -847,19 +763,20 @@
                             details of married life. For this reason, do not use this element for a detailed
                             discussion of her married life but place such discussions within the general family/
                             member=husband element.</a:documentation>
-                        <interleave>
-                            <zeroOrMore>
-                                <choice>
-                                    <ref name="CHRONSTRUCT"/>
-                                    <ref name="P"/>
-                                </choice>
-                            </zeroOrMore>
-                            <zeroOrMore>
-                                <ref name="RESEARCHNOTE"/>
-                            </zeroOrMore>
-                        </interleave>
-                    </element>
-                </zeroOrMore>
+                            <interleave>
+                                <zeroOrMore>
+                                    <choice>
+                                        <ref name="CHRONSTRUCT"/>
+                                        <ref name="P"/>
+                                    </choice>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="RESEARCHNOTE"/>
+                                </zeroOrMore>
+                            </interleave>
+                        </element>
+                    </choice>
+                </oneOrMore>
             </interleave>
         </element>
     </define>
@@ -3056,8 +2973,8 @@
                         <value>FEMALE</value>
                         <value>MALE</value>
                         <value>TRANSGENDERED</value>
-                        <value>TRANSGENDERED MALE-TO-FEMALE</value>
                         <value>TRANSGENDERED FEMALE-TO-MALE</value>
+                        <value>TRANSGENDERED MALE-TO-FEMALE</value>
                         <value>UNDEFINED</value>
                         <value>UNGENDERED</value>
                         <value>UNKNOWN</value>
@@ -8339,14 +8256,736 @@
         </element>
     </define>
 
+    <!-- begin <ROLE> element pattern -->
     <define name="ROLE">
         <element name="ROLE">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Role element documentation here.</a:documentation>
-            <text/>
+            <choice>
+                <value>Actor [act]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who principally exhibits acting
+                    skills in a musical or dramatic presentation or entertainment.</a:documentation>
+                <value>Adapter [adp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who 1) reworks a musical
+                    composition, usually for a different medium, or 2) rewrites novels or stories for motion pictures or other audiovisual medium.</a:documentation>
+                <value>Analyst [anl]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that reviews, examines and
+                    interprets data or information in a specific area.</a:documentation>
+                <value>Animator [anm]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who draws the two-dimensional
+                    figures, manipulates the three dimensional objects and/or also programs the computer to move objects and images for the purpose of animated
+                    film processing. Animation cameras, stands, celluloid screens, transparencies and inks are some of the tools of the animator.</a:documentation>
+                <value>Annotator [ann]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who writes manuscript annotations on a printed
+                    item.</a:documentation>
+                <value>Applicant [app]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the submission of
+                    an application or who is named as eligible for the results of the processing of the application (e.g., bestowing of rights, reward, title,
+                    position).</a:documentation>
+                <value>Appraiser</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">kah: in archives context appraisers assess monetary values of
+                    donations</a:documentation>
+                <value>Architect [arc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who designs structures or
+                    oversees their construction.</a:documentation>
+                <value>Arranger [arr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who transcribes a musical
+                    composition, usually for a different medium from that of the original; in an arrangement the musical substance remains essentially
+                    unchanged.</a:documentation>
+                <value>Art copyist [acp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person (e.g., a painter or sculptor) who makes copies of
+                    works of visual art.</a:documentation>
+                <value>Artist [art]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person (e.g., a painter) or organization who conceives,
+                    and perhaps also implements, an original graphic design or work of art, if specific codes (e.g., [egr], [etr]) are not desired. For book illustrators,
+                    prefer Illustrator [ill].</a:documentation>
+                <value>Artistic director [ard]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person responsible for controlling the development of
+                    the artistic style of an entire production, including the choice of works to be presented and selection of senior production staff.</a:documentation>
+                <value>Assignee [asg]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization to whom a license for printing or
+                    publishing has been transferred.</a:documentation>
+                <value>Associated name [asn]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization associated with or found in an
+                    item or collection, which cannot be determined to be that of a Former owner [fmo] or other designated relator indicative of
+                    provenance.</a:documentation>
+                <value>Attributed name [att]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for an author, artist, etc., relating him/her to a work for which
+                    there is or once was substantial authority for designating that person as author, creator, etc. of the work.</a:documentation>
+                <value>Auctioneer [auc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization in charge of the estimation and
+                    public auctioning of goods, particularly books, artistic works, etc.</a:documentation>
+                <value>Author [aut]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization chiefly responsible for the
+                    intellectual or artistic content of a work, usually printed text. This term may also be used when more than one person or body bears such
+                    responsibility.</a:documentation>
+                <value>Author in quotations or text extracts [aqt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization whose work is largely quoted or
+                    extracted in works to which he or she did not contribute directly. Such quotations are found particularly in exhibition catalogs, collections of
+                    photographs, etc.</a:documentation>
+                <value>Author of afterword, colophon, etc. [aft]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for an afterword,
+                    postface, colophon, etc. but who is not the chief author of a work.</a:documentation>
+                <value>Author of dialog [aud]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the dialog or
+                    spoken commentary for a screenplay or sound recording.</a:documentation>
+                <value>Author of introduction, etc. [aui]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for an introduction,
+                    preface, foreword, or other critical introductory matter, but who is not the chief author.</a:documentation>
+                <value>Author of screenplay, etc. [aus]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for a motion picture
+                    screenplay, dialog, spoken commentary, etc.</a:documentation>
+                <value>Bibliographic antecedent [ant]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for a work upon
+                    which the work represented by the catalog record is based. This may be appropriate for adaptations, sequels, continuations, indexes,
+                    etc.</a:documentation>
+                <value>Binder [bnd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the binding of
+                    printed or manuscript materials.</a:documentation>
+                <value>Binding designer [bdd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the binding
+                    design of a book, including the type of binding, the type of materials used, and any decorative aspects of the binding.</a:documentation>
+                <value>Blurb writer [blw]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the named entity responsible for writing a commendation
+                    or testimonial for a work, which appears on or within the publication itself, frequently on the back or dust jacket of print publications or on
+                    advertising material for all media.</a:documentation>
+                <value>Book designer [bkd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the entire graphic
+                    design of a book, including arrangement of type and illustration, choice of materials, and process used.</a:documentation>
+                <value>Book producer [bkp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the production of
+                    books and other print media, if specific codes (e.g., [bkd], [egr], [tyd], [prt]) are not desired.</a:documentation>
+                <value>Bookjacket designer [bjd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the design of
+                    flexible covers designed for or published with a book, including the type of materials used, and any decorative aspects of the
+                    bookjacket.</a:documentation>
+                <value>Bookplate designer [bpd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the design of a
+                    book owner's identification label that is most commonly pasted to the inside front cover of a book.</a:documentation>
+                <value>Bookseller [bsl]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who makes books and other
+                    bibliographic materials available for purchase. Interest in the materials is primarily lucrative.</a:documentation>
+                <value>Calligrapher [cll]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who writes in an artistic hand,
+                    usually as a copyist and or engrosser.</a:documentation>
+                <value>Cartographer [ctg]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the creation of
+                    maps and other cartographic materials.</a:documentation>
+                <value>Censor [cns]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a censor, bowdlerizer, expurgator, etc., official or
+                    private.</a:documentation>
+                <value>Choreographer [chr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who composes or arranges
+                    dances or other movements (e.g., master of swords) for a musical or dramatic presentation or entertainment.</a:documentation>
+                <value>Cinematographer [cng]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is in charge of the images
+                    captured for a motion picture film. The cinematographer works under the supervision of a director, and may also be referred to as director of
+                    photography. Do not confuse with videographer.</a:documentation>
+                <value>Client [cli]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization for whom another person or
+                    organization is acting.</a:documentation>
+                <value>Collaborator [clb]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that takes a limited part in the
+                    elaboration of a work of another person or organization that brings complements (e.g., appendices, notes) to the work.</a:documentation>
+                <value>Collector [col]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who has brought together
+                    material from various sources that has been arranged, described, and cataloged as a collection. A collector is neither the creator of the material nor
+                    a person to whom manuscripts in the collection may have been addressed.</a:documentation>
+                <value>Collotyper [clt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the production of
+                    photographic prints from film or other colloid that has ink-receptive and ink-repellent surfaces.</a:documentation>
+                <value>Colorist [clr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the named entity responsible for applying color to
+                    drawings, prints, photographs, maps, moving images, etc.</a:documentation>
+                <value>Commentator [cmm]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who provides interpretation,
+                    analysis, or a discussion of the subject matter on a recording, motion picture, or other audiovisual medium.</a:documentation>
+                <value>Commentator for written text [cwt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the commentary
+                    or explanatory notes about a text. For the writer of manuscript annotations in a printed book, use Annotator [ann].</a:documentation>
+                <value>Compiler [com]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who produces a work or
+                    publication by selecting and putting together material from the works of various persons or bodies.</a:documentation>
+                <value>Complainant [cpl]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the party who applies to the courts for redress, usually in
+                    an equity proceeding.</a:documentation>
+                <value>Complainant-appellant [cpt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a complainant who takes an appeal from one court or
+                    jurisdiction to another to reverse the judgment, usually in an equity proceeding.</a:documentation>
+                <value>Complainant-appellee [cpe]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a complainant against whom an appeal is taken from one
+                    court or jurisdiction to another to reverse the judgment, usually in an equity proceeding.</a:documentation>
+                <value>Composer [cmp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who creates a musical work,
+                    usually a piece of music in manuscript or printed form.</a:documentation>
+                <value>Compositor [cmt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the creation of
+                    metal slug, or molds made of other materials, used to produce the text and images in printed matter.</a:documentation>
+                <value>Conceptor [ccp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the original idea
+                    on which a work is based, this includes the scientific author of an audio-visual item and the conceptor of an advertisement.</a:documentation>
+                <value>Conductor [cnd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who directs a performing group (orchestra,
+                    chorus, opera, etc.) in a musical or dramatic presentation or entertainment.</a:documentation>
+                <value>Conservator [con]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the named entity responsible for documenting, preserving
+                    , or treating printed or manuscript material, works of art, artifacts, or other media.</a:documentation>
+                <value>Consultant [csl]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization relevant to a resource, who is
+                    called upon for professional advice or services in a specialized field of knowledge or training.</a:documentation>
+                <value>Consultant to a project [csp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization relevant to a resource, who is
+                    engaged specifically to provide an intellectual overview of a strategic or operational task and by analysis, specification, or instruction, to create or
+                    propose a cost-effective course of action or solution.</a:documentation>
+                <value>Contestant [cos]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the party who opposes, resists, or disputes, in a court of
+                    law, a claim, decision, result, etc.</a:documentation>
+                <value>Contestant-appellant [cot]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a contestant who takes an appeal from one court of law or
+                    jurisdiction to another to reverse the judgment.</a:documentation>
+                <value>Contestant-appellee [coe]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a contestant against whom an appeal is taken from one
+                    court of law or jurisdiction to another to reverse the judgment.</a:documentation>
+                <value>Contestee [cts]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the party defending a claim, decision, result, etc. being
+                    opposed, resisted, or disputed in a court of law.</a:documentation>
+                <value>Contestee-appellant [ctt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a contestee who takes an appeal from one court or
+                    jurisdiction to another to reverse the judgment.</a:documentation>
+                <value>Contestee-appellee [cte]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a contestee against whom an appeal is taken from one
+                    court or jurisdiction to another to reverse the judgment.</a:documentation>
+                <value>Contractor [ctr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization relevant to a resource, who
+                    enters into a contract with another person or organization to perform a specific task.</a:documentation>
+                <value>Contributor [ctb]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization one whose work has been
+                    contributed to a larger work, such as an anthology, serial publication, or other compilation of individual works. Do not use if the sole function in
+                    relation to a work is as author, editor, compiler or translator.</a:documentation>
+                <value>Copyright claimant [cpc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization listed as a copyright owner at the
+                    time of registration. Copyright can be granted or later transferred to another person or organization, at which time the claimant becomes the
+                    copyright holder.</a:documentation>
+                <value>Copyright holder [cph]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization to whom copy and legal rights
+                    have been granted or transferred for the intellectual content of a work. The copyright holder, although not necessarily the creator of the work,
+                    usually has the exclusive right to benefit financially from the sale and use of the work to which the associated copyright protection
+                    applies.</a:documentation>
+                <value>Corrector [crr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is a corrector of
+                    manuscripts, such as the scriptorium official who corrected the work of a scribe. For printed matter, use Proofreader.</a:documentation>
+                <value>Correspondent [crp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who was either the writer or
+                    recipient of a letter or other communication.</a:documentation>
+                <value>Costume designer [cst]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who designs or makes costumes,
+                    fixes hair, etc., for a musical or dramatic presentation or entertainment.</a:documentation>
+                <value>Cover designer [cov]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the graphic
+                    design of a book cover, album cover, slipcase, box, container, etc. For a person or organization responsible for the graphic design of an entire
+                    book, use Book designer; for book jackets, use Bookjacket designer.</a:documentation>
+                <value>Creator [cre]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the intellectual or
+                    artistic content of a work.</a:documentation>
+                <value>Curator of an exhibition [cur]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for conceiving and
+                    organizing an exhibition.</a:documentation>
+                <value>Dancer [dnc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who principally exhibits dancing
+                    skills in a musical or dramatic presentation or entertainment.</a:documentation>
+                <value>Data contributor [dtc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that submits data for inclusion in
+                    a database or other collection of data.</a:documentation>
+                <value>Data manager [dtm]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for managing
+                    databases or other data sources.</a:documentation>
+                <value>Dedicatee [dte]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization to whom a book, manuscript,
+                    etc., is dedicated (not the recipient of a gift).</a:documentation>
+                <value>Dedicator [dto]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the author of a dedication, which may be a formal
+                    statement or in epistolary or verse form.</a:documentation>
+                <value>Defendant [dfd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the party defending or denying allegations made in a suit
+                    and against whom relief or recovery is sought in the courts, usually in a legal action.</a:documentation>
+                <value>Defendant-appellant [dft]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a defendant who takes an appeal from one court or
+                    jurisdiction to another to reverse the judgment, usually in a legal action.</a:documentation>
+                <value>Defendant-appellee [dfe]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a defendant against whom an appeal is taken from one
+                    court or jurisdiction to another to reverse the judgment, usually in a legal action.</a:documentation>
+                <value>Degree grantor [dgg]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the organization granting a degree for which the thesis or
+                    dissertation described was presented.</a:documentation>
+                <value>Delineator [dln]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization executing technical drawings
+                    from others' designs.</a:documentation>
+                <value>Depicted [dpc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for an entity depicted or portrayed in a work, particularly in a
+                    work of art.</a:documentation>
+                <value>Depositor [dpt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization placing material in the physical
+                    custody of a library or repository without transferring the legal title.</a:documentation>
+                <value>Designer [dsr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the design if
+                    more specific codes (e.g., [bkd], [tyd]) are not desired.</a:documentation>
+                <value>Director [drt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is responsible for the
+                    general management of a work or who supervises the production of a performance for stage, screen, or sound recording.</a:documentation>
+                <value>Dissertant [dis]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who presents a thesis for a university or
+                    higher-level educational degree.</a:documentation>
+                <value>Distribution place [dbp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the name of a place from which a resource, e.g., a serial, is
+                    distributed.</a:documentation>
+                <value>Distributor [dst]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that has exclusive or shared
+                    marketing rights for an item.</a:documentation>
+                <value>Donor [dnr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is the donor of a book,
+                    manuscript, etc., to its present owner. Donors to previous owners are designated as Former owner [fmo] or Inscriber [ins].</a:documentation>
+                <value>Draftsman [drm]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who prepares artistic or technical
+                    drawings.</a:documentation>
+                <value>Dubious author [dub]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization to which authorship has been
+                    dubiously or incorrectly ascribed.</a:documentation>
+                <value>Editor [edt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who prepares for publication a
+                    work not primarily his/her own, such as by elucidating text, adding introductory or other critical matter, or technically directing an editorial
+                    staff.</a:documentation>
+                <value>Electrician [elg]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person responsible for setting up a lighting rig and
+                    focusing the lights for a production, and running the lighting at a performance.</a:documentation>
+                <value>Electrotyper [elt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who creates a duplicate printing
+                    surface by pressure molding and electrodepositing of metal that is then backed up with lead for printing.</a:documentation>
+                <value>Engineer [eng]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that is responsible for technical
+                    planning and design, particularly with construction.</a:documentation>
+                <value>Engraver [egr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who cuts letters, figures, etc. on
+                    a surface, such as a wooden or metal plate, for printing.</a:documentation>
+                <value>Etcher [etr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who produces text or images for
+                    printing by subjecting metal, glass, or some other surface to acid or the corrosive action of some other substance.</a:documentation>
+                <value>Event place [evp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the name of the place where an event such as a
+                    conference or a concert took place.</a:documentation>
+                <value>Expert [exp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization in charge of the description and
+                    appraisal of the value of goods, particularly rare items, works of art, etc.</a:documentation>
+                <value>Facsimilist [fac]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that executed the
+                    facsimile.</a:documentation>
+                <value>Field director [fld]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that manages or supervises the
+                    work done to collect raw data or do research in an actual setting or environment (typically applies to the natural and social
+                    sciences).</a:documentation>
+                <value>Film editor [flm]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is an editor of a motion
+                    picture film. This term is used regardless of the medium upon which the motion picture is produced or manufactured (e.g., acetate film, video
+                    tape).</a:documentation>
+                <value>First party [fpy]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is identified as the only
+                    party or the party of the first part. In the case of transfer of right, this is the assignor, transferor, licensor, grantor, etc. Multiple parties can be
+                    named jointly as the first party</a:documentation>
+                <value>Forger [frg]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who makes or imitates
+                    something of value or importance, especially with the intent to defraud.</a:documentation>
+                <value>Former owner [fmo]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who owned an item at any time
+                    in the past. Includes those to whom the material was once presented. A person or organization giving the item to the present owner is designated
+                    as Donor [dnr]</a:documentation>
+                <value>Funder [fnd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that furnished financial support
+                    for the production of the work.</a:documentation>
+                <value>Geographic information specialist [gis]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person responsible for geographic information system
+                    (GIS) development and integration with global positioning system data.</a:documentation>
+                <value>Ghostwriter</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                <value>Honoree [hnr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization in memory or honor of whom a
+                    book, manuscript, etc. is donated.</a:documentation>
+                <value>Host [hst]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who is invited or regularly leads a program (often
+                    broadcast) that includes other guests, performers, etc. (e.g., talk show host).</a:documentation>
+                <value>Illuminator [ilu]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the decoration of
+                    a work (especially manuscript material) with precious metals or color, usually with elaborate designs and motifs.</a:documentation>
+                <value>Illustrator [ill]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who conceives, and perhaps also
+                    implements, a design or illustration, usually to accompany a written text.</a:documentation>
+                <value>Inscriber [ins]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who signs a presentation
+                    statement.</a:documentation>
+                <value>Instrumentalist [itr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who principally plays an
+                    instrument in a musical or dramatic presentation or entertainment.</a:documentation>
+                <value>Interviewee [ive]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is interviewed at a
+                    consultation or meeting, usually by a reporter, pollster, or some other information gathering agent.</a:documentation>
+                <value>Interviewer [ivr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who acts as a reporter, pollster,
+                    or other information gathering agent in a consultation or meeting involving one or more individuals.</a:documentation>
+                <value>Inventor [inv]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who first produces a particular
+                    useful item, or develops a new process for obtaining a known item or result.</a:documentation>
+                <value>Laboratory [lbr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for an institution that provides scientific analyses of material
+                    samples.</a:documentation>
+                <value>Laboratory director [ldr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that manages or supervises work
+                    done in a controlled setting or environment.</a:documentation>
+                <value>Landscape architect [lsa]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization whose work involves coordinating
+                    the arrangement of existing and proposed land features and structures.</a:documentation>
+                <value>Lead [led]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use to indicate that a person or organization takes primary
+                    responsibility for a particular activity or endeavor. Use with another relator term or code to show the greater importance this person or
+                    organization has regarding that particular role. If more than one relator is assigned to a heading, use the Lead relator only if it applies to all the
+                    relators.</a:documentation>
+                <value>Lender [len]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization permitting the temporary use of
+                    a book, manuscript, etc., such as for photocopying or microfilming.</a:documentation>
+                <value>Libelant [lil]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the party who files a libel in an ecclesiastical or admiralty
+                    case.</a:documentation>
+                <value>Libelant-appellant [lit]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a libelant who takes an appeal from one ecclesiastical court
+                    or admiralty to another to reverse the judgment.</a:documentation>
+                <value>Libelant-appellee [lie]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a libelant against whom an appeal is taken from one
+                    ecclesiastical court or admiralty to another to reverse the judgment.</a:documentation>
+                <value>Libelee [lel]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a party against whom a libel has been filed in an
+                    ecclesiastical court or admiralty.</a:documentation>
+                <value>Libelee-appellant [let]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a libelee who takes an appeal from one ecclesiastical court
+                    or admiralty to another to reverse the judgment.</a:documentation>
+                <value>Libelee-appellee [lee]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a libelee against whom an appeal is taken from one
+                    ecclesiastical court or admiralty to another to reverse the judgment.</a:documentation>
+                <value>Librettist [lbt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is a writer of the text of an
+                    opera, oratorio, etc.</a:documentation>
+                <value>Licensee [lse]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is an original recipient of the
+                    right to print or publish.</a:documentation>
+                <value>Licensor [lso]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for person or organization who is a signer of the license,
+                    imprimatur, etc.</a:documentation>
+                <value>Lighting designer [lgd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who designs the lighting scheme
+                    for a theatrical presentation, entertainment, motion picture, etc.</a:documentation>
+                <value>Lithographer [ltg]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who prepares the stone or plate
+                    for lithographic printing, including a graphic artist creating a design directly on the surface from which printing will be done.</a:documentation>
+                <value>Lyricist [lyr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is a writer of the text of a
+                    song.</a:documentation>
+                <value>Manufacture place [mfp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the name of the place of manufacture (e.g., printing,
+                    duplicating, casting, etc.) of a resource in a published form.</a:documentation>
+                <value>Manufacturer [mfr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that makes an artifactual work
+                    (an object made or modified by one or more persons). Examples of artifactual works include vases, cannons or pieces of
+                    furniture.</a:documentation>
+                <value>Marbler [mrb]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the named entity responsible for marbling paper, cloth,
+                    leather, etc. used in construction of a resource.</a:documentation>
+                <value>Markup editor [mrk]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization performing the coding of SGML,
+                    HTML, or XML markup of metadata, text, etc.</a:documentation>
+                <value>Metadata contact [mdc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization primarily responsible for
+                    compiling and maintaining the original description of a metadata set (e.g., geospatial metadata set).</a:documentation>
+                <value>Metal-engraver [mte]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for decorations,
+                    illustrations, letters, etc. cut on a metal surface for printing or decoration.</a:documentation>
+                <value>Moderator [mod]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who leads a program (often broadcast) where
+                    topics are discussed, usually with participation of experts in fields related to the discussion.</a:documentation>
+                <value>Monitor [mon]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that supervises compliance with
+                    the contract and is responsible for the report and controls its distribution. Sometimes referred to as the grantee, or controlling
+                    agency.</a:documentation>
+                <value>Music copyist [mcp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who transcribes or copies musical
+                    notation</a:documentation>
+                <value>Musical director [msd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person responsible for basic music decisions about a
+                    production, including coordinating the work of the composer, the sound editor, and sound mixers, selecting musicians, and organizing and/or
+                    conducting sound for rehearsals and performances.</a:documentation>
+                <value>Musician [mus]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who performs music or
+                    contributes to the musical content of a work when it is not possible or desirable to identify the function more precisely.</a:documentation>
+                <value>Narrator [nrt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who is a speaker relating the particulars of an
+                    act, occurrence, or course of events.</a:documentation>
+                <value>Opponent [opn]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for opposing a thesis
+                    or dissertation.</a:documentation>
+                <value>Organizer of meeting [orm]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for organizing a
+                    meeting for which an item is the report or proceedings.</a:documentation>
+                <value>Originator [org]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization performing the work, i.e., the
+                    name of a person or organization associated with the intellectual content of the work. This category does not include the publisher or personal
+                    affiliation, or sponsor except where it is also the corporate author.</a:documentation>
+                <value>Other [oth]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for relator codes from other lists which have no equivalent in
+                    the MARC list or for terms which have not been assigned a code.</a:documentation>
+                <value>Owner [own]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that currently owns an item or
+                    collection.</a:documentation>
+                <value>Papermaker [ppm]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the production of
+                    paper, usually from wood, cloth, or other fibrous material.</a:documentation>
+                <value>Patent applicant [pta]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that applied for a
+                    patent.</a:documentation>
+                <value>Patent holder [pth]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that was granted the patent
+                    referred to by the item.</a:documentation>
+                <value>Patron [pat]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for commissioning a
+                    work. Usually a patron uses his or her means or influence to support the work of artists, writers, etc. This includes those who commission and pay
+                    for individual works.</a:documentation>
+                <value>Performer [prf]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who exhibits musical or acting
+                    skills in a musical or dramatic presentation or entertainment, if specific codes for those functions ([act], [dnc], [itr], [voc], etc.) are not used. If
+                    specific codes are used, [prf] is used for a person whose principal skill is not known or specified.</a:documentation>
+                <value>Permitting agency [pma]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for an authority (usually a government agency) that issues
+                    permits under which work is accomplished.</a:documentation>
+                <value>Photographer [pht]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for taking
+                    photographs, whether they are used in their original form or as reproductions.</a:documentation>
+                <value>Plaintiff [ptf]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the party who complains or sues in court in a personal
+                    action, usually in a legal proceeding.</a:documentation>
+                <value>Plaintiff-appellant [ptt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a plaintiff who takes an appeal from one court or
+                    jurisdiction to another to reverse the judgment, usually in a legal proceeding.</a:documentation>
+                <value>Plaintiff-appellee [pte]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a plaintiff against whom an appeal is taken from one court
+                    or jurisdiction to another to reverse the judgment, usually in a legal proceeding.</a:documentation>
+                <value>Platemaker [plt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the production of
+                    plates, usually for the production of printed images and/or text.</a:documentation>
+                <value>Printer [prt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who prints texts, whether from
+                    type or plates.</a:documentation>
+                <value>Printer of plates [pop]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who prints illustrations from
+                    plates.</a:documentation>
+                <value>Printmaker [prm]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who makes a relief, intaglio, or
+                    planographic printing surface.</a:documentation>
+                <value>Process contact [prc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization primarily responsible for
+                    performing or initiating a process, such as is done with the collection of metadata sets.</a:documentation>
+                <value>Producer [pro]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the making of a
+                    motion picture, including business aspects, management of the productions, and the commercial success of the work.</a:documentation>
+                <value>Production manager [pmn]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person responsible for all technical and business matters
+                    in a production.</a:documentation>
+                <value>Production personnel [prd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization associated with the production
+                    (props, lighting, special effects, etc.) of a musical or dramatic presentation or entertainment.</a:documentation>
+                <value>Production place [prp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the name of the place of production (e.g., inscription,
+                    fabrication, construction, etc.) of a resource in an unpublished form.</a:documentation>
+                <value>Programmer [prg]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the creation
+                    and/or maintenance of computer program design documents, source code, and machine-executable digital files and supporting
+                    documentation.</a:documentation>
+                <value>Project director [pdr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization with primary responsibility for all
+                    essential aspects of a project, or that manages a very large project that demands senior level responsibility, or that has overall responsibility for
+                    managing projects, or provides overall direction to a project manager.</a:documentation>
+                <value>Proofreader [pfr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who corrects printed matter. For manuscripts,
+                    use Corrector [crr].</a:documentation>
+                <value>Publication place [pup]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the name of the place where a resource is
+                    published.</a:documentation>
+                <value>Publisher [pbl]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that makes printed matter, often
+                    text, but also printed music, artwork, etc. available to the public.</a:documentation>
+                <value>Publishing director [pbd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who presides over the
+                    elaboration of a collective work to ensure its coherence or continuity. This includes editors-in-chief, literary editors, editors of series,
+                    etc.</a:documentation>
+                <value>Puppeteer [ppt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who manipulates, controls, or
+                    directs puppets or marionettes in a musical or dramatic presentation or entertainment.</a:documentation>
+                <value>Recipient [rcp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization to whom correspondence is
+                    addressed.</a:documentation>
+                <value>Recording engineer [rce]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who supervises the technical
+                    aspects of a sound or video recording session.</a:documentation>
+                <value>Redactor [red]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who writes or develops the
+                    framework for an item without being intellectually responsible for its content.</a:documentation>
+                <value>Renderer [ren]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who prepares drawings of
+                    architectural designs (i.e., renderings) in accurate, representational perspective to show what the project will look like when
+                    completed.</a:documentation>
+                <value>Reporter [rpt]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who writes or presents reports
+                    of news or current events on air or in print.</a:documentation>
+                <value>Repository [rps]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for an agency that hosts data or material culture objects and
+                    provides services to promote long term, consistent and shared use of those data or objects.</a:documentation>
+                <value>Research team head [rth]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who directed or managed a research
+                    project.</a:documentation>
+                <value>Research team member [rtm]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who participated in a research project but whose
+                    role did not involve direction or management of it.</a:documentation>
+                <value>Researcher [res]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for performing
+                    research.</a:documentation>
+                <value>Respondent [rsp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the party who makes an answer to the courts pursuant to
+                    an application for redress, usually in an equity proceeding.</a:documentation>
+                <value>Respondent-appellant [rst]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a respondent who takes an appeal from one court or
+                    jurisdiction to another to reverse the judgment, usually in an equity proceeding.</a:documentation>
+                <value>Respondent-appellee [rse]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a respondent against whom an appeal is taken from one
+                    court or jurisdiction to another to reverse the judgment, usually in an equity proceeding.</a:documentation>
+                <value>Responsible party [rpy]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization legally responsible for the
+                    content of the published material.</a:documentation>
+                <value>Restager [rsg]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization, other than the original
+                    choreographer or director, responsible for restaging a choreographic or dramatic work and who contributes minimal new
+                    content.</a:documentation>
+                <value>Reviewer [rev]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the review of a
+                    book, motion picture, performance, etc.</a:documentation>
+                <value>Rubricator [rbr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for parts of a work,
+                    often headings or opening parts of a manuscript, that appear in a distinctive color, usually red.</a:documentation>
+                <value>Scenarist [sce]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is the author of a motion
+                    picture screenplay.</a:documentation>
+                <value>Scientific advisor [sad]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who brings scientific,
+                    pedagogical, or historical competence to the conception and realization on a work, particularly in the case of audio-visual items.</a:documentation>
+                <value>Scribe [scr]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who is an amanuensis and for a writer of
+                    manuscripts proper. For a person who makes pen-facsimiles, use Facsimilist [fac].</a:documentation>
+                <value>Sculptor [scl]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who models or carves figures
+                    that are three-dimensional representations.</a:documentation>
+                <value>Second party [spy]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is identified as the party of
+                    the second part. In the case of transfer of right, this is the assignee, transferee, licensee, grantee, etc. Multiple parties can be named jointly as the
+                    second party.</a:documentation>
+                <value>Secretary [sec]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is a recorder, redactor, or
+                    other person responsible for expressing the views of a organization.</a:documentation>
+                <value>Set designer [std]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who translates the rough
+                    sketches of the art director into actual architectural structures for a theatrical presentation, entertainment, motion picture, etc. Set designers draw
+                    the detailed guides and specifications for building the set.</a:documentation>
+                <value>Signer [sgn]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person whose signature appears without a presentation
+                    or other statement indicative of provenance. When there is a presentation statement, use Inscriber [ins].</a:documentation>
+                <value>Singer [sng]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who uses his/her/their voice with
+                    or without instrumental accompaniment to produce music. A performance may or may not include actual words.</a:documentation>
+                <value>Sound designer [sds]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who produces and reproduces the sound score
+                    (both live and recorded), the installation of microphones, the setting of sound levels, and the coordination of sources of sound for a
+                    production.</a:documentation>
+                <value>Speaker [spk]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who participates in a program (often broadcast)
+                    and makes a formalized contribution or presentation generally prepared in advance.</a:documentation>
+                <value>Sponsor [spn]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that issued a contract or under
+                    the auspices of which a work has been written, printed, published, etc.</a:documentation>
+                <value>Stage manager [stm]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who is in charge of everything that occurs on a
+                    performance stage, and who acts as chief of all crews and assistant to a director during rehearsals.</a:documentation>
+                <value>Standards body [stn]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for an organization responsible for the development or
+                    enforcement of a standard.</a:documentation>
+                <value>Stereotyper [str]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who creates a new plate for
+                    printing by molding or copying another printing surface.</a:documentation>
+                <value>Storyteller [stl]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person relaying a story with creative and/or theatrical
+                    interpretation.</a:documentation>
+                <value>Supporting host [sht]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that supports (by allocating
+                    facilities, staff, or other resources) a project, program, meeting, event, data objects, material culture objects, or other entities capable of
+                    support.</a:documentation>
+                <value>Surveyor [srv]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who does measurements of
+                    tracts of land, etc. to determine location, forms, and boundaries.</a:documentation>
+                <value>Teacher [tch]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who, in the context of a resource, gives
+                    instruction in an intellectual subject or demonstrates while teaching physical skills.</a:documentation>
+                <value>Technical director [tcd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who is ultimately in charge of scenery, props,
+                    lights and sound for a production.</a:documentation>
+                <value>Thesis advisor [ths]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person under whose supervision a degree candidate
+                    develops and presents a thesis, mémoire, or text of a dissertation.</a:documentation>
+                <value>Transcriber [trc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who prepares a handwritten or typewritten copy
+                    from original material, including from dictated or orally recorded material. For makers of pen-facsimiles, use Facsimilist [fac].</a:documentation>
+                <value>Translator [trl]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who renders a text from one
+                    language into another, or from an older form of a language into the modern form.</a:documentation>
+                <value>Type designer [tyd]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who designed the type face used
+                    in a particular item.</a:documentation>
+                <value>Typographer [tyg]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization primarily responsible for choice
+                    and arrangement of type used in an item. If the typographer is also responsible for other aspects of the graphic design of a book (e.g., Book
+                    designer [bkd]), codes for both functions may be needed.</a:documentation>
+                <value>UFPerformer of research</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                <value>UFPlates, Printer of</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                <value>University place [uvp]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the name of a place where a university that is associated
+                    with a resource is located, for example, a university where an academic dissertation or thesis was presented.</a:documentation>
+                <value>USE Expert</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                <value>Videographer [vdg]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization in charge of a video production,
+                    e.g. the video recording of a stage production as opposed to a commercial motion picture. The videographer may be the camera operator or may
+                    supervise one or more camera operators. Do not confuse with cinematographer.</a:documentation>
+                <value>Vocalist [voc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who principally exhibits singing
+                    skills in a musical or dramatic presentation or entertainment.</a:documentation>
+                <value>Witness [wit]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who verifies the truthfulness of an event or
+                    action.</a:documentation>
+                <value>Wood-engraver [wde]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who makes prints by cutting the
+                    image in relief on the end-grain of a wood block.</a:documentation>
+                <value>Woodcutter [wdc]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who makes prints by cutting the
+                    image in relief on the plank side of a wood block.</a:documentation>
+                <value>Writer of accompanying material [wam]</value>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who writes significant material
+                    which accompanies a sound recording or other audiovisual material.</a:documentation>
+            </choice>
         </element>
     </define>
+    <!-- end <ROLE> element pattern -->
 
-    <!-- end globally defined elements -->
+    <!-- *** end globally defined elements *** -->
 
     <!-- begin @RESP attribute pattern -->
     <define name="RESP-attribute">
@@ -8575,5 +9214,5 @@
     </define>
     <!-- end @RESP attribute pattern -->
 
-    <!-- close root <grammar> element -->
 </grammar>
+<!-- end root <grammar> element -->

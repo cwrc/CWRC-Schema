@@ -180,7 +180,7 @@
 				'properties_BIBCIT', 
 				'properties_SOURCEDESC', 
 				'properties_REVISIONDESC', 
-				'properties_RESPONSIBILITY', 
+				'properties_WORKFLOW', 
 				'properties_ITEM', 
 				'properties_ENTRY', 
 				'properties_AUTHORSUMMARY', 
@@ -307,15 +307,17 @@
 				'properties_BIBCIT_ID', 
 				'properties_BIBCIT_QTDIN', 
 				'properties_BIBCITS_ID', 
-				'properties_RESPONSIBILITY_WORKSTATUS', 
-				'properties_RESPONSIBILITY_WORKVALUE', 
+				'properties_WORKFLOW_WORKCATEGORY', 
+				'properties_WORKFLOW_WORKSTAMP', 
+				'properties_WORKFLOW_WORKSTATUS', 
 				'properties_CWRCHEADER_TYPE', 
 				'properties_STANDARD_WROTEORPUBLISHEDAS', 
 				'properties_CWRC_ID', 
 				'properties_CWRC_SEX', 
 				'properties_CWRC_PERSON', 
 				'properties_CWRC_NATIONALITYCATEGORY');
-var facetsBoxes= new Array('facets_DATERANGE_CALENDAR', 
+var facetsBoxes= new Array('facets_ROLE', 
+				'facets_DATERANGE_CALENDAR', 
 				'facets_DATERANGE_CERTAINTY', 
 				'facets_DATERANGE_EXACT', 
 				'facets_RACECOLOUR_FOREBEAR', 
@@ -407,8 +409,9 @@ var facetsBoxes= new Array('facets_DATERANGE_CALENDAR',
 				'facets_INTIMATERELATIONSHIPS_EROTIC', 
 				'facets_RESIDENCEANDMOBILITY_RELATIONTO', 
 				'facets_BIBCIT_QTDIN', 
-				'facets_RESPONSIBILITY_WORKSTATUS', 
-				'facets_RESPONSIBILITY_WORKVALUE', 
+				'facets_WORKFLOW_WORKCATEGORY', 
+				'facets_WORKFLOW_WORKSTAMP', 
+				'facets_WORKFLOW_WORKSTATUS', 
 				'facets_STANDARD_WROTEORPUBLISHEDAS', 
 				'facets_CWRC_PERSON', 
 				'facets_CWRC_NATIONALITYCATEGORY');
@@ -584,7 +587,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_BIBCIT', 
 				'usedBy_SOURCEDESC', 
 				'usedBy_REVISIONDESC', 
-				'usedBy_RESPONSIBILITY', 
+				'usedBy_WORKFLOW', 
 				'usedBy_ITEM', 
 				'usedBy_ENTRY', 
 				'usedBy_AUTHORSUMMARY', 
@@ -773,8 +776,9 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_BIBCIT_PLACEHOLDER', 
 				'usedBy_BIBCIT_QTDIN', 
 				'usedBy_BIBCITS_ID', 
-				'usedBy_RESPONSIBILITY_WORKSTATUS', 
-				'usedBy_RESPONSIBILITY_WORKVALUE', 
+				'usedBy_WORKFLOW_WORKCATEGORY', 
+				'usedBy_WORKFLOW_WORKSTAMP', 
+				'usedBy_WORKFLOW_WORKSTATUS', 
 				'usedBy_CWRCHEADER_TYPE', 
 				'usedBy_STANDARD_WROTEORPUBLISHEDAS', 
 				'usedBy_CWRC_ID', 
@@ -955,7 +959,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_BIBCIT', 
 				'source_SOURCEDESC', 
 				'source_REVISIONDESC', 
-				'source_RESPONSIBILITY', 
+				'source_WORKFLOW', 
 				'source_ITEM', 
 				'source_ENTRY', 
 				'source_AUTHORSUMMARY', 
@@ -1144,8 +1148,9 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_BIBCIT_PLACEHOLDER', 
 				'source_BIBCIT_QTDIN', 
 				'source_BIBCITS_ID', 
-				'source_RESPONSIBILITY_WORKSTATUS', 
-				'source_RESPONSIBILITY_WORKVALUE', 
+				'source_WORKFLOW_WORKCATEGORY', 
+				'source_WORKFLOW_WORKSTAMP', 
+				'source_WORKFLOW_WORKSTATUS', 
 				'source_CWRCHEADER_TYPE', 
 				'source_STANDARD_WROTEORPUBLISHEDAS', 
 				'source_CWRC_ID', 
@@ -1313,7 +1318,7 @@ var instanceBoxes= new Array('instance_CWRC',
 				'instance_VIOLENCE', 
 				'instance_BIBCIT', 
 				'instance_REVISIONDESC', 
-				'instance_RESPONSIBILITY', 
+				'instance_WORKFLOW', 
 				'instance_ENTRY', 
 				'instance_AUTHORSUMMARY', 
 				'instance_WORKSCITED', 
@@ -1491,7 +1496,7 @@ var diagramBoxes= new Array('diagram_CWRC',
 				'diagram_BIBCIT', 
 				'diagram_SOURCEDESC', 
 				'diagram_REVISIONDESC', 
-				'diagram_RESPONSIBILITY', 
+				'diagram_WORKFLOW', 
 				'diagram_ITEM', 
 				'diagram_ENTRY', 
 				'diagram_AUTHORSUMMARY', 
@@ -1610,7 +1615,7 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_BIBCIT', 
 				'annotations_SOURCEDESC', 
 				'annotations_REVISIONDESC', 
-				'annotations_RESPONSIBILITY', 
+				'annotations_WORKFLOW', 
 				'annotations_ITEM', 
 				'annotations_ENTRY', 
 				'annotations_WORKSCITED', 
@@ -1738,8 +1743,9 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_HEALTH_ISSUE', 
 				'annotations_INTIMATERELATIONSHIPS_EROTIC', 
 				'annotations_PRODUCTION_MEDIATYPE', 
-				'annotations_RESPONSIBILITY_WORKSTATUS', 
-				'annotations_RESPONSIBILITY_WORKVALUE', 
+				'annotations_WORKFLOW_WORKCATEGORY', 
+				'annotations_WORKFLOW_WORKSTAMP', 
+				'annotations_WORKFLOW_WORKSTATUS', 
 				'annotations_CWRCHEADER_TYPE', 
 				'annotations_STANDARD_WROTEORPUBLISHEDAS', 
 				'annotations_CWRC_SEX', 
@@ -1833,7 +1839,7 @@ var attributesBoxes= new Array('attributes_CWRC',
 				'attributes_PRODUCTION', 
 				'attributes_TEXTSCOPE', 
 				'attributes_BIBCIT', 
-				'attributes_RESPONSIBILITY', 
+				'attributes_WORKFLOW', 
 				'attributes_STANDARD', 
 				'attributes_RESP-attribute');
 var modelBoxes= new Array('model_CWRC', 
@@ -1999,7 +2005,7 @@ var modelBoxes= new Array('model_CWRC',
 				'model_VIOLENCE', 
 				'model_BIBCIT', 
 				'model_REVISIONDESC', 
-				'model_RESPONSIBILITY', 
+				'model_WORKFLOW', 
 				'model_ENTRY', 
 				'model_AUTHORSUMMARY', 
 				'model_STANDARD', 
@@ -2397,7 +2403,6 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#REMUNERATION" target="_self" title="No namespace">REMUNERATION</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
                                                 <div><b><a href="index.html#RESIDENCEANDMOBILITY" target="_self" title="No namespace">RESIDENCEANDMOBILITY</a></b></div>
-                                                <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
                                                 <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
                                                 <div><b><a href="index.html#RFICTIONALIZATION" target="_self" title="No namespace">RFICTIONALIZATION</a></b></div>
                                                 <div><b><a href="index.html#RLANDMARKTEXT" target="_self" title="No namespace">RLANDMARKTEXT</a></b></div>
@@ -2451,6 +2456,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#TTONESTYLE" target="_self" title="No namespace">TTONESTYLE</a></b></div>
                                                 <div><b><a href="index.html#TVOICENARRATION" target="_self" title="No namespace">TVOICENARRATION</a></b></div>
                                                 <div><b><a href="index.html#VIOLENCE" target="_self" title="No namespace">VIOLENCE</a></b></div>
+                                                <div><b><a href="index.html#WORKFLOW" target="_self" title="No namespace">WORKFLOW</a></b></div>
                                                 <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
                                                 <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
                                              </div>
@@ -2659,7 +2665,6 @@ var modelBoxes= new Array('model_CWRC',
                                           <div><b><a href="index.html#REMUNERATION" target="_self" title="No namespace">REMUNERATION</a></b></div>
                                           <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
                                           <div><b><a href="index.html#RESIDENCEANDMOBILITY" target="_self" title="No namespace">RESIDENCEANDMOBILITY</a></b></div>
-                                          <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
                                           <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
                                           <div><b><a href="index.html#RFICTIONALIZATION" target="_self" title="No namespace">RFICTIONALIZATION</a></b></div>
                                           <div><b><a href="index.html#RLANDMARKTEXT" target="_self" title="No namespace">RLANDMARKTEXT</a></b></div>
@@ -2713,6 +2718,7 @@ var modelBoxes= new Array('model_CWRC',
                                           <div><b><a href="index.html#TTONESTYLE" target="_self" title="No namespace">TTONESTYLE</a></b></div>
                                           <div><b><a href="index.html#TVOICENARRATION" target="_self" title="No namespace">TVOICENARRATION</a></b></div>
                                           <div><b><a href="index.html#VIOLENCE" target="_self" title="No namespace">VIOLENCE</a></b></div>
+                                          <div><b><a href="index.html#WORKFLOW" target="_self" title="No namespace">WORKFLOW</a></b></div>
                                           <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
                                           <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
                                        </div>
@@ -2922,7 +2928,6 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#REMUNERATION" target="_self" title="No namespace">REMUNERATION</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
                                                 <div><b><a href="index.html#RESIDENCEANDMOBILITY" target="_self" title="No namespace">RESIDENCEANDMOBILITY</a></b></div>
-                                                <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
                                                 <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
                                                 <div><b><a href="index.html#RFICTIONALIZATION" target="_self" title="No namespace">RFICTIONALIZATION</a></b></div>
                                                 <div><b><a href="index.html#RLANDMARKTEXT" target="_self" title="No namespace">RLANDMARKTEXT</a></b></div>
@@ -2976,6 +2981,7 @@ var modelBoxes= new Array('model_CWRC',
                                                 <div><b><a href="index.html#TTONESTYLE" target="_self" title="No namespace">TTONESTYLE</a></b></div>
                                                 <div><b><a href="index.html#TVOICENARRATION" target="_self" title="No namespace">TVOICENARRATION</a></b></div>
                                                 <div><b><a href="index.html#VIOLENCE" target="_self" title="No namespace">VIOLENCE</a></b></div>
+                                                <div><b><a href="index.html#WORKFLOW" target="_self" title="No namespace">WORKFLOW</a></b></div>
                                                 <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
                                                 <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
                                              </div>
