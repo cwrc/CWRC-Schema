@@ -2979,6 +2979,7 @@
                         <value>UNGENDERED</value>
                         <value>UNKNOWN</value>
                         <data type="string"/>
+                        <empty/>
                     </choice>
                 </oneOrMore>
             </list>
@@ -8259,7 +8260,7 @@
     <!-- begin <ROLE> element pattern -->
     <define name="ROLE">
         <element name="ROLE">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Role element documentation here.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">MRB: Role element documentation here.</a:documentation>
             <choice>
                 <value>Actor [act]</value>
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who principally exhibits acting
