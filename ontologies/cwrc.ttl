@@ -1,0 +1,104 @@
+@prefix : <http://cwrc.ca/ns/cw> .
+@prefix : <http://www.w3.org/ns/oa#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix cw: <http://cwrc.ca/ns/cw#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://cwrc.ca/ns/cw#> rdf:type owl:Ontology ;
+                           
+			   dcterms:modified "2014-04-14T10:17:00-4:00"^^xsd:dateTime ;
+			   
+			   owl:versionInfo "0.1.20140414" ;
+			   
+			   dc:title "CWRC-Writer Data Model"@en ;
+			   
+			   dc:creator "James Chartrand"@en ;
+			   
+			   rdfs:comment "Simple ontology for CWRC-Writer concepts not covered by other ontologies."@en ;
+			   
+			   dc:description "Simple ontology for CWRC-Writer concepts not covered by other ontologies."@en ;
+			   
+			   rdfs:seeAlso <http://cwrc.ca/spec/writer/20140414/index.html> ;
+			   
+			   owl:versionIRI <http://cwrc.ca/spec/writer/20140414/cw.owl> .
+                  
+                  
+
+###  http://cwrc.ca/ns/cw#Certainty
+
+cw:Certainty rdf:type owl:Class ;
+              
+              rdfs:label “Certainty"@en ;
+              
+              rdfs:subClassOf skos:Concept ;
+              
+              rdfs:comment """The certainty of an Annotation."""@en ;
+              
+              rdfs:isDefinedBy <http://cwrc.ca/ns/cw#> .
+
+###  http://cwrc.ca/ns/cw#hasCertainty
+
+cw:hasCertainty rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "hasCertainty"@en ;
+               
+               rdfs:comment "The certainty of the annotation"@en ;
+               
+               rdfs:isDefinedBy <http://cwrc.ca/ns/cw#> ;
+               
+               rdfs:domain oa:Annotation ;
+               
+               rdfs:range cw:Certainty .
+               
+###  http://cwrc.ca/ns/cw#certaintyScheme
+
+cw:certaintyScheme rdf:type owl:NamedIndividual, skos:ConceptScheme ;
+                    
+			  rdfs:label “certaintyScheme"@en ;
+                    
+			  rdfs:comment "The skos concept scheme for CWRC certainty"@en .
+
+         
+###  http://cwrc.ca/ns/cw#definite
+
+cw:definite rdf:type owl:NamedIndividual, cw:Certainty ;
+               
+               rdfs:comment “Absolute certainty."@en ;
+               
+               skos:prefLabel “definite"@en ;
+               
+               skos:inScheme cw:certaintyScheme .
+
+###  http://cwrc.ca/ns/cw#reasonable
+
+cw:reasonable rdf:type owl:NamedIndividual, cw:Certainty ;
+               
+               rdfs:comment “Reasonable certainty."@en ;
+               
+               skos:prefLabel “Reasonable certainty"@en ;
+               
+               skos:inScheme cw:certaintyScheme .
+               
+###  http://cwrc.ca/ns/cw#probable
+
+cw:probable rdf:type owl:NamedIndividual, cw:Certainty ;
+               
+               rdfs:comment "Probable certainty."@en ;
+               
+               skos:prefLabel "Probable certainty"@en ;
+               
+               skos:inScheme cw:certaintyScheme .
+               
+###  http://cwrc.ca/ns/cw#speculative
+
+cw:speculative rdf:type owl:NamedIndividual, cw:Certainty ;
+               
+               rdfs:comment "Speculative certainty."@en ;
+               
+               skos:prefLabel "Speculative certainty"@en ;
+               
+               skos:inScheme cw:certaintyScheme .
