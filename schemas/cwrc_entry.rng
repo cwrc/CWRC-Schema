@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- File name: cwrc_entry.rng -->
+
 <!-- 
-    * MRB: Mon 24-Mar-2014
+    * MRB: Mon 16-Jun-2014
     *
     * Purpose: RELAX NG schema to model CWRC entries (biography- and writing-related information about writers and historical figures)
     *
@@ -22,7 +24,10 @@
     * each element.  The only difference in design approaches between the original Orlando SGML DTDs and the CWRC RELAX NG entry schema is that the SGML
     * DTDs defined the attributes for each element only once in the DTD in an ATTLIST declaration, whereas the attributes for an element are defined each
     * time the element is used in the RELAX NG schema; because the majority of attributes are defined and utilized only once in one specific element,
-    * this is a viable approach.
+    * this is a viable approach.  Moreover, designing the schema in this manner has made possible the following improvements:
+    *     - an improved ability to modify and revise the schema;
+    *     - the ability to generate documentation based on a W3C XML Schema version of this RELAX NG schema; and
+    *     - performance improvements in terms of speed when when referencing the schema from XML documents.
 -->
 
 <!-- 
@@ -134,7 +139,7 @@
     <!-- begin <CWRCHEADER> element pattern -->
     <define name="CWRCHEADER">
         <element name="CWRCHEADER">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Equivalent to TEI\'s TEIHeader, CWRCHeader supplies the
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Equivalent to TEI's TEIHeader, CWRCHeader supplies the
                 descriptive and declarative information making up an electronic title page prefixed to every TEI-conformant text.</a:documentation>
             <optional>
                 <attribute name="TYPE" a:defaultValue="text">
@@ -383,6 +388,7 @@
                         <ref name="VIOLENCE"/>
                         <ref name="PRODUCTION"/>
                         <ref name="RECEPTION"/>
+                        <ref name="RESEARCHNOTE"/>
                         <ref name="TEXTUALFEATURES"/>
                         <ref name="TEXTSCOPE"/>
                     </choice>
