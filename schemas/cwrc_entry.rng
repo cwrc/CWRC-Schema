@@ -356,6 +356,10 @@
             <interleave>
                 <optional>
                     <element name="AUTHORSUMMARY">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element authorSummary is specially devised for
+                            researchers to make summary statements about an author before opening individual production, reception, or textual features elements.
+                            You are encouraged to use this element to preface the writing document of each woman writer. It is useful both for minor writers about
+                            whom little is known, and for major writers whose work needs to be sumarized before launching into the details.</a:documentation>
                         <optional>
                             <ref name="HEADING"/>
                         </optional>
@@ -1710,6 +1714,9 @@
             </optional>
             <optional>
                 <attribute name="RELEVANCE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to
+                        each and every chronStruct. This element assignes importance to the chronstruct you have just created with categories for comprehensive,
+                        period, decade, and selective (in order of increasing importance).</a:documentation>
                     <choice>
                         <value>SELECTIVE</value>
                         <value>PERIOD</value>
@@ -2980,11 +2987,15 @@
                     </choice>
                 </attribute>
             </optional>
-            <text/>
-            <ref name="BIBCITS"/>
-            <ref name="NAME"/>
-            <ref name="QUOTE"/>
-            <ref name="SOCALLED"/>
+            <zeroOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="NAME"/>
+                    <ref name="QUOTE"/>
+                    <ref name="SOCALLED"/>
+                </choice>
+            </zeroOrMore>
         </element>
     </define>
 
@@ -5604,8 +5615,13 @@
 
     <define name="PMODEOFPUBLICATION">
         <element name="PMODEOFPUBLICATION">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element deals with the specific ways in which a book is brought
+                to print; it does not address issues of circulation. It should capture issues around the publisher (or details about the printer where pertinent and
+                different from the publisher).</a:documentation>
             <optional>
                 <attribute name="PUBLICATIONMODE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute allows you to identify how a text was
+                        published.</a:documentation>
                     <choice>
                         <value>SELF-PUBLICATION</value>
                         <value>PRIVATELYPRINTED</value>
@@ -5680,6 +5696,8 @@
 
     <define name="PRELATIONSWITHPUBLISHER">
         <element name="PRELATIONSWITHPUBLISHER">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element is designed to capture the mainly professional
+                relationship between a writer and her publisher (or, in the case of dramatists, her producer).</a:documentation>
             <optional>
                 <attribute name="RELATIONSHIPTYPE">
                     <choice>
@@ -5937,8 +5955,13 @@
 
     <define name="RDESTRUCTIONOFWORK">
         <element name="RDESTRUCTIONOFWORK">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element marks destruction of a work by the author herself, her
+                readers, or others. This category can include the conscious destruction or requests for destruction whether or not the destruction was carried
+                out.</a:documentation>
             <optional>
                 <attribute name="DESTROYEDBY">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute, attached to rDestructionOfWork, allows you to
+                        indicate who destroyed the work.</a:documentation>
                     <choice>
                         <value>SELF</value>
                         <value>OTHER</value>
@@ -6436,8 +6459,14 @@
 
     <define name="RRESPONSES">
         <element name="RRESPONSES">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element addresses reactions to the literary work, the oeuvre in
+                general, or the writer's role as an author/artist which are either written or event centred.</a:documentation>
             <optional>
                 <attribute name="FORMALITY">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Formality is an attribute attached to rResponses which allows
+                        you to indicate whether a response to a work was formal or informal. "Formal" means that the response was written or otherwise made public;
+                        "informal" refers to those incidents more difficult to define: a hearty slap on the back, rude looks from strangers on buses, a snubbing by her
+                        social set.</a:documentation>
                     <choice>
                         <value>FORMAL</value>
                         <value>INFORMAL</value>
@@ -6446,6 +6475,8 @@
             </optional>
             <optional>
                 <attribute name="GENDEREDRESPONSE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute attached to rResponses indicates whether or not
+                        a response to a work was predicated on the writer's gender.</a:documentation>
                     <choice>
                         <value>ADFEMINAM</value>
                         <value>GENDEREDYES</value>
@@ -6545,6 +6576,9 @@
 
     <define name="GENERICRANGE">
         <element name="GENERICRANGE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element genericRange is specially designed to work only in
+                conjunction with authorSummary statements. It applies to discussions of a woman writer's whole oeuvre and the kind of generic choices she made
+                over a lifetime of writing.</a:documentation>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -7058,8 +7092,14 @@
 
     <define name="TMOTIF">
         <element name="TMOTIF">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The motif element pertains to those discussions of a significant
+                scene, episode, or idea in the text where these are not coterminal with the entire text. Motifs are localized or contained within the plot and may recur
+                in multiple works or multiple times in the same work.</a:documentation>
             <optional>
-                <attribute name="MOTIFNAME"/>
+                <attribute name="MOTIFNAME">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Atribute on tMotif used to regularize discussions of motifs to
+                        one of the descriptors listed under Motif.</a:documentation>
+                </attribute>
             </optional>
             <oneOrMore>
                 <choice>
@@ -7540,8 +7580,13 @@
 
     <define name="TSETTINGDATE">
         <element name="TSETTINGDATE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element pertains to the real or fictive time in which a text is set
+                relative to the writer's time, not the reader's. It can be specific, "1789," or general "in the future," or relative to a non-dateable event "after the
+                war."</a:documentation>
             <optional>
                 <attribute name="SETTINGDATETYPE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">SettingDateType is an optional attribute that specifies the
+                        historical era of a setting.</a:documentation>
                     <choice>
                         <value>PAST</value>
                         <value>PRESENT</value>
@@ -7670,8 +7715,12 @@
 
     <define name="RPENALTIES">
         <element name="RPENALTIES">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element discusses the negative effects and consequences of
+                writing.</a:documentation>
             <optional>
                 <attribute name="CENSORSHIP">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If a book is censored, we consider that action a type of penalty.
+                        This attribute flags when censorship has been one of the penalizing responses to a work.</a:documentation>
                     <value>CENSORSHIPYES</value>
                 </attribute>
             </optional>
@@ -7738,6 +7787,9 @@
 
     <define name="PLITERARYMOVEMENTS">
         <element name="PLITERARYMOVEMENTS">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meant to capture commentary on literary or artistic movements of
+                thought that influenced her writing or with which she had significant contact and especially those in which she was a participant. Make sure to capture
+                the name of the movement throughout.</a:documentation>
             <optional>
                 <attribute name="INVOLVEMENT" a:defaultValue="INVOLVEMENTYES">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute attached to
@@ -8128,8 +8180,13 @@
 
     <define name="TCHARACTERTYPEROLE">
         <element name="TCHARACTERTYPEROLE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element allows you to capture information about the societal
+                roles played by characters. If the character is noteworthy for being married, single, a fallen woman, a teacher/governess, a professional, an invalid, a
+                down-trodden housewife, or a mother, record it here.</a:documentation>
             <optional>
                 <attribute name="PROTAGONIST">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute defines the type of character where
+                        useful.</a:documentation>
                     <choice>
                         <value>MALE</value>
                         <value>FEMALE</value>
@@ -9009,11 +9066,15 @@
                     which accompanies a sound recording or other audiovisual material.</a:documentation>
                 </choice>
             </attribute>
-            <text/>
-            <ref name="BIBCITS"/>
-            <ref name="NAME"/>
-            <ref name="QUOTE"/>
-            <ref name="SOCALLED"/>
+            <zeroOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="NAME"/>
+                    <ref name="QUOTE"/>
+                    <ref name="SOCALLED"/>
+                </choice>
+            </zeroOrMore>
         </element>
     </define>
     <!-- end <ROLE> element pattern -->
