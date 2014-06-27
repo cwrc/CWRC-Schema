@@ -745,24 +745,18 @@
                                     <value>PARTNER</value>
                                 </choice>
                             </attribute>
-                            <interleave>
-                                <optional>
-                                    <choice>
-                                        <ref name="CHILDREN"/>
-                                        <ref name="PLACE"/>
-                                    </choice>
-                                </optional>
-                                <zeroOrMore>
+                            <oneOrMore>
+                                <choice>
+                                    <ref name="BIBCITS"/>
+                                    <ref name="CHILDREN"/>
                                     <ref name="CHRONSTRUCT"/>
+                                    <ref name="DATASTRUCT"/>
+                                    <ref name="HEADING"/>
                                     <ref name="P"/>
-                                </zeroOrMore>
-                                <optional>
-                                    <choice>
-                                        <ref name="BIBCITS"/>
-                                        <ref name="SCHOLARNOTE"/>
-                                    </choice>
-                                </optional>
-                            </interleave>
+                                    <ref name="PLACE"/>
+                                    <ref name="SCHOLARNOTE"/>
+                                </choice>
+                            </oneOrMore>
                         </element>
                         <element name="MARRIAGE">
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
@@ -1951,12 +1945,6 @@
                     </element>
                 </choice>
             </oneOrMore>
-            <optional>
-                <choice>
-                    <ref name="MARRIED"/>
-                    <ref name="NICKNAME"/>
-                </choice>
-            </optional>
         </element>
     </define>
 
@@ -2987,7 +2975,7 @@
                     </choice>
                 </attribute>
             </optional>
-            <zeroOrMore>
+            <oneOrMore>
                 <choice>
                     <text/>
                     <ref name="BIBCITS"/>
@@ -2995,7 +2983,7 @@
                     <ref name="QUOTE"/>
                     <ref name="SOCALLED"/>
                 </choice>
-            </zeroOrMore>
+            </oneOrMore>
         </element>
     </define>
 
@@ -3805,9 +3793,6 @@
             </oneOrMore>
             <optional>
                 <ref name="NICKNAME"/>
-            </optional>
-            <optional>
-                <ref name="MARRIED"/>
             </optional>
         </element>
     </define>
@@ -9066,7 +9051,7 @@
                     which accompanies a sound recording or other audiovisual material.</a:documentation>
                 </choice>
             </attribute>
-            <zeroOrMore>
+            <oneOrMore>
                 <choice>
                     <text/>
                     <ref name="BIBCITS"/>
@@ -9074,7 +9059,7 @@
                     <ref name="QUOTE"/>
                     <ref name="SOCALLED"/>
                 </choice>
-            </zeroOrMore>
+            </oneOrMore>
         </element>
     </define>
     <!-- end <ROLE> element pattern -->
