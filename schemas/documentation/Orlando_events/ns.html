@@ -1,0 +1,1295 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for orlando_events.xsd</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
+         <!--
+        var propertiesBoxes= new Array('properties_orlando_events.xsd', 
+				'properties_FREESTANDING_EVENT', 
+				'properties_CHRONSTRUCT', 
+				'properties_DATE', 
+				'properties_DATERANGE', 
+				'properties_DATESTRUCT', 
+				'properties_DAY', 
+				'properties_MONTH', 
+				'properties_OCCASION', 
+				'properties_SEASON', 
+				'properties_TIME', 
+				'properties_YEAR', 
+				'properties_CHRONPROSE', 
+				'properties_BIBCITS', 
+				'properties_BIBCIT', 
+				'properties_RESEARCHNOTE', 
+				'properties_NAME', 
+				'properties_SIC', 
+				'properties_SOCALLED', 
+				'properties_FOREIGN', 
+				'properties_ORGNAME', 
+				'properties_PLACE', 
+				'properties_ADDRESS', 
+				'properties_ADDRLINE', 
+				'properties_AREA', 
+				'properties_GEOG', 
+				'properties_PLACENAME', 
+				'properties_REGION', 
+				'properties_SETTLEMENT', 
+				'properties_TGENRE', 
+				'properties_TITLE', 
+				'properties_RS', 
+				'properties_TOPIC', 
+				'properties_QUOTE', 
+				'properties_EMPH', 
+				'properties_L', 
+				'properties_LG', 
+				'properties_KEYWORDCLASS', 
+				'properties_SCHOLARNOTE', 
+				'properties_P', 
+				'properties_XREF', 
+				'properties_TINTERTEXTUALITY', 
+				'properties_TTHEMETOPIC', 
+				'properties_SCHOLARNOTES', 
+				'properties_SHORTPROSE', 
+				'properties_RESEARCHNOTES', 
+				'properties_KEYWORDCLASSES', 
+				'properties_RESPONSIBILITIES', 
+				'properties_RESPONSIBILITY', 
+				'properties_ITEM', 
+				'properties_DATE_CALENDAR', 
+				'properties_DATE_CERTAINTY', 
+				'properties_DATE_VALUE', 
+				'properties_DATERANGE_CALENDAR', 
+				'properties_DATERANGE_CERTAINTY', 
+				'properties_DATERANGE_EXACT', 
+				'properties_DATERANGE_FROM', 
+				'properties_DATERANGE_TO', 
+				'properties_DAY_VALUE', 
+				'properties_MONTH_CERTAINTY', 
+				'properties_MONTH_VALUE', 
+				'properties_SEASON_CERTAINTY', 
+				'properties_SEASON_VALUE', 
+				'properties_YEAR_CERTAINTY', 
+				'properties_YEAR_VALUE', 
+				'properties_DATESTRUCT_CALENDAR', 
+				'properties_DATESTRUCT_CERTAINTY', 
+				'properties_DATESTRUCT_VALUE', 
+				'properties_BIBCIT_DBREF', 
+				'properties_BIBCIT_QTDIN', 
+				'properties_SIC_CORR', 
+				'properties_ADDRESS_CT_ID', 
+				'properties_ADDRESS_CT_ISLINK', 
+				'properties_GEOG_CT_ID', 
+				'properties_GEOG_CT_ISLINK', 
+				'properties_PLACENAME_CT_ID', 
+				'properties_PLACENAME_CT_ISLINK', 
+				'properties_REGION_CT_ID', 
+				'properties_REGION_CT_ISLINK', 
+				'properties_SETTLEMENT_CT_ID', 
+				'properties_SETTLEMENT_CT_ISLINK', 
+				'properties_PLACE_CT_ID', 
+				'properties_PLACE_CT_ISLINK', 
+				'properties_RS_REG', 
+				'properties_LG_TYPE', 
+				'properties_QUOTE_DIRECT', 
+				'properties_TITLE_CT_ID', 
+				'properties_TITLE_CT_ISLINK', 
+				'properties_TITLE_REND', 
+				'properties_TITLE_TITLETYPE', 
+				'properties_TGENRE_GENRENAME', 
+				'properties_ORGNAME_CT_ID', 
+				'properties_ORGNAME_CT_ISLINK', 
+				'properties_ORGNAME_STANDARD', 
+				'properties_FOREIGN_LANG', 
+				'properties_NAME_CT_ID', 
+				'properties_NAME_CT_ISLINK', 
+				'properties_NAME_STANDARD', 
+				'properties_RESP-attribute_RESP', 
+				'properties_XREF_URL', 
+				'properties_P_ID', 
+				'properties_SCHOLARNOTE_ID', 
+				'properties_SCHOLARNOTE_SN_ID', 
+				'properties_CHRONSTRUCT_CHRONCOLUMN', 
+				'properties_CHRONSTRUCT_CHRONCOLUMN1', 
+				'properties_CHRONSTRUCT_CHRONCOLUMN2', 
+				'properties_CHRONSTRUCT_CHRONCOLUMN3', 
+				'properties_CHRONSTRUCT_ID', 
+				'properties_CHRONSTRUCT_RELEVANCE', 
+				'properties_CHRONSTRUCT_RELEVANCE1', 
+				'properties_CHRONSTRUCT_RELEVANCE2', 
+				'properties_CHRONSTRUCT_RELEVANCE3', 
+				'properties_RESPONSIBILITY_WORKSTATUS', 
+				'properties_RESPONSIBILITY_WORKVALUE', 
+				'properties_FREESTANDING_EVENT_EID', 
+				'properties_FREESTANDING_EVENT_FILENAME', 
+				'properties_FREESTANDING_EVENT_ID', 
+				'properties_FREESTANDING_EVENT_SUBSET', 
+				'properties_FREESTANDING_EVENT_TITLE');
+var facetsBoxes= new Array('facets_DATE_CALENDAR', 
+				'facets_DATE_CERTAINTY', 
+				'facets_DATERANGE_CALENDAR', 
+				'facets_DATERANGE_CERTAINTY', 
+				'facets_DATERANGE_EXACT', 
+				'facets_MONTH_CERTAINTY', 
+				'facets_SEASON_CERTAINTY', 
+				'facets_YEAR_CERTAINTY', 
+				'facets_DATESTRUCT_CALENDAR', 
+				'facets_DATESTRUCT_CERTAINTY', 
+				'facets_BIBCIT_QTDIN', 
+				'facets_QUOTE_DIRECT', 
+				'facets_TITLE_TITLETYPE', 
+				'facets_TGENRE_GENRENAME', 
+				'facets_RESP-attribute_RESP', 
+				'facets_CHRONSTRUCT_CHRONCOLUMN', 
+				'facets_CHRONSTRUCT_CHRONCOLUMN1', 
+				'facets_CHRONSTRUCT_CHRONCOLUMN2', 
+				'facets_CHRONSTRUCT_CHRONCOLUMN3', 
+				'facets_CHRONSTRUCT_RELEVANCE', 
+				'facets_CHRONSTRUCT_RELEVANCE1', 
+				'facets_CHRONSTRUCT_RELEVANCE2', 
+				'facets_CHRONSTRUCT_RELEVANCE3');
+var usedByBoxes= new Array('usedBy_CHRONSTRUCT', 
+				'usedBy_DATE', 
+				'usedBy_DATERANGE', 
+				'usedBy_DATESTRUCT', 
+				'usedBy_DAY', 
+				'usedBy_MONTH', 
+				'usedBy_OCCASION', 
+				'usedBy_SEASON', 
+				'usedBy_TIME', 
+				'usedBy_YEAR', 
+				'usedBy_CHRONPROSE', 
+				'usedBy_BIBCITS', 
+				'usedBy_BIBCIT', 
+				'usedBy_RESEARCHNOTE', 
+				'usedBy_NAME', 
+				'usedBy_SIC', 
+				'usedBy_SOCALLED', 
+				'usedBy_FOREIGN', 
+				'usedBy_ORGNAME', 
+				'usedBy_PLACE', 
+				'usedBy_ADDRESS', 
+				'usedBy_ADDRLINE', 
+				'usedBy_AREA', 
+				'usedBy_GEOG', 
+				'usedBy_PLACENAME', 
+				'usedBy_REGION', 
+				'usedBy_SETTLEMENT', 
+				'usedBy_TGENRE', 
+				'usedBy_TITLE', 
+				'usedBy_RS', 
+				'usedBy_TOPIC', 
+				'usedBy_QUOTE', 
+				'usedBy_EMPH', 
+				'usedBy_L', 
+				'usedBy_LG', 
+				'usedBy_KEYWORDCLASS', 
+				'usedBy_SCHOLARNOTE', 
+				'usedBy_P', 
+				'usedBy_XREF', 
+				'usedBy_TINTERTEXTUALITY', 
+				'usedBy_TTHEMETOPIC', 
+				'usedBy_SCHOLARNOTES', 
+				'usedBy_SHORTPROSE', 
+				'usedBy_RESEARCHNOTES', 
+				'usedBy_KEYWORDCLASSES', 
+				'usedBy_RESPONSIBILITIES', 
+				'usedBy_RESPONSIBILITY', 
+				'usedBy_ITEM', 
+				'usedBy_DATE_CALENDAR', 
+				'usedBy_DATE_CERTAINTY', 
+				'usedBy_DATE_VALUE', 
+				'usedBy_DATERANGE_CALENDAR', 
+				'usedBy_DATERANGE_CERTAINTY', 
+				'usedBy_DATERANGE_EXACT', 
+				'usedBy_DATERANGE_FROM', 
+				'usedBy_DATERANGE_TO', 
+				'usedBy_DAY_VALUE', 
+				'usedBy_MONTH_CERTAINTY', 
+				'usedBy_MONTH_VALUE', 
+				'usedBy_SEASON_CERTAINTY', 
+				'usedBy_SEASON_VALUE', 
+				'usedBy_YEAR_CERTAINTY', 
+				'usedBy_YEAR_VALUE', 
+				'usedBy_DATESTRUCT_CALENDAR', 
+				'usedBy_DATESTRUCT_CERTAINTY', 
+				'usedBy_DATESTRUCT_VALUE', 
+				'usedBy_BIBCIT_DBREF', 
+				'usedBy_BIBCIT_PLACEHOLDER', 
+				'usedBy_BIBCIT_QTDIN', 
+				'usedBy_SIC_CORR', 
+				'usedBy_ADDRESS_CT_ID', 
+				'usedBy_ADDRESS_CT_ISLINK', 
+				'usedBy_ADDRESS_CURRENT', 
+				'usedBy_ADDRESS_REG', 
+				'usedBy_AREA_REG', 
+				'usedBy_GEOG_CT_ID', 
+				'usedBy_GEOG_CT_ISLINK', 
+				'usedBy_GEOG_CURRENT', 
+				'usedBy_GEOG_REG', 
+				'usedBy_PLACENAME_CT_ID', 
+				'usedBy_PLACENAME_CT_ISLINK', 
+				'usedBy_PLACENAME_CURRENT', 
+				'usedBy_PLACENAME_REG', 
+				'usedBy_REGION_CT_ID', 
+				'usedBy_REGION_CT_ISLINK', 
+				'usedBy_REGION_CURRENT', 
+				'usedBy_REGION_REG', 
+				'usedBy_SETTLEMENT_CT_ID', 
+				'usedBy_SETTLEMENT_CT_ISLINK', 
+				'usedBy_SETTLEMENT_CURRENT', 
+				'usedBy_SETTLEMENT_REG', 
+				'usedBy_PLACE_CT_ID', 
+				'usedBy_PLACE_CT_ISLINK', 
+				'usedBy_RS_REG', 
+				'usedBy_RS_TYPE', 
+				'usedBy_LG_TYPE', 
+				'usedBy_QUOTE_DIRECT', 
+				'usedBy_TOPIC_STANDARD', 
+				'usedBy_TITLE_CT_ID', 
+				'usedBy_TITLE_CT_ISLINK', 
+				'usedBy_TITLE_REG', 
+				'usedBy_TITLE_REND', 
+				'usedBy_TITLE_TITLETYPE', 
+				'usedBy_TGENRE_GENRENAME', 
+				'usedBy_TGENRE_PROPOSEDALTERNATIVENAME', 
+				'usedBy_ORGNAME_CT_ID', 
+				'usedBy_ORGNAME_CT_ISLINK', 
+				'usedBy_ORGNAME_ORGTYPE', 
+				'usedBy_ORGNAME_REG', 
+				'usedBy_ORGNAME_STANDARD', 
+				'usedBy_FOREIGN_LANG', 
+				'usedBy_FOREIGN_REG', 
+				'usedBy_NAME_CT_ID', 
+				'usedBy_NAME_CT_ISLINK', 
+				'usedBy_NAME_STANDARD', 
+				'usedBy_KEYWORDCLASS_KEYWORDTYPE', 
+				'usedBy_RESP-attribute_RESP', 
+				'usedBy_XREF_URL', 
+				'usedBy_P_ID', 
+				'usedBy_SCHOLARNOTE_ID', 
+				'usedBy_SCHOLARNOTE_SN_ID', 
+				'usedBy_CHRONSTRUCT_CHRONCOLUMN', 
+				'usedBy_CHRONSTRUCT_CHRONCOLUMN1', 
+				'usedBy_CHRONSTRUCT_CHRONCOLUMN2', 
+				'usedBy_CHRONSTRUCT_CHRONCOLUMN3', 
+				'usedBy_CHRONSTRUCT_ID', 
+				'usedBy_CHRONSTRUCT_RELEVANCE', 
+				'usedBy_CHRONSTRUCT_RELEVANCE1', 
+				'usedBy_CHRONSTRUCT_RELEVANCE2', 
+				'usedBy_CHRONSTRUCT_RELEVANCE3', 
+				'usedBy_RESPONSIBILITY_WORKSTATUS', 
+				'usedBy_RESPONSIBILITY_WORKVALUE', 
+				'usedBy_FREESTANDING_EVENT_EID', 
+				'usedBy_FREESTANDING_EVENT_FILENAME', 
+				'usedBy_FREESTANDING_EVENT_ID', 
+				'usedBy_FREESTANDING_EVENT_SUBSET', 
+				'usedBy_FREESTANDING_EVENT_TITLE', 
+				'usedBy_RESP-attribute');
+var sourceBoxes= new Array('source_FREESTANDING_EVENT', 
+				'source_CHRONSTRUCT', 
+				'source_DATE', 
+				'source_DATERANGE', 
+				'source_DATESTRUCT', 
+				'source_DAY', 
+				'source_MONTH', 
+				'source_OCCASION', 
+				'source_SEASON', 
+				'source_TIME', 
+				'source_YEAR', 
+				'source_CHRONPROSE', 
+				'source_BIBCITS', 
+				'source_BIBCIT', 
+				'source_RESEARCHNOTE', 
+				'source_NAME', 
+				'source_SIC', 
+				'source_SOCALLED', 
+				'source_FOREIGN', 
+				'source_ORGNAME', 
+				'source_PLACE', 
+				'source_ADDRESS', 
+				'source_ADDRLINE', 
+				'source_AREA', 
+				'source_GEOG', 
+				'source_PLACENAME', 
+				'source_REGION', 
+				'source_SETTLEMENT', 
+				'source_TGENRE', 
+				'source_TITLE', 
+				'source_RS', 
+				'source_TOPIC', 
+				'source_QUOTE', 
+				'source_EMPH', 
+				'source_L', 
+				'source_LG', 
+				'source_KEYWORDCLASS', 
+				'source_SCHOLARNOTE', 
+				'source_P', 
+				'source_XREF', 
+				'source_TINTERTEXTUALITY', 
+				'source_TTHEMETOPIC', 
+				'source_SCHOLARNOTES', 
+				'source_SHORTPROSE', 
+				'source_RESEARCHNOTES', 
+				'source_KEYWORDCLASSES', 
+				'source_RESPONSIBILITIES', 
+				'source_RESPONSIBILITY', 
+				'source_ITEM', 
+				'source_DATE_CALENDAR', 
+				'source_DATE_CERTAINTY', 
+				'source_DATE_VALUE', 
+				'source_DATERANGE_CALENDAR', 
+				'source_DATERANGE_CERTAINTY', 
+				'source_DATERANGE_EXACT', 
+				'source_DATERANGE_FROM', 
+				'source_DATERANGE_TO', 
+				'source_DAY_VALUE', 
+				'source_MONTH_CERTAINTY', 
+				'source_MONTH_VALUE', 
+				'source_SEASON_CERTAINTY', 
+				'source_SEASON_VALUE', 
+				'source_YEAR_CERTAINTY', 
+				'source_YEAR_VALUE', 
+				'source_DATESTRUCT_CALENDAR', 
+				'source_DATESTRUCT_CERTAINTY', 
+				'source_DATESTRUCT_VALUE', 
+				'source_BIBCIT_DBREF', 
+				'source_BIBCIT_PLACEHOLDER', 
+				'source_BIBCIT_QTDIN', 
+				'source_SIC_CORR', 
+				'source_ADDRESS_CT_ID', 
+				'source_ADDRESS_CT_ISLINK', 
+				'source_ADDRESS_CURRENT', 
+				'source_ADDRESS_REG', 
+				'source_AREA_REG', 
+				'source_GEOG_CT_ID', 
+				'source_GEOG_CT_ISLINK', 
+				'source_GEOG_CURRENT', 
+				'source_GEOG_REG', 
+				'source_PLACENAME_CT_ID', 
+				'source_PLACENAME_CT_ISLINK', 
+				'source_PLACENAME_CURRENT', 
+				'source_PLACENAME_REG', 
+				'source_REGION_CT_ID', 
+				'source_REGION_CT_ISLINK', 
+				'source_REGION_CURRENT', 
+				'source_REGION_REG', 
+				'source_SETTLEMENT_CT_ID', 
+				'source_SETTLEMENT_CT_ISLINK', 
+				'source_SETTLEMENT_CURRENT', 
+				'source_SETTLEMENT_REG', 
+				'source_PLACE_CT_ID', 
+				'source_PLACE_CT_ISLINK', 
+				'source_RS_REG', 
+				'source_RS_TYPE', 
+				'source_LG_TYPE', 
+				'source_QUOTE_DIRECT', 
+				'source_TOPIC_STANDARD', 
+				'source_TITLE_CT_ID', 
+				'source_TITLE_CT_ISLINK', 
+				'source_TITLE_REG', 
+				'source_TITLE_REND', 
+				'source_TITLE_TITLETYPE', 
+				'source_TGENRE_GENRENAME', 
+				'source_TGENRE_PROPOSEDALTERNATIVENAME', 
+				'source_ORGNAME_CT_ID', 
+				'source_ORGNAME_CT_ISLINK', 
+				'source_ORGNAME_ORGTYPE', 
+				'source_ORGNAME_REG', 
+				'source_ORGNAME_STANDARD', 
+				'source_FOREIGN_LANG', 
+				'source_FOREIGN_REG', 
+				'source_NAME_CT_ID', 
+				'source_NAME_CT_ISLINK', 
+				'source_NAME_STANDARD', 
+				'source_KEYWORDCLASS_KEYWORDTYPE', 
+				'source_RESP-attribute_RESP', 
+				'source_XREF_URL', 
+				'source_P_ID', 
+				'source_SCHOLARNOTE_ID', 
+				'source_SCHOLARNOTE_SN_ID', 
+				'source_CHRONSTRUCT_CHRONCOLUMN', 
+				'source_CHRONSTRUCT_CHRONCOLUMN1', 
+				'source_CHRONSTRUCT_CHRONCOLUMN2', 
+				'source_CHRONSTRUCT_CHRONCOLUMN3', 
+				'source_CHRONSTRUCT_ID', 
+				'source_CHRONSTRUCT_RELEVANCE', 
+				'source_CHRONSTRUCT_RELEVANCE1', 
+				'source_CHRONSTRUCT_RELEVANCE2', 
+				'source_CHRONSTRUCT_RELEVANCE3', 
+				'source_RESPONSIBILITY_WORKSTATUS', 
+				'source_RESPONSIBILITY_WORKVALUE', 
+				'source_FREESTANDING_EVENT_EID', 
+				'source_FREESTANDING_EVENT_FILENAME', 
+				'source_FREESTANDING_EVENT_ID', 
+				'source_FREESTANDING_EVENT_SUBSET', 
+				'source_FREESTANDING_EVENT_TITLE', 
+				'source_RESP-attribute');
+var instanceBoxes= new Array('instance_FREESTANDING_EVENT', 
+				'instance_CHRONSTRUCT', 
+				'instance_DATESTRUCT', 
+				'instance_CHRONPROSE', 
+				'instance_BIBCITS', 
+				'instance_RESEARCHNOTE', 
+				'instance_NAME', 
+				'instance_SOCALLED', 
+				'instance_FOREIGN', 
+				'instance_ORGNAME', 
+				'instance_PLACE', 
+				'instance_ADDRESS', 
+				'instance_TGENRE', 
+				'instance_TITLE', 
+				'instance_TOPIC', 
+				'instance_QUOTE', 
+				'instance_L', 
+				'instance_LG', 
+				'instance_KEYWORDCLASS', 
+				'instance_SCHOLARNOTE', 
+				'instance_P', 
+				'instance_TINTERTEXTUALITY', 
+				'instance_SCHOLARNOTES', 
+				'instance_SHORTPROSE', 
+				'instance_RESEARCHNOTES', 
+				'instance_KEYWORDCLASSES', 
+				'instance_RESPONSIBILITIES', 
+				'instance_RESPONSIBILITY', 
+				'instance_ITEM');
+var diagramBoxes= new Array('diagram_FREESTANDING_EVENT', 
+				'diagram_CHRONSTRUCT', 
+				'diagram_DATE', 
+				'diagram_DATERANGE', 
+				'diagram_DATESTRUCT', 
+				'diagram_DAY', 
+				'diagram_MONTH', 
+				'diagram_OCCASION', 
+				'diagram_SEASON', 
+				'diagram_TIME', 
+				'diagram_YEAR', 
+				'diagram_CHRONPROSE', 
+				'diagram_BIBCITS', 
+				'diagram_BIBCIT', 
+				'diagram_RESEARCHNOTE', 
+				'diagram_NAME', 
+				'diagram_SIC', 
+				'diagram_SOCALLED', 
+				'diagram_FOREIGN', 
+				'diagram_ORGNAME', 
+				'diagram_PLACE', 
+				'diagram_ADDRESS', 
+				'diagram_ADDRLINE', 
+				'diagram_AREA', 
+				'diagram_GEOG', 
+				'diagram_PLACENAME', 
+				'diagram_REGION', 
+				'diagram_SETTLEMENT', 
+				'diagram_TGENRE', 
+				'diagram_TITLE', 
+				'diagram_RS', 
+				'diagram_TOPIC', 
+				'diagram_QUOTE', 
+				'diagram_EMPH', 
+				'diagram_L', 
+				'diagram_LG', 
+				'diagram_KEYWORDCLASS', 
+				'diagram_SCHOLARNOTE', 
+				'diagram_P', 
+				'diagram_XREF', 
+				'diagram_TINTERTEXTUALITY', 
+				'diagram_TTHEMETOPIC', 
+				'diagram_SCHOLARNOTES', 
+				'diagram_SHORTPROSE', 
+				'diagram_RESEARCHNOTES', 
+				'diagram_KEYWORDCLASSES', 
+				'diagram_RESPONSIBILITIES', 
+				'diagram_RESPONSIBILITY', 
+				'diagram_ITEM', 
+				'diagram_RESP-attribute');
+var annotationBoxes= new Array('annotations_FREESTANDING_EVENT', 
+				'annotations_CHRONSTRUCT', 
+				'annotations_DATE', 
+				'annotations_DATERANGE', 
+				'annotations_DATESTRUCT', 
+				'annotations_DAY', 
+				'annotations_MONTH', 
+				'annotations_OCCASION', 
+				'annotations_TIME', 
+				'annotations_CHRONPROSE', 
+				'annotations_BIBCIT', 
+				'annotations_RESEARCHNOTE', 
+				'annotations_SIC', 
+				'annotations_SOCALLED', 
+				'annotations_FOREIGN', 
+				'annotations_ORGNAME', 
+				'annotations_ADDRESS', 
+				'annotations_ADDRLINE', 
+				'annotations_GEOG', 
+				'annotations_PLACENAME', 
+				'annotations_REGION', 
+				'annotations_SETTLEMENT', 
+				'annotations_TGENRE', 
+				'annotations_TITLE', 
+				'annotations_RS', 
+				'annotations_TOPIC', 
+				'annotations_QUOTE', 
+				'annotations_EMPH', 
+				'annotations_L', 
+				'annotations_LG', 
+				'annotations_P', 
+				'annotations_XREF', 
+				'annotations_TTHEMETOPIC', 
+				'annotations_DATE_CALENDAR', 
+				'annotations_DATE_CERTAINTY', 
+				'annotations_DATERANGE_CALENDAR', 
+				'annotations_DATERANGE_CERTAINTY', 
+				'annotations_DATERANGE_EXACT', 
+				'annotations_DAY_VALUE', 
+				'annotations_MONTH_CERTAINTY', 
+				'annotations_MONTH_VALUE', 
+				'annotations_SEASON_CERTAINTY', 
+				'annotations_SEASON_VALUE', 
+				'annotations_YEAR_CERTAINTY', 
+				'annotations_YEAR_VALUE', 
+				'annotations_DATESTRUCT_CALENDAR', 
+				'annotations_DATESTRUCT_CERTAINTY', 
+				'annotations_DATESTRUCT_VALUE', 
+				'annotations_ADDRESS_REG', 
+				'annotations_AREA_REG', 
+				'annotations_GEOG_REG', 
+				'annotations_PLACENAME_REG', 
+				'annotations_REGION_REG', 
+				'annotations_SETTLEMENT_REG', 
+				'annotations_RS_REG', 
+				'annotations_LG_TYPE', 
+				'annotations_QUOTE_DIRECT', 
+				'annotations_TITLE_REG', 
+				'annotations_TITLE_REND', 
+				'annotations_TITLE_TITLETYPE', 
+				'annotations_TGENRE_GENRENAME', 
+				'annotations_ORGNAME_ORGTYPE', 
+				'annotations_ORGNAME_REG', 
+				'annotations_FOREIGN_LANG', 
+				'annotations_FOREIGN_REG', 
+				'annotations_RESP-attribute_RESP', 
+				'annotations_XREF_URL', 
+				'annotations_CHRONSTRUCT_CHRONCOLUMN', 
+				'annotations_CHRONSTRUCT_RELEVANCE');
+var attributesBoxes= new Array('attributes_FREESTANDING_EVENT', 
+				'attributes_CHRONSTRUCT', 
+				'attributes_DATE', 
+				'attributes_DATERANGE', 
+				'attributes_DATESTRUCT', 
+				'attributes_DAY', 
+				'attributes_MONTH', 
+				'attributes_SEASON', 
+				'attributes_YEAR', 
+				'attributes_BIBCIT', 
+				'attributes_NAME', 
+				'attributes_SIC', 
+				'attributes_FOREIGN', 
+				'attributes_ORGNAME', 
+				'attributes_PLACE', 
+				'attributes_ADDRESS', 
+				'attributes_AREA', 
+				'attributes_GEOG', 
+				'attributes_PLACENAME', 
+				'attributes_REGION', 
+				'attributes_SETTLEMENT', 
+				'attributes_TGENRE', 
+				'attributes_TITLE', 
+				'attributes_RS', 
+				'attributes_TOPIC', 
+				'attributes_QUOTE', 
+				'attributes_LG', 
+				'attributes_KEYWORDCLASS', 
+				'attributes_SCHOLARNOTE', 
+				'attributes_P', 
+				'attributes_XREF', 
+				'attributes_RESPONSIBILITY', 
+				'attributes_RESP-attribute');
+var modelBoxes= new Array('model_FREESTANDING_EVENT', 
+				'model_CHRONSTRUCT', 
+				'model_DATE', 
+				'model_DATERANGE', 
+				'model_DATESTRUCT', 
+				'model_SEASON', 
+				'model_YEAR', 
+				'model_CHRONPROSE', 
+				'model_BIBCITS', 
+				'model_BIBCIT', 
+				'model_RESEARCHNOTE', 
+				'model_NAME', 
+				'model_SIC', 
+				'model_SOCALLED', 
+				'model_FOREIGN', 
+				'model_ORGNAME', 
+				'model_PLACE', 
+				'model_ADDRESS', 
+				'model_AREA', 
+				'model_GEOG', 
+				'model_PLACENAME', 
+				'model_REGION', 
+				'model_SETTLEMENT', 
+				'model_TGENRE', 
+				'model_TITLE', 
+				'model_RS', 
+				'model_TOPIC', 
+				'model_QUOTE', 
+				'model_L', 
+				'model_LG', 
+				'model_KEYWORDCLASS', 
+				'model_SCHOLARNOTE', 
+				'model_P', 
+				'model_TINTERTEXTUALITY', 
+				'model_SCHOLARNOTES', 
+				'model_SHORTPROSE', 
+				'model_RESEARCHNOTES', 
+				'model_KEYWORDCLASSES', 
+				'model_RESPONSIBILITIES', 
+				'model_RESPONSIBILITY', 
+				'model_ITEM');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                        //--></script></head>
+   <body>
+      <h2><a id="INDEX">Table of Contents</a></h2>
+      <div class="toc">
+         <form action="none">
+            <div><span> Group by: <select id="selectTOC" onchange="selectTOCGroupBy(this.options[this.selectedIndex].value, false, '.html', 'ns.html', 'comp.html');">
+                     <option value="toc_group_by_namespace" selected="selected">Namespace</option>
+                     <option value="toc_group_by_location">Location</option>
+                     <option value="toc_group_by_component_type">Component Type</option></select></span></div>
+         </form>
+         <div class="level1" id="toc_group_by_namespace" style="display:block">
+            <div>
+               <div class="level2">
+                  <p><input id="button_boxIdNamespace1" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1');" class="control" /><span class="indexGroupTitle">No namespace</span></p>
+                  <div id="boxIdNamespace1" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Element" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Element');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
+                                                <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
+                                                <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
+                                                <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
+                                                <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
+                                                <div><b><a href="index.html#CHRONPROSE" target="_self" title="No namespace">CHRONPROSE</a></b></div>
+                                                <div><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b></div>
+                                                <div><b><a href="index.html#DATE" target="_self" title="No namespace">DATE</a></b></div>
+                                                <div><b><a href="index.html#DATERANGE" target="_self" title="No namespace">DATERANGE</a></b></div>
+                                                <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
+                                                <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
+                                                <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
+                                                <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
+                                                <div><b><a href="index.html#FREESTANDING_EVENT" target="_self" title="No namespace">FREESTANDING_EVENT</a></b></div>
+                                                <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
+                                                <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
+                                                <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
+                                                <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
+                                                <div><b><a href="index.html#LG" target="_self" title="No namespace">LG</a></b></div>
+                                                <div><b><a href="index.html#MONTH" target="_self" title="No namespace">MONTH</a></b></div>
+                                                <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
+                                                <div><b><a href="index.html#OCCASION" target="_self" title="No namespace">OCCASION</a></b></div>
+                                                <div><b><a href="index.html#ORGNAME" target="_self" title="No namespace">ORGNAME</a></b></div>
+                                                <div><b><a href="index.html#P" target="_self" title="No namespace">P</a></b></div>
+                                                <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
+                                                <div><b><a href="index.html#PLACENAME" target="_self" title="No namespace">PLACENAME</a></b></div>
+                                                <div><b><a href="index.html#QUOTE" target="_self" title="No namespace">QUOTE</a></b></div>
+                                                <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
+                                                <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
+                                                <div><b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b></div>
+                                                <div><b><a href="index.html#RESPONSIBILITIES" target="_self" title="No namespace">RESPONSIBILITIES</a></b></div>
+                                                <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
+                                                <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
+                                                <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
+                                                <div><b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b></div>
+                                                <div><b><a href="index.html#SEASON" target="_self" title="No namespace">SEASON</a></b></div>
+                                                <div><b><a href="index.html#SETTLEMENT" target="_self" title="No namespace">SETTLEMENT</a></b></div>
+                                                <div><b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></div>
+                                                <div><b><a href="index.html#SIC" target="_self" title="No namespace">SIC</a></b></div>
+                                                <div><b><a href="index.html#SOCALLED" target="_self" title="No namespace">SOCALLED</a></b></div>
+                                                <div><b><a href="index.html#TGENRE" target="_self" title="No namespace">TGENRE</a></b></div>
+                                                <div><b><a href="index.html#TIME" target="_self" title="No namespace">TIME</a></b></div>
+                                                <div><b><a href="index.html#TINTERTEXTUALITY" target="_self" title="No namespace">TINTERTEXTUALITY</a></b></div>
+                                                <div><b><a href="index.html#TITLE" target="_self" title="No namespace">TITLE</a></b></div>
+                                                <div><b><a href="index.html#TOPIC" target="_self" title="No namespace">TOPIC</a></b></div>
+                                                <div><b><a href="index.html#TTHEMETOPIC" target="_self" title="No namespace">TTHEMETOPIC</a></b></div>
+                                                <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
+                                                <div><b><a href="index.html#YEAR" target="_self" title="No namespace">YEAR</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Attribute_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attribute Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_component_type" style="display:none">
+            <div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Element" type="image" value="-" src="img/btM.gif" onclick="switchState('Element');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Elements</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Element" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
+                                          <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
+                                          <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
+                                          <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
+                                          <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
+                                          <div><b><a href="index.html#CHRONPROSE" target="_self" title="No namespace">CHRONPROSE</a></b></div>
+                                          <div><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b></div>
+                                          <div><b><a href="index.html#DATE" target="_self" title="No namespace">DATE</a></b></div>
+                                          <div><b><a href="index.html#DATERANGE" target="_self" title="No namespace">DATERANGE</a></b></div>
+                                          <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
+                                          <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
+                                          <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
+                                          <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
+                                          <div><b><a href="index.html#FREESTANDING_EVENT" target="_self" title="No namespace">FREESTANDING_EVENT</a></b></div>
+                                          <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                          <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
+                                          <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
+                                          <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
+                                          <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
+                                          <div><b><a href="index.html#LG" target="_self" title="No namespace">LG</a></b></div>
+                                          <div><b><a href="index.html#MONTH" target="_self" title="No namespace">MONTH</a></b></div>
+                                          <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
+                                          <div><b><a href="index.html#OCCASION" target="_self" title="No namespace">OCCASION</a></b></div>
+                                          <div><b><a href="index.html#ORGNAME" target="_self" title="No namespace">ORGNAME</a></b></div>
+                                          <div><b><a href="index.html#P" target="_self" title="No namespace">P</a></b></div>
+                                          <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
+                                          <div><b><a href="index.html#PLACENAME" target="_self" title="No namespace">PLACENAME</a></b></div>
+                                          <div><b><a href="index.html#QUOTE" target="_self" title="No namespace">QUOTE</a></b></div>
+                                          <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
+                                          <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
+                                          <div><b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b></div>
+                                          <div><b><a href="index.html#RESPONSIBILITIES" target="_self" title="No namespace">RESPONSIBILITIES</a></b></div>
+                                          <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
+                                          <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
+                                          <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
+                                          <div><b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b></div>
+                                          <div><b><a href="index.html#SEASON" target="_self" title="No namespace">SEASON</a></b></div>
+                                          <div><b><a href="index.html#SETTLEMENT" target="_self" title="No namespace">SETTLEMENT</a></b></div>
+                                          <div><b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></div>
+                                          <div><b><a href="index.html#SIC" target="_self" title="No namespace">SIC</a></b></div>
+                                          <div><b><a href="index.html#SOCALLED" target="_self" title="No namespace">SOCALLED</a></b></div>
+                                          <div><b><a href="index.html#TGENRE" target="_self" title="No namespace">TGENRE</a></b></div>
+                                          <div><b><a href="index.html#TIME" target="_self" title="No namespace">TIME</a></b></div>
+                                          <div><b><a href="index.html#TINTERTEXTUALITY" target="_self" title="No namespace">TINTERTEXTUALITY</a></b></div>
+                                          <div><b><a href="index.html#TITLE" target="_self" title="No namespace">TITLE</a></b></div>
+                                          <div><b><a href="index.html#TOPIC" target="_self" title="No namespace">TOPIC</a></b></div>
+                                          <div><b><a href="index.html#TTHEMETOPIC" target="_self" title="No namespace">TTHEMETOPIC</a></b></div>
+                                          <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
+                                          <div><b><a href="index.html#YEAR" target="_self" title="No namespace">YEAR</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('Attribute_Group');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Attribute Groups</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Attribute_Group" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div style="clear:left"></div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_location" style="display:none">
+            <div>
+               <div class="level2">
+                  <p><input id="button_gr_orlando_events.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_events.xsd');" class="control" /><span class="indexGroupTitle">orlando_events.xsd</span></p>
+                  <div id="gr_orlando_events.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_orlando_events.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_events.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_orlando_events.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
+                                                <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
+                                                <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
+                                                <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
+                                                <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
+                                                <div><b><a href="index.html#CHRONPROSE" target="_self" title="No namespace">CHRONPROSE</a></b></div>
+                                                <div><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b></div>
+                                                <div><b><a href="index.html#DATE" target="_self" title="No namespace">DATE</a></b></div>
+                                                <div><b><a href="index.html#DATERANGE" target="_self" title="No namespace">DATERANGE</a></b></div>
+                                                <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
+                                                <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
+                                                <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
+                                                <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
+                                                <div><b><a href="index.html#FREESTANDING_EVENT" target="_self" title="No namespace">FREESTANDING_EVENT</a></b></div>
+                                                <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
+                                                <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
+                                                <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
+                                                <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
+                                                <div><b><a href="index.html#LG" target="_self" title="No namespace">LG</a></b></div>
+                                                <div><b><a href="index.html#MONTH" target="_self" title="No namespace">MONTH</a></b></div>
+                                                <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
+                                                <div><b><a href="index.html#OCCASION" target="_self" title="No namespace">OCCASION</a></b></div>
+                                                <div><b><a href="index.html#ORGNAME" target="_self" title="No namespace">ORGNAME</a></b></div>
+                                                <div><b><a href="index.html#P" target="_self" title="No namespace">P</a></b></div>
+                                                <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
+                                                <div><b><a href="index.html#PLACENAME" target="_self" title="No namespace">PLACENAME</a></b></div>
+                                                <div><b><a href="index.html#QUOTE" target="_self" title="No namespace">QUOTE</a></b></div>
+                                                <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
+                                                <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
+                                                <div><b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b></div>
+                                                <div><b><a href="index.html#RESPONSIBILITIES" target="_self" title="No namespace">RESPONSIBILITIES</a></b></div>
+                                                <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
+                                                <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
+                                                <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
+                                                <div><b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b></div>
+                                                <div><b><a href="index.html#SEASON" target="_self" title="No namespace">SEASON</a></b></div>
+                                                <div><b><a href="index.html#SETTLEMENT" target="_self" title="No namespace">SETTLEMENT</a></b></div>
+                                                <div><b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></div>
+                                                <div><b><a href="index.html#SIC" target="_self" title="No namespace">SIC</a></b></div>
+                                                <div><b><a href="index.html#SOCALLED" target="_self" title="No namespace">SOCALLED</a></b></div>
+                                                <div><b><a href="index.html#TGENRE" target="_self" title="No namespace">TGENRE</a></b></div>
+                                                <div><b><a href="index.html#TIME" target="_self" title="No namespace">TIME</a></b></div>
+                                                <div><b><a href="index.html#TINTERTEXTUALITY" target="_self" title="No namespace">TINTERTEXTUALITY</a></b></div>
+                                                <div><b><a href="index.html#TITLE" target="_self" title="No namespace">TITLE</a></b></div>
+                                                <div><b><a href="index.html#TOPIC" target="_self" title="No namespace">TOPIC</a></b></div>
+                                                <div><b><a href="index.html#TTHEMETOPIC" target="_self" title="No namespace">TTHEMETOPIC</a></b></div>
+                                                <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
+                                                <div><b><a href="index.html#YEAR" target="_self" title="No namespace">YEAR</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_orlando_events.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_events.xsdAttribute_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attribute Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_orlando_events.xsdAttribute_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Editor.
+         </div>
+      </div>
+   </body>
+</html>

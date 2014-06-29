@@ -1,0 +1,2446 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Schema documentation for orlando_biography.xsd</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
+         <!--
+        var propertiesBoxes= new Array('properties_orlando_biography.xsd', 
+				'properties_BIOGRAPHY', 
+				'properties_ORLANDOHEADER', 
+				'properties_FILEDESC', 
+				'properties_TITLESTMT', 
+				'properties_DOCTITLE', 
+				'properties_PUBLICATIONSTMT', 
+				'properties_AUTHORITY', 
+				'properties_SOURCEDESC', 
+				'properties_REVISIONDESC', 
+				'properties_RESPONSIBILITY', 
+				'properties_DATE', 
+				'properties_BIBCITS', 
+				'properties_RESEARCHNOTE', 
+				'properties_NAME', 
+				'properties_COMPANION', 
+				'properties_SOCALLED', 
+				'properties_CAUSE', 
+				'properties_QUOTE', 
+				'properties_AWARD', 
+				'properties_FOREIGN', 
+				'properties_ORGNAME', 
+				'properties_DENOMINATION', 
+				'properties_ETHNICITY', 
+				'properties_GEOGHERITAGE', 
+				'properties_CLASS', 
+				'properties_EMPH', 
+				'properties_SIC', 
+				'properties_PLACE', 
+				'properties_SCHOOL', 
+				'properties_INSTRUCTOR', 
+				'properties_SUBJECT', 
+				'properties_TEXT', 
+				'properties_TITLE', 
+				'properties_EMPLOYER', 
+				'properties_JOB', 
+				'properties_DATERANGE', 
+				'properties_REMUNERATION', 
+				'properties_SIGNIFICANTACTIVITY', 
+				'properties_TOPIC', 
+				'properties_NATIONALHERITAGE', 
+				'properties_NATIONALITY', 
+				'properties_POLITICALAFFILIATION', 
+				'properties_KEYWORDCLASS', 
+				'properties_RACECOLOUR', 
+				'properties_RS', 
+				'properties_SEPARATION', 
+				'properties_CHILDLESSNESS', 
+				'properties_CHILDREN', 
+				'properties_DATESTRUCT', 
+				'properties_TIME', 
+				'properties_DAY', 
+				'properties_MONTH', 
+				'properties_OCCASION', 
+				'properties_SEASON', 
+				'properties_YEAR', 
+				'properties_SCHOLARNOTE', 
+				'properties_P', 
+				'properties_BIRTHNAME', 
+				'properties_STYLED', 
+				'properties_SELFCONSTRUCTED', 
+				'properties_PSEUDONYM', 
+				'properties_MARRIED', 
+				'properties_TITLED', 
+				'properties_GIVEN', 
+				'properties_SURNAME', 
+				'properties_NICKNAME', 
+				'properties_BIRTHPOSITION', 
+				'properties_CONTESTEDBEHAVIOUR', 
+				'properties_DEGREE', 
+				'properties_DIVORCE', 
+				'properties_INDEXED', 
+				'properties_LANGUAGE', 
+				'properties_LIVESWITH', 
+				'properties_SEXUALIDENTITY', 
+				'properties_ROYAL', 
+				'properties_XREF', 
+				'properties_ADDRESS', 
+				'properties_ADDRLINE', 
+				'properties_AREA', 
+				'properties_GEOG', 
+				'properties_PLACENAME', 
+				'properties_REGION', 
+				'properties_SETTLEMENT', 
+				'properties_L', 
+				'properties_LB', 
+				'properties_BIBCIT', 
+				'properties_ITEM', 
+				'properties_DIV0', 
+				'properties_HEADING', 
+				'properties_AUTHORSUMMARY', 
+				'properties_DIV1', 
+				'properties_BIRTH', 
+				'properties_CHRONSTRUCT', 
+				'properties_CHRONPROSE', 
+				'properties_TGENRE', 
+				'properties_DIV2', 
+				'properties_DATASTRUCT', 
+				'properties_DATAITEM', 
+				'properties_RELIGIOUSNAME', 
+				'properties_SHORTPROSE', 
+				'properties_DEATH', 
+				'properties_EDUCATION', 
+				'properties_FAMILY', 
+				'properties_MEMBER', 
+				'properties_MARRIAGE', 
+				'properties_INTIMATERELATIONSHIPS', 
+				'properties_LOCATION', 
+				'properties_OCCUPATION', 
+				'properties_PERSONNAME', 
+				'properties_POLITICS', 
+				'properties_CULTURALFORMATION', 
+				'properties_CLASSISSUE', 
+				'properties_NATIONALITYISSUE', 
+				'properties_RACEANDETHNICITY', 
+				'properties_RELIGION', 
+				'properties_SEXUALITY', 
+				'properties_FRIENDSASSOCIATES', 
+				'properties_LEISUREANDSOCIETY', 
+				'properties_OTHERLIFEEVENT', 
+				'properties_VIOLENCE', 
+				'properties_WEALTH', 
+				'properties_HEALTH', 
+				'properties_STANDARD', 
+				'properties_WORKSCITED', 
+				'properties_SOURCE', 
+				'properties_BIOGPROSE', 
+				'properties_DATERANGE_CALENDAR', 
+				'properties_DATERANGE_CERTAINTY', 
+				'properties_DATERANGE_EXACT', 
+				'properties_DATERANGE_FROM', 
+				'properties_DATERANGE_TO', 
+				'properties_SIGNIFICANTACTIVITY_PHILANTHROPYVOLUNTEER', 
+				'properties_RACECOLOUR_FOREBEAR', 
+				'properties_RACECOLOUR_SELF-DEFINED', 
+				'properties_POLITICALAFFILIATION_ACTIVISM', 
+				'properties_POLITICALAFFILIATION_ID', 
+				'properties_POLITICALAFFILIATION_INVOLVEMENT', 
+				'properties_POLITICALAFFILIATION_MEMBERSHIP', 
+				'properties_POLITICALAFFILIATION_WOMAN-GENDERISSUE', 
+				'properties_NATIONALITY_CURRENTALTERNATIVETERM', 
+				'properties_NATIONALITY_SELF-DEFINED', 
+				'properties_NATIONALHERITAGE_FOREBEAR', 
+				'properties_NATIONALHERITAGE_SELF-DEFINED', 
+				'properties_JOB_FAMILYBUSINESS', 
+				'properties_JOB_ID', 
+				'properties_RS_REG', 
+				'properties_TITLE_TITLETYPE', 
+				'properties_SCHOOL_INSTITUTION', 
+				'properties_SCHOOL_INSTITUTIONLEVEL', 
+				'properties_SCHOOL_RELIGIOUS', 
+				'properties_SCHOOL_STUDENTBODY', 
+				'properties_TIME_CERTAINTY', 
+				'properties_TIME_VALUE', 
+				'properties_DAY_CERTAINTY', 
+				'properties_DAY_VALUE', 
+				'properties_MONTH_CERTAINTY', 
+				'properties_MONTH_VALUE', 
+				'properties_SEASON_CERTAINTY', 
+				'properties_SEASON_REG', 
+				'properties_SEASON_VALUE', 
+				'properties_YEAR_CERTAINTY', 
+				'properties_YEAR_REG', 
+				'properties_YEAR_VALUE', 
+				'properties_DATESTRUCT_CALENDAR', 
+				'properties_DATESTRUCT_CERTAINTY', 
+				'properties_DATESTRUCT_VALUE', 
+				'properties_STYLED_WROTEORPUBLISHEDAS', 
+				'properties_TITLED_WROTEORPUBLISHEDAS', 
+				'properties_MARRIED_WROTEORPUBLISHEDAS', 
+				'properties_PSEUDONYM_NAMESIGNIFIER', 
+				'properties_PSEUDONYM_WROTEORPUBLISHEDAS', 
+				'properties_SELFCONSTRUCTED_NAMESIGNIFIER', 
+				'properties_SELFCONSTRUCTED_WROTEORPUBLISHEDAS', 
+				'properties_NICKNAME_ID', 
+				'properties_NICKNAME_NAMECONNOTATION', 
+				'properties_NICKNAME_NAMESIGNIFIER', 
+				'properties_NICKNAME_NAMETYPE', 
+				'properties_NICKNAME_WROTEORPUBLISHEDAS', 
+				'properties_BIRTHNAME_WROTEORPUBLISHEDAS', 
+				'properties_BIRTHPOSITION_POSITION', 
+				'properties_INDEXED_INDEXSOURCE', 
+				'properties_INDEXED_WROTEORPUBLISHEDAS', 
+				'properties_LANGUAGE_COMPETENCE', 
+				'properties_SEXUALIDENTITY_CURRENTALTERNATIVETERM', 
+				'properties_SEXUALIDENTITY_SELF-DEFINED', 
+				'properties_ROYAL_REG', 
+				'properties_ROYAL_WROTEORPUBLISHEDAS', 
+				'properties_RESP-attribute_RESP', 
+				'properties_XREF_URL', 
+				'properties_CHILDREN_NUMBER', 
+				'properties_AREA_CURRENT', 
+				'properties_GEOG_ID', 
+				'properties_REGION_ID', 
+				'properties_PLACE_ID', 
+				'properties_CLASS_SELF-DEFINED', 
+				'properties_CLASS_SOCIALRANK', 
+				'properties_GEOGHERITAGE_FOREBEAR', 
+				'properties_GEOGHERITAGE_SELF-DEFINED', 
+				'properties_ETHNICITY_FOREBEAR', 
+				'properties_ETHNICITY_REG', 
+				'properties_ETHNICITY_SELF-DEFINED', 
+				'properties_DENOMINATION_SELF-DEFINED', 
+				'properties_FOREIGN_LANG', 
+				'properties_AWARD_AWARDTYPE', 
+				'properties_QUOTE_DIRECT', 
+				'properties_BIBCIT_DBREF', 
+				'properties_BIBCIT_ID', 
+				'properties_BIBCIT_QTDIN', 
+				'properties_BIBCITS_ID', 
+				'properties_DATE_CALENDAR', 
+				'properties_DATE_CERTAINTY', 
+				'properties_RESPONSIBILITY_WORKSTATUS', 
+				'properties_RESPONSIBILITY_WORKVALUE', 
+				'properties_ORLANDOHEADER_TYPE', 
+				'properties_TGENRE_GENRENAME', 
+				'properties_CHRONSTRUCT_CHRONCOLUMN', 
+				'properties_CHRONSTRUCT_CHRONCOLUMN1', 
+				'properties_CHRONSTRUCT_CHRONCOLUMN2', 
+				'properties_CHRONSTRUCT_CHRONCOLUMN3', 
+				'properties_CHRONSTRUCT_RELEVANCE', 
+				'properties_CHRONSTRUCT_RELEVANCE1', 
+				'properties_CHRONSTRUCT_RELEVANCE2', 
+				'properties_CHRONSTRUCT_RELEVANCE3', 
+				'properties_RELIGIOUSNAME_WROTEORPUBLISHEDAS', 
+				'properties_EDUCATION_MODE', 
+				'properties_MEMBER_RELATION', 
+				'properties_FAMILY_ID', 
+				'properties_INTIMATERELATIONSHIPS_EROTIC', 
+				'properties_LOCATION_RELATIONTO', 
+				'properties_HEALTH_ISSUE', 
+				'properties_STANDARD_WROTEORPUBLISHEDAS', 
+				'properties_BIOGRAPHY_PERSON', 
+				'properties_BIOGRAPHY_SEX');
+var facetsBoxes= new Array('facets_DATERANGE_CALENDAR', 
+				'facets_DATERANGE_CERTAINTY', 
+				'facets_DATERANGE_EXACT', 
+				'facets_SIGNIFICANTACTIVITY_PHILANTHROPYVOLUNTEER', 
+				'facets_RACECOLOUR_FOREBEAR', 
+				'facets_RACECOLOUR_SELF-DEFINED', 
+				'facets_POLITICALAFFILIATION_ACTIVISM', 
+				'facets_POLITICALAFFILIATION_INVOLVEMENT', 
+				'facets_POLITICALAFFILIATION_MEMBERSHIP', 
+				'facets_POLITICALAFFILIATION_WOMAN-GENDERISSUE', 
+				'facets_NATIONALITY_SELF-DEFINED', 
+				'facets_NATIONALHERITAGE_FOREBEAR', 
+				'facets_NATIONALHERITAGE_SELF-DEFINED', 
+				'facets_JOB_FAMILYBUSINESS', 
+				'facets_TITLE_TITLETYPE', 
+				'facets_SCHOOL_INSTITUTION', 
+				'facets_SCHOOL_INSTITUTIONLEVEL', 
+				'facets_SCHOOL_RELIGIOUS', 
+				'facets_SCHOOL_STUDENTBODY', 
+				'facets_TIME_CERTAINTY', 
+				'facets_DAY_CERTAINTY', 
+				'facets_MONTH_CERTAINTY', 
+				'facets_SEASON_CERTAINTY', 
+				'facets_YEAR_CERTAINTY', 
+				'facets_DATESTRUCT_CALENDAR', 
+				'facets_DATESTRUCT_CERTAINTY', 
+				'facets_STYLED_WROTEORPUBLISHEDAS', 
+				'facets_TITLED_WROTEORPUBLISHEDAS', 
+				'facets_MARRIED_WROTEORPUBLISHEDAS', 
+				'facets_PSEUDONYM_NAMESIGNIFIER', 
+				'facets_PSEUDONYM_WROTEORPUBLISHEDAS', 
+				'facets_SELFCONSTRUCTED_NAMESIGNIFIER', 
+				'facets_SELFCONSTRUCTED_WROTEORPUBLISHEDAS', 
+				'facets_NICKNAME_NAMECONNOTATION', 
+				'facets_NICKNAME_NAMESIGNIFIER', 
+				'facets_NICKNAME_NAMETYPE', 
+				'facets_NICKNAME_WROTEORPUBLISHEDAS', 
+				'facets_BIRTHNAME_WROTEORPUBLISHEDAS', 
+				'facets_BIRTHPOSITION_POSITION', 
+				'facets_INDEXED_INDEXSOURCE', 
+				'facets_INDEXED_WROTEORPUBLISHEDAS', 
+				'facets_LANGUAGE_COMPETENCE', 
+				'facets_SEXUALIDENTITY_SELF-DEFINED', 
+				'facets_ROYAL_WROTEORPUBLISHEDAS', 
+				'facets_RESP-attribute_RESP', 
+				'facets_CLASS_SELF-DEFINED', 
+				'facets_CLASS_SOCIALRANK', 
+				'facets_GEOGHERITAGE_FOREBEAR', 
+				'facets_GEOGHERITAGE_SELF-DEFINED', 
+				'facets_ETHNICITY_FOREBEAR', 
+				'facets_ETHNICITY_SELF-DEFINED', 
+				'facets_DENOMINATION_SELF-DEFINED', 
+				'facets_AWARD_AWARDTYPE', 
+				'facets_QUOTE_DIRECT', 
+				'facets_BIBCIT_QTDIN', 
+				'facets_DATE_CALENDAR', 
+				'facets_DATE_CERTAINTY', 
+				'facets_RESPONSIBILITY_WORKSTATUS', 
+				'facets_RESPONSIBILITY_WORKVALUE', 
+				'facets_TGENRE_GENRENAME', 
+				'facets_CHRONSTRUCT_CHRONCOLUMN', 
+				'facets_CHRONSTRUCT_CHRONCOLUMN1', 
+				'facets_CHRONSTRUCT_CHRONCOLUMN2', 
+				'facets_CHRONSTRUCT_CHRONCOLUMN3', 
+				'facets_CHRONSTRUCT_RELEVANCE', 
+				'facets_CHRONSTRUCT_RELEVANCE1', 
+				'facets_CHRONSTRUCT_RELEVANCE2', 
+				'facets_CHRONSTRUCT_RELEVANCE3', 
+				'facets_RELIGIOUSNAME_WROTEORPUBLISHEDAS', 
+				'facets_EDUCATION_MODE', 
+				'facets_MEMBER_RELATION', 
+				'facets_INTIMATERELATIONSHIPS_EROTIC', 
+				'facets_LOCATION_RELATIONTO', 
+				'facets_HEALTH_ISSUE', 
+				'facets_STANDARD_WROTEORPUBLISHEDAS', 
+				'facets_BIOGRAPHY_PERSON');
+var usedByBoxes= new Array('usedBy_ORLANDOHEADER', 
+				'usedBy_FILEDESC', 
+				'usedBy_TITLESTMT', 
+				'usedBy_DOCTITLE', 
+				'usedBy_PUBLICATIONSTMT', 
+				'usedBy_AUTHORITY', 
+				'usedBy_SOURCEDESC', 
+				'usedBy_REVISIONDESC', 
+				'usedBy_RESPONSIBILITY', 
+				'usedBy_DATE', 
+				'usedBy_BIBCITS', 
+				'usedBy_RESEARCHNOTE', 
+				'usedBy_NAME', 
+				'usedBy_COMPANION', 
+				'usedBy_SOCALLED', 
+				'usedBy_CAUSE', 
+				'usedBy_QUOTE', 
+				'usedBy_AWARD', 
+				'usedBy_FOREIGN', 
+				'usedBy_ORGNAME', 
+				'usedBy_DENOMINATION', 
+				'usedBy_ETHNICITY', 
+				'usedBy_GEOGHERITAGE', 
+				'usedBy_CLASS', 
+				'usedBy_EMPH', 
+				'usedBy_SIC', 
+				'usedBy_PLACE', 
+				'usedBy_SCHOOL', 
+				'usedBy_INSTRUCTOR', 
+				'usedBy_SUBJECT', 
+				'usedBy_TEXT', 
+				'usedBy_TITLE', 
+				'usedBy_EMPLOYER', 
+				'usedBy_JOB', 
+				'usedBy_DATERANGE', 
+				'usedBy_REMUNERATION', 
+				'usedBy_SIGNIFICANTACTIVITY', 
+				'usedBy_TOPIC', 
+				'usedBy_NATIONALHERITAGE', 
+				'usedBy_NATIONALITY', 
+				'usedBy_POLITICALAFFILIATION', 
+				'usedBy_KEYWORDCLASS', 
+				'usedBy_RACECOLOUR', 
+				'usedBy_RS', 
+				'usedBy_SEPARATION', 
+				'usedBy_CHILDLESSNESS', 
+				'usedBy_CHILDREN', 
+				'usedBy_DATESTRUCT', 
+				'usedBy_TIME', 
+				'usedBy_DAY', 
+				'usedBy_MONTH', 
+				'usedBy_OCCASION', 
+				'usedBy_SEASON', 
+				'usedBy_YEAR', 
+				'usedBy_SCHOLARNOTE', 
+				'usedBy_P', 
+				'usedBy_BIRTHNAME', 
+				'usedBy_STYLED', 
+				'usedBy_SELFCONSTRUCTED', 
+				'usedBy_PSEUDONYM', 
+				'usedBy_MARRIED', 
+				'usedBy_TITLED', 
+				'usedBy_GIVEN', 
+				'usedBy_SURNAME', 
+				'usedBy_NICKNAME', 
+				'usedBy_BIRTHPOSITION', 
+				'usedBy_CONTESTEDBEHAVIOUR', 
+				'usedBy_DEGREE', 
+				'usedBy_DIVORCE', 
+				'usedBy_INDEXED', 
+				'usedBy_LANGUAGE', 
+				'usedBy_LIVESWITH', 
+				'usedBy_SEXUALIDENTITY', 
+				'usedBy_ROYAL', 
+				'usedBy_XREF', 
+				'usedBy_ADDRESS', 
+				'usedBy_ADDRLINE', 
+				'usedBy_AREA', 
+				'usedBy_GEOG', 
+				'usedBy_PLACENAME', 
+				'usedBy_REGION', 
+				'usedBy_SETTLEMENT', 
+				'usedBy_L', 
+				'usedBy_LB', 
+				'usedBy_BIBCIT', 
+				'usedBy_ITEM', 
+				'usedBy_DIV0', 
+				'usedBy_HEADING', 
+				'usedBy_AUTHORSUMMARY', 
+				'usedBy_DIV1', 
+				'usedBy_BIRTH', 
+				'usedBy_CHRONSTRUCT', 
+				'usedBy_CHRONPROSE', 
+				'usedBy_TGENRE', 
+				'usedBy_DIV2', 
+				'usedBy_DATASTRUCT', 
+				'usedBy_DATAITEM', 
+				'usedBy_RELIGIOUSNAME', 
+				'usedBy_SHORTPROSE', 
+				'usedBy_DEATH', 
+				'usedBy_EDUCATION', 
+				'usedBy_FAMILY', 
+				'usedBy_MEMBER', 
+				'usedBy_MARRIAGE', 
+				'usedBy_INTIMATERELATIONSHIPS', 
+				'usedBy_LOCATION', 
+				'usedBy_OCCUPATION', 
+				'usedBy_PERSONNAME', 
+				'usedBy_POLITICS', 
+				'usedBy_CULTURALFORMATION', 
+				'usedBy_CLASSISSUE', 
+				'usedBy_NATIONALITYISSUE', 
+				'usedBy_RACEANDETHNICITY', 
+				'usedBy_RELIGION', 
+				'usedBy_SEXUALITY', 
+				'usedBy_FRIENDSASSOCIATES', 
+				'usedBy_LEISUREANDSOCIETY', 
+				'usedBy_OTHERLIFEEVENT', 
+				'usedBy_VIOLENCE', 
+				'usedBy_WEALTH', 
+				'usedBy_HEALTH', 
+				'usedBy_STANDARD', 
+				'usedBy_WORKSCITED', 
+				'usedBy_SOURCE', 
+				'usedBy_BIOGPROSE', 
+				'usedBy_DATERANGE_CALENDAR', 
+				'usedBy_DATERANGE_CERTAINTY', 
+				'usedBy_DATERANGE_EXACT', 
+				'usedBy_DATERANGE_FROM', 
+				'usedBy_DATERANGE_TO', 
+				'usedBy_SIGNIFICANTACTIVITY_PHILANTHROPYVOLUNTEER', 
+				'usedBy_SIGNIFICANTACTIVITY_REG', 
+				'usedBy_KEYWORDCLASS_KEYWORDTYPE', 
+				'usedBy_RACECOLOUR_FOREBEAR', 
+				'usedBy_RACECOLOUR_REG', 
+				'usedBy_RACECOLOUR_SELF-DEFINED', 
+				'usedBy_POLITICALAFFILIATION_ACTIVISM', 
+				'usedBy_POLITICALAFFILIATION_CURRENTALTERNATIVETERM', 
+				'usedBy_POLITICALAFFILIATION_ID', 
+				'usedBy_POLITICALAFFILIATION_INVOLVEMENT', 
+				'usedBy_POLITICALAFFILIATION_MEMBERSHIP', 
+				'usedBy_POLITICALAFFILIATION_REG', 
+				'usedBy_POLITICALAFFILIATION_WOMAN-GENDERISSUE', 
+				'usedBy_NATIONALITY_CURRENTALTERNATIVETERM', 
+				'usedBy_NATIONALITY_REG', 
+				'usedBy_NATIONALITY_SELF-DEFINED', 
+				'usedBy_NATIONALHERITAGE_CURRENTALTERNATIVETERM', 
+				'usedBy_NATIONALHERITAGE_FOREBEAR', 
+				'usedBy_NATIONALHERITAGE_REG', 
+				'usedBy_NATIONALHERITAGE_SELF-DEFINED', 
+				'usedBy_TOPIC_STANDARD', 
+				'usedBy_JOB_CURRENTALTERNATIVETERM', 
+				'usedBy_JOB_FAMILYBUSINESS', 
+				'usedBy_JOB_HISTORICALTERM', 
+				'usedBy_JOB_HISTORICALTERMCONTEXTDATE', 
+				'usedBy_JOB_ID', 
+				'usedBy_JOB_REG', 
+				'usedBy_RS_REG', 
+				'usedBy_RS_TYPE', 
+				'usedBy_TITLE_REG', 
+				'usedBy_TITLE_REND', 
+				'usedBy_TITLE_TITLETYPE', 
+				'usedBy_TEXT_REG', 
+				'usedBy_SUBJECT_REG', 
+				'usedBy_SCHOOL_INSTITUTION', 
+				'usedBy_SCHOOL_INSTITUTIONLEVEL', 
+				'usedBy_SCHOOL_REG', 
+				'usedBy_SCHOOL_RELIGIOUS', 
+				'usedBy_SCHOOL_STUDENTBODY', 
+				'usedBy_TIME_CERTAINTY', 
+				'usedBy_TIME_TYPE', 
+				'usedBy_TIME_VALUE', 
+				'usedBy_DAY_CERTAINTY', 
+				'usedBy_DAY_VALUE', 
+				'usedBy_MONTH_CERTAINTY', 
+				'usedBy_MONTH_VALUE', 
+				'usedBy_SEASON_CERTAINTY', 
+				'usedBy_SEASON_REG', 
+				'usedBy_SEASON_VALUE', 
+				'usedBy_YEAR_CERTAINTY', 
+				'usedBy_YEAR_REG', 
+				'usedBy_YEAR_VALUE', 
+				'usedBy_DATESTRUCT_CALENDAR', 
+				'usedBy_DATESTRUCT_CERTAINTY', 
+				'usedBy_DATESTRUCT_VALUE', 
+				'usedBy_STYLED_REG', 
+				'usedBy_STYLED_WROTEORPUBLISHEDAS', 
+				'usedBy_TITLED_REG', 
+				'usedBy_TITLED_WROTEORPUBLISHEDAS', 
+				'usedBy_MARRIED_REG', 
+				'usedBy_MARRIED_WROTEORPUBLISHEDAS', 
+				'usedBy_PSEUDONYM_NAMESIGNIFIER', 
+				'usedBy_PSEUDONYM_REG', 
+				'usedBy_PSEUDONYM_WROTEORPUBLISHEDAS', 
+				'usedBy_SELFCONSTRUCTED_NAMESIGNIFIER', 
+				'usedBy_SELFCONSTRUCTED_REG', 
+				'usedBy_SELFCONSTRUCTED_WROTEORPUBLISHEDAS', 
+				'usedBy_GIVEN_REG', 
+				'usedBy_SURNAME_REG', 
+				'usedBy_NICKNAME_ID', 
+				'usedBy_NICKNAME_NAMECONNOTATION', 
+				'usedBy_NICKNAME_NAMESIGNIFIER', 
+				'usedBy_NICKNAME_NAMETYPE', 
+				'usedBy_NICKNAME_REG', 
+				'usedBy_NICKNAME_WROTEORPUBLISHEDAS', 
+				'usedBy_BIRTHNAME_REG', 
+				'usedBy_BIRTHNAME_WROTEORPUBLISHEDAS', 
+				'usedBy_BIRTHPOSITION_POSITION', 
+				'usedBy_DEGREE_REG', 
+				'usedBy_INDEXED_INDEXSOURCE', 
+				'usedBy_INDEXED_REG', 
+				'usedBy_INDEXED_WROTEORPUBLISHEDAS', 
+				'usedBy_LANGUAGE_COMPETENCE', 
+				'usedBy_LANGUAGE_REG', 
+				'usedBy_SEXUALIDENTITY_CURRENTALTERNATIVETERM', 
+				'usedBy_SEXUALIDENTITY_REG', 
+				'usedBy_SEXUALIDENTITY_SELF-DEFINED', 
+				'usedBy_ROYAL_REG', 
+				'usedBy_ROYAL_WROTEORPUBLISHEDAS', 
+				'usedBy_RESP-attribute_RESP', 
+				'usedBy_XREF_URL', 
+				'usedBy_CHILDREN_NUMBER', 
+				'usedBy_ADDRESS_CURRENT', 
+				'usedBy_ADDRESS_REG', 
+				'usedBy_AREA_CURRENT', 
+				'usedBy_AREA_REG', 
+				'usedBy_GEOG_CURRENT', 
+				'usedBy_GEOG_ID', 
+				'usedBy_GEOG_REG', 
+				'usedBy_PLACENAME_CURRENT', 
+				'usedBy_PLACENAME_REG', 
+				'usedBy_REGION_CURRENT', 
+				'usedBy_REGION_ID', 
+				'usedBy_REGION_REG', 
+				'usedBy_SETTLEMENT_CURRENT', 
+				'usedBy_SETTLEMENT_REG', 
+				'usedBy_PLACE_ID', 
+				'usedBy_SIC_CORR', 
+				'usedBy_CLASS_REG', 
+				'usedBy_CLASS_SELF-DEFINED', 
+				'usedBy_CLASS_SOCIALRANK', 
+				'usedBy_GEOGHERITAGE_FOREBEAR', 
+				'usedBy_GEOGHERITAGE_REG', 
+				'usedBy_GEOGHERITAGE_SELF-DEFINED', 
+				'usedBy_ETHNICITY_FOREBEAR', 
+				'usedBy_ETHNICITY_REG', 
+				'usedBy_ETHNICITY_SELF-DEFINED', 
+				'usedBy_DENOMINATION_CURRENTALTERNATIVETERM', 
+				'usedBy_DENOMINATION_REG', 
+				'usedBy_DENOMINATION_SELF-DEFINED', 
+				'usedBy_ORGNAME_ORGTYPE', 
+				'usedBy_ORGNAME_REG', 
+				'usedBy_ORGNAME_STANDARD', 
+				'usedBy_ORGNAME_URI', 
+				'usedBy_FOREIGN_LANG', 
+				'usedBy_FOREIGN_REG', 
+				'usedBy_AWARD_AWARDTYPE', 
+				'usedBy_AWARD_REG', 
+				'usedBy_QUOTE_DIRECT', 
+				'usedBy_CAUSE_REG', 
+				'usedBy_NAME_STANDARD', 
+				'usedBy_BIBCIT_DBREF', 
+				'usedBy_BIBCIT_ID', 
+				'usedBy_BIBCIT_PLACEHOLDER', 
+				'usedBy_BIBCIT_QTDIN', 
+				'usedBy_BIBCITS_ID', 
+				'usedBy_DATE_CALENDAR', 
+				'usedBy_DATE_CERTAINTY', 
+				'usedBy_DATE_VALUE', 
+				'usedBy_RESPONSIBILITY_WORKSTATUS', 
+				'usedBy_RESPONSIBILITY_WORKVALUE', 
+				'usedBy_ORLANDOHEADER_TYPE', 
+				'usedBy_TGENRE_GENRENAME', 
+				'usedBy_CHRONSTRUCT_CHRONCOLUMN', 
+				'usedBy_CHRONSTRUCT_CHRONCOLUMN1', 
+				'usedBy_CHRONSTRUCT_CHRONCOLUMN2', 
+				'usedBy_CHRONSTRUCT_CHRONCOLUMN3', 
+				'usedBy_CHRONSTRUCT_RELEVANCE', 
+				'usedBy_CHRONSTRUCT_RELEVANCE1', 
+				'usedBy_CHRONSTRUCT_RELEVANCE2', 
+				'usedBy_CHRONSTRUCT_RELEVANCE3', 
+				'usedBy_RELIGIOUSNAME_REG', 
+				'usedBy_RELIGIOUSNAME_WROTEORPUBLISHEDAS', 
+				'usedBy_EDUCATION_MODE', 
+				'usedBy_MEMBER_RELATION', 
+				'usedBy_FAMILY_ID', 
+				'usedBy_INTIMATERELATIONSHIPS_EROTIC', 
+				'usedBy_LOCATION_RELATIONTO', 
+				'usedBy_HEALTH_ISSUE', 
+				'usedBy_STANDARD_WROTEORPUBLISHEDAS', 
+				'usedBy_BIOGRAPHY_PERSON', 
+				'usedBy_BIOGRAPHY_SEX', 
+				'usedBy_RESP-attribute');
+var sourceBoxes= new Array('source_BIOGRAPHY', 
+				'source_ORLANDOHEADER', 
+				'source_FILEDESC', 
+				'source_TITLESTMT', 
+				'source_DOCTITLE', 
+				'source_PUBLICATIONSTMT', 
+				'source_AUTHORITY', 
+				'source_SOURCEDESC', 
+				'source_REVISIONDESC', 
+				'source_RESPONSIBILITY', 
+				'source_DATE', 
+				'source_BIBCITS', 
+				'source_RESEARCHNOTE', 
+				'source_NAME', 
+				'source_COMPANION', 
+				'source_SOCALLED', 
+				'source_CAUSE', 
+				'source_QUOTE', 
+				'source_AWARD', 
+				'source_FOREIGN', 
+				'source_ORGNAME', 
+				'source_DENOMINATION', 
+				'source_ETHNICITY', 
+				'source_GEOGHERITAGE', 
+				'source_CLASS', 
+				'source_EMPH', 
+				'source_SIC', 
+				'source_PLACE', 
+				'source_SCHOOL', 
+				'source_INSTRUCTOR', 
+				'source_SUBJECT', 
+				'source_TEXT', 
+				'source_TITLE', 
+				'source_EMPLOYER', 
+				'source_JOB', 
+				'source_DATERANGE', 
+				'source_REMUNERATION', 
+				'source_SIGNIFICANTACTIVITY', 
+				'source_TOPIC', 
+				'source_NATIONALHERITAGE', 
+				'source_NATIONALITY', 
+				'source_POLITICALAFFILIATION', 
+				'source_KEYWORDCLASS', 
+				'source_RACECOLOUR', 
+				'source_RS', 
+				'source_SEPARATION', 
+				'source_CHILDLESSNESS', 
+				'source_CHILDREN', 
+				'source_DATESTRUCT', 
+				'source_TIME', 
+				'source_DAY', 
+				'source_MONTH', 
+				'source_OCCASION', 
+				'source_SEASON', 
+				'source_YEAR', 
+				'source_SCHOLARNOTE', 
+				'source_P', 
+				'source_BIRTHNAME', 
+				'source_STYLED', 
+				'source_SELFCONSTRUCTED', 
+				'source_PSEUDONYM', 
+				'source_MARRIED', 
+				'source_TITLED', 
+				'source_GIVEN', 
+				'source_SURNAME', 
+				'source_NICKNAME', 
+				'source_BIRTHPOSITION', 
+				'source_CONTESTEDBEHAVIOUR', 
+				'source_DEGREE', 
+				'source_DIVORCE', 
+				'source_INDEXED', 
+				'source_LANGUAGE', 
+				'source_LIVESWITH', 
+				'source_SEXUALIDENTITY', 
+				'source_ROYAL', 
+				'source_XREF', 
+				'source_ADDRESS', 
+				'source_ADDRLINE', 
+				'source_AREA', 
+				'source_GEOG', 
+				'source_PLACENAME', 
+				'source_REGION', 
+				'source_SETTLEMENT', 
+				'source_L', 
+				'source_LB', 
+				'source_BIBCIT', 
+				'source_ITEM', 
+				'source_DIV0', 
+				'source_HEADING', 
+				'source_AUTHORSUMMARY', 
+				'source_DIV1', 
+				'source_BIRTH', 
+				'source_CHRONSTRUCT', 
+				'source_CHRONPROSE', 
+				'source_TGENRE', 
+				'source_DIV2', 
+				'source_DATASTRUCT', 
+				'source_DATAITEM', 
+				'source_RELIGIOUSNAME', 
+				'source_SHORTPROSE', 
+				'source_DEATH', 
+				'source_EDUCATION', 
+				'source_FAMILY', 
+				'source_MEMBER', 
+				'source_MARRIAGE', 
+				'source_INTIMATERELATIONSHIPS', 
+				'source_LOCATION', 
+				'source_OCCUPATION', 
+				'source_PERSONNAME', 
+				'source_POLITICS', 
+				'source_CULTURALFORMATION', 
+				'source_CLASSISSUE', 
+				'source_NATIONALITYISSUE', 
+				'source_RACEANDETHNICITY', 
+				'source_RELIGION', 
+				'source_SEXUALITY', 
+				'source_FRIENDSASSOCIATES', 
+				'source_LEISUREANDSOCIETY', 
+				'source_OTHERLIFEEVENT', 
+				'source_VIOLENCE', 
+				'source_WEALTH', 
+				'source_HEALTH', 
+				'source_STANDARD', 
+				'source_WORKSCITED', 
+				'source_SOURCE', 
+				'source_BIOGPROSE', 
+				'source_DATERANGE_CALENDAR', 
+				'source_DATERANGE_CERTAINTY', 
+				'source_DATERANGE_EXACT', 
+				'source_DATERANGE_FROM', 
+				'source_DATERANGE_TO', 
+				'source_SIGNIFICANTACTIVITY_PHILANTHROPYVOLUNTEER', 
+				'source_SIGNIFICANTACTIVITY_REG', 
+				'source_KEYWORDCLASS_KEYWORDTYPE', 
+				'source_RACECOLOUR_FOREBEAR', 
+				'source_RACECOLOUR_REG', 
+				'source_RACECOLOUR_SELF-DEFINED', 
+				'source_POLITICALAFFILIATION_ACTIVISM', 
+				'source_POLITICALAFFILIATION_CURRENTALTERNATIVETERM', 
+				'source_POLITICALAFFILIATION_ID', 
+				'source_POLITICALAFFILIATION_INVOLVEMENT', 
+				'source_POLITICALAFFILIATION_MEMBERSHIP', 
+				'source_POLITICALAFFILIATION_REG', 
+				'source_POLITICALAFFILIATION_WOMAN-GENDERISSUE', 
+				'source_NATIONALITY_CURRENTALTERNATIVETERM', 
+				'source_NATIONALITY_REG', 
+				'source_NATIONALITY_SELF-DEFINED', 
+				'source_NATIONALHERITAGE_CURRENTALTERNATIVETERM', 
+				'source_NATIONALHERITAGE_FOREBEAR', 
+				'source_NATIONALHERITAGE_REG', 
+				'source_NATIONALHERITAGE_SELF-DEFINED', 
+				'source_TOPIC_STANDARD', 
+				'source_JOB_CURRENTALTERNATIVETERM', 
+				'source_JOB_FAMILYBUSINESS', 
+				'source_JOB_HISTORICALTERM', 
+				'source_JOB_HISTORICALTERMCONTEXTDATE', 
+				'source_JOB_ID', 
+				'source_JOB_REG', 
+				'source_RS_REG', 
+				'source_RS_TYPE', 
+				'source_TITLE_REG', 
+				'source_TITLE_REND', 
+				'source_TITLE_TITLETYPE', 
+				'source_TEXT_REG', 
+				'source_SUBJECT_REG', 
+				'source_SCHOOL_INSTITUTION', 
+				'source_SCHOOL_INSTITUTIONLEVEL', 
+				'source_SCHOOL_REG', 
+				'source_SCHOOL_RELIGIOUS', 
+				'source_SCHOOL_STUDENTBODY', 
+				'source_TIME_CERTAINTY', 
+				'source_TIME_TYPE', 
+				'source_TIME_VALUE', 
+				'source_DAY_CERTAINTY', 
+				'source_DAY_VALUE', 
+				'source_MONTH_CERTAINTY', 
+				'source_MONTH_VALUE', 
+				'source_SEASON_CERTAINTY', 
+				'source_SEASON_REG', 
+				'source_SEASON_VALUE', 
+				'source_YEAR_CERTAINTY', 
+				'source_YEAR_REG', 
+				'source_YEAR_VALUE', 
+				'source_DATESTRUCT_CALENDAR', 
+				'source_DATESTRUCT_CERTAINTY', 
+				'source_DATESTRUCT_VALUE', 
+				'source_STYLED_REG', 
+				'source_STYLED_WROTEORPUBLISHEDAS', 
+				'source_TITLED_REG', 
+				'source_TITLED_WROTEORPUBLISHEDAS', 
+				'source_MARRIED_REG', 
+				'source_MARRIED_WROTEORPUBLISHEDAS', 
+				'source_PSEUDONYM_NAMESIGNIFIER', 
+				'source_PSEUDONYM_REG', 
+				'source_PSEUDONYM_WROTEORPUBLISHEDAS', 
+				'source_SELFCONSTRUCTED_NAMESIGNIFIER', 
+				'source_SELFCONSTRUCTED_REG', 
+				'source_SELFCONSTRUCTED_WROTEORPUBLISHEDAS', 
+				'source_GIVEN_REG', 
+				'source_SURNAME_REG', 
+				'source_NICKNAME_ID', 
+				'source_NICKNAME_NAMECONNOTATION', 
+				'source_NICKNAME_NAMESIGNIFIER', 
+				'source_NICKNAME_NAMETYPE', 
+				'source_NICKNAME_REG', 
+				'source_NICKNAME_WROTEORPUBLISHEDAS', 
+				'source_BIRTHNAME_REG', 
+				'source_BIRTHNAME_WROTEORPUBLISHEDAS', 
+				'source_BIRTHPOSITION_POSITION', 
+				'source_DEGREE_REG', 
+				'source_INDEXED_INDEXSOURCE', 
+				'source_INDEXED_REG', 
+				'source_INDEXED_WROTEORPUBLISHEDAS', 
+				'source_LANGUAGE_COMPETENCE', 
+				'source_LANGUAGE_REG', 
+				'source_SEXUALIDENTITY_CURRENTALTERNATIVETERM', 
+				'source_SEXUALIDENTITY_REG', 
+				'source_SEXUALIDENTITY_SELF-DEFINED', 
+				'source_ROYAL_REG', 
+				'source_ROYAL_WROTEORPUBLISHEDAS', 
+				'source_RESP-attribute_RESP', 
+				'source_XREF_URL', 
+				'source_CHILDREN_NUMBER', 
+				'source_ADDRESS_CURRENT', 
+				'source_ADDRESS_REG', 
+				'source_AREA_CURRENT', 
+				'source_AREA_REG', 
+				'source_GEOG_CURRENT', 
+				'source_GEOG_ID', 
+				'source_GEOG_REG', 
+				'source_PLACENAME_CURRENT', 
+				'source_PLACENAME_REG', 
+				'source_REGION_CURRENT', 
+				'source_REGION_ID', 
+				'source_REGION_REG', 
+				'source_SETTLEMENT_CURRENT', 
+				'source_SETTLEMENT_REG', 
+				'source_PLACE_ID', 
+				'source_SIC_CORR', 
+				'source_CLASS_REG', 
+				'source_CLASS_SELF-DEFINED', 
+				'source_CLASS_SOCIALRANK', 
+				'source_GEOGHERITAGE_FOREBEAR', 
+				'source_GEOGHERITAGE_REG', 
+				'source_GEOGHERITAGE_SELF-DEFINED', 
+				'source_ETHNICITY_FOREBEAR', 
+				'source_ETHNICITY_REG', 
+				'source_ETHNICITY_SELF-DEFINED', 
+				'source_DENOMINATION_CURRENTALTERNATIVETERM', 
+				'source_DENOMINATION_REG', 
+				'source_DENOMINATION_SELF-DEFINED', 
+				'source_ORGNAME_ORGTYPE', 
+				'source_ORGNAME_REG', 
+				'source_ORGNAME_STANDARD', 
+				'source_ORGNAME_URI', 
+				'source_FOREIGN_LANG', 
+				'source_FOREIGN_REG', 
+				'source_AWARD_AWARDTYPE', 
+				'source_AWARD_REG', 
+				'source_QUOTE_DIRECT', 
+				'source_CAUSE_REG', 
+				'source_NAME_STANDARD', 
+				'source_BIBCIT_DBREF', 
+				'source_BIBCIT_ID', 
+				'source_BIBCIT_PLACEHOLDER', 
+				'source_BIBCIT_QTDIN', 
+				'source_BIBCITS_ID', 
+				'source_DATE_CALENDAR', 
+				'source_DATE_CERTAINTY', 
+				'source_DATE_VALUE', 
+				'source_RESPONSIBILITY_WORKSTATUS', 
+				'source_RESPONSIBILITY_WORKVALUE', 
+				'source_ORLANDOHEADER_TYPE', 
+				'source_TGENRE_GENRENAME', 
+				'source_CHRONSTRUCT_CHRONCOLUMN', 
+				'source_CHRONSTRUCT_CHRONCOLUMN1', 
+				'source_CHRONSTRUCT_CHRONCOLUMN2', 
+				'source_CHRONSTRUCT_CHRONCOLUMN3', 
+				'source_CHRONSTRUCT_RELEVANCE', 
+				'source_CHRONSTRUCT_RELEVANCE1', 
+				'source_CHRONSTRUCT_RELEVANCE2', 
+				'source_CHRONSTRUCT_RELEVANCE3', 
+				'source_RELIGIOUSNAME_REG', 
+				'source_RELIGIOUSNAME_WROTEORPUBLISHEDAS', 
+				'source_EDUCATION_MODE', 
+				'source_MEMBER_RELATION', 
+				'source_FAMILY_ID', 
+				'source_INTIMATERELATIONSHIPS_EROTIC', 
+				'source_LOCATION_RELATIONTO', 
+				'source_HEALTH_ISSUE', 
+				'source_STANDARD_WROTEORPUBLISHEDAS', 
+				'source_BIOGRAPHY_PERSON', 
+				'source_BIOGRAPHY_SEX', 
+				'source_RESP-attribute');
+var instanceBoxes= new Array('instance_BIOGRAPHY', 
+				'instance_ORLANDOHEADER', 
+				'instance_FILEDESC', 
+				'instance_TITLESTMT', 
+				'instance_PUBLICATIONSTMT', 
+				'instance_REVISIONDESC', 
+				'instance_RESPONSIBILITY', 
+				'instance_DATE', 
+				'instance_BIBCITS', 
+				'instance_RESEARCHNOTE', 
+				'instance_NAME', 
+				'instance_COMPANION', 
+				'instance_SOCALLED', 
+				'instance_CAUSE', 
+				'instance_QUOTE', 
+				'instance_AWARD', 
+				'instance_FOREIGN', 
+				'instance_ORGNAME', 
+				'instance_DENOMINATION', 
+				'instance_ETHNICITY', 
+				'instance_GEOGHERITAGE', 
+				'instance_CLASS', 
+				'instance_EMPH', 
+				'instance_SIC', 
+				'instance_PLACE', 
+				'instance_SCHOOL', 
+				'instance_INSTRUCTOR', 
+				'instance_SUBJECT', 
+				'instance_TEXT', 
+				'instance_TITLE', 
+				'instance_EMPLOYER', 
+				'instance_JOB', 
+				'instance_DATERANGE', 
+				'instance_REMUNERATION', 
+				'instance_SIGNIFICANTACTIVITY', 
+				'instance_TOPIC', 
+				'instance_NATIONALHERITAGE', 
+				'instance_NATIONALITY', 
+				'instance_POLITICALAFFILIATION', 
+				'instance_RACECOLOUR', 
+				'instance_RS', 
+				'instance_SEPARATION', 
+				'instance_CHILDLESSNESS', 
+				'instance_CHILDREN', 
+				'instance_DATESTRUCT', 
+				'instance_SCHOLARNOTE', 
+				'instance_P', 
+				'instance_BIRTHNAME', 
+				'instance_SELFCONSTRUCTED', 
+				'instance_PSEUDONYM', 
+				'instance_MARRIED', 
+				'instance_TITLED', 
+				'instance_GIVEN', 
+				'instance_SURNAME', 
+				'instance_NICKNAME', 
+				'instance_BIRTHPOSITION', 
+				'instance_CONTESTEDBEHAVIOUR', 
+				'instance_DEGREE', 
+				'instance_DIVORCE', 
+				'instance_INDEXED', 
+				'instance_LANGUAGE', 
+				'instance_LIVESWITH', 
+				'instance_SEXUALIDENTITY', 
+				'instance_ADDRESS', 
+				'instance_GEOG', 
+				'instance_PLACENAME', 
+				'instance_REGION', 
+				'instance_L', 
+				'instance_LB', 
+				'instance_BIBCIT', 
+				'instance_DIV0', 
+				'instance_HEADING', 
+				'instance_AUTHORSUMMARY', 
+				'instance_DIV1', 
+				'instance_BIRTH', 
+				'instance_CHRONSTRUCT', 
+				'instance_CHRONPROSE', 
+				'instance_DIV2', 
+				'instance_DATASTRUCT', 
+				'instance_DATAITEM', 
+				'instance_RELIGIOUSNAME', 
+				'instance_SHORTPROSE', 
+				'instance_DEATH', 
+				'instance_EDUCATION', 
+				'instance_FAMILY', 
+				'instance_MEMBER', 
+				'instance_MARRIAGE', 
+				'instance_INTIMATERELATIONSHIPS', 
+				'instance_LOCATION', 
+				'instance_OCCUPATION', 
+				'instance_PERSONNAME', 
+				'instance_POLITICS', 
+				'instance_CULTURALFORMATION', 
+				'instance_CLASSISSUE', 
+				'instance_NATIONALITYISSUE', 
+				'instance_RACEANDETHNICITY', 
+				'instance_RELIGION', 
+				'instance_SEXUALITY', 
+				'instance_FRIENDSASSOCIATES', 
+				'instance_LEISUREANDSOCIETY', 
+				'instance_OTHERLIFEEVENT', 
+				'instance_VIOLENCE', 
+				'instance_WEALTH', 
+				'instance_HEALTH', 
+				'instance_WORKSCITED', 
+				'instance_SOURCE', 
+				'instance_BIOGPROSE');
+var diagramBoxes= new Array('diagram_BIOGRAPHY', 
+				'diagram_ORLANDOHEADER', 
+				'diagram_FILEDESC', 
+				'diagram_TITLESTMT', 
+				'diagram_DOCTITLE', 
+				'diagram_PUBLICATIONSTMT', 
+				'diagram_AUTHORITY', 
+				'diagram_SOURCEDESC', 
+				'diagram_REVISIONDESC', 
+				'diagram_RESPONSIBILITY', 
+				'diagram_DATE', 
+				'diagram_BIBCITS', 
+				'diagram_RESEARCHNOTE', 
+				'diagram_NAME', 
+				'diagram_COMPANION', 
+				'diagram_SOCALLED', 
+				'diagram_CAUSE', 
+				'diagram_QUOTE', 
+				'diagram_AWARD', 
+				'diagram_FOREIGN', 
+				'diagram_ORGNAME', 
+				'diagram_DENOMINATION', 
+				'diagram_ETHNICITY', 
+				'diagram_GEOGHERITAGE', 
+				'diagram_CLASS', 
+				'diagram_EMPH', 
+				'diagram_SIC', 
+				'diagram_PLACE', 
+				'diagram_SCHOOL', 
+				'diagram_INSTRUCTOR', 
+				'diagram_SUBJECT', 
+				'diagram_TEXT', 
+				'diagram_TITLE', 
+				'diagram_EMPLOYER', 
+				'diagram_JOB', 
+				'diagram_DATERANGE', 
+				'diagram_REMUNERATION', 
+				'diagram_SIGNIFICANTACTIVITY', 
+				'diagram_TOPIC', 
+				'diagram_NATIONALHERITAGE', 
+				'diagram_NATIONALITY', 
+				'diagram_POLITICALAFFILIATION', 
+				'diagram_KEYWORDCLASS', 
+				'diagram_RACECOLOUR', 
+				'diagram_RS', 
+				'diagram_SEPARATION', 
+				'diagram_CHILDLESSNESS', 
+				'diagram_CHILDREN', 
+				'diagram_DATESTRUCT', 
+				'diagram_TIME', 
+				'diagram_DAY', 
+				'diagram_MONTH', 
+				'diagram_OCCASION', 
+				'diagram_SEASON', 
+				'diagram_YEAR', 
+				'diagram_SCHOLARNOTE', 
+				'diagram_P', 
+				'diagram_BIRTHNAME', 
+				'diagram_STYLED', 
+				'diagram_SELFCONSTRUCTED', 
+				'diagram_PSEUDONYM', 
+				'diagram_MARRIED', 
+				'diagram_TITLED', 
+				'diagram_GIVEN', 
+				'diagram_SURNAME', 
+				'diagram_NICKNAME', 
+				'diagram_BIRTHPOSITION', 
+				'diagram_CONTESTEDBEHAVIOUR', 
+				'diagram_DEGREE', 
+				'diagram_DIVORCE', 
+				'diagram_INDEXED', 
+				'diagram_LANGUAGE', 
+				'diagram_LIVESWITH', 
+				'diagram_SEXUALIDENTITY', 
+				'diagram_ROYAL', 
+				'diagram_XREF', 
+				'diagram_ADDRESS', 
+				'diagram_ADDRLINE', 
+				'diagram_AREA', 
+				'diagram_GEOG', 
+				'diagram_PLACENAME', 
+				'diagram_REGION', 
+				'diagram_SETTLEMENT', 
+				'diagram_L', 
+				'diagram_LB', 
+				'diagram_BIBCIT', 
+				'diagram_ITEM', 
+				'diagram_DIV0', 
+				'diagram_HEADING', 
+				'diagram_AUTHORSUMMARY', 
+				'diagram_DIV1', 
+				'diagram_BIRTH', 
+				'diagram_CHRONSTRUCT', 
+				'diagram_CHRONPROSE', 
+				'diagram_TGENRE', 
+				'diagram_DIV2', 
+				'diagram_DATASTRUCT', 
+				'diagram_DATAITEM', 
+				'diagram_RELIGIOUSNAME', 
+				'diagram_SHORTPROSE', 
+				'diagram_DEATH', 
+				'diagram_EDUCATION', 
+				'diagram_FAMILY', 
+				'diagram_MEMBER', 
+				'diagram_MARRIAGE', 
+				'diagram_INTIMATERELATIONSHIPS', 
+				'diagram_LOCATION', 
+				'diagram_OCCUPATION', 
+				'diagram_PERSONNAME', 
+				'diagram_POLITICS', 
+				'diagram_CULTURALFORMATION', 
+				'diagram_CLASSISSUE', 
+				'diagram_NATIONALITYISSUE', 
+				'diagram_RACEANDETHNICITY', 
+				'diagram_RELIGION', 
+				'diagram_SEXUALITY', 
+				'diagram_FRIENDSASSOCIATES', 
+				'diagram_LEISUREANDSOCIETY', 
+				'diagram_OTHERLIFEEVENT', 
+				'diagram_VIOLENCE', 
+				'diagram_WEALTH', 
+				'diagram_HEALTH', 
+				'diagram_STANDARD', 
+				'diagram_WORKSCITED', 
+				'diagram_SOURCE', 
+				'diagram_BIOGPROSE', 
+				'diagram_RESP-attribute');
+var annotationBoxes= new Array('annotations_BIOGRAPHY', 
+				'annotations_ORLANDOHEADER', 
+				'annotations_FILEDESC', 
+				'annotations_TITLESTMT', 
+				'annotations_DOCTITLE', 
+				'annotations_PUBLICATIONSTMT', 
+				'annotations_AUTHORITY', 
+				'annotations_SOURCEDESC', 
+				'annotations_REVISIONDESC', 
+				'annotations_RESPONSIBILITY', 
+				'annotations_DATE', 
+				'annotations_RESEARCHNOTE', 
+				'annotations_COMPANION', 
+				'annotations_SOCALLED', 
+				'annotations_CAUSE', 
+				'annotations_QUOTE', 
+				'annotations_AWARD', 
+				'annotations_FOREIGN', 
+				'annotations_ORGNAME', 
+				'annotations_DENOMINATION', 
+				'annotations_ETHNICITY', 
+				'annotations_GEOGHERITAGE', 
+				'annotations_CLASS', 
+				'annotations_EMPH', 
+				'annotations_SIC', 
+				'annotations_SCHOOL', 
+				'annotations_INSTRUCTOR', 
+				'annotations_SUBJECT', 
+				'annotations_TEXT', 
+				'annotations_TITLE', 
+				'annotations_EMPLOYER', 
+				'annotations_JOB', 
+				'annotations_DATERANGE', 
+				'annotations_REMUNERATION', 
+				'annotations_SIGNIFICANTACTIVITY', 
+				'annotations_TOPIC', 
+				'annotations_NATIONALHERITAGE', 
+				'annotations_NATIONALITY', 
+				'annotations_POLITICALAFFILIATION', 
+				'annotations_RACECOLOUR', 
+				'annotations_RS', 
+				'annotations_SEPARATION', 
+				'annotations_CHILDLESSNESS', 
+				'annotations_CHILDREN', 
+				'annotations_DATESTRUCT', 
+				'annotations_TIME', 
+				'annotations_DAY', 
+				'annotations_MONTH', 
+				'annotations_OCCASION', 
+				'annotations_YEAR', 
+				'annotations_P', 
+				'annotations_BIRTHNAME', 
+				'annotations_STYLED', 
+				'annotations_SELFCONSTRUCTED', 
+				'annotations_PSEUDONYM', 
+				'annotations_MARRIED', 
+				'annotations_TITLED', 
+				'annotations_GIVEN', 
+				'annotations_SURNAME', 
+				'annotations_NICKNAME', 
+				'annotations_BIRTHPOSITION', 
+				'annotations_CONTESTEDBEHAVIOUR', 
+				'annotations_DEGREE', 
+				'annotations_DIVORCE', 
+				'annotations_INDEXED', 
+				'annotations_LANGUAGE', 
+				'annotations_LIVESWITH', 
+				'annotations_SEXUALIDENTITY', 
+				'annotations_ROYAL', 
+				'annotations_XREF', 
+				'annotations_ADDRESS', 
+				'annotations_ADDRLINE', 
+				'annotations_GEOG', 
+				'annotations_PLACENAME', 
+				'annotations_REGION', 
+				'annotations_SETTLEMENT', 
+				'annotations_L', 
+				'annotations_LB', 
+				'annotations_BIBCIT', 
+				'annotations_ITEM', 
+				'annotations_DIV0', 
+				'annotations_HEADING', 
+				'annotations_AUTHORSUMMARY', 
+				'annotations_DIV1', 
+				'annotations_BIRTH', 
+				'annotations_CHRONSTRUCT', 
+				'annotations_CHRONPROSE', 
+				'annotations_TGENRE', 
+				'annotations_DIV2', 
+				'annotations_DATASTRUCT', 
+				'annotations_DATAITEM', 
+				'annotations_RELIGIOUSNAME', 
+				'annotations_DEATH', 
+				'annotations_EDUCATION', 
+				'annotations_FAMILY', 
+				'annotations_MEMBER', 
+				'annotations_MARRIAGE', 
+				'annotations_INTIMATERELATIONSHIPS', 
+				'annotations_LOCATION', 
+				'annotations_OCCUPATION', 
+				'annotations_PERSONNAME', 
+				'annotations_POLITICS', 
+				'annotations_CULTURALFORMATION', 
+				'annotations_CLASSISSUE', 
+				'annotations_NATIONALITYISSUE', 
+				'annotations_RACEANDETHNICITY', 
+				'annotations_RELIGION', 
+				'annotations_SEXUALITY', 
+				'annotations_FRIENDSASSOCIATES', 
+				'annotations_LEISUREANDSOCIETY', 
+				'annotations_OTHERLIFEEVENT', 
+				'annotations_VIOLENCE', 
+				'annotations_WEALTH', 
+				'annotations_HEALTH', 
+				'annotations_WORKSCITED', 
+				'annotations_SOURCE', 
+				'annotations_DATERANGE_CALENDAR', 
+				'annotations_DATERANGE_CERTAINTY', 
+				'annotations_DATERANGE_EXACT', 
+				'annotations_SIGNIFICANTACTIVITY_REG', 
+				'annotations_RACECOLOUR_FOREBEAR', 
+				'annotations_RACECOLOUR_REG', 
+				'annotations_RACECOLOUR_SELF-DEFINED', 
+				'annotations_POLITICALAFFILIATION_ACTIVISM', 
+				'annotations_POLITICALAFFILIATION_INVOLVEMENT', 
+				'annotations_POLITICALAFFILIATION_MEMBERSHIP', 
+				'annotations_POLITICALAFFILIATION_REG', 
+				'annotations_NATIONALITY_CURRENTALTERNATIVETERM', 
+				'annotations_NATIONALITY_REG', 
+				'annotations_NATIONALITY_SELF-DEFINED', 
+				'annotations_NATIONALHERITAGE_FOREBEAR', 
+				'annotations_NATIONALHERITAGE_REG', 
+				'annotations_NATIONALHERITAGE_SELF-DEFINED', 
+				'annotations_JOB_FAMILYBUSINESS', 
+				'annotations_JOB_REG', 
+				'annotations_RS_REG', 
+				'annotations_RS_TYPE', 
+				'annotations_TITLE_REG', 
+				'annotations_TITLE_TITLETYPE', 
+				'annotations_TEXT_REG', 
+				'annotations_SUBJECT_REG', 
+				'annotations_SCHOOL_INSTITUTION', 
+				'annotations_SCHOOL_INSTITUTIONLEVEL', 
+				'annotations_SCHOOL_REG', 
+				'annotations_SCHOOL_RELIGIOUS', 
+				'annotations_SCHOOL_STUDENTBODY', 
+				'annotations_TIME_CERTAINTY', 
+				'annotations_TIME_TYPE', 
+				'annotations_TIME_VALUE', 
+				'annotations_DAY_CERTAINTY', 
+				'annotations_DAY_VALUE', 
+				'annotations_MONTH_CERTAINTY', 
+				'annotations_MONTH_VALUE', 
+				'annotations_SEASON_CERTAINTY', 
+				'annotations_SEASON_REG', 
+				'annotations_SEASON_VALUE', 
+				'annotations_YEAR_CERTAINTY', 
+				'annotations_YEAR_REG', 
+				'annotations_YEAR_VALUE', 
+				'annotations_DATESTRUCT_CALENDAR', 
+				'annotations_DATESTRUCT_CERTAINTY', 
+				'annotations_DATESTRUCT_VALUE', 
+				'annotations_STYLED_REG', 
+				'annotations_STYLED_WROTEORPUBLISHEDAS', 
+				'annotations_TITLED_REG', 
+				'annotations_TITLED_WROTEORPUBLISHEDAS', 
+				'annotations_MARRIED_REG', 
+				'annotations_MARRIED_WROTEORPUBLISHEDAS', 
+				'annotations_PSEUDONYM_NAMESIGNIFIER', 
+				'annotations_PSEUDONYM_REG', 
+				'annotations_PSEUDONYM_WROTEORPUBLISHEDAS', 
+				'annotations_SELFCONSTRUCTED_NAMESIGNIFIER', 
+				'annotations_SELFCONSTRUCTED_REG', 
+				'annotations_SELFCONSTRUCTED_WROTEORPUBLISHEDAS', 
+				'annotations_GIVEN_REG', 
+				'annotations_SURNAME_REG', 
+				'annotations_NICKNAME_NAMECONNOTATION', 
+				'annotations_NICKNAME_NAMESIGNIFIER', 
+				'annotations_NICKNAME_NAMETYPE', 
+				'annotations_NICKNAME_REG', 
+				'annotations_NICKNAME_WROTEORPUBLISHEDAS', 
+				'annotations_BIRTHNAME_REG', 
+				'annotations_BIRTHNAME_WROTEORPUBLISHEDAS', 
+				'annotations_BIRTHPOSITION_POSITION', 
+				'annotations_DEGREE_REG', 
+				'annotations_INDEXED_INDEXSOURCE', 
+				'annotations_INDEXED_REG', 
+				'annotations_INDEXED_WROTEORPUBLISHEDAS', 
+				'annotations_LANGUAGE_COMPETENCE', 
+				'annotations_LANGUAGE_REG', 
+				'annotations_SEXUALIDENTITY_CURRENTALTERNATIVETERM', 
+				'annotations_SEXUALIDENTITY_REG', 
+				'annotations_SEXUALIDENTITY_SELF-DEFINED', 
+				'annotations_ROYAL_REG', 
+				'annotations_ROYAL_WROTEORPUBLISHEDAS', 
+				'annotations_RESP-attribute_RESP', 
+				'annotations_XREF_URL', 
+				'annotations_ADDRESS_REG', 
+				'annotations_AREA_CURRENT', 
+				'annotations_AREA_REG', 
+				'annotations_GEOG_REG', 
+				'annotations_PLACENAME_REG', 
+				'annotations_REGION_REG', 
+				'annotations_SETTLEMENT_REG', 
+				'annotations_CLASS_REG', 
+				'annotations_CLASS_SELF-DEFINED', 
+				'annotations_CLASS_SOCIALRANK', 
+				'annotations_GEOGHERITAGE_FOREBEAR', 
+				'annotations_GEOGHERITAGE_REG', 
+				'annotations_GEOGHERITAGE_SELF-DEFINED', 
+				'annotations_ETHNICITY_FOREBEAR', 
+				'annotations_ETHNICITY_REG', 
+				'annotations_ETHNICITY_SELF-DEFINED', 
+				'annotations_DENOMINATION_REG', 
+				'annotations_DENOMINATION_SELF-DEFINED', 
+				'annotations_ORGNAME_ORGTYPE', 
+				'annotations_ORGNAME_REG', 
+				'annotations_ORGNAME_URI', 
+				'annotations_FOREIGN_LANG', 
+				'annotations_FOREIGN_REG', 
+				'annotations_AWARD_AWARDTYPE', 
+				'annotations_AWARD_REG', 
+				'annotations_QUOTE_DIRECT', 
+				'annotations_CAUSE_REG', 
+				'annotations_DATE_CALENDAR', 
+				'annotations_DATE_CERTAINTY', 
+				'annotations_RESPONSIBILITY_WORKSTATUS', 
+				'annotations_RESPONSIBILITY_WORKVALUE', 
+				'annotations_ORLANDOHEADER_TYPE', 
+				'annotations_TGENRE_GENRENAME', 
+				'annotations_CHRONSTRUCT_CHRONCOLUMN', 
+				'annotations_CHRONSTRUCT_RELEVANCE', 
+				'annotations_RELIGIOUSNAME_REG', 
+				'annotations_RELIGIOUSNAME_WROTEORPUBLISHEDAS', 
+				'annotations_EDUCATION_MODE', 
+				'annotations_MEMBER_RELATION', 
+				'annotations_INTIMATERELATIONSHIPS_EROTIC', 
+				'annotations_HEALTH_ISSUE', 
+				'annotations_STANDARD_WROTEORPUBLISHEDAS', 
+				'annotations_BIOGRAPHY_PERSON', 
+				'annotations_BIOGRAPHY_SEX');
+var attributesBoxes= new Array('attributes_BIOGRAPHY', 
+				'attributes_ORLANDOHEADER', 
+				'attributes_RESPONSIBILITY', 
+				'attributes_DATE', 
+				'attributes_BIBCITS', 
+				'attributes_NAME', 
+				'attributes_CAUSE', 
+				'attributes_QUOTE', 
+				'attributes_AWARD', 
+				'attributes_FOREIGN', 
+				'attributes_ORGNAME', 
+				'attributes_DENOMINATION', 
+				'attributes_ETHNICITY', 
+				'attributes_GEOGHERITAGE', 
+				'attributes_CLASS', 
+				'attributes_SIC', 
+				'attributes_PLACE', 
+				'attributes_SCHOOL', 
+				'attributes_SUBJECT', 
+				'attributes_TEXT', 
+				'attributes_TITLE', 
+				'attributes_JOB', 
+				'attributes_DATERANGE', 
+				'attributes_SIGNIFICANTACTIVITY', 
+				'attributes_TOPIC', 
+				'attributes_NATIONALHERITAGE', 
+				'attributes_NATIONALITY', 
+				'attributes_POLITICALAFFILIATION', 
+				'attributes_KEYWORDCLASS', 
+				'attributes_RACECOLOUR', 
+				'attributes_RS', 
+				'attributes_CHILDREN', 
+				'attributes_DATESTRUCT', 
+				'attributes_TIME', 
+				'attributes_DAY', 
+				'attributes_MONTH', 
+				'attributes_SEASON', 
+				'attributes_YEAR', 
+				'attributes_BIRTHNAME', 
+				'attributes_STYLED', 
+				'attributes_SELFCONSTRUCTED', 
+				'attributes_PSEUDONYM', 
+				'attributes_MARRIED', 
+				'attributes_TITLED', 
+				'attributes_GIVEN', 
+				'attributes_SURNAME', 
+				'attributes_NICKNAME', 
+				'attributes_BIRTHPOSITION', 
+				'attributes_DEGREE', 
+				'attributes_INDEXED', 
+				'attributes_LANGUAGE', 
+				'attributes_SEXUALIDENTITY', 
+				'attributes_ROYAL', 
+				'attributes_XREF', 
+				'attributes_ADDRESS', 
+				'attributes_AREA', 
+				'attributes_GEOG', 
+				'attributes_PLACENAME', 
+				'attributes_REGION', 
+				'attributes_SETTLEMENT', 
+				'attributes_BIBCIT', 
+				'attributes_CHRONSTRUCT', 
+				'attributes_TGENRE', 
+				'attributes_RELIGIOUSNAME', 
+				'attributes_EDUCATION', 
+				'attributes_FAMILY', 
+				'attributes_MEMBER', 
+				'attributes_INTIMATERELATIONSHIPS', 
+				'attributes_LOCATION', 
+				'attributes_HEALTH', 
+				'attributes_STANDARD', 
+				'attributes_RESP-attribute');
+var modelBoxes= new Array('model_BIOGRAPHY', 
+				'model_ORLANDOHEADER', 
+				'model_FILEDESC', 
+				'model_TITLESTMT', 
+				'model_PUBLICATIONSTMT', 
+				'model_REVISIONDESC', 
+				'model_RESPONSIBILITY', 
+				'model_DATE', 
+				'model_BIBCITS', 
+				'model_RESEARCHNOTE', 
+				'model_NAME', 
+				'model_COMPANION', 
+				'model_SOCALLED', 
+				'model_CAUSE', 
+				'model_QUOTE', 
+				'model_AWARD', 
+				'model_FOREIGN', 
+				'model_ORGNAME', 
+				'model_DENOMINATION', 
+				'model_ETHNICITY', 
+				'model_GEOGHERITAGE', 
+				'model_CLASS', 
+				'model_EMPH', 
+				'model_SIC', 
+				'model_PLACE', 
+				'model_SCHOOL', 
+				'model_INSTRUCTOR', 
+				'model_SUBJECT', 
+				'model_TEXT', 
+				'model_TITLE', 
+				'model_EMPLOYER', 
+				'model_JOB', 
+				'model_DATERANGE', 
+				'model_REMUNERATION', 
+				'model_SIGNIFICANTACTIVITY', 
+				'model_TOPIC', 
+				'model_NATIONALHERITAGE', 
+				'model_NATIONALITY', 
+				'model_POLITICALAFFILIATION', 
+				'model_RACECOLOUR', 
+				'model_RS', 
+				'model_SEPARATION', 
+				'model_CHILDLESSNESS', 
+				'model_CHILDREN', 
+				'model_DATESTRUCT', 
+				'model_TIME', 
+				'model_DAY', 
+				'model_MONTH', 
+				'model_SEASON', 
+				'model_YEAR', 
+				'model_SCHOLARNOTE', 
+				'model_P', 
+				'model_BIRTHNAME', 
+				'model_STYLED', 
+				'model_SELFCONSTRUCTED', 
+				'model_PSEUDONYM', 
+				'model_MARRIED', 
+				'model_TITLED', 
+				'model_GIVEN', 
+				'model_SURNAME', 
+				'model_NICKNAME', 
+				'model_BIRTHPOSITION', 
+				'model_CONTESTEDBEHAVIOUR', 
+				'model_DEGREE', 
+				'model_DIVORCE', 
+				'model_INDEXED', 
+				'model_LANGUAGE', 
+				'model_LIVESWITH', 
+				'model_SEXUALIDENTITY', 
+				'model_ROYAL', 
+				'model_ADDRESS', 
+				'model_AREA', 
+				'model_GEOG', 
+				'model_PLACENAME', 
+				'model_REGION', 
+				'model_SETTLEMENT', 
+				'model_L', 
+				'model_LB', 
+				'model_BIBCIT', 
+				'model_DIV0', 
+				'model_HEADING', 
+				'model_AUTHORSUMMARY', 
+				'model_DIV1', 
+				'model_BIRTH', 
+				'model_CHRONSTRUCT', 
+				'model_CHRONPROSE', 
+				'model_DIV2', 
+				'model_DATASTRUCT', 
+				'model_DATAITEM', 
+				'model_RELIGIOUSNAME', 
+				'model_SHORTPROSE', 
+				'model_DEATH', 
+				'model_EDUCATION', 
+				'model_FAMILY', 
+				'model_MEMBER', 
+				'model_MARRIAGE', 
+				'model_INTIMATERELATIONSHIPS', 
+				'model_LOCATION', 
+				'model_OCCUPATION', 
+				'model_PERSONNAME', 
+				'model_POLITICS', 
+				'model_CULTURALFORMATION', 
+				'model_CLASSISSUE', 
+				'model_NATIONALITYISSUE', 
+				'model_RACEANDETHNICITY', 
+				'model_RELIGION', 
+				'model_SEXUALITY', 
+				'model_FRIENDSASSOCIATES', 
+				'model_LEISUREANDSOCIETY', 
+				'model_OTHERLIFEEVENT', 
+				'model_VIOLENCE', 
+				'model_WEALTH', 
+				'model_HEALTH', 
+				'model_STANDARD', 
+				'model_WORKSCITED', 
+				'model_SOURCE', 
+				'model_BIOGPROSE');
+
+      
+        var button_prefix = 'button_';
+        
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+    
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updatePageTitle(message) {
+            top.document.title = message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id, isChunked, indexFileLocation, indexFileNamespace, indexFileComponent){
+
+            if (!isChunked) {
+             var selectIds = new Array('toc_group_by_namespace', 'toc_group_by_location', 'toc_group_by_component_type');
+             // Make all the tabs invisible.
+               for (i = 0; i < 3; i++){
+                  var tab = getElementObject(selectIds[i]);
+                  tab.style.display = 'none';
+               }
+               var selTab = getElementObject(id);
+               selTab.style.display = 'block';
+            } else {
+             if (id == 'toc_group_by_namespace') {
+               parent.indexFrame.location = indexFileNamespace;
+             } else  if (id == 'toc_group_by_location') {
+               parent.indexFrame.location = indexFileLocation;
+             } else  if (id == 'toc_group_by_component_type') {
+              parent.indexFrame.location = indexFileComponent;
+             }
+            }
+         }
+          
+
+    
+                        //--></script></head>
+   <body>
+      <h2><a id="INDEX">Table of Contents</a></h2>
+      <div class="toc">
+         <form action="none">
+            <div><span> Group by: <select id="selectTOC" onchange="selectTOCGroupBy(this.options[this.selectedIndex].value, false, '.html', 'ns.html', 'comp.html');">
+                     <option value="toc_group_by_namespace" selected="selected">Namespace</option>
+                     <option value="toc_group_by_location">Location</option>
+                     <option value="toc_group_by_component_type">Component Type</option></select></span></div>
+         </form>
+         <div class="level1" id="toc_group_by_namespace" style="display:block">
+            <div>
+               <div class="level2">
+                  <p><input id="button_boxIdNamespace1" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1');" class="control" /><span class="indexGroupTitle">No namespace</span></p>
+                  <div id="boxIdNamespace1" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Element" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Element');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Element" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
+                                                <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
+                                                <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
+                                                <div><b><a href="index.html#AUTHORITY" target="_self" title="No namespace">AUTHORITY</a></b></div>
+                                                <div><b><a href="index.html#AUTHORSUMMARY" target="_self" title="No namespace">AUTHORSUMMARY</a></b></div>
+                                                <div><b><a href="index.html#AWARD" target="_self" title="No namespace">AWARD</a></b></div>
+                                                <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
+                                                <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
+                                                <div><b><a href="index.html#BIOGPROSE" target="_self" title="No namespace">BIOGPROSE</a></b></div>
+                                                <div><b><a href="index.html#BIOGRAPHY" target="_self" title="No namespace">BIOGRAPHY</a></b></div>
+                                                <div><b><a href="index.html#BIRTH" target="_self" title="No namespace">BIRTH</a></b></div>
+                                                <div><b><a href="index.html#BIRTHNAME" target="_self" title="No namespace">BIRTHNAME</a></b></div>
+                                                <div><b><a href="index.html#BIRTHPOSITION" target="_self" title="No namespace">BIRTHPOSITION</a></b></div>
+                                                <div><b><a href="index.html#CAUSE" target="_self" title="No namespace">CAUSE</a></b></div>
+                                                <div><b><a href="index.html#CHILDLESSNESS" target="_self" title="No namespace">CHILDLESSNESS</a></b></div>
+                                                <div><b><a href="index.html#CHILDREN" target="_self" title="No namespace">CHILDREN</a></b></div>
+                                                <div><b><a href="index.html#CHRONPROSE" target="_self" title="No namespace">CHRONPROSE</a></b></div>
+                                                <div><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b></div>
+                                                <div><b><a href="index.html#CLASS" target="_self" title="No namespace">CLASS</a></b></div>
+                                                <div><b><a href="index.html#CLASSISSUE" target="_self" title="No namespace">CLASSISSUE</a></b></div>
+                                                <div><b><a href="index.html#COMPANION" target="_self" title="No namespace">COMPANION</a></b></div>
+                                                <div><b><a href="index.html#CONTESTEDBEHAVIOUR" target="_self" title="No namespace">CONTESTEDBEHAVIOUR</a></b></div>
+                                                <div><b><a href="index.html#CULTURALFORMATION" target="_self" title="No namespace">CULTURALFORMATION</a></b></div>
+                                                <div><b><a href="index.html#DATAITEM" target="_self" title="No namespace">DATAITEM</a></b></div>
+                                                <div><b><a href="index.html#DATASTRUCT" target="_self" title="No namespace">DATASTRUCT</a></b></div>
+                                                <div><b><a href="index.html#DATE" target="_self" title="No namespace">DATE</a></b></div>
+                                                <div><b><a href="index.html#DATERANGE" target="_self" title="No namespace">DATERANGE</a></b></div>
+                                                <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
+                                                <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
+                                                <div><b><a href="index.html#DEATH" target="_self" title="No namespace">DEATH</a></b></div>
+                                                <div><b><a href="index.html#DEGREE" target="_self" title="No namespace">DEGREE</a></b></div>
+                                                <div><b><a href="index.html#DENOMINATION" target="_self" title="No namespace">DENOMINATION</a></b></div>
+                                                <div><b><a href="index.html#DIV0" target="_self" title="No namespace">DIV0</a></b></div>
+                                                <div><b><a href="index.html#DIV1" target="_self" title="No namespace">DIV1</a></b></div>
+                                                <div><b><a href="index.html#DIV2" target="_self" title="No namespace">DIV2</a></b></div>
+                                                <div><b><a href="index.html#DIVORCE" target="_self" title="No namespace">DIVORCE</a></b></div>
+                                                <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
+                                                <div><b><a href="index.html#EDUCATION" target="_self" title="No namespace">EDUCATION</a></b></div>
+                                                <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
+                                                <div><b><a href="index.html#EMPLOYER" target="_self" title="No namespace">EMPLOYER</a></b></div>
+                                                <div><b><a href="index.html#ETHNICITY" target="_self" title="No namespace">ETHNICITY</a></b></div>
+                                                <div><b><a href="index.html#FAMILY" target="_self" title="No namespace">FAMILY</a></b></div>
+                                                <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
+                                                <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
+                                                <div><b><a href="index.html#FRIENDSASSOCIATES" target="_self" title="No namespace">FRIENDSASSOCIATES</a></b></div>
+                                                <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#GEOGHERITAGE" target="_self" title="No namespace">GEOGHERITAGE</a></b></div>
+                                                <div><b><a href="index.html#GIVEN" target="_self" title="No namespace">GIVEN</a></b></div>
+                                                <div><b><a href="index.html#HEADING" target="_self" title="No namespace">HEADING</a></b></div>
+                                                <div><b><a href="index.html#HEALTH" target="_self" title="No namespace">HEALTH</a></b></div>
+                                                <div><b><a href="index.html#INDEXED" target="_self" title="No namespace">INDEXED</a></b></div>
+                                                <div><b><a href="index.html#INSTRUCTOR" target="_self" title="No namespace">INSTRUCTOR</a></b></div>
+                                                <div><b><a href="index.html#INTIMATERELATIONSHIPS" target="_self" title="No namespace">INTIMATERELATIONSHIPS</a></b></div>
+                                                <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
+                                                <div><b><a href="index.html#JOB" target="_self" title="No namespace">JOB</a></b></div>
+                                                <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
+                                                <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
+                                                <div><b><a href="index.html#LANGUAGE" target="_self" title="No namespace">LANGUAGE</a></b></div>
+                                                <div><b><a href="index.html#LB" target="_self" title="No namespace">LB</a></b></div>
+                                                <div><b><a href="index.html#LEISUREANDSOCIETY" target="_self" title="No namespace">LEISUREANDSOCIETY</a></b></div>
+                                                <div><b><a href="index.html#LIVESWITH" target="_self" title="No namespace">LIVESWITH</a></b></div>
+                                                <div><b><a href="index.html#LOCATION" target="_self" title="No namespace">LOCATION</a></b></div>
+                                                <div><b><a href="index.html#MARRIAGE" target="_self" title="No namespace">MARRIAGE</a></b></div>
+                                                <div><b><a href="index.html#MARRIED" target="_self" title="No namespace">MARRIED</a></b></div>
+                                                <div><b><a href="index.html#MEMBER" target="_self" title="No namespace">MEMBER</a></b></div>
+                                                <div><b><a href="index.html#MONTH" target="_self" title="No namespace">MONTH</a></b></div>
+                                                <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
+                                                <div><b><a href="index.html#NATIONALHERITAGE" target="_self" title="No namespace">NATIONALHERITAGE</a></b></div>
+                                                <div><b><a href="index.html#NATIONALITY" target="_self" title="No namespace">NATIONALITY</a></b></div>
+                                                <div><b><a href="index.html#NATIONALITYISSUE" target="_self" title="No namespace">NATIONALITYISSUE</a></b></div>
+                                                <div><b><a href="index.html#NICKNAME" target="_self" title="No namespace">NICKNAME</a></b></div>
+                                                <div><b><a href="index.html#OCCASION" target="_self" title="No namespace">OCCASION</a></b></div>
+                                                <div><b><a href="index.html#OCCUPATION" target="_self" title="No namespace">OCCUPATION</a></b></div>
+                                                <div><b><a href="index.html#ORGNAME" target="_self" title="No namespace">ORGNAME</a></b></div>
+                                                <div><b><a href="index.html#ORLANDOHEADER" target="_self" title="No namespace">ORLANDOHEADER</a></b></div>
+                                                <div><b><a href="index.html#OTHERLIFEEVENT" target="_self" title="No namespace">OTHERLIFEEVENT</a></b></div>
+                                                <div><b><a href="index.html#P" target="_self" title="No namespace">P</a></b></div>
+                                                <div><b><a href="index.html#PERSONNAME" target="_self" title="No namespace">PERSONNAME</a></b></div>
+                                                <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
+                                                <div><b><a href="index.html#PLACENAME" target="_self" title="No namespace">PLACENAME</a></b></div>
+                                                <div><b><a href="index.html#POLITICALAFFILIATION" target="_self" title="No namespace">POLITICALAFFILIATION</a></b></div>
+                                                <div><b><a href="index.html#POLITICS" target="_self" title="No namespace">POLITICS</a></b></div>
+                                                <div><b><a href="index.html#PSEUDONYM" target="_self" title="No namespace">PSEUDONYM</a></b></div>
+                                                <div><b><a href="index.html#PUBLICATIONSTMT" target="_self" title="No namespace">PUBLICATIONSTMT</a></b></div>
+                                                <div><b><a href="index.html#QUOTE" target="_self" title="No namespace">QUOTE</a></b></div>
+                                                <div><b><a href="index.html#RACEANDETHNICITY" target="_self" title="No namespace">RACEANDETHNICITY</a></b></div>
+                                                <div><b><a href="index.html#RACECOLOUR" target="_self" title="No namespace">RACECOLOUR</a></b></div>
+                                                <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
+                                                <div><b><a href="index.html#RELIGION" target="_self" title="No namespace">RELIGION</a></b></div>
+                                                <div><b><a href="index.html#RELIGIOUSNAME" target="_self" title="No namespace">RELIGIOUSNAME</a></b></div>
+                                                <div><b><a href="index.html#REMUNERATION" target="_self" title="No namespace">REMUNERATION</a></b></div>
+                                                <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
+                                                <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
+                                                <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
+                                                <div><b><a href="index.html#ROYAL" target="_self" title="No namespace">ROYAL</a></b></div>
+                                                <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
+                                                <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
+                                                <div><b><a href="index.html#SCHOOL" target="_self" title="No namespace">SCHOOL</a></b></div>
+                                                <div><b><a href="index.html#SEASON" target="_self" title="No namespace">SEASON</a></b></div>
+                                                <div><b><a href="index.html#SELFCONSTRUCTED" target="_self" title="No namespace">SELFCONSTRUCTED</a></b></div>
+                                                <div><b><a href="index.html#SEPARATION" target="_self" title="No namespace">SEPARATION</a></b></div>
+                                                <div><b><a href="index.html#SETTLEMENT" target="_self" title="No namespace">SETTLEMENT</a></b></div>
+                                                <div><b><a href="index.html#SEXUALIDENTITY" target="_self" title="No namespace">SEXUALIDENTITY</a></b></div>
+                                                <div><b><a href="index.html#SEXUALITY" target="_self" title="No namespace">SEXUALITY</a></b></div>
+                                                <div><b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></div>
+                                                <div><b><a href="index.html#SIC" target="_self" title="No namespace">SIC</a></b></div>
+                                                <div><b><a href="index.html#SIGNIFICANTACTIVITY" target="_self" title="No namespace">SIGNIFICANTACTIVITY</a></b></div>
+                                                <div><b><a href="index.html#SOCALLED" target="_self" title="No namespace">SOCALLED</a></b></div>
+                                                <div><b><a href="index.html#SOURCE" target="_self" title="No namespace">SOURCE</a></b></div>
+                                                <div><b><a href="index.html#SOURCEDESC" target="_self" title="No namespace">SOURCEDESC</a></b></div>
+                                                <div><b><a href="index.html#STANDARD" target="_self" title="No namespace">STANDARD</a></b></div>
+                                                <div><b><a href="index.html#STYLED" target="_self" title="No namespace">STYLED</a></b></div>
+                                                <div><b><a href="index.html#SUBJECT" target="_self" title="No namespace">SUBJECT</a></b></div>
+                                                <div><b><a href="index.html#SURNAME" target="_self" title="No namespace">SURNAME</a></b></div>
+                                                <div><b><a href="index.html#TEXT" target="_self" title="No namespace">TEXT</a></b></div>
+                                                <div><b><a href="index.html#TGENRE" target="_self" title="No namespace">TGENRE</a></b></div>
+                                                <div><b><a href="index.html#TIME" target="_self" title="No namespace">TIME</a></b></div>
+                                                <div><b><a href="index.html#TITLE" target="_self" title="No namespace">TITLE</a></b></div>
+                                                <div><b><a href="index.html#TITLED" target="_self" title="No namespace">TITLED</a></b></div>
+                                                <div><b><a href="index.html#TITLESTMT" target="_self" title="No namespace">TITLESTMT</a></b></div>
+                                                <div><b><a href="index.html#TOPIC" target="_self" title="No namespace">TOPIC</a></b></div>
+                                                <div><b><a href="index.html#VIOLENCE" target="_self" title="No namespace">VIOLENCE</a></b></div>
+                                                <div><b><a href="index.html#WEALTH" target="_self" title="No namespace">WEALTH</a></b></div>
+                                                <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
+                                                <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
+                                                <div><b><a href="index.html#YEAR" target="_self" title="No namespace">YEAR</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Attribute_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attribute Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_component_type" style="display:none">
+            <div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Element" type="image" value="-" src="img/btM.gif" onclick="switchState('Element');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Elements</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Element" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
+                                          <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
+                                          <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
+                                          <div><b><a href="index.html#AUTHORITY" target="_self" title="No namespace">AUTHORITY</a></b></div>
+                                          <div><b><a href="index.html#AUTHORSUMMARY" target="_self" title="No namespace">AUTHORSUMMARY</a></b></div>
+                                          <div><b><a href="index.html#AWARD" target="_self" title="No namespace">AWARD</a></b></div>
+                                          <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
+                                          <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
+                                          <div><b><a href="index.html#BIOGPROSE" target="_self" title="No namespace">BIOGPROSE</a></b></div>
+                                          <div><b><a href="index.html#BIOGRAPHY" target="_self" title="No namespace">BIOGRAPHY</a></b></div>
+                                          <div><b><a href="index.html#BIRTH" target="_self" title="No namespace">BIRTH</a></b></div>
+                                          <div><b><a href="index.html#BIRTHNAME" target="_self" title="No namespace">BIRTHNAME</a></b></div>
+                                          <div><b><a href="index.html#BIRTHPOSITION" target="_self" title="No namespace">BIRTHPOSITION</a></b></div>
+                                          <div><b><a href="index.html#CAUSE" target="_self" title="No namespace">CAUSE</a></b></div>
+                                          <div><b><a href="index.html#CHILDLESSNESS" target="_self" title="No namespace">CHILDLESSNESS</a></b></div>
+                                          <div><b><a href="index.html#CHILDREN" target="_self" title="No namespace">CHILDREN</a></b></div>
+                                          <div><b><a href="index.html#CHRONPROSE" target="_self" title="No namespace">CHRONPROSE</a></b></div>
+                                          <div><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b></div>
+                                          <div><b><a href="index.html#CLASS" target="_self" title="No namespace">CLASS</a></b></div>
+                                          <div><b><a href="index.html#CLASSISSUE" target="_self" title="No namespace">CLASSISSUE</a></b></div>
+                                          <div><b><a href="index.html#COMPANION" target="_self" title="No namespace">COMPANION</a></b></div>
+                                          <div><b><a href="index.html#CONTESTEDBEHAVIOUR" target="_self" title="No namespace">CONTESTEDBEHAVIOUR</a></b></div>
+                                          <div><b><a href="index.html#CULTURALFORMATION" target="_self" title="No namespace">CULTURALFORMATION</a></b></div>
+                                          <div><b><a href="index.html#DATAITEM" target="_self" title="No namespace">DATAITEM</a></b></div>
+                                          <div><b><a href="index.html#DATASTRUCT" target="_self" title="No namespace">DATASTRUCT</a></b></div>
+                                          <div><b><a href="index.html#DATE" target="_self" title="No namespace">DATE</a></b></div>
+                                          <div><b><a href="index.html#DATERANGE" target="_self" title="No namespace">DATERANGE</a></b></div>
+                                          <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
+                                          <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
+                                          <div><b><a href="index.html#DEATH" target="_self" title="No namespace">DEATH</a></b></div>
+                                          <div><b><a href="index.html#DEGREE" target="_self" title="No namespace">DEGREE</a></b></div>
+                                          <div><b><a href="index.html#DENOMINATION" target="_self" title="No namespace">DENOMINATION</a></b></div>
+                                          <div><b><a href="index.html#DIV0" target="_self" title="No namespace">DIV0</a></b></div>
+                                          <div><b><a href="index.html#DIV1" target="_self" title="No namespace">DIV1</a></b></div>
+                                          <div><b><a href="index.html#DIV2" target="_self" title="No namespace">DIV2</a></b></div>
+                                          <div><b><a href="index.html#DIVORCE" target="_self" title="No namespace">DIVORCE</a></b></div>
+                                          <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
+                                          <div><b><a href="index.html#EDUCATION" target="_self" title="No namespace">EDUCATION</a></b></div>
+                                          <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
+                                          <div><b><a href="index.html#EMPLOYER" target="_self" title="No namespace">EMPLOYER</a></b></div>
+                                          <div><b><a href="index.html#ETHNICITY" target="_self" title="No namespace">ETHNICITY</a></b></div>
+                                          <div><b><a href="index.html#FAMILY" target="_self" title="No namespace">FAMILY</a></b></div>
+                                          <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
+                                          <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
+                                          <div><b><a href="index.html#FRIENDSASSOCIATES" target="_self" title="No namespace">FRIENDSASSOCIATES</a></b></div>
+                                          <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                          <div><b><a href="index.html#GEOGHERITAGE" target="_self" title="No namespace">GEOGHERITAGE</a></b></div>
+                                          <div><b><a href="index.html#GIVEN" target="_self" title="No namespace">GIVEN</a></b></div>
+                                          <div><b><a href="index.html#HEADING" target="_self" title="No namespace">HEADING</a></b></div>
+                                          <div><b><a href="index.html#HEALTH" target="_self" title="No namespace">HEALTH</a></b></div>
+                                          <div><b><a href="index.html#INDEXED" target="_self" title="No namespace">INDEXED</a></b></div>
+                                          <div><b><a href="index.html#INSTRUCTOR" target="_self" title="No namespace">INSTRUCTOR</a></b></div>
+                                          <div><b><a href="index.html#INTIMATERELATIONSHIPS" target="_self" title="No namespace">INTIMATERELATIONSHIPS</a></b></div>
+                                          <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
+                                          <div><b><a href="index.html#JOB" target="_self" title="No namespace">JOB</a></b></div>
+                                          <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
+                                          <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
+                                          <div><b><a href="index.html#LANGUAGE" target="_self" title="No namespace">LANGUAGE</a></b></div>
+                                          <div><b><a href="index.html#LB" target="_self" title="No namespace">LB</a></b></div>
+                                          <div><b><a href="index.html#LEISUREANDSOCIETY" target="_self" title="No namespace">LEISUREANDSOCIETY</a></b></div>
+                                          <div><b><a href="index.html#LIVESWITH" target="_self" title="No namespace">LIVESWITH</a></b></div>
+                                          <div><b><a href="index.html#LOCATION" target="_self" title="No namespace">LOCATION</a></b></div>
+                                          <div><b><a href="index.html#MARRIAGE" target="_self" title="No namespace">MARRIAGE</a></b></div>
+                                          <div><b><a href="index.html#MARRIED" target="_self" title="No namespace">MARRIED</a></b></div>
+                                          <div><b><a href="index.html#MEMBER" target="_self" title="No namespace">MEMBER</a></b></div>
+                                          <div><b><a href="index.html#MONTH" target="_self" title="No namespace">MONTH</a></b></div>
+                                          <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
+                                          <div><b><a href="index.html#NATIONALHERITAGE" target="_self" title="No namespace">NATIONALHERITAGE</a></b></div>
+                                          <div><b><a href="index.html#NATIONALITY" target="_self" title="No namespace">NATIONALITY</a></b></div>
+                                          <div><b><a href="index.html#NATIONALITYISSUE" target="_self" title="No namespace">NATIONALITYISSUE</a></b></div>
+                                          <div><b><a href="index.html#NICKNAME" target="_self" title="No namespace">NICKNAME</a></b></div>
+                                          <div><b><a href="index.html#OCCASION" target="_self" title="No namespace">OCCASION</a></b></div>
+                                          <div><b><a href="index.html#OCCUPATION" target="_self" title="No namespace">OCCUPATION</a></b></div>
+                                          <div><b><a href="index.html#ORGNAME" target="_self" title="No namespace">ORGNAME</a></b></div>
+                                          <div><b><a href="index.html#ORLANDOHEADER" target="_self" title="No namespace">ORLANDOHEADER</a></b></div>
+                                          <div><b><a href="index.html#OTHERLIFEEVENT" target="_self" title="No namespace">OTHERLIFEEVENT</a></b></div>
+                                          <div><b><a href="index.html#P" target="_self" title="No namespace">P</a></b></div>
+                                          <div><b><a href="index.html#PERSONNAME" target="_self" title="No namespace">PERSONNAME</a></b></div>
+                                          <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
+                                          <div><b><a href="index.html#PLACENAME" target="_self" title="No namespace">PLACENAME</a></b></div>
+                                          <div><b><a href="index.html#POLITICALAFFILIATION" target="_self" title="No namespace">POLITICALAFFILIATION</a></b></div>
+                                          <div><b><a href="index.html#POLITICS" target="_self" title="No namespace">POLITICS</a></b></div>
+                                          <div><b><a href="index.html#PSEUDONYM" target="_self" title="No namespace">PSEUDONYM</a></b></div>
+                                          <div><b><a href="index.html#PUBLICATIONSTMT" target="_self" title="No namespace">PUBLICATIONSTMT</a></b></div>
+                                          <div><b><a href="index.html#QUOTE" target="_self" title="No namespace">QUOTE</a></b></div>
+                                          <div><b><a href="index.html#RACEANDETHNICITY" target="_self" title="No namespace">RACEANDETHNICITY</a></b></div>
+                                          <div><b><a href="index.html#RACECOLOUR" target="_self" title="No namespace">RACECOLOUR</a></b></div>
+                                          <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
+                                          <div><b><a href="index.html#RELIGION" target="_self" title="No namespace">RELIGION</a></b></div>
+                                          <div><b><a href="index.html#RELIGIOUSNAME" target="_self" title="No namespace">RELIGIOUSNAME</a></b></div>
+                                          <div><b><a href="index.html#REMUNERATION" target="_self" title="No namespace">REMUNERATION</a></b></div>
+                                          <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
+                                          <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
+                                          <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
+                                          <div><b><a href="index.html#ROYAL" target="_self" title="No namespace">ROYAL</a></b></div>
+                                          <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
+                                          <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
+                                          <div><b><a href="index.html#SCHOOL" target="_self" title="No namespace">SCHOOL</a></b></div>
+                                          <div><b><a href="index.html#SEASON" target="_self" title="No namespace">SEASON</a></b></div>
+                                          <div><b><a href="index.html#SELFCONSTRUCTED" target="_self" title="No namespace">SELFCONSTRUCTED</a></b></div>
+                                          <div><b><a href="index.html#SEPARATION" target="_self" title="No namespace">SEPARATION</a></b></div>
+                                          <div><b><a href="index.html#SETTLEMENT" target="_self" title="No namespace">SETTLEMENT</a></b></div>
+                                          <div><b><a href="index.html#SEXUALIDENTITY" target="_self" title="No namespace">SEXUALIDENTITY</a></b></div>
+                                          <div><b><a href="index.html#SEXUALITY" target="_self" title="No namespace">SEXUALITY</a></b></div>
+                                          <div><b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></div>
+                                          <div><b><a href="index.html#SIC" target="_self" title="No namespace">SIC</a></b></div>
+                                          <div><b><a href="index.html#SIGNIFICANTACTIVITY" target="_self" title="No namespace">SIGNIFICANTACTIVITY</a></b></div>
+                                          <div><b><a href="index.html#SOCALLED" target="_self" title="No namespace">SOCALLED</a></b></div>
+                                          <div><b><a href="index.html#SOURCE" target="_self" title="No namespace">SOURCE</a></b></div>
+                                          <div><b><a href="index.html#SOURCEDESC" target="_self" title="No namespace">SOURCEDESC</a></b></div>
+                                          <div><b><a href="index.html#STANDARD" target="_self" title="No namespace">STANDARD</a></b></div>
+                                          <div><b><a href="index.html#STYLED" target="_self" title="No namespace">STYLED</a></b></div>
+                                          <div><b><a href="index.html#SUBJECT" target="_self" title="No namespace">SUBJECT</a></b></div>
+                                          <div><b><a href="index.html#SURNAME" target="_self" title="No namespace">SURNAME</a></b></div>
+                                          <div><b><a href="index.html#TEXT" target="_self" title="No namespace">TEXT</a></b></div>
+                                          <div><b><a href="index.html#TGENRE" target="_self" title="No namespace">TGENRE</a></b></div>
+                                          <div><b><a href="index.html#TIME" target="_self" title="No namespace">TIME</a></b></div>
+                                          <div><b><a href="index.html#TITLE" target="_self" title="No namespace">TITLE</a></b></div>
+                                          <div><b><a href="index.html#TITLED" target="_self" title="No namespace">TITLED</a></b></div>
+                                          <div><b><a href="index.html#TITLESTMT" target="_self" title="No namespace">TITLESTMT</a></b></div>
+                                          <div><b><a href="index.html#TOPIC" target="_self" title="No namespace">TOPIC</a></b></div>
+                                          <div><b><a href="index.html#VIOLENCE" target="_self" title="No namespace">VIOLENCE</a></b></div>
+                                          <div><b><a href="index.html#WEALTH" target="_self" title="No namespace">WEALTH</a></b></div>
+                                          <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
+                                          <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
+                                          <div><b><a href="index.html#YEAR" target="_self" title="No namespace">YEAR</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('Attribute_Group');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Attribute Groups</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Attribute_Group" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div style="clear:left"></div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_location" style="display:none">
+            <div>
+               <div class="level2">
+                  <p><input id="button_gr_orlando_biography.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography.xsd');" class="control" /><span class="indexGroupTitle">orlando_biography.xsd</span></p>
+                  <div id="gr_orlando_biography.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_orlando_biography.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_orlando_biography.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
+                                                <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
+                                                <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
+                                                <div><b><a href="index.html#AUTHORITY" target="_self" title="No namespace">AUTHORITY</a></b></div>
+                                                <div><b><a href="index.html#AUTHORSUMMARY" target="_self" title="No namespace">AUTHORSUMMARY</a></b></div>
+                                                <div><b><a href="index.html#AWARD" target="_self" title="No namespace">AWARD</a></b></div>
+                                                <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
+                                                <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
+                                                <div><b><a href="index.html#BIOGPROSE" target="_self" title="No namespace">BIOGPROSE</a></b></div>
+                                                <div><b><a href="index.html#BIOGRAPHY" target="_self" title="No namespace">BIOGRAPHY</a></b></div>
+                                                <div><b><a href="index.html#BIRTH" target="_self" title="No namespace">BIRTH</a></b></div>
+                                                <div><b><a href="index.html#BIRTHNAME" target="_self" title="No namespace">BIRTHNAME</a></b></div>
+                                                <div><b><a href="index.html#BIRTHPOSITION" target="_self" title="No namespace">BIRTHPOSITION</a></b></div>
+                                                <div><b><a href="index.html#CAUSE" target="_self" title="No namespace">CAUSE</a></b></div>
+                                                <div><b><a href="index.html#CHILDLESSNESS" target="_self" title="No namespace">CHILDLESSNESS</a></b></div>
+                                                <div><b><a href="index.html#CHILDREN" target="_self" title="No namespace">CHILDREN</a></b></div>
+                                                <div><b><a href="index.html#CHRONPROSE" target="_self" title="No namespace">CHRONPROSE</a></b></div>
+                                                <div><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b></div>
+                                                <div><b><a href="index.html#CLASS" target="_self" title="No namespace">CLASS</a></b></div>
+                                                <div><b><a href="index.html#CLASSISSUE" target="_self" title="No namespace">CLASSISSUE</a></b></div>
+                                                <div><b><a href="index.html#COMPANION" target="_self" title="No namespace">COMPANION</a></b></div>
+                                                <div><b><a href="index.html#CONTESTEDBEHAVIOUR" target="_self" title="No namespace">CONTESTEDBEHAVIOUR</a></b></div>
+                                                <div><b><a href="index.html#CULTURALFORMATION" target="_self" title="No namespace">CULTURALFORMATION</a></b></div>
+                                                <div><b><a href="index.html#DATAITEM" target="_self" title="No namespace">DATAITEM</a></b></div>
+                                                <div><b><a href="index.html#DATASTRUCT" target="_self" title="No namespace">DATASTRUCT</a></b></div>
+                                                <div><b><a href="index.html#DATE" target="_self" title="No namespace">DATE</a></b></div>
+                                                <div><b><a href="index.html#DATERANGE" target="_self" title="No namespace">DATERANGE</a></b></div>
+                                                <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
+                                                <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
+                                                <div><b><a href="index.html#DEATH" target="_self" title="No namespace">DEATH</a></b></div>
+                                                <div><b><a href="index.html#DEGREE" target="_self" title="No namespace">DEGREE</a></b></div>
+                                                <div><b><a href="index.html#DENOMINATION" target="_self" title="No namespace">DENOMINATION</a></b></div>
+                                                <div><b><a href="index.html#DIV0" target="_self" title="No namespace">DIV0</a></b></div>
+                                                <div><b><a href="index.html#DIV1" target="_self" title="No namespace">DIV1</a></b></div>
+                                                <div><b><a href="index.html#DIV2" target="_self" title="No namespace">DIV2</a></b></div>
+                                                <div><b><a href="index.html#DIVORCE" target="_self" title="No namespace">DIVORCE</a></b></div>
+                                                <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
+                                                <div><b><a href="index.html#EDUCATION" target="_self" title="No namespace">EDUCATION</a></b></div>
+                                                <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
+                                                <div><b><a href="index.html#EMPLOYER" target="_self" title="No namespace">EMPLOYER</a></b></div>
+                                                <div><b><a href="index.html#ETHNICITY" target="_self" title="No namespace">ETHNICITY</a></b></div>
+                                                <div><b><a href="index.html#FAMILY" target="_self" title="No namespace">FAMILY</a></b></div>
+                                                <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
+                                                <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
+                                                <div><b><a href="index.html#FRIENDSASSOCIATES" target="_self" title="No namespace">FRIENDSASSOCIATES</a></b></div>
+                                                <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#GEOGHERITAGE" target="_self" title="No namespace">GEOGHERITAGE</a></b></div>
+                                                <div><b><a href="index.html#GIVEN" target="_self" title="No namespace">GIVEN</a></b></div>
+                                                <div><b><a href="index.html#HEADING" target="_self" title="No namespace">HEADING</a></b></div>
+                                                <div><b><a href="index.html#HEALTH" target="_self" title="No namespace">HEALTH</a></b></div>
+                                                <div><b><a href="index.html#INDEXED" target="_self" title="No namespace">INDEXED</a></b></div>
+                                                <div><b><a href="index.html#INSTRUCTOR" target="_self" title="No namespace">INSTRUCTOR</a></b></div>
+                                                <div><b><a href="index.html#INTIMATERELATIONSHIPS" target="_self" title="No namespace">INTIMATERELATIONSHIPS</a></b></div>
+                                                <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
+                                                <div><b><a href="index.html#JOB" target="_self" title="No namespace">JOB</a></b></div>
+                                                <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
+                                                <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
+                                                <div><b><a href="index.html#LANGUAGE" target="_self" title="No namespace">LANGUAGE</a></b></div>
+                                                <div><b><a href="index.html#LB" target="_self" title="No namespace">LB</a></b></div>
+                                                <div><b><a href="index.html#LEISUREANDSOCIETY" target="_self" title="No namespace">LEISUREANDSOCIETY</a></b></div>
+                                                <div><b><a href="index.html#LIVESWITH" target="_self" title="No namespace">LIVESWITH</a></b></div>
+                                                <div><b><a href="index.html#LOCATION" target="_self" title="No namespace">LOCATION</a></b></div>
+                                                <div><b><a href="index.html#MARRIAGE" target="_self" title="No namespace">MARRIAGE</a></b></div>
+                                                <div><b><a href="index.html#MARRIED" target="_self" title="No namespace">MARRIED</a></b></div>
+                                                <div><b><a href="index.html#MEMBER" target="_self" title="No namespace">MEMBER</a></b></div>
+                                                <div><b><a href="index.html#MONTH" target="_self" title="No namespace">MONTH</a></b></div>
+                                                <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
+                                                <div><b><a href="index.html#NATIONALHERITAGE" target="_self" title="No namespace">NATIONALHERITAGE</a></b></div>
+                                                <div><b><a href="index.html#NATIONALITY" target="_self" title="No namespace">NATIONALITY</a></b></div>
+                                                <div><b><a href="index.html#NATIONALITYISSUE" target="_self" title="No namespace">NATIONALITYISSUE</a></b></div>
+                                                <div><b><a href="index.html#NICKNAME" target="_self" title="No namespace">NICKNAME</a></b></div>
+                                                <div><b><a href="index.html#OCCASION" target="_self" title="No namespace">OCCASION</a></b></div>
+                                                <div><b><a href="index.html#OCCUPATION" target="_self" title="No namespace">OCCUPATION</a></b></div>
+                                                <div><b><a href="index.html#ORGNAME" target="_self" title="No namespace">ORGNAME</a></b></div>
+                                                <div><b><a href="index.html#ORLANDOHEADER" target="_self" title="No namespace">ORLANDOHEADER</a></b></div>
+                                                <div><b><a href="index.html#OTHERLIFEEVENT" target="_self" title="No namespace">OTHERLIFEEVENT</a></b></div>
+                                                <div><b><a href="index.html#P" target="_self" title="No namespace">P</a></b></div>
+                                                <div><b><a href="index.html#PERSONNAME" target="_self" title="No namespace">PERSONNAME</a></b></div>
+                                                <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
+                                                <div><b><a href="index.html#PLACENAME" target="_self" title="No namespace">PLACENAME</a></b></div>
+                                                <div><b><a href="index.html#POLITICALAFFILIATION" target="_self" title="No namespace">POLITICALAFFILIATION</a></b></div>
+                                                <div><b><a href="index.html#POLITICS" target="_self" title="No namespace">POLITICS</a></b></div>
+                                                <div><b><a href="index.html#PSEUDONYM" target="_self" title="No namespace">PSEUDONYM</a></b></div>
+                                                <div><b><a href="index.html#PUBLICATIONSTMT" target="_self" title="No namespace">PUBLICATIONSTMT</a></b></div>
+                                                <div><b><a href="index.html#QUOTE" target="_self" title="No namespace">QUOTE</a></b></div>
+                                                <div><b><a href="index.html#RACEANDETHNICITY" target="_self" title="No namespace">RACEANDETHNICITY</a></b></div>
+                                                <div><b><a href="index.html#RACECOLOUR" target="_self" title="No namespace">RACECOLOUR</a></b></div>
+                                                <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
+                                                <div><b><a href="index.html#RELIGION" target="_self" title="No namespace">RELIGION</a></b></div>
+                                                <div><b><a href="index.html#RELIGIOUSNAME" target="_self" title="No namespace">RELIGIOUSNAME</a></b></div>
+                                                <div><b><a href="index.html#REMUNERATION" target="_self" title="No namespace">REMUNERATION</a></b></div>
+                                                <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
+                                                <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
+                                                <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
+                                                <div><b><a href="index.html#ROYAL" target="_self" title="No namespace">ROYAL</a></b></div>
+                                                <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
+                                                <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
+                                                <div><b><a href="index.html#SCHOOL" target="_self" title="No namespace">SCHOOL</a></b></div>
+                                                <div><b><a href="index.html#SEASON" target="_self" title="No namespace">SEASON</a></b></div>
+                                                <div><b><a href="index.html#SELFCONSTRUCTED" target="_self" title="No namespace">SELFCONSTRUCTED</a></b></div>
+                                                <div><b><a href="index.html#SEPARATION" target="_self" title="No namespace">SEPARATION</a></b></div>
+                                                <div><b><a href="index.html#SETTLEMENT" target="_self" title="No namespace">SETTLEMENT</a></b></div>
+                                                <div><b><a href="index.html#SEXUALIDENTITY" target="_self" title="No namespace">SEXUALIDENTITY</a></b></div>
+                                                <div><b><a href="index.html#SEXUALITY" target="_self" title="No namespace">SEXUALITY</a></b></div>
+                                                <div><b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></div>
+                                                <div><b><a href="index.html#SIC" target="_self" title="No namespace">SIC</a></b></div>
+                                                <div><b><a href="index.html#SIGNIFICANTACTIVITY" target="_self" title="No namespace">SIGNIFICANTACTIVITY</a></b></div>
+                                                <div><b><a href="index.html#SOCALLED" target="_self" title="No namespace">SOCALLED</a></b></div>
+                                                <div><b><a href="index.html#SOURCE" target="_self" title="No namespace">SOURCE</a></b></div>
+                                                <div><b><a href="index.html#SOURCEDESC" target="_self" title="No namespace">SOURCEDESC</a></b></div>
+                                                <div><b><a href="index.html#STANDARD" target="_self" title="No namespace">STANDARD</a></b></div>
+                                                <div><b><a href="index.html#STYLED" target="_self" title="No namespace">STYLED</a></b></div>
+                                                <div><b><a href="index.html#SUBJECT" target="_self" title="No namespace">SUBJECT</a></b></div>
+                                                <div><b><a href="index.html#SURNAME" target="_self" title="No namespace">SURNAME</a></b></div>
+                                                <div><b><a href="index.html#TEXT" target="_self" title="No namespace">TEXT</a></b></div>
+                                                <div><b><a href="index.html#TGENRE" target="_self" title="No namespace">TGENRE</a></b></div>
+                                                <div><b><a href="index.html#TIME" target="_self" title="No namespace">TIME</a></b></div>
+                                                <div><b><a href="index.html#TITLE" target="_self" title="No namespace">TITLE</a></b></div>
+                                                <div><b><a href="index.html#TITLED" target="_self" title="No namespace">TITLED</a></b></div>
+                                                <div><b><a href="index.html#TITLESTMT" target="_self" title="No namespace">TITLESTMT</a></b></div>
+                                                <div><b><a href="index.html#TOPIC" target="_self" title="No namespace">TOPIC</a></b></div>
+                                                <div><b><a href="index.html#VIOLENCE" target="_self" title="No namespace">VIOLENCE</a></b></div>
+                                                <div><b><a href="index.html#WEALTH" target="_self" title="No namespace">WEALTH</a></b></div>
+                                                <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
+                                                <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
+                                                <div><b><a href="index.html#YEAR" target="_self" title="No namespace">YEAR</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_orlando_biography.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography.xsdAttribute_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Attribute Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_orlando_biography.xsdAttribute_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <hr />
+         <div align="center">XML Schema documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Editor.
+         </div>
+      </div>
+   </body>
+</html>
