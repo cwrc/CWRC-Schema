@@ -33,7 +33,8 @@
 <!-- 
 *** Revisions ***
 * MRB: June 2014: Addressed GitHub issues associated with the Orlando writing schema:
-  - Renamed blah.
+  - Added documentation for writing-related elements and attributes.
+  - Made the attributes CHRONCOLUMN, RELEVANCE, and RESP required attributes of the element CHRONSTRUCT.
 -->
 
 <!-- begin root <grammar> element -->
@@ -568,19 +569,17 @@
         <element name="CHRONSTRUCT">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A chronStruct is an element that holds together and therefore
         associates a date with the prose that describes an event.</a:documentation>
-            <optional>
-                <attribute name="CHRONCOLUMN">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given
+            <attribute name="CHRONCOLUMN">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given
             chronology item as belonging to a subject-specific column of the Orlando print (and possibly electronic)
             chronology.</a:documentation>
-                    <choice>
-                        <value>NATIONALINTERNATIONAL</value>
-                        <value>BRITISHWOMENWRITERS</value>
-                        <value>WRITINGCLIMATE</value>
-                        <value>SOCIALCLIMATE</value>
-                    </choice>
-                </attribute>
-            </optional>
+                <choice>
+                    <value>NATIONALINTERNATIONAL</value>
+                    <value>BRITISHWOMENWRITERS</value>
+                    <value>WRITINGCLIMATE</value>
+                    <value>SOCIALCLIMATE</value>
+                </choice>
+            </attribute>
             <optional>
                 <attribute name="CHRONCOLUMN1">
                     <choice>
@@ -611,19 +610,17 @@
                     </choice>
                 </attribute>
             </optional>
-            <optional>
-                <attribute name="RELEVANCE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to
+            <attribute name="RELEVANCE">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to
             each and every chronStruct. This element assignes importance to the chronstruct you have just created with categories for comprehensive,
             period, decade, and selective (in order of increasing importance).</a:documentation>
-                    <choice>
-                        <value>SELECTIVE</value>
-                        <value>PERIOD</value>
-                        <value>DECADE</value>
-                        <value>COMPREHENSIVE</value>
-                    </choice>
-                </attribute>
-            </optional>
+                <choice>
+                    <value>SELECTIVE</value>
+                    <value>PERIOD</value>
+                    <value>DECADE</value>
+                    <value>COMPREHENSIVE</value>
+                </choice>
+            </attribute>
             <optional>
                 <attribute name="RELEVANCE1">
                     <choice>

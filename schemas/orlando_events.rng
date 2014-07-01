@@ -33,996 +33,996 @@
 <!-- 
 *** Revisions ***
 * MRB: June 2014: Addressed GitHub issues associated with the Orlando events schema:
-  - Renamed blah.
+  - Added documentation for writing-related elements and attributes.
 -->
 
 <!-- begin root <grammar> element -->
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
 
-  <!-- begin <start> element pattern -->
-  <start>
+    <!-- begin <start> element pattern -->
+    <start>
 
-    <!-- begin FREESTANDING_EVENT element pattern -->
-    <element name="FREESTANDING_EVENT">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Events is the largest element available in events documents and its sole
+        <!-- begin FREESTANDING_EVENT element pattern -->
+        <element name="FREESTANDING_EVENT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Events is the largest element available in events documents and its sole
         purpose is to contain the overall document structure.</a:documentation>
-      <attribute name="EID">
-        <data type="integer"/>
-      </attribute>
-      <optional>
-        <attribute name="FILENAME">
-          <data type="NMTOKEN"/>
-        </attribute>
-      </optional>
-      <attribute name="ID">
-        <data type="NCName"/>
-      </attribute>
-      <attribute name="SUBSET">
-        <data type="NCName"/>
-      </attribute>
-      <optional>
-        <attribute name="TITLE">
-          <data type="NCName"/>
-        </attribute>
-      </optional>
-      <element name="CHRONSTRUCT">
-        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A chronStruct is an element that holds together and therefore
-          associates a date with the prose that describes an event.</a:documentation>
-        <attribute name="CHRONCOLUMN">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given
-              chronology item as belonging to a subject-specific column of the Orlando print (and possibly electronic)
-              chronology.</a:documentation>
-          <choice>
-            <value>NATIONALINTERNATIONAL</value>
-            <value>BRITISHWOMENWRITERS</value>
-            <value>WRITINGCLIMATE</value>
-            <value>SOCIALCLIMATE</value>
-          </choice>
-        </attribute>
-        <optional>
-          <attribute name="CHRONCOLUMN1">
-            <choice>
-              <value>NATIONALINTERNATIONAL1</value>
-              <value>BRITISHWOMENWRITERS1</value>
-              <value>WRITINGCLIMATE1</value>
-              <value>SOCIALCLIMATE1</value>
-            </choice>
-          </attribute>
-        </optional>
-        <optional>
-          <attribute name="CHRONCOLUMN2">
-            <choice>
-              <value>NATIONALINTERNATIONAL2</value>
-              <value>BRITISHWOMENWRITERS2</value>
-              <value>WRITINGCLIMATE2</value>
-              <value>SOCIALCLIMATE2</value>
-            </choice>
-          </attribute>
-        </optional>
-        <optional>
-          <attribute name="CHRONCOLUMN3">
-            <choice>
-              <value>NATIONALINTERNATIONAL3</value>
-              <value>BRITISHWOMENWRITERS3</value>
-              <value>WRITINGCLIMATE3</value>
-              <value>SOCIALCLIMATE3</value>
-            </choice>
-          </attribute>
-        </optional>
-        <attribute name="ID">
-          <data type="NCName"/>
-        </attribute>
-        <attribute name="RELEVANCE">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to
-            each and every chronStruct. This element assignes importance to the chronstruct you have just created with categories for comprehensive,
-            period, decade, and selective (in order of increasing importance).</a:documentation>
-          <choice>
-            <value>SELECTIVE</value>
-            <value>PERIOD</value>
-            <value>DECADE</value>
-            <value>COMPREHENSIVE</value>
-          </choice>
-        </attribute>
-        <optional>
-          <attribute name="RELEVANCE1">
-            <choice>
-              <value>SELECTIVE1</value>
-              <value>PERIOD1</value>
-              <value>DECADE1</value>
-              <value>COMPREHENSIVE1</value>
-            </choice>
-          </attribute>
-        </optional>
-        <optional>
-          <attribute name="RELEVANCE2">
-            <choice>
-              <value>SELECTIVE2</value>
-              <value>PERIOD2</value>
-              <value>DECADE2</value>
-              <value>COMPREHENSIVE2</value>
-            </choice>
-          </attribute>
-        </optional>
-        <optional>
-          <attribute name="RELEVANCE3">
-            <choice>
-              <value>SELECTIVE3</value>
-              <value>PERIOD3</value>
-              <value>DECADE3</value>
-              <value>COMPREHENSIVE3</value>
-            </choice>
-          </attribute>
-        </optional>
-        <ref name="RESP-attribute"/>
-        <choice>
-          <ref name="DATE"/>
-          <ref name="DATERANGE"/>
-          <ref name="DATESTRUCT"/>
-        </choice>
-        <element name="CHRONPROSE">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
-            the essential facts of a chronology event.</a:documentation>
-          <oneOrMore>
-            <choice>
-              <text/>
-              <ref name="BIBCITS"/>
-              <ref name="DATE"/>
-              <ref name="DATERANGE"/>
-              <ref name="DATESTRUCT"/>
-              <ref name="EMPH"/>
-              <ref name="FOREIGN"/>
-              <ref name="KEYWORDCLASS"/>
-              <ref name="NAME"/>
-              <ref name="ORGNAME"/>
-              <ref name="PLACE"/>
-              <ref name="QUOTE"/>
-              <ref name="RESEARCHNOTE"/>
-              <ref name="RS"/>
-              <ref name="SCHOLARNOTE"/>
-              <ref name="SIC"/>
-              <ref name="SOCALLED"/>
-              <ref name="TGENRE"/>
-              <ref name="TITLE"/>
-              <ref name="TOPIC"/>
-              <element name="TINTERTEXTUALITY">
-                <ref name="TITLE"/>
-              </element>
-              <element name="TTHEMETOPIC">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the
-                  central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not
-                  aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</a:documentation>
-                <text/>
-              </element>
-            </choice>
-          </oneOrMore>
-        </element>
-        <optional>
-          <ref name="SCHOLARNOTES"/>
-        </optional>
-      </element>
-      <optional>
-        <element name="SHORTPROSE">
-          <oneOrMore>
-            <choice>
-              <ref name="KEYWORDCLASS"/>
-              <ref name="P"/>
-            </choice>
-          </oneOrMore>
-          <optional>
-            <ref name="RESEARCHNOTE"/>
-          </optional>
-        </element>
-      </optional>
-      <optional>
-        <element name="RESEARCHNOTES">
-          <oneOrMore>
-            <ref name="RESEARCHNOTE"/>
-          </oneOrMore>
-        </element>
-      </optional>
-      <optional>
-        <ref name="SCHOLARNOTES"/>
-      </optional>
-      <optional>
-        <ref name="BIBCITS"/>
-      </optional>
-      <optional>
-        <element name="KEYWORDCLASSES">
-          <oneOrMore>
-            <ref name="KEYWORDCLASS"/>
-          </oneOrMore>
-        </element>
-      </optional>
-      <element name="RESPONSIBILITIES">
-        <oneOrMore>
-          <element name="RESPONSIBILITY">
-            <ref name="RESP-attribute"/>
-            <attribute name="WORKSTATUS">
-              <data type="NCName"/>
-            </attribute>
-            <attribute name="WORKVALUE">
-              <data type="NCName"/>
+            <attribute name="EID">
+                <data type="integer"/>
             </attribute>
             <optional>
-              <ref name="BIBCIT"/>
+                <attribute name="FILENAME">
+                    <data type="NMTOKEN"/>
+                </attribute>
             </optional>
-            <ref name="DATE"/>
-            <zeroOrMore>
-              <choice>
-                <ref name="RESEARCHNOTE"/>
-                <element name="ITEM">
-                  <oneOrMore>
+            <attribute name="ID">
+                <data type="NCName"/>
+            </attribute>
+            <attribute name="SUBSET">
+                <data type="NCName"/>
+            </attribute>
+            <optional>
+                <attribute name="TITLE">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <element name="CHRONSTRUCT">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A chronStruct is an element that holds together and therefore
+          associates a date with the prose that describes an event.</a:documentation>
+                <attribute name="CHRONCOLUMN">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given
+              chronology item as belonging to a subject-specific column of the Orlando print (and possibly electronic)
+              chronology.</a:documentation>
                     <choice>
-                      <text/>
-                      <ref name="DATE"/>
+                        <value>NATIONALINTERNATIONAL</value>
+                        <value>BRITISHWOMENWRITERS</value>
+                        <value>WRITINGCLIMATE</value>
+                        <value>SOCIALCLIMATE</value>
                     </choice>
-                  </oneOrMore>
+                </attribute>
+                <optional>
+                    <attribute name="CHRONCOLUMN1">
+                        <choice>
+                            <value>NATIONALINTERNATIONAL1</value>
+                            <value>BRITISHWOMENWRITERS1</value>
+                            <value>WRITINGCLIMATE1</value>
+                            <value>SOCIALCLIMATE1</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="CHRONCOLUMN2">
+                        <choice>
+                            <value>NATIONALINTERNATIONAL2</value>
+                            <value>BRITISHWOMENWRITERS2</value>
+                            <value>WRITINGCLIMATE2</value>
+                            <value>SOCIALCLIMATE2</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="CHRONCOLUMN3">
+                        <choice>
+                            <value>NATIONALINTERNATIONAL3</value>
+                            <value>BRITISHWOMENWRITERS3</value>
+                            <value>WRITINGCLIMATE3</value>
+                            <value>SOCIALCLIMATE3</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+                <attribute name="RELEVANCE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to
+            each and every chronStruct. This element assignes importance to the chronstruct you have just created with categories for comprehensive,
+            period, decade, and selective (in order of increasing importance).</a:documentation>
+                    <choice>
+                        <value>SELECTIVE</value>
+                        <value>PERIOD</value>
+                        <value>DECADE</value>
+                        <value>COMPREHENSIVE</value>
+                    </choice>
+                </attribute>
+                <optional>
+                    <attribute name="RELEVANCE1">
+                        <choice>
+                            <value>SELECTIVE1</value>
+                            <value>PERIOD1</value>
+                            <value>DECADE1</value>
+                            <value>COMPREHENSIVE1</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="RELEVANCE2">
+                        <choice>
+                            <value>SELECTIVE2</value>
+                            <value>PERIOD2</value>
+                            <value>DECADE2</value>
+                            <value>COMPREHENSIVE2</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="RELEVANCE3">
+                        <choice>
+                            <value>SELECTIVE3</value>
+                            <value>PERIOD3</value>
+                            <value>DECADE3</value>
+                            <value>COMPREHENSIVE3</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <ref name="RESP-attribute"/>
+                <choice>
+                    <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
+                    <ref name="DATESTRUCT"/>
+                </choice>
+                <element name="CHRONPROSE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
+            the essential facts of a chronology event.</a:documentation>
+                    <oneOrMore>
+                        <choice>
+                            <text/>
+                            <ref name="BIBCITS"/>
+                            <ref name="DATE"/>
+                            <ref name="DATERANGE"/>
+                            <ref name="DATESTRUCT"/>
+                            <ref name="EMPH"/>
+                            <ref name="FOREIGN"/>
+                            <ref name="KEYWORDCLASS"/>
+                            <ref name="NAME"/>
+                            <ref name="ORGNAME"/>
+                            <ref name="PLACE"/>
+                            <ref name="QUOTE"/>
+                            <ref name="RESEARCHNOTE"/>
+                            <ref name="RS"/>
+                            <ref name="SCHOLARNOTE"/>
+                            <ref name="SIC"/>
+                            <ref name="SOCALLED"/>
+                            <ref name="TGENRE"/>
+                            <ref name="TITLE"/>
+                            <ref name="TOPIC"/>
+                            <element name="TINTERTEXTUALITY">
+                                <ref name="TITLE"/>
+                            </element>
+                            <element name="TTHEMETOPIC">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the
+                  central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not
+                  aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</a:documentation>
+                                <text/>
+                            </element>
+                        </choice>
+                    </oneOrMore>
                 </element>
-              </choice>
-            </zeroOrMore>
-          </element>
-        </oneOrMore>
-      </element>
-    </element>
-    <!-- end FREESTANDING_EVENT element pattern -->
+                <optional>
+                    <ref name="SCHOLARNOTES"/>
+                </optional>
+            </element>
+            <optional>
+                <element name="SHORTPROSE">
+                    <oneOrMore>
+                        <choice>
+                            <ref name="KEYWORDCLASS"/>
+                            <ref name="P"/>
+                        </choice>
+                    </oneOrMore>
+                    <optional>
+                        <ref name="RESEARCHNOTE"/>
+                    </optional>
+                </element>
+            </optional>
+            <optional>
+                <element name="RESEARCHNOTES">
+                    <oneOrMore>
+                        <ref name="RESEARCHNOTE"/>
+                    </oneOrMore>
+                </element>
+            </optional>
+            <optional>
+                <ref name="SCHOLARNOTES"/>
+            </optional>
+            <optional>
+                <ref name="BIBCITS"/>
+            </optional>
+            <optional>
+                <element name="KEYWORDCLASSES">
+                    <oneOrMore>
+                        <ref name="KEYWORDCLASS"/>
+                    </oneOrMore>
+                </element>
+            </optional>
+            <element name="RESPONSIBILITIES">
+                <oneOrMore>
+                    <element name="RESPONSIBILITY">
+                        <ref name="RESP-attribute"/>
+                        <attribute name="WORKSTATUS">
+                            <data type="NCName"/>
+                        </attribute>
+                        <attribute name="WORKVALUE">
+                            <data type="NCName"/>
+                        </attribute>
+                        <optional>
+                            <ref name="BIBCIT"/>
+                        </optional>
+                        <ref name="DATE"/>
+                        <zeroOrMore>
+                            <choice>
+                                <ref name="RESEARCHNOTE"/>
+                                <element name="ITEM">
+                                    <oneOrMore>
+                                        <choice>
+                                            <text/>
+                                            <ref name="DATE"/>
+                                        </choice>
+                                    </oneOrMore>
+                                </element>
+                            </choice>
+                        </zeroOrMore>
+                    </element>
+                </oneOrMore>
+            </element>
+        </element>
+        <!-- end FREESTANDING_EVENT element pattern -->
 
-  </start>
-  <!-- end <start> element pattern -->
+    </start>
+    <!-- end <start> element pattern -->
 
-  <!-- *** begin globally defined elements *** -->
+    <!-- *** begin globally defined elements *** -->
 
-  <define name="DATE">
-    <element name="DATE">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Date is one of three elements, along with dateRange and
+    <define name="DATE">
+        <element name="DATE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Date is one of three elements, along with dateRange and
         dateStruct, used to systematize the capture of dates across project documents. Date is used to tag all singular dates (not ranges) for
         which all components (day, month, year) have a common degree of certainty.  Accurate and systematic tagging of dates on the project is
         a high priority both for the role that dates play in sorting and properly displaying chronology events, but also for facilitating the
         search and retrieval of non-chronology material across project documents.</a:documentation>
-      <optional>
-        <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct,
+            <optional>
+                <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct,
             calendar is used to indicate when a given date took place.</a:documentation>
-          <choice>
-            <value>NEWSTYLE</value>
-            <value>BC</value>
-          </choice>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="CERTAINTY" a:defaultValue="CERT">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
+                    <choice>
+                        <value>NEWSTYLE</value>
+                        <value>BC</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CERTAINTY" a:defaultValue="CERT">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
             dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
-          <choice>
-            <value>CERT</value>
-            <a:documentation>Certain</a:documentation>
-            <value>C</value>
-            <a:documentation>Circa</a:documentation>
-            <value>BY</value>
-            <a:documentation>By this date</a:documentation>
-            <value>AFTER</value>
-            <a:documentation>After this date</a:documentation>
-            <value>UNKNOWN</value>
-            <a:documentation>Unknown date</a:documentation>
-            <value>ROUGHLYDATED</value>
-            <a:documentation>Rough certainty</a:documentation>
-          </choice>
-        </attribute>
-      </optional>
-      <attribute name="VALUE"/>
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
+                    <choice>
+                        <value>CERT</value>
+                        <a:documentation>Certain</a:documentation>
+                        <value>C</value>
+                        <a:documentation>Circa</a:documentation>
+                        <value>BY</value>
+                        <a:documentation>By this date</a:documentation>
+                        <value>AFTER</value>
+                        <a:documentation>After this date</a:documentation>
+                        <value>UNKNOWN</value>
+                        <a:documentation>Unknown date</a:documentation>
+                        <value>ROUGHLYDATED</value>
+                        <a:documentation>Rough certainty</a:documentation>
+                    </choice>
+                </attribute>
+            </optional>
+            <attribute name="VALUE"/>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
         time-related value.</a:documentation>
-      <text/>
-    </element>
-  </define>
+            <text/>
+        </element>
+    </define>
 
-  <define name="DATESTRUCT">
-    <element name="DATESTRUCT">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">DateStruct is one of three elements, along with dateRange and
+    <define name="DATESTRUCT">
+        <element name="DATESTRUCT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">DateStruct is one of three elements, along with dateRange and
         date, used to systematize the capture of dates across project documents. DateStruct is used to tag all singular dates (not ranges) for
         which individual components (day, month, year) have a varying degrees of certainty or for which only a general season or occasion is
         known. DateStruct also permits recording the time of day an event occurred.</a:documentation>
-      <optional>
-        <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct,
+            <optional>
+                <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct,
             calendar is used to indicate when a given date took place.</a:documentation>
-          <choice>
-            <value>NEWSTYLE</value>
-            <value>BC</value>
-          </choice>
-        </attribute>
-      </optional>
-      <attribute name="CERTAINTY" a:defaultValue="CERT">
-        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
+                    <choice>
+                        <value>NEWSTYLE</value>
+                        <value>BC</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <attribute name="CERTAINTY" a:defaultValue="CERT">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
           dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
-        <choice>
-          <value>CERT</value>
-          <a:documentation>Certain</a:documentation>
-          <value>C</value>
-          <a:documentation>Circa</a:documentation>
-          <value>BY</value>
-          <a:documentation>By this date</a:documentation>
-          <value>AFTER</value>
-          <a:documentation>After this date</a:documentation>
-          <value>UNKNOWN</value>
-          <a:documentation>Unknown date</a:documentation>
-          <value>ROUGHLYDATED</value>
-          <a:documentation>Rough certainty</a:documentation>
-        </choice>
-      </attribute>
-      <attribute name="VALUE">
-        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
-          time-related value.</a:documentation>
-        <data type="NMTOKEN"/>
-      </attribute>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <element name="DAY">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A sub-element of dateStruct, day is used to tag
-              the specific day on which an event occurred.</a:documentation>
-            <optional>
-              <attribute name="VALUE">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
-                  time-related value.</a:documentation>
-                <data type="integer"/>
-              </attribute>
-            </optional>
-            <data type="integer"/>
-          </element>
-          <element name="MONTH">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Month is a sub-element of dateStruct and is meant
-              to record only the month portion of a date for which there is a contested or varying degree of certainty among date
-              components.</a:documentation>
-            <optional>
-              <attribute name="CERTAINTY" a:defaultValue="CERT">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
-                  dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
                 <choice>
-                  <value>CERT</value>
-                  <a:documentation>Certain</a:documentation>
-                  <value>C</value>
-                  <a:documentation>Circa</a:documentation>
-                  <value>BY</value>
-                  <a:documentation>By this date</a:documentation>
-                  <value>AFTER</value>
-                  <a:documentation>After this date</a:documentation>
-                  <value>UNKNOWN</value>
-                  <a:documentation>Unknown date</a:documentation>
-                  <value>ROUGHLYDATED</value>
-                  <a:documentation>Rough certainty</a:documentation>
+                    <value>CERT</value>
+                    <a:documentation>Certain</a:documentation>
+                    <value>C</value>
+                    <a:documentation>Circa</a:documentation>
+                    <value>BY</value>
+                    <a:documentation>By this date</a:documentation>
+                    <value>AFTER</value>
+                    <a:documentation>After this date</a:documentation>
+                    <value>UNKNOWN</value>
+                    <a:documentation>Unknown date</a:documentation>
+                    <value>ROUGHLYDATED</value>
+                    <a:documentation>Rough certainty</a:documentation>
                 </choice>
-              </attribute>
-            </optional>
-            <attribute name="VALUE">
-              <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
-                time-related value.</a:documentation>
-              <data type="integer"/>
             </attribute>
-            <data type="NCName"/>
-          </element>
-          <element name="OCCASION">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The occasion element surrounds dates, such as
-              holidays, that are best referred to by name not date.</a:documentation>
-            <text/>
-          </element>
-          <element name="SEASON">
-            <optional>
-              <attribute name="CERTAINTY" a:defaultValue="CERT">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
-                  dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
-                <choice>
-                  <value>CERT</value>
-                  <a:documentation>Certain</a:documentation>
-                  <value>C</value>
-                  <a:documentation>Circa</a:documentation>
-                  <value>BY</value>
-                  <a:documentation>By this date</a:documentation>
-                  <value>AFTER</value>
-                  <a:documentation>After this date</a:documentation>
-                  <value>UNKNOWN</value>
-                  <a:documentation>Unknown date</a:documentation>
-                  <value>ROUGHLYDATED</value>
-                  <a:documentation>Rough certainty</a:documentation>
-                </choice>
-              </attribute>
-            </optional>
-            <optional>
-              <attribute name="VALUE">
+            <attribute name="VALUE">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
-                  time-related value.</a:documentation>
+          time-related value.</a:documentation>
                 <data type="NMTOKEN"/>
-              </attribute>
-            </optional>
-            <text/>
-          </element>
-          <element name="TIME">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">time contains a phrase defining a time of day in any
-              format.</a:documentation>
-            <text/>
-          </element>
-          <element name="YEAR">
-            <optional>
-              <attribute name="CERTAINTY" a:defaultValue="CERT">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
-                  dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
-                <choice>
-                  <value>CERT</value>
-                  <a:documentation>Certain</a:documentation>
-                  <value>C</value>
-                  <a:documentation>Circa</a:documentation>
-                  <value>BY</value>
-                  <a:documentation>By this date</a:documentation>
-                  <value>AFTER</value>
-                  <a:documentation>After this date</a:documentation>
-                  <value>UNKNOWN</value>
-                  <a:documentation>Unknown date</a:documentation>
-                  <value>ROUGHLYDATED</value>
-                  <a:documentation>Rough certainty</a:documentation>
-                </choice>
-              </attribute>
-            </optional>
-            <optional>
-              <attribute name="VALUE">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
-                  time-related value.</a:documentation>
-                <data type="NMTOKEN"/>
-              </attribute>
-            </optional>
-            <text/>
-          </element>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
-
-  <define name="DATERANGE">
-    <element name="DATERANGE">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Along with date and dateStruct, dateRange is one of three
-        elements used for systematizing dates across project documents. Use dateRange for all events that occurred over a span of time or for all
-        dates that are uncertain but that certainly occurred within a specified span of time.</a:documentation>
-      <optional>
-        <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct,
-            calendar is used to indicate when a given date took place.</a:documentation>
-          <choice>
-            <value>NEWSTYLE</value>
-            <value>BC</value>
-          </choice>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="CERTAINTY" a:defaultValue="CERT">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
-            dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
-          <choice>
-            <value>CERT</value>
-            <a:documentation>Certain</a:documentation>
-            <value>C</value>
-            <a:documentation>Circa</a:documentation>
-            <value>BY</value>
-            <a:documentation>By this date</a:documentation>
-            <value>AFTER</value>
-            <a:documentation>After this date</a:documentation>
-            <value>UNKNOWN</value>
-            <a:documentation>Unknown date</a:documentation>
-            <value>ROUGHLYDATED</value>
-            <a:documentation>Rough certainty</a:documentation>
-          </choice>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="EXACT">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of dateRange, exact is used in
-            conjunction with the to and from attributes to express the certainty of each end of a dateRange.</a:documentation>
-          <choice>
-            <value>TO</value>
-            <value>FROM</value>
-            <value>BOTH</value>
-            <value>NEITHER</value>
-          </choice>
-        </attribute>
-      </optional>
-      <attribute name="FROM">
-        <data type="NMTOKEN"/>
-      </attribute>
-      <attribute name="TO">
-        <data type="NMTOKEN"/>
-      </attribute>
-      <text/>
-    </element>
-  </define>
-
-  <define name="TITLE">
-    <element name="TITLE">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The title element contains the title of a work, whether
-        article, book, journal (newspaper, magazine), series, or unpublished.</a:documentation>
-      <attribute name="CT_ID">
-        <data type="NMTOKEN"/>
-      </attribute>
-      <attribute name="CT_ISLINK">
-        <data type="integer"/>
-      </attribute>
-      <optional>
-        <attribute name="REG" a:documentation="Regularized value">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
-            regularization) contains a reading which has been regularized or normalized in some
-            sense.</a:documentation>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="REND">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rend (or rendition) indicates how the element in
-            question was rendered or presented in the source text.</a:documentation>
-          <data type="NCName"/>
-        </attribute>
-      </optional>
-      <attribute name="TITLETYPE">
-        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
-          title is a part of another work, an entire work, a journal, or a series.</a:documentation>
-        <choice>
-          <value>MONOGRAPHIC</value>
-          <value>ANALYTIC</value>
-          <value>JOURNAL</value>
-          <value>SERIES</value>
-          <value>UNPUBLISHED</value>
-        </choice>
-      </attribute>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="DATE"/>
-          <ref name="FOREIGN"/>
-          <ref name="NAME"/>
-          <ref name="ORGNAME"/>
-          <ref name="PLACE"/>
-          <ref name="RS"/>
-          <ref name="SIC"/>
-          <ref name="SOCALLED"/>
-          <ref name="TGENRE"/>
-          <ref name="TITLE"/>
-          <ref name="TOPIC"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
-
-  <define name="RESEARCHNOTE">
-    <element name="RESEARCHNOTE">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ResearchNote is available everywhere, and it allows us to
-        comment among ourselves on the work at hand; not to be confused with scholarNotes that will be readable by end users, the contents of
-        this element will be seen only by project members.</a:documentation>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="NAME"/>
-          <ref name="RESEARCHNOTE"/>
-          <ref name="TITLE"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
-
-  <define name="QUOTE">
-    <element name="QUOTE">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The quote element is globally available and should be used
-        wherever you quote a source.</a:documentation>
-      <optional>
-        <attribute name="DIRECT" a:defaultValue="Y">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Direct is an attribute of the quote element and is
-            intended to indicate whether a source is being quoted directly or indirectly. For display purposes, it will be necessary to set
-            off direct quotations (double quotation marks) from indirect ones (single quotation marks).</a:documentation>
-          <choice>
-            <value>Y</value>
-            <value>N</value>
-          </choice>
-        </attribute>
-      </optional>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="BIBCITS"/>
-          <ref name="EMPH"/>
-          <ref name="FOREIGN"/>
-          <ref name="L"/>
-          <ref name="NAME"/>
-          <ref name="ORGNAME"/>
-          <ref name="PLACE"/>
-          <ref name="QUOTE"/>
-          <ref name="SIC"/>
-          <ref name="SOCALLED"/>
-          <ref name="TGENRE"/>
-          <ref name="TITLE"/>
-          <ref name="TOPIC"/>
-          <element name="LG">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lg contains a group of verse lines functioning as a formal
-              unit, e.g. a stanza, refrain, verse paragraph, etc.</a:documentation>
-            <attribute name="TYPE">
-              <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using any
-                convenient classification scheme or typology.</a:documentation>
-              <data type="NCName"/>
             </attribute>
             <oneOrMore>
-              <ref name="L"/>
+                <choice>
+                    <text/>
+                    <element name="DAY">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A sub-element of dateStruct, day is used to tag
+              the specific day on which an event occurred.</a:documentation>
+                        <optional>
+                            <attribute name="VALUE">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
+                  time-related value.</a:documentation>
+                                <data type="integer"/>
+                            </attribute>
+                        </optional>
+                        <data type="integer"/>
+                    </element>
+                    <element name="MONTH">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Month is a sub-element of dateStruct and is meant
+              to record only the month portion of a date for which there is a contested or varying degree of certainty among date
+              components.</a:documentation>
+                        <optional>
+                            <attribute name="CERTAINTY" a:defaultValue="CERT">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
+                  dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
+                                <choice>
+                                    <value>CERT</value>
+                                    <a:documentation>Certain</a:documentation>
+                                    <value>C</value>
+                                    <a:documentation>Circa</a:documentation>
+                                    <value>BY</value>
+                                    <a:documentation>By this date</a:documentation>
+                                    <value>AFTER</value>
+                                    <a:documentation>After this date</a:documentation>
+                                    <value>UNKNOWN</value>
+                                    <a:documentation>Unknown date</a:documentation>
+                                    <value>ROUGHLYDATED</value>
+                                    <a:documentation>Rough certainty</a:documentation>
+                                </choice>
+                            </attribute>
+                        </optional>
+                        <attribute name="VALUE">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
+                time-related value.</a:documentation>
+                            <data type="integer"/>
+                        </attribute>
+                        <data type="NCName"/>
+                    </element>
+                    <element name="OCCASION">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The occasion element surrounds dates, such as
+              holidays, that are best referred to by name not date.</a:documentation>
+                        <text/>
+                    </element>
+                    <element name="SEASON">
+                        <optional>
+                            <attribute name="CERTAINTY" a:defaultValue="CERT">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
+                  dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
+                                <choice>
+                                    <value>CERT</value>
+                                    <a:documentation>Certain</a:documentation>
+                                    <value>C</value>
+                                    <a:documentation>Circa</a:documentation>
+                                    <value>BY</value>
+                                    <a:documentation>By this date</a:documentation>
+                                    <value>AFTER</value>
+                                    <a:documentation>After this date</a:documentation>
+                                    <value>UNKNOWN</value>
+                                    <a:documentation>Unknown date</a:documentation>
+                                    <value>ROUGHLYDATED</value>
+                                    <a:documentation>Rough certainty</a:documentation>
+                                </choice>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="VALUE">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
+                  time-related value.</a:documentation>
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <text/>
+                    </element>
+                    <element name="TIME">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">time contains a phrase defining a time of day in any
+              format.</a:documentation>
+                        <text/>
+                    </element>
+                    <element name="YEAR">
+                        <optional>
+                            <attribute name="CERTAINTY" a:defaultValue="CERT">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
+                  dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
+                                <choice>
+                                    <value>CERT</value>
+                                    <a:documentation>Certain</a:documentation>
+                                    <value>C</value>
+                                    <a:documentation>Circa</a:documentation>
+                                    <value>BY</value>
+                                    <a:documentation>By this date</a:documentation>
+                                    <value>AFTER</value>
+                                    <a:documentation>After this date</a:documentation>
+                                    <value>UNKNOWN</value>
+                                    <a:documentation>Unknown date</a:documentation>
+                                    <value>ROUGHLYDATED</value>
+                                    <a:documentation>Rough certainty</a:documentation>
+                                </choice>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="VALUE">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
+                  time-related value.</a:documentation>
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <text/>
+                    </element>
+                </choice>
             </oneOrMore>
-          </element>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+        </element>
+    </define>
 
-  <define name="NAME">
-    <element name="NAME">
-      <attribute name="CT_ID">
-        <data type="NMTOKEN"/>
-      </attribute>
-      <attribute name="CT_ISLINK">
-        <data type="integer"/>
-      </attribute>
-      <attribute name="STANDARD"/>
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
+    <define name="DATERANGE">
+        <element name="DATERANGE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Along with date and dateStruct, dateRange is one of three
+        elements used for systematizing dates across project documents. Use dateRange for all events that occurred over a span of time or for all
+        dates that are uncertain but that certainly occurred within a specified span of time.</a:documentation>
+            <optional>
+                <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct,
+            calendar is used to indicate when a given date took place.</a:documentation>
+                    <choice>
+                        <value>NEWSTYLE</value>
+                        <value>BC</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CERTAINTY" a:defaultValue="CERT">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
+            dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
+                    <choice>
+                        <value>CERT</value>
+                        <a:documentation>Certain</a:documentation>
+                        <value>C</value>
+                        <a:documentation>Circa</a:documentation>
+                        <value>BY</value>
+                        <a:documentation>By this date</a:documentation>
+                        <value>AFTER</value>
+                        <a:documentation>After this date</a:documentation>
+                        <value>UNKNOWN</value>
+                        <a:documentation>Unknown date</a:documentation>
+                        <value>ROUGHLYDATED</value>
+                        <a:documentation>Rough certainty</a:documentation>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="EXACT">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of dateRange, exact is used in
+            conjunction with the to and from attributes to express the certainty of each end of a dateRange.</a:documentation>
+                    <choice>
+                        <value>TO</value>
+                        <value>FROM</value>
+                        <value>BOTH</value>
+                        <value>NEITHER</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <attribute name="FROM">
+                <data type="NMTOKEN"/>
+            </attribute>
+            <attribute name="TO">
+                <data type="NMTOKEN"/>
+            </attribute>
+            <text/>
+        </element>
+    </define>
+
+    <define name="TITLE">
+        <element name="TITLE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The title element contains the title of a work, whether
+        article, book, journal (newspaper, magazine), series, or unpublished.</a:documentation>
+            <attribute name="CT_ID">
+                <data type="NMTOKEN"/>
+            </attribute>
+            <attribute name="CT_ISLINK">
+                <data type="integer"/>
+            </attribute>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+            regularization) contains a reading which has been regularized or normalized in some
+            sense.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REND">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rend (or rendition) indicates how the element in
+            question was rendered or presented in the source text.</a:documentation>
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <attribute name="TITLETYPE">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
+          title is a part of another work, an entire work, a journal, or a series.</a:documentation>
+                <choice>
+                    <value>MONOGRAPHIC</value>
+                    <value>ANALYTIC</value>
+                    <value>JOURNAL</value>
+                    <value>SERIES</value>
+                    <value>UNPUBLISHED</value>
+                </choice>
+            </attribute>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="DATE"/>
+                    <ref name="FOREIGN"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="RS"/>
+                    <ref name="SIC"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TITLE"/>
+                    <ref name="TOPIC"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="RESEARCHNOTE">
+        <element name="RESEARCHNOTE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ResearchNote is available everywhere, and it allows us to
+        comment among ourselves on the work at hand; not to be confused with scholarNotes that will be readable by end users, the contents of
+        this element will be seen only by project members.</a:documentation>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="NAME"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="TITLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="QUOTE">
+        <element name="QUOTE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The quote element is globally available and should be used
+        wherever you quote a source.</a:documentation>
+            <optional>
+                <attribute name="DIRECT" a:defaultValue="Y">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Direct is an attribute of the quote element and is
+            intended to indicate whether a source is being quoted directly or indirectly. For display purposes, it will be necessary to set
+            off direct quotations (double quotation marks) from indirect ones (single quotation marks).</a:documentation>
+                    <choice>
+                        <value>Y</value>
+                        <value>N</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="EMPH"/>
+                    <ref name="FOREIGN"/>
+                    <ref name="L"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="QUOTE"/>
+                    <ref name="SIC"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TITLE"/>
+                    <ref name="TOPIC"/>
+                    <element name="LG">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lg contains a group of verse lines functioning as a formal
+              unit, e.g. a stanza, refrain, verse paragraph, etc.</a:documentation>
+                        <attribute name="TYPE">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using any
+                convenient classification scheme or typology.</a:documentation>
+                            <data type="NCName"/>
+                        </attribute>
+                        <oneOrMore>
+                            <ref name="L"/>
+                        </oneOrMore>
+                    </element>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="NAME">
+        <element name="NAME">
+            <attribute name="CT_ID">
+                <data type="NMTOKEN"/>
+            </attribute>
+            <attribute name="CT_ISLINK">
+                <data type="integer"/>
+            </attribute>
+            <attribute name="STANDARD"/>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
         organization, or topic is known</a:documentation>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="SIC"/>
-          <ref name="SOCALLED"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="SIC"/>
+                    <ref name="SOCALLED"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <define name="TGENRE">
-    <element name="TGENRE">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">GenreName (or tGenre) is used to tag the name of the genre
+    <define name="TGENRE">
+        <element name="TGENRE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">GenreName (or tGenre) is used to tag the name of the genre
         according to a project-generated list of genre names.</a:documentation>
-      <optional>
-        <attribute name="GENRENAME">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">GenreName is an optional attribute that provides a
+            <optional>
+                <attribute name="GENRENAME">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">GenreName is an optional attribute that provides a
             pick-list of possible genre names to modify the element tGenre. It will prove especially useful in situations where the prose
             does not allow the concise naming of a genre that would be easily understood by a simpler name. Ultimately, this attribute will
             help us systematize and index references to various genre names.</a:documentation>
-          <choice>
-            <value>ABRIDGEMENT</value>
-            <value>ACLEF</value>
-            <value>ACROSTIC</value>
-            <value>ADAPTATION</value>
-            <value>ADVENTUREWRITING</value>
-            <value>ADVERTISINGCOPY</value>
-            <value>AFTERPIECE</value>
-            <value>AFTERWORD</value>
-            <value>AGITPROP</value>
-            <value>ALLEGORY</value>
-            <value>ALMANAC</value>
-            <value>ANACREONTIC</value>
-            <value>ANAGRAM</value>
-            <value>ANNOTATION</value>
-            <value>ANSWER</value>
-            <value>ANTHEM</value>
-            <value>ANTHOLOGY</value>
-            <value>ANTIROMANCE</value>
-            <value>APHORISM</value>
-            <value>APOLOGY</value>
-            <value>ARTCRITICISM</value>
-            <value>AUTOBIOGRAPHY</value>
-            <value>BALLAD</value>
-            <value>BALLADE</value>
-            <value>BALLADOPERA</value>
-            <value>BALLET</value>
-            <value>BERGAMASQUE</value>
-            <value>BESTIARY</value>
-            <value>BIBLICALPARAPHRASE</value>
-            <value>BILDUNGSROMAN</value>
-            <value>BIOGRAPHICALDICTIONARY</value>
-            <value>BIOGRAPHY</value>
-            <value>BISEXUALFICTION</value>
-            <value>BLACKCOMEDY</value>
-            <value>BOUTSRIMES</value>
-            <value>BROADSIDE</value>
-            <value>BURLETTA</value>
-            <value>CABARET</value>
-            <value>CAPTIVITYNARRATIVE</value>
-            <value>CATECHISM</value>
-            <value>CHAPBOOK</value>
-            <value>CHARACTER</value>
-            <value>CHARADE</value>
-            <value>CHILDRENSLITERATURE</value>
-            <value>CLERIHEW</value>
-            <value>CLOSETDRAMA</value>
-            <value>COLOURINGBOOK</value>
-            <value>COMEDY</value>
-            <value>COMEDYOFHUMOURS</value>
-            <value>COMEDYOFINTRIGUE</value>
-            <value>COMEDYOFMANNERS</value>
-            <value>COMEDYOFMENACE</value>
-            <value>COMICBOOK</value>
-            <value>COMINGOUT</value>
-            <value>COMMONPLACEBOOK</value>
-            <value>COMPANION</value>
-            <value>COMPUTERPROGRAM</value>
-            <value>CONDITIONOFENGLANDNOVEL</value>
-            <value>CONDUCTLITERATURE</value>
-            <value>COOKBOOK</value>
-            <value>COURTSHIPFICTION</value>
-            <value>CRIMINOLOGY</value>
-            <value>DEDICATION</value>
-            <value>DETECTIVE</value>
-            <value>DEVOTIONAL</value>
-            <value>DIALOGUEORDEBATE</value>
-            <value>DIARY</value>
-            <value>DIALOGUEOFTHEDEAD</value>
-            <value>DICTIONARY</value>
-            <value>DIDACTIC</value>
-            <value>DIRECTORY</value>
-            <value>DISSERTATION</value>
-            <value>DOCUMENTARY</value>
-            <value>DOMESTIC</value>
-            <value>DRAMA</value>
-            <value>DRAMATICMONOLOGUE</value>
-            <value>DREAMVISION</value>
-            <value>DYSTOPIA</value>
-            <value>ECLOGUE</value>
-            <value>EDITING</value>
-            <value>ELEGY</value>
-            <value>ENCYCLOPAEDIA</value>
-            <value>EPIC</value>
-            <value>EPICTHEATRE</value>
-            <value>EPIGRAM</value>
-            <value>EPILOGUE</value>
-            <value>EPISODICLITERATURE</value>
-            <value>EPISTLE</value>
-            <value>EPISTOLARY</value>
-            <value>EPITAPH</value>
-            <value>EPITHALAMIUM</value>
-            <value>EPYLLION</value>
-            <value>EROTICAPORNOGRAPHY</value>
-            <value>ESSAY</value>
-            <value>EULOGY</value>
-            <value>EXHIBITIONCATALOGUE</value>
-            <value>EXPRESSIONISTWRITING</value>
-            <value>FABLE</value>
-            <value>FABLIAU</value>
-            <value>FAIRYTALE</value>
-            <value>FANTASY</value>
-            <value>FARCE</value>
-            <value>FEMINIST</value>
-            <value>FEMINISTTHEORY</value>
-            <value>FICTION</value>
-            <value>FILMTVSCRIPT</value>
-            <value>FOLKSONG</value>
-            <value>GARDENINGBOOK</value>
-            <value>GENEALOGY</value>
-            <value>GEORGIC</value>
-            <value>GHOSTSTORY</value>
-            <value>GIFTBOOK</value>
-            <value>GOTHIC</value>
-            <value>GOVERNMENTREPORT</value>
-            <value>GRAMMAR</value>
-            <value>GRAVEYARDPOETRY</value>
-            <value>GUERILLATHEATRE</value>
-            <value>GUIDEBOOK</value>
-            <value>HAGIOGRAPHY</value>
-            <value>HAIKU</value>
-            <value>HARLEQUINADE</value>
-            <value>HEROIC</value>
-            <value>HISTORICAL</value>
-            <value>HISTORY</value>
-            <value>HYMN</value>
-            <value>IMITATION</value>
-            <value>IMPROVISATION</value>
-            <value>INDUSTRIALNOVEL</value>
-            <value>INTRODUCTION</value>
-            <value>JOURNALISM</value>
-            <value>JUVENILIA</value>
-            <value>KITCHENSINKDRAMA</value>
-            <value>KUNSTLERROMAN</value>
-            <value>LAIS</value>
-            <value>LAMPOON</value>
-            <value>LEGALWRITING</value>
-            <value>LEGENDFOLKTALE</value>
-            <value>LESBIAN</value>
-            <value>LETTER</value>
-            <value>LETTERSFROMTHEDEADTOTHELIVING</value>
-            <value>LIBRETTO</value>
-            <value>LITERARYCRITICISM</value>
-            <value>LITURGY</value>
-            <value>LOVE</value>
-            <value>LYRIC</value>
-            <value>MAGICREALIST</value>
-            <value>MANIFESTO</value>
-            <value>MANUAL</value>
-            <value>MAP</value>
-            <value>MASQUE</value>
-            <value>MEDICALWRITING</value>
-            <value>MELODRAMA</value>
-            <value>MIXEDMEDIA</value>
-            <value>MOCKFORMS</value>
-            <value>MONOLOGUE</value>
-            <value>MORALITYMYSTERYPLAY</value>
-            <value>MULTIMEDIA</value>
-            <value>MUSICOLOGY</value>
-            <value>MYSTERY</value>
-            <value>MYTH</value>
-            <value>NARRATIVEPOETRY</value>
-            <value>NATIONALISTFICTION</value>
-            <value>NATIONALTALE</value>
-            <value>NOTEBOOK</value>
-            <value>NOVEL</value>
-            <value>NOVELLA</value>
-            <value>NURSERYRHYME</value>
-            <value>OBITUARY</value>
-            <value>OCCASIONALPOETRY</value>
-            <value>ODE</value>
-            <value>ONEACTPLAY</value>
-            <value>OPERA</value>
-            <value>ORATORIO</value>
-            <value>ORIENTAL</value>
-            <value>PAGEANT</value>
-            <value>PANEGYRIC</value>
-            <value>PANTOMIME</value>
-            <value>PARABLE</value>
-            <value>PARATEXTS</value>
-            <value>PARLIAMENTARYREPORT</value>
-            <value>PARODY</value>
-            <value>PASTORAL</value>
-            <value>PEDAGOGY</value>
-            <value>PERFORMANCEPOETRY</value>
-            <value>PERIODICAL</value>
-            <value>PETITION</value>
-            <value>PHILOSOPHICAL</value>
-            <value>PHILOSOPHY</value>
-            <value>PICARESQUE</value>
-            <value>PINDARIC</value>
-            <value>POETRY</value>
-            <value>POLEMIC</value>
-            <value>POLITICALWRITING</value>
-            <value>POPULAR</value>
-            <value>PRAYER</value>
-            <value>PREFATORYPIECE</value>
-            <value>PROGRAMNOTES</value>
-            <value>PROLETARIANWRITING</value>
-            <value>PROLOGUE</value>
-            <value>PROPAGANDA</value>
-            <value>PROPHECY</value>
-            <value>PSALM</value>
-            <value>PSYCHOANALYTICAL</value>
-            <value>QUIZ</value>
-            <value>RADIODRAMA</value>
-            <value>REALIST</value>
-            <value>REGIONAL</value>
-            <value>RELIGIOUS</value>
-            <value>REVIEW</value>
-            <value>REVUE</value>
-            <value>RIDDLE</value>
-            <value>ROMANCE</value>
-            <value>SAGEWRITING</value>
-            <value>SATIRE</value>
-            <value>SCHOLARSHIP</value>
-            <value>SCHOOLFICTION</value>
-            <value>SCIENCEFICTION</value>
-            <value>SCIENTIFICWRITING</value>
-            <value>SCRAPBOOK</value>
-            <value>SENSATIONNOVEL</value>
-            <value>SENSIBILITY</value>
-            <value>SENTIMENTAL</value>
-            <value>SEQUEL</value>
-            <value>SERMON</value>
-            <value>SEXUALAWAKENINGFICTION</value>
-            <value>SHORTSTORY</value>
-            <value>SILVERFORKNOVEL</value>
-            <value>SKETCH</value>
-            <value>SKETCHBOOK</value>
-            <value>SLAVENARRATIVE</value>
-            <value>SOCIALSCIENCE</value>
-            <value>SONG</value>
-            <value>SONNET</value>
-            <value>SPEECH</value>
-            <value>STAGEREVIEW</value>
-            <value>TESTIMONY</value>
-            <value>TEXTBOOK</value>
-            <value>THEATREOFCRUELTY</value>
-            <value>THEATREOFTHEABSURD</value>
-            <value>THEOLOGY</value>
-            <value>THESAURUS</value>
-            <value>THRILLER</value>
-            <value>TOPOGRAPHICALPOETRY</value>
-            <value>TRACTPAMPHLET</value>
-            <value>TRAGEDY</value>
-            <value>TRAGICOMEDY</value>
-            <value>TRANSLATION</value>
-            <value>TRAVELWRITING</value>
-            <value>TREATISE</value>
-            <value>UTOPIA</value>
-            <value>VERSENOVEL</value>
-            <value>VIGNETTE</value>
-            <value>VILLANELLE</value>
-            <value>YOUNGADULTWRITING</value>
-          </choice>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="PROPOSEDALTERNATIVENAME"/>
-        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute, attached to tGenre, can be
+                    <choice>
+                        <value>ABRIDGEMENT</value>
+                        <value>ACLEF</value>
+                        <value>ACROSTIC</value>
+                        <value>ADAPTATION</value>
+                        <value>ADVENTUREWRITING</value>
+                        <value>ADVERTISINGCOPY</value>
+                        <value>AFTERPIECE</value>
+                        <value>AFTERWORD</value>
+                        <value>AGITPROP</value>
+                        <value>ALLEGORY</value>
+                        <value>ALMANAC</value>
+                        <value>ANACREONTIC</value>
+                        <value>ANAGRAM</value>
+                        <value>ANNOTATION</value>
+                        <value>ANSWER</value>
+                        <value>ANTHEM</value>
+                        <value>ANTHOLOGY</value>
+                        <value>ANTIROMANCE</value>
+                        <value>APHORISM</value>
+                        <value>APOLOGY</value>
+                        <value>ARTCRITICISM</value>
+                        <value>AUTOBIOGRAPHY</value>
+                        <value>BALLAD</value>
+                        <value>BALLADE</value>
+                        <value>BALLADOPERA</value>
+                        <value>BALLET</value>
+                        <value>BERGAMASQUE</value>
+                        <value>BESTIARY</value>
+                        <value>BIBLICALPARAPHRASE</value>
+                        <value>BILDUNGSROMAN</value>
+                        <value>BIOGRAPHICALDICTIONARY</value>
+                        <value>BIOGRAPHY</value>
+                        <value>BISEXUALFICTION</value>
+                        <value>BLACKCOMEDY</value>
+                        <value>BOUTSRIMES</value>
+                        <value>BROADSIDE</value>
+                        <value>BURLETTA</value>
+                        <value>CABARET</value>
+                        <value>CAPTIVITYNARRATIVE</value>
+                        <value>CATECHISM</value>
+                        <value>CHAPBOOK</value>
+                        <value>CHARACTER</value>
+                        <value>CHARADE</value>
+                        <value>CHILDRENSLITERATURE</value>
+                        <value>CLERIHEW</value>
+                        <value>CLOSETDRAMA</value>
+                        <value>COLOURINGBOOK</value>
+                        <value>COMEDY</value>
+                        <value>COMEDYOFHUMOURS</value>
+                        <value>COMEDYOFINTRIGUE</value>
+                        <value>COMEDYOFMANNERS</value>
+                        <value>COMEDYOFMENACE</value>
+                        <value>COMICBOOK</value>
+                        <value>COMINGOUT</value>
+                        <value>COMMONPLACEBOOK</value>
+                        <value>COMPANION</value>
+                        <value>COMPUTERPROGRAM</value>
+                        <value>CONDITIONOFENGLANDNOVEL</value>
+                        <value>CONDUCTLITERATURE</value>
+                        <value>COOKBOOK</value>
+                        <value>COURTSHIPFICTION</value>
+                        <value>CRIMINOLOGY</value>
+                        <value>DEDICATION</value>
+                        <value>DETECTIVE</value>
+                        <value>DEVOTIONAL</value>
+                        <value>DIALOGUEORDEBATE</value>
+                        <value>DIARY</value>
+                        <value>DIALOGUEOFTHEDEAD</value>
+                        <value>DICTIONARY</value>
+                        <value>DIDACTIC</value>
+                        <value>DIRECTORY</value>
+                        <value>DISSERTATION</value>
+                        <value>DOCUMENTARY</value>
+                        <value>DOMESTIC</value>
+                        <value>DRAMA</value>
+                        <value>DRAMATICMONOLOGUE</value>
+                        <value>DREAMVISION</value>
+                        <value>DYSTOPIA</value>
+                        <value>ECLOGUE</value>
+                        <value>EDITING</value>
+                        <value>ELEGY</value>
+                        <value>ENCYCLOPAEDIA</value>
+                        <value>EPIC</value>
+                        <value>EPICTHEATRE</value>
+                        <value>EPIGRAM</value>
+                        <value>EPILOGUE</value>
+                        <value>EPISODICLITERATURE</value>
+                        <value>EPISTLE</value>
+                        <value>EPISTOLARY</value>
+                        <value>EPITAPH</value>
+                        <value>EPITHALAMIUM</value>
+                        <value>EPYLLION</value>
+                        <value>EROTICAPORNOGRAPHY</value>
+                        <value>ESSAY</value>
+                        <value>EULOGY</value>
+                        <value>EXHIBITIONCATALOGUE</value>
+                        <value>EXPRESSIONISTWRITING</value>
+                        <value>FABLE</value>
+                        <value>FABLIAU</value>
+                        <value>FAIRYTALE</value>
+                        <value>FANTASY</value>
+                        <value>FARCE</value>
+                        <value>FEMINIST</value>
+                        <value>FEMINISTTHEORY</value>
+                        <value>FICTION</value>
+                        <value>FILMTVSCRIPT</value>
+                        <value>FOLKSONG</value>
+                        <value>GARDENINGBOOK</value>
+                        <value>GENEALOGY</value>
+                        <value>GEORGIC</value>
+                        <value>GHOSTSTORY</value>
+                        <value>GIFTBOOK</value>
+                        <value>GOTHIC</value>
+                        <value>GOVERNMENTREPORT</value>
+                        <value>GRAMMAR</value>
+                        <value>GRAVEYARDPOETRY</value>
+                        <value>GUERILLATHEATRE</value>
+                        <value>GUIDEBOOK</value>
+                        <value>HAGIOGRAPHY</value>
+                        <value>HAIKU</value>
+                        <value>HARLEQUINADE</value>
+                        <value>HEROIC</value>
+                        <value>HISTORICAL</value>
+                        <value>HISTORY</value>
+                        <value>HYMN</value>
+                        <value>IMITATION</value>
+                        <value>IMPROVISATION</value>
+                        <value>INDUSTRIALNOVEL</value>
+                        <value>INTRODUCTION</value>
+                        <value>JOURNALISM</value>
+                        <value>JUVENILIA</value>
+                        <value>KITCHENSINKDRAMA</value>
+                        <value>KUNSTLERROMAN</value>
+                        <value>LAIS</value>
+                        <value>LAMPOON</value>
+                        <value>LEGALWRITING</value>
+                        <value>LEGENDFOLKTALE</value>
+                        <value>LESBIAN</value>
+                        <value>LETTER</value>
+                        <value>LETTERSFROMTHEDEADTOTHELIVING</value>
+                        <value>LIBRETTO</value>
+                        <value>LITERARYCRITICISM</value>
+                        <value>LITURGY</value>
+                        <value>LOVE</value>
+                        <value>LYRIC</value>
+                        <value>MAGICREALIST</value>
+                        <value>MANIFESTO</value>
+                        <value>MANUAL</value>
+                        <value>MAP</value>
+                        <value>MASQUE</value>
+                        <value>MEDICALWRITING</value>
+                        <value>MELODRAMA</value>
+                        <value>MIXEDMEDIA</value>
+                        <value>MOCKFORMS</value>
+                        <value>MONOLOGUE</value>
+                        <value>MORALITYMYSTERYPLAY</value>
+                        <value>MULTIMEDIA</value>
+                        <value>MUSICOLOGY</value>
+                        <value>MYSTERY</value>
+                        <value>MYTH</value>
+                        <value>NARRATIVEPOETRY</value>
+                        <value>NATIONALISTFICTION</value>
+                        <value>NATIONALTALE</value>
+                        <value>NOTEBOOK</value>
+                        <value>NOVEL</value>
+                        <value>NOVELLA</value>
+                        <value>NURSERYRHYME</value>
+                        <value>OBITUARY</value>
+                        <value>OCCASIONALPOETRY</value>
+                        <value>ODE</value>
+                        <value>ONEACTPLAY</value>
+                        <value>OPERA</value>
+                        <value>ORATORIO</value>
+                        <value>ORIENTAL</value>
+                        <value>PAGEANT</value>
+                        <value>PANEGYRIC</value>
+                        <value>PANTOMIME</value>
+                        <value>PARABLE</value>
+                        <value>PARATEXTS</value>
+                        <value>PARLIAMENTARYREPORT</value>
+                        <value>PARODY</value>
+                        <value>PASTORAL</value>
+                        <value>PEDAGOGY</value>
+                        <value>PERFORMANCEPOETRY</value>
+                        <value>PERIODICAL</value>
+                        <value>PETITION</value>
+                        <value>PHILOSOPHICAL</value>
+                        <value>PHILOSOPHY</value>
+                        <value>PICARESQUE</value>
+                        <value>PINDARIC</value>
+                        <value>POETRY</value>
+                        <value>POLEMIC</value>
+                        <value>POLITICALWRITING</value>
+                        <value>POPULAR</value>
+                        <value>PRAYER</value>
+                        <value>PREFATORYPIECE</value>
+                        <value>PROGRAMNOTES</value>
+                        <value>PROLETARIANWRITING</value>
+                        <value>PROLOGUE</value>
+                        <value>PROPAGANDA</value>
+                        <value>PROPHECY</value>
+                        <value>PSALM</value>
+                        <value>PSYCHOANALYTICAL</value>
+                        <value>QUIZ</value>
+                        <value>RADIODRAMA</value>
+                        <value>REALIST</value>
+                        <value>REGIONAL</value>
+                        <value>RELIGIOUS</value>
+                        <value>REVIEW</value>
+                        <value>REVUE</value>
+                        <value>RIDDLE</value>
+                        <value>ROMANCE</value>
+                        <value>SAGEWRITING</value>
+                        <value>SATIRE</value>
+                        <value>SCHOLARSHIP</value>
+                        <value>SCHOOLFICTION</value>
+                        <value>SCIENCEFICTION</value>
+                        <value>SCIENTIFICWRITING</value>
+                        <value>SCRAPBOOK</value>
+                        <value>SENSATIONNOVEL</value>
+                        <value>SENSIBILITY</value>
+                        <value>SENTIMENTAL</value>
+                        <value>SEQUEL</value>
+                        <value>SERMON</value>
+                        <value>SEXUALAWAKENINGFICTION</value>
+                        <value>SHORTSTORY</value>
+                        <value>SILVERFORKNOVEL</value>
+                        <value>SKETCH</value>
+                        <value>SKETCHBOOK</value>
+                        <value>SLAVENARRATIVE</value>
+                        <value>SOCIALSCIENCE</value>
+                        <value>SONG</value>
+                        <value>SONNET</value>
+                        <value>SPEECH</value>
+                        <value>STAGEREVIEW</value>
+                        <value>TESTIMONY</value>
+                        <value>TEXTBOOK</value>
+                        <value>THEATREOFCRUELTY</value>
+                        <value>THEATREOFTHEABSURD</value>
+                        <value>THEOLOGY</value>
+                        <value>THESAURUS</value>
+                        <value>THRILLER</value>
+                        <value>TOPOGRAPHICALPOETRY</value>
+                        <value>TRACTPAMPHLET</value>
+                        <value>TRAGEDY</value>
+                        <value>TRAGICOMEDY</value>
+                        <value>TRANSLATION</value>
+                        <value>TRAVELWRITING</value>
+                        <value>TREATISE</value>
+                        <value>UTOPIA</value>
+                        <value>VERSENOVEL</value>
+                        <value>VIGNETTE</value>
+                        <value>VILLANELLE</value>
+                        <value>YOUNGADULTWRITING</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="PROPOSEDALTERNATIVENAME"/>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute, attached to tGenre, can be
           used when there is no appropriate name for a genre on the Orlando pick list found under the attribute genreName.</a:documentation>
-      </optional>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="FOREIGN"/>
-          <ref name="ORGNAME"/>
-          <ref name="PLACE"/>
-          <ref name="SOCALLED"/>
-          <ref name="TGENRE"/>
-          <ref name="TITLE"/>
-          <ref name="TOPIC"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="FOREIGN"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TITLE"/>
+                    <ref name="TOPIC"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <define name="SOCALLED">
-    <element name="SOCALLED">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Socalled contains a word or phrase for which the author or
+    <define name="SOCALLED">
+        <element name="SOCALLED">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Socalled contains a word or phrase for which the author or
         narrator indicates a disclaiming of responsibility, for example by the use of scare quotes or italics.</a:documentation>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="FOREIGN"/>
-          <ref name="NAME"/>
-          <ref name="ORGNAME"/>
-          <ref name="PLACE"/>
-          <ref name="TGENRE"/>
-          <ref name="TITLE"/>
-          <ref name="TOPIC"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="FOREIGN"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TITLE"/>
+                    <ref name="TOPIC"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <define name="TOPIC">
-    <element name="TOPIC">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the
+    <define name="TOPIC">
+        <element name="TOPIC">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the
         central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not
         aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</a:documentation>
-      <optional>
-        <attribute name="STANDARD"/>
-        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
+            <optional>
+                <attribute name="STANDARD"/>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
           organization, or topic is known</a:documentation>
-      </optional>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="QUOTE"/>
-          <ref name="SOCALLED"/>
-          <ref name="TGENRE"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="QUOTE"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TGENRE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <define name="SCHOLARNOTE">
-    <element name="SCHOLARNOTE">
-      <attribute name="ID">
-        <data type="NCName"/>
-      </attribute>
-      <attribute name="SN_ID">
-        <data type="integer"/>
-      </attribute>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="DATE"/>
-          <ref name="NAME"/>
-          <ref name="ORGNAME"/>
-          <ref name="P"/>
-          <ref name="RESEARCHNOTE"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+    <define name="SCHOLARNOTE">
+        <element name="SCHOLARNOTE">
+            <attribute name="ID">
+                <data type="NCName"/>
+            </attribute>
+            <attribute name="SN_ID">
+                <data type="integer"/>
+            </attribute>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="DATE"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="P"/>
+                    <ref name="RESEARCHNOTE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <define name="PLACE">
-    <element name="PLACE">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Place is a universal element, available throughout most
+    <define name="PLACE">
+        <element name="PLACE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Place is a universal element, available throughout most
         Orlando Project XML elements, which structures information about geographical location. Locating events and people is a priority of our
         Project. By emphasizing the facts of where events occurred, we will be able to bring together people and places, uncovering geographical
         connections between writers as yet undiscovered. <br/>There are two main goals for tagging place: mapping and indexing. We hope to
@@ -1035,86 +1035,86 @@
         tagging. We hope to enhance our geographical information by context specific tagging. For example, by tagging only places where events
         occurred inside Event chronstructs and not all places mentioned within the prose, we will be able to map that event to the place tagged.
       </a:documentation>
-      <attribute name="CT_ID">
-        <data type="NMTOKEN"/>
-      </attribute>
-      <attribute name="CT_ISLINK">
-        <data type="integer"/>
-      </attribute>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <element name="ADDRESS">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Address, a sub-element within place, captures the
+            <attribute name="CT_ID">
+                <data type="NMTOKEN"/>
+            </attribute>
+            <attribute name="CT_ISLINK">
+                <data type="integer"/>
+            </attribute>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <element name="ADDRESS">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Address, a sub-element within place, captures the
               specific address where a person lived or where a specific and significant event occurred. Before tagging an address,
               consider whether it is significant enough to capture in SGML (if a woman writer lived at the address, capture it; if she
               visited a friend there, probably not). Often for recent writers many addresses are available. Don&apos;t include them all.
               Include only those significant to the document you are writing.</a:documentation>
-            <attribute name="CT_ID">
-              <data type="NMTOKEN"/>
-            </attribute>
-            <attribute name="CT_ISLINK">
-              <data type="integer"/>
-            </attribute>
-            <optional>
-              <attribute name="CURRENT"/>
-              <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
+                        <attribute name="CT_ID">
+                            <data type="NMTOKEN"/>
+                        </attribute>
+                        <attribute name="CT_ISLINK">
+                            <data type="integer"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="CURRENT"/>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
                 location.</a:documentation>
-            </optional>
-            <optional>
-              <attribute name="REG" a:documentation="Regularized value">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
                   regularization) contains a reading which has been regularized or normalized in some
                   sense.</a:documentation>
-              </attribute>
-            </optional>
-            <oneOrMore>
-              <element name="ADDRLINE">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">AddrLine is the required sub-element of
+                            </attribute>
+                        </optional>
+                        <oneOrMore>
+                            <element name="ADDRLINE">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">AddrLine is the required sub-element of
                   address. For definition of an address, see address.</a:documentation>
-                <text/>
-              </element>
-            </oneOrMore>
-          </element>
-          <element name="AREA">
-            <optional>
-              <attribute name="REG" a:documentation="Regularized value">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                    </element>
+                    <element name="AREA">
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
                   regularization) contains a reading which has been regularized or normalized in some
                   sense.</a:documentation>
-              </attribute>
-            </optional>
-            <text/>
-          </element>
-          <element name="GEOG">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Geog captures names of places which are nation states or
+                            </attribute>
+                        </optional>
+                        <text/>
+                    </element>
+                    <element name="GEOG">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Geog captures names of places which are nation states or
               larger conceptual geographical entities. The following is a list of the types of places geog captures: Nation states: Italy, China, Canada;
               Groups of Nation States: Low Countries, Baltic Countries; Continents: Europe, North America, South America, Africa, Asia; Colonies: French
               Indo-China, British North America, British Protectorate of Bechuanaland [Note: use current attribute wherever possible.]; Conceptual
               Geographical Groupings: Far East, Caribbean; Historical Geo-political units: Siam, Ceylon [Note: use "current" attribute to regularize to
               "Thailand" and "Sri Lanka"].</a:documentation>
-            <attribute name="CT_ID">
-              <data type="NMTOKEN"/>
-            </attribute>
-            <attribute name="CT_ISLINK">
-              <data type="integer"/>
-            </attribute>
-            <optional>
-              <attribute name="CURRENT"/>
-              <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
+                        <attribute name="CT_ID">
+                            <data type="NMTOKEN"/>
+                        </attribute>
+                        <attribute name="CT_ISLINK">
+                            <data type="integer"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="CURRENT"/>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
                 location.</a:documentation>
-            </optional>
-            <optional>
-              <attribute name="REG" a:documentation="Regularized value">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
                   regularization) contains a reading which has been regularized or normalized in some
                   sense.</a:documentation>
-              </attribute>
-            </optional>
-            <text/>
-          </element>
-          <element name="PLACENAME">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Placename, a sub-element within place, captures specific and
+                            </attribute>
+                        </optional>
+                        <text/>
+                    </element>
+                    <element name="PLACENAME">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Placename, a sub-element within place, captures specific and
               easily identifiable places that are known by their name but are not places in the same way geographical or political entities are places. For
               example, "Trafalgar Square" is a placename. We are only interested in capturing placenames for those places that are important to women's
               literary history (i.e., those placenames that are likely to come up more than once in Orlando). For example, Sissinghurst, the estate of Vita
@@ -1122,533 +1122,533 @@
               The following are common types of placenames: Buildings and Estates: British Museum, Knole; Farms and Gardens: Kew Gardens; Squares:
               Bedford Square, Trafalgar Square; Streets: Fleet Street, The Strand, Old Change; Specific Mountains: while ranges are considered regions,
               the names of specific mountains are placenames, for example, Mount Everest; Cemeteries: Paddington Cemetery.</a:documentation>
-            <attribute name="CT_ID">
-              <data type="NMTOKEN"/>
-            </attribute>
-            <attribute name="CT_ISLINK">
-              <data type="integer"/>
-            </attribute>
-            <optional>
-              <attribute name="CURRENT"/>
-              <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
+                        <attribute name="CT_ID">
+                            <data type="NMTOKEN"/>
+                        </attribute>
+                        <attribute name="CT_ISLINK">
+                            <data type="integer"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="CURRENT"/>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
                 location.</a:documentation>
-            </optional>
-            <optional>
-              <attribute name="REG" a:documentation="Regularized value">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
                   regularization) contains a reading which has been regularized or normalized in some
                   sense.</a:documentation>
-              </attribute>
-            </optional>
-            <text/>
-          </element>
-          <element name="REGION">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Region, a sub-element of place, captures the following
+                            </attribute>
+                        </optional>
+                        <text/>
+                    </element>
+                    <element name="REGION">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Region, a sub-element of place, captures the following
               geographical and political units: Political regions of the British Isles: Cornwall, Durham, Hampshire; Political regions of other countries:
               Alberta, Madras, California; Topographical features: all mountains ranges, islands (when not nation states), valleys, etc.; Bodies of Waters
               (including oceans, rivers, lakes): Lake Simcoe, English Channel, Nile, Atlantic ocean; Geographical regions: Lake District, Scottish Highlands;
               Greater Urban areas: Greater London, Greater Manchester; Borders: Welsh border, Tibetan border.</a:documentation>
-            <attribute name="CT_ID">
-              <data type="NMTOKEN"/>
-            </attribute>
-            <attribute name="CT_ISLINK">
-              <data type="integer"/>
-            </attribute>
-            <optional>
-              <attribute name="CURRENT"/>
-              <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
+                        <attribute name="CT_ID">
+                            <data type="NMTOKEN"/>
+                        </attribute>
+                        <attribute name="CT_ISLINK">
+                            <data type="integer"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="CURRENT"/>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
                 location.</a:documentation>
-            </optional>
-            <optional>
-              <attribute name="REG" a:documentation="Regularized value">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
                   regularization) contains a reading which has been regularized or normalized in some
                   sense.</a:documentation>
-              </attribute>
-            </optional>
-            <text/>
-          </element>
-          <element name="SETTLEMENT">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Settlement, a sub-element of place, captures the names of
+                            </attribute>
+                        </optional>
+                        <text/>
+                    </element>
+                    <element name="SETTLEMENT">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Settlement, a sub-element of place, captures the names of
               cities, towns, villages, hamlets and areas within larger settlements (for example, districts of London).</a:documentation>
-            <attribute name="CT_ID">
-              <data type="NMTOKEN"/>
-            </attribute>
-            <attribute name="CT_ISLINK">
-              <data type="integer"/>
-            </attribute>
-            <optional>
-              <attribute name="CURRENT"/>
-              <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
+                        <attribute name="CT_ID">
+                            <data type="NMTOKEN"/>
+                        </attribute>
+                        <attribute name="CT_ISLINK">
+                            <data type="integer"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="CURRENT"/>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
                 location.</a:documentation>
-            </optional>
-            <optional>
-              <attribute name="REG" a:documentation="Regularized value">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
                   regularization) contains a reading which has been regularized or normalized in some
                   sense.</a:documentation>
-              </attribute>
-            </optional>
-            <text/>
-          </element>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+                            </attribute>
+                        </optional>
+                        <text/>
+                    </element>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <define name="RS">
-    <element name="RS">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The rs element is a general purpose name element for all
+    <define name="RS">
+        <element name="RS">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The rs element is a general purpose name element for all
         names that merit tagging for either display purposes or for search and retrieval, but that are not adequately covered by the name,
         orgName, place, or title elements.</a:documentation>
-      <optional>
-        <attribute name="REG" a:documentation="Regularized value">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
             regularization) contains a reading which has been regularized or normalized in some
             sense.</a:documentation>
-          <data type="NCName"/>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="TYPE"/>
-        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using any
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="TYPE"/>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using any
           convenient classification scheme or typology.</a:documentation>
-      </optional>
-      <text/>
-    </element>
-  </define>
+            </optional>
+            <text/>
+        </element>
+    </define>
 
-  <define name="SIC">
-    <element name="SIC">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element is left over from the TEI set of elements and is
+    <define name="SIC">
+        <element name="SIC">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element is left over from the TEI set of elements and is
         meant to be used in the same way that you would use a [sic] tag in regular prose. For our purposes, we have devised a set of practice
         directives to guide you in your use of this element. It is primarily a formatting tag which inserts the word [sic] in rendered
         text.</a:documentation>
-      <optional>
-        <attribute name="CORR">
-          <data type="NCName"/>
-        </attribute>
-      </optional>
-      <text/>
-    </element>
-  </define>
+            <optional>
+                <attribute name="CORR">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <text/>
+        </element>
+    </define>
 
-  <define name="EMPH">
-    <element name="EMPH">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Short for emphasis, emph is an element that marks words or
+    <define name="EMPH">
+        <element name="EMPH">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Short for emphasis, emph is an element that marks words or
         phrases which are stressed or emphasized for linguistic or rhetorical effect.</a:documentation>
-      <text/>
-    </element>
-  </define>
+            <text/>
+        </element>
+    </define>
 
-  <define name="FOREIGN">
-    <element name="FOREIGN">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The foreign element identifies a word or phrase as belonging
+    <define name="FOREIGN">
+        <element name="FOREIGN">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The foreign element identifies a word or phrase as belonging
         to some language other than that of the surrounding text.</a:documentation>
-      <optional>
-        <attribute name="LANG">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute of the foreign element
+            <optional>
+                <attribute name="LANG">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute of the foreign element
             contains the name of the language that foreign word or phrase has been written in. Having such information will allow us to
             isolate different languages for checking and searching purposes.</a:documentation>
-          <data type="NCName"/>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="REG" a:documentation="Regularized value">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
             regularization) contains a reading which has been regularized or normalized in some
             sense.</a:documentation>
-        </attribute>
-      </optional>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="ORGNAME"/>
-          <ref name="TGENRE"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="ORGNAME"/>
+                    <ref name="TGENRE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <define name="BIBCITS">
-    <element name="BIBCITS">
-      <oneOrMore>
-        <ref name="BIBCIT"/>
-      </oneOrMore>
-      <optional>
-        <ref name="RESEARCHNOTE"/>
-      </optional>
-    </element>
-  </define>
+    <define name="BIBCITS">
+        <element name="BIBCITS">
+            <oneOrMore>
+                <ref name="BIBCIT"/>
+            </oneOrMore>
+            <optional>
+                <ref name="RESEARCHNOTE"/>
+            </optional>
+        </element>
+    </define>
 
-  <define name="KEYWORDCLASS">
-    <element name="KEYWORDCLASS">
-      <optional>
-        <attribute name="KEYWORDTYPE"/>
-      </optional>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="KEYWORDCLASS"/>
-          <ref name="RESEARCHNOTE"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+    <define name="KEYWORDCLASS">
+        <element name="KEYWORDCLASS">
+            <optional>
+                <attribute name="KEYWORDTYPE"/>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="RESEARCHNOTE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <define name="ORGNAME">
-    <element name="ORGNAME">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The orgName element is used to identify schools, companies,
+    <define name="ORGNAME">
+        <element name="ORGNAME">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The orgName element is used to identify schools, companies,
         and any other type of recognized organization.</a:documentation>
-      <attribute name="CT_ID">
-        <data type="NMTOKEN"/>
-      </attribute>
-      <attribute name="CT_ISLINK">
-        <data type="integer"/>
-      </attribute>
-      <optional>
-        <attribute name="ORGTYPE">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A carry-over from the Microsoft Access database for
+            <attribute name="CT_ID">
+                <data type="NMTOKEN"/>
+            </attribute>
+            <attribute name="CT_ISLINK">
+                <data type="integer"/>
+            </attribute>
+            <optional>
+                <attribute name="ORGTYPE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A carry-over from the Microsoft Access database for
             chronology, orgType contains a keyword descriptor of an organization. Do not use this attribute.</a:documentation>
-        </attribute>
-      </optional>
-      <optional>
-        <attribute name="REG" a:documentation="Regularized value">
-          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
             regularization) contains a reading which has been regularized or normalized in some
             sense.</a:documentation>
-        </attribute>
-      </optional>
-      <attribute name="STANDARD"/>
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
+                </attribute>
+            </optional>
+            <attribute name="STANDARD"/>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
         organization, or topic is known</a:documentation>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="FOREIGN"/>
-          <ref name="NAME"/>
-          <ref name="PLACE"/>
-          <ref name="SIC"/>
-          <ref name="SOCALLED"/>
-          <ref name="TGENRE"/>
-          <ref name="TITLE"/>
-          <ref name="TOPIC"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="FOREIGN"/>
+                    <ref name="NAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="SIC"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TITLE"/>
+                    <ref name="TOPIC"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <define name="SCHOLARNOTES">
-    <element name="SCHOLARNOTES">
-      <ref name="SCHOLARNOTE"/>
-    </element>
-  </define>
+    <define name="SCHOLARNOTES">
+        <element name="SCHOLARNOTES">
+            <ref name="SCHOLARNOTE"/>
+        </element>
+    </define>
 
-  <define name="P">
-    <element name="P">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">p marks paragraphs in prose.</a:documentation>
-      <attribute name="ID">
-        <data type="NCName"/>
-      </attribute>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="BIBCITS"/>
-          <ref name="DATE"/>
-          <ref name="DATERANGE"/>
-          <ref name="DATESTRUCT"/>
-          <ref name="EMPH"/>
-          <ref name="FOREIGN"/>
-          <ref name="KEYWORDCLASS"/>
-          <ref name="NAME"/>
-          <ref name="ORGNAME"/>
-          <ref name="PLACE"/>
-          <ref name="QUOTE"/>
-          <ref name="RESEARCHNOTE"/>
-          <ref name="RS"/>
-          <ref name="SCHOLARNOTE"/>
-          <ref name="SOCALLED"/>
-          <ref name="TGENRE"/>
-          <ref name="TITLE"/>
-          <ref name="TOPIC"/>
-          <element name="XREF">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The xref element surounds a url which you wish to make into a
-              hyperlink.</a:documentation>
-            <ref name="RESP-attribute"/>
-            <attribute name="URL">
-              <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">URL (uniform resource locator) specifies the URL from
-                which the media concerned may be obtained.</a:documentation>
-              <data type="anyURI"/>
+    <define name="P">
+        <element name="P">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">p marks paragraphs in prose.</a:documentation>
+            <attribute name="ID">
+                <data type="NCName"/>
             </attribute>
-            <data type="anyURI"/>
-          </element>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
+                    <ref name="DATESTRUCT"/>
+                    <ref name="EMPH"/>
+                    <ref name="FOREIGN"/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="RS"/>
+                    <ref name="SCHOLARNOTE"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TITLE"/>
+                    <ref name="TOPIC"/>
+                    <element name="XREF">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The xref element surounds a url which you wish to make into a
+              hyperlink.</a:documentation>
+                        <ref name="RESP-attribute"/>
+                        <attribute name="URL">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">URL (uniform resource locator) specifies the URL from
+                which the media concerned may be obtained.</a:documentation>
+                            <data type="anyURI"/>
+                        </attribute>
+                        <data type="anyURI"/>
+                    </element>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <define name="BIBCIT">
-    <element name="BIBCIT">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element named bibCit is designed to capture
+    <define name="BIBCIT">
+        <element name="BIBCIT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element named bibCit is designed to capture
         bibliographical information in much the same way as an MLA parenthetical citation and should always reside within a bibCits
         container tag.</a:documentation>
-      <attribute name="DBREF">
-        <data type="integer"/>
-      </attribute>
-      <optional>
-        <attribute name="PLACEHOLDER"/>
-      </optional>
-      <optional>
-        <attribute name="QTDIN">
-          <value>QTDINYES</value>
-        </attribute>
-      </optional>
-      <text/>
-    </element>
-  </define>
+            <attribute name="DBREF">
+                <data type="integer"/>
+            </attribute>
+            <optional>
+                <attribute name="PLACEHOLDER"/>
+            </optional>
+            <optional>
+                <attribute name="QTDIN">
+                    <value>QTDINYES</value>
+                </attribute>
+            </optional>
+            <text/>
+        </element>
+    </define>
 
-  <define name="L">
-    <element name="L">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Verse line contains a single, possibly incomplete, line of
+    <define name="L">
+        <element name="L">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Verse line contains a single, possibly incomplete, line of
         verse</a:documentation>
-      <oneOrMore>
-        <choice>
-          <text/>
-          <ref name="BIBCITS"/>
-          <ref name="SOCALLED"/>
-        </choice>
-      </oneOrMore>
-    </element>
-  </define>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="SOCALLED"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
-  <!-- *** end globally defined elements *** -->
+    <!-- *** end globally defined elements *** -->
 
-  <!-- begin @RESP attribute pattern -->
-  <define name="RESP-attribute">
-    <attribute name="RESP">
-      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Resp (or responsibility) contains a three-letter initialism
+    <!-- begin @RESP attribute pattern -->
+    <define name="RESP-attribute">
+        <attribute name="RESP">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Resp (or responsibility) contains a three-letter initialism
         of an individual who contributed to the production or distribution of a document.</a:documentation>
-      <choice>
-        <value type="token">IMG</value>
-        <value type="token">SRF</value>
-        <value type="token">PDC</value>
-        <value type="token">KDC</value>
-        <value type="token">ANM</value>
-        <value type="token">CNM</value>
-        <value type="token">KJB</value>
-        <value type="token">TJB</value>
-        <value type="token">JAH</value>
-        <value type="token">MMM</value>
-        <value type="token">SSB</value>
-        <value type="token">SIB</value>
-        <value type="token">MEL</value>
-        <value type="token">JKW</value>
-        <value type="token">KKC</value>
-        <value type="token">PMB</value>
-        <value type="token">TTC</value>
-        <value type="token">KAH</value>
-        <value type="token">JAW</value>
-        <value type="token">SMH</value>
-        <value type="token">SYS</value>
-        <value type="token">HJM</value>
-        <value type="token">CEL</value>
-        <value type="token">JSC</value>
-        <value type="token">PHD</value>
-        <value type="token">AHM</value>
-        <value type="token">SJW</value>
-        <value type="token">JEB</value>
-        <value type="token">SLT</value>
-        <value type="token">BAA</value>
-        <value type="token">CJH</value>
-        <value type="token">JDS</value>
-        <value type="token">MEB</value>
-        <value type="token">NLG</value>
-        <value type="token">CLC</value>
-        <value type="token">GCG</value>
-        <value type="token">KNT</value>
-        <value type="token">JEC</value>
-        <value type="token">RSC</value>
-        <value type="token">SIR</value>
-        <value type="token">ECG</value>
-        <value type="token">SLB</value>
-        <value type="token">CAG</value>
-        <value type="token">MKB</value>
-        <value type="token">OSM</value>
-        <value type="token">DBH</value>
-        <value type="token">KGH</value>
-        <value type="token">JJD</value>
-        <value type="token">DRG</value>
-        <value type="token">NCK</value>
-        <value type="token">DLK</value>
-        <value type="token">AFP</value>
-        <value type="token">KLH</value>
-        <value type="token">CEE</value>
-        <value type="token">TRN</value>
-        <value type="token">RJR</value>
-        <value type="token">LMS</value>
-        <value type="token">JCA</value>
-        <value type="token">JES</value>
-        <value type="token">JLT</value>
-        <value type="token">KGS</value>
-        <value type="token">RJB</value>
-        <value type="token">DMH</value>
-        <value type="token">MAM</value>
-        <value type="token">LKD</value>
-        <value type="token">ARP</value>
-        <value type="token">KDM</value>
-        <value type="token">BJA</value>
-        <value type="token">SEV</value>
-        <value type="token">AJF</value>
-        <value type="token">AGH</value>
-        <value type="token">RTM</value>
-        <value type="token">LM2</value>
-        <value type="token">MRS</value>
-        <value type="token">KEH</value>
-        <value type="token">CLJ</value>
-        <value type="token">JCR</value>
-        <value type="token">TCD</value>
-        <value type="token">EAQ</value>
-        <value type="token">DEK</value>
-        <value type="token">BHL</value>
-        <value type="token">ALR</value>
-        <value type="token">SWK</value>
-        <value type="token">JLP</value>
-        <value type="token">ACF</value>
-        <value type="token">JSE</value>
-        <a:documentation>Jana Smith Elford</a:documentation>
-        <value type="token">MPO</value>
-        <a:documentation>Mariana Paredes-Olea</a:documentation>
-        <value type="token">KCS</value>
-        <value type="token">ARC</value>
-        <value type="token">CMW</value>
-        <value type="token">NJK</value>
-        <value type="token">AEG</value>
-        <a:documentation>Alexandra Guselle</a:documentation>
-        <value type="token">AVU</value>
-        <a:documentation>Alison Uttley</a:documentation>
-        <value type="token">LJH</value>
-        <a:documentation>Lisa Hennigar</a:documentation>
-        <value type="token">KSN</value>
-        <a:documentation>Kayla Snyder</a:documentation>
-        <value type="token">EWD</value>
-        <a:documentation>Eric Drebit</a:documentation>
-        <value type="token">CSK</value>
-        <a:documentation>Caley Skinner</a:documentation>
-        <value type="token">JBB</value>
-        <a:documentation>Justine Baskey</a:documentation>
-        <value type="token">PAD</value>
-        <a:documentation>Patricia Demers</a:documentation>
-        <value type="token">CMD</value>
-        <a:documentation>Cecily Devereux</a:documentation>
-        <value type="token">CJG</value>
-        <a:documentation>Carole Gerson</a:documentation>
-        <value type="token">JRW</value>
-        <a:documentation>Janice Williamson</a:documentation>
-        <value type="token">MCA</value>
-        <a:documentation>Marie Carriere</a:documentation>
-        <value type="token">AWI</value>
-        <a:documentation>Ann Wilson</a:documentation>
-        <value type="token">SKR</value>
-        <a:documentation>Sidney Kruth</a:documentation>
-        <value type="token">DHA</value>
-        <a:documentation>Dorothy Hadfield</a:documentation>
-        <value type="token">SDU</value>
-        <a:documentation>Scott Duchessne</a:documentation>
-        <value type="token">PIH</value>
-        <a:documentation>Paul Hjartarson</a:documentation>
-        <value type="token">GRA</value>
-        <a:documentation>GRA training</a:documentation>
-        <value type="token">AAC</value>
-        <a:documentation>Aldora Cole</a:documentation>
-        <value type="token">EMH</value>
-        <a:documentation>Emily Hass</a:documentation>
-        <value type="token">KGL</value>
-        <a:documentation>Kate Lane-Smith</a:documentation>
-        <value type="token">AJD</value>
-        <value type="token">KFA</value>
-        <value type="token">JMA</value>
-        <value type="token">CNO</value>
-        <value type="token">KSM</value>
-        <value type="token">NFS</value>
-        <a:documentation>Nora Foster Stovel</a:documentation>
-        <value type="token">KME</value>
-        <a:documentation>Karyn Huenemann</a:documentation>
-        <value type="token">KLM</value>
-        <a:documentation>Katie Louise McCullough</a:documentation>
-        <value type="token">GLN</value>
-        <a:documentation>Graeme Northcote</a:documentation>
-        <value type="token">SAH</value>
-        <a:documentation>Susan Hesemeier</a:documentation>
-        <value type="token">MKD</value>
-        <a:documentation>Michelle Di Cintio</a:documentation>
-        <value type="token">KMO</value>
-        <a:documentation>Kristine Moruzi</a:documentation>
-        <value type="token">LSW</value>
-        <a:documentation>Larissa Swayze</a:documentation>
-        <value type="token">NPA</value>
-        <a:documentation>Nadine Adelaar</a:documentation>
-        <value type="token">RMB</value>
-        <a:documentation>Rebecca Blain</a:documentation>
-        <value type="token">JAR</value>
-        <a:documentation>Jessica Rattcliffe</a:documentation>
-        <value type="token">BJM</value>
-        <a:documentation>Breanna Mroczeck</a:documentation>
-        <value type="token">DEL</value>
-        <a:documentation>Elena Dergacheva</a:documentation>
-        <value type="token">MDG</value>
-        <a:documentation>Michelle Gregory</a:documentation>
-        <value type="token">CTL</value>
-        <a:documentation>Celiese Lypka</a:documentation>
-        <value type="token">NJK</value>
-        <a:documentation>Nikhil Jayadevan</a:documentation>
-        <value type="token">EMR</value>
-        <a:documentation>Esther Rosario</a:documentation>
-        <value type="token">CME</value>
-        <a:documentation>Caitlin Elm</a:documentation>
-        <value type="token">JSI</value>
-        <a:documentation>John Simpson</a:documentation>
-        <value type="token">RKK</value>
-        <a:documentation>Ruth Knechtel</a:documentation>
-        <!-- JCA & MRB: Wed 21-Aug-2013: added the following @RESP attribute values -->
-        <value type="token">AAR</value>
-        <value type="token">AGL</value>
-        <value type="token">AHR</value>
-        <value type="token">CGB</value>
-        <value type="token">CMJ</value>
-        <value type="token">DRC</value>
-        <value type="token">GKC</value>
-        <value type="token">GSF</value>
-        <value type="token">JJL</value>
-        <value type="token">JLL</value>
-        <value type="token">LGG</value>
-        <value type="token">MRB</value>
-        <value type="token">REE</value>
-        <value type="token">RZK</value>
-        <value type="token">SDD</value>
-        <!-- JCA & MRB: Tue 03-Sep-2013: added the following @RESP attribute values -->
-        <value type="token">JAM</value>
-        <a:documentation>Jueun Moon</a:documentation>
-        <value type="token">ATC</value>
-        <a:documentation>Amy Cote</a:documentation>
-        <value type="token">AKB</value>
-        <a:documentation>Adela Burke</a:documentation>
-        <value type="token">AJS</value>
-        <a:documentation>Aaron Swanbergson</a:documentation>
-        <value type="token">DEA</value>
-        <a:documentation>Devin Ayotte</a:documentation>
-        <value type="token">CCK</value>
-        <a:documentation>Cameron Kroetsch</a:documentation>
-        <value type="token">OAI</value>
-        <a:documentation>Olga Ivanova</a:documentation>
-        <value type="token">SJA</value>
-        <a:documentation>Stacey Aspinall</a:documentation>
-        <value type="token">GRH</value>
-        <a:documentation>Gordon Harper</a:documentation>
-        <!-- Insert new @RESP attribute values here -->
-      </choice>
-    </attribute>
-  </define>
-  <!-- end @RESP attribute pattern -->
+            <choice>
+                <value type="token">IMG</value>
+                <value type="token">SRF</value>
+                <value type="token">PDC</value>
+                <value type="token">KDC</value>
+                <value type="token">ANM</value>
+                <value type="token">CNM</value>
+                <value type="token">KJB</value>
+                <value type="token">TJB</value>
+                <value type="token">JAH</value>
+                <value type="token">MMM</value>
+                <value type="token">SSB</value>
+                <value type="token">SIB</value>
+                <value type="token">MEL</value>
+                <value type="token">JKW</value>
+                <value type="token">KKC</value>
+                <value type="token">PMB</value>
+                <value type="token">TTC</value>
+                <value type="token">KAH</value>
+                <value type="token">JAW</value>
+                <value type="token">SMH</value>
+                <value type="token">SYS</value>
+                <value type="token">HJM</value>
+                <value type="token">CEL</value>
+                <value type="token">JSC</value>
+                <value type="token">PHD</value>
+                <value type="token">AHM</value>
+                <value type="token">SJW</value>
+                <value type="token">JEB</value>
+                <value type="token">SLT</value>
+                <value type="token">BAA</value>
+                <value type="token">CJH</value>
+                <value type="token">JDS</value>
+                <value type="token">MEB</value>
+                <value type="token">NLG</value>
+                <value type="token">CLC</value>
+                <value type="token">GCG</value>
+                <value type="token">KNT</value>
+                <value type="token">JEC</value>
+                <value type="token">RSC</value>
+                <value type="token">SIR</value>
+                <value type="token">ECG</value>
+                <value type="token">SLB</value>
+                <value type="token">CAG</value>
+                <value type="token">MKB</value>
+                <value type="token">OSM</value>
+                <value type="token">DBH</value>
+                <value type="token">KGH</value>
+                <value type="token">JJD</value>
+                <value type="token">DRG</value>
+                <value type="token">NCK</value>
+                <value type="token">DLK</value>
+                <value type="token">AFP</value>
+                <value type="token">KLH</value>
+                <value type="token">CEE</value>
+                <value type="token">TRN</value>
+                <value type="token">RJR</value>
+                <value type="token">LMS</value>
+                <value type="token">JCA</value>
+                <value type="token">JES</value>
+                <value type="token">JLT</value>
+                <value type="token">KGS</value>
+                <value type="token">RJB</value>
+                <value type="token">DMH</value>
+                <value type="token">MAM</value>
+                <value type="token">LKD</value>
+                <value type="token">ARP</value>
+                <value type="token">KDM</value>
+                <value type="token">BJA</value>
+                <value type="token">SEV</value>
+                <value type="token">AJF</value>
+                <value type="token">AGH</value>
+                <value type="token">RTM</value>
+                <value type="token">LM2</value>
+                <value type="token">MRS</value>
+                <value type="token">KEH</value>
+                <value type="token">CLJ</value>
+                <value type="token">JCR</value>
+                <value type="token">TCD</value>
+                <value type="token">EAQ</value>
+                <value type="token">DEK</value>
+                <value type="token">BHL</value>
+                <value type="token">ALR</value>
+                <value type="token">SWK</value>
+                <value type="token">JLP</value>
+                <value type="token">ACF</value>
+                <value type="token">JSE</value>
+                <a:documentation>Jana Smith Elford</a:documentation>
+                <value type="token">MPO</value>
+                <a:documentation>Mariana Paredes-Olea</a:documentation>
+                <value type="token">KCS</value>
+                <value type="token">ARC</value>
+                <value type="token">CMW</value>
+                <value type="token">NJK</value>
+                <value type="token">AEG</value>
+                <a:documentation>Alexandra Guselle</a:documentation>
+                <value type="token">AVU</value>
+                <a:documentation>Alison Uttley</a:documentation>
+                <value type="token">LJH</value>
+                <a:documentation>Lisa Hennigar</a:documentation>
+                <value type="token">KSN</value>
+                <a:documentation>Kayla Snyder</a:documentation>
+                <value type="token">EWD</value>
+                <a:documentation>Eric Drebit</a:documentation>
+                <value type="token">CSK</value>
+                <a:documentation>Caley Skinner</a:documentation>
+                <value type="token">JBB</value>
+                <a:documentation>Justine Baskey</a:documentation>
+                <value type="token">PAD</value>
+                <a:documentation>Patricia Demers</a:documentation>
+                <value type="token">CMD</value>
+                <a:documentation>Cecily Devereux</a:documentation>
+                <value type="token">CJG</value>
+                <a:documentation>Carole Gerson</a:documentation>
+                <value type="token">JRW</value>
+                <a:documentation>Janice Williamson</a:documentation>
+                <value type="token">MCA</value>
+                <a:documentation>Marie Carriere</a:documentation>
+                <value type="token">AWI</value>
+                <a:documentation>Ann Wilson</a:documentation>
+                <value type="token">SKR</value>
+                <a:documentation>Sidney Kruth</a:documentation>
+                <value type="token">DHA</value>
+                <a:documentation>Dorothy Hadfield</a:documentation>
+                <value type="token">SDU</value>
+                <a:documentation>Scott Duchessne</a:documentation>
+                <value type="token">PIH</value>
+                <a:documentation>Paul Hjartarson</a:documentation>
+                <value type="token">GRA</value>
+                <a:documentation>GRA training</a:documentation>
+                <value type="token">AAC</value>
+                <a:documentation>Aldora Cole</a:documentation>
+                <value type="token">EMH</value>
+                <a:documentation>Emily Hass</a:documentation>
+                <value type="token">KGL</value>
+                <a:documentation>Kate Lane-Smith</a:documentation>
+                <value type="token">AJD</value>
+                <value type="token">KFA</value>
+                <value type="token">JMA</value>
+                <value type="token">CNO</value>
+                <value type="token">KSM</value>
+                <value type="token">NFS</value>
+                <a:documentation>Nora Foster Stovel</a:documentation>
+                <value type="token">KME</value>
+                <a:documentation>Karyn Huenemann</a:documentation>
+                <value type="token">KLM</value>
+                <a:documentation>Katie Louise McCullough</a:documentation>
+                <value type="token">GLN</value>
+                <a:documentation>Graeme Northcote</a:documentation>
+                <value type="token">SAH</value>
+                <a:documentation>Susan Hesemeier</a:documentation>
+                <value type="token">MKD</value>
+                <a:documentation>Michelle Di Cintio</a:documentation>
+                <value type="token">KMO</value>
+                <a:documentation>Kristine Moruzi</a:documentation>
+                <value type="token">LSW</value>
+                <a:documentation>Larissa Swayze</a:documentation>
+                <value type="token">NPA</value>
+                <a:documentation>Nadine Adelaar</a:documentation>
+                <value type="token">RMB</value>
+                <a:documentation>Rebecca Blain</a:documentation>
+                <value type="token">JAR</value>
+                <a:documentation>Jessica Rattcliffe</a:documentation>
+                <value type="token">BJM</value>
+                <a:documentation>Breanna Mroczeck</a:documentation>
+                <value type="token">DEL</value>
+                <a:documentation>Elena Dergacheva</a:documentation>
+                <value type="token">MDG</value>
+                <a:documentation>Michelle Gregory</a:documentation>
+                <value type="token">CTL</value>
+                <a:documentation>Celiese Lypka</a:documentation>
+                <value type="token">NJK</value>
+                <a:documentation>Nikhil Jayadevan</a:documentation>
+                <value type="token">EMR</value>
+                <a:documentation>Esther Rosario</a:documentation>
+                <value type="token">CME</value>
+                <a:documentation>Caitlin Elm</a:documentation>
+                <value type="token">JSI</value>
+                <a:documentation>John Simpson</a:documentation>
+                <value type="token">RKK</value>
+                <a:documentation>Ruth Knechtel</a:documentation>
+                <!-- JCA & MRB: Wed 21-Aug-2013: added the following @RESP attribute values -->
+                <value type="token">AAR</value>
+                <value type="token">AGL</value>
+                <value type="token">AHR</value>
+                <value type="token">CGB</value>
+                <value type="token">CMJ</value>
+                <value type="token">DRC</value>
+                <value type="token">GKC</value>
+                <value type="token">GSF</value>
+                <value type="token">JJL</value>
+                <value type="token">JLL</value>
+                <value type="token">LGG</value>
+                <value type="token">MRB</value>
+                <value type="token">REE</value>
+                <value type="token">RZK</value>
+                <value type="token">SDD</value>
+                <!-- JCA & MRB: Tue 03-Sep-2013: added the following @RESP attribute values -->
+                <value type="token">JAM</value>
+                <a:documentation>Jueun Moon</a:documentation>
+                <value type="token">ATC</value>
+                <a:documentation>Amy Cote</a:documentation>
+                <value type="token">AKB</value>
+                <a:documentation>Adela Burke</a:documentation>
+                <value type="token">AJS</value>
+                <a:documentation>Aaron Swanbergson</a:documentation>
+                <value type="token">DEA</value>
+                <a:documentation>Devin Ayotte</a:documentation>
+                <value type="token">CCK</value>
+                <a:documentation>Cameron Kroetsch</a:documentation>
+                <value type="token">OAI</value>
+                <a:documentation>Olga Ivanova</a:documentation>
+                <value type="token">SJA</value>
+                <a:documentation>Stacey Aspinall</a:documentation>
+                <value type="token">GRH</value>
+                <a:documentation>Gordon Harper</a:documentation>
+                <!-- Insert new @RESP attribute values here -->
+            </choice>
+        </attribute>
+    </define>
+    <!-- end @RESP attribute pattern -->
 
 </grammar>
 <!-- end root <grammar> element -->
