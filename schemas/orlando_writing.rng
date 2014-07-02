@@ -32,9 +32,10 @@
 
 <!-- 
 *** Revisions ***
-* MRB: June 2014: Addressed GitHub issues associated with the Orlando writing schema:
+* MRB: June-July 2014: Addressed GitHub issues associated with the Orlando writing schema:
   - Added documentation for writing-related elements and attributes.
   - Made the attributes CHRONCOLUMN, RELEVANCE, and RESP required attributes of the element CHRONSTRUCT.
+  - Made the elements PRODUCTION and RECEPTION optional child elements of TEXTSCOPE.
 -->
 
 <!-- begin root <grammar> element -->
@@ -229,48 +230,11 @@
                                         <zeroOrMore>
                                             <choice>
                                                 <ref name="KEYWORDCLASS"/>
+                                                <ref name="PRODUCTION"/>
+                                                <ref name="RECEPTION"/>
                                                 <ref name="RESEARCHNOTE"/>
                                                 <ref name="TEXTSCOPE"/>
                                                 <ref name="TEXTUALFEATURES"/>
-                                                <element name="PRODUCTION">
-                                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Production is one of the three major components
-                            of the writing document (in combination with TextualFeatures and Reception). It should enclose discussions about the
-                            conditions of a text's production whether they be material or cultural. All other influences on the writer's life will be
-                            covered by the biography section. Production addresses the facts and factors of text creation and distribution, and the
-                            description of the text as object (bibliographic description). This category can address a singular text or a group of texts
-                            in cases where you want to make generalizations about oeuvre.</a:documentation>
-                                                    <zeroOrMore>
-                                                        <choice>
-                                                            <ref name="CHRONSTRUCT"/>
-                                                            <ref name="KEYWORDCLASS"/>
-                                                            <ref name="RESEARCHNOTE"/>
-                                                            <ref name="SCHOLARNOTE"/>
-                                                            <ref name="SHORTPROSE"/>
-                                                        </choice>
-                                                    </zeroOrMore>
-                                                    <optional>
-                                                        <choice>
-                                                            <ref name="P"/>
-                                                            <ref name="TEXTUALFEATURES"/>
-                                                        </choice>
-                                                    </optional>
-                                                </element>
-                                                <element name="RECEPTION">
-                                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reception is one of the three largest buckets in
-                            the writing documents (in addition to TextualFeatures and Production). Reception charts the effects and results of an
-                            individual's writing, and the responses of self and others to an individual's writing.</a:documentation>
-                                                    <zeroOrMore>
-                                                        <choice>
-                                                            <ref name="CHRONSTRUCT"/>
-                                                            <ref name="KEYWORDCLASS"/>
-                                                            <ref name="SCHOLARNOTE"/>
-                                                            <ref name="SHORTPROSE"/>
-                                                        </choice>
-                                                    </zeroOrMore>
-                                                    <optional>
-                                                        <ref name="RRESPONSES"/>
-                                                    </optional>
-                                                </element>
                                             </choice>
                                         </zeroOrMore>
                                     </element>
@@ -868,6 +832,51 @@
                     <ref name="XREF"/>
                 </choice>
             </oneOrMore>
+        </element>
+    </define>
+
+    <define name="PRODUCTION">
+        <element name="PRODUCTION">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Production is one of the three major components
+            of the writing document (in combination with TextualFeatures and Reception). It should enclose discussions about the
+            conditions of a text's production whether they be material or cultural. All other influences on the writer's life will be
+            covered by the biography section. Production addresses the facts and factors of text creation and distribution, and the
+            description of the text as object (bibliographic description). This category can address a singular text or a group of texts
+            in cases where you want to make generalizations about oeuvre.</a:documentation>
+            <zeroOrMore>
+                <choice>
+                    <ref name="CHRONSTRUCT"/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="SCHOLARNOTE"/>
+                    <ref name="SHORTPROSE"/>
+                </choice>
+            </zeroOrMore>
+            <optional>
+                <choice>
+                    <ref name="P"/>
+                    <ref name="TEXTUALFEATURES"/>
+                </choice>
+            </optional>
+        </element>
+    </define>
+
+    <define name="RECEPTION">
+        <element name="RECEPTION">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reception is one of the three largest buckets in
+            the writing documents (in addition to TextualFeatures and Production). Reception charts the effects and results of an
+            individual's writing, and the responses of self and others to an individual's writing.</a:documentation>
+            <zeroOrMore>
+                <choice>
+                    <ref name="CHRONSTRUCT"/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="SCHOLARNOTE"/>
+                    <ref name="SHORTPROSE"/>
+                </choice>
+            </zeroOrMore>
+            <optional>
+                <ref name="RRESPONSES"/>
+            </optional>
         </element>
     </define>
 
