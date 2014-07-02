@@ -20,29 +20,18 @@
         </REVISIONDESC>
     </CWRCHEADER>
     <ENTRY>
-        <!--
-            I can specify that empty elements should not be displayed but not sure what happens with the survey questions that didn't correspond to a CWRC element?-->
-        <!--
-        This can't be done (every document needs to have a CWRC heanding)
-        -->
-        <!--
-            
-            Not a CSS operation; dealt by the transformation
-            -->
+        
+        
+        
         <RESEARCHNOTE>[First Name] [Last Name]</RESEARCHNOTE>
         <HEADING SUBTYPE="1">{1a3} {1a1}</HEADING>
-        <!--
-Image needs styling work and/or placing in an empty element?
--->
-        <!-- Done. (What's with the two headings below?)-->
-        <!--
-Done-->
-        <!--
-Done (to the extent this is possible in CSS)-->
+        
+        
+        
+        
         <HEADING SUBTYPE="2">Biography</HEADING>
         <HEADING SUBTYPE="3">Personal Information</HEADING>
-        <!--
-Done-->
+        
         <PERSONNAME>
             <P>
                 <BIRTHNAME>
@@ -55,9 +44,9 @@ Done-->
                 <RESEARCHNOTE>[Nickname if present]</RESEARCHNOTE>
                 <NICKNAME>{1a5}</NICKNAME>
             </P>
-            <!--Done-->
+            
         </PERSONNAME>
-        <!--Done-->
+        
         <RESEARCHNOTE>[Date of birth (dd mm yyyy)]</RESEARCHNOTE>
         <BIRTH>
             <CHRONSTRUCT>
@@ -65,7 +54,7 @@ Done-->
                 <CHRONPROSE>, <RESEARCHNOTE>[Place of Birth]</RESEARCHNOTE> <PLACE>Place of Birth: {2a}</PLACE></CHRONPROSE>
             </CHRONSTRUCT>
         </BIRTH>
-        <!--Done-->
+        
         <RESEARCHNOTE>[Raised]</RESEARCHNOTE>
         <RESIDENCEANDMOBILITY RELATIONTO="LIVED">
             <P><PLACE>Place Raised: {2b}</PLACE><RESEARCHNOTE>[Current Residence]</RESEARCHNOTE>Current residence: {2c}</P>
@@ -73,7 +62,7 @@ Done-->
         <RESEARCHNOTE>[Do you identify yourself as a regional playwright?]</RESEARCHNOTE>
         <PRODUCTION>
             <P>
-                <PLITERARYMOVEMENTS>Identify as a regional playwright: {2d} <!--Done. Toggle visibility of next based on answer to previous question. Bsed on the transformation, not the CSS--></PLITERARYMOVEMENTS>
+                <PLITERARYMOVEMENTS>Identify as a regional playwright: {2d} </PLITERARYMOVEMENTS>
             </P>
             <RESEARCHNOTE>[Region(s) that you identify with]</RESEARCHNOTE>
             <P>Region(s): {2e}</P>
@@ -97,7 +86,7 @@ Done-->
             </P>
             <RESEARCHNOTE>Instruction for tagger: Change to racecolour or ethnicity tag if needed</RESEARCHNOTE>
             <P>
-                <!--Done-->
+                
                 <RESEARCHNOTE>[Religious Affiliation]</RESEARCHNOTE>
                 <DENOMINATION>{1b3}</DENOMINATION>
             </P>
@@ -117,7 +106,7 @@ Done-->
             <P>Marital Relationship: {3a1}</P>
             <RESEARCHNOTE>Different Sex Partner(3a1)</RESEARCHNOTE>
             <P>Commonlaw Relationship: {3a2}</P>
-            <!-- done-->
+            
             <RESEARCHNOTE>[Name of Current Partner (if applicable)]</RESEARCHNOTE>
             <MARRIAGE>
                 <P>
@@ -125,7 +114,7 @@ Done-->
                 </P>
             </MARRIAGE>
             <RESEARCHNOTE>[Name(s) of Previous Partner(s) (if applicable)]</RESEARCHNOTE>
-            <P>Previous Partner(s): {3c}<!--Done--><RESEARCHNOTE>[Children]</RESEARCHNOTE><CHILDREN NUMBER="2">Number of Children: {3d}<RESEARCHNOTE><!-- "Other information about relationships and family shouldn't be outside the <children> tag? -->[Other Information about Relationships and Family]</RESEARCHNOTE></CHILDREN></P>
+            <P>Previous Partner(s): {3c}<RESEARCHNOTE>[Children]</RESEARCHNOTE><CHILDREN NUMBER="2">Number of Children: {3d}<RESEARCHNOTE>[Other Information about Relationships and Family]</RESEARCHNOTE></CHILDREN></P>
         </FAMILY>
         <FAMILY>
             <P>{3e}</P>
