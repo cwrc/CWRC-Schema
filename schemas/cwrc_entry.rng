@@ -32,6 +32,13 @@
 
 <!-- 
 *** Revisions ***
+* MRB: 03-Jul-2014: Made the following changes:
+  - Added the element RESEARCHNOTE as a child element to the element FAMILYMEMBER.
+  - Added the element RESEARCHNOTE as a child element to the element RELIGION.
+  - Added the element DATERANGE as a child element to the element HEADING.
+  - Added the element NAME as a child element to the element FAMILYMEMBER.
+  - Eliminated MOTHER as the default value of the RELATION attribute in the element FAMILYMEMBER.
+  - Added the elements DATE and DATERANGE as child elements of DATAITEM.
 * MRB: June 2014: Addressed GitHub issues associated with the CWRC entry schema:
   - Renamed the element AWARD to AWARDSNONLITERARY, as well as associated REFs.
   - Renamed the element JOB to JOBTITLE, as well as associated REFs.
@@ -557,6 +564,9 @@
                             <optional>
                                 <ref name="KEYWORDCLASS"/>
                             </optional>
+                            <zeroOrMore>
+                                <ref name="RESEARCHNOTE"/>
+                            </zeroOrMore>
                         </element>
                         <element name="SEXUALITY">
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sexuality is one of the
@@ -710,10 +720,10 @@
                             members (for example, group information concerning the relationship of eighteenth-century women
                             writers to their aunts) but in order to do so we must systematize the discussions of these
                             specific family members.</a:documentation>
-                            <attribute name="RELATION" a:defaultValue="MOTHER">
+                            <attribute name="RELATION">
                                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relation is a
-                                required attribute attached to member. It specifies how the family member discussed within
-                                the member element is related to the person.</a:documentation>
+                                required attribute attached to FamilyMember. It specifies how the family member discussed within
+                                the FamilyMember element is related to the person.</a:documentation>
                                 <choice>
                                     <value>MOTHER</value>
                                     <value>FATHER</value>
@@ -753,8 +763,10 @@
                                     <ref name="CHRONSTRUCT"/>
                                     <ref name="DATASTRUCT"/>
                                     <ref name="HEADING"/>
+                                    <ref name="NAME"/>
                                     <ref name="P"/>
                                     <ref name="PLACE"/>
+                                    <ref name="RESEARCHNOTE"/>
                                     <ref name="SCHOLARNOTE"/>
                                 </choice>
                             </oneOrMore>
@@ -1893,6 +1905,8 @@
                                 <text/>
                                 <ref name="BIBCITS"/>
                                 <ref name="BIRTHNAME"/>
+                                <ref name="DATE"/>
+                                <ref name="DATERANGE"/>
                                 <ref name="INDEXED"/>
                                 <ref name="MARRIED"/>
                                 <ref name="NAME"/>
@@ -1965,6 +1979,7 @@
                 <choice>
                     <text/>
                     <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
                     <ref name="FOREIGN"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
