@@ -32,13 +32,14 @@
 
 <!-- 
 *** Revisions ***
-* MRB: 03-Jul-2014: Made the following changes:
+* MRB: July 2014: Made the following changes:
   - Added the element RESEARCHNOTE as a child element to the element FAMILYMEMBER.
   - Added the element RESEARCHNOTE as a child element to the element RELIGION.
   - Added the element DATERANGE as a child element to the element HEADING.
   - Added the element NAME as a child element to the element FAMILYMEMBER.
   - Eliminated MOTHER as the default value of the RELATION attribute in the element FAMILYMEMBER.
   - Added the elements DATE and DATERANGE as child elements of DATAITEM.
+  - Added the element RESEARCHNOTE as a child element to the element AUTHORSUMMARY. 
 * MRB: June 2014: Addressed GitHub issues associated with the CWRC entry schema:
   - Renamed the element AWARD to AWARDSNONLITERARY, as well as associated REFs.
   - Renamed the element JOB to JOBTITLE, as well as associated REFs.
@@ -372,9 +373,12 @@
                         <optional>
                             <ref name="HEADING"/>
                         </optional>
-                        <optional>
-                            <ref name="P"/>
-                        </optional>
+                        <oneOrMore>
+                            <choice>
+                                <ref name="P"/>
+                                <ref name="RESEARCHNOTE"/>
+                            </choice>
+                        </oneOrMore>
                     </element>
                 </optional>
                 <oneOrMore>
