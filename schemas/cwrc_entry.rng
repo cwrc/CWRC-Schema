@@ -77,6 +77,8 @@
   - Added REF to TEXTSCOPE in ENTRY.
   - Added REFs to 16 major biography elements, TEXTSCOPE, and its child elements of PRODUCTION, RECEPTION, and TEXTUALFEATURES, to P.
   - Eliminated BIOGPROSE, DATESTRUCT, and child elements of PLACE.
+  - Interleaved child elements of the RELIGION element.
+  - Made DATERANGE part of the inteleaved group of child elements of the CHRONSTRUCT element.
 -->
 
 <!-- begin root <grammar> element -->
@@ -552,21 +554,23 @@
                         institutions. We are also interested in the crucial role religious movements have had in women&apos;s
                         writing, particularly in the early modern periods, and envision our end users being able to trace the
                         influence of Quakerism, for example, on women&apos;s writing and lives.</a:documentation>
-                            <optional>
-                                <ref name="CHRONSTRUCT"/>
-                            </optional>
-                            <zeroOrMore>
-                                <ref name="P"/>
-                            </zeroOrMore>
-                            <zeroOrMore>
-                                <ref name="DENOMINATION"/>
-                            </zeroOrMore>
-                            <optional>
-                                <ref name="KEYWORDCLASS"/>
-                            </optional>
-                            <zeroOrMore>
-                                <ref name="RESEARCHNOTE"/>
-                            </zeroOrMore>
+                            <interleave>
+                                <optional>
+                                    <ref name="CHRONSTRUCT"/>
+                                </optional>
+                                <zeroOrMore>
+                                    <ref name="P"/>
+                                </zeroOrMore>
+                                <zeroOrMore>
+                                    <ref name="DENOMINATION"/>
+                                </zeroOrMore>
+                                <optional>
+                                    <ref name="KEYWORDCLASS"/>
+                                </optional>
+                                <zeroOrMore>
+                                    <ref name="RESEARCHNOTE"/>
+                                </zeroOrMore>
+                            </interleave>
                         </element>
                         <element name="SEXUALITY">
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sexuality is one of the
@@ -1762,13 +1766,11 @@
             <optional>
                 <ref name="RESP-attribute"/>
             </optional>
-            <optional>
-                <ref name="DATERANGE"/>
-            </optional>
             <oneOrMore>
                 <choice>
                     <ref name="BIBCITS"/>
                     <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="SCHOLARNOTE"/>
