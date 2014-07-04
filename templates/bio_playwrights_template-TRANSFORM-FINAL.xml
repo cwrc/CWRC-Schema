@@ -20,18 +20,18 @@
         </REVISIONDESC>
     </CWRCHEADER>
     <ENTRY>
-        
-        
-        
+
+
+
         <RESEARCHNOTE>[First Name] [Last Name]</RESEARCHNOTE>
         <HEADING SUBTYPE="1">{1a3} {1a1}</HEADING>
-        
-        
-        
-        
+
+
+
+
         <HEADING SUBTYPE="2">Biography</HEADING>
         <HEADING SUBTYPE="3">Personal Information</HEADING>
-        
+
         <PERSONNAME>
             <P>
                 <BIRTHNAME>
@@ -44,9 +44,9 @@
                 <RESEARCHNOTE>[Nickname if present]</RESEARCHNOTE>
                 <NICKNAME>{1a5}</NICKNAME>
             </P>
-            
+
         </PERSONNAME>
-        
+
         <RESEARCHNOTE>[Date of birth (dd mm yyyy)]</RESEARCHNOTE>
         <BIRTH>
             <CHRONSTRUCT>
@@ -54,7 +54,7 @@
                 <CHRONPROSE>, <RESEARCHNOTE>[Place of Birth]</RESEARCHNOTE> <PLACE>Place of Birth: {2a}</PLACE></CHRONPROSE>
             </CHRONSTRUCT>
         </BIRTH>
-        
+
         <RESEARCHNOTE>[Raised]</RESEARCHNOTE>
         <RESIDENCEANDMOBILITY RELATIONTO="LIVED">
             <P><PLACE>Place Raised: {2b}</PLACE><RESEARCHNOTE>[Current Residence]</RESEARCHNOTE>Current residence: {2c}</P>
@@ -86,7 +86,7 @@
             </P>
             <RESEARCHNOTE>Instruction for tagger: Change to racecolour or ethnicity tag if needed</RESEARCHNOTE>
             <P>
-                
+
                 <RESEARCHNOTE>[Religious Affiliation]</RESEARCHNOTE>
                 <DENOMINATION>{1b3}</DENOMINATION>
             </P>
@@ -106,7 +106,7 @@
             <P>Marital Relationship: {3a1}</P>
             <RESEARCHNOTE>Different Sex Partner(3a1)</RESEARCHNOTE>
             <P>Commonlaw Relationship: {3a2}</P>
-            
+
             <RESEARCHNOTE>[Name of Current Partner (if applicable)]</RESEARCHNOTE>
             <MARRIAGE>
                 <P>
@@ -890,7 +890,7 @@
             </RECEPTION>
         </TEXTSCOPE>
         <RESEARCHNOTE>If there are more plays that you would like to add, please send an email to playguild01@gmail.com to let us know, or comment: {13P11}</RESEARCHNOTE>
-        <TEXTSCOPE>
+        
             <RECEPTION>
                 <HEADING SUBTYPE="4">Playwriting Awards</HEADING>
                 <RESEARCHNOTE>All the awards listed below should be moved to the "Other Information" section for the corresponding plays. </RESEARCHNOTE>
@@ -914,7 +914,6 @@
                     <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a5_[1]}</DATE>
                     <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a5_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a5_[3]}</CHRONPROSE>
                 </CHRONSTRUCT>
-            </RECEPTION>
             <RESEARCHNOTE>Optional additional playwriting award(s): {5b}</RESEARCHNOTE>
             <RESEARCHNOTE>All the awards listed below should be moved to the "Other Information" section for the corresponding plays. </RESEARCHNOTE>
             <CHRONSTRUCT>
@@ -959,7 +958,8 @@
                 <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5e5_[1]}</DATE>
                 <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5e5_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5e5_[3]}</CHRONPROSE>
             </CHRONSTRUCT>
-        </TEXTSCOPE>
+            </RECEPTION>
+        
         <PRODUCTION>
             <HEADING SUBTYPE="4">First Production</HEADING>
             <CHRONSTRUCT>
