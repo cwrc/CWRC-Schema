@@ -25,6 +25,7 @@
     * the SGML DTD defined the attributes for each element only once in the DTD in an ATTLIST declaration, whereas the attributes for an element are defined
     * each time the element is used in the RELAX NG schema; because the majority of attributes are defined and utilized only once in one specific element,
     * this is a viable approach.  Moreover, designing the schema in this manner has made possible the following improvements:
+    *     - a more faithful adherence to the prescriptions of the original Orlando SGML writing DTD;
     *     - an improved ability to modify and revise the schema;
     *     - the ability to generate documentation based on a W3C XML Schema version of this RELAX NG schema; and
     *     - performance improvements in terms of speed when referencing the schema from XML documents.
