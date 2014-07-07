@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://cwrc.ca/schemas/cwrc_entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/cwrc.css"?>
+<CWRC>
+    <CWRCHEADER>
+        <FILEDESC>
+            <TITLESTMT>
+                <DOCTITLE></DOCTITLE>
+                <DOCAUTHOR></DOCAUTHOR>
+            </TITLESTMT>
+            <PUBLICATIONSTMT>
+                <AUTHORITY></AUTHORITY>
+            </PUBLICATIONSTMT>
+            <SOURCEDESC></SOURCEDESC>
+        </FILEDESC>
+        <REVISIONDESC>
+            <WORKFLOW RESP="MRB" WORKCATEGORY="created" WORKSTATUS="C">
+                <DATE></DATE>
+                <ITEM></ITEM>
+            </WORKFLOW>
+        </REVISIONDESC>
+    </CWRCHEADER>
+    <ENTRY>
+        <HEADING SUBTYPE="1"><NAME STANDARD="">{Author}</NAME>({Birth_date} - {Death_date})</HEADING>
+        <SCHOLARNOTE> <P>{Short_biography}</P> </SCHOLARNOTE>
+        <BIRTH>
+            <CHRONSTRUCT> <DATE>{Birth_date}</DATE> <CHRONPROSE><PLACE>{Birth_place}</PLACE></CHRONPROSE> </CHRONSTRUCT>
+
+        </BIRTH>
+        <DEATH>
+            <CHRONSTRUCT> <DATE>{Death_date}</DATE> <CHRONPROSE><PLACE>{Death_place}</PLACE></CHRONPROSE> </CHRONSTRUCT>
+        </DEATH>
+        <PERSONNAME>
+            <DATASTRUCT>
+                <DATAITEM>
+                    <NAME>{Name_at_birth}</NAME>
+                    <RESEARCHNOTE>Copy editor: break the Name above into its components inside the birthname tag below; delate the (now) empty name tag above.</RESEARCHNOTE>
+                    <!-- Karyn, the instructions above are optional, applicable only if you want the Author's birth name broken into first name, last name, etc. Alternatively, if you're OK with having it whole, in a single tag as the above, please delete the research note and the birthname structure below -->
+                    <BIRTHNAME><GIVEN></GIVEN><SURNAME></SURNAME></BIRTHNAME>
+                </DATAITEM>
+                <DATAITEM>
+                    <NAME>{Alternative_names}</NAME>
+                </DATAITEM>
+                <RESEARCHNOTE>Copy editor: <!-- Karyn, the mockup template still shows you want to diferentiate between the married names and the other alternative names; if I am correct, please provide copy editors with instructions to place the married name inside <DATAITEM><MARRIED></MARRIED></DATAITEM> and the other varian names inside <DATAITEM><NAME></NAME></DATAITEM> --></RESEARCHNOTE>
+            </DATASTRUCT>
+        </PERSONNAME>
+        <HEADING SUBTYPE="2">Acknowledgements</HEADING>
+        <SCHOLARNOTE> <P>Insert acknowledgements here.<!-- I'm not sure what should go in here from the csv template: Image_credits, Author_credits? --></P></SCHOLARNOTE>
+        <AUTHORSUMMARY>
+            <HEADING SUBTYPE="2"><NAME STANDARD="">Standard name of the the current writer</NAME>(year of Birth- Year of Death)</HEADING>
+            <P>{Biography}</P>
+            <RESEARCHNOTE>Break the paragraph above into multiple paragraphs if needed</RESEARCHNOTE>
+        </AUTHORSUMMARY>
+        <HEADING SUBTYPE="2">Published Texts</HEADING>
+        <HEADING SUBTYPE="3">Novels</HEADING>
+        <RESEARCHNOTE>{Novels}</RESEARCHNOTE>
+
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Non-fiction</HEADING>
+        <RESEARCHNOTE>{Non-fiction}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Life writing</HEADING>
+        <RESEARCHNOTE>{Life_writing}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Short story collections</HEADING>
+        <RESEARCHNOTE>{Short_story_collections}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Serialized fiction</HEADING>
+        <RESEARCHNOTE>{Serialized_fiction}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Poetry</HEADING>
+        <RESEARCHNOTE>{Poetry}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Plays</HEADING>
+        <RESEARCHNOTE>{Plays}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Interviews</HEADING>
+        <RESEARCHNOTE>{Interviews}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Unverified titles</HEADING>
+        <RESEARCHNOTE>{Unverified_titles}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="2">Periodical contribution</HEADING>
+        <RESEARCHNOTE>{Periodical_contributions}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="2">Other publications</HEADING>
+        <RESEARCHNOTE>{Other_publications}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="2">Other artistic productions</HEADING>
+        <HEADING SUBTYPE="3">Music</HEADING>
+        <RESEARCHNOTE>{Music}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Radio plays</HEADING>
+        <RESEARCHNOTE>{Radioplays}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Screenplays</HEADING>
+        <RESEARCHNOTE>{Screenplays}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Visual arts</HEADING>
+        <RESEARCHNOTE>{Visual_arts}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="3">Other</HEADING>
+        <RESEARCHNOTE>{Other}</RESEARCHNOTE>
+        <BIBCITS> <BIBCIT></BIBCIT> </BIBCITS>
+        <HEADING SUBTYPE="2">Family and Relationships</HEADING>
+        <FAMILY>
+            <FAMILYMEMBER RELATION="FATHER">
+                <HEADING SUBTYPE="3"><NAME>{Father}</NAME></HEADING>
+                <CHRONSTRUCT><DATERANGE FROM="" TO="">{Father_life_dates}</DATERANGE><CHRONPROSE>{Father_bio}</CHRONPROSE></CHRONSTRUCT>
+            </FAMILYMEMBER>
+            <FAMILYMEMBER RELATION="MOTHER">
+                <HEADING SUBTYPE="3"><NAME>{Mother}</NAME></HEADING>
+                <CHRONSTRUCT><DATERANGE FROM="" TO="">{Mother_life_dates}</DATERANGE><CHRONPROSE>{Mother_bio}</CHRONPROSE></CHRONSTRUCT>
+            </FAMILYMEMBER>
+            <HEADING SUBTYPE="3">Siblings</HEADING>
+            <RESEARCHNOTE>{Siblings}</RESEARCHNOTE>
+            <RESEARCHNOTE>Copy editor: break list of sibling into individual entities using the structure below, then delete the (now) empty researchnote tag above:</RESEARCHNOTE>
+            <FAMILYMEMBER RELATION="">
+                <NAME>Sibling Name</NAME>
+                <CHRONSTRUCT><DATERANGE FROM="" TO="">sibling date of birth-date of death</DATERANGE><CHRONPROSE>additional information about sibbling</CHRONPROSE></CHRONSTRUCT>
+            </FAMILYMEMBER>
+            <FAMILYMEMBER RELATION="HUSBAND">
+                <HEADING SUBTYPE="3"><NAME>{Spouse1}</NAME> <DATERANGE>{Spouse1_life_dates}</DATERANGE></HEADING>
+                <HEADING SUBTYPE="5">Marriage</HEADING>
+                <CHRONSTRUCT><DATE>{Marriage1_date}</DATE><CHRONPROSE><PLACE>{Marriage1_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
+                <P>{Spouse1bio}</P>
+            </FAMILYMEMBER>
+            <P>{Children1}</P>
+            <P>{Children1bios}</P>
+            <RESEARCHNOTE>Copy editor: break list of children into a list of individuals using the structure below; if more than one children included, only the first child family member contains a heading tag:</RESEARCHNOTE>
+            <FAMILYMEMBER RELATION="">
+                <HEADING SUBTYPE="4">Children</HEADING>
+                <NAME>Child name</NAME>
+                <CHRONSTRUCT><CHRONPROSE>(relation, brief note about child)</CHRONPROSE><DATERANGE FROM="" TO=""></DATERANGE></CHRONSTRUCT>
+                <P></P>
+            </FAMILYMEMBER>
+        </FAMILY>
+        <HEADING SUBTYPE="2">Religion</HEADING>
+        <CULTURALFORMATION>
+            <RELIGION>
+                <RESEARCHNOTE>{Religious_affiliation}</RESEARCHNOTE>
+                <RESEARCHNOTE>Copy editor: break list of reigious affiliations into individual denominations below and delete the (now) empty researchnote tag above</RESEARCHNOTE>
+                <DENOMINATION></DENOMINATION>
+            </RELIGION>
+        </CULTURALFORMATION>
+        <RESIDENCEANDMOBILITY RELATIONTO="LIVED">
+            <RESEARCHNOTE>{Residences}</RESEARCHNOTE>
+            <RESEARCHNOTE>Copy editor: break list of residences into individual chronstructs below and delete the research note above when done</RESEARCHNOTE>
+            <CHRONSTRUCT><CHRONPROSE><PLACE></PLACE></CHRONPROSE><DATERANGE></DATERANGE></CHRONSTRUCT>
+        </RESIDENCEANDMOBILITY>
+        <HEADING SUBTYPE="2">Education</HEADING>
+        <RESEARCHNOTE>{Education}</RESEARCHNOTE>
+        <RESEARCHNOTE>Copy editor: break education by mode (domestic, institutional, self taught) below each school or period of education in an individual chronstruct, and delete the (now) empty researchnote tag above.</RESEARCHNOTE>
+        <EDUCATION MODE="">
+            <!-- differentiate between institutional/home schooled, etc. -->
+            
+            
+            <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
+        </EDUCATION>
+        <HEADING SUBTYPE="2">Awards</HEADING>
+        <RESEARCHNOTE>{Awards}</RESEARCHNOTE>
+        <RECEPTION>
+            <RESEARCHNOTE>Copy editor: break list of awards into individual chronstructs below and delete the research note above when done</RESEARCHNOTE>
+            <CHRONSTRUCT>
+                <CHRONPROSE>
+                    <RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME></RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>
+                </CHRONPROSE>
+                <DATE></DATE>
+            </CHRONSTRUCT>
+        </RECEPTION>
+        <HEADING SUBTYPE="2">Employment and Volunteer Activities</HEADING>
+        <OCCUPATION>
+            <HEADING SUBTYPE="3">Employment</HEADING>
+            <RESEARCHNOTE>{Employment}</RESEARCHNOTE>
+            <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
+            <HEADING SUBTYPE="3">Unpayd and volunteer work</HEADING>
+            <RESEARCHNOTE>{Unpayed_and_volunteer_work}</RESEARCHNOTE>
+            <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
+            <HEADING SUBTYPE="3">Membership</HEADING>
+            <RESEARCHNOTE>{Membership}</RESEARCHNOTE>
+            <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
+        </OCCUPATION>
+        <HEADING SUBTYPE="2">Archival Holdings</HEADING>
+        <RESEARCHNOTE>{Archive_material}</RESEARCHNOTE>
+        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <HEADING SUBTYPE="2">Published Resources</HEADING>
+        <RESEARCHNOTE>{Published_resources}</RESEARCHNOTE>
+        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+    </ENTRY>
+</CWRC>
