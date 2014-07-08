@@ -35,6 +35,8 @@
 *** Revisions ***
 * MRB: June 2014: Addressed GitHub issues associated with the Orlando biography schema:
   - Made the attributes CHRONCOLUMN, RELEVANCE, and RESP required attributes of the element CHRONSTRUCT.
+  - Made the element QUOTE an optional repeatable child element of the element PLACE.
+  - Made the element EMPH an optional repeatable child element of the element RESEARCHNOTE.
 -->
 
 <!-- begin root <grammar> element -->
@@ -1446,6 +1448,7 @@
                 <choice>
                     <text/>
                     <ref name="BIBCITS"/>
+                    <ref name="EMPH"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
@@ -1688,6 +1691,7 @@
                     <text/>
                     <ref name="BIBCITS"/>
                     <ref name="FOREIGN"/>
+                    <ref name="QUOTE"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="SCHOOL"/>
                     <ref name="SEPARATION"/>

@@ -36,7 +36,13 @@
 * MRB: June-July 2014: Addressed GitHub issues associated with the Orlando writing schema:
   - Added documentation for writing-related elements and attributes.
   - Made the attributes CHRONCOLUMN, RELEVANCE, and RESP required attributes of the element CHRONSTRUCT.
-  - Made the elements PRODUCTION and RECEPTION optional child elements of TEXTSCOPE.
+  - Made the elements PRODUCTION and RECEPTION optional repeatable child elements of the element TEXTSCOPE.
+  - Made the element TCHARACTERNAME an optional repeatable child element of the element NAME.
+  - Made the PRELATIONSWITHPUBLISHER an optional repeatable child element of the element QUOTE.
+  - Made the element PDEDICATION an optional repeatable child element of the element RRECOGNITIONS.
+  - Made the element PCONTRACT an optional repeatable child element of the element TGENREISSUE.
+  - Made the element QUOTE an optional repeatable child element of the element PLACE.
+  - Made the element EMPH an optional repeatable child element of the element RESEARCHNOTE.
 -->
 
 <!-- begin root <grammar> element -->
@@ -375,6 +381,7 @@
                 <choice>
                     <text/>
                     <ref name="BIBCITS"/>
+                    <ref name="EMPH"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PAUTHORSHIP"/>
@@ -1097,6 +1104,7 @@
                     <ref name="PPERIODICALPUBLICATION"/>
                     <ref name="PPRICE"/>
                     <ref name="PRARITIESFEATURESDECORATIONS"/>
+                    <ref name="PRELATIONSWITHPUBLISHER"/>
                     <ref name="PSUBMISSIONSREJECTIONS"/>
                     <ref name="PTYPEOFPRESS"/>
                     <ref name="QUOTE"/>
@@ -1412,6 +1420,7 @@
                     <ref name="RESEARCHNOTE"/>
                     <ref name="SIC"/>
                     <ref name="SOCALLED"/>
+                    <ref name="TCHARACTERNAME"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1878,6 +1887,7 @@
                     <ref name="PATTITUDES"/>
                     <ref name="PAUTHORSHIP"/>
                     <ref name="PCIRCULATION"/>
+                    <ref name="PCONTRACT"/>
                     <ref name="PDEDICATION"/>
                     <ref name="PEARNINGS"/>
                     <ref name="PEDITIONS"/>
@@ -1943,6 +1953,7 @@
             <oneOrMore>
                 <choice>
                     <text/>
+                    <ref name="QUOTE"/>
                     <ref name="SOCALLED"/>
                     <element name="ADDRESS">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Address, a sub-element within place, captures the
@@ -3508,6 +3519,7 @@
                     <ref name="PATTITUDES"/>
                     <ref name="PAUTHORSHIP"/>
                     <ref name="PCIRCULATION"/>
+                    <ref name="PDEDICATION"/>
                     <ref name="PEARNINGS"/>
                     <ref name="PEDITIONS"/>
                     <ref name="PFIRSTLITERARYACTIVITY"/>
