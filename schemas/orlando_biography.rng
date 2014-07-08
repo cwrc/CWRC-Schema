@@ -537,11 +537,10 @@
                                             <ref name="KEYWORDCLASS"/>
                                         </zeroOrMore>
                                     </element>
-                                </choice>
-                            </zeroOrMore>
-                            <choice>
-                                <element name="CULTURALFORMATION">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">CulturalFormation is one of the 16
+
+
+                                    <element name="CULTURALFORMATION">
+                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">CulturalFormation is one of the 16
                     major biography elements defined as integral to mapping a woman&apos;s life. It refers to the constitution of a
                     British Woman Writer&apos;s subjectivity and includes a number of different ways for you to talk about the
                     pertinent issues. This element addresses the imbrication of the triad race/class/gender; it allows you to say
@@ -558,19 +557,19 @@
                     Religion, etc.) will allow us to extract and merge all significant discussions of certain issues, providing our
                     end users with a complex weave of information through which to analyse the construction of
                     subjectivity.</a:documentation>
-                                    <optional>
-                                        <choice>
-                                            <ref name="CLASS"/>
-                                            <ref name="RACECOLOUR"/>
-                                        </choice>
-                                    </optional>
-                                    <choice>
-                                        <ref name="CHRONSTRUCT"/>
-                                        <zeroOrMore>
+                                        <optional>
                                             <choice>
-                                                <ref name="DIV2"/>
-                                                <element name="CLASSISSUE">
-                                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ClassIssue, a significant
+                                                <ref name="CLASS"/>
+                                                <ref name="RACECOLOUR"/>
+                                            </choice>
+                                        </optional>
+                                        <choice>
+                                            <ref name="CHRONSTRUCT"/>
+                                            <zeroOrMore>
+                                                <choice>
+                                                    <ref name="DIV2"/>
+                                                    <element name="CLASSISSUE">
+                                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ClassIssue, a significant
                             sub-element within culturalFormation, is used to discuss the importance of class within a
                             person&apos;s life. In conjunction with the class element, classIssue allows us to capture
                             information about how the socio-economic conditions of her family and herself affected her life and
@@ -579,13 +578,13 @@
                             categories are historically and culturally specific. The classIssue element is meant to capture
                             discussions of these complexities and allow for the historical and biographical specificities of
                             one&apos;s relation to class.</a:documentation>
-                                                    <choice>
-                                                        <ref name="CHRONSTRUCT"/>
-                                                        <ref name="DIV2"/>
-                                                    </choice>
-                                                </element>
-                                                <element name="NATIONALITYISSUE">
-                                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">NationalityIssue is a
+                                                        <choice>
+                                                            <ref name="CHRONSTRUCT"/>
+                                                            <ref name="DIV2"/>
+                                                        </choice>
+                                                    </element>
+                                                    <element name="NATIONALITYISSUE">
+                                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">NationalityIssue is a
                             significant sub-element within culturalFormation which captures a discussion about her nationality.
                             It works in conjunction with the nationality element to structure the national subject positions of
                             women writers. Use to discuss issues of importance around a woman&apos;s nationality as it impinges
@@ -593,10 +592,10 @@
                             the element &quot;nationalityIssue,&quot; we can discuss or name a writer&apos;s nationality as
                             English, Irish, Scottish, Welsh. Avoid using British in the nationality tag, and use more specific
                             designations when you can because these probably mattered more.</a:documentation>
-                                                    <ref name="DIV2"/>
-                                                </element>
-                                                <element name="RACEANDETHNICITY">
-                                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">RaceAndEthnicity is a
+                                                        <ref name="DIV2"/>
+                                                    </element>
+                                                    <element name="RACEANDETHNICITY">
+                                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">RaceAndEthnicity is a
                             significant sub-element within culturalFormation. It captures information and discussions of a
                             person&apos;s subject position with regards to race and ethnicity by working in conjunction with
                             subject specific sub-elements (raceColour, nationalHeritage, geogHeritage, ethnicity). The following
@@ -630,10 +629,10 @@
                             &quot;Jewish&quot; will appear in both &quot;race/colour&quot; and &quot;ethnicity&quot; tag lists,
                             &quot;Ukrainian&quot; may appear in both &quot;national-heritage&quot; and &quot;ethnicity&quot; tag
                             lists.</a:documentation>
-                                                    <ref name="DIV2"/>
-                                                </element>
-                                                <element name="RELIGION">
-                                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Religion is one of the
+                                                        <ref name="DIV2"/>
+                                                    </element>
+                                                    <element name="RELIGION">
+                                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Religion is one of the
                             issues (along with sexuality, race and ethnicity, language, class, and nationality) we have defined
                             as significant in discussing the cultural formation of a person. This element captures discussions of
                             her religion as an identity, as an issue in her life and her religious beliefs and affiliations. We
@@ -644,18 +643,18 @@
                             institutions. We are also interested in the crucial role religious movements have had in women&apos;s
                             writing, particularly in the early modern periods, and envision our end users being able to trace the
                             influence of Quakerism, for example, on women&apos;s writing and lives.</a:documentation>
-                                                    <optional>
-                                                        <ref name="CHRONSTRUCT"/>
-                                                    </optional>
-                                                    <zeroOrMore>
-                                                        <ref name="DIV2"/>
-                                                    </zeroOrMore>
-                                                    <optional>
-                                                        <ref name="KEYWORDCLASS"/>
-                                                    </optional>
-                                                </element>
-                                                <element name="SEXUALITY">
-                                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sexuality is one of the
+                                                        <optional>
+                                                            <ref name="CHRONSTRUCT"/>
+                                                        </optional>
+                                                        <zeroOrMore>
+                                                            <ref name="DIV2"/>
+                                                        </zeroOrMore>
+                                                        <optional>
+                                                            <ref name="KEYWORDCLASS"/>
+                                                        </optional>
+                                                    </element>
+                                                    <element name="SEXUALITY">
+                                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sexuality is one of the
                             issues (along with religion, race and ethnicity, language, class, and nationality) we have defined as
                             significant in discussing the cultural formation of a woman. This element captures discussions of her
                             sexuality as an identity or as an issue in her life. It is not meant to capture individual sexual
@@ -668,16 +667,16 @@
                             one&apos;s own sexuality. Capturing discussions of her sexuality within this element, will help
                             researchers interested in the historical, ideological and gendered constructions of
                             sexuality.</a:documentation>
-                                                    <oneOrMore>
-                                                        <ref name="DIV2"/>
-                                                    </oneOrMore>
-                                                </element>
-                                            </choice>
-                                        </zeroOrMore>
-                                    </choice>
-                                </element>
-                                <element name="FRIENDSASSOCIATES">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FriendsAssociates is one of the 16
+                                                        <oneOrMore>
+                                                            <ref name="DIV2"/>
+                                                        </oneOrMore>
+                                                    </element>
+                                                </choice>
+                                            </zeroOrMore>
+                                        </choice>
+                                    </element>
+                                    <element name="FRIENDSASSOCIATES">
+                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FriendsAssociates is one of the 16
                     major biography elements defined as integral to mapping a woman&apos;s life. Because of the ability of our
                     electronic literary history to make links between people, mapping the friendships and personal connections of
                     women&apos;s writers is a very high priority. Systematizing the people that a woman writer knew will allow us to
@@ -690,18 +689,18 @@
                     writer had coffee with Samuel Johnson on one notable day, but that they weren&apos;t necessarily friends.
                     Discussions of friendships or relationships that impinged upon the woman&apos;s sense of her own sexuality, would
                     be best captured within either sexuality or intimateRelationships.</a:documentation>
-                                    <oneOrMore>
-                                        <choice>
-                                            <ref name="CHRONSTRUCT"/>
-                                            <ref name="DIV2"/>
-                                        </choice>
-                                    </oneOrMore>
-                                    <optional>
-                                        <ref name="RESEARCHNOTE"/>
-                                    </optional>
-                                </element>
-                                <element name="LEISUREANDSOCIETY">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Leisure and Society is one of the 16 major
+                                        <oneOrMore>
+                                            <choice>
+                                                <ref name="CHRONSTRUCT"/>
+                                                <ref name="DIV2"/>
+                                            </choice>
+                                        </oneOrMore>
+                                        <optional>
+                                            <ref name="RESEARCHNOTE"/>
+                                        </optional>
+                                    </element>
+                                    <element name="LEISUREANDSOCIETY">
+                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Leisure and Society is one of the 16 major
                     biography elements defined as integral to mapping a woman&apos;s life. It captures information concerning the
                     cultural and social activities of a person, including hobbies, sporting life and non-literary cultural life.
                     Individual friendships should be captured under friendsAssociates and volunteer philanthropic activities should be
@@ -709,57 +708,57 @@
                     purposes of this Project, we are not defining &quot;leisure&quot; as what she does with her &quot;free time&quot;
                     because this assumes a gendered and classed notion of labour. &quot;Society&quot; in this context refers to the
                     larger community and her social life within it, not an elite, fashionable social circle.</a:documentation>
-                                    <optional>
-                                        <ref name="CHRONSTRUCT"/>
-                                    </optional>
-                                    <zeroOrMore>
-                                        <ref name="DIV2"/>
-                                    </zeroOrMore>
-                                </element>
-                                <element name="OTHERLIFEEVENT">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">OtherLifeEvent is a Div1 content element
-                    that allows you to discuss biographical events not covered by any of the other Div1 elements. This is the place to
-                    discuss what does not fit anywhere else.</a:documentation>
-                                    <zeroOrMore>
-                                        <ref name="CHRONSTRUCT"/>
-                                    </zeroOrMore>
-                                    <choice>
-                                        <ref name="RESEARCHNOTE"/>
+                                        <optional>
+                                            <ref name="CHRONSTRUCT"/>
+                                        </optional>
                                         <zeroOrMore>
                                             <ref name="DIV2"/>
                                         </zeroOrMore>
-                                    </choice>
-                                </element>
-                                <element name="VIOLENCE">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Violence is one of the 16 major biography
+                                    </element>
+                                    <element name="OTHERLIFEEVENT">
+                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">OtherLifeEvent is a Div1 content element
+                    that allows you to discuss biographical events not covered by any of the other Div1 elements. This is the place to
+                    discuss what does not fit anywhere else.</a:documentation>
+                                        <zeroOrMore>
+                                            <ref name="CHRONSTRUCT"/>
+                                        </zeroOrMore>
+                                        <choice>
+                                            <ref name="RESEARCHNOTE"/>
+                                            <zeroOrMore>
+                                                <ref name="DIV2"/>
+                                            </zeroOrMore>
+                                        </choice>
+                                    </element>
+                                    <element name="VIOLENCE">
+                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Violence is one of the 16 major biography
                     elements defined as integral to mapping a woman&apos;s life. Record all instances of physical, sexual, and undue
                     emotional abuse within this element, whether the person was the victim or the perpetrator. We are particularly
                     interested in the effects of violence against women on the history of women&apos;s writing and the historical, social
                     and political issues surrounding violence against women. This element is not reserved for acts of violence that the
                     person either committed or was the victim of, but it can include a discussion of the effect of an exposure to
                     violence on her life.</a:documentation>
-                                    <optional>
-                                        <ref name="KEYWORDCLASS"/>
-                                    </optional>
-                                    <oneOrMore>
-                                        <ref name="DIV2"/>
-                                    </oneOrMore>
-                                </element>
-                                <element name="WEALTH">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Wealth is one of the 16 major biography
+                                        <optional>
+                                            <ref name="KEYWORDCLASS"/>
+                                        </optional>
+                                        <oneOrMore>
+                                            <ref name="DIV2"/>
+                                        </oneOrMore>
+                                    </element>
+                                    <element name="WEALTH">
+                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Wealth is one of the 16 major biography
                     elements defined as integral to mapping a woman&apos;s life. This element captures information about a person's
                     economic standing that cannot be adequately conveyed using the class and occupation elements. We are particularly
                     interested in whether her financial status provided the material conditions necessary for writing and therefore
                     emphasize inclusion of her financial status. Information concerning inheritance, pensions and personal financial
                     disasters should be captured here.</a:documentation>
-                                    <oneOrMore>
-                                        <choice>
-                                            <ref name="CHRONSTRUCT"/>
-                                            <ref name="DIV2"/>
-                                        </choice>
-                                    </oneOrMore>
-                                </element>
-                                <zeroOrMore>
+                                        <oneOrMore>
+                                            <choice>
+                                                <ref name="CHRONSTRUCT"/>
+                                                <ref name="DIV2"/>
+                                            </choice>
+                                        </oneOrMore>
+                                    </element>
+
                                     <element name="HEALTH">
                                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Health is one of the 16 major
                       biography elements defined as integral to mapping a woman&apos;s life. Within this element, discuss all events
@@ -794,8 +793,8 @@
                                             </choice>
                                         </oneOrMore>
                                     </element>
-                                </zeroOrMore>
-                            </choice>
+                                </choice>
+                            </zeroOrMore>
                         </element>
                         <element name="STANDARD">
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Standard is an element used to record the
