@@ -9,7 +9,8 @@
      *
      * install:
      ** copy 'this file'
-     ** create a sub-directory 'cwrc_schemas' (as referenced below) and copy all the cwrc schema into that directory
+     ** create a sub-directory 'cwrc_schemas' (as referenced below) and copy all the cwrc schemas into that directory
+     ** create a sub-directory 'cwrc_templates' (as referenced below) and copy all the cwrc templates into
      ** from oxygen
      **** options==>preferences==>XML==>XML Catalog==>
      **** "add" button
@@ -27,7 +28,44 @@
 
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
 
-	<uri name="http://cwrc.ca/schemas/orlando.rng" uri="./cwrc_schemas/orlando.rng"/>
-	<uri name="http://cwrc.ca/schemas/character_entities.dtd" uri="./cwrc_schemas/character_entities.dtd"/>
+ <!-- Orlando Schemas and supporting files -->
+	<uri 
+	 name="http://cwrc.ca/schemas/orlando_biography.rng" 
+	 uri="./cwrc_schemas/orlando_biography.rng"
+	/>
+ 
+ <uri 
+  name="http://cwrc.ca/schemas/orlando_writing.rng" 
+  uri="./cwrc_schemas/orlando_writing.rng"
+ />
+ 
+ <uri 
+  name="http://cwrc.ca/schemas/legacy_orlando_documentation.rng"
+  uri="./cwrc_schemas/legacy_orlando_documentation.rng"
+ />
+
+ <uri 
+  name="http://cwrc.ca/schemas/orgname_auth_schema.rng"
+  uri="./cwrc_schemas/orgname_auth_schema.rng"
+ />
+ 
+  <uri 
+  name="http://cwrc.ca/schemas/name_auth_schema.rng"
+  uri="./cwrc_schemas/name_auth_schema.rng"
+ />
+ 
+ <uri 
+  name="http://cwrc.ca/schemas/character_entities.dtd" 
+  uri="./cwrc_schemas/character_entities.dtd"
+ />
+	
+ <uri 
+  name="http://cwrc.ca/templates/css/orlando.css" 
+  uri="./cwrc_templates/css/orlando.css"
+ />
+ 
+ <!-- CWRC Schemas and supporting files -->
+	
+	
 	
 </catalog>
