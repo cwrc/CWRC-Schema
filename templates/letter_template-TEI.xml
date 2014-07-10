@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://cwrc.ca/schemas/CWRC-TEIBasic.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://cwrc.ca/schemas/cwrc_tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/tei.css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -29,9 +29,7 @@
                     <dateline>
                         <date>Some date (set date value in attribute).</date>
                     </dateline>
-                    <salute>Some salutation, e.g. "Dearest <persName
-                            sameAs="http://www.freebase.com/view/en/miquel_brown"
-                        >Miquel</persName>"</salute>
+                    <salute>Some salutation, e.g. "Dearest <persName sameAs="http://www.freebase.com/view/en/miquel_brown">Miquel</persName>"</salute>
                 </opener>
                 <p>Sample letter content</p>
                 <closer>
@@ -41,7 +39,7 @@
                             and/or signature.</persName>
                     </signed>
                 </closer>
-            </div>            
+            </div>
         </body>
     </text>
 </TEI>
