@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://cwrc.ca/schemas/entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://cwrc.ca/schemas/cwrc_entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/cwrc.css"?>
-<ENTRY PERSONTYPE="writer" SEX="female" NATIONALITY="Canadian">
+<CWRC>
     <CWRCHEADER>
         <FILEDESC>
             <TITLESTMT>
@@ -9,39 +9,27 @@
                 <DOCAUTHOR>Author Name</DOCAUTHOR>
             </TITLESTMT>
             <PUBLICATIONSTMT>
-                <P>Created from original research by members of CWRC/CSÉC unless otherwise
-                    noted.</P>
+                <AUTHORITY>Created from original research by members of CWRC/CSÉC unless otherwise
+                    noted.</AUTHORITY>
             </PUBLICATIONSTMT>
-            <SOURCEDESC></SOURCEDESC>
+            <SOURCEDESC/>
         </FILEDESC>
         <REVISIONDESC>
-            <RESPONSIBILITY RESP="MPO" WORKSTATUS="SUB" WORKVALUE="I">
+            <WORKFLOW RESP="MRB" WORKCATEGORY="created" WORKSTATUS="C">
+                <DATE>2014-07-10</DATE>
                 <ITEM>Template created</ITEM>
-                <DATE>2013-07-07</DATE>
-            </RESPONSIBILITY>
+            </WORKFLOW>
         </REVISIONDESC>
     </CWRCHEADER>
-    <DIV0>
-        <DIV1>
-            <HEADING>Sample heading</HEADING>
-            <FAMILY>
-                <P>Some text on the writer's family, <TINTERTEXTUALITY>some reference to
-                    intertextuality related to the life of the author's <CHILDREN>children</CHILDREN>, as well as <PDEDICATION>some reference to a <TITLE TITLETYPE="MONOGRAPHIC">work</TITLE> dedicated to them</PDEDICATION>.
-                </TINTERTEXTUALITY></P>
-            </FAMILY>
-        </DIV1>
-        <DIV1>
-            <DIV2>
-                <HEADING>Insert heading here</HEADING><FAMILY>
-                    <P>Insert text here</P>
-                </FAMILY><OCCUPATION>
-                    <P>Insert text here</P>
-                </OCCUPATION><PRODUCTION>
-                    <P>Insert text here.</P>
-                </PRODUCTION><LEISUREANDSOCIETY>Insert text here</LEISUREANDSOCIETY>
-                <RECEPTION>
-                    <P>Insert text here</P>
-                </RECEPTION></DIV2>
-        </DIV1>
-    </DIV0>
-</ENTRY>
+    <ENTRY>
+        <AUTHORSUMMARY>
+            <HEADING SUBTYPE="2"/>
+            <P/>
+        </AUTHORSUMMARY>
+        <HEADING SUBTYPE="1"/>
+        <STANDARD/>
+        <WORKSCITED>
+            <RESEARCHNOTE/>
+        </WORKSCITED>
+    </ENTRY>
+</CWRC>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/bio_playwrights_style.css"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/playwrights.css"?>
 <?xml-model href="http://cwrc.ca/schemas/cwrc_entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <CWRC SEX="female">
     <CWRCHEADER>
@@ -21,13 +21,8 @@
     </CWRCHEADER>
     <ENTRY>
 
-
-
         <RESEARCHNOTE>[First Name] [Last Name]</RESEARCHNOTE>
         <HEADING SUBTYPE="1">{1a3} {1a1}</HEADING>
-
-
-
 
         <HEADING SUBTYPE="2">Biography</HEADING>
         <HEADING SUBTYPE="3">Personal Information</HEADING>
@@ -890,30 +885,30 @@
             </RECEPTION>
         </TEXTSCOPE>
         <RESEARCHNOTE>If there are more plays that you would like to add, please send an email to playguild01@gmail.com to let us know, or comment: {13P11}</RESEARCHNOTE>
-        
-            <RECEPTION>
-                <HEADING SUBTYPE="4">Playwriting Awards</HEADING>
-                <RESEARCHNOTE>All the awards listed below should be moved to the "Other Information" section for the corresponding plays. </RESEARCHNOTE>
-                <CHRONSTRUCT>
-                    <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a1_[1]}</DATE>
-                    <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a1_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a1_[3]}</CHRONPROSE>
-                </CHRONSTRUCT>
-                <CHRONSTRUCT>
-                    <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a2_[1]}</DATE>
-                    <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a2_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a2_[3]}</CHRONPROSE>
-                </CHRONSTRUCT>
-                <CHRONSTRUCT>
-                    <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a3_[1]}</DATE>
-                    <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a3_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a3_[3]}</CHRONPROSE>
-                </CHRONSTRUCT>
-                <CHRONSTRUCT>
-                    <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a4_[1]}</DATE>
-                    <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a4_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a4_[3]}</CHRONPROSE>
-                </CHRONSTRUCT>
-                <CHRONSTRUCT>
-                    <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a5_[1]}</DATE>
-                    <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a5_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a5_[3]}</CHRONPROSE>
-                </CHRONSTRUCT>
+
+        <RECEPTION>
+            <HEADING SUBTYPE="4">Playwriting Awards</HEADING>
+            <RESEARCHNOTE>All the awards listed below should be moved to the "Other Information" section for the corresponding plays. </RESEARCHNOTE>
+            <CHRONSTRUCT>
+                <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a1_[1]}</DATE>
+                <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a1_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a1_[3]}</CHRONPROSE>
+            </CHRONSTRUCT>
+            <CHRONSTRUCT>
+                <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a2_[1]}</DATE>
+                <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a2_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a2_[3]}</CHRONPROSE>
+            </CHRONSTRUCT>
+            <CHRONSTRUCT>
+                <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a3_[1]}</DATE>
+                <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a3_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a3_[3]}</CHRONPROSE>
+            </CHRONSTRUCT>
+            <CHRONSTRUCT>
+                <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a4_[1]}</DATE>
+                <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a4_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a4_[3]}</CHRONPROSE>
+            </CHRONSTRUCT>
+            <CHRONSTRUCT>
+                <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5a5_[1]}</DATE>
+                <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5a5_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5a5_[3]}</CHRONPROSE>
+            </CHRONSTRUCT>
             <RESEARCHNOTE>Optional additional playwriting award(s): {5b}</RESEARCHNOTE>
             <RESEARCHNOTE>All the awards listed below should be moved to the "Other Information" section for the corresponding plays. </RESEARCHNOTE>
             <CHRONSTRUCT>
@@ -958,8 +953,8 @@
                 <DATE><RESEARCHNOTE>[Playwriting Award (Year)]</RESEARCHNOTE>{5e5_[1]}</DATE>
                 <CHRONPROSE><RESEARCHNOTE>[Playwriting Award (Name of Award)]</RESEARCHNOTE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{5e5_[2]}</RRECOGNITIONNAME></RRECOGNITIONSANDAWARDS>, <RESEARCHNOTE>[Playwriting Award (Received for (name of play, etc.))]</RESEARCHNOTE>{5e5_[3]}</CHRONPROSE>
             </CHRONSTRUCT>
-            </RECEPTION>
-        
+        </RECEPTION>
+
         <PRODUCTION>
             <HEADING SUBTYPE="4">First Production</HEADING>
             <CHRONSTRUCT>
