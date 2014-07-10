@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://cwrc.ca/schemas/biography.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://cwrc.ca/schemas/orlando_biography.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/orlando.css"?>
 
 <!DOCTYPE ORLANDO [ <!ENTITY % character_entities SYSTEM "http://cwrc.ca/schemas/character_entities.dtd"> %character_entities; ]>
@@ -84,12 +84,11 @@
                 </DIV2>
             </PERSONNAME>
         </DIV1>
-        <DIV1 ID="a-0a-s._9">
+        <DIV1>
             <HEADING>Birth</HEADING>
             <BIRTH>
                 <DIV2>
-                    <CHRONSTRUCT RESP="SYS" RELEVANCE="SELECTIVE"
-                        CHRONCOLUMN="WRITINGCLIMATE">
+                    <CHRONSTRUCT RESP="SYS" RELEVANCE="SELECTIVE" CHRONCOLUMN="WRITINGCLIMATE">
                         <DATE>[Insert date]</DATE>
                         <CHRONPROSE>[Insert summary of birth here]. <BIRTHPOSITION> [Insert
                             prose on birth position] </BIRTHPOSITION></CHRONPROSE>
@@ -101,9 +100,7 @@
                             the DBREF attributes. Note that the plural BIBCITS tag is
                             used to group any number of BIBCIT tags. Please insert at
                             least one BIBCIT at the end of each paragraph or
-                            CHRONSTRUCT.</RESEARCHNOTE><BIBCITS>
-                                <BIBCIT>Insert citation information here</BIBCIT>
-                            </BIBCITS></P>
+                            CHRONSTRUCT.</RESEARCHNOTE><BIBCITS> <BIBCIT>Insert citation information here</BIBCIT> </BIBCITS></P>
                     </SHORTPROSE>
                 </DIV2>
             </BIRTH>
@@ -174,8 +171,7 @@
             <HEADING>Death</HEADING>
             <DEATH>
                 <DIV2>
-                    <CHRONSTRUCT RESP="SYS" RELEVANCE="SELECTIVE"
-                        CHRONCOLUMN="WRITINGCLIMATE">
+                    <CHRONSTRUCT RESP="SYS" RELEVANCE="SELECTIVE" CHRONCOLUMN="WRITINGCLIMATE">
                         <DATE>[InsertDate]</DATE>
                         <CHRONPROSE>[Insert summary of event here]</CHRONPROSE>
                     </CHRONSTRUCT>
