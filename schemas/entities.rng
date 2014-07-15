@@ -2293,12 +2293,12 @@
         </choice>-->
 
     <define name="date-pattern">
-        <interleave>
+        <oneOrMore>
             <choice>
                 <ref name="standardDate-element"/>
                 <ref name="textDate-element"/>
             </choice>
-        </interleave>
+        </oneOrMore>
         <optional>
             <ref name="dateType-element"/>
         </optional>
