@@ -34,13 +34,14 @@
 <!-- 
 *** Revisions ***
 * MRB: July 2014: Made the following changes:
+  - Deleted the element SHORTPROSE, and the two REFs to it from the elements PRODUCTION and RECEPTION.
   - Added the element RESEARCHNOTE as a child element to the element FAMILYMEMBER.
   - Added the element RESEARCHNOTE as a child element to the element RELIGION.
   - Added the element DATERANGE as a child element to the element HEADING.
   - Added the element NAME as a child element to the element FAMILYMEMBER.
   - Eliminated MOTHER as the default value of the RELATION attribute in the element FAMILYMEMBER.
   - Added the elements DATE and DATERANGE as child elements of DATAITEM.
-  - Added the element RESEARCHNOTE as a child element to the element AUTHORSUMMARY. 
+  - Added the element RESEARCHNOTE as a child element to the element AUTHORSUMMARY.
 * MRB: June 2014: Addressed GitHub issues associated with the CWRC entry schema:
   - Renamed the element AWARD to AWARDSNONLITERARY, as well as associated REFs.
   - Renamed the element JOB to JOBTITLE, as well as associated REFs.
@@ -1148,7 +1149,6 @@
                     <ref name="KEYWORDCLASS"/>
                     <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SHORTPROSE"/>
                     <ref name="PADVERTISING"/>
                     <ref name="PANTHOLOGIZATION"/>
                     <ref name="PARCHIVALLOCATION"/>
@@ -1227,7 +1227,6 @@
                     <ref name="KEYWORDCLASS"/>
                     <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SHORTPROSE"/>
                     <ref name="PADVERTISING"/>
                     <ref name="PANTHOLOGIZATION"/>
                     <ref name="PARCHIVALLOCATION"/>
@@ -1624,24 +1623,6 @@
                     <ref name="TTONESTYLE"/>
                     <ref name="TVOICENARRATION"/>
                     <ref name="VIOLENCE"/>
-                </choice>
-            </oneOrMore>
-        </element>
-    </define>
-
-    <define name="SHORTPROSE">
-        <element name="SHORTPROSE">
-            <oneOrMore>
-                <choice>
-                    <ref name="BIBCITS"/>
-                    <ref name="KEYWORDCLASS"/>
-                    <ref name="P"/>
-                    <ref name="PARCHIVALLOCATION"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="RRESPONSES"/>
-                    <ref name="SCHOLARNOTE"/>
-                    <ref name="TPLOT"/>
-                    <ref name="TSETTINGDATE"/>
                 </choice>
             </oneOrMore>
         </element>
