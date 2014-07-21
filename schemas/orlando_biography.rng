@@ -7,7 +7,7 @@
     *
     * Purpose: RELAX NG schema to model Orlando biography documents
     *
-    * Description: A corpus of 1,780 Orlando biography documents was used to generate a RELAX NG schema that modelled the corpus of documents.
+    * Description: A corpus of 1,780 Orlando biography documents was used to generate a RELAX NG schema that modeled the corpus of documents.
     * Modifications included the following:
     *     - default values for some attributes were defined;
     *     - enumerated lists of values for some attributes were defined; and
@@ -33,6 +33,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: July 2014: Made the following changes:
+  - Added new element of GENDER, with a new attribute of GENDER, to the CULTURALFORMATION element; GENDER has the same enumerated list of values as
+    the attribute SEX, with the addition of UNGENDERED and UNKNOWN; can have multiple values.
 * MRB: June 2014: Addressed GitHub issues associated with the Orlando biography schema:
   - Made the attributes CHRONCOLUMN, RELEVANCE, and RESP required attributes of the element CHRONSTRUCT.
   - Made the element QUOTE an optional repeatable child element of the element PLACE.
@@ -955,6 +958,7 @@
                     <ref name="EMPLOYER"/>
                     <ref name="ETHNICITY"/>
                     <ref name="FOREIGN"/>
+                    <ref name="GENDER"/>
                     <ref name="GEOGHERITAGE"/>
                     <ref name="INDEXED"/>
                     <ref name="INSTRUCTOR"/>
@@ -1126,6 +1130,7 @@
                                 <ref name="EMPH"/>
                                 <ref name="EMPLOYER"/>
                                 <ref name="FOREIGN"/>
+                                <ref name="GENDER"/>
                                 <ref name="INSTRUCTOR"/>
                                 <ref name="JOB"/>
                                 <ref name="KEYWORDCLASS"/>
@@ -2343,6 +2348,7 @@
                     <ref name="EMPH"/>
                     <ref name="EMPLOYER"/>
                     <ref name="FOREIGN"/>
+                    <ref name="GENDER"/>
                     <ref name="JOB"/>
                     <ref name="NAME"/>
                     <ref name="NATIONALITY"/>
@@ -3722,9 +3728,82 @@
                     <ref name="BIBCITS"/>
                     <ref name="DENOMINATION"/>
                     <ref name="FOREIGN"/>
+                    <ref name="GENDER"/>
                     <ref name="NAME"/>
                     <ref name="QUOTE"/>
                     <ref name="SEXUALIDENTITY"/>
+                    <ref name="SOCALLED"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="GENDER">
+        <element name="GENDER">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The gender element is designed to record gender-related
+                information.  See the gender attribute which is attached to the gender element for more detailed information.</a:documentation>
+            <optional>
+                <attribute name="GENDER">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is designed to capture the gender of the subject
+                        it is being applied to.  Gender is a historically constructed and linguistically complex category that can shift over the course of a person's
+                        lifetime, in which case multiple values can be applied to this element. The values associated with this element are meant to capture the most
+                        common forms of gender identity; other terms may be provided in the prose content of the element.  The values are the following: female,
+                        male, transgendered, transgendered male-to-female, transgendered female-to-male, undefined, ungendered, or unknown.</a:documentation>
+                    <list>
+                        <oneOrMore>
+                            <choice>
+                                <value>FEMALE</value>
+                                <value>MALE</value>
+                                <value>TRANSGENDERED</value>
+                                <value>TRANSGENDERED FEMALE-TO-MALE</value>
+                                <value>TRANSGENDERED MALE-TO-FEMALE</value>
+                                <value>UNDEFINED</value>
+                                <value>UNGENDERED</value>
+                                <value>UNKNOWN</value>
+                                <data type="string"/>
+                                <empty/>
+                            </choice>
+                        </oneOrMore>
+                    </list>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CURRENTALTERNATIVETERM">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute allows you to capture changes in
+                        terminology over time. The older name in your prose may not be familiar to your reader nor helpful for indexing purposes and
+                        therefore needs explanation.</a:documentation>
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                        regularization) contains a reading which has been regularized or normalized in some
+                        sense.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="SELF-DEFINED" a:defaultValue="SELFUNKNOWN">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Self-defined is an attribute attached to all identity
+                        categories within biography. Its purpose is to distinguish between people who place themselves within an identity category (i.e.,
+                        &quot;Jeannette Winterson identifies as lesbian&quot;) and those whom we place in that category though they themselves did not
+                        (i.e., &quot;While she denied being a lesbian, she maintained relationships with women throughout her life&quot;). This attribute
+                        acknowledges the importance of personal, political and historical placements of one&apos;s own subject position; it assumes that
+                        identities are not simply labels we assign to other people but shifting categories which we both place ourselves within, and, in
+                        which history places us.</a:documentation>
+                    <choice>
+                        <value>SELFYES</value>
+                        <value>SELFNO</value>
+                        <value>SELFUNKNOWN</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="NAME"/>
+                    <ref name="QUOTE"/>
                     <ref name="SOCALLED"/>
                 </choice>
             </oneOrMore>
