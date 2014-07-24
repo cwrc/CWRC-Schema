@@ -102,3 +102,24 @@ cw:speculative rdf:type owl:NamedIndividual, cw:Certainty ;
                skos:prefLabel "Speculative certainty"@en ;
                
                skos:inScheme cw:certaintyScheme .
+               
+### http://cwrc.ca/ns/cw#citing ###
+
+cwrc:citing a oa:Motivation ;
+
+    			skos:inScheme cwrc:oaMotivationScheme ;
+    
+    			skos:broader oa:identifying ;
+    
+    			skos:prefLabel “Citing a publication"@en .
+
+
+###  http://cwrc.ca/ns/cw#oaMotivationScheme
+
+cwrc:oaMotivationScheme rdf:type owl:NamedIndividual ,
+    	
+    			skos:ConceptScheme ;
+    
+    			rdfs:label “oaMotivationScheme"@en ;
+    
+    			rdfs:comment "The concept scheme for CWRC annotation motivations that extend Open Annotation Motivations"@en .
