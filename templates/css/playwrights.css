@@ -5,7 +5,7 @@
     font-family:sans-serif;
     background-color:#fdf8e5
 }
-:empty{
+*:empty{
     display:none
 }
 RESEARCHNOTE{
@@ -52,56 +52,79 @@ DOCAUTHOR{
 PUBLICATIONSTMT,
 SOURCEDESC,
 REVISIONDESC,
-RESPONSIBILITY {display:none}
+RESPONSIBILITY{
+    display:none
+}
 
 /*High-level body styling*/
 
-
-DIV0,
-DIV1,
-DIV2,
-DIV3,
-HEADING,
-P{
-    display:block
-}
+ENTRY {display:block; margin-left:3%}
 
 
-/*Folds (Oxygen only)*/
-DIV1{
-    -oxy-foldable:true;
-    -oxy-folded:true;
-    -oxy-not-foldable-child:HEADING}
 
-DIV2{
-    -oxy-foldable:true;
-    -oxy-folded:true;
-    -oxy-not-foldable-child:HEADING}
-/*End folds*/
 
-DIV2{
-    margin-left:3%
-}
-DIV3{
-    margin-left:inherit
-}
-
-HEADING{
+HEADING{display:block;
     font-weight:bold;
-    padding-top:1em;
     color:brown
 }
 
-DIV0>HEADING{
+HEADING[SUBTYPE = "1"]{
     font-size:xx-large;
-    content:url(mary-baldridge.jpg)
+    text-align:center;
 }
-DIV1 HEADING{
+
+HEADING[SUBTYPE = "2"]{
     font-size:x-large;
+    margin-left:4%; padding-bottom:1%; margin-bottom:1%; border-bottom:solid;
+    padding-top:2%;
+    border-color:black
 }
-DIV2 HEADING{
-    font-size:large
+
+HEADING[SUBTYPE = "3"]{
+    font-size:large;
+    padding-left:4%;
+    padding-top:1%;
+    padding-bottom:1%
 }
+
+HEADING[SUBTYPE = "4"]{
+    font-size:medium;
+    padding-left:6%
+}
+
+
+
+
+
+
+/*Folds (Oxygen only)*/
+
+/*BIRTH,
+RESIDENCEANDMOBILITY,
+PRODUCTION,
+CULTURALFORMATION,
+FAMILY,
+EDUCATTION, 
+OTHERLIFEEVENT,
+OCCUPATION,
+TEXTSCOPE
+{
+    -oxy-foldable:true;
+    -oxy-folded:true;
+    -oxy-not-foldable-child:HEADING}*/
+
+/*PERSONNAME {
+    -oxy-foldable:true;
+    -oxy-folded:true;
+    -oxy-not-foldable-child:BIRTHNAME}*/
+
+/*End folds*/
+
+
+
+
+
+
 
 
 /*Mid-level body styling*/
@@ -109,75 +132,80 @@ DIV2 HEADING{
 BIRTHNAME,
 NICKNAME,
 BIRTH,
-NATIONALHERITAGE,
-CULTURALFORMATION,
-SEXUALITY,
-NATIONALITY,
+RESIDENCEANDMOBILITY P,
+PLITERARYMOVEMENTS,
+PRODUCTION P,
+SEXUALIDENTITY,
 NATIONALHERITAGE,
 DENOMINATION,
-FAMILY,
-INTIMATERELATIONSHIPS,
-CHILDREN,
-CHRONSTRUCT{
-    display:block;
-    padding:0%;
-    margin:0%
-}
-DIV2 > SHORTPROSE > P{
-    display:block;
-    margin-left:3%
-}
-EDUCATION{
-    display:block
-}
-
-SHORTPROSE{
-    display:block
-}
-
-
-
-LG{
-    display:block;
-    margin-left:3%
-}
-
-TITLE{
-    display:list-item;
-    font-size:larger;
-    font-style:italic;
-}
-
-CHRONSTRUCT DATERANGE{display:inline-block}
-CHRONSTRUCT DATE{display:inline-block}
-CHRONPROSE{display:inline-block;}
-
+CLASSISSUE P,
+MARRIAGE,
+FAMILY P,
+MARRIAGE,
+P CHILDREN,
+RSELFDESCRIPTION,
+OCCUPATION P{display:block; margin-left:4%; padding-left:0%}
 
 /*field labels:*/
-BIRTH > CHRONSTRUCT > DATE:before{
-    content:"Birth Date: ";
-    color:red
+
+GIVEN:before{
+    content:"First Name: ";
+    font-weight:bold;
+    font-size:smaller
 }
-BIRTH > CHRONSTRUCT > DATE:before{
-    content:"Date of Birth: ";
-    color:olive
+GIVEN + GIVEN:before{
+    content:"Middle Name: ";
+    font-weight:bold;
+    font-size:smaller
 }
-BIRTH > CHRONSTRUCT > CHRONPROSE > PLACE:before{content:"Place of Birth: ";
-color:olive}
- 
-PLACE:nth-of-type(2){content:"Raised: "; color:olive}
- 
-PLACE:nth-of-type(2){content:"Current Residence: : "; color:olive}
- 
-CULTURALFORMATION:before{content:"Gender: ";
-color:olive}
- 
-SEXUALITY:before{content:"Sexual Orientation: ";
-color:olive}
- 
-NATIONALITY:before{content:"Nationality: ";
-color:olive}
- 
+SURNAME:before{
+    content:"Last name at birth: ";
+    font-weight:bold;
+    font-size:smaller
+}
+NICKNAME:before{
+    content:"Nickname:";
+    font-weight:bold;
+    font-size:smaller
+}
+
+GENDER:before{
+    content:"Gender: ";
+    font-weight:bold;
+    font-size:smaller
+}
+
+DENOMINATION:before{
+    content:"Religious Affiliation: ";
+    font-weight:bold;
+    font-size:smaller
+}
+
+
+
+EDUCATION CHRONSTRUCT,
+OTHERLIFEEVENT CHRONSTRUCT,
+OCCUPATION CHRONSTRUCT,
+RECEPTION CHRONSTRUCT{display:list-item;
+margin-left:8%; padding-top:1%; padding-bottom:1%}
+
+
+CHRONSTRUCT DATE,
+CHRONSTRUCT DATERANGE {padding-right:3%}
+
+OTHERLIFEEVENT CHRONSTRUCT DATE,
+OTHERLIFEEVENT CHRONSTRUCT DATERANGE {padding-right:0%}
+
+OCCUPATION CHRONSTRUCT CHRONPROSE ORGNAME {padding-left:3%}
+
+TEXTUALFEATURES P{display:block; margin-left:4%}
+
+HEADING TITLE{DISPLAY:block; padding-top:1%;padding-bottom:1%; color:brown}
+
+TEXTUALFEATURES HEADING[SUBTYPE="4"],
+TEXTSCOPE PRODUCTION HEADING[SUBTYPE="4"],
+TEXTSCOPE RECEPTION HEADING[SUBTYPE="4"]
+{display:block;color:black;font-weight:bold; padding-left:4%}
 NATIONALHERITAGE:before{content:"National / Ethnic Background: ";
 color:olive}
 
