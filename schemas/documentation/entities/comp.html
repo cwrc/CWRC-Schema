@@ -23,7 +23,7 @@
 				'properties_entityId', 
 				'properties_accessCondition', 
 				'properties_a', 
-				'properties_identity-element_identity', 
+				'properties_identity', 
 				'properties_preferredForm', 
 				'properties_namePart', 
 				'properties_displayLabel', 
@@ -34,16 +34,13 @@
 				'properties_picklist', 
 				'properties_sameAs', 
 				'properties_personDescription-element_description', 
-				'properties_descriptiveNotes', 
-				'properties_note', 
 				'properties_existDates', 
 				'properties_dateSingle', 
 				'properties_standardDate', 
 				'properties_textDate', 
 				'properties_dateType', 
-				'properties_dateRange', 
-				'properties_fromDate', 
-				'properties_toDate', 
+				'properties_note', 
+				'properties_factuality', 
 				'properties_genders', 
 				'properties_gender', 
 				'properties_occupations', 
@@ -55,21 +52,16 @@
 				'properties_interest', 
 				'properties_relatedResources', 
 				'properties_resource', 
-				'properties_factuality', 
-				'properties_relations', 
-				'properties_relation', 
-				'properties_personRef', 
-				'properties_name', 
-				'properties_uri', 
-				'properties_organizationRef', 
-				'properties_placeRef', 
+				'properties_descriptiveNotes', 
 				'properties_organization', 
 				'properties_orgRecordInfo-element_recordInfo', 
-				'properties_orgDescription-element_description', 
 				'properties_orgTypes', 
 				'properties_orgType', 
+				'properties_orgDescription-element_description', 
 				'properties_place', 
 				'properties_placeRecordInfo-element_recordInfo', 
+				'properties_placeTypes', 
+				'properties_placeType', 
 				'properties_placeDescription-element_description', 
 				'properties_latitude', 
 				'properties_longitude', 
@@ -81,30 +73,32 @@
 				'properties_elevation', 
 				'properties_averageElevation', 
 				'properties_timeZoneOffset', 
-				'properties_recordInfo-element_recordInfo', 
-				'properties_titleIdentity-element_identity', 
-				'properties_level', 
 				'properties_p', 
 				'properties_link', 
-				'properties_id', 
 				'properties_recordIdentifier_source', 
 				'properties_href-attribute_href', 
 				'properties_a_rel', 
 				'properties_accessCondition_type', 
 				'properties_namePart_partType', 
 				'properties_sameAs_cert', 
+				'properties_standardDate_qualifier', 
 				'properties_lang', 
-				'properties_NO_NAMESPACE_date-pattern_cert', 
+				'properties_date-pattern_cert', 
 				'properties_gender_cert', 
 				'properties_term_cert', 
-				'properties_relation_type', 
 				'properties_url-attribute_url', 
-				'properties_type-attribute_type', 
 				'properties_source-attribute_source', 
 				'properties_partType-attribute_partType', 
 				'properties_cert-attribute_cert', 
+				'properties_qualifer-attribute_qualifier', 
 				'properties_rel-attribute_rel');
-var facetsBoxes= new Array('facets_accessCondition_type');
+var facetsBoxes= new Array('facets_personType', 
+				'facets_variantType', 
+				'facets_dateType', 
+				'facets_placeType', 
+				'facets_accessCondition_type', 
+				'facets_standardDate_qualifier', 
+				'facets_qualifer-attribute_qualifier');
 var usedByBoxes= new Array('usedBy_entity', 
 				'usedBy_person', 
 				'usedBy_personTypes', 
@@ -118,6 +112,7 @@ var usedByBoxes= new Array('usedBy_entity',
 				'usedBy_entityId', 
 				'usedBy_accessCondition', 
 				'usedBy_a', 
+				'usedBy_identity', 
 				'usedBy_preferredForm', 
 				'usedBy_namePart', 
 				'usedBy_displayLabel', 
@@ -127,16 +122,13 @@ var usedByBoxes= new Array('usedBy_entity',
 				'usedBy_authorizedBy', 
 				'usedBy_picklist', 
 				'usedBy_sameAs', 
-				'usedBy_descriptiveNotes', 
-				'usedBy_note', 
 				'usedBy_existDates', 
 				'usedBy_dateSingle', 
 				'usedBy_standardDate', 
 				'usedBy_textDate', 
 				'usedBy_dateType', 
-				'usedBy_dateRange', 
-				'usedBy_fromDate', 
-				'usedBy_toDate', 
+				'usedBy_note', 
+				'usedBy_factuality', 
 				'usedBy_genders', 
 				'usedBy_gender', 
 				'usedBy_occupations', 
@@ -148,18 +140,13 @@ var usedByBoxes= new Array('usedBy_entity',
 				'usedBy_interest', 
 				'usedBy_relatedResources', 
 				'usedBy_resource', 
-				'usedBy_factuality', 
-				'usedBy_relations', 
-				'usedBy_relation', 
-				'usedBy_personRef', 
-				'usedBy_name', 
-				'usedBy_uri', 
-				'usedBy_organizationRef', 
-				'usedBy_placeRef', 
+				'usedBy_descriptiveNotes', 
 				'usedBy_organization', 
 				'usedBy_orgTypes', 
 				'usedBy_orgType', 
 				'usedBy_place', 
+				'usedBy_placeTypes', 
+				'usedBy_placeType', 
 				'usedBy_latitude', 
 				'usedBy_longitude', 
 				'usedBy_featureClass', 
@@ -170,35 +157,31 @@ var usedByBoxes= new Array('usedBy_entity',
 				'usedBy_elevation', 
 				'usedBy_averageElevation', 
 				'usedBy_timeZoneOffset', 
-				'usedBy_level', 
-				'usedBy_id', 
+				'usedBy_date-pattern', 
 				'usedBy_recordIdentifier_source', 
 				'usedBy_href-attribute_href', 
 				'usedBy_a_rel', 
 				'usedBy_accessCondition_type', 
 				'usedBy_namePart_partType', 
 				'usedBy_sameAs_cert', 
+				'usedBy_standardDate_qualifier', 
 				'usedBy_lang', 
-				'usedBy_NO_NAMESPACE_date-pattern_cert', 
+				'usedBy_date-pattern_cert', 
 				'usedBy_gender_cert', 
 				'usedBy_term_cert', 
-				'usedBy_relation_type', 
 				'usedBy_url-attribute_url', 
-				'usedBy_type-attribute_type', 
 				'usedBy_source-attribute_source', 
 				'usedBy_partType-attribute_partType', 
 				'usedBy_cert-attribute_cert', 
+				'usedBy_qualifer-attribute_qualifier', 
 				'usedBy_rel-attribute_rel', 
 				'usedBy_personRecordInfo-element', 
-				'usedBy_identity-element', 
 				'usedBy_personDescription-element', 
-				'usedBy_date-pattern', 
 				'usedBy_orgRecordInfo-element', 
 				'usedBy_orgDescription-element', 
 				'usedBy_placeRecordInfo-element', 
 				'usedBy_placeDescription-element', 
-				'usedBy_href-attribute', 
-				'usedBy_NO_NAMESPACE_date-pattern');
+				'usedBy_href-attribute');
 var sourceBoxes= new Array('source_cwrc', 
 				'source_entity', 
 				'source_person', 
@@ -214,7 +197,7 @@ var sourceBoxes= new Array('source_cwrc',
 				'source_entityId', 
 				'source_accessCondition', 
 				'source_a', 
-				'source_identity-element_identity', 
+				'source_identity', 
 				'source_preferredForm', 
 				'source_namePart', 
 				'source_displayLabel', 
@@ -225,16 +208,13 @@ var sourceBoxes= new Array('source_cwrc',
 				'source_picklist', 
 				'source_sameAs', 
 				'source_personDescription-element_description', 
-				'source_descriptiveNotes', 
-				'source_note', 
 				'source_existDates', 
 				'source_dateSingle', 
 				'source_standardDate', 
 				'source_textDate', 
 				'source_dateType', 
-				'source_dateRange', 
-				'source_fromDate', 
-				'source_toDate', 
+				'source_note', 
+				'source_factuality', 
 				'source_genders', 
 				'source_gender', 
 				'source_occupations', 
@@ -246,21 +226,16 @@ var sourceBoxes= new Array('source_cwrc',
 				'source_interest', 
 				'source_relatedResources', 
 				'source_resource', 
-				'source_factuality', 
-				'source_relations', 
-				'source_relation', 
-				'source_personRef', 
-				'source_name', 
-				'source_uri', 
-				'source_organizationRef', 
-				'source_placeRef', 
+				'source_descriptiveNotes', 
 				'source_organization', 
 				'source_orgRecordInfo-element_recordInfo', 
-				'source_orgDescription-element_description', 
 				'source_orgTypes', 
 				'source_orgType', 
+				'source_orgDescription-element_description', 
 				'source_place', 
 				'source_placeRecordInfo-element_recordInfo', 
+				'source_placeTypes', 
+				'source_placeType', 
 				'source_placeDescription-element_description', 
 				'source_latitude', 
 				'source_longitude', 
@@ -272,47 +247,38 @@ var sourceBoxes= new Array('source_cwrc',
 				'source_elevation', 
 				'source_averageElevation', 
 				'source_timeZoneOffset', 
-				'source_recordInfo-element_recordInfo', 
-				'source_titleIdentity-element_identity', 
-				'source_level', 
 				'source_p', 
 				'source_link', 
-				'source_id', 
+				'source_date-pattern', 
 				'source_recordIdentifier_source', 
 				'source_href-attribute_href', 
 				'source_a_rel', 
 				'source_accessCondition_type', 
 				'source_namePart_partType', 
 				'source_sameAs_cert', 
+				'source_standardDate_qualifier', 
 				'source_lang', 
-				'source_NO_NAMESPACE_date-pattern_cert', 
+				'source_date-pattern_cert', 
 				'source_gender_cert', 
 				'source_term_cert', 
-				'source_relation_type', 
 				'source_url-attribute_url', 
-				'source_type-attribute_type', 
 				'source_source-attribute_source', 
 				'source_partType-attribute_partType', 
 				'source_cert-attribute_cert', 
+				'source_qualifer-attribute_qualifier', 
 				'source_rel-attribute_rel', 
 				'source_personRecordInfo-element', 
-				'source_identity-element', 
 				'source_personDescription-element', 
-				'source_date-pattern', 
 				'source_orgRecordInfo-element', 
 				'source_orgDescription-element', 
 				'source_placeRecordInfo-element', 
 				'source_placeDescription-element', 
-				'source_recordInfo-element', 
-				'source_titleIdentity-element', 
 				'source_href-attribute', 
-				'source_NO_NAMESPACE_date-pattern', 
 				'source_url-attribute', 
-				'source_type-attribute', 
 				'source_source-attribute', 
 				'source_partType-attribute', 
 				'source_cert-attribute', 
-				'source_id-attribute', 
+				'source_qualifer-attribute', 
 				'source_rel-attribute', 
 				'source_lang-attribute');
 var instanceBoxes= new Array('instance_cwrc', 
@@ -322,18 +288,14 @@ var instanceBoxes= new Array('instance_cwrc',
 				'instance_personTypes', 
 				'instance_originInfo', 
 				'instance_accessCondition', 
-				'instance_identity-element_identity', 
+				'instance_identity', 
 				'instance_preferredForm', 
 				'instance_variantForms', 
 				'instance_variant', 
 				'instance_authorizedBy', 
 				'instance_personDescription-element_description', 
-				'instance_descriptiveNotes', 
 				'instance_existDates', 
 				'instance_dateSingle', 
-				'instance_dateRange', 
-				'instance_fromDate', 
-				'instance_toDate', 
 				'instance_genders', 
 				'instance_occupations', 
 				'instance_occupation', 
@@ -342,20 +304,15 @@ var instanceBoxes= new Array('instance_cwrc',
 				'instance_researchInterests', 
 				'instance_interest', 
 				'instance_relatedResources', 
-				'instance_relations', 
-				'instance_relation', 
-				'instance_personRef', 
-				'instance_organizationRef', 
-				'instance_placeRef', 
+				'instance_descriptiveNotes', 
 				'instance_organization', 
 				'instance_orgRecordInfo-element_recordInfo', 
-				'instance_orgDescription-element_description', 
 				'instance_orgTypes', 
+				'instance_orgDescription-element_description', 
 				'instance_place', 
 				'instance_placeRecordInfo-element_recordInfo', 
-				'instance_placeDescription-element_description', 
-				'instance_recordInfo-element_recordInfo', 
-				'instance_titleIdentity-element_identity');
+				'instance_placeTypes', 
+				'instance_placeDescription-element_description');
 var diagramBoxes= new Array('diagram_cwrc', 
 				'diagram_entity', 
 				'diagram_person', 
@@ -371,7 +328,7 @@ var diagramBoxes= new Array('diagram_cwrc',
 				'diagram_entityId', 
 				'diagram_accessCondition', 
 				'diagram_a', 
-				'diagram_identity-element_identity', 
+				'diagram_identity', 
 				'diagram_preferredForm', 
 				'diagram_namePart', 
 				'diagram_displayLabel', 
@@ -382,16 +339,13 @@ var diagramBoxes= new Array('diagram_cwrc',
 				'diagram_picklist', 
 				'diagram_sameAs', 
 				'diagram_personDescription-element_description', 
-				'diagram_descriptiveNotes', 
-				'diagram_note', 
 				'diagram_existDates', 
 				'diagram_dateSingle', 
 				'diagram_standardDate', 
 				'diagram_textDate', 
 				'diagram_dateType', 
-				'diagram_dateRange', 
-				'diagram_fromDate', 
-				'diagram_toDate', 
+				'diagram_note', 
+				'diagram_factuality', 
 				'diagram_genders', 
 				'diagram_gender', 
 				'diagram_occupations', 
@@ -403,21 +357,16 @@ var diagramBoxes= new Array('diagram_cwrc',
 				'diagram_interest', 
 				'diagram_relatedResources', 
 				'diagram_resource', 
-				'diagram_factuality', 
-				'diagram_relations', 
-				'diagram_relation', 
-				'diagram_personRef', 
-				'diagram_name', 
-				'diagram_uri', 
-				'diagram_organizationRef', 
-				'diagram_placeRef', 
+				'diagram_descriptiveNotes', 
 				'diagram_organization', 
 				'diagram_orgRecordInfo-element_recordInfo', 
-				'diagram_orgDescription-element_description', 
 				'diagram_orgTypes', 
 				'diagram_orgType', 
+				'diagram_orgDescription-element_description', 
 				'diagram_place', 
 				'diagram_placeRecordInfo-element_recordInfo', 
+				'diagram_placeTypes', 
+				'diagram_placeType', 
 				'diagram_placeDescription-element_description', 
 				'diagram_latitude', 
 				'diagram_longitude', 
@@ -429,29 +378,21 @@ var diagramBoxes= new Array('diagram_cwrc',
 				'diagram_elevation', 
 				'diagram_averageElevation', 
 				'diagram_timeZoneOffset', 
-				'diagram_recordInfo-element_recordInfo', 
-				'diagram_titleIdentity-element_identity', 
-				'diagram_level', 
 				'diagram_p', 
 				'diagram_link', 
-				'diagram_personRecordInfo-element', 
-				'diagram_identity-element', 
-				'diagram_personDescription-element', 
 				'diagram_date-pattern', 
+				'diagram_personRecordInfo-element', 
+				'diagram_personDescription-element', 
 				'diagram_orgRecordInfo-element', 
 				'diagram_orgDescription-element', 
 				'diagram_placeRecordInfo-element', 
 				'diagram_placeDescription-element', 
-				'diagram_recordInfo-element', 
-				'diagram_titleIdentity-element', 
 				'diagram_href-attribute', 
-				'diagram_NO_NAMESPACE_date-pattern', 
 				'diagram_url-attribute', 
-				'diagram_type-attribute', 
 				'diagram_source-attribute', 
 				'diagram_partType-attribute', 
 				'diagram_cert-attribute', 
-				'diagram_id-attribute', 
+				'diagram_qualifer-attribute', 
 				'diagram_rel-attribute', 
 				'diagram_lang-attribute');
 var annotationBoxes= new Array('annotations_cwrc', 
@@ -468,7 +409,7 @@ var annotationBoxes= new Array('annotations_cwrc',
 				'annotations_recordOrigin', 
 				'annotations_entityId', 
 				'annotations_accessCondition', 
-				'annotations_identity-element_identity', 
+				'annotations_identity', 
 				'annotations_preferredForm', 
 				'annotations_namePart', 
 				'annotations_displayLabel', 
@@ -476,16 +417,13 @@ var annotationBoxes= new Array('annotations_cwrc',
 				'annotations_authorizedBy', 
 				'annotations_sameAs', 
 				'annotations_personDescription-element_description', 
-				'annotations_descriptiveNotes', 
-				'annotations_note', 
 				'annotations_existDates', 
 				'annotations_dateSingle', 
 				'annotations_standardDate', 
 				'annotations_textDate', 
 				'annotations_dateType', 
-				'annotations_dateRange', 
-				'annotations_fromDate', 
-				'annotations_toDate', 
+				'annotations_note', 
+				'annotations_factuality', 
 				'annotations_genders', 
 				'annotations_gender', 
 				'annotations_occupations', 
@@ -496,19 +434,16 @@ var annotationBoxes= new Array('annotations_cwrc',
 				'annotations_researchInterests', 
 				'annotations_interest', 
 				'annotations_resource', 
-				'annotations_factuality', 
-				'annotations_relations', 
-				'annotations_relation', 
-				'annotations_personRef', 
-				'annotations_organizationRef', 
-				'annotations_placeRef', 
+				'annotations_descriptiveNotes', 
 				'annotations_organization', 
 				'annotations_orgRecordInfo-element_recordInfo', 
-				'annotations_orgDescription-element_description', 
 				'annotations_orgTypes', 
 				'annotations_orgType', 
+				'annotations_orgDescription-element_description', 
 				'annotations_place', 
 				'annotations_placeRecordInfo-element_recordInfo', 
+				'annotations_placeTypes', 
+				'annotations_placeType', 
 				'annotations_placeDescription-element_description', 
 				'annotations_latitude', 
 				'annotations_longitude', 
@@ -520,67 +455,34 @@ var annotationBoxes= new Array('annotations_cwrc',
 				'annotations_elevation', 
 				'annotations_averageElevation', 
 				'annotations_timeZoneOffset', 
-				'annotations_recordInfo-element_recordInfo', 
-				'annotations_titleIdentity-element_identity', 
-				'annotations_level', 
 				'annotations_recordIdentifier_source', 
 				'annotations_namePart_partType', 
 				'annotations_sameAs_cert', 
-				'annotations_NO_NAMESPACE_date-pattern_cert', 
+				'annotations_date-pattern_cert', 
 				'annotations_gender_cert', 
 				'annotations_term_cert', 
-				'annotations_relation_type', 
-				'annotations_type-attribute_type', 
 				'annotations_source-attribute_source', 
 				'annotations_partType-attribute_partType', 
 				'annotations_cert-attribute_cert', 
-				'annotations_url-attribute');
-var attributesBoxes= new Array('attributes_cwrc', 
-				'attributes_person', 
-				'attributes_personRecordInfo-element_recordInfo', 
-				'attributes_personTypes', 
-				'attributes_projectId', 
-				'attributes_recordIdentifier', 
-				'attributes_entityId', 
+				'annotations_url-attribute', 
+				'annotations_qualifer-attribute');
+var attributesBoxes= new Array('attributes_recordIdentifier', 
 				'attributes_accessCondition', 
 				'attributes_a', 
-				'attributes_identity-element_identity', 
-				'attributes_preferredForm', 
 				'attributes_namePart', 
-				'attributes_variantType', 
 				'attributes_sameAs', 
-				'attributes_personDescription-element_description', 
-				'attributes_descriptiveNotes', 
-				'attributes_note', 
-				'attributes_existDates', 
 				'attributes_dateSingle', 
-				'attributes_dateRange', 
-				'attributes_fromDate', 
-				'attributes_toDate', 
+				'attributes_standardDate', 
+				'attributes_note', 
 				'attributes_gender', 
 				'attributes_term', 
-				'attributes_relations', 
-				'attributes_relation', 
-				'attributes_organization', 
-				'attributes_orgRecordInfo-element_recordInfo', 
-				'attributes_orgDescription-element_description', 
-				'attributes_orgTypes', 
-				'attributes_orgType', 
-				'attributes_place', 
-				'attributes_placeRecordInfo-element_recordInfo', 
-				'attributes_placeDescription-element_description', 
-				'attributes_recordInfo-element_recordInfo', 
-				'attributes_titleIdentity-element_identity', 
-				'attributes_level', 
-				'attributes_link', 
+				'attributes_date-pattern', 
 				'attributes_href-attribute', 
-				'attributes_NO_NAMESPACE_date-pattern', 
 				'attributes_url-attribute', 
-				'attributes_type-attribute', 
 				'attributes_source-attribute', 
 				'attributes_partType-attribute', 
 				'attributes_cert-attribute', 
-				'attributes_id-attribute', 
+				'attributes_qualifer-attribute', 
 				'attributes_rel-attribute', 
 				'attributes_lang-attribute');
 var modelBoxes= new Array('model_cwrc', 
@@ -590,19 +492,15 @@ var modelBoxes= new Array('model_cwrc',
 				'model_personTypes', 
 				'model_originInfo', 
 				'model_accessCondition', 
-				'model_identity-element_identity', 
+				'model_identity', 
 				'model_preferredForm', 
 				'model_namePart', 
 				'model_variantForms', 
 				'model_variant', 
 				'model_authorizedBy', 
 				'model_personDescription-element_description', 
-				'model_descriptiveNotes', 
 				'model_existDates', 
 				'model_dateSingle', 
-				'model_dateRange', 
-				'model_fromDate', 
-				'model_toDate', 
 				'model_genders', 
 				'model_occupations', 
 				'model_occupation', 
@@ -612,30 +510,22 @@ var modelBoxes= new Array('model_cwrc',
 				'model_researchInterests', 
 				'model_interest', 
 				'model_relatedResources', 
-				'model_relations', 
-				'model_relation', 
-				'model_personRef', 
-				'model_organizationRef', 
-				'model_placeRef', 
+				'model_descriptiveNotes', 
 				'model_organization', 
 				'model_orgRecordInfo-element_recordInfo', 
-				'model_orgDescription-element_description', 
 				'model_orgTypes', 
+				'model_orgDescription-element_description', 
 				'model_place', 
 				'model_placeRecordInfo-element_recordInfo', 
+				'model_placeTypes', 
 				'model_placeDescription-element_description', 
-				'model_recordInfo-element_recordInfo', 
-				'model_titleIdentity-element_identity', 
-				'model_personRecordInfo-element', 
-				'model_identity-element', 
-				'model_personDescription-element', 
 				'model_date-pattern', 
+				'model_personRecordInfo-element', 
+				'model_personDescription-element', 
 				'model_orgRecordInfo-element', 
 				'model_orgDescription-element', 
 				'model_placeRecordInfo-element', 
-				'model_placeDescription-element', 
-				'model_recordInfo-element', 
-				'model_titleIdentity-element');
+				'model_placeDescription-element');
 
       
         var button_prefix = 'button_';
@@ -912,7 +802,6 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#averageElevation" target="_self" title="No namespace">averageElevation</a></b></div>
                                                 <div><b><a href="index.html#countryName" target="_self" title="No namespace">countryName</a></b></div>
                                                 <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
-                                                <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
                                                 <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
                                                 <div><b><a href="index.html#dateType" target="_self" title="No namespace">dateType</a></b></div>
                                                 <div><b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b></div>
@@ -925,15 +814,13 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                                 <div><b><a href="index.html#featureCodeLabel" target="_self" title="No namespace">featureCodeLabel</a></b></div>
                                                 <div><b><a href="index.html#firstAdministrativeDivision" target="_self" title="No namespace">firstAdministrativeDivision</a></b></div>
-                                                <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
                                                 <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
                                                 <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
+                                                <div><b><a href="index.html#identity" target="_self" title="No namespace">identity</a></b></div>
                                                 <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
                                                 <div><b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b></div>
-                                                <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                                 <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
                                                 <div><b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b></div>
-                                                <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                                 <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                                 <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
                                                 <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
@@ -941,16 +828,15 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#orgType" target="_self" title="No namespace">orgType</a></b></div>
                                                 <div><b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b></div>
                                                 <div><b><a href="index.html#organization" target="_self" title="No namespace">organization</a></b></div>
-                                                <div><b><a href="index.html#organizationRef" target="_self" title="No namespace">organizationRef</a></b></div>
                                                 <div><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></div>
                                                 <div><b><a href="index.html#p" target="_self" title="No namespace">p</a></b></div>
                                                 <div><b><a href="index.html#person" target="_self" title="No namespace">person</a></b></div>
-                                                <div><b><a href="index.html#personRef" target="_self" title="No namespace">personRef</a></b></div>
                                                 <div><b><a href="index.html#personType" target="_self" title="No namespace">personType</a></b></div>
                                                 <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
                                                 <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
                                                 <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
-                                                <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
+                                                <div><b><a href="index.html#placeType" target="_self" title="No namespace">placeType</a></b></div>
+                                                <div><b><a href="index.html#placeTypes" target="_self" title="No namespace">placeTypes</a></b></div>
                                                 <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                                 <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
                                                 <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
@@ -958,8 +844,6 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#recordIdentifier" target="_self" title="No namespace">recordIdentifier</a></b></div>
                                                 <div><b><a href="index.html#recordOrigin" target="_self" title="No namespace">recordOrigin</a></b></div>
                                                 <div><b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b></div>
-                                                <div><b><a href="index.html#relation" target="_self" title="No namespace">relation</a></b></div>
-                                                <div><b><a href="index.html#relations" target="_self" title="No namespace">relations</a></b></div>
                                                 <div><b><a href="index.html#researchInterests" target="_self" title="No namespace">researchInterests</a></b></div>
                                                 <div><b><a href="index.html#resource" target="_self" title="No namespace">resource</a></b></div>
                                                 <div><b><a href="index.html#sameAs" target="_self" title="No namespace">sameAs</a></b></div>
@@ -968,11 +852,47 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
                                                 <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
                                                 <div><b><a href="index.html#timeZoneOffset" target="_self" title="No namespace">timeZoneOffset</a></b></div>
-                                                <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
-                                                <div><b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                                                 <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                                 <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                                 <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Complex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Complex_Type');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Complex Types</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Complex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -1010,16 +930,12 @@ var modelBoxes= new Array('model_cwrc',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Element_Group" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
-                                                <div><b><a href="index.html#identity-element" target="_self" title="No namespace">identity-element</a></b></div>
                                                 <div><b><a href="index.html#orgDescription-element" target="_self" title="No namespace">orgDescription-element</a></b></div>
                                                 <div><b><a href="index.html#orgRecordInfo-element" target="_self" title="No namespace">orgRecordInfo-element</a></b></div>
                                                 <div><b><a href="index.html#personDescription-element" target="_self" title="No namespace">personDescription-element</a></b></div>
                                                 <div><b><a href="index.html#personRecordInfo-element" target="_self" title="No namespace">personRecordInfo-element</a></b></div>
                                                 <div><b><a href="index.html#placeDescription-element" target="_self" title="No namespace">placeDescription-element</a></b></div>
                                                 <div><b><a href="index.html#placeRecordInfo-element" target="_self" title="No namespace">placeRecordInfo-element</a></b></div>
-                                                <div><b><a href="index.html#recordInfo-element" target="_self" title="No namespace">recordInfo-element</a></b></div>
-                                                <div><b><a href="index.html#titleIdentity-element" target="_self" title="No namespace">titleIdentity-element</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -1058,14 +974,12 @@ var modelBoxes= new Array('model_cwrc',
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
-                                                <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
                                                 <div><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b></div>
-                                                <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
                                                 <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
                                                 <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                                <div><b><a href="index.html#qualifer-attribute" target="_self" title="No namespace">qualifer-attribute</a></b></div>
                                                 <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
-                                                <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                                 <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
                                              </div>
                                           </td>
@@ -1110,7 +1024,6 @@ var modelBoxes= new Array('model_cwrc',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace2Attribute" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
                                                 <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
                                              </div>
                                           </td>
@@ -1164,7 +1077,6 @@ var modelBoxes= new Array('model_cwrc',
                                           <div><b><a href="index.html#averageElevation" target="_self" title="No namespace">averageElevation</a></b></div>
                                           <div><b><a href="index.html#countryName" target="_self" title="No namespace">countryName</a></b></div>
                                           <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
-                                          <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
                                           <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
                                           <div><b><a href="index.html#dateType" target="_self" title="No namespace">dateType</a></b></div>
                                           <div><b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b></div>
@@ -1177,15 +1089,13 @@ var modelBoxes= new Array('model_cwrc',
                                           <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                           <div><b><a href="index.html#featureCodeLabel" target="_self" title="No namespace">featureCodeLabel</a></b></div>
                                           <div><b><a href="index.html#firstAdministrativeDivision" target="_self" title="No namespace">firstAdministrativeDivision</a></b></div>
-                                          <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
                                           <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
                                           <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
+                                          <div><b><a href="index.html#identity" target="_self" title="No namespace">identity</a></b></div>
                                           <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
                                           <div><b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b></div>
-                                          <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                           <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
                                           <div><b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b></div>
-                                          <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                           <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                           <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
                                           <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
@@ -1193,16 +1103,15 @@ var modelBoxes= new Array('model_cwrc',
                                           <div><b><a href="index.html#orgType" target="_self" title="No namespace">orgType</a></b></div>
                                           <div><b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b></div>
                                           <div><b><a href="index.html#organization" target="_self" title="No namespace">organization</a></b></div>
-                                          <div><b><a href="index.html#organizationRef" target="_self" title="No namespace">organizationRef</a></b></div>
                                           <div><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></div>
                                           <div><b><a href="index.html#p" target="_self" title="No namespace">p</a></b></div>
                                           <div><b><a href="index.html#person" target="_self" title="No namespace">person</a></b></div>
-                                          <div><b><a href="index.html#personRef" target="_self" title="No namespace">personRef</a></b></div>
                                           <div><b><a href="index.html#personType" target="_self" title="No namespace">personType</a></b></div>
                                           <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
                                           <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
                                           <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
-                                          <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
+                                          <div><b><a href="index.html#placeType" target="_self" title="No namespace">placeType</a></b></div>
+                                          <div><b><a href="index.html#placeTypes" target="_self" title="No namespace">placeTypes</a></b></div>
                                           <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                           <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
                                           <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
@@ -1210,8 +1119,6 @@ var modelBoxes= new Array('model_cwrc',
                                           <div><b><a href="index.html#recordIdentifier" target="_self" title="No namespace">recordIdentifier</a></b></div>
                                           <div><b><a href="index.html#recordOrigin" target="_self" title="No namespace">recordOrigin</a></b></div>
                                           <div><b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b></div>
-                                          <div><b><a href="index.html#relation" target="_self" title="No namespace">relation</a></b></div>
-                                          <div><b><a href="index.html#relations" target="_self" title="No namespace">relations</a></b></div>
                                           <div><b><a href="index.html#researchInterests" target="_self" title="No namespace">researchInterests</a></b></div>
                                           <div><b><a href="index.html#resource" target="_self" title="No namespace">resource</a></b></div>
                                           <div><b><a href="index.html#sameAs" target="_self" title="No namespace">sameAs</a></b></div>
@@ -1220,11 +1127,47 @@ var modelBoxes= new Array('model_cwrc',
                                           <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
                                           <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
                                           <div><b><a href="index.html#timeZoneOffset" target="_self" title="No namespace">timeZoneOffset</a></b></div>
-                                          <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
-                                          <div><b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                                           <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                           <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                           <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Complex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('Complex_Type');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Complex Types</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Complex_Type" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -1262,7 +1205,6 @@ var modelBoxes= new Array('model_cwrc',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Attribute" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
                                           <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
                                        </div>
                                     </td>
@@ -1301,16 +1243,12 @@ var modelBoxes= new Array('model_cwrc',
                                     <td class="componentGroup"></td>
                                     <td class="componentGroup">
                                        <div id="Element_Group" class="componentGroup" style="display:block">
-                                          <div><b><a href="index.html#date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
-                                          <div><b><a href="index.html#identity-element" target="_self" title="No namespace">identity-element</a></b></div>
                                           <div><b><a href="index.html#orgDescription-element" target="_self" title="No namespace">orgDescription-element</a></b></div>
                                           <div><b><a href="index.html#orgRecordInfo-element" target="_self" title="No namespace">orgRecordInfo-element</a></b></div>
                                           <div><b><a href="index.html#personDescription-element" target="_self" title="No namespace">personDescription-element</a></b></div>
                                           <div><b><a href="index.html#personRecordInfo-element" target="_self" title="No namespace">personRecordInfo-element</a></b></div>
                                           <div><b><a href="index.html#placeDescription-element" target="_self" title="No namespace">placeDescription-element</a></b></div>
                                           <div><b><a href="index.html#placeRecordInfo-element" target="_self" title="No namespace">placeRecordInfo-element</a></b></div>
-                                          <div><b><a href="index.html#recordInfo-element" target="_self" title="No namespace">recordInfo-element</a></b></div>
-                                          <div><b><a href="index.html#titleIdentity-element" target="_self" title="No namespace">titleIdentity-element</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -1349,14 +1287,12 @@ var modelBoxes= new Array('model_cwrc',
                                     <td class="componentGroup">
                                        <div id="Attribute_Group" class="componentGroup" style="display:block">
                                           <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
-                                          <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
                                           <div><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b></div>
-                                          <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
                                           <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
                                           <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                          <div><b><a href="index.html#qualifer-attribute" target="_self" title="No namespace">qualifer-attribute</a></b></div>
                                           <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                           <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
-                                          <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                           <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
                                        </div>
                                     </td>
@@ -1411,7 +1347,6 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#averageElevation" target="_self" title="No namespace">averageElevation</a></b></div>
                                                 <div><b><a href="index.html#countryName" target="_self" title="No namespace">countryName</a></b></div>
                                                 <div><b><a href="index.html#cwrc" target="_self" title="No namespace">cwrc</a></b></div>
-                                                <div><b><a href="index.html#dateRange" target="_self" title="No namespace">dateRange</a></b></div>
                                                 <div><b><a href="index.html#dateSingle" target="_self" title="No namespace">dateSingle</a></b></div>
                                                 <div><b><a href="index.html#dateType" target="_self" title="No namespace">dateType</a></b></div>
                                                 <div><b><a href="index.html#descriptiveNotes" target="_self" title="No namespace">descriptiveNotes</a></b></div>
@@ -1424,15 +1359,13 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#featureClass" target="_self" title="No namespace">featureClass</a></b></div>
                                                 <div><b><a href="index.html#featureCodeLabel" target="_self" title="No namespace">featureCodeLabel</a></b></div>
                                                 <div><b><a href="index.html#firstAdministrativeDivision" target="_self" title="No namespace">firstAdministrativeDivision</a></b></div>
-                                                <div><b><a href="index.html#fromDate" target="_self" title="No namespace">fromDate</a></b></div>
                                                 <div><b><a href="index.html#gender" target="_self" title="No namespace">gender</a></b></div>
                                                 <div><b><a href="index.html#genders" target="_self" title="No namespace">genders</a></b></div>
+                                                <div><b><a href="index.html#identity" target="_self" title="No namespace">identity</a></b></div>
                                                 <div><b><a href="index.html#interest" target="_self" title="No namespace">interest</a></b></div>
                                                 <div><b><a href="index.html#latitude" target="_self" title="No namespace">latitude</a></b></div>
-                                                <div><b><a href="index.html#level" target="_self" title="No namespace">level</a></b></div>
                                                 <div><b><a href="index.html#link" target="_self" title="No namespace">link</a></b></div>
                                                 <div><b><a href="index.html#longitude" target="_self" title="No namespace">longitude</a></b></div>
-                                                <div><b><a href="index.html#name" target="_self" title="No namespace">name</a></b></div>
                                                 <div><b><a href="index.html#namePart" target="_self" title="No namespace">namePart</a></b></div>
                                                 <div><b><a href="index.html#note" target="_self" title="No namespace">note</a></b></div>
                                                 <div><b><a href="index.html#occupation" target="_self" title="No namespace">occupation</a></b></div>
@@ -1440,16 +1373,15 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#orgType" target="_self" title="No namespace">orgType</a></b></div>
                                                 <div><b><a href="index.html#orgTypes" target="_self" title="No namespace">orgTypes</a></b></div>
                                                 <div><b><a href="index.html#organization" target="_self" title="No namespace">organization</a></b></div>
-                                                <div><b><a href="index.html#organizationRef" target="_self" title="No namespace">organizationRef</a></b></div>
                                                 <div><b><a href="index.html#originInfo" target="_self" title="No namespace">originInfo</a></b></div>
                                                 <div><b><a href="index.html#p" target="_self" title="No namespace">p</a></b></div>
                                                 <div><b><a href="index.html#person" target="_self" title="No namespace">person</a></b></div>
-                                                <div><b><a href="index.html#personRef" target="_self" title="No namespace">personRef</a></b></div>
                                                 <div><b><a href="index.html#personType" target="_self" title="No namespace">personType</a></b></div>
                                                 <div><b><a href="index.html#personTypes" target="_self" title="No namespace">personTypes</a></b></div>
                                                 <div><b><a href="index.html#picklist" target="_self" title="No namespace">picklist</a></b></div>
                                                 <div><b><a href="index.html#place" target="_self" title="No namespace">place</a></b></div>
-                                                <div><b><a href="index.html#placeRef" target="_self" title="No namespace">placeRef</a></b></div>
+                                                <div><b><a href="index.html#placeType" target="_self" title="No namespace">placeType</a></b></div>
+                                                <div><b><a href="index.html#placeTypes" target="_self" title="No namespace">placeTypes</a></b></div>
                                                 <div><b><a href="index.html#preferredForm" target="_self" title="No namespace">preferredForm</a></b></div>
                                                 <div><b><a href="index.html#projectId" target="_self" title="No namespace">projectId</a></b></div>
                                                 <div><b><a href="index.html#recordChangeDate" target="_self" title="No namespace">recordChangeDate</a></b></div>
@@ -1457,8 +1389,6 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#recordIdentifier" target="_self" title="No namespace">recordIdentifier</a></b></div>
                                                 <div><b><a href="index.html#recordOrigin" target="_self" title="No namespace">recordOrigin</a></b></div>
                                                 <div><b><a href="index.html#relatedResources" target="_self" title="No namespace">relatedResources</a></b></div>
-                                                <div><b><a href="index.html#relation" target="_self" title="No namespace">relation</a></b></div>
-                                                <div><b><a href="index.html#relations" target="_self" title="No namespace">relations</a></b></div>
                                                 <div><b><a href="index.html#researchInterests" target="_self" title="No namespace">researchInterests</a></b></div>
                                                 <div><b><a href="index.html#resource" target="_self" title="No namespace">resource</a></b></div>
                                                 <div><b><a href="index.html#sameAs" target="_self" title="No namespace">sameAs</a></b></div>
@@ -1467,11 +1397,47 @@ var modelBoxes= new Array('model_cwrc',
                                                 <div><b><a href="index.html#term" target="_self" title="No namespace">term</a></b></div>
                                                 <div><b><a href="index.html#textDate" target="_self" title="No namespace">textDate</a></b></div>
                                                 <div><b><a href="index.html#timeZoneOffset" target="_self" title="No namespace">timeZoneOffset</a></b></div>
-                                                <div><b><a href="index.html#toDate" target="_self" title="No namespace">toDate</a></b></div>
-                                                <div><b><a href="index.html#uri" target="_self" title="No namespace">uri</a></b></div>
                                                 <div><b><a href="index.html#variant" target="_self" title="No namespace">variant</a></b></div>
                                                 <div><b><a href="index.html#variantForms" target="_self" title="No namespace">variantForms</a></b></div>
                                                 <div><b><a href="index.html#variantType" target="_self" title="No namespace">variantType</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_entities.xsdComplex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_entities.xsdComplex_Type');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Complex Types</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_entities.xsdComplex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -1509,16 +1475,12 @@ var modelBoxes= new Array('model_cwrc',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_entities.xsdElement_Group" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
-                                                <div><b><a href="index.html#identity-element" target="_self" title="No namespace">identity-element</a></b></div>
                                                 <div><b><a href="index.html#orgDescription-element" target="_self" title="No namespace">orgDescription-element</a></b></div>
                                                 <div><b><a href="index.html#orgRecordInfo-element" target="_self" title="No namespace">orgRecordInfo-element</a></b></div>
                                                 <div><b><a href="index.html#personDescription-element" target="_self" title="No namespace">personDescription-element</a></b></div>
                                                 <div><b><a href="index.html#personRecordInfo-element" target="_self" title="No namespace">personRecordInfo-element</a></b></div>
                                                 <div><b><a href="index.html#placeDescription-element" target="_self" title="No namespace">placeDescription-element</a></b></div>
                                                 <div><b><a href="index.html#placeRecordInfo-element" target="_self" title="No namespace">placeRecordInfo-element</a></b></div>
-                                                <div><b><a href="index.html#recordInfo-element" target="_self" title="No namespace">recordInfo-element</a></b></div>
-                                                <div><b><a href="index.html#titleIdentity-element" target="_self" title="No namespace">titleIdentity-element</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -1557,14 +1519,12 @@ var modelBoxes= new Array('model_cwrc',
                                           <td class="componentGroup">
                                              <div id="gr_entities.xsdAttribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#cert-attribute" target="_self" title="No namespace">cert-attribute</a></b></div>
-                                                <div><b><a href="index.html#NO_NAMESPACE_date-pattern" target="_self" title="No namespace">date-pattern</a></b></div>
                                                 <div><b><a href="index.html#href-attribute" target="_self" title="No namespace">href-attribute</a></b></div>
-                                                <div><b><a href="index.html#id-attribute" target="_self" title="No namespace">id-attribute</a></b></div>
                                                 <div><b><a href="index.html#lang-attribute" target="_self" title="No namespace">lang-attribute</a></b></div>
                                                 <div><b><a href="index.html#partType-attribute" target="_self" title="No namespace">partType-attribute</a></b></div>
+                                                <div><b><a href="index.html#qualifer-attribute" target="_self" title="No namespace">qualifer-attribute</a></b></div>
                                                 <div><b><a href="index.html#rel-attribute" target="_self" title="No namespace">rel-attribute</a></b></div>
                                                 <div><b><a href="index.html#source-attribute" target="_self" title="No namespace">source-attribute</a></b></div>
-                                                <div><b><a href="index.html#type-attribute" target="_self" title="No namespace">type-attribute</a></b></div>
                                                 <div><b><a href="index.html#url-attribute" target="_self" title="No namespace">url-attribute</a></b></div>
                                              </div>
                                           </td>
@@ -1609,7 +1569,6 @@ var modelBoxes= new Array('model_cwrc',
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
                                              <div id="gr_xml.xsdAttribute" class="componentGroup" style="display:block">
-                                                <div><b><a href="index.html#id" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:id</a></b></div>
                                                 <div><b><a href="index.html#lang" target="_self" title="http://www.w3.org/XML/1998/namespace">@xml:lang</a></b></div>
                                              </div>
                                           </td>
