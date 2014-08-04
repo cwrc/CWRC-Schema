@@ -7,9 +7,9 @@
     *
     * Purpose: RELAX NG schema to model CWRC entities
     *
-    * Description: A RELAX NG schema to model person entities, organization entities, and place entities.  As well, this omnibus schema also includes code that is
-    * used to generate the entity creation/editing HTML forms (the "CWRC dialogs") for these three type of entities, using the <xs:annotation> element to contain
-    * this CWRC dialog code.
+    * Description: A RELAX NG schema to model person entities, organization entities, and place entities.  As well, this omnibus schema also includes "interace
+    * annotation" code that is used to generate the entity creation/editing HTML forms (the "CWRC dialogs") for these three type of entities, using the
+    * <xs:annotation> element to contain this interface annotation code.
     *
     * Schema design pattern: Although the standard design pattern terminology found in the literature refers to, and is most appropriate for, W3C XML
     * Schema (XSD), there is some applicability when applied to the schema design patterns in RELAX NG (RNG).  The standard four schema design patterns
@@ -21,9 +21,6 @@
 <!--
 *** Revisions ***
      MRB: Fri 01-Aug-2014
-     * Modified many of the annotation statements for both the schema annotation documentation and the interface
-     annotation code that provide element/attribute help statements and interface form element labels in the entity
-     creation form dialogs.
      * Revised and simplified the /entity/person/identity/preferredForm/namePart[@partType] attribute so that it only
      has four enumerated values: family, given, fullName, and termsOfAddress; this parallels the enumerated list of values
      that is used in the MODS schema's /mods/name/namePart[@type] attribute (except for the fullName value).
@@ -37,6 +34,12 @@
      * Deleted the @xml:id attribute and the 34 references to it (id-attribute); no need for a TEI-inspired reference
      system to mark up particular sections of the spartan entities, because users will be linking to the entire entity, not
      a part of the entity.
+     * Deleted elements and attributes that were not being, and would not be, used.
+     * Modified many of the annotation statements for both the schema annotation documentation and the interface
+     annotation code that provide element/attribute help statements and interface form element labels in the entity
+     creation/editing form dialogs.
+     * Reordered the element and annotation definitions in the schema so that they are in the sequence we would like
+     them to appear in the entity creation/editing form dialogs.
      MRB: Tue 27-May-2014: Added schema code and interface annotation code for a <factuality> element in /entity/*/
      description/factuality, with values of real, fictional, or both (i.e., a mixture of both real and fictional)
      MRB: Tue 22-Apr-2014: Added interface annotation code to render header labels for the four top-level element
@@ -538,29 +541,25 @@
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/place/recordInfo/placeTypes/placeType">
-                        <help-text xml:lang="en">Generic place types defined by CWRC,</help-text>
+                        <help-text xml:lang="en">Generic place types defined by CWRC.</help-text>
                         <label xml:lang="en">Place type</label>
                         <input>dynamicCheckbox</input>
                     </interface-field>
                     <values>
                         <choice>
-                            <value a:fr="" a:en="current populated place or administrative boundary place name">current populated place or 
-                                administrative boundary place name</value>
-                            <value a:fr="" a:en="historical populated place or administrative boundary place name">historical populated place 
-                                or adminstrative boundary place name</value>
-                            <value a:fr="" a:en="current natural geographic feature place name">current natural geographic feature place name</value>
-                            <value a:fr="" a:en="historical natural geographic feature place name">historical natural geographic feature place name</value>
+                            <value a:fr="" a:en="current populated place or administrative boundary place name">currentHumanPlace</value>
+                            <value a:fr="" a:en="historical populated place or administrative boundary place name">historicalHumanPlace</value>
+                            <value a:fr="" a:en="current natural geographic feature place name">currentNaturalPlace</value>
+                            <value a:fr="" a:en="historical natural geographic feature place name">historicalNaturalPlace</value>
                         </choice>
                     </values>
                 </xs:appinfo>
             </xs:annotation>
             <choice>
-                <value a:fr="" a:en="current populated place or administrative boundary place name">current populated place or 
-                    administrative boundary place name</value>
-                <value a:fr="" a:en="historical populated place or administrative boundary place name">historical populated place 
-                    or adminstrative boundary place name</value>
-                <value a:fr="" a:en="current natural geographic feature place name">current natural geographic feature place name</value>
-                <value a:fr="" a:en="historical natural geographic feature place name">historical natural geographic feature place name</value>
+                <value a:fr="" a:en="current populated place or administrative boundary place name">currentHumanPlace</value>
+                <value a:fr="" a:en="historical populated place or administrative boundary place name">historicalHumanPlace</value>
+                <value a:fr="" a:en="current natural geographic feature place name">currentNaturalPlace</value>
+                <value a:fr="" a:en="historical natural geographic feature place name">historicalNaturalPlace</value>
             </choice>
         </element>
     </define>
@@ -700,11 +699,11 @@
     </define>
 
     <define name="accessCondition-element">
-        <element name="accessCondition" a:defaultValue="cc_by-nc_3.0">
+        <element name="accessCondition" a:defaultValue="cc_by-nc_4.0">
             <a:documentation>Use the following access condition statement:
                 Use of this public-domain resource is governed by the &lt;a
-                href="http://creativecommons.org/licenses/by-nc/3.0/" rel="license"
-                &gt;Creative Commons Attribution-NonCommercial 3.0 Unported License&lt;/a&gt;.
+                href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"
+                &gt;Creative Commons Attribution-NonCommercial 4.0 International License&lt;/a&gt;.
             </a:documentation>
             <attribute name="type">
                 <value a:en="use and reproduction">use and reproduction</value>
@@ -772,7 +771,7 @@
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person|organization|place/identity/preferredForm/namePart">
-                        <label xml:lang="en">Name type</label>
+                        <label xml:lang="en">Preferred name</label>
                         <help-text xml:lang="en">Required. Provide the person's, organization's, or place's
                             standard name, and for persons, by part if desired; if person entities are not broken
                             out by parts of a name (given and family) and appear as one string in the namePart
@@ -784,7 +783,7 @@
                         <input>textField</input>
                     </interface-field>
                     <interface-field path="entity/person|organization|place/identity/variantForms/variant/namePart">
-                        <label xml:lang="en">Name type</label>
+                        <label xml:lang="en">Variant name</label>
                         <help-text xml:lang="en">Optional. Record one or more alternative names
                             here.  Person name examples: with name parsing: Mary Shelley's birth name: Godwin (family),
                             Mary Wollstonecraft (given); without name parsing: Mary Shelley's birth name: Godwin, Mary
@@ -821,7 +820,7 @@
                     </interface-field>
                     <values type="person">
                         <choice>
-                            <value a:en="fulll name (inverse order)" default="yes">full name (inverse order)</value>
+                            <value a:en="fulll name (inverse order)" default="yes">fullName</value>
                             <a:documentation>e.g., Abergavenny, Frances Neville, Baroness</a:documentation>
                             <value a:en="family name">family</value>
                             <a:documentation>e.g., Abergavenny</a:documentation>
@@ -1147,11 +1146,32 @@
     </define>
 
     <define name="qualifer-attribute">
-        <a:documentation>The following values are used with the qualifier attribute:
-            approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972";
-            inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]";
-            questionable: this value is used to identify a questionable date for a resource, such as "1972?". </a:documentation>
         <attribute name="qualifier">
+            <a:documentation>Use the qualifier attribute if a date is approximate, inferred, or questionable. The following values are used with the
+                qualifier attribute:
+                approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972";
+                inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]";
+                questionable: this value is used to identify a questionable date for a resource, such as "1972?". </a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/person|organization|place/description/existDates/dateSingle/standardDate/@qualifier">
+                        <help-text xml:lang="en">Use the qualifier attribute if a date is approximate, inferred, or questionable. The following values are used with the
+                            qualifier attribute:
+                            approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972";
+                            inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]";
+                            questionable: this value is used to identify a questionable date for a resource, such as "1972?". </help-text>
+                        <label xml:lang="en">Qualifier</label>
+                        <input>slider</input>
+                    </interface-field>
+                    <values>
+                        <choice>
+                            <value a:en="approximate">approximate</value>
+                            <value a:en="inferred">inferred</value>
+                            <value a:en="questionable">questionable</value>
+                        </choice>
+                    </values>
+                </xs:appinfo>
+            </xs:annotation>
             <choice>
                 <value a:en="approximate">approximate</value>
                 <value a:en="inferred">inferred</value>
@@ -1279,7 +1299,7 @@
     </define>
 
     <define name="gender-element">
-        <element name="gender" a:defaultValue="undefined">
+        <element name="gender">
             <a:documentation>Gender captures a group of gender terms associated with a person entity.</a:documentation>
             <xs:annotation>
                 <xs:appinfo>
@@ -1291,25 +1311,29 @@
                     </interface-field>
                     <values>
                         <choice>
-                            <value a:en="undefined" default="yes">undefined</value>
                             <value a:en="female">female</value>
                             <value a:en="male">male</value>
                             <value a:en="transgendered">transgendered</value>
-                            <value a:en="transgendered male-to-female">transgendered male-to-female</value>
                             <value a:en="transgendered female-to-male">transgendered female-to-male</value>
-                            <data a:en="other" type="string"/>
+                            <value a:en="transgendered male-to-female">transgendered male-to-female</value>
+                            <value a:en="undefined">undefined</value>
+                            <value a:en="ungendered">ungendered</value>
+                            <value a:en="unknown">unknown</value>
+                            <data a:en="Specify" type="string"/>
                         </choice>
                     </values>
                 </xs:appinfo>
             </xs:annotation>
             <optional>
                 <choice>
-                    <value>female</value>
-                    <value>male</value>
-                    <value>undefined</value>
-                    <value>transgendered</value>
-                    <value>transgendered male-to-female</value>
-                    <value>transgendered female-to-male</value>
+                    <value a:en="female">female</value>
+                    <value a:en="male">male</value>
+                    <value a:en="transgendered">transgendered</value>
+                    <value a:en="transgendered female-to-male">transgendered female-to-male</value>
+                    <value a:en="transgendered male-to-female">transgendered male-to-female</value>
+                    <value a:en="undefined">undefined</value>
+                    <value a:en="ungendered">ungendered</value>
+                    <value a:en="unknown">unknown</value>
                     <data a:en="Specify" type="string"/>
                 </choice>
             </optional>

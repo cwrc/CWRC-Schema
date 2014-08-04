@@ -428,12 +428,13 @@ var annotationBoxes= new Array('annotations_cwrc',
 				'annotations_timeZoneOffset', 
 				'annotations_namePart_partType', 
 				'annotations_sameAs_cert', 
+				'annotations_standardDate_qualifier', 
 				'annotations_date-pattern_cert', 
 				'annotations_gender_cert', 
 				'annotations_term_cert', 
 				'annotations_partType-attribute_partType', 
 				'annotations_cert-attribute_cert', 
-				'annotations_qualifer-attribute');
+				'annotations_qualifer-attribute_qualifier');
 var attributesBoxes= new Array('attributes_accessCondition', 
 				'attributes_a', 
 				'attributes_namePart', 
@@ -1961,7 +1962,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_personRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_personRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_1.jpeg" usemap="#entities_xsd_Element_recordInfo_1" /><map name="entities_xsd_Element_recordInfo_1" id="entities_xsd_Element_recordInfo_1">
+                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
                                  <area alt="index.tmp#personTypes" href="index.html#personTypes" coords="220,2,315,27" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,82,295,107" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,176,513,220" />
@@ -3298,8 +3299,8 @@ var modelBoxes= new Array('model_cwrc',
                                     <tr>
                                        <td width="100%"><pre><span class="tT">Use the following access condition statement:</span><span class="tI">
 </span><span class="tT">Use of this public-domain resource is governed by the &lt;a</span><span class="tI">
-</span><span class="tT">href="http://creativecommons.org/licenses/by-nc/3.0/" rel="license"</span><span class="tI">
-</span><span class="tT">&gt;Creative Commons Attribution-NonCommercial 3.0 Unported License&lt;/a&gt;.</span></pre></td>
+</span><span class="tT">href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"</span><span class="tI">
+</span><span class="tT">&gt;Creative Commons Attribution-NonCommercial 4.0 International License&lt;/a&gt;.</span></pre></td>
                                     </tr>
                                  </table>
                               </div>
@@ -3420,7 +3421,7 @@ var modelBoxes= new Array('model_cwrc',
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"accessCondition"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Use the following access condition statement: Use of this public-domain resource is governed by the &lt;a href="http://creativecommons.org/licenses/by-nc/3.0/" rel="license" &gt;Creative Commons Attribution-NonCommercial 3.0 Unported License&lt;/a&gt;.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Use the following access condition statement: Use of this public-domain resource is governed by the &lt;a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license" &gt;Creative Commons Attribution-NonCommercial 4.0 International License&lt;/a&gt;.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tAN"> mixed=</span><span class="tAV">"true"</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
@@ -5052,7 +5053,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_personDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_personDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_personDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description.jpeg" usemap="#entities_xsd_Element_description" /><map name="entities_xsd_Element_description" id="entities_xsd_Element_description">
+                           <div id="diagram_personDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_2.jpeg" usemap="#entities_xsd_Element_description_2" /><map name="entities_xsd_Element_description_2" id="entities_xsd_Element_description_2">
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,2,305,27" />
                                  <area alt="index.tmp#factuality" href="index.html#factuality" coords="223,96,561,140" />
                                  <area alt="index.tmp#genders" href="index.html#genders" coords="223,181,294,206" />
@@ -5567,7 +5568,7 @@ var modelBoxes= new Array('model_cwrc',
                                        <th>QName</th>
                                        <th width="10%">Type</th>
                                        <th width="5%">Use</th>
-                                       <th></th>
+                                       <th>Annotation</th>
                                     </tr>
                                  </thead>
                                  <tr>
@@ -5575,7 +5576,17 @@ var modelBoxes= new Array('model_cwrc',
                                     <td>restriction of <b>xs:token</b></td>
                                     <td>optional</td>
                                     <td>
-                                       <div class="annotation"></div>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Use the qualifier attribute if a date is approximate, inferred, or questionable. The following values are used with the</span><span class="tI">
+</span><span class="tT">qualifier attribute:</span><span class="tI">
+</span><span class="tT">approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972";</span><span class="tI">
+</span><span class="tT">inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]";</span><span class="tI">
+</span><span class="tT">questionable: this value is used to identify a questionable date for a resource, such as "1972?".</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
                                     </td>
                                  </tr>
                               </table>
@@ -5627,6 +5638,9 @@ var modelBoxes= new Array('model_cwrc',
           </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"qualifier"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Use the qualifier attribute if a date is approximate, inferred, or questionable. The following values are used with the qualifier attribute: approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972"; inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]"; questionable: this value is used to identify a questionable date for a resource, such as "1972?".</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
             </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"approximate"</span><span class="tEl">/&gt;</span><span class="tI">
@@ -6452,12 +6466,12 @@ var modelBoxes= new Array('model_cwrc',
                 </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"undefined"</span><span class="tEl">/&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"transgendered"</span><span class="tEl">/&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"transgendered"</span><span class="tEl">/&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"transgendered female-to-male"</span><span class="tEl">/&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
@@ -6467,7 +6481,17 @@ var modelBoxes= new Array('model_cwrc',
                 </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"transgendered female-to-male"</span><span class="tEl">/&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"undefined"</span><span class="tEl">/&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"ungendered"</span><span class="tEl">/&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"unknown"</span><span class="tEl">/&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
@@ -8087,7 +8111,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_orgRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_orgRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
+                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
                                  <area alt="index.tmp#orgTypes" href="index.html#orgTypes" coords="220,2,297,27" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,82,295,107" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,176,513,220" />
@@ -8783,7 +8807,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_placeRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
+                           <div id="diagram_placeRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_1.jpeg" usemap="#entities_xsd_Element_recordInfo_1" /><map name="entities_xsd_Element_recordInfo_1" id="entities_xsd_Element_recordInfo_1">
                                  <area alt="index.tmp#placeTypes" href="index.html#placeTypes" coords="220,2,307,27" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,68,295,93" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,162,513,206" />
@@ -9085,28 +9109,28 @@ var modelBoxes= new Array('model_cwrc',
                               <table class="facetsTable">
                                  <tr>
                                     <td class="firstColumn">enumeration</td>
-                                    <td width="30%"><b>current populated place or                      administrative boundary place name</b></td>
+                                    <td width="30%"><b>currentHumanPlace</b></td>
                                     <td>
                                        <div class="annotation"></div>
                                     </td>
                                  </tr>
                                  <tr>
                                     <td class="firstColumn">enumeration</td>
-                                    <td width="30%"><b>historical populated place                      or adminstrative boundary place name</b></td>
+                                    <td width="30%"><b>historicalHumanPlace</b></td>
                                     <td>
                                        <div class="annotation"></div>
                                     </td>
                                  </tr>
                                  <tr>
                                     <td class="firstColumn">enumeration</td>
-                                    <td width="30%"><b>current natural geographic feature place name</b></td>
+                                    <td width="30%"><b>currentNaturalPlace</b></td>
                                     <td>
                                        <div class="annotation"></div>
                                     </td>
                                  </tr>
                                  <tr>
                                     <td class="firstColumn">enumeration</td>
-                                    <td width="30%"><b>historical natural geographic feature place name</b></td>
+                                    <td width="30%"><b>historicalNaturalPlace</b></td>
                                     <td>
                                        <div class="annotation"></div>
                                     </td>
@@ -9146,10 +9170,10 @@ var modelBoxes= new Array('model_cwrc',
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"current populated place or                      administrative boundary place name"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"historical populated place                      or adminstrative boundary place name"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"current natural geographic feature place name"</span><span class="tEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"historical natural geographic feature place name"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"currentHumanPlace"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"historicalHumanPlace"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"currentNaturalPlace"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"historicalNaturalPlace"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
@@ -9208,7 +9232,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_placeDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_2.jpeg" usemap="#entities_xsd_Element_description_2" /><map name="entities_xsd_Element_description_2" id="entities_xsd_Element_description_2">
+                           <div id="diagram_placeDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description.jpeg" usemap="#entities_xsd_Element_description" /><map name="entities_xsd_Element_description" id="entities_xsd_Element_description">
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,2,305,27" />
                                  <area alt="index.tmp#factuality" href="index.html#factuality" coords="223,96,561,140" />
                                  <area alt="index.tmp#latitude" href="index.html#latitude" coords="223,181,503,225" />
@@ -11209,6 +11233,27 @@ var modelBoxes= new Array('model_cwrc',
                         <td>No namespace</td>
                      </tr>
                      <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_standardDate_qualifier" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_standardDate_qualifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_standardDate_qualifier" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Use the qualifier attribute if a date is approximate, inferred, or questionable. The following values are used with the</span><span class="tI">
+</span><span class="tT">qualifier attribute:</span><span class="tI">
+</span><span class="tT">approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972";</span><span class="tI">
+</span><span class="tT">inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]";</span><span class="tI">
+</span><span class="tT">questionable: this value is used to identify a questionable date for a resource, such as "1972?".</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
                         <td class="firstColumn"><b>Type</b></td>
                         <td>restriction of <b>xs:token</b></td>
                      </tr>
@@ -11287,6 +11332,9 @@ var modelBoxes= new Array('model_cwrc',
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"qualifier"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Use the qualifier attribute if a date is approximate, inferred, or questionable. The following values are used with the qualifier attribute: approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972"; inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]"; questionable: this value is used to identify a questionable date for a resource, such as "1972?".</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"approximate"</span><span class="tEl">/&gt;</span><span class="tI">
@@ -12007,6 +12055,27 @@ var modelBoxes= new Array('model_cwrc',
                         <td>No namespace</td>
                      </tr>
                      <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_qualifer-attribute_qualifier" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_qualifer-attribute_qualifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_qualifer-attribute_qualifier" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Use the qualifier attribute if a date is approximate, inferred, or questionable. The following values are used with the</span><span class="tI">
+</span><span class="tT">qualifier attribute:</span><span class="tI">
+</span><span class="tT">approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972";</span><span class="tI">
+</span><span class="tT">inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]";</span><span class="tI">
+</span><span class="tT">questionable: this value is used to identify a questionable date for a resource, such as "1972?".</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
                         <td class="firstColumn"><b>Type</b></td>
                         <td>restriction of <b>xs:token</b></td>
                      </tr>
@@ -12085,6 +12154,9 @@ var modelBoxes= new Array('model_cwrc',
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"qualifier"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Use the qualifier attribute if a date is approximate, inferred, or questionable. The following values are used with the qualifier attribute: approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972"; inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]"; questionable: this value is used to identify a questionable date for a resource, such as "1972?".</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"approximate"</span><span class="tEl">/&gt;</span><span class="tI">
@@ -13127,32 +13199,12 @@ var modelBoxes= new Array('model_cwrc',
                      </tr>
                      <tr>
                         <td class="firstColumn">
-                           <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_qualifer-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_qualifer-attribute');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="annotations_qualifer-attribute" style="display:block">
-                              <div class="annotation">
-                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                    <tr>
-                                       <td width="100%"><pre><span class="tT">The following values are used with the qualifier attribute:</span><span class="tI">
-</span><span class="tT">approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972";</span><span class="tI">
-</span><span class="tT">inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]";</span><span class="tI">
-</span><span class="tT">questionable: this value is used to identify a questionable date for a resource, such as "1972?".</span></pre></td>
-                                    </tr>
-                                 </table>
-                              </div>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
                            <div class="floatLeft"><b>Diagram</b></div>
                            <div class="floatRight"><input id="button_diagram_qualifer-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_qualifer-attribute');" class="control" /></div>
                         </td>
                         <td class="diagram">
                            <div id="diagram_qualifer-attribute" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Attribute_Group_qualifer-attribute.jpeg" usemap="#entities_xsd_Attribute_Group_qualifer-attribute" /><map name="entities_xsd_Attribute_Group_qualifer-attribute" id="entities_xsd_Attribute_Group_qualifer-attribute">
-                                 <area alt="index.tmp#qualifer-attribute_qualifier" href="index.html#qualifer-attribute_qualifier" coords="182,0,357,44" /></map></div>
+                                 <area alt="index.tmp#qualifer-attribute_qualifier" href="index.html#qualifer-attribute_qualifier" coords="162,0,337,44" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -13168,7 +13220,7 @@ var modelBoxes= new Array('model_cwrc',
                                        <th>QName</th>
                                        <th width="10%">Type</th>
                                        <th width="5%">Use</th>
-                                       <th></th>
+                                       <th>Annotation</th>
                                     </tr>
                                  </thead>
                                  <tr>
@@ -13176,7 +13228,17 @@ var modelBoxes= new Array('model_cwrc',
                                     <td>restriction of <b>xs:token</b></td>
                                     <td>required</td>
                                     <td>
-                                       <div class="annotation"></div>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Use the qualifier attribute if a date is approximate, inferred, or questionable. The following values are used with the</span><span class="tI">
+</span><span class="tT">qualifier attribute:</span><span class="tI">
+</span><span class="tT">approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972";</span><span class="tI">
+</span><span class="tT">inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]";</span><span class="tI">
+</span><span class="tT">questionable: this value is used to identify a questionable date for a resource, such as "1972?".</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
                                     </td>
                                  </tr>
                               </table>
@@ -13193,10 +13255,10 @@ var modelBoxes= new Array('model_cwrc',
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> name=</span><span class="tAV">"qualifer-attribute"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The following values are used with the qualifier attribute: approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972"; inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]"; questionable: this value is used to identify a questionable date for a resource, such as "1972?".</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"qualifier"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Use the qualifier attribute if a date is approximate, inferred, or questionable. The following values are used with the qualifier attribute: approximate: this value is used to identify a date that may not be exact, but is approximated, such as "ca. 1972"; inferred: this value is used to identify a date that has not been transcribed directly from a resource, such as "[not before 1852]"; questionable: this value is used to identify a questionable date for a resource, such as "1972?".</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"approximate"</span><span class="tEl">/&gt;</span><span class="tI">
