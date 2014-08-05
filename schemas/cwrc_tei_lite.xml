@@ -6,6 +6,7 @@
 <!-- 
 *** Revisions ***
 * 2014
+  - Added the att.canonical attribute class (which contains the ref attribute) to the bibl element.
   - Created a new annotationId attribute in the att.global class of attributes; provides a unique annotation identifier for the element
     bearing the attribute.
   - Created a new offsetId attribute in the att.global class of attributes; designates the parent tag from which the offset is being
@@ -2404,6 +2405,20 @@
                                 </valList>
                             </attDef>
                         </attList>
+                    </elementSpec>
+                    <elementSpec ident="bibl" module="core" mode="change">
+                        <classes mode="replace">
+                            <memberOf key="model.biblLike"/>
+                            <memberOf key="model.biblPart"/>
+                            <memberOf key="model.msItemPart"/>
+                            <memberOf key="model.personPart"/>
+                            <memberOf key="att.canonical" mode="add"/>
+                            <memberOf key="att.declarable"/>
+                            <memberOf key="att.docStatus"/>
+                            <memberOf key="att.global"/>
+                            <memberOf key="att.sortable"/>
+                            <memberOf key="att.typed"/>
+                        </classes>
                     </elementSpec>
                 </schemaSpec>
             </div>
