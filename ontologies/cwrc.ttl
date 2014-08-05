@@ -111,7 +111,7 @@ cwrc:citing a oa:Motivation ;
     
     			skos:broader oa:identifying ;
     
-    			skos:prefLabel “Citing a publication"@en .
+    			skos:prefLabel "Citing a publication"@en .
 
 
 ###  http://cwrc.ca/ns/cw#oaMotivationScheme
@@ -120,6 +120,81 @@ cwrc:oaMotivationScheme rdf:type owl:NamedIndividual ,
     	
     			skos:ConceptScheme ;
     
-    			rdfs:label “oaMotivationScheme"@en ;
+    			rdfs:label "oaMotivationScheme"@en ;
     
     			rdfs:comment "The concept scheme for CWRC annotation motivations that extend Open Annotation Motivations"@en .
+
+###  http://cwrc.ca/ns/cw#Precision
+
+cw:Precision rdf:type owl:Class ;
+              
+              rdfs:label "Precision"@en ;
+              
+              rdfs:subClassOf skos:Concept ;
+              
+              rdfs:comment "The precision of an Annotation."@en ;
+              
+              rdfs:isDefinedBy <http://cwrc.ca/ns/cw#> .
+
+###  http://cwrc.ca/ns/cw#hasPrecision
+
+cw:hasPrecision rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "hasPrecision"@en ;
+               
+               rdfs:comment "The precision of the annotation"@en ;
+               
+               rdfs:isDefinedBy <http://cwrc.ca/ns/cw#> ;
+               
+               rdfs:domain oa:Annotation ;
+               
+               rdfs:range cw:Precision .
+               
+###  http://cwrc.ca/ns/cw#precisionScheme
+
+cw:precisionScheme rdf:type owl:NamedIndividual, skos:ConceptScheme ;
+                    
+        rdfs:label "precisionScheme"@en ;
+                    
+        rdfs:comment "The skos concept scheme for CWRC precision"@en .
+
+         
+###  http://cwrc.ca/ns/cw#high
+
+cw:high rdf:type owl:NamedIndividual, cw:Precision ;
+               
+               rdfs:comment "High precision."@en ;
+               
+               skos:prefLabel "High precision"@en ;
+               
+               skos:inScheme cw:precisionScheme .
+
+###  http://cwrc.ca/ns/cw#medium
+
+cw:medium rdf:type owl:NamedIndividual, cw:Precision ;
+               
+               rdfs:comment "Medium precision."@en ;
+               
+               skos:prefLabel “Medium precision"@en ;
+               
+               skos:inScheme cw:precisionScheme .
+               
+###  http://cwrc.ca/ns/cw#low
+
+cw:low rdf:type owl:NamedIndividual, cw:Precision ;
+               
+               rdfs:comment "Low precision."@en ;
+               
+               skos:prefLabel "Low precision"@en ;
+               
+               skos:inScheme cw:precisionScheme .
+               
+###  http://cwrc.ca/ns/cw#unknown
+
+cw:unknown rdf:type owl:NamedIndividual, cw:Precision ;
+               
+               rdfs:comment "Unknown precision."@en ;
+               
+               skos:prefLabel "Unknow precision"@en ;
+               
+               skos:inScheme cw:precisionScheme .
