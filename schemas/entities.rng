@@ -413,20 +413,19 @@
                     <interface-field path="entity/person/recordInfo/personTypes/personType">
                         <help-text xml:lang="en">Generic person types defined by CWRC.</help-text>
                         <label xml:lang="en">Person type</label>
-                        <input>dynamicCheckbox</input>
+                        <input>dropDown</input>
                     </interface-field>
                     <values>
                         <choice>
                             <value a:fr="" a:en="Creator">creator</value>
                             <value a:fr="" a:en="Writer">writer</value>
-                            <value a:fr="" a:en="Canada's Early Women
-                                Writer">ceww:earlyWomenWriter</value>
+                            <value a:fr="" a:en="Critic">critic</value>
+                            <value a:fr="" a:en="Creator (CanWWr)">canwwr:creator</value>
+                            <value a:fr="" a:en="Critic (CanWWr)">canwwr:critic</value>
                             <value a:fr="" a:en="British Woman Writer (Orlando)">orl:BWW</value>
                             <value a:fr="" a:en="International-British Women Writer (Orlando)">orl:IBW</value>
                             <value a:fr="" a:en="International Women Writer (Orlando)">orl:IWW</value>
                             <value a:fr="" a:en="Male Writer (Orlando)">orl:MW</value>
-                            <value a:fr="" a:en="Creator (CanWWr)">canwwr:creator</value>
-                            <value a:fr="" a:en="Critic (CanWWr)">canwwr:critic</value>
                         </choice>
                     </values>
                 </xs:appinfo>
@@ -434,14 +433,13 @@
             <choice>
                 <value a:fr="" a:en="Creator">creator</value>
                 <value a:fr="" a:en="Writer">writer</value>
-                <value a:fr="" a:en="Canada's Early Women
-                    Writer">ceww:earlyWomenWriter</value>
+                <value a:fr="" a:en="Critic">critic</value>
+                <value a:fr="" a:en="Creator (CanWWr)">canwwr:creator</value>
+                <value a:fr="" a:en="Critic (CanWWr)">canwwr:critic</value>
                 <value a:fr="" a:en="British Woman Writer (Orlando)">orl:BWW</value>
                 <value a:fr="" a:en="International-British Women Writer (Orlando)">orl:IBW</value>
                 <value a:fr="" a:en="International Women Writer (Orlando)">orl:IWW</value>
                 <value a:fr="" a:en="Male Writer (Orlando)">orl:MW</value>
-                <value a:fr="" a:en="Creator (CanWWr)">canwwr:creator</value>
-                <value a:fr="" a:en="Critic (CanWWr)">canwwr:critic</value>
             </choice>
         </element>
     </define>
@@ -465,7 +463,7 @@
                     <interface-field path="entity/organization/recordInfo/orgTypes/orgType">
                         <help-text xml:lang="en">Generic organization types defined by CWRC.</help-text>
                         <label xml:lang="en">Organization type</label>
-                        <input>dynamicCheckbox</input>
+                        <input>dropDown</input>
                     </interface-field>
                     <values>
                         <choice>
@@ -543,7 +541,7 @@
                     <interface-field path="entity/place/recordInfo/placeTypes/placeType">
                         <help-text xml:lang="en">Generic place types defined by CWRC.</help-text>
                         <label xml:lang="en">Place type</label>
-                        <input>dynamicCheckbox</input>
+                        <input>dropDown</input>
                     </interface-field>
                     <values>
                         <choice>
@@ -771,7 +769,7 @@
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person|organization|place/identity/preferredForm/namePart">
-                        <label xml:lang="en">Preferred name</label>
+                        <label xml:lang="en">Name part</label>
                         <help-text xml:lang="en">Required. Provide the person's, organization's, or place's
                             standard name, and for persons, by part if desired; if person entities are not broken
                             out by parts of a name (given and family) and appear as one string in the namePart
@@ -783,7 +781,7 @@
                         <input>textField</input>
                     </interface-field>
                     <interface-field path="entity/person|organization|place/identity/variantForms/variant/namePart">
-                        <label xml:lang="en">Variant name</label>
+                        <label xml:lang="en">Name part</label>
                         <help-text xml:lang="en">Optional. Record one or more alternative names
                             here.  Person name examples: with name parsing: Mary Shelley's birth name: Godwin (family),
                             Mary Wollstonecraft (given); without name parsing: Mary Shelley's birth name: Godwin, Mary
@@ -1057,18 +1055,7 @@
 
     <define name="existDates-element">
         <element name="existDates">
-            <a:documentation>Dates of existence of the entity described (i.e. birth, death, fl., 
-                incorporation, establishment, etc.), of the present entity.</a:documentation>
-            <xs:annotation>
-                <xs:appinfo>
-                    <interface-field path="entity/person|organization|place/description/existDates">
-                        <help-text xml:lang="en">If known, enter dates of existence (i.e. birth,
-                            death, fl., incorporation, establishment, etc.), of the present 
-                            entity.</help-text>
-                        <label xml:lang="en">Date(s) of existence</label>
-                    </interface-field>
-                </xs:appinfo>
-            </xs:annotation>
+            <a:documentation>A container element for the dateSingle element.</a:documentation>
             <zeroOrMore>
                 <ref name="dateSingle-element"/>
             </zeroOrMore>
@@ -1077,10 +1064,14 @@
 
     <define name="dateSingle-element">
         <element name="dateSingle">
-            <a:documentation>Captures a date associated with the entity record or entity instance.</a:documentation>
+            <a:documentation>If known, enter dates of existence (i.e. birth,
+                death, flourish, establishment, or dissolution), of the present entity. </a:documentation>
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person|organization|place/description/existDates/dateSingle">
+                        <help-text xml:lang="en">If known, enter dates of existence (i.e. birth,
+                            death, flourish, establishment, or dissolution), of the present entity. 
+                        </help-text>
                         <label xml:lang="en">Date(s) of existence</label>
                         <input label="Add">dialogue</input>
                     </interface-field>
@@ -1112,11 +1103,11 @@
 
     <define name="standardDate-element">
         <element name="standardDate">
-            <a:documentation>Captures a date in ISO standard format.</a:documentation>
+            <a:documentation>Captures a date of existence in ISO standard format.</a:documentation>
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person|organization|place/description/existDates/dateSingle/standardDate">
-                        <help-text xml:lang="en">Select a date from date picker or enter a date in
+                        <help-text xml:lang="en">Select a date of existence from the date picker, or enter a date in
                             the format yyyy-mm-dd, yyyy-mm, or yyyy.</help-text>
                         <label xml:lang="en">Date</label>
                         <input>datePicker</input>
@@ -1182,7 +1173,7 @@
 
     <define name="textDate-element">
         <element name="textDate">
-            <a:documentation>Captures a date in prose format.</a:documentation>
+            <a:documentation>Captures a date of existence in prose format.</a:documentation>
             <text/>
         </element>
     </define>
@@ -1195,7 +1186,7 @@
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person|organization|place/description/existDates/dateSingle/dateType">
-                        <help-text xml:lang="en">aptures a date type in relation to its association with the entity described.
+                        <help-text xml:lang="en">Captures a date type in relation to its association with the entity described.
                             Prescribed values: person entities: birth, death, flourish; organization and place entities: 
                             establishment, dissolution, flourish</help-text>
                         <label xml:lang="en">Type</label>
