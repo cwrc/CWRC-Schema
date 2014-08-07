@@ -33,6 +33,7 @@
 
 <!-- 
 *** Revisions ***
+*MRB: 07-Aug-2014: Renamed the attribute DBREF to REF.
 * MRB: July 2014: Made the following changes:
   - Deleted the element SHORTPROSE, and the two REFs to it from the elements PRODUCTION and RECEPTION.
   - Added the element RESEARCHNOTE as a child element to the element FAMILYMEMBER.
@@ -1107,7 +1108,9 @@
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Textscope is the container element for the three major
                 writing-related elements: production, reception, and textual features.</a:documentation>
             <optional>
-                <attribute name="DBREF"/>
+                <attribute name="REF">
+                    <data type="anyURI"/>
+                </attribute>
             </optional>
             <optional>
                 <attribute name="PLACEHOLDER"/>
@@ -2182,7 +2185,9 @@
                             bibliographical information in much the same way as an MLA parenthetical citation and should always reside within a bibCits
                             container tag.</a:documentation>
                         <optional>
-                            <attribute name="DBREF"/>
+                            <attribute name="REF">
+                                <data type="anyURI"/>
+                            </attribute>
                         </optional>
                         <optional>
                             <attribute name="ID">
