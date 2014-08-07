@@ -60,56 +60,56 @@
         <HEADING SUBTYPE="2">Published Texts</HEADING>
         <!-- Do we need instructions here for the copy editor? I think so: "Split fields into ... the DBRefs?" How would you put what should be done here? or is this handled in /CWRC WRiter.. in which case, still, what do we do here?-->
         <!-- Yes, I think we need instructions for the copyeditor here: -->
-        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. Delete the now emplty research notes.</RESEARCHNOTE>
+        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. In the DBREF attribute of bibcits put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="3">Novels</HEADING>
         <RESEARCHNOTE>{Novels}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Non-fiction</HEADING>
         <RESEARCHNOTE>{Non-fiction}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Life writing</HEADING>
         <RESEARCHNOTE>{Life_writing}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Short story collections</HEADING>
         <RESEARCHNOTE>{Short_story_collections}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Serialized fiction</HEADING>
         <RESEARCHNOTE>{Serialized_fiction}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Poetry</HEADING>
         <RESEARCHNOTE>{Poetry}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Plays</HEADING>
         <RESEARCHNOTE>{Plays}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Interviews</HEADING>
         <RESEARCHNOTE>{Interviews}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Unverified titles</HEADING>
         <RESEARCHNOTE>{Unverified_titles}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="2">Periodical contributions</HEADING>
         <RESEARCHNOTE>{Periodical_contributions}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="2">Other publications</HEADING>
         <RESEARCHNOTE>{Other_publications}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="2">Other artistic productions</HEADING>
         <HEADING SUBTYPE="3">Music</HEADING>
         <RESEARCHNOTE>{Music}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Radio plays</HEADING>
         <RESEARCHNOTE>{Radioplays}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Screenplays</HEADING>
         <RESEARCHNOTE>{Screenplays}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Visual arts</HEADING>
         <RESEARCHNOTE>{Visual_arts}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Other</HEADING>
         <RESEARCHNOTE>{Other}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="2">Family and Relationships</HEADING>
         <FAMILY>
             <FAMILYMEMBER RELATION="FATHER">
@@ -228,12 +228,12 @@
             <RESEARCHNOTE>{Membership}</RESEARCHNOTE>
             <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
         </OCCUPATION>
-        <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. Delete the now emplty research notes.</RESEARCHNOTE>
+        <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. In the DBREF attribute of bibcits put the PID value of the cited resource from the CWRC repository. Delete the now empty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="2">Archival Holdings</HEADING>
         <RESEARCHNOTE>{Archive_material}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="2">Published Resources</HEADING>
         <RESEARCHNOTE>{Published_resources}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
     </ENTRY>
 </CWRC>
