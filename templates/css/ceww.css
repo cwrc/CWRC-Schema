@@ -1,0 +1,180 @@
+*{
+    color:black;
+    font-family:sans-serif;
+    background-color:#FFFAF0
+}
+
+RESEARCHNOTE{
+    background-color:#FBEFEF;
+    color:#663366;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:smaller;
+    display:block;
+    margin:0%;
+    padding:0%
+}
+
+
+#comment{
+    display:none
+
+}
+
+CWRCHEADER,
+FILEDESC,
+DOCTITLE,
+DOCAUTHOR
+{
+    display:list-item
+}
+
+FILEDESC{
+    content:url(http://cwrc.ca/templates/images/CWRC_logo.png);
+    background-color:#B8B891;
+    color:#555;
+    font-weight:normal;
+}
+DOCTITLE{
+    font-variant:small-caps;
+    font-size:x-large;
+    font-weight:bold;
+}
+DOCAUTHOR{
+    font-weight:bold
+}
+PUBLICATIONSTMT,
+SOURCEDESC,
+REVISIONDESC,
+RESPONSIBILITY{
+    display:none
+}
+
+ENTRY{
+    display:block;
+    margin-left:3%
+}
+
+HEADING[SUBTYPE = "1"]{
+    color:black;
+    font-size:xx-large;
+    font-weight:bold
+}
+
+HEADING[SUBTYPE = "1"] + SCHOLARNOTE{
+    display:block;
+    text-align:center
+}
+
+BIRTH:before{
+    content:"Birth: ";
+    font-weight:bold
+}
+
+BIRTH,
+DEATH,
+PERSONNAME{
+    display:block
+}
+
+DEATH:before{
+    content:"Death: ";
+    font-weight:bold
+}
+
+HEADING[SUBTYPE = "5"]{
+    display:inline;
+    font-weight:bold
+}
+
+HEADING[SUBTYPE = "2"]{
+    display:block;
+    font-size:x-large;
+    font-weight:bold;
+    padding-top:1em;
+    padding-bottom:1em
+}
+
+HEADING[SUBTYPE = "2"] + SCHOLARNOTE{
+    display:block;
+    font-style:italic;
+}
+
+SCHOLARNOTE + SCHOLARNOTE{
+    display:block;
+    text-align:right
+}
+
+HEADING[SUBTYPE = "3"]{
+    display:block;
+    font-size:large;
+    font-weight:bold;
+    padding-top:0.5em;
+    padding-bottom:0.5em
+}
+
+HEADING[SUBTYPE = "2"] + HEADING[SUBTYPE = "3"]{padding-top:0em}
+
+HEADING[SUBTYPE = "4"]{
+    font-weight:bold;
+    display:block;
+    font-size:medium;
+}
+
+BIBCITS BIBCIT{
+    display:block;
+    padding-left:3%
+}
+
+FAMILYMEMBER{
+    display:block
+}
+
+FAMILYMEMBER P{
+    display:block
+}
+
+FAMILYMEMBER[RELATION = "FATHER"] HEADING:before{
+    content:"Father: ";
+    font-weight:bold
+}
+
+FAMILYMEMBER[RELATION = "MOTHER"] HEADING:before{
+    content:"Mother: ";
+    font-weight:bold
+}
+
+FAMILYMEMBER[RELATION = "FATHER"],
+FAMILYMEMBER[RELATION = "MOTHER"]{padding-bottom:1em}
+
+FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT DATERANGE,
+FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT DATERANGE{
+    display:block;
+    font-weight:bold;
+    font-size:medium;
+    color:green
+}
+
+FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT CHRONPROSE,
+FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT CHRONPROSE{
+    display:block;
+}
+
+EDUCATION CHRONSTRUCT,
+RECEPTION CHRONSTRUCT,
+OCCUPATION CHRONSTRUCT{
+    display:block
+}
+
+EDUCATION CHRONSTRUCT DATERANGE{
+    display:inline-block;
+    padding-right:5em
+}
+
+EDUCATION CHRONSTRUCT CHRONSPROSE{
+    display:inline-block
+}
+
+
+
+
+

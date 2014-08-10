@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://cwrc.ca/schemas/cwrc_entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/cwrc.css"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/ceww.css"?>
 <CWRC>
     <CWRCHEADER>
         <FILEDESC>
@@ -24,27 +24,20 @@
         <HEADING SUBTYPE="1"><NAME STANDARD="">{Author}</NAME>({Birth_date}-{Death_date})</HEADING>
         <SCHOLARNOTE><P>{Short_biography}</P></SCHOLARNOTE>
         <BIRTH>
-            <CHRONSTRUCT><DATE>Birth: {Birth_date}, </DATE><CHRONPROSE><PLACE>{Birth_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
+            <CHRONSTRUCT><DATE>{Birth_date}, </DATE><CHRONPROSE><PLACE>{Birth_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
         </BIRTH>
         <DEATH>
-            <CHRONSTRUCT><DATE>Death: {Death_date}, </DATE><CHRONPROSE><PLACE>{Death_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
+            <CHRONSTRUCT><DATE>{Death_date}, </DATE><CHRONPROSE><PLACE>{Death_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
         </DEATH>
-        <PERSONNAME>
-            <HEADING SUBTYPE="5">Name at Birth: </HEADING>
+        <PERSONNAME><HEADING SUBTYPE="5">Name at birth: </HEADING>
             <DATASTRUCT>
-                <DATAITEM>
-                    <NAME>{Name_at_birth}</NAME>
-                    <RESEARCHNOTE>Copy editor: break the Name above into its components inside the birthname tag below; delate the (now) empty name tag above.</RESEARCHNOTE>
-                    <BIRTHNAME><GIVEN></GIVEN> <SURNAME></SURNAME></BIRTHNAME>
-                </DATAITEM>
+                <DATAITEM> <NAME>{Name_at_birth}</NAME> <RESEARCHNOTE>Copy editor: break the Name above into its components inside the birthname tag below; delate the (now) empty name tag above.</RESEARCHNOTE> <BIRTHNAME><GIVEN></GIVEN> <SURNAME></SURNAME></BIRTHNAME> </DATAITEM>
             </DATASTRUCT>
         </PERSONNAME>
         <PERSONNAME>
             <HEADING SUBTYPE="5">Variant names: </HEADING>
             <DATASTRUCT>
-                <DATAITEM>
-                    <NAME>{Alternative_names}</NAME>
-                </DATAITEM>
+                <DATAITEM> <NAME>{Alternative_names}</NAME> </DATAITEM>
                 <RESEARCHNOTE>Copy editor: Break individual variant names into separate dataitems/names. In all cases thoroughout the file, @@ indicates the need for a paragprah marker</RESEARCHNOTE>
             </DATASTRUCT>
         </PERSONNAME>
@@ -60,56 +53,56 @@
         <HEADING SUBTYPE="2">Published Texts</HEADING>
         <!-- Do we need instructions here for the copy editor? I think so: "Split fields into ... the DBRefs?" How would you put what should be done here? or is this handled in /CWRC WRiter.. in which case, still, what do we do here?-->
         <!-- Yes, I think we need instructions for the copyeditor here: -->
-        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. In the DBREF attribute of bibcits put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
+        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. In the REF attribute of bibcits put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="3">Novels</HEADING>
         <RESEARCHNOTE>{Novels}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Non-fiction</HEADING>
         <RESEARCHNOTE>{Non-fiction}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Life writing</HEADING>
         <RESEARCHNOTE>{Life_writing}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Short story collections</HEADING>
         <RESEARCHNOTE>{Short_story_collections}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Serialized fiction</HEADING>
         <RESEARCHNOTE>{Serialized_fiction}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Poetry</HEADING>
         <RESEARCHNOTE>{Poetry}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Plays</HEADING>
         <RESEARCHNOTE>{Plays}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Interviews</HEADING>
         <RESEARCHNOTE>{Interviews}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Unverified titles</HEADING>
         <RESEARCHNOTE>{Unverified_titles}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="2">Periodical contributions</HEADING>
         <RESEARCHNOTE>{Periodical_contributions}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="2">Other publications</HEADING>
         <RESEARCHNOTE>{Other_publications}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="2">Other artistic productions</HEADING>
         <HEADING SUBTYPE="3">Music</HEADING>
         <RESEARCHNOTE>{Music}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Radio plays</HEADING>
         <RESEARCHNOTE>{Radioplays}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Screenplays</HEADING>
         <RESEARCHNOTE>{Screenplays}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Visual arts</HEADING>
         <RESEARCHNOTE>{Visual_arts}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="3">Other</HEADING>
         <RESEARCHNOTE>{Other}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="2">Family and Relationships</HEADING>
         <FAMILY>
             <FAMILYMEMBER RELATION="FATHER">
@@ -130,7 +123,7 @@
                 <CHRONSTRUCT><DATERANGE FROM="" TO="">(sibling date of birth-date of death)</DATERANGE><CHRONPROSE>: additional information about sibling, items separated with semicolons</CHRONPROSE></CHRONSTRUCT>
             </FAMILYMEMBER>
             <FAMILYMEMBER RELATION="HUSBAND">
-                <HEADING SUBTYPE="3"><NAME>{Spouse1} </NAME><DATERANGE>{Spouse1_life_dates}</DATERANGE></HEADING>
+                <HEADING SUBTYPE="3"><NAME>{Spouse1} </NAME><DATERANGE>({Spouse1_life_dates})</DATERANGE></HEADING>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
                 <CHRONSTRUCT><DATE>{Marriage1_date}, </DATE><CHRONPROSE><PLACE>{Marriage1_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
                 <P>{Spouse1bio}</P>
@@ -140,10 +133,11 @@
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Children</HEADING>
                 <NAME>Child name</NAME>
-                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE>            
-            </CHRONSTRUCT></FAMILYMEMBER><!--This part repeats for each child-->
+                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE> </CHRONSTRUCT>
+            </FAMILYMEMBER>
+            <!--This part repeats for each child-->
             <RESEARCHNOTE>{Children1bios}</RESEARCHNOTE>
-                <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by       @@</RESEARCHNOTE>
+            <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by @@</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="HUSBAND">
                 <HEADING SUBTYPE="3"><NAME>{Spouse2} </NAME><DATERANGE>{Spouse2_life_dates}</DATERANGE></HEADING>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
@@ -155,10 +149,11 @@
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Children</HEADING>
                 <NAME>Child name</NAME>
-                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE>            
-                </CHRONSTRUCT></FAMILYMEMBER><!--This part repeats for each child-->
+                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE> </CHRONSTRUCT>
+            </FAMILYMEMBER>
+            <!--This part repeats for each child-->
             <RESEARCHNOTE>{Children2bios}</RESEARCHNOTE>
-            <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by       @@</RESEARCHNOTE>
+            <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by @@</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="HUSBAND">
                 <HEADING SUBTYPE="3"><NAME>{Spouse3} </NAME><DATERANGE>{Spouse3_life_dates}</DATERANGE></HEADING>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
@@ -170,10 +165,11 @@
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Children</HEADING>
                 <NAME>Child name</NAME>
-                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE>            
-                </CHRONSTRUCT></FAMILYMEMBER><!--This part repeats for each child-->
+                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE> </CHRONSTRUCT>
+            </FAMILYMEMBER>
+            <!--This part repeats for each child-->
             <RESEARCHNOTE>{Children3bios}</RESEARCHNOTE>
-            <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by       @@</RESEARCHNOTE>
+            <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by @@</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="HUSBAND">
                 <HEADING SUBTYPE="3"><NAME>{Spouse4} </NAME><DATERANGE>{Spouse4_life_dates}</DATERANGE></HEADING>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
@@ -185,10 +181,11 @@
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Children</HEADING>
                 <NAME>Child name</NAME>
-                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE>            
-                </CHRONSTRUCT></FAMILYMEMBER><!--This part repeats for each child-->
+                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE> </CHRONSTRUCT>
+            </FAMILYMEMBER>
+            <!--This part repeats for each child-->
             <RESEARCHNOTE>{Children4bios}</RESEARCHNOTE>
-            <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by       @@</RESEARCHNOTE>
+            <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by @@</RESEARCHNOTE>
         </FAMILY>
         <HEADING SUBTYPE="2">Religion</HEADING>
         <CULTURALFORMATION>
@@ -212,10 +209,7 @@
         </EDUCATION>
         <HEADING SUBTYPE="2">Awards</HEADING>
         <RESEARCHNOTE>{Awards}</RESEARCHNOTE>
-        <RECEPTION>
-            <RESEARCHNOTE>Copy editor: break list of awards, as well as Employment and membership below into individual chronstructs following the provided models and delete the now empty research notes when done</RESEARCHNOTE>
-            <CHRONSTRUCT> <CHRONPROSE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME></RRECOGNITIONNAME><ORGNAME></ORGNAME></RRECOGNITIONSANDAWARDS></CHRONPROSE> <DATE></DATE></CHRONSTRUCT>
-        </RECEPTION>
+        <RECEPTION> <RESEARCHNOTE>Copy editor: break list of awards, as well as Employment and membership below into individual chronstructs following the provided models and delete the now empty research notes when done</RESEARCHNOTE> <CHRONSTRUCT> <CHRONPROSE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME></RRECOGNITIONNAME><ORGNAME></ORGNAME></RRECOGNITIONSANDAWARDS></CHRONPROSE> <DATE></DATE></CHRONSTRUCT> </RECEPTION>
         <HEADING SUBTYPE="2">Employment and Volunteer Activities</HEADING>
         <OCCUPATION>
             <HEADING SUBTYPE="3">Employment</HEADING>
@@ -228,12 +222,12 @@
             <RESEARCHNOTE>{Membership}</RESEARCHNOTE>
             <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
         </OCCUPATION>
-        <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. In the DBREF attribute of bibcits put the PID value of the cited resource from the CWRC repository. Delete the now empty research notes.</RESEARCHNOTE>
+        <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. Delete the now emplty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="2">Archival Holdings</HEADING>
         <RESEARCHNOTE>{Archive_material}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
         <HEADING SUBTYPE="2">Published Resources</HEADING>
         <RESEARCHNOTE>{Published_resources}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT DBREF=""></BIBCIT></BIBCITS>
+        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
     </ENTRY>
 </CWRC>
