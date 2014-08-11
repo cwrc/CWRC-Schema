@@ -142,7 +142,7 @@
                 <HEADING SUBTYPE="3"><NAME>{Spouse2} </NAME><DATERANGE>{Spouse2_life_dates}</DATERANGE></HEADING>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
                 <CHRONSTRUCT><DATE>{Marriage2_date}, </DATE><CHRONPROSE><PLACE>{Marriage2_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
-                <P>{Spouse1bio}</P>
+                <P>{Spouse2bio}</P>
             </FAMILYMEMBER>
             <RESEARCHNOTE>{Children2}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: break list of children into a list of individuals using the structure below; if more than one child included, only the first child family member contains a heading tag:</RESEARCHNOTE>
@@ -158,7 +158,7 @@
                 <HEADING SUBTYPE="3"><NAME>{Spouse3} </NAME><DATERANGE>{Spouse3_life_dates}</DATERANGE></HEADING>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
                 <CHRONSTRUCT><DATE>{Marriage3_date}, </DATE><CHRONPROSE><PLACE>{Marriage3_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
-                <P>{Spouse1bio}</P>
+                <P>{Spouse3bio}</P>
             </FAMILYMEMBER>
             <RESEARCHNOTE>{Children3}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: break list of children into a list of individuals using the structure below; if more than one child included, only the first child family member contains a heading tag:</RESEARCHNOTE>
@@ -186,6 +186,12 @@
             <!--This part repeats for each child-->
             <RESEARCHNOTE>{Children4bios}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by @@</RESEARCHNOTE>
+            <RESEARCHNOTE>Other children: {Other_children}</RESEARCHNOTE>
+            <RESEARCHNOTE>Copy editor: If other children listed in the research note above, list them as individual family members below; if more than one child listed, only the first child family member contains a heading tag </RESEARCHNOTE>
+            <FAMILYMEMBER RELATION="">
+                <HEADING SUBTYPE="4">Other children</HEADING>
+                <NAME>Child name</NAME>
+                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE> </CHRONSTRUCT></FAMILYMEMBER>
         </FAMILY>
         <HEADING SUBTYPE="2">Religion</HEADING>
         <CULTURALFORMATION>
@@ -216,10 +222,10 @@
             <RESEARCHNOTE>{Employment}</RESEARCHNOTE>
             <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
             <HEADING SUBTYPE="3">Unpayed and volunteer work</HEADING>
-            <RESEARCHNOTE>{Unpayed_and_volunteer_work}</RESEARCHNOTE>
+            <RESEARCHNOTE>{Unpaid_and_volunteer_work}</RESEARCHNOTE>
             <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
             <HEADING SUBTYPE="3">Membership</HEADING>
-            <RESEARCHNOTE>{Membership}</RESEARCHNOTE>
+            <RESEARCHNOTE>{Memberships}</RESEARCHNOTE>
             <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
         </OCCUPATION>
         <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. Delete the now emplty research notes.</RESEARCHNOTE>
