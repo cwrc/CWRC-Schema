@@ -22,6 +22,7 @@
     </CWRCHEADER>
     <ENTRY>
         <HEADING SUBTYPE="1"><NAME STANDARD="">{Author}</NAME>({Birth_date}-{Death_date})</HEADING>
+        <RESEARCHNOTE>Placeholder for image / image caption: {Image_credits}</RESEARCHNOTE>
         <SCHOLARNOTE><P>{Short_biography}</P></SCHOLARNOTE>
         <BIRTH>
             <CHRONSTRUCT><DATE>{Birth_date}, </DATE><CHRONPROSE><PLACE>{Birth_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
@@ -228,6 +229,7 @@
             <RESEARCHNOTE>{Memberships}</RESEARCHNOTE>
             <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
         </OCCUPATION>
+        <OTHERLIFEEVENT><P>{Tangential_information}</P></OTHERLIFEEVENT>
         <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. Delete the now emplty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="2">Archival Holdings</HEADING>
         <RESEARCHNOTE>{Archive_material}</RESEARCHNOTE>
