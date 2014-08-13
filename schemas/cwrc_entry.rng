@@ -33,6 +33,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: 13-Aug-2014:
+  - Added the element XREF as a child element of the element BIBCIT.
+  - Renamed the attribute TITLETYPE to LEVEL (to parallel TEI's terminology for this attribute).
 *MRB: 07-Aug-2014: Renamed the attribute DBREF to REF.
 * MRB: July 2014: Made the following changes:
   - Deleted the element SHORTPROSE, and the two REFs to it from the elements PRODUCTION and RECEPTION.
@@ -1421,14 +1424,14 @@
 
     <define name="DATE">
         <element name="DATE">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Date is one of three elements, along with dateRange and
-                dateStruct, used to systematize the capture of dates across project documents. Date is used to tag all singular dates (not ranges) for
-                which all components (day, month, year) have a common degree of certainty.  Accurate and systematic tagging of dates by CWRC projects is
-                a high priority both for the role that dates play in sorting and properly displaying chronology events, but also for facilitating the
-                search and retrieval of non-chronology material across project documents.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Date is one of two elements, along with dateRange,
+                used to systematize the capture of dates across project documents. Date is used to tag all singular dates (not ranges).  Accurate
+                and systematic tagging of dates by CWRC projects is a high priority both for the role that dates play in sorting and properly displaying
+                chronology events, but also for facilitating the search and retrieval of non-chronology material across project documents.
+            </a:documentation>
             <optional>
                 <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct,
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date and dateRange,
                         calendar is used to indicate when a given date took place.</a:documentation>
                     <choice>
                         <value>NEWSTYLE</value>
@@ -1438,8 +1441,8 @@
             </optional>
             <optional>
                 <attribute name="CERTAINTY" a:defaultValue="CERT">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
-                        dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date and dateRange,
+                        and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
                     <choice>
                         <value>CERT</value>
                         <a:documentation>Certain</a:documentation>
@@ -2205,6 +2208,7 @@
                         <oneOrMore>
                             <choice>
                                 <text/>
+                                <ref name="XREF"/>
                                 <ref name="RESEARCHNOTE"/>
                             </choice>
                         </oneOrMore>
@@ -2529,8 +2533,8 @@
                 </attribute>
             </optional>
             <optional>
-                <attribute name="TITLETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
+                <attribute name="LEVEL">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, level indicates whether a
                         title is a part of another work, an entire work, a journal, or a series.</a:documentation>
                     <choice>
                         <value>MONOGRAPHIC</value>
@@ -3326,8 +3330,8 @@
                 format.</a:documentation>
             <optional>
                 <attribute name="CERTAINTY" a:defaultValue="CERT">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
-                        dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date and dateRange,
+                        and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
                     <choice>
                         <value>CERT</value>
                         <a:documentation>Certain</a:documentation>
@@ -7095,12 +7099,12 @@
 
     <define name="DATERANGE">
         <element name="DATERANGE">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Along with date and dateStruct, dateRange is one of three
-                elements used for systematizing dates across project documents. Use dateRange for all events that occurred over a span of time or for all
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Along with date, dateRange is one of two elements
+                used for systematizing dates across project documents. Use dateRange for all events that occurred over a span of time or for all
                 dates that are uncertain but that certainly occurred within a specified span of time.</a:documentation>
             <optional>
                 <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct,
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date and dateRange,
                         calendar is used to indicate when a given date took place.</a:documentation>
                     <choice>
                         <value>NEWSTYLE</value>
@@ -7110,8 +7114,8 @@
             </optional>
             <optional>
                 <attribute name="CERTAINTY" a:defaultValue="CERT">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and
-                        dateStruct and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date and dateRange,
+                        and is used to indicate the nature of certainty that you have about a given date.</a:documentation>
                     <choice>
                         <value>CERT</value>
                         <a:documentation>Certain</a:documentation>
