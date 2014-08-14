@@ -34,6 +34,7 @@
 <!-- 
 *** Revisions ***
 * MRB: 13-Aug-2014:
+  - Added the element TITLE as a child element of the element BIBCIT.
   - Added the element XREF as a child element of the element BIBCIT.
   - Renamed the attribute TITLETYPE to LEVEL (to parallel TEI's terminology for this attribute).
 *MRB: 07-Aug-2014: Renamed the attribute DBREF to REF.
@@ -2210,6 +2211,7 @@
                                 <text/>
                                 <ref name="XREF"/>
                                 <ref name="RESEARCHNOTE"/>
+                                <ref name="TITLE"/>
                             </choice>
                         </oneOrMore>
                     </element>
