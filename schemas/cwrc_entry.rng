@@ -33,11 +33,10 @@
 
 <!-- 
 *** Revisions ***
-* MRB: 13-Aug-2014:
-  - Added the element TITLE as a child element of the element BIBCIT.
-  - Added the element XREF as a child element of the element BIBCIT.
+* MRB: August 2014: Made the following changes:
+  - Added the elements DATE, NAME, ORGNAME, TITLE, and XREF as a child elements of the element BIBCIT.
   - Renamed the attribute TITLETYPE to LEVEL (to parallel TEI's terminology for this attribute).
-*MRB: 07-Aug-2014: Renamed the attribute DBREF to REF.
+  - Renamed the attribute DBREF to REF.
 * MRB: July 2014: Made the following changes:
   - Deleted the element SHORTPROSE, and the two REFs to it from the elements PRODUCTION and RECEPTION.
   - Added the element RESEARCHNOTE as a child element to the element FAMILYMEMBER.
@@ -2209,9 +2208,12 @@
                         <oneOrMore>
                             <choice>
                                 <text/>
-                                <ref name="XREF"/>
+                                <ref name="DATE"/>
+                                <ref name="NAME"/>
+                                <ref name="ORGNAME"/>
                                 <ref name="RESEARCHNOTE"/>
                                 <ref name="TITLE"/>
+                                <ref name="XREF"/>
                             </choice>
                         </oneOrMore>
                     </element>
