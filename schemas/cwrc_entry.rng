@@ -34,9 +34,11 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2014: Made the following changes:
-  - Merged the child elements of the element CHRONPROSE and the element DATAITEM so that they both have the same
-    child elements; also redefined the element RELIGIOUSNAME from being locally defined in the element DATAITEM to 
-    being globally defined (RELGIOUSNAME is now a child element of the elements CHRONPROSE, DATAITEM, and P).
+  - Added the element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, HEADER, and P; FIGURE has child elements of FIGDESC and GRAPHIC
+    (GRAPHIC has an attribute URL), and REFs to child elements HEADING and P.
+  - Merged the child elements of the element CHRONPROSE and the element DATAITEM so that they both have the same child elements; also redefined the element
+    RELIGIOUSNAME from being locally defined in the element DATAITEM to being globally defined (RELGIOUSNAME is now a child element of the elements
+    CHRONPROSE, DATAITEM, and P).
   - Added the elements BIBLSCOPE, DATE, NAME, ORGNAME, TITLE, and XREF as a child elements of the element BIBCIT.
   - Renamed the attribute TITLETYPE to LEVEL (to parallel TEI's terminology for this attribute).
   - Renamed the attribute DBREF to REF.
@@ -1522,6 +1524,7 @@
                     <ref name="ETHNICITY"/>
                     <ref name="EXTENTOFOEUVRE"/>
                     <ref name="FAMILY"/>
+                    <ref name="FIGURE"/>
                     <ref name="FOREIGN"/>
                     <ref name="FRIENDSASSOCIATES"/>
                     <ref name="GENERICRANGE"/>
@@ -1588,6 +1591,7 @@
                     <ref name="RBESTKNOWNWORK"/>
                     <ref name="RDESTRUCTIONOFWORK"/>
                     <ref name="RECEPTION"/>
+                    <ref name="RELIGIOUSNAME"/>
                     <ref name="REMUNERATION"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="RFICTIONALIZATION"/>
@@ -1656,8 +1660,6 @@
                 <data type="NCName"/>
             </attribute>
             <element name="HEAD">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">head contains any type of heading, for example the title
-                    of a section, or the heading of a list, glossary, manuscript description, etc.</a:documentation>
                 <empty/>
             </element>
             <oneOrMore>
@@ -1792,6 +1794,7 @@
                                 <ref name="DIVORCE"/>
                                 <ref name="EMPH"/>
                                 <ref name="EMPLOYER"/>
+                                <ref name="FIGURE"/>
                                 <ref name="FOREIGN"/>
                                 <ref name="GENDER"/>
                                 <ref name="INDEXED"/>
@@ -1927,6 +1930,7 @@
                                 <ref name="DIVORCE"/>
                                 <ref name="EMPH"/>
                                 <ref name="EMPLOYER"/>
+                                <ref name="FIGURE"/>
                                 <ref name="FOREIGN"/>
                                 <ref name="GENDER"/>
                                 <ref name="INDEXED"/>
@@ -2049,6 +2053,7 @@
                     <text/>
                     <ref name="DATE"/>
                     <ref name="DATERANGE"/>
+                    <ref name="FIGURE"/>
                     <ref name="FOREIGN"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
@@ -2059,6 +2064,33 @@
                     <ref name="SCHOOL"/>
                     <ref name="SOCALLED"/>
                     <ref name="TITLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="FIGURE">
+        <element name="FIGURE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The figure element groups elements representing or containing graphic
+                information such as an illustration, formula, or figure.</a:documentation>
+            <oneOrMore>
+                <choice>
+                    <element name="FIGDESC">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FigDesc (description of figure) contains a brief prose description
+                            of the appearance or content of a graphic figure, for use when documenting an image without displaying it.</a:documentation>
+                        <text/>
+                    </element>
+                    <element name="GRAPHIC">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Graphic indicates the location of an inline graphic, illustration, or
+                            figure.</a:documentation>
+                        <attribute name="URL">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">URL (uniform resource locator) specifies the URL from
+                                which the media concerned may be obtained.</a:documentation>
+                            <data type="anyURI"/>
+                        </attribute>
+                    </element>
+                    <ref name="HEADING"/>
+                    <ref name="P"/>
                 </choice>
             </oneOrMore>
         </element>
