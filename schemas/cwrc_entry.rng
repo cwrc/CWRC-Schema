@@ -34,7 +34,10 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2014: Made the following changes:
-  - Added the elements DATE, NAME, ORGNAME, TITLE, and XREF as a child elements of the element BIBCIT.
+  - Merged the child elements of the element CHRONPROSE and the element DATAITEM so that they both have the same
+    child elements; also redefined the element RELIGIOUSNAME from being locally defined in the element DATAITEM to 
+    being globally defined (RELGIOUSNAME is now a child element of the elements CHRONPROSE, DATAITEM, and P).
+  - Added the elements BIBLSCOPE, DATE, NAME, ORGNAME, TITLE, and XREF as a child elements of the element BIBCIT.
   - Renamed the attribute TITLETYPE to LEVEL (to parallel TEI's terminology for this attribute).
   - Renamed the attribute DBREF to REF.
 * MRB: July 2014: Made the following changes:
@@ -1775,6 +1778,7 @@
                                 <text/>
                                 <ref name="AWARDSNONLITERARY"/>
                                 <ref name="BIBCITS"/>
+                                <ref name="BIRTHNAME"/>
                                 <ref name="CAUSE"/>
                                 <ref name="CHILDLESSNESS"/>
                                 <ref name="CHILDREN"/>
@@ -1790,12 +1794,15 @@
                                 <ref name="EMPLOYER"/>
                                 <ref name="FOREIGN"/>
                                 <ref name="GENDER"/>
+                                <ref name="INDEXED"/>
                                 <ref name="INSTRUCTOR"/>
                                 <ref name="JOBTITLE"/>
                                 <ref name="KEYWORDCLASS"/>
                                 <ref name="LIVESWITH"/>
+                                <ref name="MARRIED"/>
                                 <ref name="NAME"/>
                                 <ref name="NATIONALITY"/>
+                                <ref name="NICKNAME"/>
                                 <ref name="ORGNAME"/>
                                 <ref name="PADVERTISING"/>
                                 <ref name="PANTHOLOGIZATION"/>
@@ -1828,16 +1835,19 @@
                                 <ref name="PRARITIESFEATURESDECORATIONS"/>
                                 <ref name="PRELATIONSWITHPUBLISHER"/>
                                 <ref name="PSERIALIZATION"/>
+                                <ref name="PSEUDONYM"/>
                                 <ref name="PSUBMISSIONSREJECTIONS"/>
                                 <ref name="PTYPEOFPRESS"/>
                                 <ref name="QUOTE"/>
                                 <ref name="RBESTKNOWNWORK"/>
                                 <ref name="RDESTRUCTIONOFWORK"/>
+                                <ref name="RELIGIOUSNAME"/>
                                 <ref name="REMUNERATION"/>
                                 <ref name="RESEARCHNOTE"/>
                                 <ref name="RFICTIONALIZATION"/>
                                 <ref name="RLANDMARKTEXT"/>
                                 <ref name="ROLE"/>
+                                <ref name="ROYAL"/>
                                 <ref name="RPENALTIES"/>
                                 <ref name="RRECOGNITIONNAME"/>
                                 <ref name="RRECOGNITIONSANDAWARDS"/>
@@ -1849,11 +1859,13 @@
                                 <ref name="RWRITINGMILESTONE"/>
                                 <ref name="SCHOLARNOTE"/>
                                 <ref name="SCHOOL"/>
+                                <ref name="SELFCONSTRUCTED"/>
                                 <ref name="SEPARATION"/>
                                 <ref name="SEXUALIDENTITY"/>
                                 <ref name="SIC"/>
                                 <ref name="SIGNIFICANTACTIVITY"/>
                                 <ref name="SOCALLED"/>
+                                <ref name="STYLED"/>
                                 <ref name="SUBJECT"/>
                                 <ref name="TCHARACTERIZATION"/>
                                 <ref name="TCHARACTERNAME"/>
@@ -1864,6 +1876,7 @@
                                 <ref name="TIME"/>
                                 <ref name="TINTERTEXTUALITY"/>
                                 <ref name="TITLE"/>
+                                <ref name="TITLED"/>
                                 <ref name="TMOTIF"/>
                                 <ref name="TOPIC"/>
                                 <ref name="TPLOT"/>
@@ -1898,55 +1911,116 @@
                         <oneOrMore>
                             <choice>
                                 <text/>
+                                <ref name="AWARDSNONLITERARY"/>
                                 <ref name="BIBCITS"/>
                                 <ref name="BIRTHNAME"/>
+                                <ref name="CAUSE"/>
+                                <ref name="CHILDLESSNESS"/>
+                                <ref name="CHILDREN"/>
+                                <ref name="CLASS"/>
+                                <ref name="COMPANION"/>
+                                <ref name="CONTESTEDBEHAVIOUR"/>
                                 <ref name="DATE"/>
                                 <ref name="DATERANGE"/>
+                                <ref name="DEGREE"/>
+                                <ref name="DENOMINATION"/>
+                                <ref name="DIVORCE"/>
+                                <ref name="EMPH"/>
+                                <ref name="EMPLOYER"/>
+                                <ref name="FOREIGN"/>
+                                <ref name="GENDER"/>
                                 <ref name="INDEXED"/>
+                                <ref name="INSTRUCTOR"/>
+                                <ref name="JOBTITLE"/>
+                                <ref name="KEYWORDCLASS"/>
+                                <ref name="LIVESWITH"/>
                                 <ref name="MARRIED"/>
                                 <ref name="NAME"/>
+                                <ref name="NATIONALITY"/>
                                 <ref name="NICKNAME"/>
+                                <ref name="ORGNAME"/>
+                                <ref name="PADVERTISING"/>
+                                <ref name="PANTHOLOGIZATION"/>
+                                <ref name="PARCHIVALLOCATION"/>
+                                <ref name="PATTITUDES"/>
+                                <ref name="PAUTHORSHIP"/>
+                                <ref name="PCIRCULATION"/>
+                                <ref name="PCONTRACT"/>
+                                <ref name="PCOPYRIGHT"/>
+                                <ref name="PDEDICATION"/>
+                                <ref name="PEARNINGS"/>
+                                <ref name="PEDITIONS"/>
+                                <ref name="PFIRSTLITERARYACTIVITY"/>
+                                <ref name="PINFLUENCESHER"/>
                                 <ref name="PLACE"/>
+                                <ref name="PLASTLITERARYACTIVITY"/>
+                                <ref name="PLITERARYMOVEMENTS"/>
+                                <ref name="PMANUSCRIPTHISTORY"/>
+                                <ref name="PMATERIALCONDITIONS"/>
+                                <ref name="PMODEOFPUBLICATION"/>
+                                <ref name="PMOTIVES"/>
+                                <ref name="PNONBOOKMEDIA"/>
+                                <ref name="PNONSURVIVAL"/>
+                                <ref name="POLITICALAFFILIATION"/>
+                                <ref name="PPERFORMANCE"/>
+                                <ref name="PPERIODICALPUBLICATION"/>
+                                <ref name="PPLACEOFPUBLICATION"/>
+                                <ref name="PPRESSRUN"/>
+                                <ref name="PPRICE"/>
+                                <ref name="PRARITIESFEATURESDECORATIONS"/>
+                                <ref name="PRELATIONSWITHPUBLISHER"/>
+                                <ref name="PSERIALIZATION"/>
                                 <ref name="PSEUDONYM"/>
+                                <ref name="PSUBMISSIONSREJECTIONS"/>
+                                <ref name="PTYPEOFPRESS"/>
+                                <ref name="QUOTE"/>
+                                <ref name="RBESTKNOWNWORK"/>
+                                <ref name="RDESTRUCTIONOFWORK"/>
+                                <ref name="RELIGIOUSNAME"/>
+                                <ref name="REMUNERATION"/>
                                 <ref name="RESEARCHNOTE"/>
+                                <ref name="RFICTIONALIZATION"/>
+                                <ref name="RLANDMARKTEXT"/>
+                                <ref name="ROLE"/>
                                 <ref name="ROYAL"/>
+                                <ref name="RPENALTIES"/>
+                                <ref name="RRECOGNITIONNAME"/>
+                                <ref name="RRECOGNITIONSANDAWARDS"/>
+                                <ref name="RRECOGNITIONVALUE"/>
+                                <ref name="RRESPONSES"/>
+                                <ref name="RS"/>
+                                <ref name="RSELFDESCRIPTION"/>
+                                <ref name="RSHEINFLUENCED"/>
+                                <ref name="RWRITINGMILESTONE"/>
                                 <ref name="SCHOLARNOTE"/>
+                                <ref name="SCHOOL"/>
                                 <ref name="SELFCONSTRUCTED"/>
+                                <ref name="SEPARATION"/>
+                                <ref name="SEXUALIDENTITY"/>
+                                <ref name="SIC"/>
+                                <ref name="SIGNIFICANTACTIVITY"/>
+                                <ref name="SOCALLED"/>
                                 <ref name="STYLED"/>
+                                <ref name="SUBJECT"/>
+                                <ref name="TCHARACTERIZATION"/>
+                                <ref name="TCHARACTERNAME"/>
+                                <ref name="TCHARACTERTYPEROLE"/>
+                                <ref name="TEXT"/>
+                                <ref name="TGENRE"/>
+                                <ref name="TGENREISSUE"/>
+                                <ref name="TIME"/>
+                                <ref name="TINTERTEXTUALITY"/>
                                 <ref name="TITLE"/>
                                 <ref name="TITLED"/>
-                                <element name="RELIGIOUSNAME">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ReligiousName is a
-                                    sub-element available within personName which captures all names a person acquired through religion.
-                                    For example, her name change on entering a convent or a name she used for religious
-                                    reasons.</a:documentation>
-                                    <optional>
-                                        <attribute name="REG" a:documentation="Regularized value">
-                                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
-                                            regularization) contains a reading which has been regularized or normalized in some
-                                            sense.</a:documentation>
-                                        </attribute>
-                                    </optional>
-                                    <optional>
-                                        <attribute name="WROTEORPUBLISHEDAS" a:defaultValue="WROTEPUBLISHEDASYES">
-                                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">WroteOrPublishedAs
-                                            is an attribute attached to all the types of a person&apos;s name captured within their
-                                            biography section. This attribute will allow us to track all the different names women
-                                            writers published under. While we assume that most writers published under their standard
-                                            name and pseudonyms, they may also have used a nickname or their married name, for instance,
-                                            to publish material. This attribute works in conjunction with the authorname in the
-                                            bibliography to link the name a text was published under with the name of the
-                                            person.</a:documentation>
-                                            <value>WROTEPUBLISHEDASYES</value>
-                                        </attribute>
-                                    </optional>
-                                    <oneOrMore>
-                                        <choice>
-                                            <text/>
-                                            <ref name="FOREIGN"/>
-                                        </choice>
-                                    </oneOrMore>
-                                </element>
+                                <ref name="TMOTIF"/>
+                                <ref name="TOPIC"/>
+                                <ref name="TPLOT"/>
+                                <ref name="TSETTINGDATE"/>
+                                <ref name="TSETTINGPLACE"/>
+                                <ref name="TTECHNIQUES"/>
+                                <ref name="TTHEMETOPIC"/>
+                                <ref name="TTONESTYLE"/>
+                                <ref name="TVOICENARRATION"/>
                             </choice>
                         </oneOrMore>
                     </element>
@@ -2208,6 +2282,12 @@
                         <oneOrMore>
                             <choice>
                                 <text/>
+                                <element name="BIBLSCOPE">
+                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">BiblScope (scope of bibliographic reference)
+                                        defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger
+                                        work.</a:documentation>
+                                    <text/>
+                                </element>
                                 <ref name="DATE"/>
                                 <ref name="NAME"/>
                                 <ref name="ORGNAME"/>
@@ -8431,6 +8511,41 @@
                 </attribute>
             </optional>
             <text/>
+        </element>
+    </define>
+
+    <define name="RELIGIOUSNAME">
+        <element name="RELIGIOUSNAME">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ReligiousName is a
+            sub-element available within personName which captures all names a person acquired through religion.
+            For example, her name change on entering a convent or a name she used for religious
+            reasons.</a:documentation>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
+                    regularization) contains a reading which has been regularized or normalized in some
+                    sense.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="WROTEORPUBLISHEDAS" a:defaultValue="WROTEPUBLISHEDASYES">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">WroteOrPublishedAs
+                    is an attribute attached to all the types of a person&apos;s name captured within their
+                    biography section. This attribute will allow us to track all the different names women
+                    writers published under. While we assume that most writers published under their standard
+                    name and pseudonyms, they may also have used a nickname or their married name, for instance,
+                    to publish material. This attribute works in conjunction with the authorname in the
+                    bibliography to link the name a text was published under with the name of the
+                    person.</a:documentation>
+                    <value>WROTEPUBLISHEDASYES</value>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="FOREIGN"/>
+                </choice>
+            </oneOrMore>
         </element>
     </define>
 
