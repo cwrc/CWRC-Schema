@@ -33,6 +33,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: August 2014: Made the folloiwng changes:
+  - Removed text node from the element DIV2.
+  - Removed references to the element BIBCITS from the following parent elements: SHORTPROSE, DATASTRUCT, DIV2, and DIV0.
 * MRB: July 2014: Made the following changes:
   - Added new element of GENDER, with a new attribute of GENDER, to the CULTURALFORMATION element; GENDER has the same enumerated list of values as
     the attribute SEX, with the addition of UNGENDERED and UNKNOWN; can have multiple values.
@@ -195,7 +198,6 @@
           contains everything in a document except the cataloguing information that is contained in the CWRCHeader element.</a:documentation>
                 <oneOrMore>
                     <choice>
-                        <ref name="BIBCITS"/>
                         <ref name="HEADING"/>
                         <ref name="RESEARCHNOTE"/>
                         <element name="AUTHORSUMMARY">
@@ -1509,8 +1511,6 @@
         third largest structural division in a document.</a:documentation>
             <oneOrMore>
                 <choice>
-                    <text/>
-                    <ref name="BIBCITS"/>
                     <ref name="BIRTHNAME"/>
                     <ref name="BIRTHPOSITION"/>
                     <ref name="CHRONSTRUCT"/>
@@ -1530,7 +1530,6 @@
               more individual pieces of tabular data in the document.</a:documentation>
                         <oneOrMore>
                             <choice>
-                                <ref name="BIBCITS"/>
                                 <ref name="INDEXED"/>
                                 <ref name="RESEARCHNOTE"/>
                                 <ref name="SCHOLARNOTE"/>
@@ -1599,7 +1598,6 @@
                     <element name="SHORTPROSE">
                         <oneOrMore>
                             <choice>
-                                <ref name="BIBCITS"/>
                                 <ref name="KEYWORDCLASS"/>
                                 <ref name="P"/>
                                 <ref name="RESEARCHNOTE"/>
@@ -1621,7 +1619,6 @@
             </optional>
             <zeroOrMore>
                 <choice>
-                    <ref name="BIBCITS"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="SCHOLARNOTE"/>
                     <element name="BIBCIT">

@@ -33,6 +33,8 @@
 
 <!-- 
 *** Revisions ***
+* MRB: August 2014: Made the following changes:
+  - Made the required attributes CT_ID, CT_ISLINK, EID, ID, SN_ID, and SUBSET optional attributes.
 * MRB: June 2014: Addressed GitHub issues associated with the Orlando events schema:
   - Added documentation for writing-related elements and attributes.
 -->
@@ -47,20 +49,26 @@
         <element name="FREESTANDING_EVENT">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Events is the largest element available in events documents and its sole
         purpose is to contain the overall document structure.</a:documentation>
-            <attribute name="EID">
-                <data type="integer"/>
-            </attribute>
+            <optional>
+                <attribute name="EID">
+                    <data type="integer"/>
+                </attribute>
+            </optional>
             <optional>
                 <attribute name="FILENAME">
                     <data type="NMTOKEN"/>
                 </attribute>
             </optional>
-            <attribute name="ID">
-                <data type="NCName"/>
-            </attribute>
-            <attribute name="SUBSET">
-                <data type="NCName"/>
-            </attribute>
+            <optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="SUBSET">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
             <optional>
                 <attribute name="TITLE">
                     <data type="NCName"/>
@@ -110,9 +118,11 @@
                         </choice>
                     </attribute>
                 </optional>
-                <attribute name="ID">
-                    <data type="NCName"/>
-                </attribute>
+                <optional>
+                    <attribute name="ID">
+                        <data type="NCName"/>
+                    </attribute>
+                </optional>
                 <attribute name="RELEVANCE">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to
             each and every chronStruct. This element assignes importance to the chronstruct you have just created with categories for comprehensive,
@@ -537,12 +547,16 @@
         <element name="TITLE">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The title element contains the title of a work, whether
         article, book, journal (newspaper, magazine), series, or unpublished.</a:documentation>
-            <attribute name="CT_ID">
-                <data type="NMTOKEN"/>
-            </attribute>
-            <attribute name="CT_ISLINK">
-                <data type="integer"/>
-            </attribute>
+            <optional>
+                <attribute name="CT_ID">
+                    <data type="NMTOKEN"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CT_ISLINK">
+                    <data type="integer"/>
+                </attribute>
+            </optional>
             <optional>
                 <attribute name="REG" a:documentation="Regularized value">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
@@ -653,12 +667,16 @@
 
     <define name="NAME">
         <element name="NAME">
-            <attribute name="CT_ID">
-                <data type="NMTOKEN"/>
-            </attribute>
-            <attribute name="CT_ISLINK">
-                <data type="integer"/>
-            </attribute>
+            <optional>
+                <attribute name="CT_ID">
+                    <data type="NMTOKEN"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CT_ISLINK">
+                    <data type="integer"/>
+                </attribute>
+            </optional>
             <attribute name="STANDARD"/>
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
         organization, or topic is known</a:documentation>
@@ -1002,12 +1020,16 @@
 
     <define name="SCHOLARNOTE">
         <element name="SCHOLARNOTE">
-            <attribute name="ID">
-                <data type="NCName"/>
-            </attribute>
-            <attribute name="SN_ID">
-                <data type="integer"/>
-            </attribute>
+            <optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="SN_ID">
+                    <data type="integer"/>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -1036,12 +1058,16 @@
         tagging. We hope to enhance our geographical information by context specific tagging. For example, by tagging only places where events
         occurred inside Event chronstructs and not all places mentioned within the prose, we will be able to map that event to the place tagged.
       </a:documentation>
-            <attribute name="CT_ID">
-                <data type="NMTOKEN"/>
-            </attribute>
-            <attribute name="CT_ISLINK">
-                <data type="integer"/>
-            </attribute>
+            <optional>
+                <attribute name="CT_ID">
+                    <data type="NMTOKEN"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CT_ISLINK">
+                    <data type="integer"/>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -1051,12 +1077,16 @@
               consider whether it is significant enough to capture in SGML (if a woman writer lived at the address, capture it; if she
               visited a friend there, probably not). Often for recent writers many addresses are available. Don&apos;t include them all.
               Include only those significant to the document you are writing.</a:documentation>
-                        <attribute name="CT_ID">
-                            <data type="NMTOKEN"/>
-                        </attribute>
-                        <attribute name="CT_ISLINK">
-                            <data type="integer"/>
-                        </attribute>
+                        <optional>
+                            <attribute name="CT_ID">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="CT_ISLINK">
+                                <data type="integer"/>
+                            </attribute>
+                        </optional>
                         <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
@@ -1094,12 +1124,16 @@
               Indo-China, British North America, British Protectorate of Bechuanaland [Note: use current attribute wherever possible.]; Conceptual
               Geographical Groupings: Far East, Caribbean; Historical Geo-political units: Siam, Ceylon [Note: use "current" attribute to regularize to
               "Thailand" and "Sri Lanka"].</a:documentation>
-                        <attribute name="CT_ID">
-                            <data type="NMTOKEN"/>
-                        </attribute>
-                        <attribute name="CT_ISLINK">
-                            <data type="integer"/>
-                        </attribute>
+                        <optional>
+                            <attribute name="CT_ID">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="CT_ISLINK">
+                                <data type="integer"/>
+                            </attribute>
+                        </optional>
                         <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
@@ -1123,12 +1157,16 @@
               The following are common types of placenames: Buildings and Estates: British Museum, Knole; Farms and Gardens: Kew Gardens; Squares:
               Bedford Square, Trafalgar Square; Streets: Fleet Street, The Strand, Old Change; Specific Mountains: while ranges are considered regions,
               the names of specific mountains are placenames, for example, Mount Everest; Cemeteries: Paddington Cemetery.</a:documentation>
-                        <attribute name="CT_ID">
-                            <data type="NMTOKEN"/>
-                        </attribute>
-                        <attribute name="CT_ISLINK">
-                            <data type="integer"/>
-                        </attribute>
+                        <optional>
+                            <attribute name="CT_ID">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="CT_ISLINK">
+                                <data type="integer"/>
+                            </attribute>
+                        </optional>
                         <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
@@ -1149,12 +1187,16 @@
               Alberta, Madras, California; Topographical features: all mountains ranges, islands (when not nation states), valleys, etc.; Bodies of Waters
               (including oceans, rivers, lakes): Lake Simcoe, English Channel, Nile, Atlantic ocean; Geographical regions: Lake District, Scottish Highlands;
               Greater Urban areas: Greater London, Greater Manchester; Borders: Welsh border, Tibetan border.</a:documentation>
-                        <attribute name="CT_ID">
-                            <data type="NMTOKEN"/>
-                        </attribute>
-                        <attribute name="CT_ISLINK">
-                            <data type="integer"/>
-                        </attribute>
+                        <optional>
+                            <attribute name="CT_ID">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="CT_ISLINK">
+                                <data type="integer"/>
+                            </attribute>
+                        </optional>
                         <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
@@ -1172,12 +1214,16 @@
                     <element name="SETTLEMENT">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Settlement, a sub-element of place, captures the names of
               cities, towns, villages, hamlets and areas within larger settlements (for example, districts of London).</a:documentation>
-                        <attribute name="CT_ID">
-                            <data type="NMTOKEN"/>
-                        </attribute>
-                        <attribute name="CT_ISLINK">
-                            <data type="integer"/>
-                        </attribute>
+                        <optional>
+                            <attribute name="CT_ID">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="CT_ISLINK">
+                                <data type="integer"/>
+                            </attribute>
+                        </optional>
                         <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
@@ -1301,12 +1347,16 @@
         <element name="ORGNAME">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The orgName element is used to identify schools, companies,
         and any other type of recognized organization.</a:documentation>
-            <attribute name="CT_ID">
-                <data type="NMTOKEN"/>
-            </attribute>
-            <attribute name="CT_ISLINK">
-                <data type="integer"/>
-            </attribute>
+            <optional>
+                <attribute name="CT_ID">
+                    <data type="NMTOKEN"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CT_ISLINK">
+                    <data type="integer"/>
+                </attribute>
+            </optional>
             <optional>
                 <attribute name="ORGTYPE">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A carry-over from the Microsoft Access database for
@@ -1348,9 +1398,11 @@
     <define name="P">
         <element name="P">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">p marks paragraphs in prose.</a:documentation>
-            <attribute name="ID">
-                <data type="NCName"/>
-            </attribute>
+            <optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>

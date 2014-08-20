@@ -34,6 +34,12 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2014: Made the following changes:
+  - Redefined the attribute VALUE in the element DATE so that the acceptable date formats are explicitly defined, i.e., YYYY, YYYY-MM, and YYYY-MM-DD (note:
+    also defined empty and dateTime as valid values).
+  - Redefined the attributes FROM and TO in the element DATERANGE so that the acceptable date formats are explicitly defined, i.e., YYYY, YYYY-MM, and
+    YYYY-MM-DD  (note: also defined empty and dateTime as valid values).
+  - Added the attribute REF to the elements NAME, ORGNAME, PLACE, and TITLE (REF [the old DBREF] was already an attribute of the elements BIBCIT and
+    TEXTSCOPE).
   - Added the element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, HEADER, and P; FIGURE has child elements of FIGDESC and GRAPHIC
     (GRAPHIC has an attribute URL), and REFs to child elements HEADING and P.
   - Merged the child elements of the element CHRONPROSE and the element DATAITEM so that they both have the same child elements; also redefined the element
@@ -1116,12 +1122,12 @@
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Textscope is the container element for the three major
                 writing-related elements: production, reception, and textual features.</a:documentation>
             <optional>
+                <attribute name="PLACEHOLDER"/>
+            </optional>
+            <optional>
                 <attribute name="REF">
                     <data type="anyURI"/>
                 </attribute>
-            </optional>
-            <optional>
-                <attribute name="PLACEHOLDER"/>
             </optional>
             <oneOrMore>
                 <choice>
@@ -1473,6 +1479,13 @@
                 <attribute name="VALUE">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
                         time-related value.</a:documentation>
+                    <choice>
+                        <empty/>
+                        <data type="gYear"/>
+                        <data type="gYearMonth"/>
+                        <data type="date"/>
+                        <data type="dateTime"/>
+                    </choice>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -2294,11 +2307,6 @@
                             bibliographical information in much the same way as an MLA parenthetical citation and should always reside within a bibCits
                             container tag.</a:documentation>
                         <optional>
-                            <attribute name="REF">
-                                <data type="anyURI"/>
-                            </attribute>
-                        </optional>
-                        <optional>
                             <attribute name="ID">
                                 <data type="NCName"/>
                             </attribute>
@@ -2309,6 +2317,11 @@
                         <optional>
                             <attribute name="QTDIN">
                                 <value>QTDINYES</value>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="REF">
+                                <data type="anyURI"/>
                             </attribute>
                         </optional>
                         <oneOrMore>
@@ -2466,6 +2479,11 @@
             <optional>
                 <attribute name="ID">
                     <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -2659,6 +2677,11 @@
                         <value>SERIES</value>
                         <value>UNPUBLISHED</value>
                     </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -4067,6 +4090,11 @@
                 <attribute name="STANDARD">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
                         organization, or topic is known</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -7262,7 +7290,13 @@
             </optional>
             <optional>
                 <attribute name="FROM">
-                    <data type="NMTOKEN"/>
+                    <choice>
+                        <empty/>
+                        <data type="gYear"/>
+                        <data type="gYearMonth"/>
+                        <data type="date"/>
+                        <data type="dateTime"/>
+                    </choice>
                 </attribute>
             </optional>
             <optional>
@@ -7272,7 +7306,13 @@
             </optional>
             <optional>
                 <attribute name="TO">
-                    <data type="NMTOKEN"/>
+                    <choice>
+                        <empty/>
+                        <data type="gYear"/>
+                        <data type="gYearMonth"/>
+                        <data type="date"/>
+                        <data type="dateTime"/>
+                    </choice>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -8379,6 +8419,11 @@
                 <attribute name="URI">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">URI (uniform resource identifier) references the
                         underlying concept of which the parent is a representation by means of some external identifier</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
                 </attribute>
             </optional>
             <oneOrMore>
