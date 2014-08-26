@@ -101,7 +101,8 @@ HEADING[SUBTYPE = "2"] + SCHOLARNOTE{
 
 SCHOLARNOTE + SCHOLARNOTE{
     display:block;
-    text-align:right
+    text-align:right;
+    padding-right:2em
 }
 
 HEADING[SUBTYPE = "3"]{
@@ -122,7 +123,8 @@ HEADING[SUBTYPE = "4"]{
 
 BIBCITS BIBCIT{
     display:block;
-    padding-left:3%
+    padding-left:2%;
+    padding-bottom:0.5em
 }
 
 FAMILYMEMBER{
@@ -173,6 +175,7 @@ EDUCATION CHRONSTRUCT DATERANGE{
 EDUCATION CHRONSTRUCT CHRONSPROSE{
     display:inline-block
 }
+AUTHORSUMMARY P{display:block; padding:1em; padding-left:0em}
 
 
 

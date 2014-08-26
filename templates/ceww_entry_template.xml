@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://cwrc.ca/schemas/cwrc_entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/ceww.css"?>
+
 <CWRC>
     <CWRCHEADER>
         <FILEDESC>
@@ -21,7 +22,7 @@
         </REVISIONDESC>
     </CWRCHEADER>
     <ENTRY>
-        <HEADING SUBTYPE="1"><NAME STANDARD="">{Author}</NAME>({Birth_date}-{Death_date})</HEADING>
+        <HEADING SUBTYPE="1"><NAME STANDARD="">{Author} </NAME>({Birth_date}-{Death_date})</HEADING>
         <RESEARCHNOTE>Placeholder for image / image caption: {Image_credits}</RESEARCHNOTE>
         <SCHOLARNOTE><P>{Short_biography}</P></SCHOLARNOTE>
         <BIRTH>
@@ -47,14 +48,12 @@
         <SCHOLARNOTE><P>Entry written by {Author_credits}</P></SCHOLARNOTE>
         <RESEARCHNOTE>Copy editor: if this has "revised by" in it, change the above text to conform.</RESEARCHNOTE>
         <AUTHORSUMMARY>
-            <HEADING SUBTYPE="2"><NAME STANDARD="">{Author}</NAME> ({Birth_date-{Death_date})</HEADING>
+            <HEADING SUBTYPE="2"><NAME STANDARD="">{Author}</NAME> ({Birth_date}-{Death_date})</HEADING>
             <P>{Biography}</P>
             <RESEARCHNOTE>Break the paragraph above into multiple paragraphs if needed. Paragraphs marked by @@</RESEARCHNOTE>
         </AUTHORSUMMARY>
         <HEADING SUBTYPE="2">Published Texts</HEADING>
-        <!-- Do we need instructions here for the copy editor? I think so: "Split fields into ... the DBRefs?" How would you put what should be done here? or is this handled in /CWRC WRiter.. in which case, still, what do we do here?-->
-        <!-- Yes, I think we need instructions for the copyeditor here: -->
-        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. In the REF attribute of bibcits put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
+        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="3">Novels</HEADING>
         <RESEARCHNOTE>{Novels}</RESEARCHNOTE>
         <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
@@ -108,9 +107,8 @@
         <FAMILY>
             <FAMILYMEMBER RELATION="FATHER">
                 <HEADING SUBTYPE="3"><NAME>{Father}</NAME></HEADING>
+                <RESEARCHNOTE>Copy editor: (for all CHRONSTRUCTs): if only one date is available, use DATE instead of DATERANGE. If dates are missing altogether, replace the CHROSTRUCT with a DATASTRUCT and the CHRONPROSE with a DATAITEM.</RESEARCHNOTE>
                 <CHRONSTRUCT><DATERANGE FROM="" TO="">{Father_life_dates}</DATERANGE><CHRONPROSE>{Father_bio}</CHRONPROSE></CHRONSTRUCT>
-                <!-- Mihaela: please remember to put a paragraph return between Father + Father life dates (same line) and Father bio ; same with Mother/Mother bio -->
-                <!-- Karyn: I'will do so in css -->
             </FAMILYMEMBER>
             <FAMILYMEMBER RELATION="MOTHER">
                 <HEADING SUBTYPE="3"><NAME>{Mother}</NAME></HEADING>
@@ -229,8 +227,8 @@
             <RESEARCHNOTE>{Memberships}</RESEARCHNOTE>
             <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
         </OCCUPATION>
-        <OTHERLIFEEVENT><P>{Tangential_information}</P></OTHERLIFEEVENT>
-        <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. Delete the now emplty research notes.</RESEARCHNOTE>
+        <OTHERLIFEEVENT><HEADING SUBTYPE="3">Tangential Information</HEADING><P>{Tangential_information}</P></OTHERLIFEEVENT>
+        <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="2">Archival Holdings</HEADING>
         <RESEARCHNOTE>{Archive_material}</RESEARCHNOTE>
         <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
