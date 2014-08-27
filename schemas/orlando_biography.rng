@@ -34,6 +34,9 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2014: Made the folloiwng changes:
+  - 
+  - Added the attribute REF to the elements NAME, ORGNAME, PLACE, and TITLE (REF [the old DBREF] was already an attribute of the elements BIBCIT and
+    TEXTSCOPE).
   - Removed text node from the element DIV2.
   - Removed references to the element BIBCITS from the following parent elements: SHORTPROSE, DATASTRUCT, DIV2, and DIV0.
 * MRB: July 2014: Made the following changes:
@@ -901,9 +904,17 @@
                 </attribute>
             </optional>
             <optional>
-                <attribute name="VALUE"/>
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
+                <attribute name="VALUE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
           time-related value.</a:documentation>
+                    <choice>
+                        <empty/>
+                        <data type="gYear"/>
+                        <data type="gYearMonth"/>
+                        <data type="date"/>
+                        <data type="dateTime"/>
+                    </choice>
+                </attribute>
             </optional>
             <oneOrMore>
                 <choice>
@@ -4529,6 +4540,21 @@
                 <a:documentation>Gordon Harper</a:documentation>
                 <value type="token">MVI</value>
                 <a:documentation>Mihaela Ilovan</a:documentation>
+                <!-- MRB: Wed 27-Aug-2014: added the following @RESP attribute values -->
+                <value type="token">APH</value>
+                <a:documentation>Amanda Hooper</a:documentation>
+                <value type="token">LMD</value>
+                <a:documentation>Lisa Dublin</a:documentation>
+                <value type="token">CSM</value>
+                <a:documentation>Chelsea Miya</a:documentation>
+                <value type="token">MKL</value>
+                <a:documentation>Mahdi Kashani Lotfbadi</a:documentation>
+                <value type="token">ABC</value>
+                <a:documentation>Anita Cutic</a:documentation>
+                <value type="token">SLF</value>
+                <a:documentation>Samantha Fitzner</a:documentation>
+                <value type="token">KLM</value>
+                <a:documentation>Kaarina Mikalson</a:documentation>
                 <!-- Insert new @RESP attribute values here -->
             </choice>
         </attribute>

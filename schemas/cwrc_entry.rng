@@ -34,10 +34,12 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2014: Made the following changes:
-  - Redefined the attribute VALUE in the element DATE so that the acceptable date formats are explicitly defined, i.e., YYYY, YYYY-MM, and YYYY-MM-DD (note:
-    also defined empty and dateTime as valid values).
+  - Redefined the attribute VALUE in the element DATE so that the acceptable date formats are explicitly defined, i.e., YYYY, YYYY-MM, and YYYY-MM-DD; notes:
+    also defined empty and dateTime as valid values; also allowed for dates in the Orlando legacy format YYYY-MMhyphen and YYYYhyphenhypen (possibly remove in
+    the future).
   - Redefined the attributes FROM and TO in the element DATERANGE so that the acceptable date formats are explicitly defined, i.e., YYYY, YYYY-MM, and
-    YYYY-MM-DD  (note: also defined empty and dateTime as valid values).
+    YYYY-MM-DD; notes: also defined empty and dateTime as valid values; also allowed for dates in the Orlando legacy format YYYY-MMhyphen and
+    YYYYhyphenhypen (possibly remove in the future).
   - Added the attribute REF to the elements NAME, ORGNAME, PLACE, and TITLE (REF [the old DBREF] was already an attribute of the elements BIBCIT and
     TEXTSCOPE).
   - Added the element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, HEADER, and P; FIGURE has child elements of FIGDESC and GRAPHIC
@@ -9608,6 +9610,21 @@
                 <a:documentation>Gordon Harper</a:documentation>
                 <value type="token">MVI</value>
                 <a:documentation>Mihaela Ilovan</a:documentation>
+                <!-- MRB: Wed 27-Aug-2014: added the following @RESP attribute values -->
+                <value type="token">APH</value>
+                <a:documentation>Amanda Hooper</a:documentation>
+                <value type="token">LMD</value>
+                <a:documentation>Lisa Dublin</a:documentation>
+                <value type="token">CSM</value>
+                <a:documentation>Chelsea Miya</a:documentation>
+                <value type="token">MKL</value>
+                <a:documentation>Mahdi Kashani Lotfbadi</a:documentation>
+                <value type="token">ABC</value>
+                <a:documentation>Anita Cutic</a:documentation>
+                <value type="token">SLF</value>
+                <a:documentation>Samantha Fitzner</a:documentation>
+                <value type="token">KLM</value>
+                <a:documentation>Kaarina Mikalson</a:documentation>
                 <!-- Insert new @RESP attribute values here -->
             </choice>
         </attribute>
