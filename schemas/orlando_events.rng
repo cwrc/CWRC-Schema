@@ -33,7 +33,12 @@
 
 <!-- 
 *** Revisions ***
-* MRB: August 2014: Made the following changes:
+* MRB: August 2014: Made the folloiwng changes:
+  - Redefined the attribute VALUE in the elements DATE and DATESTRUCT so that the acceptable Orlando legacy date formats are explicitly defined, i.e.,
+    YYYY-MM-DD, YYYY-MM-, and YYYY-hyphen.
+  - Redefined the attributes FROM and TO in the element DATERANGE so that the acceptable Orlando legacy date formats are explicitly defined, i.e., YYYY-MM-DD,
+    YYYY-MM-, and YYYY-hyphen.
+  - Added the attribute REF to the elements BIBCIT, NAME, ORGNAME, PLACE, and TITLE.
   - Made the required attributes CT_ID, CT_ISLINK, EID, ID, SN_ID, and SUBSET optional attributes.
 * MRB: June 2014: Addressed GitHub issues associated with the Orlando events schema:
   - Added documentation for writing-related elements and attributes.
@@ -320,9 +325,17 @@
                 </attribute>
             </optional>
             <attribute name="VALUE"/>
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
-        time-related value.</a:documentation>
-            <text/>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related
+        value.</a:documentation>
+            <choice>
+                <data type="date"/>
+                <data type="string">
+                    <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                </data>
+                <data type="string">
+                    <param name="pattern">(\d{4})(\-{2})</param>
+                </data>
+            </choice>
         </element>
     </define>
 
@@ -534,10 +547,30 @@
                 </attribute>
             </optional>
             <attribute name="FROM">
-                <data type="NMTOKEN"/>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">From is used to record a formatted date-related
+                    value.</a:documentation>
+                <choice>
+                    <data type="date"/>
+                    <data type="string">
+                        <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                    </data>
+                    <data type="string">
+                        <param name="pattern">(\d{4})(\-{2})</param>
+                    </data>
+                </choice>
             </attribute>
             <attribute name="TO">
-                <data type="NMTOKEN"/>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">To is used to record a formatted date-related
+                    value.</a:documentation>
+                <choice>
+                    <data type="date"/>
+                    <data type="string">
+                        <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                    </data>
+                    <data type="string">
+                        <param name="pattern">(\d{4})(\-{2})</param>
+                    </data>
+                </choice>
             </attribute>
             <text/>
         </element>
@@ -582,6 +615,11 @@
                     <value>UNPUBLISHED</value>
                 </choice>
             </attribute>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -677,9 +715,17 @@
                     <data type="integer"/>
                 </attribute>
             </optional>
-            <attribute name="STANDARD"/>
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
+            <optional>
+                <attribute name="STANDARD">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
         organization, or topic is known</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -1068,6 +1114,11 @@
                     <data type="integer"/>
                 </attribute>
             </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -1370,9 +1421,17 @@
             sense.</a:documentation>
                 </attribute>
             </optional>
-            <attribute name="STANDARD"/>
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
+            <optional>
+                <attribute name="STANDARD">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
         organization, or topic is known</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -1454,6 +1513,11 @@
             <optional>
                 <attribute name="QTDIN">
                     <value>QTDINYES</value>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
                 </attribute>
             </optional>
             <text/>
@@ -1712,7 +1776,7 @@
                 <a:documentation>Anita Cutic</a:documentation>
                 <value type="token">SLF</value>
                 <a:documentation>Samantha Fitzner</a:documentation>
-                <value type="token">KLM</value>
+                <value type="token">K_M</value>
                 <a:documentation>Kaarina Mikalson</a:documentation>
                 <!-- Insert new @RESP attribute values here -->
             </choice>

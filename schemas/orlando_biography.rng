@@ -34,11 +34,13 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2014: Made the folloiwng changes:
-  - 
-  - Added the attribute REF to the elements NAME, ORGNAME, PLACE, and TITLE (REF [the old DBREF] was already an attribute of the elements BIBCIT and
-    TEXTSCOPE).
   - Removed text node from the element DIV2.
-  - Removed references to the element BIBCITS from the following parent elements: SHORTPROSE, DATASTRUCT, DIV2, and DIV0.
+  - Removed references to the element BIBCITS from the following parent elements: DATASTRUCT, DIV0, DIV2, and SHORTPROSE.
+  - Redefined the attribute VALUE in the elements DATE and DATESTRUCT so that the acceptable Orlando legacy date formats are explicitly defined, i.e.,
+    YYYY-MM-DD, YYYY-MM-, and YYYY-hyphen.
+  - Redefined the attributes FROM and TO in the element DATERANGE so that the acceptable Orlando legacy date formats are explicitly defined, i.e., YYYY-MM-DD,
+    YYYY-MM-, and YYYY-hyphen.
+  - Added the attribute REF to the elements BIBCIT, NAME, ORGNAME, PLACE, and TITLE.
 * MRB: July 2014: Made the following changes:
   - Added new element of GENDER, with a new attribute of GENDER, to the CULTURALFORMATION element; GENDER has the same enumerated list of values as
     the attribute SEX, with the addition of UNGENDERED and UNKNOWN; can have multiple values.
@@ -905,14 +907,16 @@
             </optional>
             <optional>
                 <attribute name="VALUE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
-          time-related value.</a:documentation>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related
+          value.</a:documentation>
                     <choice>
-                        <empty/>
-                        <data type="gYear"/>
-                        <data type="gYearMonth"/>
                         <data type="date"/>
-                        <data type="dateTime"/>
+                        <data type="string">
+                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                        </data>
+                        <data type="string">
+                            <param name="pattern">(\d{4})(\-{2})</param>
+                        </data>
                     </choice>
                 </attribute>
             </optional>
@@ -1654,6 +1658,11 @@
                                 <value>QTDINYES</value>
                             </attribute>
                         </optional>
+                        <optional>
+                            <attribute name="REF">
+                                <data type="anyURI"/>
+                            </attribute>
+                        </optional>
                         <oneOrMore>
                             <choice>
                                 <text/>
@@ -1696,6 +1705,11 @@
             <optional>
                 <attribute name="ID">
                     <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -2093,6 +2107,11 @@
                         <value>SERIES</value>
                         <value>UNPUBLISHED</value>
                     </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -2961,6 +2980,11 @@
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
           organization, or topic is known</a:documentation>
             </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -3184,9 +3208,17 @@
                 </attribute>
             </optional>
             <attribute name="VALUE">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
-          time-related value.</a:documentation>
-                <data type="NMTOKEN"/>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related
+          value.</a:documentation>
+                <choice>
+                    <data type="date"/>
+                    <data type="string">
+                        <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                    </data>
+                    <data type="string">
+                        <param name="pattern">(\d{4})(\-{2})</param>
+                    </data>
+                </choice>
             </attribute>
             <oneOrMore>
                 <choice>
@@ -3490,12 +3522,32 @@
             </optional>
             <optional>
                 <attribute name="FROM">
-                    <data type="NMTOKEN"/>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">From is used to record a formatted date-related
+                        value.</a:documentation>
+                    <choice>
+                        <data type="date"/>
+                        <data type="string">
+                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                        </data>
+                        <data type="string">
+                            <param name="pattern">(\d{4})(\-{2})</param>
+                        </data>
+                    </choice>
                 </attribute>
             </optional>
             <optional>
                 <attribute name="TO">
-                    <data type="NMTOKEN"/>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">To is used to record a formatted date-related
+                        value.</a:documentation>
+                    <choice>
+                        <data type="date"/>
+                        <data type="string">
+                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                        </data>
+                        <data type="string">
+                            <param name="pattern">(\d{4})(\-{2})</param>
+                        </data>
+                    </choice>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -4180,6 +4232,11 @@
             underlying concept of which the parent is a representation by means of some external identifier</a:documentation>
                 </attribute>
             </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -4553,7 +4610,7 @@
                 <a:documentation>Anita Cutic</a:documentation>
                 <value type="token">SLF</value>
                 <a:documentation>Samantha Fitzner</a:documentation>
-                <value type="token">KLM</value>
+                <value type="token">K_M</value>
                 <a:documentation>Kaarina Mikalson</a:documentation>
                 <!-- Insert new @RESP attribute values here -->
             </choice>

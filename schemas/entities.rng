@@ -21,8 +21,8 @@
 <!--
 *** Revisions ***
      MRB: Tue 19-Aug-2014: with JCA, redefined the regular expression patterns in the <standardDate> element; the
-     regular expression patterns allow for Orlando dates in the Orlando legacy format YYYY-MMhyphen and
-     YYYYhyphenhypen (possibly remove in the future).
+     regular expression patterns allow for Orlando dates in the Orlando legacy date format YYYY-MM-DD, YYYY-MM-, and
+     YYYY-hyphen (possibly remove in the future if change dates in Orlando person entities to ISO 8601 formatted dates).
      MRB: Fri 01-Aug-2014
      * Revised and simplified the /entity/person/identity/preferredForm/namePart[@partType] attribute so that it only
      has four enumerated values: family, given, fullName, and termsOfAddress; this parallels the enumerated list of values
@@ -1125,7 +1125,6 @@
                 <data type="date"/>
                 <data type="gYearMonth"/>
                 <data type="gYear"/>
-                <data type="dateTime"/>
                 <data type="string">
                     <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
                 </data>
