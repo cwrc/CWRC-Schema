@@ -34,6 +34,7 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2014: Made the folloiwng changes:
+  - Made the optional attribute TITLETYPE in the element TITLE a required attribute.
   - Redefined the attribute VALUE in the elements DATE and DATESTRUCT so that the acceptable Orlando legacy date formats are explicitly defined, i.e.,
     YYYY-MM-DD, YYYY-MM-, and YYYY-hyphen.
   - Redefined the attributes FROM and TO in the element DATERANGE so that the acceptable Orlando legacy date formats are explicitly defined, i.e., YYYY-MM-DD,
@@ -505,19 +506,17 @@
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
           organization, or topic is known</a:documentation>
             </optional>
-            <optional>
-                <attribute name="TITLETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
+            <attribute name="TITLETYPE">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
             title is a part of another work, an entire work, a journal, or a series.</a:documentation>
-                    <choice>
-                        <value>MONOGRAPHIC</value>
-                        <value>ANALYTIC</value>
-                        <value>JOURNAL</value>
-                        <value>SERIES</value>
-                        <value>UNPUBLISHED</value>
-                    </choice>
-                </attribute>
-            </optional>
+                <choice>
+                    <value>MONOGRAPHIC</value>
+                    <value>ANALYTIC</value>
+                    <value>JOURNAL</value>
+                    <value>SERIES</value>
+                    <value>UNPUBLISHED</value>
+                </choice>
+            </attribute>
             <optional>
                 <attribute name="REF">
                     <data type="anyURI"/>

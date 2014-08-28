@@ -34,6 +34,7 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2014: Made the folloiwng changes:
+  - Made the optional attribute TITLETYPE in the element TITLE a required attribute.
   - Removed text node from the element DIV2.
   - Removed references to the element BIBCITS from the following parent elements: DATASTRUCT, DIV0, DIV2, and SHORTPROSE.
   - Redefined the attribute VALUE in the elements DATE and DATESTRUCT so that the acceptable Orlando legacy date formats are explicitly defined, i.e.,
@@ -2096,19 +2097,17 @@
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rend (or rendition) indicates how the element in
           question was rendered or presented in the source text.</a:documentation>
             </optional>
-            <optional>
-                <attribute name="TITLETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
+            <attribute name="TITLETYPE">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
             title is a part of another work, an entire work, a journal, or a series.</a:documentation>
-                    <choice>
-                        <value>MONOGRAPHIC</value>
-                        <value>ANALYTIC</value>
-                        <value>JOURNAL</value>
-                        <value>SERIES</value>
-                        <value>UNPUBLISHED</value>
-                    </choice>
-                </attribute>
-            </optional>
+                <choice>
+                    <value>MONOGRAPHIC</value>
+                    <value>ANALYTIC</value>
+                    <value>JOURNAL</value>
+                    <value>SERIES</value>
+                    <value>UNPUBLISHED</value>
+                </choice>
+            </attribute>
             <optional>
                 <attribute name="REF">
                     <data type="anyURI"/>

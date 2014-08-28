@@ -34,6 +34,7 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2014: Made the following changes:
+  - Made the optional attribute LEVEL in the element TITLE a required attribute.
   - Redefined the attribute VALUE in the element DATE so that the acceptable ISO date formats are explicitly defined, i.e., YYYY-MM-DD, YYYY-MM, and YYYY.
   - Redefined the attributes FROM and TO in the element DATERANGE so that the acceptable ISO date formats are explicitly defined, i.e., YYYY-MM-DD, YYYY-MM,
     and YYYY.
@@ -2663,19 +2664,17 @@
                         organization, or topic is known</a:documentation>
                 </attribute>
             </optional>
-            <optional>
-                <attribute name="LEVEL">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, level indicates whether a
+            <attribute name="LEVEL">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, level indicates whether a
                         title is a part of another work, an entire work, a journal, or a series.</a:documentation>
-                    <choice>
-                        <value>MONOGRAPHIC</value>
-                        <value>ANALYTIC</value>
-                        <value>JOURNAL</value>
-                        <value>SERIES</value>
-                        <value>UNPUBLISHED</value>
-                    </choice>
-                </attribute>
-            </optional>
+                <choice>
+                    <value>MONOGRAPHIC</value>
+                    <value>ANALYTIC</value>
+                    <value>JOURNAL</value>
+                    <value>SERIES</value>
+                    <value>UNPUBLISHED</value>
+                </choice>
+            </attribute>
             <optional>
                 <attribute name="REF">
                     <data type="anyURI"/>
