@@ -34,7 +34,7 @@
 <!-- 
 *** Revisions ***
 * MRB: September 2014: Made the following changes:
-  - Removed references to the element BIBCITS from the following parent elements: CHRONSTRUCT, DIV2, and SHORTPROSE.
+  - Removed references to the element BIBCITS from the following parent elements: DIV2, and SHORTPROSE.
   - Removed references to the element SCHOLARNOTE from the following parent elements: BIBCITS, CHRONSTRUCT, PRODUCTION, RECEPTION,
     SHORTPROSE, and WORKSCITED.
   - Redefined the attribute TITLETYPE in the element TITLE from an optional attribute to a required attribute.
@@ -734,6 +734,7 @@
             </element>
             <zeroOrMore>
                 <choice>
+                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>

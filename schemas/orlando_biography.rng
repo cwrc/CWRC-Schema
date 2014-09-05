@@ -34,8 +34,8 @@
 <!-- 
 *** Revisions ***
 * MRB: September 2014: Made the following changes:
-  - Removed references to the element BIBCITS from the following parent elements: BIRTH, BIRTHNAME, CHRONSTRUCT, DATASTRUCT, DEATH, DIV0, DIV2,
-    EDUCATION, LOCATION, MARRIAGE, SCHOLARNOTE, and SHORTPROSE.
+  - Removed references to the element BIBCITS from the following parent elements: BIRTH, BIRTHNAME, DATASTRUCT, DEATH, DIV0, DIV2, EDUCATION,
+    LOCATION, MARRIAGE, SCHOLARNOTE, and SHORTPROSE.
   - Removed references to the element SCHOLARNOTE from the following parent elements: BIBCITS, BIRTH, BIRTHNAME, CHRONSTRUCT, DATASTRUCT, DEATH,
     DIV2, EDUCATION, FAMILY, MEMBER, INTIMATERELATIONSHIPS, SHORTPROSE, and WORKSCITED.
   - Redefined the attribute TITLETYPE in the element TITLE from an optional attribute to a required attribute.
@@ -1090,335 +1090,336 @@
                 </attribute>
             </optional>
             <ref name="RESP-attribute"/>
-            <optional>
+            <choice>
+                <ref name="DATE"/>
                 <ref name="DATERANGE"/>
-            </optional>
-            <oneOrMore>
-                <choice>
-                    <ref name="DATE"/>
-                    <ref name="DATESTRUCT"/>
-                    <ref name="KEYWORDCLASS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <element name="CHRONPROSE">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
+                <ref name="DATESTRUCT"/>
+            </choice>
+            <element name="CHRONPROSE">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
               the essential facts of a chronology event.</a:documentation>
-                        <oneOrMore>
-                            <choice>
-                                <text/>
-                                <ref name="AWARD"/>
-                                <ref name="BIBCITS"/>
-                                <ref name="BIRTHPOSITION"/>
-                                <ref name="CAUSE"/>
-                                <ref name="CHILDLESSNESS"/>
-                                <ref name="CHILDREN"/>
-                                <ref name="CLASS"/>
-                                <ref name="COMPANION"/>
-                                <ref name="CONTESTEDBEHAVIOUR"/>
-                                <ref name="DATE"/>
-                                <ref name="DATERANGE"/>
-                                <ref name="DATESTRUCT"/>
-                                <ref name="DEGREE"/>
-                                <ref name="DENOMINATION"/>
-                                <ref name="DIVORCE"/>
-                                <ref name="EMPH"/>
-                                <ref name="EMPLOYER"/>
-                                <ref name="FOREIGN"/>
-                                <ref name="GENDER"/>
-                                <ref name="INSTRUCTOR"/>
-                                <ref name="JOB"/>
-                                <ref name="KEYWORDCLASS"/>
-                                <ref name="LIVESWITH"/>
-                                <ref name="NAME"/>
-                                <ref name="NATIONALITY"/>
-                                <ref name="ORGNAME"/>
-                                <ref name="PLACE"/>
-                                <ref name="POLITICALAFFILIATION"/>
-                                <ref name="QUOTE"/>
-                                <ref name="REMUNERATION"/>
-                                <ref name="RESEARCHNOTE"/>
-                                <ref name="RS"/>
-                                <ref name="SCHOLARNOTE"/>
-                                <ref name="SCHOOL"/>
-                                <ref name="SEPARATION"/>
-                                <ref name="SEXUALIDENTITY"/>
-                                <ref name="SIGNIFICANTACTIVITY"/>
-                                <ref name="SOCALLED"/>
-                                <ref name="SUBJECT"/>
-                                <ref name="TEXT"/>
-                                <ref name="TITLE"/>
-                                <ref name="TOPIC"/>
-                                <element name="TGENRE">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">GenreName (or tGenre) is used to tag the name of the genre
+                <oneOrMore>
+                    <choice>
+                        <text/>
+                        <ref name="AWARD"/>
+                        <ref name="BIBCITS"/>
+                        <ref name="BIRTHPOSITION"/>
+                        <ref name="CAUSE"/>
+                        <ref name="CHILDLESSNESS"/>
+                        <ref name="CHILDREN"/>
+                        <ref name="CLASS"/>
+                        <ref name="COMPANION"/>
+                        <ref name="CONTESTEDBEHAVIOUR"/>
+                        <ref name="DATE"/>
+                        <ref name="DATERANGE"/>
+                        <ref name="DATESTRUCT"/>
+                        <ref name="DEGREE"/>
+                        <ref name="DENOMINATION"/>
+                        <ref name="DIVORCE"/>
+                        <ref name="EMPH"/>
+                        <ref name="EMPLOYER"/>
+                        <ref name="FOREIGN"/>
+                        <ref name="GENDER"/>
+                        <ref name="INSTRUCTOR"/>
+                        <ref name="JOB"/>
+                        <ref name="KEYWORDCLASS"/>
+                        <ref name="LIVESWITH"/>
+                        <ref name="NAME"/>
+                        <ref name="NATIONALITY"/>
+                        <ref name="ORGNAME"/>
+                        <ref name="PLACE"/>
+                        <ref name="POLITICALAFFILIATION"/>
+                        <ref name="QUOTE"/>
+                        <ref name="REMUNERATION"/>
+                        <ref name="RESEARCHNOTE"/>
+                        <ref name="RS"/>
+                        <ref name="SCHOLARNOTE"/>
+                        <ref name="SCHOOL"/>
+                        <ref name="SEPARATION"/>
+                        <ref name="SEXUALIDENTITY"/>
+                        <ref name="SIGNIFICANTACTIVITY"/>
+                        <ref name="SOCALLED"/>
+                        <ref name="SUBJECT"/>
+                        <ref name="TEXT"/>
+                        <ref name="TITLE"/>
+                        <ref name="TOPIC"/>
+                        <element name="TGENRE">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">GenreName (or tGenre) is used to tag the name of the genre
                     according to a project-generated list of genre names.</a:documentation>
-                                    <attribute name="GENRENAME">
-                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">GenreName is an optional attribute that provides a
+                            <attribute name="GENRENAME">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">GenreName is an optional attribute that provides a
                       pick-list of possible genre names to modify the element tGenre. It will prove especially useful in situations where the prose
                       does not allow the concise naming of a genre that would be easily understood by a simpler name. Ultimately, this attribute will
                       help us systematize and index references to various genre names.</a:documentation>
-                                        <choice>
-                                            <value>ABRIDGEMENT</value>
-                                            <value>ACLEF</value>
-                                            <value>ACROSTIC</value>
-                                            <value>ADAPTATION</value>
-                                            <value>ADVENTUREWRITING</value>
-                                            <value>ADVERTISINGCOPY</value>
-                                            <value>AFTERPIECE</value>
-                                            <value>AFTERWORD</value>
-                                            <value>AGITPROP</value>
-                                            <value>ALLEGORY</value>
-                                            <value>ALMANAC</value>
-                                            <value>ANACREONTIC</value>
-                                            <value>ANAGRAM</value>
-                                            <value>ANNOTATION</value>
-                                            <value>ANSWER</value>
-                                            <value>ANTHEM</value>
-                                            <value>ANTHOLOGY</value>
-                                            <value>ANTIROMANCE</value>
-                                            <value>APHORISM</value>
-                                            <value>APOLOGY</value>
-                                            <value>ARTCRITICISM</value>
-                                            <value>AUTOBIOGRAPHY</value>
-                                            <value>BALLAD</value>
-                                            <value>BALLADE</value>
-                                            <value>BALLADOPERA</value>
-                                            <value>BALLET</value>
-                                            <value>BERGAMASQUE</value>
-                                            <value>BESTIARY</value>
-                                            <value>BIBLICALPARAPHRASE</value>
-                                            <value>BILDUNGSROMAN</value>
-                                            <value>BIOGRAPHICALDICTIONARY</value>
-                                            <value>BIOGRAPHY</value>
-                                            <value>BISEXUALFICTION</value>
-                                            <value>BLACKCOMEDY</value>
-                                            <value>BOUTSRIMES</value>
-                                            <value>BROADSIDE</value>
-                                            <value>BURLETTA</value>
-                                            <value>CABARET</value>
-                                            <value>CAPTIVITYNARRATIVE</value>
-                                            <value>CATECHISM</value>
-                                            <value>CHAPBOOK</value>
-                                            <value>CHARACTER</value>
-                                            <value>CHARADE</value>
-                                            <value>CHILDRENSLITERATURE</value>
-                                            <value>CLERIHEW</value>
-                                            <value>CLOSETDRAMA</value>
-                                            <value>COLOURINGBOOK</value>
-                                            <value>COMEDY</value>
-                                            <value>COMEDYOFHUMOURS</value>
-                                            <value>COMEDYOFINTRIGUE</value>
-                                            <value>COMEDYOFMANNERS</value>
-                                            <value>COMEDYOFMENACE</value>
-                                            <value>COMICBOOK</value>
-                                            <value>COMINGOUT</value>
-                                            <value>COMMONPLACEBOOK</value>
-                                            <value>COMPANION</value>
-                                            <value>COMPUTERPROGRAM</value>
-                                            <value>CONDITIONOFENGLANDNOVEL</value>
-                                            <value>CONDUCTLITERATURE</value>
-                                            <value>COOKBOOK</value>
-                                            <value>COURTSHIPFICTION</value>
-                                            <value>CRIMINOLOGY</value>
-                                            <value>DEDICATION</value>
-                                            <value>DETECTIVE</value>
-                                            <value>DEVOTIONAL</value>
-                                            <value>DIALOGUEORDEBATE</value>
-                                            <value>DIARY</value>
-                                            <value>DIALOGUEOFTHEDEAD</value>
-                                            <value>DICTIONARY</value>
-                                            <value>DIDACTIC</value>
-                                            <value>DIRECTORY</value>
-                                            <value>DISSERTATION</value>
-                                            <value>DOCUMENTARY</value>
-                                            <value>DOMESTIC</value>
-                                            <value>DRAMA</value>
-                                            <value>DRAMATICMONOLOGUE</value>
-                                            <value>DREAMVISION</value>
-                                            <value>DYSTOPIA</value>
-                                            <value>ECLOGUE</value>
-                                            <value>EDITING</value>
-                                            <value>ELEGY</value>
-                                            <value>ENCYCLOPAEDIA</value>
-                                            <value>EPIC</value>
-                                            <value>EPICTHEATRE</value>
-                                            <value>EPIGRAM</value>
-                                            <value>EPILOGUE</value>
-                                            <value>EPISODICLITERATURE</value>
-                                            <value>EPISTLE</value>
-                                            <value>EPISTOLARY</value>
-                                            <value>EPITAPH</value>
-                                            <value>EPITHALAMIUM</value>
-                                            <value>EPYLLION</value>
-                                            <value>EROTICAPORNOGRAPHY</value>
-                                            <value>ESSAY</value>
-                                            <value>EULOGY</value>
-                                            <value>EXHIBITIONCATALOGUE</value>
-                                            <value>EXPRESSIONISTWRITING</value>
-                                            <value>FABLE</value>
-                                            <value>FABLIAU</value>
-                                            <value>FAIRYTALE</value>
-                                            <value>FANTASY</value>
-                                            <value>FARCE</value>
-                                            <value>FEMINIST</value>
-                                            <value>FEMINISTTHEORY</value>
-                                            <value>FICTION</value>
-                                            <value>FILMTVSCRIPT</value>
-                                            <value>FOLKSONG</value>
-                                            <value>GARDENINGBOOK</value>
-                                            <value>GENEALOGY</value>
-                                            <value>GEORGIC</value>
-                                            <value>GHOSTSTORY</value>
-                                            <value>GIFTBOOK</value>
-                                            <value>GOTHIC</value>
-                                            <value>GOVERNMENTREPORT</value>
-                                            <value>GRAMMAR</value>
-                                            <value>GRAVEYARDPOETRY</value>
-                                            <value>GUERILLATHEATRE</value>
-                                            <value>GUIDEBOOK</value>
-                                            <value>HAGIOGRAPHY</value>
-                                            <value>HAIKU</value>
-                                            <value>HARLEQUINADE</value>
-                                            <value>HEROIC</value>
-                                            <value>HISTORICAL</value>
-                                            <value>HISTORY</value>
-                                            <value>HYMN</value>
-                                            <value>IMITATION</value>
-                                            <value>IMPROVISATION</value>
-                                            <value>INDUSTRIALNOVEL</value>
-                                            <value>INTRODUCTION</value>
-                                            <value>JOURNALISM</value>
-                                            <value>JUVENILIA</value>
-                                            <value>KITCHENSINKDRAMA</value>
-                                            <value>KUNSTLERROMAN</value>
-                                            <value>LAIS</value>
-                                            <value>LAMPOON</value>
-                                            <value>LEGALWRITING</value>
-                                            <value>LEGENDFOLKTALE</value>
-                                            <value>LESBIAN</value>
-                                            <value>LETTER</value>
-                                            <value>LETTERSFROMTHEDEADTOTHELIVING</value>
-                                            <value>LIBRETTO</value>
-                                            <value>LITERARYCRITICISM</value>
-                                            <value>LITURGY</value>
-                                            <value>LOVE</value>
-                                            <value>LYRIC</value>
-                                            <value>MAGICREALIST</value>
-                                            <value>MANIFESTO</value>
-                                            <value>MANUAL</value>
-                                            <value>MAP</value>
-                                            <value>MASQUE</value>
-                                            <value>MEDICALWRITING</value>
-                                            <value>MELODRAMA</value>
-                                            <value>MIXEDMEDIA</value>
-                                            <value>MOCKFORMS</value>
-                                            <value>MONOLOGUE</value>
-                                            <value>MORALITYMYSTERYPLAY</value>
-                                            <value>MULTIMEDIA</value>
-                                            <value>MUSICOLOGY</value>
-                                            <value>MYSTERY</value>
-                                            <value>MYTH</value>
-                                            <value>NARRATIVEPOETRY</value>
-                                            <value>NATIONALISTFICTION</value>
-                                            <value>NATIONALTALE</value>
-                                            <value>NOTEBOOK</value>
-                                            <value>NOVEL</value>
-                                            <value>NOVELLA</value>
-                                            <value>NURSERYRHYME</value>
-                                            <value>OBITUARY</value>
-                                            <value>OCCASIONALPOETRY</value>
-                                            <value>ODE</value>
-                                            <value>ONEACTPLAY</value>
-                                            <value>OPERA</value>
-                                            <value>ORATORIO</value>
-                                            <value>ORIENTAL</value>
-                                            <value>PAGEANT</value>
-                                            <value>PANEGYRIC</value>
-                                            <value>PANTOMIME</value>
-                                            <value>PARABLE</value>
-                                            <value>PARATEXTS</value>
-                                            <value>PARLIAMENTARYREPORT</value>
-                                            <value>PARODY</value>
-                                            <value>PASTORAL</value>
-                                            <value>PEDAGOGY</value>
-                                            <value>PERFORMANCEPOETRY</value>
-                                            <value>PERIODICAL</value>
-                                            <value>PETITION</value>
-                                            <value>PHILOSOPHICAL</value>
-                                            <value>PHILOSOPHY</value>
-                                            <value>PICARESQUE</value>
-                                            <value>PINDARIC</value>
-                                            <value>POETRY</value>
-                                            <value>POLEMIC</value>
-                                            <value>POLITICALWRITING</value>
-                                            <value>POPULAR</value>
-                                            <value>PRAYER</value>
-                                            <value>PREFATORYPIECE</value>
-                                            <value>PROGRAMNOTES</value>
-                                            <value>PROLETARIANWRITING</value>
-                                            <value>PROLOGUE</value>
-                                            <value>PROPAGANDA</value>
-                                            <value>PROPHECY</value>
-                                            <value>PSALM</value>
-                                            <value>PSYCHOANALYTICAL</value>
-                                            <value>QUIZ</value>
-                                            <value>RADIODRAMA</value>
-                                            <value>REALIST</value>
-                                            <value>REGIONAL</value>
-                                            <value>RELIGIOUS</value>
-                                            <value>REVIEW</value>
-                                            <value>REVUE</value>
-                                            <value>RIDDLE</value>
-                                            <value>ROMANCE</value>
-                                            <value>SAGEWRITING</value>
-                                            <value>SATIRE</value>
-                                            <value>SCHOLARSHIP</value>
-                                            <value>SCHOOLFICTION</value>
-                                            <value>SCIENCEFICTION</value>
-                                            <value>SCIENTIFICWRITING</value>
-                                            <value>SCRAPBOOK</value>
-                                            <value>SENSATIONNOVEL</value>
-                                            <value>SENSIBILITY</value>
-                                            <value>SENTIMENTAL</value>
-                                            <value>SEQUEL</value>
-                                            <value>SERMON</value>
-                                            <value>SEXUALAWAKENINGFICTION</value>
-                                            <value>SHORTSTORY</value>
-                                            <value>SILVERFORKNOVEL</value>
-                                            <value>SKETCH</value>
-                                            <value>SKETCHBOOK</value>
-                                            <value>SLAVENARRATIVE</value>
-                                            <value>SOCIALSCIENCE</value>
-                                            <value>SONG</value>
-                                            <value>SONNET</value>
-                                            <value>SPEECH</value>
-                                            <value>STAGEREVIEW</value>
-                                            <value>TESTIMONY</value>
-                                            <value>TEXTBOOK</value>
-                                            <value>THEATREOFCRUELTY</value>
-                                            <value>THEATREOFTHEABSURD</value>
-                                            <value>THEOLOGY</value>
-                                            <value>THESAURUS</value>
-                                            <value>THRILLER</value>
-                                            <value>TOPOGRAPHICALPOETRY</value>
-                                            <value>TRACTPAMPHLET</value>
-                                            <value>TRAGEDY</value>
-                                            <value>TRAGICOMEDY</value>
-                                            <value>TRANSLATION</value>
-                                            <value>TRAVELWRITING</value>
-                                            <value>TREATISE</value>
-                                            <value>UTOPIA</value>
-                                            <value>VERSENOVEL</value>
-                                            <value>VIGNETTE</value>
-                                            <value>VILLANELLE</value>
-                                            <value>YOUNGADULTWRITING</value>
-                                        </choice>
-                                    </attribute>
-                                    <data type="NCName"/>
-                                </element>
-                            </choice>
-                        </oneOrMore>
-                    </element>
+                                <choice>
+                                    <value>ABRIDGEMENT</value>
+                                    <value>ACLEF</value>
+                                    <value>ACROSTIC</value>
+                                    <value>ADAPTATION</value>
+                                    <value>ADVENTUREWRITING</value>
+                                    <value>ADVERTISINGCOPY</value>
+                                    <value>AFTERPIECE</value>
+                                    <value>AFTERWORD</value>
+                                    <value>AGITPROP</value>
+                                    <value>ALLEGORY</value>
+                                    <value>ALMANAC</value>
+                                    <value>ANACREONTIC</value>
+                                    <value>ANAGRAM</value>
+                                    <value>ANNOTATION</value>
+                                    <value>ANSWER</value>
+                                    <value>ANTHEM</value>
+                                    <value>ANTHOLOGY</value>
+                                    <value>ANTIROMANCE</value>
+                                    <value>APHORISM</value>
+                                    <value>APOLOGY</value>
+                                    <value>ARTCRITICISM</value>
+                                    <value>AUTOBIOGRAPHY</value>
+                                    <value>BALLAD</value>
+                                    <value>BALLADE</value>
+                                    <value>BALLADOPERA</value>
+                                    <value>BALLET</value>
+                                    <value>BERGAMASQUE</value>
+                                    <value>BESTIARY</value>
+                                    <value>BIBLICALPARAPHRASE</value>
+                                    <value>BILDUNGSROMAN</value>
+                                    <value>BIOGRAPHICALDICTIONARY</value>
+                                    <value>BIOGRAPHY</value>
+                                    <value>BISEXUALFICTION</value>
+                                    <value>BLACKCOMEDY</value>
+                                    <value>BOUTSRIMES</value>
+                                    <value>BROADSIDE</value>
+                                    <value>BURLETTA</value>
+                                    <value>CABARET</value>
+                                    <value>CAPTIVITYNARRATIVE</value>
+                                    <value>CATECHISM</value>
+                                    <value>CHAPBOOK</value>
+                                    <value>CHARACTER</value>
+                                    <value>CHARADE</value>
+                                    <value>CHILDRENSLITERATURE</value>
+                                    <value>CLERIHEW</value>
+                                    <value>CLOSETDRAMA</value>
+                                    <value>COLOURINGBOOK</value>
+                                    <value>COMEDY</value>
+                                    <value>COMEDYOFHUMOURS</value>
+                                    <value>COMEDYOFINTRIGUE</value>
+                                    <value>COMEDYOFMANNERS</value>
+                                    <value>COMEDYOFMENACE</value>
+                                    <value>COMICBOOK</value>
+                                    <value>COMINGOUT</value>
+                                    <value>COMMONPLACEBOOK</value>
+                                    <value>COMPANION</value>
+                                    <value>COMPUTERPROGRAM</value>
+                                    <value>CONDITIONOFENGLANDNOVEL</value>
+                                    <value>CONDUCTLITERATURE</value>
+                                    <value>COOKBOOK</value>
+                                    <value>COURTSHIPFICTION</value>
+                                    <value>CRIMINOLOGY</value>
+                                    <value>DEDICATION</value>
+                                    <value>DETECTIVE</value>
+                                    <value>DEVOTIONAL</value>
+                                    <value>DIALOGUEORDEBATE</value>
+                                    <value>DIARY</value>
+                                    <value>DIALOGUEOFTHEDEAD</value>
+                                    <value>DICTIONARY</value>
+                                    <value>DIDACTIC</value>
+                                    <value>DIRECTORY</value>
+                                    <value>DISSERTATION</value>
+                                    <value>DOCUMENTARY</value>
+                                    <value>DOMESTIC</value>
+                                    <value>DRAMA</value>
+                                    <value>DRAMATICMONOLOGUE</value>
+                                    <value>DREAMVISION</value>
+                                    <value>DYSTOPIA</value>
+                                    <value>ECLOGUE</value>
+                                    <value>EDITING</value>
+                                    <value>ELEGY</value>
+                                    <value>ENCYCLOPAEDIA</value>
+                                    <value>EPIC</value>
+                                    <value>EPICTHEATRE</value>
+                                    <value>EPIGRAM</value>
+                                    <value>EPILOGUE</value>
+                                    <value>EPISODICLITERATURE</value>
+                                    <value>EPISTLE</value>
+                                    <value>EPISTOLARY</value>
+                                    <value>EPITAPH</value>
+                                    <value>EPITHALAMIUM</value>
+                                    <value>EPYLLION</value>
+                                    <value>EROTICAPORNOGRAPHY</value>
+                                    <value>ESSAY</value>
+                                    <value>EULOGY</value>
+                                    <value>EXHIBITIONCATALOGUE</value>
+                                    <value>EXPRESSIONISTWRITING</value>
+                                    <value>FABLE</value>
+                                    <value>FABLIAU</value>
+                                    <value>FAIRYTALE</value>
+                                    <value>FANTASY</value>
+                                    <value>FARCE</value>
+                                    <value>FEMINIST</value>
+                                    <value>FEMINISTTHEORY</value>
+                                    <value>FICTION</value>
+                                    <value>FILMTVSCRIPT</value>
+                                    <value>FOLKSONG</value>
+                                    <value>GARDENINGBOOK</value>
+                                    <value>GENEALOGY</value>
+                                    <value>GEORGIC</value>
+                                    <value>GHOSTSTORY</value>
+                                    <value>GIFTBOOK</value>
+                                    <value>GOTHIC</value>
+                                    <value>GOVERNMENTREPORT</value>
+                                    <value>GRAMMAR</value>
+                                    <value>GRAVEYARDPOETRY</value>
+                                    <value>GUERILLATHEATRE</value>
+                                    <value>GUIDEBOOK</value>
+                                    <value>HAGIOGRAPHY</value>
+                                    <value>HAIKU</value>
+                                    <value>HARLEQUINADE</value>
+                                    <value>HEROIC</value>
+                                    <value>HISTORICAL</value>
+                                    <value>HISTORY</value>
+                                    <value>HYMN</value>
+                                    <value>IMITATION</value>
+                                    <value>IMPROVISATION</value>
+                                    <value>INDUSTRIALNOVEL</value>
+                                    <value>INTRODUCTION</value>
+                                    <value>JOURNALISM</value>
+                                    <value>JUVENILIA</value>
+                                    <value>KITCHENSINKDRAMA</value>
+                                    <value>KUNSTLERROMAN</value>
+                                    <value>LAIS</value>
+                                    <value>LAMPOON</value>
+                                    <value>LEGALWRITING</value>
+                                    <value>LEGENDFOLKTALE</value>
+                                    <value>LESBIAN</value>
+                                    <value>LETTER</value>
+                                    <value>LETTERSFROMTHEDEADTOTHELIVING</value>
+                                    <value>LIBRETTO</value>
+                                    <value>LITERARYCRITICISM</value>
+                                    <value>LITURGY</value>
+                                    <value>LOVE</value>
+                                    <value>LYRIC</value>
+                                    <value>MAGICREALIST</value>
+                                    <value>MANIFESTO</value>
+                                    <value>MANUAL</value>
+                                    <value>MAP</value>
+                                    <value>MASQUE</value>
+                                    <value>MEDICALWRITING</value>
+                                    <value>MELODRAMA</value>
+                                    <value>MIXEDMEDIA</value>
+                                    <value>MOCKFORMS</value>
+                                    <value>MONOLOGUE</value>
+                                    <value>MORALITYMYSTERYPLAY</value>
+                                    <value>MULTIMEDIA</value>
+                                    <value>MUSICOLOGY</value>
+                                    <value>MYSTERY</value>
+                                    <value>MYTH</value>
+                                    <value>NARRATIVEPOETRY</value>
+                                    <value>NATIONALISTFICTION</value>
+                                    <value>NATIONALTALE</value>
+                                    <value>NOTEBOOK</value>
+                                    <value>NOVEL</value>
+                                    <value>NOVELLA</value>
+                                    <value>NURSERYRHYME</value>
+                                    <value>OBITUARY</value>
+                                    <value>OCCASIONALPOETRY</value>
+                                    <value>ODE</value>
+                                    <value>ONEACTPLAY</value>
+                                    <value>OPERA</value>
+                                    <value>ORATORIO</value>
+                                    <value>ORIENTAL</value>
+                                    <value>PAGEANT</value>
+                                    <value>PANEGYRIC</value>
+                                    <value>PANTOMIME</value>
+                                    <value>PARABLE</value>
+                                    <value>PARATEXTS</value>
+                                    <value>PARLIAMENTARYREPORT</value>
+                                    <value>PARODY</value>
+                                    <value>PASTORAL</value>
+                                    <value>PEDAGOGY</value>
+                                    <value>PERFORMANCEPOETRY</value>
+                                    <value>PERIODICAL</value>
+                                    <value>PETITION</value>
+                                    <value>PHILOSOPHICAL</value>
+                                    <value>PHILOSOPHY</value>
+                                    <value>PICARESQUE</value>
+                                    <value>PINDARIC</value>
+                                    <value>POETRY</value>
+                                    <value>POLEMIC</value>
+                                    <value>POLITICALWRITING</value>
+                                    <value>POPULAR</value>
+                                    <value>PRAYER</value>
+                                    <value>PREFATORYPIECE</value>
+                                    <value>PROGRAMNOTES</value>
+                                    <value>PROLETARIANWRITING</value>
+                                    <value>PROLOGUE</value>
+                                    <value>PROPAGANDA</value>
+                                    <value>PROPHECY</value>
+                                    <value>PSALM</value>
+                                    <value>PSYCHOANALYTICAL</value>
+                                    <value>QUIZ</value>
+                                    <value>RADIODRAMA</value>
+                                    <value>REALIST</value>
+                                    <value>REGIONAL</value>
+                                    <value>RELIGIOUS</value>
+                                    <value>REVIEW</value>
+                                    <value>REVUE</value>
+                                    <value>RIDDLE</value>
+                                    <value>ROMANCE</value>
+                                    <value>SAGEWRITING</value>
+                                    <value>SATIRE</value>
+                                    <value>SCHOLARSHIP</value>
+                                    <value>SCHOOLFICTION</value>
+                                    <value>SCIENCEFICTION</value>
+                                    <value>SCIENTIFICWRITING</value>
+                                    <value>SCRAPBOOK</value>
+                                    <value>SENSATIONNOVEL</value>
+                                    <value>SENSIBILITY</value>
+                                    <value>SENTIMENTAL</value>
+                                    <value>SEQUEL</value>
+                                    <value>SERMON</value>
+                                    <value>SEXUALAWAKENINGFICTION</value>
+                                    <value>SHORTSTORY</value>
+                                    <value>SILVERFORKNOVEL</value>
+                                    <value>SKETCH</value>
+                                    <value>SKETCHBOOK</value>
+                                    <value>SLAVENARRATIVE</value>
+                                    <value>SOCIALSCIENCE</value>
+                                    <value>SONG</value>
+                                    <value>SONNET</value>
+                                    <value>SPEECH</value>
+                                    <value>STAGEREVIEW</value>
+                                    <value>TESTIMONY</value>
+                                    <value>TEXTBOOK</value>
+                                    <value>THEATREOFCRUELTY</value>
+                                    <value>THEATREOFTHEABSURD</value>
+                                    <value>THEOLOGY</value>
+                                    <value>THESAURUS</value>
+                                    <value>THRILLER</value>
+                                    <value>TOPOGRAPHICALPOETRY</value>
+                                    <value>TRACTPAMPHLET</value>
+                                    <value>TRAGEDY</value>
+                                    <value>TRAGICOMEDY</value>
+                                    <value>TRANSLATION</value>
+                                    <value>TRAVELWRITING</value>
+                                    <value>TREATISE</value>
+                                    <value>UTOPIA</value>
+                                    <value>VERSENOVEL</value>
+                                    <value>VIGNETTE</value>
+                                    <value>VILLANELLE</value>
+                                    <value>YOUNGADULTWRITING</value>
+                                </choice>
+                            </attribute>
+                            <data type="NCName"/>
+                        </element>
+                    </choice>
+                </oneOrMore>
+            </element>
+            <zeroOrMore>
+                <choice>
+                    <ref name="BIBCITS"/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="RESEARCHNOTE"/>
                 </choice>
-            </oneOrMore>
+            </zeroOrMore>
         </element>
     </define>
 
