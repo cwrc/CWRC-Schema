@@ -34,6 +34,10 @@
 <!-- 
 *** Revisions ***
 * MRB: September 2014: Made the following changes:
+  - Removed references to the element BIBCITS from the following parent elements: CHRONSTRUCT, DIV2, and SHORTPROSE.
+  - Removed references to the element SCHOLARNOTE from the following parent elements: BIBCITS, CHRONSTRUCT, PRODUCTION, RECEPTION,
+    SHORTPROSE, and WORKSCITED.
+  - Redefined the attribute TITLETYPE in the element TITLE from an optional attribute to a required attribute.
   - Made the element PSERIALIZATION an optional repeatable child element of the element PMOTIVES.
   - Made the element RFICTIONALIZATION an optional repeatable child element of the element PFIRSTLITERARYACTIVITY.
 * MRB: August 2014: Made the folloiwng changes:
@@ -270,7 +274,6 @@
                             <oneOrMore>
                                 <choice>
                                     <ref name="RESEARCHNOTE"/>
-                                    <ref name="SCHOLARNOTE"/>
                                     <element name="SOURCE">
                                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">source describes the original source
                       for the information contained with a manuscript description.</a:documentation>
@@ -278,6 +281,7 @@
                                             <choice>
                                                 <text/>
                                                 <ref name="RESEARCHNOTE"/>
+                                                <ref name="SCHOLARNOTE"/>
                                                 <ref name="TITLE"/>
                                             </choice>
                                         </oneOrMore>
@@ -425,11 +429,9 @@
             </optional>
             <oneOrMore>
                 <choice>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="P"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                 </choice>
             </oneOrMore>
             <optional>
@@ -508,19 +510,17 @@
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
           organization, or topic is known</a:documentation>
             </optional>
-            <optional>
-                <attribute name="TITLETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
+            <attribute name="TITLETYPE">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
             title is a part of another work, an entire work, a journal, or a series.</a:documentation>
-                    <choice>
-                        <value>MONOGRAPHIC</value>
-                        <value>ANALYTIC</value>
-                        <value>JOURNAL</value>
-                        <value>SERIES</value>
-                        <value>UNPUBLISHED</value>
-                    </choice>
-                </attribute>
-            </optional>
+                <choice>
+                    <value>MONOGRAPHIC</value>
+                    <value>ANALYTIC</value>
+                    <value>JOURNAL</value>
+                    <value>SERIES</value>
+                    <value>UNPUBLISHED</value>
+                </choice>
+            </attribute>
             <optional>
                 <attribute name="REF">
                     <data type="anyURI"/>
@@ -734,10 +734,8 @@
             </element>
             <zeroOrMore>
                 <choice>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                 </choice>
             </zeroOrMore>
         </element>
@@ -885,7 +883,6 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="SHORTPROSE"/>
                 </choice>
             </zeroOrMore>
@@ -907,7 +904,6 @@
                 <choice>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="SHORTPROSE"/>
                 </choice>
             </zeroOrMore>
@@ -1497,14 +1493,12 @@
                             <choice>
                                 <text/>
                                 <ref name="RESEARCHNOTE"/>
+                                <ref name="SCHOLARNOTE"/>
                             </choice>
                         </oneOrMore>
                     </element>
                 </choice>
             </oneOrMore>
-            <optional>
-                <ref name="SCHOLARNOTE"/>
-            </optional>
         </element>
     </define>
 
@@ -3290,11 +3284,21 @@
                     </choice>
                 </attribute>
             </optional>
-            <attribute name="VALUE">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
-          time-related value.</a:documentation>
-                <data type="NMTOKEN"/>
-            </attribute>
+            <optional>
+                <attribute name="VALUE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related
+                        value.</a:documentation>
+                    <choice>
+                        <data type="date"/>
+                        <data type="string">
+                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                        </data>
+                        <data type="string">
+                            <param name="pattern">(\d{4})(\-{2})</param>
+                        </data>
+                    </choice>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>

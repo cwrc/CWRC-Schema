@@ -33,6 +33,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: September 2014: Made the following changes:
+  - Removed references to the element BIBCITS from the following parent elements: CHRONSTRUCT, DIV2, and SHORTPROSE.
+  - Redefined the attribute TITLETYPE in the element TITLE from an optional attribute to a required attribute.
 * MRB: August 2014: Made the folloiwng changes:
   - Redefined the attribute VALUE in the elements DATE and DATESTRUCT so that the acceptable Orlando legacy date formats are explicitly defined, i.e.,
     YYYY-MM-DD, YYYY-MM-, and YYYY-hyphen.
@@ -253,11 +256,47 @@
                 <oneOrMore>
                     <element name="RESPONSIBILITY">
                         <ref name="RESP-attribute"/>
-                        <attribute name="WORKSTATUS">
-                            <data type="NCName"/>
+                        <attribute name="WORKSTATUS" a:defaultValue="SUB">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the work status of a
+                                document.</a:documentation>
+                            <choice>
+                                <value type="token">SUB</value>
+                                <a:documentation>Submitted (SUB)</a:documentation>
+                                <value type="token">RWT</value>
+                                <a:documentation>Researched / Written / Tagged (RWT)</a:documentation>
+                                <value type="token">CAS</value>
+                                <a:documentation>Checked Against Sources (CAS)</a:documentation>
+                                <value type="token">RBV</value>
+                                <a:documentation>Reviewed by Volume Author (RVB)</a:documentation>
+                                <value type="token">CFT</value>
+                                <a:documentation>Checked for Tagging (CFT)</a:documentation>
+                                <value type="token">CFB</value>
+                                <a:documentation>Checked for Bibliographic Practices (CFB)</a:documentation>
+                                <value type="token">CFC</value>
+                                <!-- MRB: CFC? -->
+                                <value type="token">REV</value>
+                                <a:documentation>Revised (REV)</a:documentation>
+                                <value type="token">OLD</value>
+                                <!-- MRB: OLD? -->
+                                <value type="token">PUB</value>
+                                <a:documentation>Published (PUB)</a:documentation>
+                                <value type="token">ENH</value>
+                                <a:documentation>Enhanced (ENH)</a:documentation>
+                            </choice>
                         </attribute>
-                        <attribute name="WORKVALUE">
-                            <data type="NCName"/>
+                        <attribute name="WORKVALUE" a:defaultValue="I">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the completion information of a
+                                particular work status phase of a document.</a:documentation>
+                            <choice>
+                                <value>I</value>
+                                <a:documentation>Incomplete</a:documentation>
+                                <value>P</value>
+                                <a:documentation>Pending</a:documentation>
+                                <value>C</value>
+                                <a:documentation>Complete</a:documentation>
+                                <value>O</value>
+                                <!-- MRB: O? -->
+                            </choice>
                         </attribute>
                         <optional>
                             <ref name="BIBCIT"/>
@@ -324,18 +363,22 @@
                     </choice>
                 </attribute>
             </optional>
-            <attribute name="VALUE"/>
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related
+            <optional>
+                <attribute name="VALUE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related
         value.</a:documentation>
-            <choice>
-                <data type="date"/>
-                <data type="string">
-                    <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
-                </data>
-                <data type="string">
-                    <param name="pattern">(\d{4})(\-{2})</param>
-                </data>
-            </choice>
+                    <choice>
+                        <data type="date"/>
+                        <data type="string">
+                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                        </data>
+                        <data type="string">
+                            <param name="pattern">(\d{4})(\-{2})</param>
+                        </data>
+                    </choice>
+                </attribute>
+            </optional>
+            <text/>
         </element>
     </define>
 
@@ -373,11 +416,21 @@
                     <a:documentation>Rough certainty</a:documentation>
                 </choice>
             </attribute>
-            <attribute name="VALUE">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or
-          time-related value.</a:documentation>
-                <data type="NMTOKEN"/>
-            </attribute>
+            <optional>
+                <attribute name="VALUE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related
+                        value.</a:documentation>
+                    <choice>
+                        <data type="date"/>
+                        <data type="string">
+                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                        </data>
+                        <data type="string">
+                            <param name="pattern">(\d{4})(\-{2})</param>
+                        </data>
+                    </choice>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -546,32 +599,36 @@
                     </choice>
                 </attribute>
             </optional>
-            <attribute name="FROM">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">From is used to record a formatted date-related
+            <optional>
+                <attribute name="FROM">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">From is used to record a formatted date-related
                     value.</a:documentation>
-                <choice>
-                    <data type="date"/>
-                    <data type="string">
-                        <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
-                    </data>
-                    <data type="string">
-                        <param name="pattern">(\d{4})(\-{2})</param>
-                    </data>
-                </choice>
-            </attribute>
-            <attribute name="TO">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">To is used to record a formatted date-related
+                    <choice>
+                        <data type="date"/>
+                        <data type="string">
+                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                        </data>
+                        <data type="string">
+                            <param name="pattern">(\d{4})(\-{2})</param>
+                        </data>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="TO">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">To is used to record a formatted date-related
                     value.</a:documentation>
-                <choice>
-                    <data type="date"/>
-                    <data type="string">
-                        <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
-                    </data>
-                    <data type="string">
-                        <param name="pattern">(\d{4})(\-{2})</param>
-                    </data>
-                </choice>
-            </attribute>
+                    <choice>
+                        <data type="date"/>
+                        <data type="string">
+                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                        </data>
+                        <data type="string">
+                            <param name="pattern">(\d{4})(\-{2})</param>
+                        </data>
+                    </choice>
+                </attribute>
+            </optional>
             <text/>
         </element>
     </define>
@@ -604,19 +661,17 @@
                     <data type="NCName"/>
                 </attribute>
             </optional>
-            <optional>
-                <attribute name="TITLETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
+            <attribute name="TITLETYPE">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
           title is a part of another work, an entire work, a journal, or a series.</a:documentation>
-                    <choice>
-                        <value>MONOGRAPHIC</value>
-                        <value>ANALYTIC</value>
-                        <value>JOURNAL</value>
-                        <value>SERIES</value>
-                        <value>UNPUBLISHED</value>
-                    </choice>
-                </attribute>
-            </optional>
+                <choice>
+                    <value>MONOGRAPHIC</value>
+                    <value>ANALYTIC</value>
+                    <value>JOURNAL</value>
+                    <value>SERIES</value>
+                    <value>UNPUBLISHED</value>
+                </choice>
+            </attribute>
             <optional>
                 <attribute name="REF">
                     <data type="anyURI"/>
@@ -1506,9 +1561,11 @@
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element named bibCit is designed to capture
         bibliographical information in much the same way as an MLA parenthetical citation and should always reside within a bibCits
         container tag.</a:documentation>
-            <attribute name="DBREF">
-                <data type="integer"/>
-            </attribute>
+            <optional>
+                <attribute name="DBREF">
+                    <data type="integer"/>
+                </attribute>
+            </optional>
             <optional>
                 <attribute name="PLACEHOLDER"/>
             </optional>

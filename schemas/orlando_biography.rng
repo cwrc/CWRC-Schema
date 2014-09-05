@@ -34,10 +34,14 @@
 <!-- 
 *** Revisions ***
 * MRB: September 2014: Made the following changes:
+  - Removed references to the element BIBCITS from the following parent elements: BIRTH, BIRTHNAME, CHRONSTRUCT, DATASTRUCT, DEATH, DIV0, DIV2,
+    EDUCATION, LOCATION, MARRIAGE, SCHOLARNOTE, and SHORTPROSE.
+  - Removed references to the element SCHOLARNOTE from the following parent elements: BIBCITS, BIRTH, BIRTHNAME, CHRONSTRUCT, DATASTRUCT, DEATH,
+    DIV2, EDUCATION, FAMILY, MEMBER, INTIMATERELATIONSHIPS, SHORTPROSE, and WORKSCITED.
+  - Redefined the attribute TITLETYPE in the element TITLE from an optional attribute to a required attribute.
   - Made the element ETHNICITY an optional repeatable child element of the element SOCALLED.
 * MRB: August 2014: Made the folloiwng changes:
   - Removed text node from the element DIV2.
-  - Removed references to the element BIBCITS from the following parent elements: DATASTRUCT, DIV0, DIV2, and SHORTPROSE.
   - Redefined the attribute VALUE in the elements DATE and DATESTRUCT so that the acceptable Orlando legacy date formats are explicitly defined, i.e.,
     YYYY-MM-DD, YYYY-MM-, and YYYY-hyphen.
   - Redefined the attributes FROM and TO in the element DATERANGE so that the acceptable Orlando legacy date formats are explicitly defined, i.e., YYYY-MM-DD,
@@ -231,9 +235,6 @@
                                             <ref name="CHRONSTRUCT"/>
                                         </optional>
                                         <optional>
-                                            <ref name="SCHOLARNOTE"/>
-                                        </optional>
-                                        <optional>
                                             <choice>
                                                 <ref name="BIRTHPOSITION"/>
                                                 <ref name="RESEARCHNOTE"/>
@@ -242,9 +243,6 @@
                                         <zeroOrMore>
                                             <ref name="DIV2"/>
                                         </zeroOrMore>
-                                        <optional>
-                                            <ref name="BIBCITS"/>
-                                        </optional>
                                     </element>
                                     <element name="DEATH">
                                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Death is one of the 16 major biography
@@ -254,15 +252,9 @@
                                         <optional>
                                             <ref name="CHRONSTRUCT"/>
                                         </optional>
-                                        <choice>
-                                            <ref name="BIBCITS"/>
-                                            <zeroOrMore>
-                                                <ref name="DIV2"/>
-                                            </zeroOrMore>
-                                        </choice>
-                                        <optional>
-                                            <ref name="SCHOLARNOTE"/>
-                                        </optional>
+                                        <zeroOrMore>
+                                            <ref name="DIV2"/>
+                                        </zeroOrMore>
                                         <optional>
                                             <ref name="RESEARCHNOTE"/>
                                         </optional>
@@ -296,12 +288,6 @@
                                                 <ref name="RESEARCHNOTE"/>
                                             </choice>
                                         </zeroOrMore>
-                                        <optional>
-                                            <choice>
-                                                <ref name="BIBCITS"/>
-                                                <ref name="SCHOLARNOTE"/>
-                                            </choice>
-                                        </optional>
                                     </element>
                                     <element name="FAMILY">
                                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Family is one of the 16 major
@@ -408,12 +394,6 @@
                                                             </element>
                                                         </choice>
                                                     </zeroOrMore>
-                                                    <optional>
-                                                        <choice>
-                                                            <ref name="BIBCITS"/>
-                                                            <ref name="SCHOLARNOTE"/>
-                                                        </choice>
-                                                    </optional>
                                                 </element>
                                             </choice>
                                         </zeroOrMore>
@@ -462,10 +442,7 @@
                                             </choice>
                                         </oneOrMore>
                                         <optional>
-                                            <choice>
-                                                <ref name="KEYWORDCLASS"/>
-                                                <ref name="SCHOLARNOTE"/>
-                                            </choice>
+                                            <ref name="KEYWORDCLASS"/>
                                         </optional>
                                     </element>
                                     <element name="LOCATION">
@@ -489,7 +466,6 @@
                                         </attribute>
                                         <zeroOrMore>
                                             <choice>
-                                                <ref name="BIBCITS"/>
                                                 <ref name="CHRONSTRUCT"/>
                                                 <ref name="DIV2"/>
                                                 <ref name="RESEARCHNOTE"/>
@@ -832,7 +808,6 @@
                             <oneOrMore>
                                 <choice>
                                     <ref name="RESEARCHNOTE"/>
-                                    <ref name="SCHOLARNOTE"/>
                                     <element name="SOURCE">
                                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">source describes the original source
                       for the information contained with a manuscript description.</a:documentation>
@@ -840,6 +815,7 @@
                                             <choice>
                                                 <text/>
                                                 <ref name="RESEARCHNOTE"/>
+                                                <ref name="SCHOLARNOTE"/>
                                                 <ref name="TITLE"/>
                                             </choice>
                                         </oneOrMore>
@@ -1119,12 +1095,10 @@
             </optional>
             <oneOrMore>
                 <choice>
-                    <ref name="BIBCITS"/>
                     <ref name="DATE"/>
                     <ref name="DATESTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                     <element name="CHRONPROSE">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
               the essential facts of a chronology event.</a:documentation>
@@ -1454,10 +1428,7 @@
                 <ref name="P"/>
             </oneOrMore>
             <optional>
-                <choice>
-                    <ref name="BIBCITS"/>
-                    <ref name="RESEARCHNOTE"/>
-                </choice>
+                <ref name="RESEARCHNOTE"/>
             </optional>
         </element>
     </define>
@@ -1541,7 +1512,6 @@
                     <ref name="QUOTE"/>
                     <ref name="RACECOLOUR"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                     <element name="DATASTRUCT">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A dataStruct is a container element for one or
               more individual pieces of tabular data in the document.</a:documentation>
@@ -1549,7 +1519,6 @@
                             <choice>
                                 <ref name="INDEXED"/>
                                 <ref name="RESEARCHNOTE"/>
-                                <ref name="SCHOLARNOTE"/>
                                 <ref name="SELFCONSTRUCTED"/>
                                 <element name="DATAITEM">
                                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dataItem is an element that contains
@@ -1618,7 +1587,6 @@
                                 <ref name="KEYWORDCLASS"/>
                                 <ref name="P"/>
                                 <ref name="RESEARCHNOTE"/>
-                                <ref name="SCHOLARNOTE"/>
                             </choice>
                         </oneOrMore>
                     </element>
@@ -1637,7 +1605,6 @@
             <zeroOrMore>
                 <choice>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                     <element name="BIBCIT">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element named bibCit is designed to capture
               bibliographical information in much the same way as an MLA parenthetical citation and should always reside within a bibCits
@@ -1669,6 +1636,7 @@
                             <choice>
                                 <text/>
                                 <ref name="RESEARCHNOTE"/>
+                                <ref name="SCHOLARNOTE"/>
                             </choice>
                         </oneOrMore>
                     </element>
@@ -2098,19 +2066,17 @@
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rend (or rendition) indicates how the element in
           question was rendered or presented in the source text.</a:documentation>
             </optional>
-            <optional>
-                <attribute name="TITLETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
+            <attribute name="TITLETYPE">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
             title is a part of another work, an entire work, a journal, or a series.</a:documentation>
-                    <choice>
-                        <value>MONOGRAPHIC</value>
-                        <value>ANALYTIC</value>
-                        <value>JOURNAL</value>
-                        <value>SERIES</value>
-                        <value>UNPUBLISHED</value>
-                    </choice>
-                </attribute>
-            </optional>
+                <choice>
+                    <value>MONOGRAPHIC</value>
+                    <value>ANALYTIC</value>
+                    <value>JOURNAL</value>
+                    <value>SERIES</value>
+                    <value>UNPUBLISHED</value>
+                </choice>
+            </attribute>
             <optional>
                 <attribute name="REF">
                     <data type="anyURI"/>
@@ -2813,9 +2779,7 @@
             </optional>
             <oneOrMore>
                 <choice>
-                    <ref name="BIBCITS"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="SELFCONSTRUCTED"/>
                     <ref name="TITLED"/>
                     <element name="GIVEN">
@@ -3210,19 +3174,21 @@
                     </choice>
                 </attribute>
             </optional>
-            <attribute name="VALUE">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related
+            <optional>
+                <attribute name="VALUE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related
           value.</a:documentation>
-                <choice>
-                    <data type="date"/>
-                    <data type="string">
-                        <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
-                    </data>
-                    <data type="string">
-                        <param name="pattern">(\d{4})(\-{2})</param>
-                    </data>
-                </choice>
-            </attribute>
+                    <choice>
+                        <data type="date"/>
+                        <data type="string">
+                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
+                        </data>
+                        <data type="string">
+                            <param name="pattern">(\d{4})(\-{2})</param>
+                        </data>
+                    </choice>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>

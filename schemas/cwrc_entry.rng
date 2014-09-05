@@ -33,6 +33,14 @@
 
 <!-- 
 *** Revisions ***
+* MRB: September 2014: Made the following changes:
+  - Removed references to the element BIBCITS from the following parent elements: BIRTH, BIRTHNAME, CHRONSTRUCT, CULTURALFORMATION, DATASTRUCT,
+    DEATH, ECONOMICS, EDUCATION, ENTRY, FAMILY, FAMILYMEMBER, FRIENDSASSOCIATES, HEALTH, INTIMATERELATIONSHIPS, LEISUREANDSOCIETY,
+    OCCUPATION, OTHERLIFEEVENT, PERSONNAME, POLITICS, RESIDENCEANDMOBILITY, SCHOLARNOTE, TEXTSCOPE, and VIOLENCE.
+  - Removed references to the element SCHOLARNOTE from the following parent elements: BIBCITS, BIRTH, BIRTHNAME, CHRONSTRUCT, CULTURALFORMATION,
+    DATASTRUCT, DEATH, ECONOMICS, EDUCATION, ENTRY, FAMILY, FAMILYMEMBER, FRIENDSASSOCIATES, HEALTH, INTIMATERELATIONSHIPS,
+    LEISUREANDSOCIETY, OCCUPATION, OTHERLIFEEVENT, PERSONNAME, POLITICS, RESIDENCEANDMOBILITY, TEXTSCOPE, VIOLENCE, and WORKSCITED.
+  - Redefined the attribute LEVEL in the element TITLE from an optional attribute to a required attribute.
 * MRB: August 2014: Made the following changes:
   - Redefined the attribute VALUE in the element DATE so that the acceptable ISO date formats are explicitly defined, i.e., YYYY-MM-DD, YYYY-MM, and YYYY.
   - Redefined the attributes FROM and TO in the element DATERANGE so that the acceptable ISO date formats are explicitly defined, i.e., YYYY-MM-DD, YYYY-MM,
@@ -401,9 +409,7 @@
                 <oneOrMore>
                     <choice>
                         <ref name="HEADING"/>
-                        <ref name="BIBCITS"/>
                         <ref name="KEYWORDCLASS"/>
-                        <ref name="SCHOLARNOTE"/>
                         <ref name="RESEARCHNOTE"/>
                         <ref name="BIRTH"/>
                         <ref name="CULTURALFORMATION"/>
@@ -452,9 +458,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="BIRTHPOSITION"/>
                 </choice>
@@ -490,9 +494,7 @@
                         <ref name="P"/>
                         <ref name="DATASTRUCT"/>
                         <ref name="CHRONSTRUCT"/>
-                        <ref name="BIBCITS"/>
                         <ref name="KEYWORDCLASS"/>
-                        <ref name="SCHOLARNOTE"/>
                         <ref name="RESEARCHNOTE"/>
                         <ref name="CLASS"/>
                         <ref name="RACECOLOUR"/>
@@ -629,9 +631,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -652,9 +652,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -690,9 +688,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -730,9 +726,7 @@
                         <ref name="P"/>
                         <ref name="DATASTRUCT"/>
                         <ref name="CHRONSTRUCT"/>
-                        <ref name="BIBCITS"/>
                         <ref name="KEYWORDCLASS"/>
-                        <ref name="SCHOLARNOTE"/>
                         <ref name="RESEARCHNOTE"/>
                         <element name="FAMILYMEMBER">
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FamilyMember, a
@@ -783,7 +777,6 @@
                             </attribute>
                             <oneOrMore>
                                 <choice>
-                                    <ref name="BIBCITS"/>
                                     <ref name="CHILDREN"/>
                                     <ref name="CHRONSTRUCT"/>
                                     <ref name="DATASTRUCT"/>
@@ -792,7 +785,6 @@
                                     <ref name="P"/>
                                     <ref name="PLACE"/>
                                     <ref name="RESEARCHNOTE"/>
-                                    <ref name="SCHOLARNOTE"/>
                                 </choice>
                             </oneOrMore>
                         </element>
@@ -844,9 +836,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -884,9 +874,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -934,9 +922,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -959,9 +945,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -994,9 +978,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -1017,9 +999,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -1038,9 +1018,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -1059,9 +1037,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -1083,9 +1059,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -1107,9 +1081,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
@@ -1134,9 +1106,7 @@
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
-                    <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="PRODUCTION"/>
                     <ref name="RECEPTION"/>
@@ -1412,7 +1382,6 @@
             <oneOrMore>
                 <choice>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                     <element name="SOURCE">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">source describes the original source
                         for the information contained with a manuscript description.</a:documentation>
@@ -1420,6 +1389,7 @@
                             <choice>
                                 <text/>
                                 <ref name="RESEARCHNOTE"/>
+                                <ref name="SCHOLARNOTE"/>
                                 <ref name="TITLE"/>
                             </choice>
                         </oneOrMore>
@@ -1776,12 +1746,10 @@
             </optional>
             <oneOrMore>
                 <choice>
-                    <ref name="BIBCITS"/>
                     <ref name="DATE"/>
                     <ref name="DATERANGE"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                     <element name="CHRONPROSE">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
                             the essential facts of a chronology event.</a:documentation>
@@ -1913,10 +1881,8 @@
             more individual pieces of tabular data in the document.</a:documentation>
             <oneOrMore>
                 <choice>
-                    <ref name="BIBCITS"/>
                     <ref name="INDEXED"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="SELFCONSTRUCTED"/>
                     <element name="DATAITEM">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dataItem is an element that contains
@@ -2279,7 +2245,6 @@
             </oneOrMore>
             <optional>
                 <choice>
-                    <ref name="BIBCITS"/>
                     <ref name="RESEARCHNOTE"/>
                 </choice>
             </optional>
@@ -2298,7 +2263,6 @@
             <zeroOrMore>
                 <choice>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                     <element name="BIBCIT">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element named bibCit is designed to capture
                             bibliographical information in much the same way as an MLA parenthetical citation and should always reside within a bibCits
@@ -2334,6 +2298,7 @@
                                 <ref name="NAME"/>
                                 <ref name="ORGNAME"/>
                                 <ref name="RESEARCHNOTE"/>
+                                <ref name="SCHOLARNOTE"/>
                                 <ref name="TITLE"/>
                                 <ref name="XREF"/>
                             </choice>
@@ -2663,19 +2628,17 @@
                         organization, or topic is known</a:documentation>
                 </attribute>
             </optional>
-            <optional>
-                <attribute name="LEVEL">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, level indicates whether a
+            <attribute name="LEVEL">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, level indicates whether a
                         title is a part of another work, an entire work, a journal, or a series.</a:documentation>
-                    <choice>
-                        <value>MONOGRAPHIC</value>
-                        <value>ANALYTIC</value>
-                        <value>JOURNAL</value>
-                        <value>SERIES</value>
-                        <value>UNPUBLISHED</value>
-                    </choice>
-                </attribute>
-            </optional>
+                <choice>
+                    <value>MONOGRAPHIC</value>
+                    <value>ANALYTIC</value>
+                    <value>JOURNAL</value>
+                    <value>SERIES</value>
+                    <value>UNPUBLISHED</value>
+                </choice>
+            </attribute>
             <optional>
                 <attribute name="REF">
                     <data type="anyURI"/>
@@ -3906,9 +3869,7 @@
             </optional>
             <oneOrMore>
                 <choice>
-                    <ref name="BIBCITS"/>
                     <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
                     <ref name="SELFCONSTRUCTED"/>
                     <ref name="TITLED"/>
                     <element name="GIVEN">
