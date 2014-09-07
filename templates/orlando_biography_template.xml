@@ -47,39 +47,19 @@
                     <DATASTRUCT>
                         <RESEARCHNOTE>Delete any name types that do not apply (including its
                             enclosing DATAITEM tag)</RESEARCHNOTE>
-                        <DATAITEM>
-                            <BIRTHNAME>
-                                <GIVEN>[BirthGivenName]</GIVEN>
-                                <SURNAME>[BirthSurname]</SURNAME>
-                            </BIRTHNAME>
-                        </DATAITEM>
-                        <DATAITEM>
-                            <NICKNAME>[InsertNickname]</NICKNAME>
-                        </DATAITEM>
-                        <DATAITEM>
-                            <MARRIED>[InsertMarriedName]</MARRIED>
-                        </DATAITEM>
-                        <DATAITEM>
-                            <INDEXED>[InsertIndexedName]</INDEXED>
-                        </DATAITEM>
-                        <DATAITEM>
-                            <SELFCONSTRUCTED>[InsertSelfConsctructedName]</SELFCONSTRUCTED>
-                        </DATAITEM>
-                        <DATAITEM>
-                            <PSEUDONYM>[InsertPseudonym]</PSEUDONYM>
-                        </DATAITEM>
-                        <DATAITEM>
-                            <RELIGIOUSNAME>[InsertReligiousName]</RELIGIOUSNAME>
-                        </DATAITEM>
-                        <DATAITEM>
-                            <ROYAL>[InsertRoyalName]</ROYAL>
-                        </DATAITEM>
-                        <DATAITEM>
-                            <STYLED>[InsertStyledName]</STYLED>
-                        </DATAITEM>
-                        <DATAITEM>
-                            <TITLED>[InsertTitledName]</TITLED>
-                        </DATAITEM>
+                        <DATAITEM> <BIRTHNAME>
+                            <GIVEN>[BirthGivenName]</GIVEN>
+                            <SURNAME>[BirthSurname]</SURNAME>
+                            </BIRTHNAME> </DATAITEM>
+                        <DATAITEM> <NICKNAME>[InsertNickname]</NICKNAME> </DATAITEM>
+                        <DATAITEM> <MARRIED>[InsertMarriedName]</MARRIED> </DATAITEM>
+                        <DATAITEM> <INDEXED>[InsertIndexedName]</INDEXED> </DATAITEM>
+                        <DATAITEM> <SELFCONSTRUCTED>[InsertSelfConsctructedName]</SELFCONSTRUCTED> </DATAITEM>
+                        <DATAITEM> <PSEUDONYM>[InsertPseudonym]</PSEUDONYM> </DATAITEM>
+                        <DATAITEM> <RELIGIOUSNAME>[InsertReligiousName]</RELIGIOUSNAME> </DATAITEM>
+                        <DATAITEM> <ROYAL>[InsertRoyalName]</ROYAL> </DATAITEM>
+                        <DATAITEM> <STYLED>[InsertStyledName]</STYLED> </DATAITEM>
+                        <DATAITEM> <TITLED>[InsertTitledName]</TITLED> </DATAITEM>
                     </DATASTRUCT>
                 </DIV2>
             </PERSONNAME>
@@ -100,7 +80,9 @@
                             the DBREF attributes. Note that the plural BIBCITS tag is
                             used to group any number of BIBCIT tags. Please insert at
                             least one BIBCIT at the end of each paragraph or
-                            CHRONSTRUCT.</RESEARCHNOTE><BIBCITS> <BIBCIT>Insert citation information here</BIBCIT> </BIBCITS></P>
+                            CHRONSTRUCT.</RESEARCHNOTE><BIBCITS>
+                            <BIBCIT>Insert citation information here</BIBCIT>
+                            </BIBCITS></P>
                     </SHORTPROSE>
                 </DIV2>
             </BIRTH>
@@ -183,7 +165,7 @@
         </DIV1>
         <WORKSCITED>
             <SOURCE> Unless otherwise noted, all information is from
-                <TITLE>[InsertSourceTitle]</TITLE>. </SOURCE>
+                <TITLE TITLETYPE="MONOGRAPHIC">[InsertSourceTitle]</TITLE>. </SOURCE>
             <SOURCE>[InsertWorkCited]</SOURCE>
         </WORKSCITED>
     </DIV0>
