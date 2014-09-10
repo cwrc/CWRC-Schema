@@ -388,7 +388,7 @@
                 otherwise, that all types of information can be contained in other types of information. For CWRC projects, ENTRY is the element that
                 contains everything in a document except the cataloguing information that is contained in the CWRCHEADER element.</a:documentation>
             <interleave>
-                <optional>
+                <zeroOrMore>
                     <element name="AUTHORSUMMARY">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element authorSummary is specially devised for
                             researchers to make summary statements about an author before opening individual production, reception, or textual features elements.
@@ -405,7 +405,7 @@
                             </choice>
                         </oneOrMore>
                     </element>
-                </optional>
+                </zeroOrMore>
                 <oneOrMore>
                     <choice>
                         <ref name="HEADING"/>
