@@ -34,6 +34,10 @@
 <!-- 
 *** Revisions ***
 * MRB: September 2014: Made the following changes:
+  - Made element AUTHORSUMMARY repeatable in the parent element ENTRY.
+  - Created the element LISTBIBCITS, which is a child element of ENTRY, and which contains one or more BIBCITS or P child elements.
+  - Created the element FRONT, which is a child element of ENTRY, and which contains one or more of the following elements: CHRONSTRUCT, DATASTRUCT,
+    HEADING, KEYWORDCLASS, P, and RESEARCHNOTE.
   - Removed references to the element BIBCITS from the following parent elements: BIRTH, BIRTHNAME, CULTURALFORMATION, DATASTRUCT, DEATH,
     ECONOMICS, EDUCATION, ENTRY, FAMILY, FAMILYMEMBER, FRIENDSASSOCIATES, HEALTH, INTIMATERELATIONSHIPS, LEISUREANDSOCIETY,
     OCCUPATION, OTHERLIFEEVENT, PERSONNAME, POLITICS, RESIDENCEANDMOBILITY, SCHOLARNOTE, TEXTSCOPE, and VIOLENCE.
@@ -408,6 +412,7 @@
                 </zeroOrMore>
                 <oneOrMore>
                     <choice>
+                        <ref name="FRONT"/>
                         <ref name="HEADING"/>
                         <ref name="KEYWORDCLASS"/>
                         <ref name="RESEARCHNOTE"/>
@@ -421,6 +426,7 @@
                         <ref name="HEALTH"/>
                         <ref name="INTIMATERELATIONSHIPS"/>
                         <ref name="LEISUREANDSOCIETY"/>
+                        <ref name="LISTBIBCITS"/>
                         <ref name="RESIDENCEANDMOBILITY"/>
                         <ref name="OCCUPATION"/>
                         <ref name="OTHERLIFEEVENT"/>
@@ -445,6 +451,23 @@
     <!-- end <ENTRY> element pattern -->
 
     <!-- *** begin globally defined elements *** -->
+
+    <define name="FRONT">
+        <element name="FRONT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Front (front matter) contains any prefatory matter (headers, title page,
+                prefaces, dedications, etc.) found at the start of a document, before the main body.</a:documentation>
+            <oneOrMore>
+                <choice>
+                    <ref name="HEADING"/>
+                    <ref name="P"/>
+                    <ref name="DATASTRUCT"/>
+                    <ref name="CHRONSTRUCT"/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="RESEARCHNOTE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
 
     <define name="BIRTH">
         <element name="BIRTH">
@@ -2311,6 +2334,19 @@
             <optional>
                 <ref name="KEYWORDCLASS"/>
             </optional>
+        </element>
+    </define>
+
+    <define name="LISTBIBCITS">
+        <element name="LISTBIBCITS">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ListBibcits (citation list) contains a list of bibliographic citations of any
+                kind.</a:documentation>
+            <choice>
+                <oneOrMore>
+                    <ref name="BIBCITS"/>
+                    <ref name="P"/>
+                </oneOrMore>
+            </choice>
         </element>
     </define>
 
