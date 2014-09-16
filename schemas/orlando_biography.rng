@@ -34,10 +34,11 @@
 <!-- 
 *** Revisions ***
 * MRB: September 2014: Made the following changes:
-  - Removed references to the element BIBCITS from the following parent elements: BIRTH, BIRTHNAME, DATASTRUCT, DEATH, DIV0, DIV2, EDUCATION,
-    LOCATION, MARRIAGE, SCHOLARNOTE, and SHORTPROSE.
-  - Removed references to the element SCHOLARNOTE from the following parent elements: BIBCITS, BIRTH, BIRTHNAME, DATASTRUCT, DEATH, DIV2, EDUCATION,
-    FAMILY, MEMBER, INTIMATERELATIONSHIPS, SHORTPROSE, and WORKSCITED.
+  - Removed references to the element BIBCITS from the following parent elements: BIRTH, DATASTRUCT, DEATH, DIV0, DIV2, EDUCATION, LOCATION, MARRIAGE, SCHOLARNOTE,
+    and SHORTPROSE; two exceptions to the guiding principle that the parent element of BIBCITS must allow text are BIRTHNAME and CHRONSTRUCT.
+  - Removed references to the element SCHOLARNOTE from the following parent elements: BIBCITS, BIRTH, DATASTRUCT, DEATH, DIV2, EDUCATION, FAMILY, MEMBER,
+    INTIMATERELATIONSHIPS, SHORTPROSE, and WORKSCITED; two exceptions to the guiding principle that the parent element of SCHOLARNOTE must allow text are BIRTHNAME and
+    CHRONSTRUCT.
   - Redefined the attribute TITLETYPE in the element TITLE from an optional attribute to a required attribute.
   - Made the element ETHNICITY an optional repeatable child element of the element SOCALLED.
 * MRB: August 2014: Made the folloiwng changes:
@@ -2781,7 +2782,9 @@
             </optional>
             <oneOrMore>
                 <choice>
+                    <ref name="BIBCITS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="SCHOLARNOTE"/>
                     <ref name="SELFCONSTRUCTED"/>
                     <ref name="TITLED"/>
                     <element name="GIVEN">

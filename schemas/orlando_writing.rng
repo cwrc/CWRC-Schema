@@ -34,8 +34,10 @@
 <!-- 
 *** Revisions ***
 * MRB: September 2014: Made the following changes:
-  - Removed references to the element BIBCITS from the following parent elements: DIV2, and SHORTPROSE.
-  - Removed references to the element SCHOLARNOTE from the following parent elements: BIBCITS, PRODUCTION, RECEPTION, SHORTPROSE, and WORKSCITED.
+  - Removed references to the element BIBCITS from the following parent elements: DIV2, and SHORTPROSE; one exception to the guiding principle that the parent element of BIBCITS
+    must allow text is CHRONSTRUCT.
+  - Removed references to the element SCHOLARNOTE from the following parent elements: BIBCITS, PRODUCTION, RECEPTION, SHORTPROSE, and WORKSCITED; one exception to
+    the guiding principle that the parent element of SCHOLARNOTE must allow text is CHRONSTRUCT.
   - Redefined the attribute TITLETYPE in the element TITLE from an optional attribute to a required attribute.
   - Made the element PSERIALIZATION an optional repeatable child element of the element PMOTIVES.
   - Made the element RFICTIONALIZATION an optional repeatable child element of the element PFIRSTLITERARYACTIVITY.
