@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://cwrc.ca/schemas/cwrc_entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/ceww.css"?>
-
 <CWRC>
     <CWRCHEADER>
         <FILEDESC>
@@ -24,28 +23,34 @@
     <ENTRY>
         <HEADING SUBTYPE="1"><NAME STANDARD="">{Author} </NAME>({Birth_date}-{Death_date})</HEADING>
         <RESEARCHNOTE>Placeholder for image / image caption: {Image_credits}</RESEARCHNOTE>
-        <SCHOLARNOTE><P>{Short_biography}</P></SCHOLARNOTE>
+        <AUTHORSUMMARY><P>{Short_biography}</P></AUTHORSUMMARY>
         <BIRTH>
             <CHRONSTRUCT><DATE>{Birth_date}, </DATE><CHRONPROSE><PLACE>{Birth_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
         </BIRTH>
         <DEATH>
             <CHRONSTRUCT><DATE>{Death_date}, </DATE><CHRONPROSE><PLACE>{Death_place}</PLACE></CHRONPROSE></CHRONSTRUCT>
         </DEATH>
-        <PERSONNAME><HEADING SUBTYPE="5">Name at birth: </HEADING>
+        <PERSONNAME>
+            <HEADING SUBTYPE="5">Name at birth: </HEADING>
             <DATASTRUCT>
-                <DATAITEM> <NAME>{Name_at_birth}</NAME> <RESEARCHNOTE>Copy editor: break the Name above into its components inside the birthname tag below; delate the (now) empty name tag above.</RESEARCHNOTE> <BIRTHNAME><GIVEN></GIVEN> <SURNAME></SURNAME></BIRTHNAME> </DATAITEM>
+                <DATAITEM>
+                    <NAME>{Name_at_birth}</NAME>
+                    <RESEARCHNOTE>Copy editor: break the Name above into its components inside the birthname tag below; delate the (now) empty name tag above.</RESEARCHNOTE>
+                    <BIRTHNAME><GIVEN></GIVEN> <SURNAME></SURNAME></BIRTHNAME>
+                </DATAITEM>
             </DATASTRUCT>
         </PERSONNAME>
         <PERSONNAME>
             <HEADING SUBTYPE="5">Variant names: </HEADING>
             <DATASTRUCT>
-                <DATAITEM> <NAME>{Alternative_names}</NAME> </DATAITEM>
+                <DATAITEM>
+                    <NAME>{Alternative_names}</NAME>
+                </DATAITEM>
                 <RESEARCHNOTE>Copy editor: Break individual variant names into separate dataitems/names. In all cases thoroughout the file, @@ indicates the need for a paragprah marker</RESEARCHNOTE>
             </DATASTRUCT>
         </PERSONNAME>
         <HEADING SUBTYPE="2">Acknowledgements</HEADING>
-        <SCHOLARNOTE><P>{Archives_and_resources}</P></SCHOLARNOTE>
-        <SCHOLARNOTE><P>Entry written by {Author_credits}</P></SCHOLARNOTE>
+        <FRONT><P>{Archives_and_resources}</P><P>Entry written by {Author_credits}</P></FRONT>
         <RESEARCHNOTE>Copy editor: if this has "revised by" in it, change the above text to conform.</RESEARCHNOTE>
         <AUTHORSUMMARY>
             <HEADING SUBTYPE="2"><NAME STANDARD="">{Author}</NAME> ({Birth_date}-{Death_date})</HEADING>
@@ -53,56 +58,56 @@
             <RESEARCHNOTE>Break the paragraph above into multiple paragraphs if needed. Paragraphs marked by @@</RESEARCHNOTE>
         </AUTHORSUMMARY>
         <HEADING SUBTYPE="2">Published Texts</HEADING>
-        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
+        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the LISTBIBCIT>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="3">Novels</HEADING>
         <RESEARCHNOTE>{Novels}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Non-fiction</HEADING>
         <RESEARCHNOTE>{Non-fiction}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Life writing</HEADING>
         <RESEARCHNOTE>{Life_writing}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Short story collections</HEADING>
         <RESEARCHNOTE>{Short_story_collections}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Serialized fiction</HEADING>
         <RESEARCHNOTE>{Serialized_fiction}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Poetry</HEADING>
         <RESEARCHNOTE>{Poetry}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Plays</HEADING>
         <RESEARCHNOTE>{Plays}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Interviews</HEADING>
         <RESEARCHNOTE>{Interviews}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Unverified titles</HEADING>
         <RESEARCHNOTE>{Unverified_titles}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="2">Periodical contributions</HEADING>
         <RESEARCHNOTE>{Periodical_contributions}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="2">Other publications</HEADING>
         <RESEARCHNOTE>{Other_publications}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="2">Other artistic productions</HEADING>
         <HEADING SUBTYPE="3">Music</HEADING>
         <RESEARCHNOTE>{Music}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Radio plays</HEADING>
         <RESEARCHNOTE>{Radioplays}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Screenplays</HEADING>
         <RESEARCHNOTE>{Screenplays}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Visual arts</HEADING>
         <RESEARCHNOTE>{Visual_arts}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="3">Other</HEADING>
         <RESEARCHNOTE>{Other}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="2">Family and Relationships</HEADING>
         <FAMILY>
             <FAMILYMEMBER RELATION="FATHER">
@@ -190,7 +195,8 @@
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Other children</HEADING>
                 <NAME>Child name</NAME>
-                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE> </CHRONSTRUCT></FAMILYMEMBER>
+                <CHRONSTRUCT><DATERANGE FROM="" TO=""></DATERANGE><CHRONPROSE>(relation)</CHRONPROSE> </CHRONSTRUCT>
+            </FAMILYMEMBER>
         </FAMILY>
         <HEADING SUBTYPE="2">Religion</HEADING>
         <CULTURALFORMATION>
@@ -214,7 +220,10 @@
         </EDUCATION>
         <HEADING SUBTYPE="2">Awards</HEADING>
         <RESEARCHNOTE>{Awards}</RESEARCHNOTE>
-        <RECEPTION> <RESEARCHNOTE>Copy editor: break list of awards, as well as Employment and membership below into individual chronstructs following the provided models and delete the now empty research notes when done</RESEARCHNOTE> <CHRONSTRUCT> <CHRONPROSE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME></RRECOGNITIONNAME><ORGNAME></ORGNAME></RRECOGNITIONSANDAWARDS></CHRONPROSE> <DATE></DATE></CHRONSTRUCT> </RECEPTION>
+        <RECEPTION>
+            <RESEARCHNOTE>Copy editor: break list of awards, as well as Employment and membership below into individual chronstructs following the provided models and delete the now empty research notes when done</RESEARCHNOTE>
+            <CHRONSTRUCT><CHRONPROSE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME></RRECOGNITIONNAME> (<ORGNAME></ORGNAME></RRECOGNITIONSANDAWARDS>, </CHRONPROSE> <DATE></DATE><CHRONPROSE>) </CHRONPROSE></CHRONSTRUCT>
+        </RECEPTION>
         <HEADING SUBTYPE="2">Employment and Volunteer Activities</HEADING>
         <OCCUPATION>
             <HEADING SUBTYPE="3">Employment</HEADING>
@@ -223,17 +232,20 @@
             <HEADING SUBTYPE="3">Unpayed and volunteer work</HEADING>
             <RESEARCHNOTE>{Unpaid_and_volunteer_work}</RESEARCHNOTE>
             <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
-            <HEADING SUBTYPE="3">Membership</HEADING>
+            <HEADING SUBTYPE="3">Memberships</HEADING>
             <RESEARCHNOTE>{Memberships}</RESEARCHNOTE>
             <CHRONSTRUCT><DATERANGE></DATERANGE><CHRONPROSE></CHRONPROSE></CHRONSTRUCT>
         </OCCUPATION>
-        <OTHERLIFEEVENT><HEADING SUBTYPE="3">Tangential Information</HEADING><P>{Tangential_information}</P></OTHERLIFEEVENT>
-        <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the BIBCITS>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
+        <OTHERLIFEEVENT>
+            <HEADING SUBTYPE="3">Tangential Information</HEADING>
+            <P>{Tangential_information}</P>
+        </OTHERLIFEEVENT>
+        <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the LISTBIBCIT>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="2">Archival Holdings</HEADING>
         <RESEARCHNOTE>{Archive_material}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
         <HEADING SUBTYPE="2">Published Resources</HEADING>
         <RESEARCHNOTE>{Published_resources}</RESEARCHNOTE>
-        <BIBCITS><BIBCIT REF=""></BIBCIT></BIBCITS>
+        <LISTBIBCIT><BIBCIT REF=""></BIBCIT></LISTBIBCIT>
     </ENTRY>
 </CWRC>

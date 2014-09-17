@@ -60,10 +60,7 @@ HEADING[SUBTYPE = "1"]{
     font-weight:bold
 }
 
-HEADING[SUBTYPE = "1"] + SCHOLARNOTE{
-    display:block;
-    text-align:center
-}
+
 
 BIRTH:before{
     content:"Birth: ";
@@ -94,15 +91,16 @@ HEADING[SUBTYPE = "2"]{
     padding-bottom:1em
 }
 
-HEADING[SUBTYPE = "2"] + SCHOLARNOTE{
+FRONT P{
     display:block;
     font-style:italic;
 }
 
-SCHOLARNOTE + SCHOLARNOTE{
+FRONT P + P{
     display:block;
     text-align:right;
-    padding-right:2em
+    padding-right:2em;
+    font-style:normal
 }
 
 HEADING[SUBTYPE = "3"]{
@@ -121,7 +119,7 @@ HEADING[SUBTYPE = "4"]{
     font-size:medium;
 }
 
-BIBCITS BIBCIT{
+LISTBIBCIT BIBCIT{
     display:block;
     padding-left:2%;
     padding-bottom:0.5em
@@ -175,7 +173,7 @@ EDUCATION CHRONSTRUCT DATERANGE{
 EDUCATION CHRONSTRUCT CHRONSPROSE{
     display:inline-block
 }
-AUTHORSUMMARY P{display:block; padding:1em; padding-left:0em}
+AUTHORSUMMARY:nth-of-type(1){display:block; padding:1em; padding-left:15%; padding-right:15%;text-align:center}
 
 
 
