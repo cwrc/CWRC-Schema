@@ -36,7 +36,7 @@
 * MRB: September 2014: Made the following changes:
   - Made element AUTHORSUMMARY repeatable in the parent element ENTRY.
   - Created the element LISTBIBCIT, which is a child element of ENTRY, and which contains one or more BIBCIT or RESEARCHNOTE child elements.
-  - Globally defined the element BIBCIT, which is a child element of BIBCITS and LISTBIBCIT.
+  - Refined the element BIBCIT from a locally defined child element of BIBCITS, to a globally defined element which is a child element of BIBCITS and LISTBIBCIT.
   - Created the element FRONT, which is a child element of ENTRY, and which contains one or more of the following elements: CHRONSTRUCT, DATASTRUCT,
     HEADING, KEYWORDCLASS, P, and RESEARCHNOTE.
   - Removed references to the element BIBCITS from the following parent elements: BIRTH, CULTURALFORMATION, DATASTRUCT, DEATH, ECONOMICS, EDUCATION, ENTRY, FAMILY,
