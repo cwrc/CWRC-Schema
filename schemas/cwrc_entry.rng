@@ -35,7 +35,8 @@
 *** Revisions ***
 * MRB: September 2014: Made the following changes:
   - Made element AUTHORSUMMARY repeatable in the parent element ENTRY.
-  - Created the element LISTBIBCITS, which is a child element of ENTRY, and which contains one or more BIBCITS or P child elements.
+  - Created the element LISTBIBCIT, which is a child element of ENTRY, and which contains one or more BIBCIT or RESEARCHNOTE child elements.
+  - Globally defined the element BIBCIT, which is a child element of BIBCITS and LISTBIBCIT.
   - Created the element FRONT, which is a child element of ENTRY, and which contains one or more of the following elements: CHRONSTRUCT, DATASTRUCT,
     HEADING, KEYWORDCLASS, P, and RESEARCHNOTE.
   - Removed references to the element BIBCITS from the following parent elements: BIRTH, CULTURALFORMATION, DATASTRUCT, DEATH, ECONOMICS, EDUCATION, ENTRY, FAMILY,
@@ -428,7 +429,7 @@
                         <ref name="HEALTH"/>
                         <ref name="INTIMATERELATIONSHIPS"/>
                         <ref name="LEISUREANDSOCIETY"/>
-                        <ref name="LISTBIBCITS"/>
+                        <ref name="LISTBIBCIT"/>
                         <ref name="RESIDENCEANDMOBILITY"/>
                         <ref name="OCCUPATION"/>
                         <ref name="OTHERLIFEEVENT"/>
@@ -2289,48 +2290,8 @@
             </optional>
             <zeroOrMore>
                 <choice>
+                    <ref name="BIBCIT"/>
                     <ref name="RESEARCHNOTE"/>
-                    <element name="BIBCIT">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element named bibCit is designed to capture
-                            bibliographical information in much the same way as an MLA parenthetical citation and should always reside within a bibCits
-                            container tag.</a:documentation>
-                        <optional>
-                            <attribute name="ID">
-                                <data type="NCName"/>
-                            </attribute>
-                        </optional>
-                        <optional>
-                            <attribute name="PLACEHOLDER"/>
-                        </optional>
-                        <optional>
-                            <attribute name="QTDIN">
-                                <value>QTDINYES</value>
-                            </attribute>
-                        </optional>
-                        <optional>
-                            <attribute name="REF">
-                                <data type="anyURI"/>
-                            </attribute>
-                        </optional>
-                        <oneOrMore>
-                            <choice>
-                                <text/>
-                                <element name="BIBLSCOPE">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">BiblScope (scope of bibliographic reference)
-                                        defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger
-                                        work.</a:documentation>
-                                    <text/>
-                                </element>
-                                <ref name="DATE"/>
-                                <ref name="NAME"/>
-                                <ref name="ORGNAME"/>
-                                <ref name="RESEARCHNOTE"/>
-                                <ref name="SCHOLARNOTE"/>
-                                <ref name="TITLE"/>
-                                <ref name="XREF"/>
-                            </choice>
-                        </oneOrMore>
-                    </element>
                 </choice>
             </zeroOrMore>
             <optional>
@@ -2339,16 +2300,60 @@
         </element>
     </define>
 
-    <define name="LISTBIBCITS">
-        <element name="LISTBIBCITS">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ListBibcits (citation list) contains a list of bibliographic citations of any
+    <define name="LISTBIBCIT">
+        <element name="LISTBIBCIT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ListBibcit (citation list) contains a list of bibliographic citations of any
                 kind.</a:documentation>
-            <choice>
-                <oneOrMore>
-                    <ref name="BIBCITS"/>
-                    <ref name="P"/>
-                </oneOrMore>
-            </choice>
+            <oneOrMore>
+                <choice>
+                    <ref name="BIBCIT"/>
+                    <ref name="RESEARCHNOTE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="BIBCIT">
+        <element name="BIBCIT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The element named bibCit is designed to capture
+            bibliographical information in much the same way as an MLA parenthetical citation and should always reside within a bibCits
+            container tag.</a:documentation>
+            <optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="PLACEHOLDER"/>
+            </optional>
+            <optional>
+                <attribute name="QTDIN">
+                    <value>QTDINYES</value>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <element name="BIBLSCOPE">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">BiblScope (scope of bibliographic reference)
+                        defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger
+                        work.</a:documentation>
+                        <text/>
+                    </element>
+                    <ref name="DATE"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="SCHOLARNOTE"/>
+                    <ref name="TITLE"/>
+                    <ref name="XREF"/>
+                </choice>
+            </oneOrMore>
         </element>
     </define>
 
