@@ -13,7 +13,7 @@ RESEARCHNOTE{
     color:#663366;
     font-family:Arial, Helvetica, sans-serif;
     font-size:smaller;
-    display:block;
+    display:none;
     margin:0%;
     padding:0%
 }
@@ -151,13 +151,17 @@ OCCUPATION P{display:block; margin-left:4%; padding-left:0%}
 GIVEN:before{
     content:"First Name: ";
     font-weight:bold;
-    font-size:smaller
+    font-size:smaller;
+    display:inline-block; margin-left:0%; padding-left:0%
 }
 GIVEN + GIVEN:before{
     content:"Middle Name: ";
     font-weight:bold;
-    font-size:smaller
+    font-size:smaller;
+    display:inline-block
 }
+SURNAME{display:block}
+
 SURNAME:before{
     content:"Last name at birth: ";
     font-weight:bold;
@@ -191,7 +195,8 @@ margin-left:8%; padding-top:1%; padding-bottom:1%}
 
 
 CHRONSTRUCT DATE,
-CHRONSTRUCT DATERANGE {padding-right:3%}
+CHRONSTRUCT DATERANGE {display:inline-block; padding-right:3%; width:25%}
+CHRONPROSE{display:inline-block; width:60%; float:right}
 
 OTHERLIFEEVENT CHRONSTRUCT DATE,
 OTHERLIFEEVENT CHRONSTRUCT DATERANGE {padding-right:0%}
