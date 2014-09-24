@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/playwrights.css"?>-->
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/playwrights.css"?>
 <?xml-model href="http://cwrc.ca/schemas/cwrc_entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/css" href="css/playwrights.css"?>
+<!--<?xml-stylesheet type="text/css" href="css/playwrights.css"?>-->
 <CWRC SEX="female">
     <CWRCHEADER>
         <FILEDESC>
@@ -88,6 +88,7 @@
         <HEADING SUBTYPE="4">Theatre-Related Education or Training</HEADING>
         <EDUCATION>
             <RESEARCHNOTE>[Theatre Related Education/ Formal Training (Year Started-Year Ended]</RESEARCHNOTE>
+            <RESEARCHNOTE>For all transformed entries: if one of the chronstructs listed below is invalid because it is missing a date or a daterange elem</RESEARCHNOTE>
             <CHRONSTRUCT> <DATERANGE>{4a1_[SQ001]}-{4a1_[SQ002]}</DATERANGE> <CHRONPROSE><RESEARCHNOTE>[Theatre Related Education/ Formal Training (Name of Institution)]</RESEARCHNOTE><ORGNAME>{4a1_[SQ003]}</ORGNAME>, <RESEARCHNOTE>[Theatre Related Education/ Formal Training (Name of Program)]</RESEARCHNOTE><DEGREE>{4a1_[SQ004]}</DEGREE>, <RESEARCHNOTE>[Theatre Related Education/ Formal Training (Did you complete or graduate from the program?)]</RESEARCHNOTE>{4a1a}.<RESEARCHNOTE>If "Yes" then render as "Completed"; if "No" then render as "Incomplete"</RESEARCHNOTE><RESEARCHNOTE>Optional additional program: {4a1b}</RESEARCHNOTE></CHRONPROSE> </CHRONSTRUCT>
             <CHRONSTRUCT> <DATERANGE>{4b1_[SQ001]}-{4b1_[SQ002]}</DATERANGE> <CHRONPROSE><RESEARCHNOTE>[Theatre Related Education/ Formal Training (Name of Institution)]</RESEARCHNOTE><ORGNAME>{4b1_[SQ003]}</ORGNAME>, <RESEARCHNOTE>[Theatre Related Education/ Formal Training (Name of Program)]</RESEARCHNOTE><DEGREE>{4b1_[SQ004]}</DEGREE>, <RESEARCHNOTE>[Theatre Related Education/ Formal Training (Did you complete or graduate from the program?)]</RESEARCHNOTE>{4b1a}.<RESEARCHNOTE>If "Yes" then render as "Completed"; if "No" then render as "Incomplete"</RESEARCHNOTE><RESEARCHNOTE>Optional additional program: {4b1b}</RESEARCHNOTE></CHRONPROSE> </CHRONSTRUCT>
             <CHRONSTRUCT> <DATERANGE>{4c1_[SQ001]}-{4c1_[SQ002]}</DATERANGE> <CHRONPROSE><RESEARCHNOTE>[Theatre Related Education/ Formal Training (Name of Institution)]</RESEARCHNOTE><ORGNAME>{4c1_[SQ003]}</ORGNAME>, <RESEARCHNOTE>[Theatre Related Education/ Formal Training (Name of Program)]</RESEARCHNOTE><DEGREE>{4c1_[SQ004]}</DEGREE>, <RESEARCHNOTE>[Theatre Related Education/ Formal Training (Did you complete or graduate from the program?)]</RESEARCHNOTE>{4c1a}.<RESEARCHNOTE>If "Yes" then render as "Completed"; if "No" then render as "Incomplete"</RESEARCHNOTE><RESEARCHNOTE>Optional additional program: {4c1b}</RESEARCHNOTE></CHRONPROSE> </CHRONSTRUCT>
@@ -240,7 +241,39 @@
                 <HEADING SUBTYPE="3"> <TITLE LEVEL="MONOGRAPHIC">{13c1_[1]}</TITLE> </HEADING>
                 <P><RESEARCHNOTE>[Sumamry of Play]</RESEARCHNOTE>{13c2}</P>
                 <HEADING SUBTYPE="4">General Descriptive Information</HEADING>
-                <P> <RESEARCHNOTE>[Year Written]</RESEARCHNOTE><DATE>Year Written: {13c1_[2]}</DATE> <RESEARCHNOTE>[Geographic Setting]</RESEARCHNOTE>Geographic Setting: {13c1_[3]} <RESEARCHNOTE>[Historical Period]</RESEARCHNOTE>Historical Period: {13c3_[1]}{13c3_[2]}{13c3_[3]}{13c3_[4]}{13c3_[5]}{13c3_[6]}{13c3_[7]}{13c3_[8]}{13c3_[9]}{13c3_[10]}{13c3_[11]}<RESEARCHNOTE>[Genre/Form of Play]</RESEARCHNOTE>Genre/Form of Play: {13c4_[1]}{13c4_[2]}{13c4_[3]}{13c4_[4]}{13c4_[5]}{13c4_[6]}{13c4_[7]}{13c4_[8]}{13c4_[9]}{13c4_[10]}{13c4_[11]}{13c4_[12]}{13c4_[13]}{13c4_[14]}{13c4_[15]}{13c4_[16]}{13c4_[17]}{13c4_[18]}{13c4_[19]}{13c4_[20]}{13c4_[21]}{13c4_[22]}{13c4_[23]}{13c4_[24]}{13c4_[25]}{13c4_[26]}{13c4_[27]}<RESEARCHNOTE>[General Description of Performers in play]</RESEARCHNOTE>General Description of Performers in Play:<RESEARCHNOTE>[(# Child:male)]</RESEARCHNOTE>Number of Male Children: {13c5_[1_SQ001]} <RESEARCHNOTE>[(# Child: female)]</RESEARCHNOTE>Number of Female Children: {13c5_[1_SQ002]} <RESEARCHNOTE>[(# Teen:male)]</RESEARCHNOTE>Number of Male Teens: {13c5_[2_SQ001]} <RESEARCHNOTE>[(# Teen:female)]</RESEARCHNOTE>Number of Female Teens: {13c5_[2_SQ002]} <RESEARCHNOTE>[(# Young Adult:male)]</RESEARCHNOTE>Number of Male Young Adults: {13c5_[3_SQ001]} <RESEARCHNOTE>[(# Young Adult:female)]</RESEARCHNOTE>Number of Female Young Adults: {13c5_[3_SQ002]} <RESEARCHNOTE>[(# Adult:male)]</RESEARCHNOTE>Number of Male Adults: {13c5_[4_SQ001]} <RESEARCHNOTE>[(# Adult:female)]</RESEARCHNOTE>Number of Female Adults: {13c5_[4_SQ002]} <RESEARCHNOTE>[(# Senior:male)]</RESEARCHNOTE>Number of Male Seniors: {13c5_[5_SQ001]} <RESEARCHNOTE>[(# Senior:female)]</RESEARCHNOTE>Number of Female Seniors: {13c5_[5_SQ002]} <RESEARCHNOTE>[Specific casting requirements]</RESEARCHNOTE>Does this play have any specific casting requirements: {13C51}<RESEARCHNOTE>[Specific casting requirements (Age)]</RESEARCHNOTE>Age: {13c6_[1]} <RESEARCHNOTE>[Specific casting requirements (Gender)]</RESEARCHNOTE>Gender: {13c6_[2]} <RESEARCHNOTE>[Specific casting requirements (Requirement)]</RESEARCHNOTE>Requirement: {13c6_[3]} <RESEARCHNOTE>[Specific casting requirements (Age)]</RESEARCHNOTE>Age: {13c6_[4]} <RESEARCHNOTE>[Specific casting requirements (Gender)]</RESEARCHNOTE>Gender: {13c6_[5]} <RESEARCHNOTE>[Specific casting requirements (Requirement)]</RESEARCHNOTE>Requirement: {13c6_[6]} <RESEARCHNOTE>[Specific casting requirements (Age)]</RESEARCHNOTE>Age: {13c6_[7]} <RESEARCHNOTE>[Specific casting requirements (Gender)]</RESEARCHNOTE>Gender: {13c6_[8]} <RESEARCHNOTE>[Specific casting requirements (Requirement)]</RESEARCHNOTE>Requirement: {13c6_[9]} <RESEARCHNOTE>[Specific casting requirements (Age)]</RESEARCHNOTE>Age: {13c6_[10]} <RESEARCHNOTE>[Specific casting requirements (Gender)]</RESEARCHNOTE>Gender: {13c6_[11]} <RESEARCHNOTE>[Specific casting requirements (Requirement)]</RESEARCHNOTE>Requirement: {13c6_[12]} <RESEARCHNOTE>[Specific casting requirements (Age)]</RESEARCHNOTE>Age: {13c6_[13]} <RESEARCHNOTE>[Specific casting requirements (Gender)]</RESEARCHNOTE>Gender: {13c6_[14]} <RESEARCHNOTE>[Specific casting requirements (Requirement)]</RESEARCHNOTE>Requirement: {13c6_[15]} <RESEARCHNOTE>[Does this play include monologues that are suitable for actors who are auditioning?]</RESEARCHNOTE>Does this play include monologues that are suitable for actors who are auditioning: {13c7} <RESEARCHNOTE>[Does this play include monologues that are suitable for young actors?]</RESEARCHNOTE>Does this play include monologues that are suitable for young actors: {13c8}</P>
+                <P> <RESEARCHNOTE>[Year Written]</RESEARCHNOTE><DATE>Year Written: {13c1_[2]}</DATE></P>
+                <P><RESEARCHNOTE>[Geographic Setting]</RESEARCHNOTE>Geographic Setting: {13c1_[3]}</P>
+                <P> <RESEARCHNOTE>[Historical Period]</RESEARCHNOTE>Historical Period: {13c3_[1]}{13c3_[2]}{13c3_[3]}{13c3_[4]}{13c3_[5]}{13c3_[6]}{13c3_[7]}{13c3_[8]}{13c3_[9]}{13c3_[10]}{13c3_[11]}</P>
+                <P><RESEARCHNOTE>[Genre/Form of Play]</RESEARCHNOTE>Genre/Form of Play: {13c4_[1]}{13c4_[2]}{13c4_[3]}{13c4_[4]}{13c4_[5]}{13c4_[6]}{13c4_[7]}{13c4_[8]}{13c4_[9]}{13c4_[10]}{13c4_[11]}{13c4_[12]}{13c4_[13]}{13c4_[14]}{13c4_[15]}{13c4_[16]}{13c4_[17]}{13c4_[18]}{13c4_[19]}{13c4_[20]}{13c4_[21]}{13c4_[22]}{13c4_[23]}{13c4_[24]}{13c4_[25]}{13c4_[26]}{13c4_[27]}</P>
+                <HEADING SUBTYPE="4"><RESEARCHNOTE>[General Description of Performers in play]</RESEARCHNOTE>General Description of Performers in Play:</HEADING>
+                <P><RESEARCHNOTE>[(# Child:male)]</RESEARCHNOTE>Number of Male Children: {13c5_[1_SQ001]} </P>
+                <P><RESEARCHNOTE>[(# Child: female)]</RESEARCHNOTE>Number of Female Children: {13c5_[1_SQ002]} </P>
+                <P><RESEARCHNOTE>[(# Teen:male)]</RESEARCHNOTE>Number of Male Teens: {13c5_[2_SQ001]} </P>
+                <P><RESEARCHNOTE>[(# Teen:female)]</RESEARCHNOTE>Number of Female Teens: {13c5_[2_SQ002]} </P>
+                <P><RESEARCHNOTE>[(# Young Adult:male)]</RESEARCHNOTE>Number of Male Young Adults: {13c5_[3_SQ001]} </P>
+                <P><RESEARCHNOTE>[(# Young Adult:female)]</RESEARCHNOTE>Number of Female Young Adults: {13c5_[3_SQ002]} </P>
+                <P><RESEARCHNOTE>[(# Adult:male)]</RESEARCHNOTE>Number of Male Adults: {13c5_[4_SQ001]} </P>
+                <P><RESEARCHNOTE>[(# Adult:female)]</RESEARCHNOTE>Number of Female Adults: {13c5_[4_SQ002]} </P>
+                <P><RESEARCHNOTE>[(# Senior:male)]</RESEARCHNOTE>Number of Male Seniors: {13c5_[5_SQ001]} </P>
+                <P><RESEARCHNOTE>[(# Senior:female)]</RESEARCHNOTE>Number of Female Seniors: {13c5_[5_SQ002]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements]</RESEARCHNOTE>Does this play have any specific casting requirements: {13C51}</P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Age)]</RESEARCHNOTE>Age: {13c6_[1]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Gender)]</RESEARCHNOTE>Gender: {13c6_[2]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Requirement)]</RESEARCHNOTE>Requirement: {13c6_[3]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Age)]</RESEARCHNOTE>Age: {13c6_[4]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Gender)]</RESEARCHNOTE>Gender: {13c6_[5]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Requirement)]</RESEARCHNOTE>Requirement: {13c6_[6]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Age)]</RESEARCHNOTE>Age: {13c6_[7]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Gender)]</RESEARCHNOTE>Gender: {13c6_[8]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Requirement)]</RESEARCHNOTE>Requirement: {13c6_[9]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Age)]</RESEARCHNOTE>Age: {13c6_[10]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Gender)]</RESEARCHNOTE>Gender: {13c6_[11]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Requirement)]</RESEARCHNOTE>Requirement: {13c6_[12]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Age)]</RESEARCHNOTE>Age: {13c6_[13]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Gender)]</RESEARCHNOTE>Gender: {13c6_[14]} </P>
+                <P><RESEARCHNOTE>[Specific casting requirements (Requirement)]</RESEARCHNOTE>Requirement: {13c6_[15]} </P>
+                <P><RESEARCHNOTE>[Does this play include monologues that are suitable for actors who are auditioning?]</RESEARCHNOTE>Does this play include monologues that are suitable for actors who are auditioning: {13c7} </P>
+                <P><RESEARCHNOTE>[Does this play include monologues that are suitable for young actors?]</RESEARCHNOTE>Does this play include monologues that are suitable for young actors: {13c8}</P>
             </TEXTUALFEATURES>
             <PRODUCTION>
                 <RESEARCHNOTE>Has the play been published for distribution to the public in any format: {13c9}</RESEARCHNOTE>

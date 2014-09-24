@@ -13,9 +13,9 @@ RESEARCHNOTE{
     color:#663366;
     font-family:Arial, Helvetica, sans-serif;
     font-size:smaller;
-    display:none;
     margin:0%;
-    padding:0%
+    padding:0%;
+    display:none
 }
 
 
@@ -134,7 +134,6 @@ NICKNAME,
 BIRTH,
 RESIDENCEANDMOBILITY P,
 PLITERARYMOVEMENTS,
-PRODUCTION P,
 SEXUALIDENTITY,
 NATIONALHERITAGE,
 DENOMINATION,
@@ -150,39 +149,27 @@ OCCUPATION P{display:block; margin-left:4%; padding-left:0%}
 
 GIVEN:before{
     content:"First Name: ";
-    font-weight:bold;
-    font-size:smaller;
     display:inline-block; margin-left:0%; padding-left:0%
 }
 GIVEN + GIVEN:before{
     content:"Middle Name: ";
-    font-weight:bold;
-    font-size:smaller;
     display:inline-block
 }
 SURNAME{display:block}
 
 SURNAME:before{
     content:"Last name at birth: ";
-    font-weight:bold;
-    font-size:smaller
 }
 NICKNAME:before{
-    content:"Nickname:";
-    font-weight:bold;
-    font-size:smaller
+    content:"Nickname: ";
 }
 
 GENDER:before{
     content:"Gender: ";
-    font-weight:bold;
-    font-size:smaller
 }
 
 DENOMINATION:before{
     content:"Religious Affiliation: ";
-    font-weight:bold;
-    font-size:smaller
 }
 
 
@@ -190,13 +177,19 @@ DENOMINATION:before{
 EDUCATION CHRONSTRUCT,
 OTHERLIFEEVENT CHRONSTRUCT,
 OCCUPATION CHRONSTRUCT,
-RECEPTION CHRONSTRUCT{display:list-item;
+RECEPTION CHRONSTRUCT,
+EDUCATION DATASTRUCT,
+OTHERLIFEEVENT DATASTRUCT,
+OCCUPATION DATASTRUCT,
+RECEPTION DATASTRUCT
+{display:list-item;
 margin-left:8%; padding-top:1%; padding-bottom:1%}
 
 
 CHRONSTRUCT DATE,
-CHRONSTRUCT DATERANGE {display:inline-block; padding-right:3%; width:25%}
-CHRONPROSE{display:inline-block; width:60%; float:right}
+CHRONSTRUCT DATERANGE { padding-right:3%; width:25%; }
+CHRONPROSE,
+DATASTRUCT{width:60%}
 
 OTHERLIFEEVENT CHRONSTRUCT DATE,
 OTHERLIFEEVENT CHRONSTRUCT DATERANGE {padding-right:0%}
@@ -214,6 +207,7 @@ TEXTSCOPE RECEPTION HEADING[SUBTYPE="4"]
 NATIONALHERITAGE:before{content:"National / Ethnic Background: ";
 color:olive}
 
+TITLE[LEVEL = "MONOGRAPHIC"]{font-style:italic}
 
 
 
