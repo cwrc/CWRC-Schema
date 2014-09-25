@@ -34,6 +34,12 @@
 <!-- 
 *** Revisions ***
 * MRB: September 2014: Made the following changes:
+  - Created the element IDNO, which is a child element of BIBCIT, and which has an attribute TYPE.
+  - Made element LISTBIBCIT a child element of the following elements (including ENTRY): BIRTH, CULTURALFORMATION, DEATH, ECONOMICS, EDUCATION, FAMILY,
+    FRIENDSASSOCIATES, HEALTH, INTIMATERELATIONSHIPS, LEISUREANDSOCIETY, OCCUPATION, OTHERLIFEEVENT, PERSONNAME, POLITICS, RESIDENCEANDMOBILITY,
+    VIOLENCE, PRODUCTION, RECEPTION, and TEXTUALFEATURES.
+  - Revised element CHRONSTRUCT so that DATE or DATERANGE is required, CHRONPROSE is required, the other child elements are optional and repeatable, and all child elements
+    can be interleaved.
   - Made element AUTHORSUMMARY repeatable in the parent element ENTRY.
   - Created the element LISTBIBCIT, which is a child element of ENTRY, and which contains one or more BIBCIT or RESEARCHNOTE child elements.
   - Refined the element BIBCIT from a locally defined child element of BIBCITS, to a globally defined element which is a child element of BIBCITS and LISTBIBCIT.
@@ -486,6 +492,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                     <ref name="BIRTHPOSITION"/>
                 </choice>
             </oneOrMore>
@@ -522,6 +529,7 @@
                         <ref name="CHRONSTRUCT"/>
                         <ref name="KEYWORDCLASS"/>
                         <ref name="RESEARCHNOTE"/>
+                        <ref name="LISTBIBCIT"/>
                         <ref name="CLASS"/>
                         <ref name="RACECOLOUR"/>
                         <element name="CLASSISSUE">
@@ -659,6 +667,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -680,6 +689,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -716,6 +726,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -754,6 +765,7 @@
                         <ref name="CHRONSTRUCT"/>
                         <ref name="KEYWORDCLASS"/>
                         <ref name="RESEARCHNOTE"/>
+                        <ref name="LISTBIBCIT"/>
                         <element name="FAMILYMEMBER">
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FamilyMember, a
                             significant sub-element within Family, captures a discussion of a specific family member. For
@@ -864,6 +876,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -902,6 +915,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -950,6 +964,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -973,6 +988,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1006,6 +1022,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1027,6 +1044,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1046,6 +1064,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1065,6 +1084,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1087,6 +1107,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1109,6 +1130,7 @@
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1158,10 +1180,10 @@
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="BIBCITS"/>
-                    <ref name="LISTBIBCIT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                     <ref name="PADVERTISING"/>
                     <ref name="PANTHOLOGIZATION"/>
                     <ref name="PARCHIVALLOCATION"/>
@@ -1240,6 +1262,7 @@
                     <ref name="KEYWORDCLASS"/>
                     <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                     <ref name="PADVERTISING"/>
                     <ref name="PANTHOLOGIZATION"/>
                     <ref name="PARCHIVALLOCATION"/>
@@ -1318,6 +1341,7 @@
                     <ref name="KEYWORDCLASS"/>
                     <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="LISTBIBCIT"/>
                     <ref name="ENVIRONMENT"/>
                     <ref name="PADVERTISING"/>
                     <ref name="PANTHOLOGIZATION"/>
@@ -1768,136 +1792,140 @@
             <optional>
                 <ref name="RESP-attribute"/>
             </optional>
-            <oneOrMore>
+            <interleave>
                 <choice>
-                    <ref name="BIBCITS"/>
                     <ref name="DATE"/>
                     <ref name="DATERANGE"/>
-                    <ref name="KEYWORDCLASS"/>
-                    <ref name="RESEARCHNOTE"/>
-                    <ref name="SCHOLARNOTE"/>
-                    <element name="CHRONPROSE">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
-                            the essential facts of a chronology event.</a:documentation>
-                        <oneOrMore>
-                            <choice>
-                                <text/>
-                                <ref name="AWARDSNONLITERARY"/>
-                                <ref name="BIBCITS"/>
-                                <ref name="BIRTHNAME"/>
-                                <ref name="CAUSE"/>
-                                <ref name="CHILDLESSNESS"/>
-                                <ref name="CHILDREN"/>
-                                <ref name="CLASS"/>
-                                <ref name="COMPANION"/>
-                                <ref name="CONTESTEDBEHAVIOUR"/>
-                                <ref name="DATE"/>
-                                <ref name="DATERANGE"/>
-                                <ref name="DEGREE"/>
-                                <ref name="DENOMINATION"/>
-                                <ref name="DIVORCE"/>
-                                <ref name="EMPH"/>
-                                <ref name="EMPLOYER"/>
-                                <ref name="FIGURE"/>
-                                <ref name="FOREIGN"/>
-                                <ref name="GENDER"/>
-                                <ref name="INDEXED"/>
-                                <ref name="INSTRUCTOR"/>
-                                <ref name="JOBTITLE"/>
-                                <ref name="KEYWORDCLASS"/>
-                                <ref name="LIVESWITH"/>
-                                <ref name="MARRIED"/>
-                                <ref name="NAME"/>
-                                <ref name="NATIONALITY"/>
-                                <ref name="NICKNAME"/>
-                                <ref name="ORGNAME"/>
-                                <ref name="PADVERTISING"/>
-                                <ref name="PANTHOLOGIZATION"/>
-                                <ref name="PARCHIVALLOCATION"/>
-                                <ref name="PATTITUDES"/>
-                                <ref name="PAUTHORSHIP"/>
-                                <ref name="PCIRCULATION"/>
-                                <ref name="PCONTRACT"/>
-                                <ref name="PCOPYRIGHT"/>
-                                <ref name="PDEDICATION"/>
-                                <ref name="PEARNINGS"/>
-                                <ref name="PEDITIONS"/>
-                                <ref name="PFIRSTLITERARYACTIVITY"/>
-                                <ref name="PINFLUENCESHER"/>
-                                <ref name="PLACE"/>
-                                <ref name="PLASTLITERARYACTIVITY"/>
-                                <ref name="PLITERARYMOVEMENTS"/>
-                                <ref name="PMANUSCRIPTHISTORY"/>
-                                <ref name="PMATERIALCONDITIONS"/>
-                                <ref name="PMODEOFPUBLICATION"/>
-                                <ref name="PMOTIVES"/>
-                                <ref name="PNONBOOKMEDIA"/>
-                                <ref name="PNONSURVIVAL"/>
-                                <ref name="POLITICALAFFILIATION"/>
-                                <ref name="PPERFORMANCE"/>
-                                <ref name="PPERIODICALPUBLICATION"/>
-                                <ref name="PPLACEOFPUBLICATION"/>
-                                <ref name="PPRESSRUN"/>
-                                <ref name="PPRICE"/>
-                                <ref name="PRARITIESFEATURESDECORATIONS"/>
-                                <ref name="PRELATIONSWITHPUBLISHER"/>
-                                <ref name="PSERIALIZATION"/>
-                                <ref name="PSEUDONYM"/>
-                                <ref name="PSUBMISSIONSREJECTIONS"/>
-                                <ref name="PTYPEOFPRESS"/>
-                                <ref name="QUOTE"/>
-                                <ref name="RBESTKNOWNWORK"/>
-                                <ref name="RDESTRUCTIONOFWORK"/>
-                                <ref name="RELIGIOUSNAME"/>
-                                <ref name="REMUNERATION"/>
-                                <ref name="RESEARCHNOTE"/>
-                                <ref name="RFICTIONALIZATION"/>
-                                <ref name="RLANDMARKTEXT"/>
-                                <ref name="ROLE"/>
-                                <ref name="ROYAL"/>
-                                <ref name="RPENALTIES"/>
-                                <ref name="RRECOGNITIONNAME"/>
-                                <ref name="RRECOGNITIONSANDAWARDS"/>
-                                <ref name="RRECOGNITIONVALUE"/>
-                                <ref name="RRESPONSES"/>
-                                <ref name="RS"/>
-                                <ref name="RSELFDESCRIPTION"/>
-                                <ref name="RSHEINFLUENCED"/>
-                                <ref name="RWRITINGMILESTONE"/>
-                                <ref name="SCHOLARNOTE"/>
-                                <ref name="SCHOOL"/>
-                                <ref name="SELFCONSTRUCTED"/>
-                                <ref name="SEPARATION"/>
-                                <ref name="SEXUALIDENTITY"/>
-                                <ref name="SIC"/>
-                                <ref name="SIGNIFICANTACTIVITY"/>
-                                <ref name="SOCALLED"/>
-                                <ref name="STYLED"/>
-                                <ref name="SUBJECT"/>
-                                <ref name="TCHARACTERIZATION"/>
-                                <ref name="TCHARACTERNAME"/>
-                                <ref name="TCHARACTERTYPEROLE"/>
-                                <ref name="TEXT"/>
-                                <ref name="TGENRE"/>
-                                <ref name="TGENREISSUE"/>
-                                <ref name="TIME"/>
-                                <ref name="TINTERTEXTUALITY"/>
-                                <ref name="TITLE"/>
-                                <ref name="TITLED"/>
-                                <ref name="TMOTIF"/>
-                                <ref name="TOPIC"/>
-                                <ref name="TPLOT"/>
-                                <ref name="TSETTINGDATE"/>
-                                <ref name="TSETTINGPLACE"/>
-                                <ref name="TTECHNIQUES"/>
-                                <ref name="TTHEMETOPIC"/>
-                                <ref name="TTONESTYLE"/>
-                                <ref name="TVOICENARRATION"/>
-                            </choice>
-                        </oneOrMore>
-                    </element>
                 </choice>
-            </oneOrMore>
+                <zeroOrMore>
+                    <choice>
+                        <ref name="BIBCITS"/>
+                        <ref name="KEYWORDCLASS"/>
+                        <ref name="RESEARCHNOTE"/>
+                        <ref name="SCHOLARNOTE"/>
+                    </choice>
+                </zeroOrMore>
+                <element name="CHRONPROSE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
+                            the essential facts of a chronology event.</a:documentation>
+                    <oneOrMore>
+                        <choice>
+                            <text/>
+                            <ref name="AWARDSNONLITERARY"/>
+                            <ref name="BIBCITS"/>
+                            <ref name="BIRTHNAME"/>
+                            <ref name="CAUSE"/>
+                            <ref name="CHILDLESSNESS"/>
+                            <ref name="CHILDREN"/>
+                            <ref name="CLASS"/>
+                            <ref name="COMPANION"/>
+                            <ref name="CONTESTEDBEHAVIOUR"/>
+                            <ref name="DATE"/>
+                            <ref name="DATERANGE"/>
+                            <ref name="DEGREE"/>
+                            <ref name="DENOMINATION"/>
+                            <ref name="DIVORCE"/>
+                            <ref name="EMPH"/>
+                            <ref name="EMPLOYER"/>
+                            <ref name="FIGURE"/>
+                            <ref name="FOREIGN"/>
+                            <ref name="GENDER"/>
+                            <ref name="INDEXED"/>
+                            <ref name="INSTRUCTOR"/>
+                            <ref name="JOBTITLE"/>
+                            <ref name="KEYWORDCLASS"/>
+                            <ref name="LIVESWITH"/>
+                            <ref name="MARRIED"/>
+                            <ref name="NAME"/>
+                            <ref name="NATIONALITY"/>
+                            <ref name="NICKNAME"/>
+                            <ref name="ORGNAME"/>
+                            <ref name="PADVERTISING"/>
+                            <ref name="PANTHOLOGIZATION"/>
+                            <ref name="PARCHIVALLOCATION"/>
+                            <ref name="PATTITUDES"/>
+                            <ref name="PAUTHORSHIP"/>
+                            <ref name="PCIRCULATION"/>
+                            <ref name="PCONTRACT"/>
+                            <ref name="PCOPYRIGHT"/>
+                            <ref name="PDEDICATION"/>
+                            <ref name="PEARNINGS"/>
+                            <ref name="PEDITIONS"/>
+                            <ref name="PFIRSTLITERARYACTIVITY"/>
+                            <ref name="PINFLUENCESHER"/>
+                            <ref name="PLACE"/>
+                            <ref name="PLASTLITERARYACTIVITY"/>
+                            <ref name="PLITERARYMOVEMENTS"/>
+                            <ref name="PMANUSCRIPTHISTORY"/>
+                            <ref name="PMATERIALCONDITIONS"/>
+                            <ref name="PMODEOFPUBLICATION"/>
+                            <ref name="PMOTIVES"/>
+                            <ref name="PNONBOOKMEDIA"/>
+                            <ref name="PNONSURVIVAL"/>
+                            <ref name="POLITICALAFFILIATION"/>
+                            <ref name="PPERFORMANCE"/>
+                            <ref name="PPERIODICALPUBLICATION"/>
+                            <ref name="PPLACEOFPUBLICATION"/>
+                            <ref name="PPRESSRUN"/>
+                            <ref name="PPRICE"/>
+                            <ref name="PRARITIESFEATURESDECORATIONS"/>
+                            <ref name="PRELATIONSWITHPUBLISHER"/>
+                            <ref name="PSERIALIZATION"/>
+                            <ref name="PSEUDONYM"/>
+                            <ref name="PSUBMISSIONSREJECTIONS"/>
+                            <ref name="PTYPEOFPRESS"/>
+                            <ref name="QUOTE"/>
+                            <ref name="RBESTKNOWNWORK"/>
+                            <ref name="RDESTRUCTIONOFWORK"/>
+                            <ref name="RELIGIOUSNAME"/>
+                            <ref name="REMUNERATION"/>
+                            <ref name="RESEARCHNOTE"/>
+                            <ref name="RFICTIONALIZATION"/>
+                            <ref name="RLANDMARKTEXT"/>
+                            <ref name="ROLE"/>
+                            <ref name="ROYAL"/>
+                            <ref name="RPENALTIES"/>
+                            <ref name="RRECOGNITIONNAME"/>
+                            <ref name="RRECOGNITIONSANDAWARDS"/>
+                            <ref name="RRECOGNITIONVALUE"/>
+                            <ref name="RRESPONSES"/>
+                            <ref name="RS"/>
+                            <ref name="RSELFDESCRIPTION"/>
+                            <ref name="RSHEINFLUENCED"/>
+                            <ref name="RWRITINGMILESTONE"/>
+                            <ref name="SCHOLARNOTE"/>
+                            <ref name="SCHOOL"/>
+                            <ref name="SELFCONSTRUCTED"/>
+                            <ref name="SEPARATION"/>
+                            <ref name="SEXUALIDENTITY"/>
+                            <ref name="SIC"/>
+                            <ref name="SIGNIFICANTACTIVITY"/>
+                            <ref name="SOCALLED"/>
+                            <ref name="STYLED"/>
+                            <ref name="SUBJECT"/>
+                            <ref name="TCHARACTERIZATION"/>
+                            <ref name="TCHARACTERNAME"/>
+                            <ref name="TCHARACTERTYPEROLE"/>
+                            <ref name="TEXT"/>
+                            <ref name="TGENRE"/>
+                            <ref name="TGENREISSUE"/>
+                            <ref name="TIME"/>
+                            <ref name="TINTERTEXTUALITY"/>
+                            <ref name="TITLE"/>
+                            <ref name="TITLED"/>
+                            <ref name="TMOTIF"/>
+                            <ref name="TOPIC"/>
+                            <ref name="TPLOT"/>
+                            <ref name="TSETTINGDATE"/>
+                            <ref name="TSETTINGPLACE"/>
+                            <ref name="TTECHNIQUES"/>
+                            <ref name="TTHEMETOPIC"/>
+                            <ref name="TTONESTYLE"/>
+                            <ref name="TVOICENARRATION"/>
+                        </choice>
+                    </oneOrMore>
+                </element>
+            </interleave>
         </element>
     </define>
 
@@ -2358,25 +2386,25 @@
 
     <define name="IDNO">
         <element name="IDNO">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Idno (identifier) supplies any form of identifier used to identify some object, such as a
-                bibliographic item, a person, a title, an organization, etc. in a standardized way.</a:documentation>
-            <attribute name="NATIONALITYCATEGORY">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Idno (identifier) supplies any form of identifier used to identify a bibliographic item in a
+                standardized way.</a:documentation>
+            <attribute name="TYPE">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using
                     any convenient classification scheme or typology.</a:documentation>
-                <list>
-                    <oneOrMore>
-                        <choice>
-                            <value>DEWEY</value>
-                            <value>DOI</value>
-                            <value>HDL</value>
-                            <value>ISBN</value>
-                            <value>ISSN</value>
-                            <value>LCCN</value>
-                            <value>SEARS</value>
-                            <value>URI</value>
-                        </choice>
-                    </oneOrMore>
-                </list>
+                <choice>
+                    <value>DOI</value>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Digital Object Identifier</a:documentation>
+                    <value>HDL</value>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Handle System</a:documentation>
+                    <value>ISBN</value>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">International Standard Book Number</a:documentation>
+                    <value>ISSN</value>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">International Standard Serial Number</a:documentation>
+                    <value>LCCN</value>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Library of Congress Control Number</a:documentation>
+                    <value>URI</value>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Uniform Resource Identifier</a:documentation>
+                </choice>
             </attribute>
             <text/>
         </element>
