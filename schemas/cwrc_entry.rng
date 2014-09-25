@@ -1158,6 +1158,7 @@
                     <ref name="DATASTRUCT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="BIBCITS"/>
+                    <ref name="LISTBIBCIT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="SCHOLARNOTE"/>
                     <ref name="RESEARCHNOTE"/>
@@ -2343,6 +2344,7 @@
                         <text/>
                     </element>
                     <ref name="DATE"/>
+                    <ref name="IDNO"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="RESEARCHNOTE"/>
@@ -2351,6 +2353,32 @@
                     <ref name="XREF"/>
                 </choice>
             </oneOrMore>
+        </element>
+    </define>
+
+    <define name="IDNO">
+        <element name="IDNO">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Idno (identifier) supplies any form of identifier used to identify some object, such as a
+                bibliographic item, a person, a title, an organization, etc. in a standardized way.</a:documentation>
+            <attribute name="NATIONALITYCATEGORY">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using
+                    any convenient classification scheme or typology.</a:documentation>
+                <list>
+                    <oneOrMore>
+                        <choice>
+                            <value>DEWEY</value>
+                            <value>DOI</value>
+                            <value>HDL</value>
+                            <value>ISBN</value>
+                            <value>ISSN</value>
+                            <value>LCCN</value>
+                            <value>SEARS</value>
+                            <value>URI</value>
+                        </choice>
+                    </oneOrMore>
+                </list>
+            </attribute>
+            <text/>
         </element>
     </define>
 
