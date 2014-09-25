@@ -162,7 +162,6 @@
             <CHRONSTRUCT> <DATERANGE>{10m1}<RESEARCHNOTE>[Non-Theatre-Related work (Year)]</RESEARCHNOTE></DATERANGE> <CHRONPROSE><RESEARCHNOTE>[Non-Theatre-Related work (Description of Activity/Role)]</RESEARCHNOTE>{10m2}</CHRONPROSE> </CHRONSTRUCT>
             <CHRONSTRUCT> <DATERANGE>{10n1}<RESEARCHNOTE>[Non-Theatre-Related work (Year)]</RESEARCHNOTE></DATERANGE> <CHRONPROSE><RESEARCHNOTE>[Non-Theatre-Related work (Description of Activity/Role)]</RESEARCHNOTE>{10n2}</CHRONPROSE> </CHRONSTRUCT>
             <CHRONSTRUCT> <DATERANGE>{10o1}<RESEARCHNOTE>[Non-Theatre-Related work (Year)]</RESEARCHNOTE></DATERANGE> <CHRONPROSE><RESEARCHNOTE>[Non-Theatre-Related work (Description of Activity/Role)]</RESEARCHNOTE>{10o2}</CHRONPROSE> </CHRONSTRUCT>
-            <CHRONSTRUCT> <CHRONPROSE><RESEARCHNOTE>[Other Life/Career Highlights]</RESEARCHNOTE><RESEARCHNOTE>GRH Note to editor: This section was a catch-all in the Career Highlights section of the survey. Depending on what information is provided, it may be more appropriate to move this info into the "Other Information" section below after the Awards section (before plays)</RESEARCHNOTE>{12a}</CHRONPROSE> </CHRONSTRUCT>
         </OCCUPATION>
         <RECEPTION>
             <HEADING SUBTYPE="3">Awards and Honours</HEADING>
@@ -206,9 +205,12 @@
         <HEADING SUBTYPE="3">Other Information</HEADING>
         <RESEARCHNOTE>Subcategory of Biography or Writing depending on nature of information; tags will need to be modified according to the speci</RESEARCHNOTE>
         <OCCUPATION>
+            <HEADING SUBTYPE="4">Other Life/Career Highlights</HEADING>
+            <DATASTRUCT> <DATAITEM><RESEARCHNOTE>[Other Life/Career Highlights]</RESEARCHNOTE><RESEARCHNOTE>GRH Note to editor: This section was a catch-all in the Career Highlights section of the survey. Depending on what information is provided, it may be more appropriate to move this info into the "Other Information" section below after the Awards section (before plays)</RESEARCHNOTE>{12a}</DATAITEM> </DATASTRUCT>
             <P>{15a}</P>
         </OCCUPATION>
         <FAMILY>
+            <HEADING SUBTYPE="4">Other Information about Relationships and Family</HEADING>
             <RESEARCHNOTE>[Other Information about Relationships and Family]</RESEARCHNOTE>
             <P>{3e}</P>
         </FAMILY>
@@ -258,7 +260,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13b10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13b10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13b10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13b10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13b10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13b10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13b10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13b10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13b10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13b10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -312,7 +316,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13c10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13c10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13c10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13c10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13c10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13c10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13c10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13c10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13c10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13c10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -366,7 +372,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13d10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13d10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13d10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13d10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13d10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13d10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13d10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13d10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13d10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13d10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -420,7 +428,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13e10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13e10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13e10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13e10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13e10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13e10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13e10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13e10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13e10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13e10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -474,7 +484,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13f10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13f10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13f10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13f10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13f10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13f10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13f10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13f10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13f10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13f10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -528,7 +540,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13g10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13g10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13g10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13g10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13g10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13g10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13g10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13g10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13g10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13g10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -582,7 +596,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13h10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13h10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13h10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13h10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE=" ISBN">ISBN: {13h10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13h10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13h10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13h10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13h10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE=" ISBN">ISBN: {13h10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -636,7 +652,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13i10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13i10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13i10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13i10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13i10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13i10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13i10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13i10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13i10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13i10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -690,7 +708,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13j10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13j10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13j10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13j10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13j10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13j10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13j10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13j10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13j10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13j10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -744,7 +764,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13k10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13k10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13k10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13k10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13k10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13k10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13k10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13k10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13k10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13k10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -798,7 +820,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13L10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13L10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13L10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13L10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13L10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13L10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13L10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13L10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13L10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13L10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -852,7 +876,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13M10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13M10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13M10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13M10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13M10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13M10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13M10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13M10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13M10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13M10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -906,7 +932,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13N10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13N10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13N10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13N10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13N10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13N10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13N10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13N10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13N10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13N10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -960,7 +988,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13O10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13O10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13O10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13O10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13O10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13O10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13O10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13O10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13O10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13O10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
@@ -1014,7 +1044,9 @@
                 <HEADING SUBTYPE="4">First Production</HEADING>
                 <RESEARCHNOTE> Move to this location the first production of this particular play, listed at the end of the current document.</RESEARCHNOTE>
                 <HEADING SUBTYPE="4">Publication</HEADING>
-                <LISTBIBCIT><BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13P10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13P10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13P10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13P10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13P10_[5]}</IDNO></BIBCIT></LISTBIBCIT>
+                <LISTBIBCIT>
+                    <BIBCIT REF=""><RESEARCHNOTE>[Title]</RESEARCHNOTE><TITLE LEVEL="MONOGRAPHIC">{13P10_[1]}</TITLE>, <RESEARCHNOTE>[Name of Publisher]</RESEARCHNOTE>Publisher: <ORGNAME>{13P10_[2]}</ORGNAME>, <RESEARCHNOTE>[Year of First Publication]</RESEARCHNOTE><DATE>{13P10_[3]}</DATE><RESEARCHNOTE>[Year of Most Recent Edition (if different)]</RESEARCHNOTE> <DATE>{13P10_[4]}</DATE>. <RESEARCHNOTE>[ISBN]</RESEARCHNOTE><IDNO TYPE="ISBN">ISBN: {13P10_[5]}</IDNO></BIBCIT>
+                </LISTBIBCIT>
             </PRODUCTION>
             <RECEPTION>
                 <HEADING SUBTYPE="4">Other Information</HEADING>
