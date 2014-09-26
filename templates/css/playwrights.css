@@ -187,14 +187,15 @@ margin-left:8%; padding-top:1%; padding-bottom:1%}
 
 
 CHRONSTRUCT DATE,
-CHRONSTRUCT DATERANGE { padding-right:3%; width:25%; }
+CHRONSTRUCT DATERANGE {padding-right:3%; width:16em}
 CHRONPROSE,
-DATASTRUCT{width:60%}
+DATASTRUCT{width:auto}
 
 OTHERLIFEEVENT CHRONSTRUCT DATE,
 OTHERLIFEEVENT CHRONSTRUCT DATERANGE {padding-right:0%}
 
 OCCUPATION CHRONSTRUCT CHRONPROSE ORGNAME {padding-left:3%}
+BIRTH CHRONSTRUCT CHRONPROSE {display:block}
 
 TEXTUALFEATURES P{display:block; margin-left:4%}
 
