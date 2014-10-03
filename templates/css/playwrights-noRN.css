@@ -1,0 +1,215 @@
+/*General, high level styling*/
+
+*{
+    color:black;
+    font-family:sans-serif;
+    background-color:#fdf8e5
+}
+*:empty{
+    display:none
+}
+RESEARCHNOTE{
+    background-color:#FBEFEF;
+    color:#663366;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:smaller;
+    margin:0%;
+    padding:0%;
+    display:none
+}
+
+
+#comment{
+    display:none
+
+} /*check syntax*/
+
+/*Header styling*/
+
+
+CWRCHEADER,
+FILEDESC,
+DOCTITLE,
+DOCAUTHOR
+{
+    display:list-item
+}
+
+FILEDESC{
+    content:url(http://cwrc.ca/templates/images/CWRC_logo.png);
+    background-color:#B8B891;
+    color:#555;
+    font-weight:normal;
+}
+DOCTITLE{
+    font-variant:small-caps;
+    font-size:x-large;
+    font-weight:bold;
+}
+DOCAUTHOR{
+    font-weight:bold
+}
+PUBLICATIONSTMT,
+SOURCEDESC,
+REVISIONDESC,
+RESPONSIBILITY{
+    display:none
+}
+
+/*High-level body styling*/
+
+ENTRY {display:block; margin-left:3%}
+
+
+
+
+HEADING{display:block;
+    font-weight:bold;
+    color:brown
+}
+
+HEADING[SUBTYPE = "1"]{
+    font-size:xx-large;
+    text-align:center;
+}
+
+HEADING[SUBTYPE = "2"]{
+    font-size:x-large;
+    margin-left:4%; padding-bottom:1%; margin-bottom:1%; border-bottom:solid;
+    padding-top:2%;
+    border-color:black
+}
+
+HEADING[SUBTYPE = "3"]{
+    font-size:large;
+    padding-left:4%;
+    padding-top:1%;
+    padding-bottom:1%
+}
+
+HEADING[SUBTYPE = "4"]{
+    font-size:medium;
+    padding-left:6%
+}
+
+
+
+
+
+
+/*Folds (Oxygen only)*/
+
+/*BIRTH,
+RESIDENCEANDMOBILITY,
+PRODUCTION,
+CULTURALFORMATION,
+FAMILY,
+EDUCATTION, 
+OTHERLIFEEVENT,
+OCCUPATION,
+TEXTSCOPE
+{
+    -oxy-foldable:true;
+    -oxy-folded:true;
+    -oxy-not-foldable-child:HEADING}*/
+
+/*PERSONNAME {
+    -oxy-foldable:true;
+    -oxy-folded:true;
+    -oxy-not-foldable-child:BIRTHNAME}*/
+
+/*End folds*/
+
+
+
+
+
+
+
+
+/*Mid-level body styling*/
+
+BIRTHNAME,
+NICKNAME,
+BIRTH,
+RESIDENCEANDMOBILITY P,
+PLITERARYMOVEMENTS,
+SEXUALIDENTITY,
+NATIONALHERITAGE,
+DENOMINATION,
+CLASSISSUE P,
+MARRIAGE,
+FAMILY P,
+MARRIAGE,
+P CHILDREN,
+RSELFDESCRIPTION,
+OCCUPATION P{display:block; margin-left:4%; padding-left:0%}
+
+/*field labels:*/
+
+GIVEN:before{
+    content:"First Name: ";
+    display:inline-block; margin-left:0%; padding-left:0%
+}
+GIVEN + GIVEN:before{
+    content:"Middle Name: ";
+    display:inline-block
+}
+SURNAME{display:block}
+
+SURNAME:before{
+    content:"Last name at birth: ";
+}
+NICKNAME:before{
+    content:"Nickname: ";
+}
+
+GENDER:before{
+    content:"Gender: ";
+}
+
+DENOMINATION:before{
+    content:"Religious Affiliation: ";
+}
+
+
+
+EDUCATION CHRONSTRUCT,
+OTHERLIFEEVENT CHRONSTRUCT,
+OCCUPATION CHRONSTRUCT,
+RECEPTION CHRONSTRUCT,
+EDUCATION DATASTRUCT,
+OTHERLIFEEVENT DATASTRUCT,
+OCCUPATION DATASTRUCT,
+RECEPTION DATASTRUCT
+{display:list-item;
+margin-left:8%; padding-top:1%; padding-bottom:1%}
+
+
+CHRONSTRUCT DATE,
+CHRONSTRUCT DATERANGE {padding-right:3%; width:16em}
+CHRONPROSE,
+DATASTRUCT{width:auto}
+
+OTHERLIFEEVENT CHRONSTRUCT DATE,
+OTHERLIFEEVENT CHRONSTRUCT DATERANGE {padding-right:0%}
+
+OCCUPATION CHRONSTRUCT CHRONPROSE ORGNAME {padding-left:3%}
+BIRTH CHRONSTRUCT CHRONPROSE {display:block}
+
+TEXTUALFEATURES P{display:block; margin-left:4%}
+
+HEADING TITLE{DISPLAY:block; padding-top:1%;padding-bottom:1%; color:brown}
+
+TEXTUALFEATURES HEADING[SUBTYPE="4"],
+TEXTSCOPE PRODUCTION HEADING[SUBTYPE="4"],
+TEXTSCOPE RECEPTION HEADING[SUBTYPE="4"]
+{display:block;color:black;font-weight:bold; padding-left:4%}
+/*NATIONALHERITAGE:before{content:"National / Ethnic Background: ";
+color:olive}*/
+
+TITLE[LEVEL = "MONOGRAPHIC"]{font-style:italic}
+
+
+
+
