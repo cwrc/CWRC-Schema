@@ -33,6 +33,12 @@
 
 <!-- 
 *** Revisions ***
+* MRB: October 2014: Made the following changes:
+  - Made element DOCAUTHOR repeatable in the parent element CWRCHEADER.
+  - Made element AUTHORITY repeatable in the parent element CWRCHEADER.
+  - Created the element PROFILEDESC, which is a child element of CWRCHEADER, and which has two child elements, LANGUSAGE and TEXTCLASS; the element LANGUSAGE
+     has a repeatable child element LANGUAGE, and the element LANGUAGE has an optional attribute IDENT; the element TEXTCLASS has a repeatable child element KEYWORDS,
+     and the element KEYWORDS has an optional attribute SCHEME, and a repeatable child element TERM.
 * MRB: September 2014: Made the following changes:
   - Created the element IDNO, which is a child element of BIBCIT, and which has an attribute TYPE.
   - Made element LISTBIBCIT a child element of the following elements (including ENTRY): BIRTH, CULTURALFORMATION, DEATH, ECONOMICS, EDUCATION, FAMILY,
@@ -215,29 +221,31 @@
                             documents created without a template.</a:documentation>
                             <text/>
                         </element>
-                        <optional>
+                        <zeroOrMore>
                             <element name="DOCAUTHOR">
                                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">DocAuthor is an element in the CWRCHeader
                             that contains the name of the author of the document, as given on the title page (often but not always contained in a
                             byline).</a:documentation>
                                 <text/>
                             </element>
-                        </optional>
+                        </zeroOrMore>
                     </interleave>
                 </element>
                 <element name="PUBLICATIONSTMT">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">publicationStmt groups information concerning the
                         publication or distribution of an electronic or other text.</a:documentation>
-                    <element name="AUTHORITY">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The authority element contains the name of the
+                    <oneOrMore>
+                        <element name="AUTHORITY">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The authority element contains the name of the
                             person or organization responsible for the construction of an XML file.</a:documentation>
-                        <oneOrMore>
-                            <choice>
-                                <text/>
-                                <ref name="RESEARCHNOTE"/>
-                            </choice>
-                        </oneOrMore>
-                    </element>
+                            <oneOrMore>
+                                <choice>
+                                    <text/>
+                                    <ref name="RESEARCHNOTE"/>
+                                </choice>
+                            </oneOrMore>
+                        </element>
+                    </oneOrMore>
                 </element>
                 <element name="SOURCEDESC">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">sourceDesc describes the source from which an
@@ -246,6 +254,59 @@
                     <text/>
                 </element>
             </element>
+
+            <optional>
+                <element name="PROFILEDESC">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">profileDesc (text-profile description) provides a detailed description of non-bibliographic
+                    aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting.</a:documentation>
+                    <optional>
+                        <element name="LANGUSAGE">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">langUsage (language usage) describes the languages, sublanguages, registers,
+                                dialects, etc. represented within a text.</a:documentation>
+                            <oneOrMore>
+                                <element name="LANGUAGE">
+                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">language characterizes a single language or sublanguage used within a
+                                        text.</a:documentation>
+                                    <optional>
+                                        <attribute name="IDENT">
+                                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) Supplies a language code which is used to identify the
+                                            language documented by this element.</a:documentation>
+                                        </attribute>
+                                        <text/>
+                                    </optional>
+                                    <text/>
+                                </element>
+                            </oneOrMore>
+                        </element>
+                    </optional>
+                    <optional>
+                        <element name="TEXTCLASS">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">textClass (text classification) groups information which describes the nature or
+                                topic of a text in terms of a standard classification scheme, thesaurus, etc.</a:documentation>
+                            <oneOrMore>
+                                <element name="KEYWORDS">
+                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">keywords contains a list of keywords or phrases identifying the topic or
+                                        nature of a text.</a:documentation>
+                                    <optional>
+                                        <attribute name="SCHEME">
+                                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scheme identifies the controlled vocabulary within which the set of
+                                                keywords concerned is defined.</a:documentation>
+                                        </attribute>
+                                    </optional>
+                                    <oneOrMore>
+                                        <element name="TERM">
+                                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">term contains a single-word, multi-word, or symbolic designation
+                                                    which is regarded as a technical term.</a:documentation>
+                                            <text/>
+                                        </element>
+                                    </oneOrMore>
+                                </element>
+                            </oneOrMore>
+                        </element>
+                    </optional>
+                </element>
+            </optional>
+
             <element name="REVISIONDESC">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">revisionDesc (or revision description) summarizes the
                     revision history for a file.</a:documentation>
