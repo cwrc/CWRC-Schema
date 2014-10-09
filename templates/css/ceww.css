@@ -54,13 +54,13 @@ ENTRY{
     margin-left:3%
 }
 
+P{padding-bottom:1%}
+
 HEADING[SUBTYPE = "1"]{
     color:black;
     font-size:xx-large;
     font-weight:bold
 }
-
-
 
 BIRTH:before{
     content:"Birth: ";
@@ -72,6 +72,10 @@ DEATH,
 PERSONNAME{
     display:block
 }
+
+PERSONNAME DATASTRUCT DATAITEM{display:block}
+
+BIRTHNAME GIVEN{padding-right:1em}
 
 DEATH:before{
     content:"Death: ";
@@ -95,6 +99,7 @@ FRONT P{
     display:block;
     font-style:italic;
 }
+AUTHORSUMMARY P{display:block}
 
 FRONT P + P{
     display:block;
@@ -124,6 +129,10 @@ LISTBIBCIT BIBCIT{
     padding-left:2%;
     padding-bottom:0.5em
 }
+
+TITLE[LEVEL = "MONOGRAPHIC"]{font-style:italic}
+TITLE[LEVEL = "ANALYTIC"]:before{content:"&quot;"}
+TITLE[LEVEL = "ANALYTIC"]:after{content:"&quot;"}
 
 FAMILYMEMBER{
     display:block
@@ -161,7 +170,8 @@ FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT CHRONPROSE{
 
 EDUCATION CHRONSTRUCT,
 RECEPTION CHRONSTRUCT,
-OCCUPATION CHRONSTRUCT{
+OCCUPATION CHRONSTRUCT,
+RESIDENCEANDMOBILITY CHRONSTRUCT{
     display:block
 }
 
