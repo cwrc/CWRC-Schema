@@ -37,7 +37,7 @@
   - Made element DOCAUTHOR repeatable in the parent element CWRCHEADER.
   - Made element AUTHORITY repeatable in the parent element CWRCHEADER.
   - Created the element PROFILEDESC, which is a child element of CWRCHEADER, and which has two child elements, LANGUSAGE and TEXTCLASS; the element LANGUSAGE
-     has a repeatable child element LANGUAGE, and the element LANGUAGE has an optional attribute IDENT; the element TEXTCLASS has a repeatable child element KEYWORDS,
+     has a repeatable child element LANG, and the element LANG has an optional attribute IDENT; the element TEXTCLASS has a repeatable child element KEYWORDS,
      and the element KEYWORDS has an optional attribute SCHEME, and a repeatable child element TERM.
 * MRB: September 2014: Made the following changes:
   - Created the element IDNO, which is a child element of BIBCIT, and which has an attribute TYPE.
@@ -264,8 +264,8 @@
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">langUsage (language usage) describes the languages, sublanguages, registers,
                                 dialects, etc. represented within a text.</a:documentation>
                             <oneOrMore>
-                                <element name="LANGUAGE">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">language characterizes a single language or sublanguage used within a
+                                <element name="LANG">
+                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lang characterizes a single language or sublanguage used within a
                                         text.</a:documentation>
                                     <optional>
                                         <attribute name="IDENT">
