@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+    <titleInfo>
+        <title>{Author}<!-- /CWRC/CWRCHEADER[1]/FILEDESC[1]/TITLESTMT[1]/DOCTITLE[1] --></title>
+    </titleInfo>
+    <name type="corporate">
+        <namePart>Canada's Early Women Writers</namePart>
+        <role>
+            <roleTerm type="text" authority="marcrealtor">author</roleTerm>
+        </role>
+        <affiliation>SFU Library Digital Collections, Simon Fraser University; Canadian Writing Research Collaboratory <!-- institutions that CEWW is associated with? --></affiliation>
+    </name>
+    <name type="personal">
+        <namePart>{Author_credits}<!-- /CWRC/CWRCHEADER[1]/FILEDESC[1]/TITLESTMT[1]/DOCAUTHOR[1] --></namePart>
+        <role>
+            <roleTerm type="text" authority="marcrealtor">contributor</roleTerm>
+        </role>
+    </name>
+    <typeOfResource>text</typeOfResource>
+    <genre authority="cwrc" type="format">Born digital</genre>
+    <genre authority="cwrc" type="primaryGenre">Life writing</genre>
+    <genre authority="cwrc" type="subGenre">Biography</genre>
+    <genre authority="cwrc" type="subGenre">Bibliography</genre>
+    <originInfo>
+        <publisher>Canada's Early Women Writers</publisher>
+        <publisher>Canadian Writing Research Collaboratory</publisher>
+        <dateCreated encoding="w3cdtf">2014-09-29</dateCreated>
+        <dateIssued encoding="w3cdtf" keyDate="yes"><!-- drawn from the workflow stamp date when the workflow stamp value is changed to "published" --></dateIssued>
+    </originInfo>
+    <language>
+        <languageTerm type="text">English</languageTerm>
+        <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        <scriptTerm type="text">Latin</scriptTerm>
+        <scriptTerm type="code" authority="iso15924">Latn</scriptTerm>
+    </language>
+    <abstract>{Short_biography}<!-- /CWRC/ENTRY[1]/AUTHORSUMMARY[1]/P[1] --></abstract>
+    <note type=""><!-- @type values are "scholarNote", or "researchNote" --></note>
+    <accessCondition type="use and reproduction">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> (CC BY-NC-SA 4.0).</accessCondition>
+    <recordInfo>
+        <recordContentSource>Canada's Early Women Writers, Simon Fraser University; Canadian Writing Research Collaboratory</recordContentSource>
+        <recordCreationDate encoding="w3cdtf">2014-09-29</recordCreationDate>
+        <recordOrigin>Record has been transformed into a MODS record from a MySQL database record using a template XML file and a custom PHP script.</recordOrigin>
+        <languageOfCataloging>
+            <languageTerm type="text">English</languageTerm>
+            <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+            <scriptTerm type="text">Latin</scriptTerm>
+            <scriptTerm type="code" authority="iso15924">Latn</scriptTerm>
+        </languageOfCataloging>
+    </recordInfo>
+</mods>
