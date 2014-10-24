@@ -34,6 +34,7 @@
 <!-- 
 *** Revisions ***
 * MRB: October 2014: Made the following changes:
+  - Made element PLACE a child element of the element ORGNAME.
   - Made element DOCAUTHOR repeatable in the parent element CWRCHEADER.
   - Made element AUTHORITY repeatable in the parent element CWRCHEADER.
   - Created the element PROFILEDESC, which is a child element of CWRCHEADER, and which has two child elements, LANGUSAGE and TEXTCLASS; the element LANGUSAGE
@@ -8551,6 +8552,7 @@
                     <ref name="DENOMINATION"/>
                     <ref name="EMPH"/>
                     <ref name="FOREIGN"/>
+                    <ref name="PLACE"/>
                     <ref name="POLITICALAFFILIATION"/>
                     <ref name="QUOTE"/>
                     <ref name="RESEARCHNOTE"/>
