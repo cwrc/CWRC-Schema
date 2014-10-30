@@ -621,6 +621,8 @@
                             <a:documentation>ceww</a:documentation>
                             <value a:en="eccji">eccji</value>
                             <a:documentation>eccji</a:documentation>
+                            <value a:en="eccji">GeoNames</value>
+                            <a:documentation>GeoNames</a:documentation>
                             <value a:en="orlando">orlando</value>
                             <a:documentation>orlando</a:documentation>
                         </choice>
@@ -635,6 +637,8 @@
                     <a:documentation>ceww</a:documentation>
                     <value a:en="eccji">eccji</value>
                     <a:documentation>eccji</a:documentation>
+                    <value a:en="eccji">GeoNames</value>
+                    <a:documentation>GeoNames</a:documentation>
                     <value a:en="orlando">orlando</value>
                     <a:documentation>orlando</a:documentation>
                 </choice>
@@ -646,6 +650,13 @@
         <element name="recordIdentifier">
             <a:documentation>Provenance field used to capture original record identifiers. CWRC record
                 identifiers are captured in entityId and in FOXML.</a:documentation>
+            <optional>
+                <attribute name="source">
+                    <a:documentation>Contains the code or name of the organization whose system control
+                        number is located in the recordIdentifier element.</a:documentation>
+                    <data type="string"/>
+                </attribute>
+            </optional>
             <data type="string"/>
         </element>
     </define>
