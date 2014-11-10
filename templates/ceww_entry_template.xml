@@ -17,7 +17,7 @@
         </FILEDESC>
         <PROFILEDESC>
             <LANGUSAGE>
-                <LANGUAGE IDENT="eng">English</LANGUAGE>
+                <LANG IDENT="eng">English</LANG>
             </LANGUSAGE>
             <TEXTCLASS>
                 <KEYWORDS>
@@ -356,9 +356,8 @@
         <RECEPTION>
             <RESEARCHNOTE>Copy editor: break list of awards, as well as Employment and membership below into individual chronstructs following the provided models and delete the now empty research notes when done</RESEARCHNOTE>
             <CHRONSTRUCT>
-                <CHRONPROSE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME/> (<ORGNAME/></RRECOGNITIONSANDAWARDS>, </CHRONPROSE>
-                <DATE/>
-                <CHRONPROSE>) </CHRONPROSE>
+                <CHRONPROSE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME></RRECOGNITIONNAME> (<ORGNAME/></RRECOGNITIONSANDAWARDS>, </CHRONPROSE>
+                <DATE>)</DATE> 
             </CHRONSTRUCT>
         </RECEPTION>
         <HEADING SUBTYPE="2">Employment and Volunteer Activities</HEADING>
