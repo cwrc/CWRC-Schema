@@ -206,7 +206,7 @@
         <HEADING SUBTYPE="2">Awards</HEADING>
         <RECEPTION>
             <RESEARCHNOTE>Break list of awards, as well as Employment and membership below into individual chronstructs following the provided models.</RESEARCHNOTE>
-            <CHRONSTRUCT> <CHRONPROSE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME></RRECOGNITIONNAME> (<ORGNAME></ORGNAME></RRECOGNITIONSANDAWARDS>, </CHRONPROSE> <DATE></DATE> <!--<CHRONPROSE>) </CHRONPROSE>--> </CHRONSTRUCT>
+            <CHRONSTRUCT> <CHRONPROSE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{Name of the award received}</RRECOGNITIONNAME> (<ORGNAME>{Name of the granting organization}</ORGNAME></RRECOGNITIONSANDAWARDS>, </CHRONPROSE> <DATE>{Date awarded})</DATE></CHRONSTRUCT>
         </RECEPTION>
         <HEADING SUBTYPE="2">Employment and Volunteer Activities</HEADING>
         <OCCUPATION>
@@ -219,7 +219,7 @@
         </OCCUPATION>
         <OTHERLIFEEVENT>
             <HEADING SUBTYPE="3">Tangential Information</HEADING>
-            <P>{Tangential_information}</P>
+            <P>{Tangential information; }</P>
         </OTHERLIFEEVENT>
         <RESEARCHNOTE>For the remaining sections: Under each of the sections below, where applicable, add bibliographic citations using the LISTBIBCIT>BIBCIT model (one LISTBIBCIT/type of published texts, one BIBCIT/text. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. </RESEARCHNOTE>
         <HEADING SUBTYPE="2">Archival Holdings</HEADING>

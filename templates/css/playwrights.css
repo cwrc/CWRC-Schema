@@ -8,7 +8,7 @@
 /**:empty{
     display:none
 }*/
-RESEARCHNOTE{
+RESEARCHNOTE{display:none;
     background-color:#FBEFEF;
     color:#663366;
     font-family:Arial, Helvetica, sans-serif;
@@ -142,7 +142,10 @@ MARRIAGE,
 FAMILY P,
 P CHILDREN,
 RSELFDESCRIPTION,
-OCCUPATION P{display:block; margin-left:4%; padding-left:0%}
+OCCUPATION P, 
+LISTBIBCIT{display:block; margin-left:4%; padding-left:0%}
+
+MARRIAGE P{display:block; margin-left:0%;padding-left:0%}
 
 /*field labels:*/
 
@@ -185,6 +188,7 @@ RECEPTION DATASTRUCT
 margin-left:8%; padding-top:1%; padding-bottom:1%}
 
 
+
 CHRONSTRUCT DATE,
 CHRONSTRUCT DATERANGE {padding-right:3%; width:16em}
 CHRONPROSE,
@@ -204,11 +208,25 @@ TEXTUALFEATURES HEADING[SUBTYPE="4"],
 TEXTSCOPE PRODUCTION HEADING[SUBTYPE="4"],
 TEXTSCOPE RECEPTION HEADING[SUBTYPE="4"]
 {display:block;color:black;font-weight:bold; padding-left:4%}
+
 /*NATIONALHERITAGE:before{content:"National / Ethnic Background: ";
 color:olive}*/
 
-TITLE[LEVEL = "MONOGRAPHIC"]{font-style:italic}
+TITLE[LEVEL = "MONOGRAPHIC"],
+TITLE[LEVEL="UNPUBLISHED"]{font-style:italic}
 
+TITLE[LEVEL = "ANALYTIC"]:before{content:"\""}
+TITLE[LEVEL = "ANALYTIC"]:after{content:"\""}
+EMPH:before{content:"\""}
+EMPH:after{content:"\""}
+SOCALLED:before{content:"\""}
+SOCALLED:after{content:"\""}
+TITLE[LEVEL = "UNPUBLISHED"] EMPH:before{content:"\""}
+TITLE[LEVEL = "UNPUBLISHED"] EMPH:after{content:"\""}
 
+PRODUCTION CHRONSTRUCT,
+PRODUCTION CHRONSTRUCT{padding-left:5%; width:16em}
 
+HEADING TITLE,
+DATAITEM DENOMINATION{display:inline}
 
