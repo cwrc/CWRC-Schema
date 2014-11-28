@@ -33,6 +33,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: November 2014: Made the following changes:
+  - Made the element RFICTIONALIZATION an optional repeatable child element of the element QUOTE.
+  - Made the element EMPH an optional repeatable child element of the element RSHEINFLUENCED.
 * MRB: September 2014: Made the following changes:
   - Removed references to the element BIBCITS from the following parent elements: DIV2, and SHORTPROSE; one exception to the guiding principle that the parent element of BIBCITS
     must allow text is CHRONSTRUCT.
@@ -1136,6 +1139,7 @@
                     <ref name="QUOTE"/>
                     <ref name="RDESTRUCTIONOFWORK"/>
                     <ref name="RESEARCHNOTE"/>
+                    <ref name="RFICTIONALIZATION"/>
                     <ref name="RLANDMARKTEXT"/>
                     <ref name="RPENALTIES"/>
                     <ref name="RRECOGNITIONNAME"/>
@@ -4048,6 +4052,7 @@
                     <ref name="BIBCITS"/>
                     <ref name="DATE"/>
                     <ref name="DATERANGE"/>
+                    <ref name="EMPH"/>
                     <ref name="FOREIGN"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="NAME"/>
