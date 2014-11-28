@@ -33,6 +33,8 @@
 
 <!-- 
 *** Revisions ***
+* MRB: November 2014: Made the following changes:
+  - Added the values of Acting Coach, Crew, and Dramaturge to the enumerated list of values for the ROLE element.
 * MRB: October 2014: Made the following changes:
   - Made element PLACE a child element of the element ORGNAME.
   - Made element DOCAUTHOR repeatable in the parent element CWRCHEADER.
@@ -8767,6 +8769,7 @@
                 descriptions; the MARC Code List for Relators has been supplemented with values that were developed by the CWRC Research
                 Board.</a:documentation>
                 <choice>
+                    <value>Acting coach</value>
                     <value>Actor [act]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who principally exhibits acting
                     skills in a musical or dramatic presentation or entertainment.</a:documentation>
@@ -8993,6 +8996,7 @@
                     <value>Creator [cre]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the intellectual
                     or artistic content of a work.</a:documentation>
+                    <value>Crew</value>
                     <value>Curator of an exhibition [cur]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for conceiving and
                     organizing an exhibition.</a:documentation>
@@ -9053,6 +9057,7 @@
                     <value>Draftsman [drm]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who prepares artistic or
                     technical drawings.</a:documentation>
+                    <value>Dramaturge</value>
                     <value>Dubious author [dub]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization to which authorship has been
                     dubiously or incorrectly ascribed.</a:documentation>
