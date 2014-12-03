@@ -33,6 +33,14 @@
 
 <!-- 
 *** Revisions ***
+* MRB: December 2014: Made the following changes:
+  - Note: these changes were made to create an Orlando events schema that is used to model an Orlando events template, and the Orlando events template is used to create Orlando
+    freestanding events that can be copied and pasted into the Document Archives' Events text area form field (Isobel Grundy is the primary creator of freestanding events using this
+    method).
+  - Changed root element from FREESTANDING_EVENT to EVENTS.
+  - Added element CHRONEVENT as a child element of the root element EVENTS.
+  - Removed the reference to the element BIBCITS from the element CHRONSTRUCT; this was done because a Perl error exception will be thrown if BIBCITS is a child of CHRONSTRUCT
+    when a freestanding event is pasted into the appropriate text area form field in the Document Archive.
 * MRB: September 2014: Made the following changes:
   - Removed references to the element BIBCITS from the following parent elements: DIV2, and SHORTPROSE; one exception to the guiding principle that the parent element of BIBCITS
     must allow text is CHRONSTRUCT.
@@ -54,273 +62,183 @@
     <!-- begin <start> element pattern -->
     <start>
 
-        <!-- begin FREESTANDING_EVENT element pattern -->
-        <element name="FREESTANDING_EVENT">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Events is the largest element available in events documents and its sole
-        purpose is to contain the overall document structure.</a:documentation>
-            <optional>
-                <attribute name="EID">
-                    <data type="integer"/>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="FILENAME">
-                    <data type="NMTOKEN"/>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="ID">
-                    <data type="NCName"/>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="SUBSET">
-                    <data type="NCName"/>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="TITLE">
-                    <data type="NCName"/>
-                </attribute>
-            </optional>
-            <element name="CHRONSTRUCT">
+        <!-- begin EVENTS element pattern -->
+        <element name="EVENTS">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">chronEvent is an element that holds together all relevant information pertaining to an
+                individual chronology entry as well as its explanatory material.</a:documentation>
+            <element name="CHRONEVENT">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A chronStruct is an element that holds together and therefore
+                    associates a date with the prose that describes an event.</a:documentation>
+                <element name="CHRONSTRUCT">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A chronStruct is an element that holds together and therefore
           associates a date with the prose that describes an event.</a:documentation>
-                <attribute name="CHRONCOLUMN">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given
+                    <attribute name="CHRONCOLUMN">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given
               chronology item as belonging to a subject-specific column of the Orlando print (and possibly electronic)
               chronology.</a:documentation>
-                    <choice>
-                        <value>NATIONALINTERNATIONAL</value>
-                        <value>BRITISHWOMENWRITERS</value>
-                        <value>WRITINGCLIMATE</value>
-                        <value>SOCIALCLIMATE</value>
-                    </choice>
-                </attribute>
-                <optional>
-                    <attribute name="CHRONCOLUMN1">
                         <choice>
-                            <value>NATIONALINTERNATIONAL1</value>
-                            <value>BRITISHWOMENWRITERS1</value>
-                            <value>WRITINGCLIMATE1</value>
-                            <value>SOCIALCLIMATE1</value>
+                            <value>NATIONALINTERNATIONAL</value>
+                            <value>BRITISHWOMENWRITERS</value>
+                            <value>WRITINGCLIMATE</value>
+                            <value>SOCIALCLIMATE</value>
                         </choice>
                     </attribute>
-                </optional>
-                <optional>
-                    <attribute name="CHRONCOLUMN2">
-                        <choice>
-                            <value>NATIONALINTERNATIONAL2</value>
-                            <value>BRITISHWOMENWRITERS2</value>
-                            <value>WRITINGCLIMATE2</value>
-                            <value>SOCIALCLIMATE2</value>
-                        </choice>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="CHRONCOLUMN3">
-                        <choice>
-                            <value>NATIONALINTERNATIONAL3</value>
-                            <value>BRITISHWOMENWRITERS3</value>
-                            <value>WRITINGCLIMATE3</value>
-                            <value>SOCIALCLIMATE3</value>
-                        </choice>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="ID">
-                        <data type="NCName"/>
-                    </attribute>
-                </optional>
-                <attribute name="RELEVANCE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to
+                    <optional>
+                        <attribute name="CHRONCOLUMN1">
+                            <choice>
+                                <value>NATIONALINTERNATIONAL1</value>
+                                <value>BRITISHWOMENWRITERS1</value>
+                                <value>WRITINGCLIMATE1</value>
+                                <value>SOCIALCLIMATE1</value>
+                            </choice>
+                        </attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="CHRONCOLUMN2">
+                            <choice>
+                                <value>NATIONALINTERNATIONAL2</value>
+                                <value>BRITISHWOMENWRITERS2</value>
+                                <value>WRITINGCLIMATE2</value>
+                                <value>SOCIALCLIMATE2</value>
+                            </choice>
+                        </attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="CHRONCOLUMN3">
+                            <choice>
+                                <value>NATIONALINTERNATIONAL3</value>
+                                <value>BRITISHWOMENWRITERS3</value>
+                                <value>WRITINGCLIMATE3</value>
+                                <value>SOCIALCLIMATE3</value>
+                            </choice>
+                        </attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="ID">
+                            <data type="NCName"/>
+                        </attribute>
+                    </optional>
+                    <attribute name="RELEVANCE">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to
             each and every chronStruct. This element assignes importance to the chronstruct you have just created with categories for comprehensive,
             period, decade, and selective (in order of increasing importance).</a:documentation>
+                        <choice>
+                            <value>SELECTIVE</value>
+                            <value>PERIOD</value>
+                            <value>DECADE</value>
+                            <value>COMPREHENSIVE</value>
+                        </choice>
+                    </attribute>
+                    <optional>
+                        <attribute name="RELEVANCE1">
+                            <choice>
+                                <value>SELECTIVE1</value>
+                                <value>PERIOD1</value>
+                                <value>DECADE1</value>
+                                <value>COMPREHENSIVE1</value>
+                            </choice>
+                        </attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="RELEVANCE2">
+                            <choice>
+                                <value>SELECTIVE2</value>
+                                <value>PERIOD2</value>
+                                <value>DECADE2</value>
+                                <value>COMPREHENSIVE2</value>
+                            </choice>
+                        </attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="RELEVANCE3">
+                            <choice>
+                                <value>SELECTIVE3</value>
+                                <value>PERIOD3</value>
+                                <value>DECADE3</value>
+                                <value>COMPREHENSIVE3</value>
+                            </choice>
+                        </attribute>
+                    </optional>
+                    <ref name="RESP-attribute"/>
                     <choice>
-                        <value>SELECTIVE</value>
-                        <value>PERIOD</value>
-                        <value>DECADE</value>
-                        <value>COMPREHENSIVE</value>
+                        <ref name="DATE"/>
+                        <ref name="DATERANGE"/>
+                        <ref name="DATESTRUCT"/>
                     </choice>
-                </attribute>
-                <optional>
-                    <attribute name="RELEVANCE1">
-                        <choice>
-                            <value>SELECTIVE1</value>
-                            <value>PERIOD1</value>
-                            <value>DECADE1</value>
-                            <value>COMPREHENSIVE1</value>
-                        </choice>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="RELEVANCE2">
-                        <choice>
-                            <value>SELECTIVE2</value>
-                            <value>PERIOD2</value>
-                            <value>DECADE2</value>
-                            <value>COMPREHENSIVE2</value>
-                        </choice>
-                    </attribute>
-                </optional>
-                <optional>
-                    <attribute name="RELEVANCE3">
-                        <choice>
-                            <value>SELECTIVE3</value>
-                            <value>PERIOD3</value>
-                            <value>DECADE3</value>
-                            <value>COMPREHENSIVE3</value>
-                        </choice>
-                    </attribute>
-                </optional>
-                <ref name="RESP-attribute"/>
-                <choice>
-                    <ref name="DATE"/>
-                    <ref name="DATERANGE"/>
-                    <ref name="DATESTRUCT"/>
-                </choice>
-                <element name="CHRONPROSE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
+                    <element name="CHRONPROSE">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
             the essential facts of a chronology event.</a:documentation>
-                    <oneOrMore>
-                        <choice>
-                            <text/>
-                            <ref name="BIBCITS"/>
-                            <ref name="DATE"/>
-                            <ref name="DATERANGE"/>
-                            <ref name="DATESTRUCT"/>
-                            <ref name="EMPH"/>
-                            <ref name="FOREIGN"/>
-                            <ref name="KEYWORDCLASS"/>
-                            <ref name="NAME"/>
-                            <ref name="ORGNAME"/>
-                            <ref name="PLACE"/>
-                            <ref name="QUOTE"/>
-                            <ref name="RESEARCHNOTE"/>
-                            <ref name="RS"/>
-                            <ref name="SCHOLARNOTE"/>
-                            <ref name="SIC"/>
-                            <ref name="SOCALLED"/>
-                            <ref name="TGENRE"/>
-                            <ref name="TITLE"/>
-                            <ref name="TOPIC"/>
-                            <element name="TINTERTEXTUALITY">
+                        <oneOrMore>
+                            <choice>
+                                <text/>
+                                <ref name="BIBCITS"/>
+                                <ref name="DATE"/>
+                                <ref name="DATERANGE"/>
+                                <ref name="DATESTRUCT"/>
+                                <ref name="EMPH"/>
+                                <ref name="FOREIGN"/>
+                                <ref name="KEYWORDCLASS"/>
+                                <ref name="NAME"/>
+                                <ref name="ORGNAME"/>
+                                <ref name="PLACE"/>
+                                <ref name="QUOTE"/>
+                                <ref name="RESEARCHNOTE"/>
+                                <ref name="RS"/>
+                                <ref name="SCHOLARNOTE"/>
+                                <ref name="SIC"/>
+                                <ref name="SOCALLED"/>
+                                <ref name="TGENRE"/>
                                 <ref name="TITLE"/>
-                            </element>
-                            <element name="TTHEMETOPIC">
-                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the
+                                <ref name="TOPIC"/>
+                                <element name="TINTERTEXTUALITY">
+                                    <ref name="TITLE"/>
+                                </element>
+                                <element name="TTHEMETOPIC">
+                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the
                   central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not
                   aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</a:documentation>
-                                <text/>
-                            </element>
-                        </choice>
-                    </oneOrMore>
+                                    <text/>
+                                </element>
+                            </choice>
+                        </oneOrMore>
+                    </element>
+                    <optional>
+                        <ref name="SCHOLARNOTES"/>
+                    </optional>
                 </element>
+                <optional>
+                    <element name="SHORTPROSE">
+                        <oneOrMore>
+                            <choice>
+                                <ref name="KEYWORDCLASS"/>
+                                <ref name="P"/>
+                            </choice>
+                        </oneOrMore>
+                        <optional>
+                            <ref name="RESEARCHNOTE"/>
+                        </optional>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="RESEARCHNOTES">
+                        <oneOrMore>
+                            <ref name="RESEARCHNOTE"/>
+                        </oneOrMore>
+                    </element>
+                </optional>
                 <optional>
                     <ref name="SCHOLARNOTES"/>
                 </optional>
-            </element>
-            <optional>
-                <element name="SHORTPROSE">
-                    <oneOrMore>
-                        <choice>
+                <optional>
+                    <element name="KEYWORDCLASSES">
+                        <oneOrMore>
                             <ref name="KEYWORDCLASS"/>
-                            <ref name="P"/>
-                        </choice>
-                    </oneOrMore>
-                    <optional>
-                        <ref name="RESEARCHNOTE"/>
-                    </optional>
-                </element>
-            </optional>
-            <optional>
-                <element name="RESEARCHNOTES">
-                    <oneOrMore>
-                        <ref name="RESEARCHNOTE"/>
-                    </oneOrMore>
-                </element>
-            </optional>
-            <optional>
-                <ref name="SCHOLARNOTES"/>
-            </optional>
-            <optional>
-                <ref name="BIBCITS"/>
-            </optional>
-            <optional>
-                <element name="KEYWORDCLASSES">
-                    <oneOrMore>
-                        <ref name="KEYWORDCLASS"/>
-                    </oneOrMore>
-                </element>
-            </optional>
-            <element name="RESPONSIBILITIES">
-                <oneOrMore>
-                    <element name="RESPONSIBILITY">
-                        <ref name="RESP-attribute"/>
-                        <attribute name="WORKSTATUS" a:defaultValue="SUB">
-                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the work status of a
-                                document.</a:documentation>
-                            <choice>
-                                <value type="token">SUB</value>
-                                <a:documentation>Submitted (SUB)</a:documentation>
-                                <value type="token">RWT</value>
-                                <a:documentation>Researched / Written / Tagged (RWT)</a:documentation>
-                                <value type="token">CAS</value>
-                                <a:documentation>Checked Against Sources (CAS)</a:documentation>
-                                <value type="token">RBV</value>
-                                <a:documentation>Reviewed by Volume Author (RVB)</a:documentation>
-                                <value type="token">CFT</value>
-                                <a:documentation>Checked for Tagging (CFT)</a:documentation>
-                                <value type="token">CFB</value>
-                                <a:documentation>Checked for Bibliographic Practices (CFB)</a:documentation>
-                                <value type="token">CFC</value>
-                                <!-- MRB: CFC? -->
-                                <value type="token">REV</value>
-                                <a:documentation>Revised (REV)</a:documentation>
-                                <value type="token">OLD</value>
-                                <!-- MRB: OLD? -->
-                                <value type="token">PUB</value>
-                                <a:documentation>Published (PUB)</a:documentation>
-                                <value type="token">ENH</value>
-                                <a:documentation>Enhanced (ENH)</a:documentation>
-                            </choice>
-                        </attribute>
-                        <attribute name="WORKVALUE" a:defaultValue="I">
-                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the completion information of a
-                                particular work status phase of a document.</a:documentation>
-                            <choice>
-                                <value>I</value>
-                                <a:documentation>Incomplete</a:documentation>
-                                <value>P</value>
-                                <a:documentation>Pending</a:documentation>
-                                <value>C</value>
-                                <a:documentation>Complete</a:documentation>
-                                <value>O</value>
-                                <!-- MRB: O? -->
-                            </choice>
-                        </attribute>
-                        <optional>
-                            <ref name="BIBCIT"/>
-                        </optional>
-                        <ref name="DATE"/>
-                        <zeroOrMore>
-                            <choice>
-                                <ref name="RESEARCHNOTE"/>
-                                <element name="ITEM">
-                                    <oneOrMore>
-                                        <choice>
-                                            <text/>
-                                            <ref name="DATE"/>
-                                        </choice>
-                                    </oneOrMore>
-                                </element>
-                            </choice>
-                        </zeroOrMore>
+                        </oneOrMore>
                     </element>
-                </oneOrMore>
+                </optional>
             </element>
         </element>
-        <!-- end FREESTANDING_EVENT element pattern -->
+        <!-- end EVENTS element pattern -->
 
     </start>
     <!-- end <start> element pattern -->
@@ -639,16 +557,6 @@
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The title element contains the title of a work, whether
         article, book, journal (newspaper, magazine), series, or unpublished.</a:documentation>
             <optional>
-                <attribute name="CT_ID">
-                    <data type="NMTOKEN"/>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="CT_ISLINK">
-                    <data type="integer"/>
-                </attribute>
-            </optional>
-            <optional>
                 <attribute name="REG" a:documentation="Regularized value">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or
             regularization) contains a reading which has been regularized or normalized in some
@@ -763,16 +671,6 @@
 
     <define name="NAME">
         <element name="NAME">
-            <optional>
-                <attribute name="CT_ID">
-                    <data type="NMTOKEN"/>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="CT_ISLINK">
-                    <data type="integer"/>
-                </attribute>
-            </optional>
             <optional>
                 <attribute name="STANDARD">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
@@ -1129,11 +1027,6 @@
                     <data type="NCName"/>
                 </attribute>
             </optional>
-            <optional>
-                <attribute name="SN_ID">
-                    <data type="integer"/>
-                </attribute>
-            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -1163,16 +1056,6 @@
         occurred inside Event chronstructs and not all places mentioned within the prose, we will be able to map that event to the place tagged.
       </a:documentation>
             <optional>
-                <attribute name="CT_ID">
-                    <data type="NMTOKEN"/>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="CT_ISLINK">
-                    <data type="integer"/>
-                </attribute>
-            </optional>
-            <optional>
                 <attribute name="REF">
                     <data type="anyURI"/>
                 </attribute>
@@ -1186,16 +1069,6 @@
               consider whether it is significant enough to capture in SGML (if a woman writer lived at the address, capture it; if she
               visited a friend there, probably not). Often for recent writers many addresses are available. Don&apos;t include them all.
               Include only those significant to the document you are writing.</a:documentation>
-                        <optional>
-                            <attribute name="CT_ID">
-                                <data type="NMTOKEN"/>
-                            </attribute>
-                        </optional>
-                        <optional>
-                            <attribute name="CT_ISLINK">
-                                <data type="integer"/>
-                            </attribute>
-                        </optional>
                         <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
@@ -1234,16 +1107,6 @@
               Geographical Groupings: Far East, Caribbean; Historical Geo-political units: Siam, Ceylon [Note: use "current" attribute to regularize to
               "Thailand" and "Sri Lanka"].</a:documentation>
                         <optional>
-                            <attribute name="CT_ID">
-                                <data type="NMTOKEN"/>
-                            </attribute>
-                        </optional>
-                        <optional>
-                            <attribute name="CT_ISLINK">
-                                <data type="integer"/>
-                            </attribute>
-                        </optional>
-                        <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
                 location.</a:documentation>
@@ -1267,16 +1130,6 @@
               Bedford Square, Trafalgar Square; Streets: Fleet Street, The Strand, Old Change; Specific Mountains: while ranges are considered regions,
               the names of specific mountains are placenames, for example, Mount Everest; Cemeteries: Paddington Cemetery.</a:documentation>
                         <optional>
-                            <attribute name="CT_ID">
-                                <data type="NMTOKEN"/>
-                            </attribute>
-                        </optional>
-                        <optional>
-                            <attribute name="CT_ISLINK">
-                                <data type="integer"/>
-                            </attribute>
-                        </optional>
-                        <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
                 location.</a:documentation>
@@ -1297,16 +1150,6 @@
               (including oceans, rivers, lakes): Lake Simcoe, English Channel, Nile, Atlantic ocean; Geographical regions: Lake District, Scottish Highlands;
               Greater Urban areas: Greater London, Greater Manchester; Borders: Welsh border, Tibetan border.</a:documentation>
                         <optional>
-                            <attribute name="CT_ID">
-                                <data type="NMTOKEN"/>
-                            </attribute>
-                        </optional>
-                        <optional>
-                            <attribute name="CT_ISLINK">
-                                <data type="integer"/>
-                            </attribute>
-                        </optional>
-                        <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
                 location.</a:documentation>
@@ -1323,16 +1166,6 @@
                     <element name="SETTLEMENT">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Settlement, a sub-element of place, captures the names of
               cities, towns, villages, hamlets and areas within larger settlements (for example, districts of London).</a:documentation>
-                        <optional>
-                            <attribute name="CT_ID">
-                                <data type="NMTOKEN"/>
-                            </attribute>
-                        </optional>
-                        <optional>
-                            <attribute name="CT_ISLINK">
-                                <data type="integer"/>
-                            </attribute>
-                        </optional>
                         <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical
@@ -1456,16 +1289,6 @@
         <element name="ORGNAME">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The orgName element is used to identify schools, companies,
         and any other type of recognized organization.</a:documentation>
-            <optional>
-                <attribute name="CT_ID">
-                    <data type="NMTOKEN"/>
-                </attribute>
-            </optional>
-            <optional>
-                <attribute name="CT_ISLINK">
-                    <data type="integer"/>
-                </attribute>
-            </optional>
             <optional>
                 <attribute name="ORGTYPE">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A carry-over from the Microsoft Access database for
