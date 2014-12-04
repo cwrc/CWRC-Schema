@@ -71,6 +71,7 @@
 				'properties_elevation', 
 				'properties_averageElevation', 
 				'properties_timeZoneOffset', 
+				'properties_recordIdentifier_source', 
 				'properties_href-attribute_href', 
 				'properties_a_rel', 
 				'properties_accessCondition_type', 
@@ -149,6 +150,7 @@ var usedByBoxes= new Array('usedBy_entity',
 				'usedBy_averageElevation', 
 				'usedBy_timeZoneOffset', 
 				'usedBy_date-pattern', 
+				'usedBy_recordIdentifier_source', 
 				'usedBy_href-attribute_href', 
 				'usedBy_a_rel', 
 				'usedBy_accessCondition_type', 
@@ -234,6 +236,7 @@ var sourceBoxes= new Array('source_cwrc',
 				'source_averageElevation', 
 				'source_timeZoneOffset', 
 				'source_date-pattern', 
+				'source_recordIdentifier_source', 
 				'source_href-attribute_href', 
 				'source_a_rel', 
 				'source_accessCondition_type', 
@@ -426,6 +429,7 @@ var annotationBoxes= new Array('annotations_cwrc',
 				'annotations_elevation', 
 				'annotations_averageElevation', 
 				'annotations_timeZoneOffset', 
+				'annotations_recordIdentifier_source', 
 				'annotations_namePart_partType', 
 				'annotations_sameAs_cert', 
 				'annotations_standardDate_qualifier', 
@@ -435,7 +439,8 @@ var annotationBoxes= new Array('annotations_cwrc',
 				'annotations_partType-attribute_partType', 
 				'annotations_cert-attribute_cert', 
 				'annotations_qualifer-attribute_qualifier');
-var attributesBoxes= new Array('attributes_accessCondition', 
+var attributesBoxes= new Array('attributes_recordIdentifier', 
+				'attributes_accessCondition', 
 				'attributes_a', 
 				'attributes_namePart', 
 				'attributes_sameAs', 
@@ -1962,7 +1967,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_personRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_personRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
+                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_1.jpeg" usemap="#entities_xsd_Element_recordInfo_1" /><map name="entities_xsd_Element_recordInfo_1" id="entities_xsd_Element_recordInfo_1">
                                  <area alt="index.tmp#personTypes" href="index.html#personTypes" coords="220,2,315,27" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,82,295,107" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,176,513,220" />
@@ -2432,10 +2437,10 @@ var modelBoxes= new Array('model_cwrc',
                         <td class="diagram">
                            <div id="diagram_originInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_originInfo.jpeg" usemap="#entities_xsd_Element_originInfo" /><map name="entities_xsd_Element_originInfo" id="entities_xsd_Element_originInfo">
                                  <area alt="index.tmp#projectId" href="index.html#projectId" coords="214,2,552,46" />
-                                 <area alt="index.tmp#recordIdentifier" href="index.html#recordIdentifier" coords="214,101,319,145" />
-                                 <area alt="index.tmp#recordCreationDate" href="index.html#recordCreationDate" coords="214,214,660,258" />
-                                 <area alt="index.tmp#recordChangeDate" href="index.html#recordChangeDate" coords="214,299,660,343" />
-                                 <area alt="index.tmp#recordOrigin" href="index.html#recordOrigin" coords="214,384,319,428" /></map></div>
+                                 <area alt="index.tmp#recordIdentifier" href="index.html#recordIdentifier" coords="214,101,386,145" />
+                                 <area alt="index.tmp#recordCreationDate" href="index.html#recordCreationDate" coords="214,200,660,244" />
+                                 <area alt="index.tmp#recordChangeDate" href="index.html#recordChangeDate" coords="214,285,660,329" />
+                                 <area alt="index.tmp#recordOrigin" href="index.html#recordOrigin" coords="214,370,319,414" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -2492,7 +2497,7 @@ var modelBoxes= new Array('model_cwrc',
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;originInfo</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;projectId</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/projectId&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;recordIdentifier</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/recordIdentifier&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;recordIdentifier</span><span class="tT"> </span><span class="tAN">source=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/recordIdentifier&gt;</span><span class="tI">
   </span><span class="tEl">&lt;recordCreationDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/recordCreationDate&gt;</span><span class="tI">
   </span><span class="tEl">&lt;recordChangeDate</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/recordChangeDate&gt;</span><span class="tI">
   </span><span class="tEl">&lt;recordOrigin</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/recordOrigin&gt;</span><span class="tI">
@@ -2654,6 +2659,11 @@ var modelBoxes= new Array('model_cwrc',
               </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">eccji</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
           </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"GeoNames"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">GeoNames</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"orlando"</span><span class="tEl">&gt;</span><span class="tI">
             </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">orlando</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
@@ -2725,12 +2735,13 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_recordIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_recordIdentifier');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_recordIdentifier" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordIdentifier.jpeg" /></div>
+                           <div id="diagram_recordIdentifier" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordIdentifier.jpeg" usemap="#entities_xsd_Element_recordIdentifier" /><map name="entities_xsd_Element_recordIdentifier" id="entities_xsd_Element_recordIdentifier">
+                                 <area alt="index.tmp#recordIdentifier_source" href="index.html#recordIdentifier_source" coords="234,122,339,166" /></map></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td><b>xs:string</b></td>
+                        <td>extension of <b>xs:string</b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -2742,7 +2753,7 @@ var modelBoxes= new Array('model_cwrc',
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
-                                    <td><b>simple</b></td>
+                                    <td><b>complex</b></td>
                                  </tr>
                               </table>
                            </div>
@@ -2766,6 +2777,41 @@ var modelBoxes= new Array('model_cwrc',
                      </tr>
                      <tr>
                         <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_recordIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_recordIdentifier');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_recordIdentifier" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th>Annotation</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#recordIdentifier_source" target="_self" title="No namespace">source</a></b></td>
+                                    <td><b>xs:string</b></td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Contains the code or name of the organization whose system control</span><span class="tI">
+</span><span class="tT">number is located in the recordIdentifier element.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
                            <div class="floatRight"><input id="button_source_recordIdentifier" type="image" src="img/btM.gif" value="-" onclick="switchState('source_recordIdentifier');" class="control" /></div>
                         </td>
@@ -2773,10 +2819,21 @@ var modelBoxes= new Array('model_cwrc',
                            <div id="source_recordIdentifier" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"recordIdentifier"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"recordIdentifier"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Provenance field used to capture original record identifiers. CWRC record identifiers are captured in entityId and in FOXML.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:simpleContent</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"source"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Contains the code or name of the organization whose system control number is located in the recordIdentifier element.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:simpleContent&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -8106,7 +8163,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_orgRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_orgRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
+                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
                                  <area alt="index.tmp#orgTypes" href="index.html#orgTypes" coords="220,2,297,27" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,82,295,107" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,176,513,220" />
@@ -8802,7 +8859,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_placeRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_1.jpeg" usemap="#entities_xsd_Element_recordInfo_1" /><map name="entities_xsd_Element_recordInfo_1" id="entities_xsd_Element_recordInfo_1">
+                           <div id="diagram_placeRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
                                  <area alt="index.tmp#placeTypes" href="index.html#placeTypes" coords="220,2,307,27" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,68,295,93" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,162,513,206" />
@@ -10686,6 +10743,106 @@ var modelBoxes= new Array('model_cwrc',
     </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:complexType&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="recordIdentifier_source"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#recordIdentifier" target="_self" title="No namespace">recordIdentifier</a></b> / @source</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_recordIdentifier_source" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_recordIdentifier_source');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_recordIdentifier_source" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Contains the code or name of the organization whose system control</span><span class="tI">
+</span><span class="tT">number is located in the recordIdentifier element.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:string</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_recordIdentifier_source" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_recordIdentifier_source');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_recordIdentifier_source" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_recordIdentifier_source" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_recordIdentifier_source');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_recordIdentifier_source" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#recordIdentifier" target="_self" title="No namespace">recordIdentifier</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_recordIdentifier_source" type="image" src="img/btM.gif" value="-" onclick="switchState('source_recordIdentifier_source');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_recordIdentifier_source" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"source"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Contains the code or name of the organization whose system control number is located in the recordIdentifier element.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>

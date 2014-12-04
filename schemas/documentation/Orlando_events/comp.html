@@ -7,7 +7,8 @@
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
         var propertiesBoxes= new Array('properties_orlando_events.xsd', 
-				'properties_FREESTANDING_EVENT', 
+				'properties_EVENTS', 
+				'properties_CHRONEVENT', 
 				'properties_CHRONSTRUCT', 
 				'properties_DATE', 
 				'properties_DATERANGE', 
@@ -53,9 +54,6 @@
 				'properties_SHORTPROSE', 
 				'properties_RESEARCHNOTES', 
 				'properties_KEYWORDCLASSES', 
-				'properties_RESPONSIBILITIES', 
-				'properties_RESPONSIBILITY', 
-				'properties_ITEM', 
 				'properties_DATE_CALENDAR', 
 				'properties_DATE_CERTAINTY', 
 				'properties_DATE_VALUE', 
@@ -78,40 +76,21 @@
 				'properties_BIBCIT_QTDIN', 
 				'properties_BIBCIT_REF', 
 				'properties_SIC_CORR', 
-				'properties_ADDRESS_CT_ID', 
-				'properties_ADDRESS_CT_ISLINK', 
-				'properties_GEOG_CT_ID', 
-				'properties_GEOG_CT_ISLINK', 
-				'properties_PLACENAME_CT_ID', 
-				'properties_PLACENAME_CT_ISLINK', 
-				'properties_REGION_CT_ID', 
-				'properties_REGION_CT_ISLINK', 
-				'properties_SETTLEMENT_CT_ID', 
-				'properties_SETTLEMENT_CT_ISLINK', 
-				'properties_PLACE_CT_ID', 
-				'properties_PLACE_CT_ISLINK', 
 				'properties_PLACE_REF', 
 				'properties_RS_REG', 
 				'properties_LG_TYPE', 
 				'properties_QUOTE_DIRECT', 
-				'properties_TITLE_CT_ID', 
-				'properties_TITLE_CT_ISLINK', 
 				'properties_TITLE_REND', 
 				'properties_TITLE_TITLETYPE', 
 				'properties_TITLE_REF', 
 				'properties_TGENRE_GENRENAME', 
-				'properties_ORGNAME_CT_ID', 
-				'properties_ORGNAME_CT_ISLINK', 
 				'properties_ORGNAME_REF', 
 				'properties_FOREIGN_LANG', 
-				'properties_NAME_CT_ID', 
-				'properties_NAME_CT_ISLINK', 
 				'properties_NAME_REF', 
 				'properties_RESP-attribute_RESP', 
 				'properties_XREF_URL', 
 				'properties_P_ID', 
 				'properties_SCHOLARNOTE_ID', 
-				'properties_SCHOLARNOTE_SN_ID', 
 				'properties_CHRONSTRUCT_CHRONCOLUMN', 
 				'properties_CHRONSTRUCT_CHRONCOLUMN1', 
 				'properties_CHRONSTRUCT_CHRONCOLUMN2', 
@@ -120,14 +99,7 @@
 				'properties_CHRONSTRUCT_RELEVANCE', 
 				'properties_CHRONSTRUCT_RELEVANCE1', 
 				'properties_CHRONSTRUCT_RELEVANCE2', 
-				'properties_CHRONSTRUCT_RELEVANCE3', 
-				'properties_RESPONSIBILITY_WORKSTATUS', 
-				'properties_RESPONSIBILITY_WORKVALUE', 
-				'properties_FREESTANDING_EVENT_EID', 
-				'properties_FREESTANDING_EVENT_FILENAME', 
-				'properties_FREESTANDING_EVENT_ID', 
-				'properties_FREESTANDING_EVENT_SUBSET', 
-				'properties_FREESTANDING_EVENT_TITLE');
+				'properties_CHRONSTRUCT_RELEVANCE3');
 var facetsBoxes= new Array('facets_DATE_CALENDAR', 
 				'facets_DATE_CERTAINTY', 
 				'facets_DATERANGE_CALENDAR', 
@@ -150,10 +122,9 @@ var facetsBoxes= new Array('facets_DATE_CALENDAR',
 				'facets_CHRONSTRUCT_RELEVANCE', 
 				'facets_CHRONSTRUCT_RELEVANCE1', 
 				'facets_CHRONSTRUCT_RELEVANCE2', 
-				'facets_CHRONSTRUCT_RELEVANCE3', 
-				'facets_RESPONSIBILITY_WORKSTATUS', 
-				'facets_RESPONSIBILITY_WORKVALUE');
-var usedByBoxes= new Array('usedBy_CHRONSTRUCT', 
+				'facets_CHRONSTRUCT_RELEVANCE3');
+var usedByBoxes= new Array('usedBy_CHRONEVENT', 
+				'usedBy_CHRONSTRUCT', 
 				'usedBy_DATE', 
 				'usedBy_DATERANGE', 
 				'usedBy_DATESTRUCT', 
@@ -198,9 +169,6 @@ var usedByBoxes= new Array('usedBy_CHRONSTRUCT',
 				'usedBy_SHORTPROSE', 
 				'usedBy_RESEARCHNOTES', 
 				'usedBy_KEYWORDCLASSES', 
-				'usedBy_RESPONSIBILITIES', 
-				'usedBy_RESPONSIBILITY', 
-				'usedBy_ITEM', 
 				'usedBy_DATE_CALENDAR', 
 				'usedBy_DATE_CERTAINTY', 
 				'usedBy_DATE_VALUE', 
@@ -224,53 +192,35 @@ var usedByBoxes= new Array('usedBy_CHRONSTRUCT',
 				'usedBy_BIBCIT_QTDIN', 
 				'usedBy_BIBCIT_REF', 
 				'usedBy_SIC_CORR', 
-				'usedBy_ADDRESS_CT_ID', 
-				'usedBy_ADDRESS_CT_ISLINK', 
 				'usedBy_ADDRESS_CURRENT', 
 				'usedBy_ADDRESS_REG', 
 				'usedBy_AREA_REG', 
-				'usedBy_GEOG_CT_ID', 
-				'usedBy_GEOG_CT_ISLINK', 
 				'usedBy_GEOG_CURRENT', 
 				'usedBy_GEOG_REG', 
-				'usedBy_PLACENAME_CT_ID', 
-				'usedBy_PLACENAME_CT_ISLINK', 
 				'usedBy_PLACENAME_CURRENT', 
 				'usedBy_PLACENAME_REG', 
-				'usedBy_REGION_CT_ID', 
-				'usedBy_REGION_CT_ISLINK', 
 				'usedBy_REGION_CURRENT', 
 				'usedBy_REGION_REG', 
-				'usedBy_SETTLEMENT_CT_ID', 
-				'usedBy_SETTLEMENT_CT_ISLINK', 
 				'usedBy_SETTLEMENT_CURRENT', 
 				'usedBy_SETTLEMENT_REG', 
-				'usedBy_PLACE_CT_ID', 
-				'usedBy_PLACE_CT_ISLINK', 
 				'usedBy_PLACE_REF', 
 				'usedBy_RS_REG', 
 				'usedBy_RS_TYPE', 
 				'usedBy_LG_TYPE', 
 				'usedBy_QUOTE_DIRECT', 
 				'usedBy_TOPIC_STANDARD', 
-				'usedBy_TITLE_CT_ID', 
-				'usedBy_TITLE_CT_ISLINK', 
 				'usedBy_TITLE_REG', 
 				'usedBy_TITLE_REND', 
 				'usedBy_TITLE_TITLETYPE', 
 				'usedBy_TITLE_REF', 
 				'usedBy_TGENRE_GENRENAME', 
 				'usedBy_TGENRE_PROPOSEDALTERNATIVENAME', 
-				'usedBy_ORGNAME_CT_ID', 
-				'usedBy_ORGNAME_CT_ISLINK', 
 				'usedBy_ORGNAME_ORGTYPE', 
 				'usedBy_ORGNAME_REG', 
 				'usedBy_ORGNAME_STANDARD', 
 				'usedBy_ORGNAME_REF', 
 				'usedBy_FOREIGN_LANG', 
 				'usedBy_FOREIGN_REG', 
-				'usedBy_NAME_CT_ID', 
-				'usedBy_NAME_CT_ISLINK', 
 				'usedBy_NAME_STANDARD', 
 				'usedBy_NAME_REF', 
 				'usedBy_KEYWORDCLASS_KEYWORDTYPE', 
@@ -278,7 +228,6 @@ var usedByBoxes= new Array('usedBy_CHRONSTRUCT',
 				'usedBy_XREF_URL', 
 				'usedBy_P_ID', 
 				'usedBy_SCHOLARNOTE_ID', 
-				'usedBy_SCHOLARNOTE_SN_ID', 
 				'usedBy_CHRONSTRUCT_CHRONCOLUMN', 
 				'usedBy_CHRONSTRUCT_CHRONCOLUMN1', 
 				'usedBy_CHRONSTRUCT_CHRONCOLUMN2', 
@@ -288,15 +237,9 @@ var usedByBoxes= new Array('usedBy_CHRONSTRUCT',
 				'usedBy_CHRONSTRUCT_RELEVANCE1', 
 				'usedBy_CHRONSTRUCT_RELEVANCE2', 
 				'usedBy_CHRONSTRUCT_RELEVANCE3', 
-				'usedBy_RESPONSIBILITY_WORKSTATUS', 
-				'usedBy_RESPONSIBILITY_WORKVALUE', 
-				'usedBy_FREESTANDING_EVENT_EID', 
-				'usedBy_FREESTANDING_EVENT_FILENAME', 
-				'usedBy_FREESTANDING_EVENT_ID', 
-				'usedBy_FREESTANDING_EVENT_SUBSET', 
-				'usedBy_FREESTANDING_EVENT_TITLE', 
 				'usedBy_RESP-attribute');
-var sourceBoxes= new Array('source_FREESTANDING_EVENT', 
+var sourceBoxes= new Array('source_EVENTS', 
+				'source_CHRONEVENT', 
 				'source_CHRONSTRUCT', 
 				'source_DATE', 
 				'source_DATERANGE', 
@@ -342,9 +285,6 @@ var sourceBoxes= new Array('source_FREESTANDING_EVENT',
 				'source_SHORTPROSE', 
 				'source_RESEARCHNOTES', 
 				'source_KEYWORDCLASSES', 
-				'source_RESPONSIBILITIES', 
-				'source_RESPONSIBILITY', 
-				'source_ITEM', 
 				'source_DATE_CALENDAR', 
 				'source_DATE_CERTAINTY', 
 				'source_DATE_VALUE', 
@@ -368,53 +308,35 @@ var sourceBoxes= new Array('source_FREESTANDING_EVENT',
 				'source_BIBCIT_QTDIN', 
 				'source_BIBCIT_REF', 
 				'source_SIC_CORR', 
-				'source_ADDRESS_CT_ID', 
-				'source_ADDRESS_CT_ISLINK', 
 				'source_ADDRESS_CURRENT', 
 				'source_ADDRESS_REG', 
 				'source_AREA_REG', 
-				'source_GEOG_CT_ID', 
-				'source_GEOG_CT_ISLINK', 
 				'source_GEOG_CURRENT', 
 				'source_GEOG_REG', 
-				'source_PLACENAME_CT_ID', 
-				'source_PLACENAME_CT_ISLINK', 
 				'source_PLACENAME_CURRENT', 
 				'source_PLACENAME_REG', 
-				'source_REGION_CT_ID', 
-				'source_REGION_CT_ISLINK', 
 				'source_REGION_CURRENT', 
 				'source_REGION_REG', 
-				'source_SETTLEMENT_CT_ID', 
-				'source_SETTLEMENT_CT_ISLINK', 
 				'source_SETTLEMENT_CURRENT', 
 				'source_SETTLEMENT_REG', 
-				'source_PLACE_CT_ID', 
-				'source_PLACE_CT_ISLINK', 
 				'source_PLACE_REF', 
 				'source_RS_REG', 
 				'source_RS_TYPE', 
 				'source_LG_TYPE', 
 				'source_QUOTE_DIRECT', 
 				'source_TOPIC_STANDARD', 
-				'source_TITLE_CT_ID', 
-				'source_TITLE_CT_ISLINK', 
 				'source_TITLE_REG', 
 				'source_TITLE_REND', 
 				'source_TITLE_TITLETYPE', 
 				'source_TITLE_REF', 
 				'source_TGENRE_GENRENAME', 
 				'source_TGENRE_PROPOSEDALTERNATIVENAME', 
-				'source_ORGNAME_CT_ID', 
-				'source_ORGNAME_CT_ISLINK', 
 				'source_ORGNAME_ORGTYPE', 
 				'source_ORGNAME_REG', 
 				'source_ORGNAME_STANDARD', 
 				'source_ORGNAME_REF', 
 				'source_FOREIGN_LANG', 
 				'source_FOREIGN_REG', 
-				'source_NAME_CT_ID', 
-				'source_NAME_CT_ISLINK', 
 				'source_NAME_STANDARD', 
 				'source_NAME_REF', 
 				'source_KEYWORDCLASS_KEYWORDTYPE', 
@@ -422,7 +344,6 @@ var sourceBoxes= new Array('source_FREESTANDING_EVENT',
 				'source_XREF_URL', 
 				'source_P_ID', 
 				'source_SCHOLARNOTE_ID', 
-				'source_SCHOLARNOTE_SN_ID', 
 				'source_CHRONSTRUCT_CHRONCOLUMN', 
 				'source_CHRONSTRUCT_CHRONCOLUMN1', 
 				'source_CHRONSTRUCT_CHRONCOLUMN2', 
@@ -432,15 +353,9 @@ var sourceBoxes= new Array('source_FREESTANDING_EVENT',
 				'source_CHRONSTRUCT_RELEVANCE1', 
 				'source_CHRONSTRUCT_RELEVANCE2', 
 				'source_CHRONSTRUCT_RELEVANCE3', 
-				'source_RESPONSIBILITY_WORKSTATUS', 
-				'source_RESPONSIBILITY_WORKVALUE', 
-				'source_FREESTANDING_EVENT_EID', 
-				'source_FREESTANDING_EVENT_FILENAME', 
-				'source_FREESTANDING_EVENT_ID', 
-				'source_FREESTANDING_EVENT_SUBSET', 
-				'source_FREESTANDING_EVENT_TITLE', 
 				'source_RESP-attribute');
-var instanceBoxes= new Array('instance_FREESTANDING_EVENT', 
+var instanceBoxes= new Array('instance_EVENTS', 
+				'instance_CHRONEVENT', 
 				'instance_CHRONSTRUCT', 
 				'instance_DATESTRUCT', 
 				'instance_CHRONPROSE', 
@@ -465,11 +380,9 @@ var instanceBoxes= new Array('instance_FREESTANDING_EVENT',
 				'instance_SCHOLARNOTES', 
 				'instance_SHORTPROSE', 
 				'instance_RESEARCHNOTES', 
-				'instance_KEYWORDCLASSES', 
-				'instance_RESPONSIBILITIES', 
-				'instance_RESPONSIBILITY', 
-				'instance_ITEM');
-var diagramBoxes= new Array('diagram_FREESTANDING_EVENT', 
+				'instance_KEYWORDCLASSES');
+var diagramBoxes= new Array('diagram_EVENTS', 
+				'diagram_CHRONEVENT', 
 				'diagram_CHRONSTRUCT', 
 				'diagram_DATE', 
 				'diagram_DATERANGE', 
@@ -515,11 +428,9 @@ var diagramBoxes= new Array('diagram_FREESTANDING_EVENT',
 				'diagram_SHORTPROSE', 
 				'diagram_RESEARCHNOTES', 
 				'diagram_KEYWORDCLASSES', 
-				'diagram_RESPONSIBILITIES', 
-				'diagram_RESPONSIBILITY', 
-				'diagram_ITEM', 
 				'diagram_RESP-attribute');
-var annotationBoxes= new Array('annotations_FREESTANDING_EVENT', 
+var annotationBoxes= new Array('annotations_EVENTS', 
+				'annotations_CHRONEVENT', 
 				'annotations_CHRONSTRUCT', 
 				'annotations_DATE', 
 				'annotations_DATERANGE', 
@@ -592,11 +503,8 @@ var annotationBoxes= new Array('annotations_FREESTANDING_EVENT',
 				'annotations_RESP-attribute_RESP', 
 				'annotations_XREF_URL', 
 				'annotations_CHRONSTRUCT_CHRONCOLUMN', 
-				'annotations_CHRONSTRUCT_RELEVANCE', 
-				'annotations_RESPONSIBILITY_WORKSTATUS', 
-				'annotations_RESPONSIBILITY_WORKVALUE');
-var attributesBoxes= new Array('attributes_FREESTANDING_EVENT', 
-				'attributes_CHRONSTRUCT', 
+				'annotations_CHRONSTRUCT_RELEVANCE');
+var attributesBoxes= new Array('attributes_CHRONSTRUCT', 
 				'attributes_DATE', 
 				'attributes_DATERANGE', 
 				'attributes_DATESTRUCT', 
@@ -626,9 +534,9 @@ var attributesBoxes= new Array('attributes_FREESTANDING_EVENT',
 				'attributes_SCHOLARNOTE', 
 				'attributes_P', 
 				'attributes_XREF', 
-				'attributes_RESPONSIBILITY', 
 				'attributes_RESP-attribute');
-var modelBoxes= new Array('model_FREESTANDING_EVENT', 
+var modelBoxes= new Array('model_EVENTS', 
+				'model_CHRONEVENT', 
 				'model_CHRONSTRUCT', 
 				'model_DATE', 
 				'model_DATERANGE', 
@@ -665,10 +573,7 @@ var modelBoxes= new Array('model_FREESTANDING_EVENT',
 				'model_SCHOLARNOTES', 
 				'model_SHORTPROSE', 
 				'model_RESEARCHNOTES', 
-				'model_KEYWORDCLASSES', 
-				'model_RESPONSIBILITIES', 
-				'model_RESPONSIBILITY', 
-				'model_ITEM');
+				'model_KEYWORDCLASSES');
 
       
         var button_prefix = 'button_';
@@ -942,6 +847,7 @@ var modelBoxes= new Array('model_FREESTANDING_EVENT',
                                                 <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
                                                 <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
                                                 <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
+                                                <div><b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b></div>
                                                 <div><b><a href="index.html#CHRONPROSE" target="_self" title="No namespace">CHRONPROSE</a></b></div>
                                                 <div><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b></div>
                                                 <div><b><a href="index.html#DATE" target="_self" title="No namespace">DATE</a></b></div>
@@ -949,10 +855,9 @@ var modelBoxes= new Array('model_FREESTANDING_EVENT',
                                                 <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
                                                 <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
+                                                <div><b><a href="index.html#EVENTS" target="_self" title="No namespace">EVENTS</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
-                                                <div><b><a href="index.html#FREESTANDING_EVENT" target="_self" title="No namespace">FREESTANDING_EVENT</a></b></div>
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
-                                                <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
                                                 <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
@@ -968,8 +873,6 @@ var modelBoxes= new Array('model_FREESTANDING_EVENT',
                                                 <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b></div>
-                                                <div><b><a href="index.html#RESPONSIBILITIES" target="_self" title="No namespace">RESPONSIBILITIES</a></b></div>
-                                                <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
                                                 <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
                                                 <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
                                                 <div><b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b></div>
@@ -1073,6 +976,7 @@ var modelBoxes= new Array('model_FREESTANDING_EVENT',
                                           <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
                                           <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
                                           <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
+                                          <div><b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b></div>
                                           <div><b><a href="index.html#CHRONPROSE" target="_self" title="No namespace">CHRONPROSE</a></b></div>
                                           <div><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b></div>
                                           <div><b><a href="index.html#DATE" target="_self" title="No namespace">DATE</a></b></div>
@@ -1080,10 +984,9 @@ var modelBoxes= new Array('model_FREESTANDING_EVENT',
                                           <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
                                           <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
                                           <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
+                                          <div><b><a href="index.html#EVENTS" target="_self" title="No namespace">EVENTS</a></b></div>
                                           <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
-                                          <div><b><a href="index.html#FREESTANDING_EVENT" target="_self" title="No namespace">FREESTANDING_EVENT</a></b></div>
                                           <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
-                                          <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                           <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                           <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
                                           <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
@@ -1099,8 +1002,6 @@ var modelBoxes= new Array('model_FREESTANDING_EVENT',
                                           <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
                                           <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
                                           <div><b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b></div>
-                                          <div><b><a href="index.html#RESPONSIBILITIES" target="_self" title="No namespace">RESPONSIBILITIES</a></b></div>
-                                          <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
                                           <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
                                           <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
                                           <div><b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b></div>
@@ -1205,6 +1106,7 @@ var modelBoxes= new Array('model_FREESTANDING_EVENT',
                                                 <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
                                                 <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
                                                 <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
+                                                <div><b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b></div>
                                                 <div><b><a href="index.html#CHRONPROSE" target="_self" title="No namespace">CHRONPROSE</a></b></div>
                                                 <div><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b></div>
                                                 <div><b><a href="index.html#DATE" target="_self" title="No namespace">DATE</a></b></div>
@@ -1212,10 +1114,9 @@ var modelBoxes= new Array('model_FREESTANDING_EVENT',
                                                 <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
                                                 <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
+                                                <div><b><a href="index.html#EVENTS" target="_self" title="No namespace">EVENTS</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
-                                                <div><b><a href="index.html#FREESTANDING_EVENT" target="_self" title="No namespace">FREESTANDING_EVENT</a></b></div>
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
-                                                <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
                                                 <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
@@ -1231,8 +1132,6 @@ var modelBoxes= new Array('model_FREESTANDING_EVENT',
                                                 <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b></div>
-                                                <div><b><a href="index.html#RESPONSIBILITIES" target="_self" title="No namespace">RESPONSIBILITIES</a></b></div>
-                                                <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
                                                 <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
                                                 <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
                                                 <div><b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b></div>
