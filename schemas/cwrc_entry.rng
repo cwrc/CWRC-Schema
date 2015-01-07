@@ -33,8 +33,13 @@
 
 <!-- 
 *** Revisions ***
+* MRB: December 2015: Made the following changes:
+  - Added to the enumerated list of values for the attribute GENRENAME in the element TGENRE the following values: COLLECTIVECREATION, DANCE, MUSICAL, PHYSICALTHEATRE,
+    PODPLAY, and THEATREFORYOUNGAUDIENCES.
+  - Added to the enumerated list of values for the ROLE element the following values: Agent, Assistant director, Clown, Filmmaker, Mask designer, Performance artist, Playwright,
+    Projection designer, Special effects designer, Stage crew, and Understudy.
 * MRB: November 2014: Made the following changes:
-  - Added the values of Acting Coach, Crew, and Dramaturge to the enumerated list of values for the ROLE element.
+  - Added to the enumerated list of values for the ROLE element the following values: Acting Coach, Crew, and Dramaturge.
 * MRB: October 2014: Made the following changes:
   - Made element PLACE a child element of the element ORGNAME.
   - Made element DOCAUTHOR repeatable in the parent element CWRCHEADER.
@@ -4291,6 +4296,7 @@
                         <value>CHILDRENSLITERATURE</value>
                         <value>CLERIHEW</value>
                         <value>CLOSETDRAMA</value>
+                        <value>COLLECTIVECREATION</value>
                         <value>COLOURINGBOOK</value>
                         <value>COMEDY</value>
                         <value>COMEDYOFHUMOURS</value>
@@ -4307,6 +4313,7 @@
                         <value>COOKBOOK</value>
                         <value>COURTSHIPFICTION</value>
                         <value>CRIMINOLOGY</value>
+                        <value>DANCE</value>
                         <value>DEDICATION</value>
                         <value>DETECTIVE</value>
                         <value>DEVOTIONAL</value>
@@ -4402,6 +4409,7 @@
                         <value>MONOLOGUE</value>
                         <value>MORALITYMYSTERYPLAY</value>
                         <value>MULTIMEDIA</value>
+                        <value>MUSICAL</value>
                         <value>MUSICOLOGY</value>
                         <value>MYSTERY</value>
                         <value>MYTH</value>
@@ -4433,8 +4441,10 @@
                         <value>PETITION</value>
                         <value>PHILOSOPHICAL</value>
                         <value>PHILOSOPHY</value>
+                        <value>PHYSICALTHEATRE</value>
                         <value>PICARESQUE</value>
                         <value>PINDARIC</value>
+                        <value>PODPLAY</value>
                         <value>POETRY</value>
                         <value>POLEMIC</value>
                         <value>POLITICALWRITING</value>
@@ -4482,6 +4492,7 @@
                         <value>STAGEREVIEW</value>
                         <value>TESTIMONY</value>
                         <value>TEXTBOOK</value>
+                        <value>THEATREFORYOUNGAUDIENCES</value>
                         <value>THEATREOFCRUELTY</value>
                         <value>THEATREOFTHEABSURD</value>
                         <value>THEOLOGY</value>
@@ -8776,6 +8787,7 @@
                     <value>Adapter [adp]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who 1) reworks a musical
                     composition, usually for a different medium, or 2) rewrites novels or stories for motion pictures or other audiovisual medium.</a:documentation>
+                    <value>Agent</value>
                     <value>Analyst [anl]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that reviews, examines and
                     interprets data or information in a specific area.</a:documentation>
@@ -8813,6 +8825,7 @@
                     <value>Assignee [asg]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization to whom a license for printing
                     or publishing has been transferred.</a:documentation>
+                    <value>Assistant director</value>
                     <value>Associated name [asn]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization associated with or found in an
                     item or collection, which cannot be determined to be that of a Former owner [fmo] or other designated relator indicative of
@@ -8892,6 +8905,7 @@
                     <value>Client [cli]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization for whom another person or
                     organization is acting.</a:documentation>
+                    <value>Clown</value>
                     <value>Collaborator [clb]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that takes a limited part in the
                     elaboration of a work of another person or organization that brings complements (e.g., appendices, notes) to the work.</a:documentation>
@@ -9097,6 +9111,7 @@
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is an editor of a motion
                     picture film. This term is used regardless of the medium upon which the motion picture is produced or manufactured (e.g., acetate film, video
                     tape).</a:documentation>
+                    <value>Filmmaker</value>
                     <value>First party [fpy]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who is identified as the only
                     party or the party of the first part. In the case of transfer of right, this is the assignor, transferor, licensor, grantor, etc. Multiple parties can be
@@ -9210,6 +9225,7 @@
                     <value>Markup editor [mrk]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization performing the coding of
                     SGML, HTML, or XML markup of metadata, text, etc.</a:documentation>
+                    <value>Mask designer</value>
                     <value>Metadata contact [mdc]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization primarily responsible for
                     compiling and maintaining the original description of a metadata set (e.g., geospatial metadata set).</a:documentation>
@@ -9265,6 +9281,7 @@
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for commissioning
                     a work. Usually a patron uses his or her means or influence to support the work of artists, writers, etc. This includes those who commission and
                     pay for individual works.</a:documentation>
+                    <value>Performance artist</value>
                     <value>Performer [prf]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who exhibits musical or acting
                     skills in a musical or dramatic presentation or entertainment, if specific codes for those functions ([act], [dnc], [itr], [voc], etc.) are not used. If
@@ -9287,6 +9304,7 @@
                     <value>Platemaker [plt]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization responsible for the production
                     of plates, usually for the production of printed images and/or text.</a:documentation>
+                    <value>Playwright</value>
                     <value>Printer [prt]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization who prints texts, whether from
                     type or plates.</a:documentation>
@@ -9319,6 +9337,7 @@
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization with primary responsibility for
                     all essential aspects of a project, or that manages a very large project that demands senior level responsibility, or that has overall responsibility for
                     managing projects, or provides overall direction to a project manager.</a:documentation>
+                    <value>Projection designer</value>
                     <value>Proofreader [pfr]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who corrects printed matter. For manuscripts,
                     use Corrector [crr].</a:documentation>
@@ -9421,9 +9440,11 @@
                     <value>Speaker [spk]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who participates in a program (often
                     broadcast) and makes a formalized contribution or presentation generally prepared in advance.</a:documentation>
+                    <value>Special effects designer</value>
                     <value>Sponsor [spn]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person or organization that issued a contract or under
                     the auspices of which a work has been written, printed, published, etc.</a:documentation>
+                    <value>Stage crew</value>
                     <value>Stage manager [stm]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for a person who is in charge of everything that occurs on a
                     performance stage, and who acts as chief of all crews and assistant to a director during rehearsals.</a:documentation>
@@ -9470,6 +9491,7 @@
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                     <value>UFPlates, Printer of</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                    <value>Understudy</value>
                     <value>University place [uvp]</value>
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for the name of a place where a university that is associated
                     with a resource is located, for example, a university where an academic dissertation or thesis was presented.</a:documentation>
@@ -9756,6 +9778,8 @@
                 <a:documentation>Victoria Duncan</a:documentation>
                 <value type="token">R_J</value>
                 <a:documentation>Robert Jackson</a:documentation>
+                <value type="token">NCB</value>
+                <a:documentation>Neale Barnholden</a:documentation>
                 <!-- Insert new @RESP attribute values here -->
             </choice>
         </attribute>

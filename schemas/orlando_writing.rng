@@ -41,8 +41,8 @@
   - Made the element RFICTIONALIZATION an optional repeatable child element of the element QUOTE.
   - Made the element EMPH an optional repeatable child element of the element RSHEINFLUENCED.
 * MRB: September 2014: Made the following changes:
-  - Removed references to the element BIBCITS from the following parent elements: DIV2, and SHORTPROSE; one exception to the guiding principle that the parent element of BIBCITS
-    must allow text is CHRONSTRUCT.
+  - Removed references to the element BIBCITS from the following parent elements: DIV2, and SHORTPROSE; one exception to the guiding principle that the parent
+    element of BIBCITS must allow text is CHRONSTRUCT.
   - Removed references to the element SCHOLARNOTE from the following parent elements: BIBCITS, PRODUCTION, RECEPTION, SHORTPROSE, and WORKSCITED; one exception to
     the guiding principle that the parent element of SCHOLARNOTE must allow text is CHRONSTRUCT.
   - Redefined the attribute TITLETYPE in the element TITLE from an optional attribute to a required attribute.
@@ -5993,6 +5993,8 @@
                 <a:documentation>Victoria Duncan</a:documentation>
                 <value type="token">R_J</value>
                 <a:documentation>Robert Jackson</a:documentation>
+                <value type="token">NCB</value>
+                <a:documentation>Neale Barnholden</a:documentation>
                 <!-- Insert new @RESP attribute values here -->
             </choice>
         </attribute>
