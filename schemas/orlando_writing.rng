@@ -76,6 +76,11 @@
         <element name="WRITING">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Writing is the large, all-encompassing element in all writing
         documents.</a:documentation>
+            <optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
             <attribute name="PERSON">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Person is an attribute applied to the Writing document as a
           whole, and specifies information about the type of person who is the subject of the document; for example, if they are known primarily as a writer,
