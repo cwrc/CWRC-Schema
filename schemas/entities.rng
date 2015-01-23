@@ -861,6 +861,17 @@
 
     <define name="variantForms-element">
         <element name="variantForms">
+            <a:documentation>An element used to indicate which recorded entity name is the variant
+            one for display purposes in a given context.</a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/person|organization|place/identity/variantForms">
+                        <label xml:lang="en">Varinat name</label>
+                        <help-text xml:lang="en">Use this section to flag a name as a variant form
+                            to identify a person, organization, or place.</help-text>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
             <zeroOrMore>
                 <ref name="variant-element"/>
             </zeroOrMore>
