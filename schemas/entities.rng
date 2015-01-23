@@ -861,17 +861,6 @@
 
     <define name="variantForms-element">
         <element name="variantForms">
-            <a:documentation>An element used to indicate which recorded entity name is the variant
-            one for display purposes in a given context.</a:documentation>
-            <!--<xs:annotation>
-                <xs:appinfo>
-                    <interface-field path="entity/person|organization|place/identity/variantForms">
-                        <label xml:lang="en">Varinat name</label>
-                        <help-text xml:lang="en">Use this section to flag a name as a variant form
-                            to identify a person, organization, or place.</help-text>
-                    </interface-field>
-                </xs:appinfo>
-            </xs:annotation>-->
             <zeroOrMore>
                 <ref name="variant-element"/>
             </zeroOrMore>
@@ -886,7 +875,7 @@
                         <help-text xml:lang="en">If known, indicate one or more alternative name
                             forms used to refer to this entity.</help-text>
                         <label xml:lang="en">Variant name(s)</label>
-                        <!-- <input label="Add">dialogue</input> -->
+                        <input label="Add">dialogue</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
@@ -1098,7 +1087,7 @@
                             death, flourish, establishment, or dissolution), of the present entity. 
                         </help-text>
                         <label xml:lang="en">Date(s) of existence</label>
-                        <!-- <input label="Add">dialogue</input> -->
+                        <input label="Add">dialogue</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
