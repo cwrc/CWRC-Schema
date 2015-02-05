@@ -1,0 +1,46 @@
+
+<?xml-model href="http://cwrc.ca/schemas/cwrc_tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="css/digital_diversity.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body><note type="researchNote">Please fill in the type attribute values for the event element.</note>
+         <listEvent>
+            <event type="">
+               <![CDATA[]]><label>Label/title of the event</label>
+               <desc><date when="" cert="">Date or date-range of the event<note type="researchNote">Please fill in the "when" attribute values for single dates and the "from" and "to" attributes for date ranges. Attibute values consisting of dates must be formatted as: YYYY, YYYY-MM, or YYYY-MM-DD. (e.g. 2010, 2010-10, 2010-10-31)</note></date>, <placeName ref=""><note type="researchNote">Please fill in the location of the event. Link the location with a standardized geographical entity by looking up the GeoNames entry of your location and pasting its URL into the ref attribute of the placeName element. </note></placeName></desc>
+               <desc>Description of the event</desc>
+               <note></note>
+               <bibl></bibl>
+            </event>
+            <event>
+               <head>Label/title of the event</head>
+               <p></p>
+               <bibl></bibl>
+            </event>
+            
+           <!--LGLC event example:
+              
+              <event xml:id="n64.8">
+               <p> <date when="1964-01-13">January 13 </date> <placeName corresp="places.xml#TOR">Toronto</placeName> <persName sameAs="people.xml#NCOH" n="22">Nathan Cohen</persName> commented in his <title level="a">"Monday Miscellany"</title> column in the <title level="j" corresp="periodicals.xml#p112">Toronto Daily Star</title> that local police feared that recently closed after-hours clubs had reopened as "hangouts for male and female homosexuals." On <date when="1964-01-21">January 21</date>, <persName sameAs="people.xml#JEGA" n="23">James Egan</persName>'s letter of rebuttal, <title level="a">"Police Concern for Homosexual Clubs 'Illogical,' "</title> was published in the Star. Egan was Canada's foremost gay activist during the period 1949-64. ( see also <seg corresp="#n64.32">August 5,14,1964.</seg>) </p>
+               <bibl> <persName sameAs="people.xml#NCOH" n="22">Nathan Cohen</persName>, <title level="a">"Monday Miscellany"</title> (column), <title level="j" corresp="periodicals.xml#p112">Toronto Daily Star</title>, night ed., 13 January 1964, <seg corresp="#n64.8">p. 18</seg> </bibl>
+               <bibl> <persName sameAs="people.xml#JEGA" n="23">James Egan</persName>, <title level="a">"Police Concern for Homosexual Clubs 'Illogical' "</title> (letter), <title level="j" corresp="periodicals.xml#p112">Toronto Daily Star</title>, night ed., 21 January 1964, <seg corresp="#n64.8">p. 6</seg> (reprinted in <persName sameAs="people.xml#RCHA" n="26">Robert Champagne</persName>, <title level="m"> <persName sameAs="people.xml#JEGA" n="23">Jim Egan</persName>: Canada's Pioneer Gay Activist</title>, Canadian Lesbian and Gay History Network Publication no. i [Toronto: CLGHN, 1987], <seg corresp="#n64.8">p. 101</seg>).</bibl>
+            </event>-->
+            
+            
+         </listEvent>
+      </body>
+   </text>
+</TEI>

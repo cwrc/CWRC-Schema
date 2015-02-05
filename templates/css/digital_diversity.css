@@ -1,0 +1,42 @@
+/* icons employed: W3 Creative Lab - Creative Commons (Attribution 3.0 Unported)*/
+
+text{
+    display:block;
+    margin:3%;
+    font-family:sans-serif;
+    line-height:1.5;
+    background-color:#EBF5FF
+}
+event{
+    display:block
+}
+
+label,
+head{
+    display:block;
+    font-weight:bold;
+    font-size:larger
+}
+
+desc+desc,
+p{display:block; margin-top:2%;margin-bottom:2%}
+
+date,
+placeName{font-style:italic}
+
+
+
+note[type = "researchNote"]{
+    display:inline; font-family:courier, fixed, monospace; font-style:normal; font-size:smaller
+}
+
+note[type = "scholarNote"],
+listBibl{
+    display:block; margin-left:5%; font-size:smaller
+}
+bibl note[type="researchNote"]{font-size:small}
+
+listBibl:before{content:"Bibliography:"; font-weight:bold}
+
+/*note[type="researchNote"]:before{content:url(http://cwrc.ca/templates/images/TEI-info-RN.jpg)}
+note[type="scholarNote"]:before{content:url(http://cwrc.ca/templates/images/TEI-note-SN.jpg)}*/
