@@ -1,5 +1,18 @@
-/* icons employed: W3 Creative Lab - Creative Commons (Attribution 3.0 Unported)*/
-
+/* icons employed: 
+W3 Creative Lab - Creative Commons (Attribution 3.0 Unported)
+Popcic - free for commercial use
+*/
+teiHeader,
+title,
+resp,
+publisher,
+availability,
+sourceDesc{
+    display:block;
+}
+publisher:before{content:"Publisher: "}
+teiHeader:before{content:"TEI Header: "; }
+teiHeader{margin:3%;}
 text{
     display:block;
     margin:3%;
@@ -14,29 +27,61 @@ event{
 label,
 head{
     display:block;
+    margin-top:2%;
     font-weight:bold;
     font-size:larger
 }
 
-desc+desc,
-p{display:block; margin-top:2%;margin-bottom:2%}
+desc + desc,
+p{
+    display:block;
+    margin-top:1%;
+    margin-bottom:1%
+}
 
 date,
-placeName{font-style:italic}
+placeName{
+    font-style:italic
+}
 
 
 
 note[type = "researchNote"]{
-    display:inline; font-family:courier, fixed, monospace; font-style:normal; font-size:smaller
+    display:inline;
+    font-family:courier, fixed, monospace;
+    font-style:normal;
+    font-size:smaller
+
 }
 
 note[type = "scholarNote"],
 listBibl{
-    display:block; margin-left:5%; font-size:smaller
+    display:block;
+    font-size:smaller;
+    margin-bottom:1%
+
 }
-bibl note[type="researchNote"]{font-size:small}
 
-listBibl:before{content:"Bibliography:"; font-weight:bold}
+note[type = "scholarNote"]{
+    margin-left:5%
+}
 
-/*note[type="researchNote"]:before{content:url(http://cwrc.ca/templates/images/TEI-info-RN.jpg)}
-note[type="scholarNote"]:before{content:url(http://cwrc.ca/templates/images/TEI-note-SN.jpg)}*/
+bibl note[type = "researchNote"]{
+    font-size:small
+}
+
+bibl{
+    display:list-item;
+    list-style-image:url(http://cwrc.ca/templates/images/TEI-bibl.jpg);
+    list-style-position:outside
+}
+
+note[type = "researchNote"]:before{
+    content:url(http://cwrc.ca/templates/images/TEI-info-RN.jpg);
+    padding-left:1em;
+    padding-right:0.5em
+}
+note[type = "scholarNote"]:before{
+    content:url(http://cwrc.ca/templates/images/TEI-note-SN.jpg);
+    padding-right:0.5em
+}
