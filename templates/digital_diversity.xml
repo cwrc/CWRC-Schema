@@ -1,44 +1,61 @@
-
 <?xml-model href="http://cwrc.ca/schemas/cwrc_tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/css" href="css/digital_diversity.css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Label/title of event</title>
-            <respStmt>
-               <resp>Entry created by:</resp>
-               <persName>Author name</persName>
-            </respStmt>
-            <respStmt>
-               <resp>Enttry created for:</resp>
-               <name>Digital Diversity 2015</name>
-            </respStmt>
-         </titleStmt>
-         <publicationStmt>
-            <publisher><orgName>Canadian Writing Research Collaboratory</orgName></publisher>
-            <availability><p>Use of this public-domain resource is governed by the <ref target="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</ref>.</p></availability>
-         </publicationStmt>
-         <sourceDesc>
-            <p>Information about the source</p>
-         </sourceDesc>
-      </fileDesc>
-   </teiHeader>
-   <text>
-      <body><note type="researchNote">Please fill in the type attribute values for the event element.</note>
-         <listEvent>
-            <event type="">
-               <label>Label/title of the event</label>
-               <desc><date when="" cert="">Date or date-range of the event<note type="researchNote">Please fill in the "when" attribute values for single dates or the "from" and "to" attributes for date ranges. Attibute values consisting of dates must be formatted as: YYYY, YYYY-MM, or YYYY-MM-DD. (e.g. 2010, 2010-10, 2010-10-31)</note></date>, <placeName ref="">location of the event<note type="researchNote">Please link the location with a standardized geographical entity by looking up the GeoNames entry of your location and pasting its URL into the ref attribute of the placeName element. </note></placeName></desc>
-               <desc>Description of the event</desc>
-               <note type="scholarNote">Annotation or comment (optional)</note>
-               <listBibl>
-                  <bibl>Source of event description and/or note <note type="researchNote">optional-delete list bibl if none; multiple sources-separate bibl tags</note></bibl>
-               </listBibl>
-            </event>
-            
-            
-         </listEvent>
-      </body>
-   </text>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Label/title of event</title>
+                <respStmt>
+                    <resp>Entry created by:</resp>
+                    <persName>Author name</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Entry created for:</resp>
+                    <name>Digital Diversity 2015</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher><orgName>Canadian Writing Research Collaboratory</orgName></publisher>
+                <availability>
+                    <p>Use of this public-domain resource is governed by the <ref
+                            target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
+                            Attribution-NonCommercial 4.0 International License</ref>.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source from which the event information was derived</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <note type="researchNote">Please fill in the type attribute value for the event element:
+                bibliographical, biographical, cultural, literary, political, or social.</note>
+            <listEvent>
+                <event type="biographical">
+                    <label>Label/title of the event</label>
+                    <desc><date when="2010">Date or date-range of the event <note
+                                type="researchNote">Please fill in the "when" attribute values for
+                                single dates or the "from" and "to" attributes for date ranges.
+                                Attribute values consisting of dates must be formatted as: YYYY,
+                                YYYY-MM, or YYYY-MM-DD. (e.g., 2010, 2010-10, 2010-10-31)
+                            </note></date>, <placeName
+                            ref="http://www.geonames.org/5946768/edmonton.html">location of the
+                            event <note type="researchNote">Please link the location with a
+                                standardized geographical entity by looking up the GeoNames entry of
+                                your location and pasting its URL into the ref attribute of the
+                                placeName element. (e.g., the GeoNames link to Edmonton is the
+                                following:
+                            http://www.geonames.org/5946768/edmonton.html)</note></placeName></desc>
+                    <desc>Description of the event</desc>
+                    <note type="scholarNote">Annotation or comment (optional)</note>
+                    <listBibl>
+                        <bibl>Source of event description and/or note <note type="researchNote"
+                                >optional-delete list bibl if none; multiple sources-separate bibl
+                                tags</note></bibl>
+                    </listBibl>
+                </event>
+            </listEvent>
+        </body>
+    </text>
 </TEI>
