@@ -11,11 +11,13 @@ sourceDesc{
     display:block;
 }
 publisher:before{content:"Publisher: "}
-teiHeader:before{content:"TEI Header: "; }
-teiHeader{margin:3%;}
+teiHeader{margin-top:1.5%; padding-top:1.5%; margin-left:3%; margin-right:3%; padding-bottom:1.5%; background-color:#FFFFE0}
 text{
     display:block;
-    margin:3%;
+    margin-left:3%;
+    margin-right:3%;
+    padding-top:1.5%;
+    padding-bottom:3%;
     font-family:sans-serif;
     line-height:1.5;
     background-color:#EBF5FF
@@ -73,7 +75,7 @@ bibl note[type = "researchNote"]{
 bibl{
     display:list-item;
     list-style-image:url(http://cwrc.ca/templates/images/TEI-bibl.jpg);
-    list-style-position:outside
+    list-style-position:inside
 }
 
 note[type = "researchNote"]:before{
