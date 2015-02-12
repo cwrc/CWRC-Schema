@@ -16,10 +16,63 @@
     * are the following: Russian Doll, Salami Slice, Venetian Blind, and Garden of Eden.  The CWRC entities schema uses the Garden of Eden design with respect
     * to elements, wherein all elements are defined globally (the concept of "type", i.e., simple type and complex type, is only germane to XSD schemas), and all
     * attributes are also defined globally (in the Garden of Eden pattern, type is defined globally, and type can be used to define attribute pattern directives).
+    *
+    * Interface annotation code: The interface annotation code has the following elements and attributes:
+    *  - <xs:annotation>: highest element; introduces start of an interface annotation code block
+    *  - <xs:appinfo>: second highest element; wrapper for interface annotation code
+    *  - <interface-field>: contains a @path attribute whose value is a Unix-style directory path of the
+    *        XML path through the XML tree to the element of interest; branches in the tree can be indicated
+    *        via a Boolean "or" using the pipe-divider symbol "|"; contains three child elements: <label>,
+    *        <help-text>, and <input>
+    *  - <label>: contains an @xml:lang attribute with a value of "en", and the text node value is the
+    *        text string that you want the label to display
+    *  - <help-text>: contains an @xml:lang attribute with a value of "en", and the text node value is the
+    *        help text string you want to see displayed when the user clicks on the icon with a question mark
+    *  - <input>: declares the type of form element; values are the following:
+    *        - combobox: defines a drop-down menu list (same as dropDown and slider)
+    *        - dialogue: this text node value also has a @label attribute with a value of "Add" in the <input>
+    *             element; only occurs twice, with "Variant names(s)" (the <variant> element), and "Dates of
+    *             existence" (the <dateSingle> element); doesn't appear to have any working function or purpose
+    *        - datePicker: used to call a JavaScript library that displays a calendar to select a date value
+    *        - dropDown: defines a drop-down menu list (same as combobox and slider)
+    *        - header: indicates that the <label> element text node value should have a CSS style applied to it
+    *             to make the font larger, as in a header
+    *        - slider: defines a drop-down menu list (same as combobox and dropDown)
+    *        - textArea: defines a multiline text area box
+    *        - textField: defines a single line text field
+    *  - <values>: can contain a @type attribute with possible values of person, organization, or place; provides
+    *        an enumerated list of values for the <input> element types of combobox, dropDown, and slider;
+    *        occurs as a child element of <xs:appinfo>; contains a child element of <choice>
+    *  - <choice>: a container element that contains the enumerated list of values; contains three child elements:
+    *        <value>, <data>, and <a:documentation>
+    *  - <value>: contains an @a:en attribute, whose value is what is displayed to the user in the drop-down menu
+    *        list; the text node value is the value associated with the element in the @path of the
+    *        <interface-field> element; can also have a @default attribute with a value of "yes", to indicate the
+    *        default value for the element listed in the @path attribute of the <interface-field> element
+    *  - <data>: contains an @a:en attribute with a value of "Specify" (what is displayed to the user in the
+    *        drop-down menu list), and a @type attribute with a values of "string"; used to record input from
+    *        the user for lists that are open
+    *  - <a:documentation>: it appears this was intended to provide help text associated with each value in the
+    *        enumerated list that is displayed to the user, but this feature was not implemented in the code
+    *  - <interface>: special container element only used by the interface order code block
+    *  - <interface-order>: special flag that contains the code that defines the order of the three top-level
+    *        elements of <identity>, <description>, and <recordInfo>
 -->
 
 <!--
 *** Revisions ***
+     MRB: Wed 11-Feb-2015
+     * Deleted the interface annotation code for the <originInfo> element, and added new interface annotation
+     code to the parent of <originInfo>, the element <recordInfo>; <recordInfo> is defined in three different
+     places in the schema (i.e., in recordInfo container elements for each of the person, organization, and
+     place entity code blocks).  Making this change makes the labelling hierarchy for the top-level <recordInfo>
+     element parallel the labelling structure of the other two top-level elements of <identity> and <description>.
+     * Changed the order of the three top-level elements from <recordInfo>, <identity>, and <description>, to
+     <identity>, <description>, and <recordInfo> (i.e., moved <recordInfo> from being the first top-level element
+     to being the last top-level element).  Also reordered the element and annotation definitions in the schema so
+     that they reflect this new sequence order.
+     * Added the <interleave> directive around the child elements of the <originInfo> element.
+     * Changed the access condition statement in the <accessCondition> element from CC BY-NC 3.0 to CC BY-NC 4.0.
      MRB: Tue 19-Aug-2014: Redefined the regular expression patterns in the <standardDate> element; the regular
      expression patterns allow for Orlando dates in the Orlando legacy date format YYYY-MM-DD, YYYY-MM-, and
      YYYY-hyphen (possibly remove in the future if change dates in Orlando person entities to ISO 8601 formatted dates).
@@ -44,33 +97,33 @@
      * Reordered the element and annotation definitions in the schema so that they are in the sequence we would like
      them to appear in the entity creation/editing form dialogs.
      MRB: Tue 27-May-2014: Added schema code and interface annotation code for a <factuality> element in /entity/*/
-     description/factuality, with values of real, fictional, or both (i.e., a mixture of both real and fictional)
+     description/factuality, with values of real, fictional, or both (i.e., a mixture of both real and fictional).
      MRB: Tue 22-Apr-2014: Added interface annotation code to render header labels for the four top-level element
-     sections: recordInfo, identity, description, and relations
+     sections: recordInfo, identity, description, and relations.
      MRB: Fri 14-Mar-2014: Added two new values to the <gender> element: "transgendered male-to-female", and
-     "transgendered female-to-male"
-     MRB: Mon 03-Mar-2014: Revised the <relations> element section's interface annotation code
-     MRB: Sat 01-Mar-2014: Eliminated the <access> element
+     "transgendered female-to-male".
+     MRB: Mon 03-Mar-2014: Revised the <relations> element section's interface annotation code.
+     MRB: Sat 01-Mar-2014: Eliminated the <access> element.
      MRB: Mon 18-Feb-2014
      * Deleted child elements of the <note> element, the <access>, <p>, and <projectId> elements, and also made
      these changes in the interface annotation code; deleted the <note> element attributes of @xml:id and @xml:lang
      from the interface annotation code; and allowed text content to be written to the <note> element text node.
      * Removed three "hidden" interface annotation code elements: the <accessCondition>, <recordChangeDate>, and
      <recordCreationDate> elements.
-     MRB: Thu 16-Jan-2014: Added an originInfo/recordOrigin elem/ent
-     MRB: Tue 07-Jan-2014: Revised and added to place entity section
-     MRB: Mon 06-Jan-2014: Revised the <recordCreationDate> and <recordChangeDate> elements
-     MRB: Fri 27-Dec-2013: Revised and added to place entity section
-     MRB: Wed 18-Dec-2013: Added @url attribute to provide a link to various server-side lists of values
-     MRB: Mon 16-Dec-2013: Added additional interface annotation code
-     MRB: Mon 09-Dec-2013: Added interface annotation code for various elements and attributes
+     MRB: Thu 16-Jan-2014: Added an originInfo/recordOrigin element.
+     MRB: Tue 07-Jan-2014: Revised and added to place entity section.
+     MRB: Mon 06-Jan-2014: Revised the <recordCreationDate> and <recordChangeDate> elements.
+     MRB: Fri 27-Dec-2013: Revised and added to place entity section.
+     MRB: Wed 18-Dec-2013: Added @url attribute to provide a link to various server-side lists of values.
+     MRB: Mon 16-Dec-2013: Added additional interface annotation code.
+     MRB: Mon 09-Dec-2013: Added interface annotation code for various elements and attributes.
      MRB: Thu 05-Dec-2013
      * Revised <personRef>, <organizationRef>, and <placeRef> elements so that relation references now can refer to a
      repeatable child element of <name> as well as a repeatable child element of <uri>.
      * Added an <accessCondition> element, along with its required attribute @type, and its optional
      child element <a>, which has a required attribute of @href and an optional attribute of @rel.
      MRB: Tue 19-Nov-2013: The <access> element in the XPath /cwrc/entity/*/recordInfo/access has been eliminated and will
-     be replaced with the <accessCondition> element in the XPath /cwrc/entity/*/recordInfo/accessCondition
+     be replaced with the <accessCondition> element in the XPath /cwrc/entity/*/recordInfo/accessCondition.
      MRB: Mon 28-Oct-2013
      Revised the following:
      * Changed <standardDate> from a required element to an optional element.
@@ -88,19 +141,19 @@
         <xs:appinfo>
             <interface>
                 <interface-order type="person" path="entity/person">
-                    <ref name="personRecordInfo-element"></ref>
                     <ref name="identity-element"></ref>
                     <ref name="personDescription-element"></ref>
+                    <ref name="personRecordInfo-element"></ref>
                 </interface-order>
                 <interface-order type="organization" path="entity/organization">
-                    <ref name="orgRecordInfo-element"></ref>
                     <ref name="identity-element"></ref>
                     <ref name="orgDescription-element"></ref>
+                    <ref name="orgRecordInfo-element"></ref>
                 </interface-order>
                 <interface-order type="place" path="entity/place">
-                    <ref name="placeRecordInfo-element"></ref>
                     <ref name="identity-element"></ref>
                     <ref name="placeDescription-element"></ref>
+                    <ref name="placeRecordInfo-element"></ref>
                 </interface-order>
             </interface>
         </xs:appinfo>
@@ -137,12 +190,12 @@
         <element name="person">
             <a:documentation>CWRC person entity record</a:documentation>
             <interleave>
-                <optional>
-                    <ref name="personRecordInfo-element"></ref>
-                </optional>
                 <ref name="identity-element"></ref>
                 <optional>
                     <ref name="personDescription-element"></ref>
+                </optional>
+                <optional>
+                    <ref name="personRecordInfo-element"></ref>
                 </optional>
             </interleave>
         </element>
@@ -152,12 +205,12 @@
         <element name="organization">
             <a:documentation>CWRC organization entity record</a:documentation>
             <interleave>
-                <optional>
-                    <ref name="orgRecordInfo-element"></ref>
-                </optional>
                 <ref name="identity-element"></ref>
                 <optional>
                     <ref name="orgDescription-element"></ref>
+                </optional>
+                <optional>
+                    <ref name="orgRecordInfo-element"></ref>
                 </optional>
             </interleave>
         </element>
@@ -167,72 +220,12 @@
         <element name="place">
             <a:documentation>CWRC place entity record</a:documentation>
             <interleave>
-                <optional>
-                    <ref name="placeRecordInfo-element"></ref>
-                </optional>
                 <ref name="identity-element"></ref>
                 <optional>
                     <ref name="placeDescription-element"></ref>
                 </optional>
-            </interleave>
-        </element>
-    </define>
-
-    <define name="personRecordInfo-element">
-        <element name="recordInfo">
-            <a:documentation>Captures record-level information. Components of this element are kept to a minimum given that administrative and object-level metadata is captured in other FOXML datastreams.</a:documentation>
-            <interleave>
                 <optional>
-                    <ref name="personTypes-element"></ref>
-                </optional>
-                <optional>
-                    <ref name="originInfo-element"></ref>
-                </optional>
-                <optional>
-                    <ref name="entityId-element"></ref>
-                </optional>
-                <optional>
-                    <ref name="accessCondition-element"></ref>
-                </optional>
-            </interleave>
-        </element>
-    </define>
-
-    <define name="orgRecordInfo-element">
-        <element name="recordInfo">
-            <a:documentation>Captures record-level information. Components of this element are kept to a minimum given that administrative and object-level metadata is captured in other FOXML datastreams.</a:documentation>
-            <interleave>
-                <optional>
-                    <ref name="orgTypes-element"></ref>
-                </optional>
-                <optional>
-                    <ref name="originInfo-element"></ref>
-                </optional>
-                <optional>
-                    <ref name="entityId-element"></ref>
-                </optional>
-                <optional>
-                    <ref name="accessCondition-element"></ref>
-                </optional>
-            </interleave>
-        </element>
-    </define>
-
-    <define name="placeRecordInfo-element">
-        <element name="recordInfo">
-            <a:documentation>Captures record-level information. Components of this element are kept to a minimum given that administrative and object-level metadata is captured in other FOXML datastreams.</a:documentation>
-            <interleave>
-                <optional>
-                    <ref name="placeTypes-element"></ref>
-                </optional>
-                <optional>
-                    <ref name="originInfo-element"></ref>
-                </optional>
-                <optional>
-                    <ref name="entityId-element"></ref>
-                </optional>
-                <optional>
-                    <ref name="accessCondition-element"></ref>
+                    <ref name="placeRecordInfo-element"></ref>
                 </optional>
             </interleave>
         </element>
@@ -390,335 +383,88 @@
         </element>
     </define>
 
-    <define name="personTypes-element">
-        <element name="personTypes">
-            <a:documentation>Captures generic person types defined by each project. Based on WEAC-CPF's @localType.</a:documentation>
-            <zeroOrMore>
-                <ref name="personType-element"></ref>
-            </zeroOrMore>
-        </element>
-    </define>
-
-    <define name="personType-element">
-        <element name="personType">
-            <a:documentation>Captures generic person types defined by each project. Based on WEAC-CPF's @localType.</a:documentation>
+    <define name="personRecordInfo-element">
+        <element name="recordInfo">
+            <a:documentation>Captures record-level information. Components of this element are kept to a minimum given that administrative and object-level metadata is captured in other FOXML datastreams.</a:documentation>
             <xs:annotation>
                 <xs:appinfo>
-                    <interface-field path="entity/person/recordInfo/personTypes/personType">
-                        <help-text xml:lang="en">Generic person types defined by CWRC.</help-text>
-                        <label xml:lang="en">Person type</label>
-                        <input>dropDown</input>
-                    </interface-field>
-                    <values>
-                        <choice>
-                            <value a:fr="" a:en="Creator">creator</value>
-                            <value a:fr="" a:en="Writer">writer</value>
-                            <value a:fr="" a:en="Critic">critic</value>
-                            <value a:fr="" a:en="Creator (CanWWr)">canwwr:creator</value>
-                            <value a:fr="" a:en="Critic (CanWWr)">canwwr:critic</value>
-                            <value a:fr="" a:en="British Woman Writer (Orlando)">orl:BWW</value>
-                            <value a:fr="" a:en="International-British Women Writer (Orlando)">orl:IBW</value>
-                            <value a:fr="" a:en="International Women Writer (Orlando)">orl:IWW</value>
-                            <value a:fr="" a:en="Male Writer (Orlando)">orl:MW</value>
-                        </choice>
-                    </values>
-                </xs:appinfo>
-            </xs:annotation>
-            <choice>
-                <value a:fr="" a:en="Creator">creator</value>
-                <value a:fr="" a:en="Writer">writer</value>
-                <value a:fr="" a:en="Critic">critic</value>
-                <value a:fr="" a:en="Creator (CanWWr)">canwwr:creator</value>
-                <value a:fr="" a:en="Critic (CanWWr)">canwwr:critic</value>
-                <value a:fr="" a:en="British Woman Writer (Orlando)">orl:BWW</value>
-                <value a:fr="" a:en="International-British Women Writer (Orlando)">orl:IBW</value>
-                <value a:fr="" a:en="International Women Writer (Orlando)">orl:IWW</value>
-                <value a:fr="" a:en="Male Writer (Orlando)">orl:MW</value>
-            </choice>
-        </element>
-    </define>
-
-    <define name="orgTypes-element">
-        <element name="orgTypes">
-            <a:documentation>Captures generic organization types defined by each project. Based on WEAC-CPF's @localType.</a:documentation>
-            <zeroOrMore>
-                <ref name="orgType-element"></ref>
-            </zeroOrMore>
-        </element>
-    </define>
-
-    <define name="orgType-element">
-        <element name="orgType">
-            <a:documentation>Captures generic organization types. Based on EAC-CPF's @localType.</a:documentation>
-            <xs:annotation>
-                <xs:appinfo>
-                    <interface-field path="entity/organization/recordInfo/orgTypes/orgType">
-                        <help-text xml:lang="en">Generic organization types defined by CWRC.</help-text>
-                        <label xml:lang="en">Organization type</label>
-                        <input>dropDown</input>
-                    </interface-field>
-                    <values>
-                        <choice>
-                            <value a:fr="" a:en="labour">labour</value>
-                            <value a:fr="" a:en="club or society">club or society</value>
-                            <value a:fr="" a:en="political">political</value>
-                            <value a:fr="" a:en="academic">academic</value>
-                            <value a:fr="" a:en="research">research</value>
-                            <value a:fr="" a:en="corporate">corporate</value>
-                            <value a:fr="" a:en="activist">activist</value>
-                            <value a:fr="" a:en="governmental">governmental</value>
-                            <value a:fr="" a:en="military">military</value>
-                            <value a:fr="" a:en="law-enforcement">law-enforcement</value>
-                            <value a:fr="" a:en="professional">professional</value>
-                            <value a:fr="" a:en="sporting">sporting</value>
-                            <value a:fr="" a:en="medical">medical</value>
-                            <value a:fr="" a:en="altruistic">altruistic</value>
-                            <value a:fr="" a:en="non-profit">non-profit</value>
-                            <value a:fr="" a:en="artistic">artistic</value>
-                            <value a:fr="" a:en="dramatic">dramatic</value>
-                            <value a:fr="" a:en="ethnic">ethnic</value>
-                            <value a:fr="" a:en="literary">literary</value>
-                            <value a:fr="" a:en="musical">musical</value>
-                            <value a:fr="" a:en="religious">religious</value>
-                            <value a:fr="" a:en="publishing">publishing</value>
-                            <value a:fr="" a:en="school">school</value>
-                        </choice>
-                    </values>
-                </xs:appinfo>
-            </xs:annotation>
-            <optional>
-                <choice>
-                    <value a:fr="" a:en="labour">labour</value>
-                    <value a:fr="" a:en="club or society">club or society</value>
-                    <value a:fr="" a:en="political">political</value>
-                    <value a:fr="" a:en="academic">academic</value>
-                    <value a:fr="" a:en="research">research</value>
-                    <value a:fr="" a:en="corporate">corporate</value>
-                    <value a:fr="" a:en="activist">activist</value>
-                    <value a:fr="" a:en="governmental">governmental</value>
-                    <value a:fr="" a:en="military">military</value>
-                    <value a:fr="" a:en="law-enforcement">law-enforcement</value>
-                    <value a:fr="" a:en="professional">professional</value>
-                    <value a:fr="" a:en="sporting">sporting</value>
-                    <value a:fr="" a:en="medical">medical</value>
-                    <value a:fr="" a:en="altruistic">altruistic</value>
-                    <value a:fr="" a:en="non-profit">non-profit</value>
-                    <value a:fr="" a:en="artistic">artistic</value>
-                    <value a:fr="" a:en="dramatic">dramatic</value>
-                    <value a:fr="" a:en="ethnic">ethnic</value>
-                    <value a:fr="" a:en="iterary">literary</value>
-                    <value a:fr="" a:en="musical">musical</value>
-                    <value a:fr="" a:en="religious">religious</value>
-                    <value a:fr="" a:en="publishing">publishing</value>
-                    <value a:fr="" a:en="school">school</value>
-                </choice>
-            </optional>
-        </element>
-    </define>
-
-    <define name="placeTypes-element">
-        <element name="placeTypes">
-            <a:documentation>Captures generic place types defined by CWRC.</a:documentation>
-            <zeroOrMore>
-                <ref name="placeType-element"></ref>
-            </zeroOrMore>
-        </element>
-    </define>
-
-    <define name="placeType-element">
-        <element name="placeType">
-            <a:documentation>Captures generic place types defined by CWRC.</a:documentation>
-            <xs:annotation>
-                <xs:appinfo>
-                    <interface-field path="entity/place/recordInfo/placeTypes/placeType">
-                        <help-text xml:lang="en">Generic place types defined by CWRC.</help-text>
-                        <label xml:lang="en">Place type</label>
-                        <input>dropDown</input>
-                    </interface-field>
-                    <values>
-                        <choice>
-                            <value a:fr="" a:en="current populated place or administrative boundary place name">currentHumanPlace</value>
-                            <value a:fr="" a:en="historical populated place or administrative boundary place name">historicalHumanPlace</value>
-                            <value a:fr="" a:en="current natural geographic feature place name">currentNaturalPlace</value>
-                            <value a:fr="" a:en="historical natural geographic feature place name">historicalNaturalPlace</value>
-                        </choice>
-                    </values>
-                </xs:appinfo>
-            </xs:annotation>
-            <choice>
-                <value a:fr="" a:en="current populated place or administrative boundary place name">currentHumanPlace</value>
-                <value a:fr="" a:en="historical populated place or administrative boundary place name">historicalHumanPlace</value>
-                <value a:fr="" a:en="current natural geographic feature place name">currentNaturalPlace</value>
-                <value a:fr="" a:en="historical natural geographic feature place name">historicalNaturalPlace</value>
-            </choice>
-        </element>
-    </define>
-
-    <define name="originInfo-element">
-        <element name="originInfo">
-            <a:documentation>Record origin information. Equivalent to MADS recordInfo element, similar to EAC-CPF's control element.</a:documentation>
-            <xs:annotation>
-                <xs:appinfo>
-                    <interface-field path="entity/person|organization|place/recordInfo/originInfo">
-                        <label xml:lang="en">About</label>
+                    <interface-field path="entity/person/recordInfo">
+                        <label xml:lang="en">Record Information</label>
+                        <input>header</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
             <interleave>
-                <zeroOrMore>
-                    <ref name="projectId-element"></ref>
-                </zeroOrMore>
-                <zeroOrMore>
-                    <ref name="recordIdentifier-element"></ref>
-                </zeroOrMore>
                 <optional>
-                    <ref name="recordCreationDate-element"></ref>
+                    <ref name="personTypes-element"></ref>
                 </optional>
-                <zeroOrMore>
-                    <ref name="recordChangeDate-element"></ref>
-                </zeroOrMore>
                 <optional>
-                    <ref name="recordOrigin-element"></ref>
+                    <ref name="originInfo-element"></ref>
+                </optional>
+                <optional>
+                    <ref name="entityId-element"></ref>
+                </optional>
+                <optional>
+                    <ref name="accessCondition-element"></ref>
                 </optional>
             </interleave>
         </element>
     </define>
 
-    <define name="projectId-element">
-        <element name="projectId">
-            <a:documentation>Similar to EAC-CPF's agencyCode. In CWRC's context, projectId captures an identifier for the originating project. Subsequent modifications of the record should be captured in FOXML's datastreams</a:documentation>
+    <define name="orgRecordInfo-element">
+        <element name="recordInfo">
+            <a:documentation>Captures record-level information. Components of this element are kept to a minimum given that administrative and object-level metadata is captured in other FOXML datastreams.</a:documentation>
             <xs:annotation>
                 <xs:appinfo>
-                    <interface-field path="entity/person|organization|place/recordInfo/originInfo/projectId">
-                        <label xml:lang="en">Contributing project(s)</label>
-                        <help-text xml:lang="en">Select one or more projects to associate the present entity record.</help-text>
-                        <input>dropDown</input>
+                    <interface-field path="entity/organization/recordInfo">
+                        <label xml:lang="en">Record Information</label>
+                        <input>header</input>
                     </interface-field>
-                    <interface-field path="entity/person|organization|place/identity/variantForms/variant/authorizedBy/projectId">
-                        <help-text xml:lang="en">Optional. Specify a project that uses this as the preferred form of the name.</help-text>
-                        <label xml:lang="en">Name preferred by</label>
-                        <input>dropDown</input>
-                    </interface-field>
-                    <values>
-                        <choice>
-                            <value a:en="canwwr">canwwr</value>
-                            <a:documentation>canwwwr</a:documentation>
-                            <value a:en="ceww">ceww</value>
-                            <a:documentation>ceww</a:documentation>
-                            <value a:en="eccji">eccji</value>
-                            <a:documentation>eccji</a:documentation>
-                            <value a:en="eccji">GeoNames</value>
-                            <a:documentation>GeoNames</a:documentation>
-                            <value a:en="orlando">orlando</value>
-                            <a:documentation>orlando</a:documentation>
-                        </choice>
-                    </values>
                 </xs:appinfo>
             </xs:annotation>
-            <optional>
-                <choice>
-                    <value a:en="canwwr">canwwr</value>
-                    <a:documentation>canwwwr</a:documentation>
-                    <value a:en="ceww">ceww</value>
-                    <a:documentation>ceww</a:documentation>
-                    <value a:en="eccji">eccji</value>
-                    <a:documentation>eccji</a:documentation>
-                    <value a:en="eccji">GeoNames</value>
-                    <a:documentation>GeoNames</a:documentation>
-                    <value a:en="orlando">orlando</value>
-                    <a:documentation>orlando</a:documentation>
-                </choice>
-            </optional>
+            <interleave>
+                <optional>
+                    <ref name="orgTypes-element"></ref>
+                </optional>
+                <optional>
+                    <ref name="originInfo-element"></ref>
+                </optional>
+                <optional>
+                    <ref name="entityId-element"></ref>
+                </optional>
+                <optional>
+                    <ref name="accessCondition-element"></ref>
+                </optional>
+            </interleave>
         </element>
     </define>
 
-    <define name="recordIdentifier-element">
-        <element name="recordIdentifier">
-            <a:documentation>Provenance field used to capture original record identifiers. CWRC record identifiers are captured in entityId and in FOXML.</a:documentation>
-            <optional>
-                <attribute name="source">
-                    <a:documentation>Contains the code or name of the organization whose system control number is located in the recordIdentifier element.</a:documentation>
-                    <data type="string"></data>
-                </attribute>
-            </optional>
-            <data type="string"></data>
+    <define name="placeRecordInfo-element">
+        <element name="recordInfo">
+            <a:documentation>Captures record-level information. Components of this element are kept to a minimum given that administrative and object-level metadata is captured in other FOXML datastreams.</a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/place/recordInfo">
+                        <label xml:lang="en">Record Information</label>
+                        <input>header</input>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
+            <interleave>
+                <optional>
+                    <ref name="placeTypes-element"></ref>
+                </optional>
+                <optional>
+                    <ref name="originInfo-element"></ref>
+                </optional>
+                <optional>
+                    <ref name="entityId-element"></ref>
+                </optional>
+                <optional>
+                    <ref name="accessCondition-element"></ref>
+                </optional>
+            </interleave>
         </element>
-    </define>
-
-    <define name="recordCreationDate-element">
-        <element name="recordCreationDate">
-            <a:documentation>Provenance field used to capture the original creation date of an entity instance deposited in CWRC. Dates of creation for new entities created in CWRC are captured in FOXML. Equivalent to MADS recordCreationDate and EAC-CPF's maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime . Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
-            <choice>
-                <empty></empty>
-                <data type="date"></data>
-                <data type="gYearMonth"></data>
-                <data type="gYear"></data>
-            </choice>
-        </element>
-    </define>
-
-    <define name="recordChangeDate-element">
-        <element name="recordChangeDate">
-            <a:documentation>Provenance field used to capture the original modification dates of an entity instance deposited in CWRC. Subsequent dates of modification in CWRC are captured in FOXML. Equivalent to MADS recordChangeDate and EAC-CPF's maintenanceHistory/maintenance/Event/eventType/eventDateTime . Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
-            <choice>
-                <empty></empty>
-                <data type="date"></data>
-                <data type="gYearMonth"></data>
-                <data type="gYear"></data>
-            </choice>
-        </element>
-    </define>
-
-    <define name="recordOrigin-element">
-        <element name="recordOrigin">
-            <a:documentation>Field that records the origin or provenance of the entity record.</a:documentation>
-            <data type="string"></data>
-        </element>
-    </define>
-
-    <define name="entityId-element">
-        <element name="entityId">
-            <a:documentation>Optional CWRC record identifier. This information is captured in FOXML. Equivalent to EAC-CPF's recordId.</a:documentation>
-            <optional>
-                <data type="NMTOKEN"></data>
-            </optional>
-        </element>
-    </define>
-
-    <define name="accessCondition-element">
-        <element name="accessCondition" a:defaultValue="cc_by-nc_4.0">
-            <a:documentation>Use the following access condition statement: Use of this public-domain resource is governed by the &lt;a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license" &gt;Creative Commons Attribution-NonCommercial 4.0 International License&lt;/a&gt;. </a:documentation>
-            <attribute name="type">
-                <value a:en="use and reproduction">use and reproduction</value>
-            </attribute>
-            <mixed>
-                <zeroOrMore>
-                    <ref name="a-element"></ref>
-                </zeroOrMore>
-            </mixed>
-        </element>
-    </define>
-
-    <define name="a-element">
-        <element name="a">
-            <ref name="href-attribute"></ref>
-            <optional>
-                <ref name="rel-attribute"></ref>
-            </optional>
-            <data type="token"></data>
-        </element>
-    </define>
-
-    <define name="href-attribute">
-        <attribute name="href">
-            <data type="anyURI"></data>
-        </attribute>
-    </define>
-
-    <define name="rel-attribute">
-        <attribute name="rel">
-            <data type="token"></data>
-        </attribute>
     </define>
 
     <define name="preferredForm-element">
@@ -787,7 +533,7 @@
                     </interface-field>
                     <values type="person">
                         <choice>
-                            <value a:en="fulll name (inverse order)" default="yes">fullName</value>
+                            <value a:en="full name (inverse order)" default="yes">fullName</value>
                             <a:documentation>e.g., Abergavenny, Frances Neville, Baroness</a:documentation>
                             <value a:en="family name">family</value>
                             <a:documentation>e.g., Abergavenny</a:documentation>
@@ -1594,6 +1340,330 @@
                 <data type="decimal"></data>
             </choice>
         </element>
+    </define>
+
+    <define name="personTypes-element">
+        <element name="personTypes">
+            <a:documentation>Captures generic person types defined by each project. Based on WEAC-CPF's @localType.</a:documentation>
+            <zeroOrMore>
+                <ref name="personType-element"></ref>
+            </zeroOrMore>
+        </element>
+    </define>
+
+    <define name="personType-element">
+        <element name="personType">
+            <a:documentation>Captures generic person types defined by each project. Based on WEAC-CPF's @localType.</a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/person/recordInfo/personTypes/personType">
+                        <help-text xml:lang="en">Generic person types defined by CWRC.</help-text>
+                        <label xml:lang="en">Person type</label>
+                        <input>dropDown</input>
+                    </interface-field>
+                    <values>
+                        <choice>
+                            <value a:fr="" a:en="Creator">creator</value>
+                            <value a:fr="" a:en="Writer">writer</value>
+                            <value a:fr="" a:en="Critic">critic</value>
+                            <value a:fr="" a:en="Creator (CanWWr)">canwwr:creator</value>
+                            <value a:fr="" a:en="Critic (CanWWr)">canwwr:critic</value>
+                            <value a:fr="" a:en="British Woman Writer (Orlando)">orl:BWW</value>
+                            <value a:fr="" a:en="International-British Women Writer (Orlando)">orl:IBW</value>
+                            <value a:fr="" a:en="International Women Writer (Orlando)">orl:IWW</value>
+                            <value a:fr="" a:en="Male Writer (Orlando)">orl:MW</value>
+                        </choice>
+                    </values>
+                </xs:appinfo>
+            </xs:annotation>
+            <choice>
+                <value a:fr="" a:en="Creator">creator</value>
+                <value a:fr="" a:en="Writer">writer</value>
+                <value a:fr="" a:en="Critic">critic</value>
+                <value a:fr="" a:en="Creator (CanWWr)">canwwr:creator</value>
+                <value a:fr="" a:en="Critic (CanWWr)">canwwr:critic</value>
+                <value a:fr="" a:en="British Woman Writer (Orlando)">orl:BWW</value>
+                <value a:fr="" a:en="International-British Women Writer (Orlando)">orl:IBW</value>
+                <value a:fr="" a:en="International Women Writer (Orlando)">orl:IWW</value>
+                <value a:fr="" a:en="Male Writer (Orlando)">orl:MW</value>
+            </choice>
+        </element>
+    </define>
+
+    <define name="orgTypes-element">
+        <element name="orgTypes">
+            <a:documentation>Captures generic organization types defined by each project. Based on WEAC-CPF's @localType.</a:documentation>
+            <zeroOrMore>
+                <ref name="orgType-element"></ref>
+            </zeroOrMore>
+        </element>
+    </define>
+
+    <define name="orgType-element">
+        <element name="orgType">
+            <a:documentation>Captures generic organization types. Based on EAC-CPF's @localType.</a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/organization/recordInfo/orgTypes/orgType">
+                        <help-text xml:lang="en">Generic organization types defined by CWRC.</help-text>
+                        <label xml:lang="en">Organization type</label>
+                        <input>dropDown</input>
+                    </interface-field>
+                    <values>
+                        <choice>
+                            <value a:fr="" a:en="labour">labour</value>
+                            <value a:fr="" a:en="club or society">club or society</value>
+                            <value a:fr="" a:en="political">political</value>
+                            <value a:fr="" a:en="academic">academic</value>
+                            <value a:fr="" a:en="research">research</value>
+                            <value a:fr="" a:en="corporate">corporate</value>
+                            <value a:fr="" a:en="activist">activist</value>
+                            <value a:fr="" a:en="governmental">governmental</value>
+                            <value a:fr="" a:en="military">military</value>
+                            <value a:fr="" a:en="law-enforcement">law-enforcement</value>
+                            <value a:fr="" a:en="professional">professional</value>
+                            <value a:fr="" a:en="sporting">sporting</value>
+                            <value a:fr="" a:en="medical">medical</value>
+                            <value a:fr="" a:en="altruistic">altruistic</value>
+                            <value a:fr="" a:en="non-profit">non-profit</value>
+                            <value a:fr="" a:en="artistic">artistic</value>
+                            <value a:fr="" a:en="dramatic">dramatic</value>
+                            <value a:fr="" a:en="ethnic">ethnic</value>
+                            <value a:fr="" a:en="literary">literary</value>
+                            <value a:fr="" a:en="musical">musical</value>
+                            <value a:fr="" a:en="religious">religious</value>
+                            <value a:fr="" a:en="publishing">publishing</value>
+                            <value a:fr="" a:en="school">school</value>
+                        </choice>
+                    </values>
+                </xs:appinfo>
+            </xs:annotation>
+            <optional>
+                <choice>
+                    <value a:fr="" a:en="labour">labour</value>
+                    <value a:fr="" a:en="club or society">club or society</value>
+                    <value a:fr="" a:en="political">political</value>
+                    <value a:fr="" a:en="academic">academic</value>
+                    <value a:fr="" a:en="research">research</value>
+                    <value a:fr="" a:en="corporate">corporate</value>
+                    <value a:fr="" a:en="activist">activist</value>
+                    <value a:fr="" a:en="governmental">governmental</value>
+                    <value a:fr="" a:en="military">military</value>
+                    <value a:fr="" a:en="law-enforcement">law-enforcement</value>
+                    <value a:fr="" a:en="professional">professional</value>
+                    <value a:fr="" a:en="sporting">sporting</value>
+                    <value a:fr="" a:en="medical">medical</value>
+                    <value a:fr="" a:en="altruistic">altruistic</value>
+                    <value a:fr="" a:en="non-profit">non-profit</value>
+                    <value a:fr="" a:en="artistic">artistic</value>
+                    <value a:fr="" a:en="dramatic">dramatic</value>
+                    <value a:fr="" a:en="ethnic">ethnic</value>
+                    <value a:fr="" a:en="iterary">literary</value>
+                    <value a:fr="" a:en="musical">musical</value>
+                    <value a:fr="" a:en="religious">religious</value>
+                    <value a:fr="" a:en="publishing">publishing</value>
+                    <value a:fr="" a:en="school">school</value>
+                </choice>
+            </optional>
+        </element>
+    </define>
+
+    <define name="placeTypes-element">
+        <element name="placeTypes">
+            <a:documentation>Captures generic place types defined by CWRC.</a:documentation>
+            <zeroOrMore>
+                <ref name="placeType-element"></ref>
+            </zeroOrMore>
+        </element>
+    </define>
+
+    <define name="placeType-element">
+        <element name="placeType">
+            <a:documentation>Captures generic place types defined by CWRC.</a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/place/recordInfo/placeTypes/placeType">
+                        <help-text xml:lang="en">Generic place types defined by CWRC.</help-text>
+                        <label xml:lang="en">Place type</label>
+                        <input>dropDown</input>
+                    </interface-field>
+                    <values>
+                        <choice>
+                            <value a:fr="" a:en="current populated place or administrative boundary place name">currentHumanPlace</value>
+                            <value a:fr="" a:en="historical populated place or administrative boundary place name">historicalHumanPlace</value>
+                            <value a:fr="" a:en="current natural geographic feature place name">currentNaturalPlace</value>
+                            <value a:fr="" a:en="historical natural geographic feature place name">historicalNaturalPlace</value>
+                        </choice>
+                    </values>
+                </xs:appinfo>
+            </xs:annotation>
+            <choice>
+                <value a:fr="" a:en="current populated place or administrative boundary place name">currentHumanPlace</value>
+                <value a:fr="" a:en="historical populated place or administrative boundary place name">historicalHumanPlace</value>
+                <value a:fr="" a:en="current natural geographic feature place name">currentNaturalPlace</value>
+                <value a:fr="" a:en="historical natural geographic feature place name">historicalNaturalPlace</value>
+            </choice>
+        </element>
+    </define>
+
+    <define name="originInfo-element">
+        <element name="originInfo">
+            <a:documentation>Record origin information. Equivalent to MADS recordInfo element, similar to EAC-CPF's control element.</a:documentation>
+            <interleave>
+                <zeroOrMore>
+                    <ref name="projectId-element"></ref>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="recordIdentifier-element"></ref>
+                </zeroOrMore>
+                <optional>
+                    <ref name="recordCreationDate-element"></ref>
+                </optional>
+                <zeroOrMore>
+                    <ref name="recordChangeDate-element"></ref>
+                </zeroOrMore>
+                <optional>
+                    <ref name="recordOrigin-element"></ref>
+                </optional>
+            </interleave>
+        </element>
+    </define>
+
+    <define name="projectId-element">
+        <element name="projectId">
+            <a:documentation>Similar to EAC-CPF's agencyCode. In CWRC's context, projectId captures an identifier for the originating project. Subsequent modifications of the record should be captured in FOXML's datastreams</a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/person|organization|place/recordInfo/originInfo/projectId">
+                        <label xml:lang="en">Contributing project(s)</label>
+                        <help-text xml:lang="en">Select one or more projects to associate the present entity record.</help-text>
+                        <input>dropDown</input>
+                    </interface-field>
+                    <interface-field path="entity/person|organization|place/identity/variantForms/variant/authorizedBy/projectId">
+                        <help-text xml:lang="en">Optional. Specify a project that uses this as the preferred form of the name.</help-text>
+                        <label xml:lang="en">Name preferred by</label>
+                        <input>dropDown</input>
+                    </interface-field>
+                    <values>
+                        <choice>
+                            <value a:en="canwwr">canwwr</value>
+                            <a:documentation>canwwwr</a:documentation>
+                            <value a:en="ceww">ceww</value>
+                            <a:documentation>ceww</a:documentation>
+                            <value a:en="eccji">eccji</value>
+                            <a:documentation>eccji</a:documentation>
+                            <value a:en="eccji">GeoNames</value>
+                            <a:documentation>GeoNames</a:documentation>
+                            <value a:en="orlando">orlando</value>
+                            <a:documentation>orlando</a:documentation>
+                        </choice>
+                    </values>
+                </xs:appinfo>
+            </xs:annotation>
+            <optional>
+                <choice>
+                    <value a:en="canwwr">canwwr</value>
+                    <a:documentation>canwwwr</a:documentation>
+                    <value a:en="ceww">ceww</value>
+                    <a:documentation>ceww</a:documentation>
+                    <value a:en="eccji">eccji</value>
+                    <a:documentation>eccji</a:documentation>
+                    <value a:en="eccji">GeoNames</value>
+                    <a:documentation>GeoNames</a:documentation>
+                    <value a:en="orlando">orlando</value>
+                    <a:documentation>orlando</a:documentation>
+                </choice>
+            </optional>
+        </element>
+    </define>
+
+    <define name="recordIdentifier-element">
+        <element name="recordIdentifier">
+            <a:documentation>Provenance field used to capture original record identifiers. CWRC record identifiers are captured in entityId and in FOXML.</a:documentation>
+            <optional>
+                <attribute name="source">
+                    <a:documentation>Contains the code or name of the organization whose system control number is located in the recordIdentifier element.</a:documentation>
+                    <data type="string"></data>
+                </attribute>
+            </optional>
+            <data type="string"></data>
+        </element>
+    </define>
+
+    <define name="recordCreationDate-element">
+        <element name="recordCreationDate">
+            <a:documentation>Provenance field used to capture the original creation date of an entity instance deposited in CWRC. Dates of creation for new entities created in CWRC are captured in FOXML. Equivalent to MADS recordCreationDate and EAC-CPF's maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime . Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
+            <choice>
+                <empty></empty>
+                <data type="date"></data>
+                <data type="gYearMonth"></data>
+                <data type="gYear"></data>
+            </choice>
+        </element>
+    </define>
+
+    <define name="recordChangeDate-element">
+        <element name="recordChangeDate">
+            <a:documentation>Provenance field used to capture the original modification dates of an entity instance deposited in CWRC. Subsequent dates of modification in CWRC are captured in FOXML. Equivalent to MADS recordChangeDate and EAC-CPF's maintenanceHistory/maintenance/Event/eventType/eventDateTime . Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
+            <choice>
+                <empty></empty>
+                <data type="date"></data>
+                <data type="gYearMonth"></data>
+                <data type="gYear"></data>
+            </choice>
+        </element>
+    </define>
+
+    <define name="recordOrigin-element">
+        <element name="recordOrigin">
+            <a:documentation>Field that records the origin or provenance of the entity record.</a:documentation>
+            <data type="string"></data>
+        </element>
+    </define>
+
+    <define name="entityId-element">
+        <element name="entityId">
+            <a:documentation>Optional CWRC record identifier. This information is captured in FOXML. Equivalent to EAC-CPF's recordId.</a:documentation>
+            <optional>
+                <data type="NMTOKEN"></data>
+            </optional>
+        </element>
+    </define>
+
+    <define name="accessCondition-element">
+        <element name="accessCondition" a:defaultValue="cc_by-nc_4.0">
+            <a:documentation>Use the following access condition statement: Use of this public-domain resource is governed by the &lt;a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license" &gt;Creative Commons Attribution-NonCommercial 4.0 International License&lt;/a&gt;. </a:documentation>
+            <attribute name="type">
+                <value a:en="use and reproduction">use and reproduction</value>
+            </attribute>
+            <mixed>
+                <zeroOrMore>
+                    <ref name="a-element"></ref>
+                </zeroOrMore>
+            </mixed>
+        </element>
+    </define>
+
+    <define name="a-element">
+        <element name="a">
+            <ref name="href-attribute"></ref>
+            <optional>
+                <ref name="rel-attribute"></ref>
+            </optional>
+            <data type="token"></data>
+        </element>
+    </define>
+
+    <define name="href-attribute">
+        <attribute name="href">
+            <data type="anyURI"></data>
+        </attribute>
+    </define>
+
+    <define name="rel-attribute">
+        <attribute name="rel">
+            <data type="token"></data>
+        </attribute>
     </define>
 
 </grammar>
