@@ -1593,6 +1593,15 @@
     <define name="recordCreationDate-element">
         <element name="recordCreationDate">
             <a:documentation>Provenance field used to capture the original creation date of an entity instance deposited in CWRC. Dates of creation for new entities created in CWRC are captured in FOXML. Equivalent to MADS recordCreationDate and EAC-CPF's maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime . Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/person|organization|place/recordInfo/originInfo/recordCreationDate">
+                        <label xml:lang="en">Record creation date</label>
+                        <help-text xml:lang="en">Record creation date of the entity record.</help-text>
+                        <input>textField</input>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
             <choice>
                 <empty></empty>
                 <data type="date"></data>
