@@ -8,7 +8,8 @@
 /**:empty{
     display:none
 }*/
-RESEARCHNOTE{display:none;
+RESEARCHNOTE{
+    display:none;
     background-color:#FBEFEF;
     color:#663366;
     font-family:Arial, Helvetica, sans-serif;
@@ -57,14 +58,15 @@ RESPONSIBILITY{
 
 /*High-level body styling*/
 
-ENTRY {display:block; margin-left:3%}
+ENTRY{
+    display:block;
+    margin-left:3%
+}
 
-
-
-
-HEADING{display:block;
+HEADING{
+    display:block;
     font-weight:bold;
-    color:brown; 
+    color:brown;
     padding-bottom:12pt
 }
 
@@ -75,7 +77,10 @@ HEADING[SUBTYPE = "1"]{
 
 HEADING[SUBTYPE = "2"]{
     font-size:x-large;
-    margin-left:4%; padding-bottom:1%; margin-bottom:1%; border-bottom:solid;
+    margin-left:4%;
+    padding-bottom:1%;
+    margin-bottom:1%;
+    border-bottom:solid;
     padding-top:2%;
     border-color:black
 }
@@ -93,71 +98,64 @@ HEADING[SUBTYPE = "4"]{
 }
 
 
-
-
-
-
-/*Folds (Oxygen only)*/
-
-/*BIRTH,
-RESIDENCEANDMOBILITY,
-PRODUCTION,
-CULTURALFORMATION,
-FAMILY,
-EDUCATTION, 
-OTHERLIFEEVENT,
-OCCUPATION,
-TEXTSCOPE
-{
-    -oxy-foldable:true;
-    -oxy-folded:true;
-    -oxy-not-foldable-child:HEADING}*/
-
-/*PERSONNAME {
-    -oxy-foldable:true;
-    -oxy-folded:true;
-    -oxy-not-foldable-child:BIRTHNAME}*/
-
-/*End folds*/
-
-
-
-
-
-
-
-
 /*Mid-level body styling*/
+
+
+DENOMINATION{
+    display:inline
+}
+
+ENTRY CULTURALFORMATION P,
+ENTRY PRODUCTION P 
+{
+    display:block;
+    margin-left:4%
+}
 
 BIRTHNAME,
 NICKNAME,
 BIRTH,
 RESIDENCEANDMOBILITY P,
-PLITERARYMOVEMENTS,
-SEXUALIDENTITY,
-NATIONALHERITAGE,
-DENOMINATION,
+/*PLITERARYMOVEMENTS,*/
+/*NATIONALHERITAGE,*/
+/*DENOMINATION:first-of-type,*/
 CLASSISSUE P,
 MARRIAGE,
 FAMILY P,
 P CHILDREN,
 RSELFDESCRIPTION,
-OCCUPATION P, 
-LISTBIBCIT{display:block; margin-left:4%; padding-left:0%}
+OCCUPATION P,
+LISTBIBCIT{
+    display:block;
+    margin-left:4%;
+    padding-left:0%
+}
 
-MARRIAGE P{display:block; margin-left:0%;padding-left:0%}
+MARRIAGE P{
+    display:block;
+    margin-left:0%;
+    padding-left:0%
+}
 
 /*field labels:*/
 
 GIVEN:before{
     content:"First Name: ";
-    display:inline-block; margin-left:0%; padding-left:0%
+    display:inline-block;
+    margin-left:0%;
+    padding-left:0%
+
+}
+GIVEN + GIVEN{
+    display:block
 }
 GIVEN + GIVEN:before{
     content:"Middle Name: ";
     display:inline-block
 }
-SURNAME{display:block}
+SURNAME{
+    display:block
+}
 
 SURNAME:before{
     content:"Last Name at Birth: ";
@@ -170,9 +168,9 @@ GENDER:before{
     content:"Gender: ";
 }
 
-DENOMINATION:before{
+/*DENOMINATION:first-of-type:before{
     content:"Religious Affiliation: ";
-}
+}*/
 
 
 
@@ -184,51 +182,102 @@ EDUCATION DATASTRUCT,
 OTHERLIFEEVENT DATASTRUCT,
 OCCUPATION DATASTRUCT,
 RECEPTION DATASTRUCT
-{display:list-item;
-margin-left:8%; padding-top:1%; padding-bottom:1%}
+{
+    display:list-item;
+    margin-left:8%;
+    padding-top:1%;
+    padding-bottom:1%
+}
 
 
 
 CHRONSTRUCT DATE,
-CHRONSTRUCT DATERANGE {padding-right:3%; width:16em}
+CHRONSTRUCT DATERANGE{
+    padding-right:3%;
+    width:16em
+}
 CHRONPROSE,
-DATASTRUCT{width:auto}
+DATASTRUCT{
+    width:auto
+}
 
 OTHERLIFEEVENT CHRONSTRUCT DATE,
-OTHERLIFEEVENT CHRONSTRUCT DATERANGE {padding-right:0%}
+OTHERLIFEEVENT CHRONSTRUCT DATERANGE{
+    padding-right:0%
+}
 
-OCCUPATION CHRONSTRUCT CHRONPROSE ORGNAME {padding-left:3%}
-BIRTH CHRONSTRUCT CHRONPROSE {display:block}
+OCCUPATION CHRONSTRUCT CHRONPROSE ORGNAME{
+    padding-left:3%
+}
+BIRTH CHRONSTRUCT CHRONPROSE{
+    display:block
+}
 
-TEXTUALFEATURES P{display:block; margin-left:4%}
+TEXTUALFEATURES P{
+    display:block;
+    margin-left:4%
+}
 
-HEADING TITLE{DISPLAY:block; padding-top:1%;padding-bottom:1%; color:brown}
+HEADING TITLE{
+    DISPLAY:block;
+    padding-top:1%;
+    padding-bottom:1%;
+    color:brown
+}
 
-TEXTUALFEATURES HEADING[SUBTYPE="4"],
-TEXTSCOPE PRODUCTION HEADING[SUBTYPE="4"],
-TEXTSCOPE RECEPTION HEADING[SUBTYPE="4"]
-{display:block;color:black;font-weight:bold; padding-left:4%}
+TEXTUALFEATURES HEADING[SUBTYPE = "4"],
+TEXTSCOPE PRODUCTION HEADING[SUBTYPE = "4"],
+TEXTSCOPE RECEPTION HEADING[SUBTYPE = "4"]
+{
+    display:block;
+    color:black;
+    font-weight:bold;
+    padding-left:4%
+}
 
 /*NATIONALHERITAGE:before{content:"National / Ethnic Background: ";
 color:olive}*/
 
 TITLE[LEVEL = "MONOGRAPHIC"],
-TITLE[LEVEL="UNPUBLISHED"]{font-style:italic}
+TITLE[LEVEL = "UNPUBLISHED"]{
+    font-style:italic
+}
 
-TITLE[LEVEL = "ANALYTIC"]:before{content:"\""}
-TITLE[LEVEL = "ANALYTIC"]:after{content:"\""}
-EMPH:before{content:"\""}
-EMPH:after{content:"\""}
-SOCALLED:before{content:"\""}
-SOCALLED:after{content:"\""}
-TITLE[LEVEL = "UNPUBLISHED"] EMPH:before{content:"\""}
-TITLE[LEVEL = "UNPUBLISHED"] EMPH:after{content:"\""}
-TITLE[LEVEL = "UNPUBLISHED"] EMPH{font-style:normal}
+TITLE[LEVEL = "ANALYTIC"]:before{
+    content:"\""
+}
+TITLE[LEVEL = "ANALYTIC"]:after{
+    content:"\""
+}
+EMPH:before{
+    content:"\""
+}
+EMPH:after{
+    content:"\""
+}
+SOCALLED:before{
+    content:"\""
+}
+SOCALLED:after{
+    content:"\""
+}
+TITLE[LEVEL = "UNPUBLISHED"] EMPH:before{
+    content:"\""
+}
+TITLE[LEVEL = "UNPUBLISHED"] EMPH:after{
+    content:"\""
+}
+TITLE[LEVEL = "UNPUBLISHED"] EMPH{
+    font-style:normal
+}
 
 PRODUCTION CHRONSTRUCT,
-PRODUCTION P{display:block; padding-left:5%}
+TEXTSCOPE PRODUCTION P{
+    display:block;
+    padding-left:5%
+}
 
-HEADING TITLE,
-DATAITEM DENOMINATION{display:inline}
-DATAITEM DENOMINATION:before{content:none}
+HEADING TITLE{
+    display:inline
+}
 
