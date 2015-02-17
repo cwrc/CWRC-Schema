@@ -5,9 +5,7 @@
     font-family:sans-serif;
     background-color:#fdf8e5
 }
-/**:empty{
-    display:none
-}*/
+
 RESEARCHNOTE{
     display:none;
     background-color:#FBEFEF;
@@ -71,13 +69,13 @@ HEADING{
 }
 
 HEADING[SUBTYPE = "1"]{
-    font-size:xx-large;
-    text-align:center
+    font-size:3em;
+    text-align:center;
+    padding-top:1em
 }
 
 HEADING[SUBTYPE = "2"]{
-    font-size:x-large;
-    margin-left:4%;
+    font-size:2em;
     padding-bottom:1%;
     margin-bottom:1%;
     border-bottom:solid;
@@ -86,55 +84,65 @@ HEADING[SUBTYPE = "2"]{
 }
 
 HEADING[SUBTYPE = "3"]{
-    font-size:large;
+    font-size:1.5em;
     padding-left:4%;
-    padding-top:1%;
-    padding-bottom:1%
+    padding-top:1em;
+    padding-bottom:0.5em
+}
+
+TEXTSCOPE HEADING[SUBTYPE = "3"]
+{
+   padding-left:0%
 }
 
 HEADING[SUBTYPE = "4"]{
-    font-size:medium;
-    padding-left:6%
+    font-size:1em;
+    /*padding-left:4%;*/
+    padding-top:1em
 }
-
 
 /*Mid-level body styling*/
 
-
-DENOMINATION{
-    display:inline
-}
-
-ENTRY CULTURALFORMATION P,
-ENTRY PRODUCTION P 
+ENTRY PERSONNAME,
+ENTRY BIRTH,
+ENTRY RESIDENCEANDMOBILITY,
+ENTRY CULTURALFORMATION,
+ENTRY PRODUCTION,
+ENTRY FAMILY,
+ENTRY RECEPTION,
+ENTRY OCCUPATION,
+ENTRY EDUCATION,
+ENTRY OTHERLIFEEVENT,
+ENTRY TEXTSCOPE
 {
     display:block;
-    margin-left:4%
-}
-
-BIRTHNAME,
-NICKNAME,
-BIRTH,
-RESIDENCEANDMOBILITY P,
-/*PLITERARYMOVEMENTS,*/
-/*NATIONALHERITAGE,*/
-/*DENOMINATION:first-of-type,*/
-CLASSISSUE P,
-MARRIAGE,
-FAMILY P,
-P CHILDREN,
-RSELFDESCRIPTION,
-OCCUPATION P,
-LISTBIBCIT{
-    display:block;
     margin-left:4%;
-    padding-left:0%
 }
 
-MARRIAGE P{
+TEXTSCOPE PRODUCTION,
+TEXTSCOPE RECEPTION
+{
     display:block;
-    margin-left:0%;
-    padding-left:0%
+    margin-left:0%
+}
+
+PERSONNAME P BIRTHNAME,
+BIRTHNAME GIVEN,
+BIRTHNAME SURNAME,
+PERSONNAME P NICKNAME,
+ENTRY BIRTH,
+BIRTH CHRONSTRUCT DATE,
+BIRTH CHRONSTRUCT CHRONPROSE,
+ENTRY RESIDENCEANDMOBILITY P,
+ENTRY PRODUCTION P,
+ENTRY CULTURALFORMATION P,
+FAMILY P,
+ENTRY RECEPTION,
+ENTRY OCUPATION P,
+ENTRY TEXTSCOPE
+{
+    display:block;
+    margin-bottom:1em;
 }
 
 /*field labels:*/
@@ -153,9 +161,7 @@ GIVEN + GIVEN:before{
     content:"Middle Name: ";
     display:inline-block
 }
-SURNAME{
-    display:block
-}
+
 
 SURNAME:before{
     content:"Last Name at Birth: ";
@@ -215,28 +221,8 @@ BIRTH CHRONSTRUCT CHRONPROSE{
 
 TEXTUALFEATURES P{
     display:block;
-    margin-left:4%
 }
 
-HEADING TITLE{
-    DISPLAY:block;
-    padding-top:1%;
-    padding-bottom:1%;
-    color:brown
-}
-
-TEXTUALFEATURES HEADING[SUBTYPE = "4"],
-TEXTSCOPE PRODUCTION HEADING[SUBTYPE = "4"],
-TEXTSCOPE RECEPTION HEADING[SUBTYPE = "4"]
-{
-    display:block;
-    color:black;
-    font-weight:bold;
-    padding-left:4%
-}
-
-/*NATIONALHERITAGE:before{content:"National / Ethnic Background: ";
-color:olive}*/
 
 TITLE[LEVEL = "MONOGRAPHIC"],
 TITLE[LEVEL = "UNPUBLISHED"]{
@@ -270,14 +256,17 @@ TITLE[LEVEL = "UNPUBLISHED"] EMPH:after{
 TITLE[LEVEL = "UNPUBLISHED"] EMPH{
     font-style:normal
 }
-
+/*
 PRODUCTION CHRONSTRUCT,
 TEXTSCOPE PRODUCTION P{
     display:block;
     padding-left:5%
-}
+}*/
 
 HEADING TITLE{
-    display:inline
+    display:inline;
+    padding-top:1%;
+    padding-bottom:1%;
+    color:brown
 }
 
