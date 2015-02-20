@@ -180,7 +180,7 @@ GENDER:before{
 
 
 
-EDUCATION CHRONSTRUCT,
+/*EDUCATION CHRONSTRUCT,
 OTHERLIFEEVENT CHRONSTRUCT,
 OCCUPATION CHRONSTRUCT,
 RECEPTION CHRONSTRUCT,
@@ -189,22 +189,20 @@ OTHERLIFEEVENT DATASTRUCT,
 OCCUPATION DATASTRUCT,
 RECEPTION DATASTRUCT
 {
-    display:list-item;
-    margin-left:8%;
-    padding-top:1%;
-    padding-bottom:1%
+    display:table-row; margin-bottom:1em
 }
-
+*/
 
 
 CHRONSTRUCT DATE,
-CHRONSTRUCT DATERANGE{
-    padding-right:3%;
-    width:16em
+CHRONSTRUCT DATERANGE{display:table-cell; width:12em; /*border:solid;*/
+    padding-right:0%; padding-bottom:0.5em
 }
-CHRONPROSE,
-DATASTRUCT{
-    width:auto
+CHRONPROSE{
+    display:table-cell; /*border:solid*/ padding-bottom:0.5em
+}
+DATASTRUCT{ /*border:solid;*/
+    width:auto; padding-bottom:0.5em
 }
 
 OTHERLIFEEVENT CHRONSTRUCT DATE,
@@ -212,9 +210,9 @@ OTHERLIFEEVENT CHRONSTRUCT DATERANGE{
     padding-right:0%
 }
 
-OCCUPATION CHRONSTRUCT CHRONPROSE ORGNAME{
+/*OCCUPATION CHRONSTRUCT CHRONPROSE ORGNAME{
     padding-left:3%
-}
+}*/
 BIRTH CHRONSTRUCT CHRONPROSE{
     display:block
 }
