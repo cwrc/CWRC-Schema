@@ -1136,9 +1136,9 @@
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
-            <optional>
+         <!-- mrb: optional was here -->
                 <ref name="term-element"/>
-            </optional>
+            
         </element>
     </define>
 
@@ -1194,7 +1194,7 @@
                     <interface-field path="entity/person/description/occupations/occupation/term">
                         <help-text xml:lang="en">This field can capture relevant paid occupations
                             held by the person described in the present record.</help-text>
-                        <label xml:lang="en">Occupation</label>
+                        <!--<label xml:lang="en">Occupation</label>-->
                         <input>textField</input>
                     </interface-field>
                     <interface-field path="entity/person/description/activities/activity/term">
