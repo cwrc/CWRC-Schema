@@ -1128,17 +1128,16 @@
                 described in an entity record.</a:documentation>
             <xs:annotation>
                 <xs:appinfo>
-                    <interface-field
-                        path="entity/person/description/occupations/occupation">
+                    <interface-field path="entity/person/description/occupations/occupation">
                         <help-text xml:lang="en">Test of occupation code.</help-text>
                         <label xml:lang="en">Occupation(s)</label>
                         <input label="Add">dialogue</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
-         <!-- mrb: optional was here -->
+            <oneOrMore>
                 <ref name="term-element"/>
-            
+            </oneOrMore>
         </element>
     </define>
 
