@@ -1135,9 +1135,9 @@
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
-            <!--<oneOrMore>-->
+            <interleave>
                 <ref name="term-element"/>
-            <!--</oneOrMore>-->
+            </interleave>
         </element>
     </define>
 
