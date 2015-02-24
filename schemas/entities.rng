@@ -62,13 +62,17 @@
 <!--
 *** Revisions ***
      MRB: Mon 23-Feb-2015
-     * Changed the pattern directive for the <resource> element (source-element) from <optional> to
-     <zeroOrMore>.
+     * Added a new value of "fullNameDirectOrder" to the enumerated list for the @partType attribute; also
+     changed the exisiting value of "fullName" to "fullNameInvertedOrder".
+     * Added interface annotation code to the <interest> element.
+     * Added interface annotation code to the <activity> element.
+     * Added interface annotation code to the <occupation> element.
+     * Changed the pattern directive for the <resource> element from <optional> to <zeroOrMore>.
      * Changed the pattern directive for the <occupation> element from <optional> to <zeroOrMore>.
-     * Deleted the interface annotation code for the <occupation>
+     * Changed the pattern directive for the <recordChangeDate> element from <zeroOrMore> to <optional>.
      MRB: Wed 11-Feb-2015
      * Added new introductory schema comments on the interface annotation code.
-     * Added new interface annotation code for the <recordCreation> element.
+     * Added interface annotation code to the <recordCreationDate> element.
      * Deleted the interface annotation code for the <originInfo> element, and added new interface annotation
      code to the parent of <originInfo>, the element <recordInfo>; <recordInfo> is defined in three different
      places in the schema (i.e., in recordInfo container elements for each of the person, organization, and
@@ -576,9 +580,13 @@
                     </interface-field>
                     <values type="person">
                         <choice>
-                            <value a:en="full name (inverse order)" default="yes">fullName</value>
+                            <value a:en="full name (inverted order)" default="yes"
+                                >fullNameInverted</value>
                             <a:documentation>e.g., Abergavenny, Frances Neville,
                                 Baroness</a:documentation>
+                            <value a:en="full name (direct order)">fullNameDirect</value>
+                            <a:documentation>e.g., Baroness Frances Neville
+                                Abergavenny</a:documentation>
                             <value a:en="family name">family</value>
                             <a:documentation>e.g., Abergavenny</a:documentation>
                             <value a:en="given names">given</value>
@@ -591,8 +599,10 @@
             </xs:annotation>
             <optional>
                 <choice>
-                    <value a:en="full name (inverse order)">fullName</value>
+                    <value a:en="full name (inverted order)">fullNameInvertedOrder</value>
                     <a:documentation>e.g., Abergavenny, Frances Neville, Baroness</a:documentation>
+                    <value a:en="full name (direct order)">fullNameDirectOrder</value>
+                    <a:documentation>e.g., Baroness Frances Neville Abergavenny</a:documentation>
                     <value a:en="family name">family</value>
                     <a:documentation>e.g., Abergavenny</a:documentation>
                     <value a:en="given names">given</value>
@@ -1129,15 +1139,16 @@
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person/description/occupations/occupation">
-                        <help-text xml:lang="en">Test of occupation code.</help-text>
+                        <help-text xml:lang="en">Occupation captures relevant paid occupations held
+                            by the person described in an entity record.</help-text>
                         <label xml:lang="en">Occupation(s)</label>
                         <input label="Add">dialogue</input>
                     </interface-field>
                 </xs:appinfo>
             </xs:annotation>
-            <interleave>
+            <optional>
                 <ref name="term-element"/>
-            </interleave>
+            </optional>
         </element>
     </define>
 
@@ -1157,6 +1168,19 @@
                 other significant activity that a person was engaged in. Examples: parenting, unpaid
                 domestic labour, nursing, as well as philantropic, missionary, or other political
                 activities.</a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/person/description/activities/activity">
+                        <help-text xml:lang="en">Activity captures all unpaid work or function such
+                            as volunteer work or other significant activity that a person was
+                            engaged in. Examples: parenting, unpaid domestic labour, nursing, as
+                            well as philantropic, missionary, or other political
+                            activities.</help-text>
+                        <label xml:lang="en">Activity(Activities)</label>
+                        <input label="Add">dialogue</input>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
             <optional>
                 <ref name="term-element"/>
             </optional>
@@ -1177,6 +1201,16 @@
         <element name="interest">
             <a:documentation>This field can capture a topic of interest associated with a person
                 entity.</a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/person/description/researchInterests/interest">
+                        <help-text xml:lang="en">This field can capture a topic of interest or
+                            research interest associated with a person entity.</help-text>
+                        <label xml:lang="en">Interest(s)</label>
+                        <input label="Add">dialogue</input>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
             <optional>
                 <ref name="term-element"/>
             </optional>
@@ -1746,9 +1780,9 @@
                 <optional>
                     <ref name="recordCreationDate-element"/>
                 </optional>
-                <zeroOrMore>
+                <optional>
                     <ref name="recordChangeDate-element"/>
-                </zeroOrMore>
+                </optional>
                 <optional>
                     <ref name="recordOrigin-element"/>
                 </optional>
@@ -1827,9 +1861,8 @@
 
     <define name="recordCreationDate-element">
         <element name="recordCreationDate">
-            <a:documentation>Provenance field used to capture the original creation date of an
-                entity instance deposited in CWRC. Dates of creation for new entities created in
-                CWRC are captured in FOXML. Equivalent to MADS recordCreationDate and EAC-CPF's
+            <a:documentation>Provenance field used to capture the original creation date of the
+                entity or authority record. Equivalent to MADS recordCreationDate and EAC-CPF's
                 maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime .
                 Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
             <xs:annotation>
@@ -1854,9 +1887,8 @@
 
     <define name="recordChangeDate-element">
         <element name="recordChangeDate">
-            <a:documentation>Provenance field used to capture the original modification dates of an
-                entity instance deposited in CWRC. Subsequent dates of modification in CWRC are
-                captured in FOXML. Equivalent to MADS recordChangeDate and EAC-CPF's
+            <a:documentation>Provenance field used to capture the last modification date of an
+                entity record. Equivalent to MADS recordChangeDate and EAC-CPF's
                 maintenanceHistory/maintenance/Event/eventType/eventDateTime . Date format is in the
                 form of YYYY, YYYY-MM, or YYYY-MM-DD format.</a:documentation>
             <choice>
