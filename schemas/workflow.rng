@@ -2,7 +2,7 @@
 
 <!--
 	MRB: Tue 29-Oct-2013
-	* Changed the schema declartion.
+	* Changed the schema declaration.
 	
 	MRB: Thu 10-Oct-2013
 	* Changed the @date attribute datatype from "dateTime" to "date", and added an optional @time attribute with a datatype of "time".
@@ -12,7 +12,7 @@
 	Revised workflow schema, based on discussions involving SIB, RKK, JCA, and MRB.  See the Google doc "Workflow
 	schema deconstruction" at https://docs.google.com/a/ualberta.ca/document/d/1xDB83PCwVXiF27j-Bn_EFxni4lxuPJHm1aFveVXnJL4/edit
 	for more information on the revisions undertaken.  The revisions included the following:
-	* Eliminated the <auto> and <human> elements.  There are now two main child elements of the the root <workflow> element,
+	* Eliminated the <auto> and <human> elements.  There are now two main child elements of the root <workflow> element,
 	<activity> (the workflow activity being chronicled) and <assigned> (the next workflow activity in the workflow chain).
 	* Made the @date, @userID, and @toolID attributes, which were attributes of the <auto> and <human> elements, attributes of
 	the <workflow> element.
