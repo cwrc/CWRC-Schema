@@ -1139,8 +1139,6 @@
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person/description/occupations/occupation">
-                        <help-text xml:lang="en">Occupation captures relevant paid occupations held
-                            by the person described in an entity record.</help-text>
                         <label xml:lang="en">Occupation(s)</label>
                         <input label="Add">dialogue</input>
                     </interface-field>
@@ -1171,11 +1169,6 @@
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person/description/activities/activity">
-                        <help-text xml:lang="en">Activity captures all unpaid work or function such
-                            as volunteer work or other significant activity that a person was
-                            engaged in. Examples: parenting, unpaid domestic labour, nursing, as
-                            well as philantropic, missionary, or other political
-                            activities.</help-text>
                         <label xml:lang="en">Activity(Activities)</label>
                         <input label="Add">dialogue</input>
                     </interface-field>
@@ -1199,13 +1192,11 @@
 
     <define name="interest-element">
         <element name="interest">
-            <a:documentation>This field can capture a topic of interest associated with a person
-                entity.</a:documentation>
+            <a:documentation>This field can capture a topic of interest or research interest
+                associated with a person entity.</a:documentation>
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person/description/researchInterests/interest">
-                        <help-text xml:lang="en">This field can capture a topic of interest or
-                            research interest associated with a person entity.</help-text>
                         <label xml:lang="en">Interest(s)</label>
                         <input label="Add">dialogue</input>
                     </interface-field>
@@ -1220,14 +1211,13 @@
     <define name="term-element">
         <element name="term">
             <a:documentation>Term works as a generic field to capture terms associated with an
-                entity in terms of occupation, activity, research interests, and
-                gender.</a:documentation>
+                entity in terms of occupation, activity, and research interests.</a:documentation>
             <xs:annotation>
                 <xs:appinfo>
                     <interface-field path="entity/person/description/occupations/occupation/term">
                         <help-text xml:lang="en">This field can capture relevant paid occupations
                             held by the person described in the present record.</help-text>
-                        <!--<label xml:lang="en">Occupation</label>-->
+                        <label xml:lang="en">Occupation</label>
                         <input>textField</input>
                     </interface-field>
                     <interface-field path="entity/person/description/activities/activity/term">
@@ -1241,9 +1231,9 @@
                     </interface-field>
                     <interface-field
                         path="entity/person/description/researchInterests/interest/term">
-                        <help-text xml:lang="en">This field can capture a topic of interest to the
-                            person entity. </help-text>
-                        <label xml:lang="en">Research interest</label>
+                        <help-text xml:lang="en">This field can capture a topic of interest or
+                            research interest associated with a person entity. </help-text>
+                        <label xml:lang="en">Interest</label>
                         <input>textField</input>
                     </interface-field>
                 </xs:appinfo>
