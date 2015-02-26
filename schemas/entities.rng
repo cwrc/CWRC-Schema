@@ -515,6 +515,15 @@
         <element name="displayLabel">
             <a:documentation>Display label of entity described if different than CWRC's
                 preferredForm.</a:documentation>
+            <xs:annotation>
+                <xs:appinfo>
+                    <interface-field path="entity/person/identity/displayLabel">
+                        <help-text xml:lang="en">The desired display label form of the name.</help-text>
+                        <label xml:lang="en">Display label</label>
+                        <input>textField</input>
+                    </interface-field>
+                </xs:appinfo>
+            </xs:annotation>
             <text/>
         </element>
     </define>
