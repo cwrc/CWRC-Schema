@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/ceww.css"?>
+ <?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/ceww.css"?>
 <?xml-model href="http://cwrc.ca/schemas/cwrc_entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <CWRC>
     <CWRCHEADER>
@@ -13,7 +13,7 @@
                 <AUTHORITY>Canada's Early Women Writers</AUTHORITY>
                 <AUTHORITY>Canadian Writing Research Collaboratory</AUTHORITY>
             </PUBLICATIONSTMT>
-            <SOURCEDESC/>
+            <SOURCEDESC>Born Digital object, innitially housed by the Simon Fraser University library.</SOURCEDESC>
         </FILEDESC>
         <PROFILEDESC>
             <LANGUSAGE>
@@ -30,8 +30,8 @@
         </PROFILEDESC>
         <REVISIONDESC>
             <WORKFLOW RESP="MRB" WORKCATEGORY="created" WORKSTATUS="C">
-                <DATE/>
-                <ITEM/>
+                <DATE></DATE>
+                <ITEM></ITEM>
             </WORKFLOW>
         </REVISIONDESC>
     </CWRCHEADER>
@@ -42,20 +42,10 @@
             <P>{Short_biography}</P>
         </AUTHORSUMMARY>
         <BIRTH>
-            <CHRONSTRUCT>
-                <DATE>{Birth_date}, </DATE>
-                <CHRONPROSE>
-                    <PLACE>{Birth_place}</PLACE>
-                </CHRONPROSE>
-            </CHRONSTRUCT>
+            <CHRONSTRUCT> <DATE>{Birth_date}, </DATE> <CHRONPROSE> <PLACE>{Birth_place}</PLACE> </CHRONPROSE> </CHRONSTRUCT>
         </BIRTH>
         <DEATH>
-            <CHRONSTRUCT>
-                <DATE>{Death_date}, </DATE>
-                <CHRONPROSE>
-                    <PLACE>{Death_place}</PLACE>
-                </CHRONPROSE>
-            </CHRONSTRUCT>
+            <CHRONSTRUCT> <DATE>{Death_date}, </DATE> <CHRONPROSE> <PLACE>{Death_place}</PLACE> </CHRONPROSE> </CHRONSTRUCT>
         </DEATH>
         <PERSONNAME>
             <HEADING SUBTYPE="5">Name at birth: </HEADING>
@@ -63,10 +53,7 @@
                 <DATAITEM>
                     <NAME>{Name_at_birth}</NAME>
                     <RESEARCHNOTE>Copy editor: break the Name above into its components inside the birthname tag below; delate the (now) empty name tag above.</RESEARCHNOTE>
-                    <BIRTHNAME>
-                        <GIVEN/>
-                        <SURNAME/>
-                    </BIRTHNAME>
+                    <BIRTHNAME> <GIVEN></GIVEN> <SURNAME></SURNAME> </BIRTHNAME>
                 </DATAITEM>
             </DATASTRUCT>
         </PERSONNAME>
@@ -76,251 +63,218 @@
                 <DATAITEM>
                     <NAME>{Alternative_names}</NAME>
                 </DATAITEM>
-                <RESEARCHNOTE>Copy editor: Break individual variant names into separate dataitems/names. In all cases thoroughout the file, @@ indicates the need for a paragprah marker</RESEARCHNOTE>
+                <RESEARCHNOTE>Copy editor: Break individual variant names into separate dataitems/names. In all cases thoroughout the file, @@ indicates the need for a paragprah marker; change alternative names that are pseudo or pen names to the NICKNAME tag</RESEARCHNOTE>
             </DATASTRUCT>
         </PERSONNAME>
         <HEADING SUBTYPE="2">Acknowledgements</HEADING>
+        <RESEARCHNOTE>This Heading should only appear if there are acknowledgements (from "Archives and resources" field); the "written by" should appear always...</RESEARCHNOTE>
         <FRONT>
             <P>{Archives_and_resources}</P>
             <P>Entry written by {Author_credits}</P>
+            <RESEARCHNOTE>Copy editor: if this has "revised by" in it, change the above text to conform.</RESEARCHNOTE>
         </FRONT>
-        <RESEARCHNOTE>Copy editor: if this has "revised by" in it, change the above text to conform.</RESEARCHNOTE>
         <AUTHORSUMMARY>
             <HEADING SUBTYPE="2"><NAME STANDARD="">{Author}</NAME> ({Birth_date}-{Death_date})</HEADING>
             <P>{Biography}</P>
             <RESEARCHNOTE>Break the paragraph above into multiple paragraphs if needed. Paragraphs marked by @@</RESEARCHNOTE>
         </AUTHORSUMMARY>
         <HEADING SUBTYPE="2">Published Texts</HEADING>
-        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the LISTBIBCIT>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
+        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Break the researchnotes under each heading below into separate bibliographic citations using the LISTBIBCIT>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the ID of the resource in the following format: "http://commons.cwrc.ca/UUID". Replace the "UUID" part with the "Identifier" value of the cited resource from the CWRC repository - a string of 32 lowercase hexadecimal digits. (object ID example: http://commons.cwrc.ca/e27a5b3a-1398-4f81-bac8-1355a4ef33a1 for the object located at: http://beta.cwrc.ca/islandora/object/islandora%3Ae27a5b3a-1398-4f81-bac8-1355a4ef33a1. If the resource is not yet included in the CWRC repository, add a RESEARCHNOTE and we will return to it once the resource has been added to the repository. Delete the now emplty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="3">Fiction</HEADING>
         <RESEARCHNOTE>{Novels}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Non-fiction</HEADING>
         <RESEARCHNOTE>{Non-fiction}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Life writing</HEADING>
         <RESEARCHNOTE>{Life_writing}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Short story collections</HEADING>
         <RESEARCHNOTE>{Short_story_collections}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Serialized fiction</HEADING>
         <RESEARCHNOTE>{Serialized_fiction}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Poetry</HEADING>
         <RESEARCHNOTE>{Poetry}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Plays</HEADING>
         <RESEARCHNOTE>{Plays}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Interviews</HEADING>
         <RESEARCHNOTE>{Interviews}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Unverified titles</HEADING>
         <RESEARCHNOTE>{Unverified_titles}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="2">Periodical contributions</HEADING>
         <RESEARCHNOTE>{Periodical_contributions}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="2">Other publications</HEADING>
+        <RESEARCHNOTE>Copy editor: separate Other Publications into the correct categories, under a heading level 3: Contributed to, edited, translated, etc. Remore the headings and the listbibcits for the categories that don't apply.</RESEARCHNOTE>
         <RESEARCHNOTE>{Other_publications}</RESEARCHNOTE>
+        <HEADING SUBTYPE="3">Anthologized in: </HEADING>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
+        </LISTBIBCIT>
+        <HEADING SUBTYPE="3">Contributed to: </HEADING>
+        <LISTBIBCIT>
+            <BIBCIT REF=""></BIBCIT>
+        </LISTBIBCIT>
+        <HEADING SUBTYPE="3">Edited: </HEADING>
+        <LISTBIBCIT>
+            <BIBCIT REF=""></BIBCIT>
+        </LISTBIBCIT>
+        <HEADING SUBTYPE="3">Translated: </HEADING>
+        <LISTBIBCIT>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="2">Other artistic productions</HEADING>
         <HEADING SUBTYPE="3">Music</HEADING>
         <RESEARCHNOTE>{Music}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Radio plays</HEADING>
         <RESEARCHNOTE>{Radioplays}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Screenplays</HEADING>
         <RESEARCHNOTE>{Screenplays}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Visual arts</HEADING>
         <RESEARCHNOTE>{Visual_arts}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Other</HEADING>
         <RESEARCHNOTE>{Other}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="2">Family and Relationships</HEADING>
         <FAMILY>
+            <RESEARCHNOTE>Copy editor: (for all CHRONSTRUCTs): if only one date is available, use DATE instead of DATERANGE. If dates are missing altogether, replace the CHRONSTRUCT with a DATASTRUCT and the CHRONPROSE with a DATAITEM.</RESEARCHNOTE>
+            <!--Ah!-->
             <FAMILYMEMBER RELATION="FATHER">
-                <HEADING SUBTYPE="3">
-                    <NAME>{Father}</NAME>
-                </HEADING>
-                <RESEARCHNOTE>Copy editor: (for all CHRONSTRUCTs): if only one date is available, use DATE instead of DATERANGE. If dates are missing altogether, replace the CHROSTRUCT with a DATASTRUCT and the CHRONPROSE with a DATAITEM.</RESEARCHNOTE>
-                <CHRONSTRUCT>
-                    <DATERANGE FROM="" TO="">{Father_life_dates}</DATERANGE>
-                    <CHRONPROSE>{Father_bio}</CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT><CHRONPROSE>Father: <NAME>{Father}</NAME></CHRONPROSE> <DATERANGE FROM="" TO="">{Father_life_dates}</DATERANGE></CHRONSTRUCT>
+                <P>{Father_bio}</P>
             </FAMILYMEMBER>
             <FAMILYMEMBER RELATION="MOTHER">
-                <HEADING SUBTYPE="3">
-                    <NAME>{Mother}</NAME>
-                </HEADING>
-                <CHRONSTRUCT>
-                    <DATERANGE FROM="" TO="">{Mother_life_dates}</DATERANGE>
-                    <CHRONPROSE>{Mother_bio}</CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT><CHRONPROSE>Mother: <NAME>{Mother}</NAME></CHRONPROSE> <DATERANGE FROM="" TO="">{Mother_life_dates}</DATERANGE></CHRONSTRUCT>
+                <P>{Mother_bio}</P>
             </FAMILYMEMBER>
             <HEADING SUBTYPE="4">Siblings</HEADING>
             <RESEARCHNOTE>{Siblings}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: break list of sibling into individual entities using the structure below, then delete the (now) empty researchnote tag above:</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="">
-                <NAME>Sibling Name</NAME>
-                <CHRONSTRUCT>
-                    <DATERANGE FROM="" TO="">(sibling date of birth-date of death)</DATERANGE>
-                    <CHRONPROSE>: additional information about sibling, items separated with semicolons</CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT> <CHRONPROSE><NAME>Sibling Name</NAME></CHRONPROSE><DATERANGE FROM="" TO="">(sibling date of birth &#8211; date of death)<!--Same below, for Children but that seems to be structured differently? Doesn't have the (child date of birth-child date of death) parallel structure--></DATERANGE></CHRONSTRUCT>
+                <P>(additional information about sibling) "m. [name]."</P>
+                <P>Then full sentences</P>
             </FAMILYMEMBER>
             <FAMILYMEMBER RELATION="HUSBAND">
-                <HEADING SUBTYPE="3">
-                    <NAME>{Spouse1} </NAME>
-                    <DATERANGE>({Spouse1_life_dates})</DATERANGE>
-                </HEADING>
+                <CHRONSTRUCT><CHRONPROSE>Spouse: <NAME>{Spouse1}</NAME> </CHRONPROSE><DATERANGE>({Spouse1_life_dates})</DATERANGE></CHRONSTRUCT>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
-                <CHRONSTRUCT>
-                    <DATE>{Marriage1_date}, </DATE>
-                    <CHRONPROSE>
-                        <PLACE>{Marriage1_place}</PLACE>
-                    </CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT> <DATE>{Marriage1_date}, </DATE> <CHRONPROSE> <PLACE>{Marriage1_place}</PLACE> </CHRONPROSE> </CHRONSTRUCT>
                 <P>{Spouse1bio}</P>
             </FAMILYMEMBER>
             <RESEARCHNOTE>{Children1}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: break list of children into a list of individuals using the structure below; if more than one child included, only the first child family member contains a heading tag:</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Children</HEADING>
-                <NAME>Child name</NAME>
-                <CHRONSTRUCT>
-                    <DATERANGE FROM="" TO=""/>
-                    <CHRONPROSE>(relation)</CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT><CHRONPROSE><NAME>Child name</NAME> (relation)</CHRONPROSE><DATERANGE FROM="" TO="">(date of birth &#8211; date of death)</DATERANGE></CHRONSTRUCT>
+                <P> additional info ": m. [name]."</P>
+                <RESEARCHNOTE>Copy editor: if more than one marriage, ": m. [name]; m. [name]; m. [name]."</RESEARCHNOTE>
+                <P> Then bio info in full sentences.</P>
             </FAMILYMEMBER>
             <!--This part repeats for each child-->
             <RESEARCHNOTE>{Children1bios}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by @@</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="HUSBAND">
-                <HEADING SUBTYPE="3">
-                    <NAME>{Spouse2} </NAME>
-                    <DATERANGE>{Spouse2_life_dates}</DATERANGE>
-                </HEADING>
+                <CHRONSTRUCT><CHRONPROSE>Spouse: <NAME>{Spouse2}</NAME> </CHRONPROSE><DATERANGE>({Spouse2_life_dates})</DATERANGE></CHRONSTRUCT>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
-                <CHRONSTRUCT>
-                    <DATE>{Marriage2_date}, </DATE>
-                    <CHRONPROSE>
-                        <PLACE>{Marriage2_place}</PLACE>
-                    </CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT> <DATE>{Marriage2_date}, </DATE> <CHRONPROSE> <PLACE>{Marriage2_place}</PLACE> </CHRONPROSE> </CHRONSTRUCT>
                 <P>{Spouse2bio}</P>
             </FAMILYMEMBER>
             <RESEARCHNOTE>{Children2}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: break list of children into a list of individuals using the structure below; if more than one child included, only the first child family member contains a heading tag:</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Children</HEADING>
-                <NAME>Child name</NAME>
-                <CHRONSTRUCT>
-                    <DATERANGE FROM="" TO=""/>
-                    <CHRONPROSE>(relation)</CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT><CHRONPROSE><NAME>Child name</NAME> (relation)</CHRONPROSE><DATERANGE FROM="" TO="">(date of birth &#8211; date of death)</DATERANGE></CHRONSTRUCT>
+                <P> additional info ": m. [name]."</P>
+                <RESEARCHNOTE>Copy editor: if more than one marriage, ": m. [name]; m. [name]; m. [name]."</RESEARCHNOTE>
+                <P> Then bio info in full sentences.</P>
             </FAMILYMEMBER>
             <!--This part repeats for each child-->
             <RESEARCHNOTE>{Children2bios}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by @@</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="HUSBAND">
-                <HEADING SUBTYPE="3">
-                    <NAME>{Spouse3} </NAME>
-                    <DATERANGE>{Spouse3_life_dates}</DATERANGE>
-                </HEADING>
+                <CHRONSTRUCT><CHRONPROSE>Spouse: <NAME>{Spouse3}</NAME> </CHRONPROSE><DATERANGE>({Spouse3_life_dates})</DATERANGE></CHRONSTRUCT>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
-                <CHRONSTRUCT>
-                    <DATE>{Marriage3_date}, </DATE>
-                    <CHRONPROSE>
-                        <PLACE>{Marriage3_place}</PLACE>
-                    </CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT> <DATE>{Marriage3_date}, </DATE> <CHRONPROSE> <PLACE>{Marriage3_place}</PLACE> </CHRONPROSE> </CHRONSTRUCT>
                 <P>{Spouse3bio}</P>
             </FAMILYMEMBER>
             <RESEARCHNOTE>{Children3}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: break list of children into a list of individuals using the structure below; if more than one child included, only the first child family member contains a heading tag:</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Children</HEADING>
-                <NAME>Child name</NAME>
-                <CHRONSTRUCT>
-                    <DATERANGE FROM="" TO=""/>
-                    <CHRONPROSE>(relation)</CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT><CHRONPROSE><NAME>Child name</NAME> (relation)</CHRONPROSE><DATERANGE FROM="" TO="">(date of birth &#8211; date of death)</DATERANGE></CHRONSTRUCT>
+                <P> additional info ": m. [name]."</P>
+                <RESEARCHNOTE>Copy editor: if more than one marriage, ": m. [name]; m. [name]; m. [name]."</RESEARCHNOTE>
+                <P> Then bio info in full sentences.</P>
             </FAMILYMEMBER>
             <!--This part repeats for each child-->
             <RESEARCHNOTE>{Children3bios}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by @@</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="HUSBAND">
-                <HEADING SUBTYPE="3">
-                    <NAME>{Spouse4} </NAME>
-                    <DATERANGE>{Spouse4_life_dates}</DATERANGE>
-                </HEADING>
+                <CHRONSTRUCT><CHRONPROSE>Spouse: <NAME>{Spouse4}</NAME> </CHRONPROSE><DATERANGE>({Spouse4_life_dates})</DATERANGE></CHRONSTRUCT>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
-                <CHRONSTRUCT>
-                    <DATE>{Marriage4_date}, </DATE>
-                    <CHRONPROSE>
-                        <PLACE>{Marriage4_place}</PLACE>
-                    </CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT> <DATE>{Marriage4_date}, </DATE> <CHRONPROSE> <PLACE>{Marriage4_place}</PLACE> </CHRONPROSE> </CHRONSTRUCT>
                 <P>{Spouse4bio}</P>
             </FAMILYMEMBER>
             <RESEARCHNOTE>{Children4}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: break list of children into a list of individuals using the structure below; if more than one child included, only the first child family member contains a heading tag:</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Children</HEADING>
-                <NAME>Child name</NAME>
-                <CHRONSTRUCT>
-                    <DATERANGE FROM="" TO=""/>
-                    <CHRONPROSE>(relation)</CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT><CHRONPROSE><NAME>Child name</NAME> (relation)</CHRONPROSE><DATERANGE FROM="" TO="">(date of birth &#8211; date of death)</DATERANGE></CHRONSTRUCT>
+                <P> additional info ": m. [name]."</P>
+                <RESEARCHNOTE>Copy editor: if more than one marriage, ": m. [name]; m. [name]; m. [name]."</RESEARCHNOTE>
+                <P> Then bio info in full sentences.</P>
             </FAMILYMEMBER>
             <!--This part repeats for each child-->
             <RESEARCHNOTE>{Children4bios}</RESEARCHNOTE>
             <RESEARCHNOTE>Copy editor: Break the content of the researchnote above into multiple paragraphs if needed. Paragraphs are marked by @@</RESEARCHNOTE>
             <RESEARCHNOTE>Other children: {Other_children}</RESEARCHNOTE>
-            <RESEARCHNOTE>Copy editor: If other children listed in the research note above, list them as individual family members below; if more than one child listed, only the first child family member contains a heading tag </RESEARCHNOTE>
+            <RESEARCHNOTE>Copy editor: If other children listed in the research note above, list them as individual family members below; if more than one child listed, only the first child family member contains a heading tag. Step-children, adopted children, etc. may be connected to a particualr husband. In this case, put that information in the bio "Child (dates) (relation): m. [name]. Child was the daughter of [spouse name]."</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Other children</HEADING>
-                <NAME>Child name</NAME>
-                <CHRONSTRUCT>
-                    <DATERANGE FROM="" TO=""/>
-                    <CHRONPROSE>(relation)</CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT><CHRONPROSE><NAME>Child name</NAME> (relation)</CHRONPROSE><DATERANGE FROM="" TO="">(date of birth &#8211; date of death)</DATERANGE></CHRONSTRUCT>
+                <P> additional info ": m. [name]."</P>
+                <RESEARCHNOTE>Copy editor: if more than one marriage, ": m. [name]; m. [name]; m. [name]."</RESEARCHNOTE>
+                <P> Then bio info in full sentences.</P>
             </FAMILYMEMBER>
         </FAMILY>
         <HEADING SUBTYPE="2">Religion</HEADING>
@@ -328,73 +282,55 @@
             <RELIGION>
                 <RESEARCHNOTE>{Religious_affiliation}</RESEARCHNOTE>
                 <RESEARCHNOTE>Copy editor: break list of reigious affiliations into individual denominations below and delete the (now) empty researchnote tag above</RESEARCHNOTE>
-                <DENOMINATION/>
+                <DENOMINATION></DENOMINATION>
             </RELIGION>
         </CULTURALFORMATION>
         <HEADING SUBTYPE="2">Residences</HEADING>
         <RESIDENCEANDMOBILITY RELATIONTO="LIVED">
             <RESEARCHNOTE>{Residences}</RESEARCHNOTE>
-            <RESEARCHNOTE>Copy editor: break list of residences into individual chronstructs below and delete the research note above when done</RESEARCHNOTE>
-            <CHRONSTRUCT>
-                <CHRONPROSE>
-                    <PLACE/>
-                </CHRONPROSE>
-                <DATERANGE/>
-            </CHRONSTRUCT>
+            <RESEARCHNOTE>Copy editor: break list of residences into individual Ps below and delete the research note above when done</RESEARCHNOTE>
+            <P><PLACE></PLACE> <DATERANGE></DATERANGE></P>
         </RESIDENCEANDMOBILITY>
         <HEADING SUBTYPE="2">Education</HEADING>
         <RESEARCHNOTE>{Education}</RESEARCHNOTE>
-        <RESEARCHNOTE>Copy editor: break education by mode (domestic, institutional, self taught) below, put each school or period of education in an individual chronstruct, and delete the (now) empty researchnote tag above.</RESEARCHNOTE>
+        <RESEARCHNOTE>Copy editor: break education by mode (domestic, institutional, self taught) below, put each school or period of education in an individual Ps, and delete the (now) empty researchnote tag above./RESEARCHNOTE>
         <EDUCATION MODE="">
-            <CHRONSTRUCT>
-                <DATERANGE/>
-                <CHRONPROSE/>
-            </CHRONSTRUCT>
+            <P></P>
         </EDUCATION>
         <HEADING SUBTYPE="2">Awards</HEADING>
         <RESEARCHNOTE>{Awards}</RESEARCHNOTE>
         <RECEPTION>
-            <RESEARCHNOTE>Copy editor: break list of awards, as well as Employment and membership below into individual chronstructs following the provided models and delete the now empty research notes when done</RESEARCHNOTE>
-            <CHRONSTRUCT>
-                <CHRONPROSE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME></RRECOGNITIONNAME> (<ORGNAME/></RRECOGNITIONSANDAWARDS>, </CHRONPROSE>
-                <DATE>)</DATE> 
-            </CHRONSTRUCT>
+            <RESEARCHNOTE>Copy editor: break list of awards, as well as Employment and membership below into individual Ps following the provided models and delete the now empty research notes when done</RESEARCHNOTE>
+            <P><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME></RRECOGNITIONNAME> for <TITLE LEVEL=""></TITLE> (<ORGNAME></ORGNAME></RRECOGNITIONSANDAWARDS>, <DATE></DATE>) </P>
+            <RESEARCHNOTE>Add an em-dash and "as [alternate name]" after "{Date awarded}) if necessary</RESEARCHNOTE>
         </RECEPTION>
         <HEADING SUBTYPE="2">Employment and Volunteer Activities</HEADING>
         <OCCUPATION>
             <HEADING SUBTYPE="3">Employment</HEADING>
             <RESEARCHNOTE>{Employment}</RESEARCHNOTE>
-            <CHRONSTRUCT>
-                <DATERANGE/>
-                <CHRONPROSE/>
-            </CHRONSTRUCT>
+            <P>Employment <DATERANGE></DATERANGE></P>
             <HEADING SUBTYPE="3">Unpayed and volunteer work</HEADING>
             <RESEARCHNOTE>{Unpaid_and_volunteer_work}</RESEARCHNOTE>
-            <CHRONSTRUCT>
-                <DATERANGE/>
-                <CHRONPROSE/>
-            </CHRONSTRUCT>
+            <P>Employment <DATERANGE></DATERANGE></P>
             <HEADING SUBTYPE="3">Memberships</HEADING>
             <RESEARCHNOTE>{Memberships}</RESEARCHNOTE>
-            <CHRONSTRUCT>
-                <DATERANGE/>
-                <CHRONPROSE/>
-            </CHRONSTRUCT>
+            <P>Membership </P>
         </OCCUPATION>
         <OTHERLIFEEVENT>
             <HEADING SUBTYPE="3">Tangential Information</HEADING>
             <P>{Tangential_information}</P>
         </OTHERLIFEEVENT>
-        <RESEARCHNOTE>Copy editor: For the remaining sections: Breack the researchnotes under each heading below into separate bibliographic citations using the LISTBIBCIT>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. Delete the now emplty research notes.</RESEARCHNOTE>
+        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the LISTBIBCIT>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the ID of the resource in the following format: "http://commons.cwrc.ca/UUID". Replace the "UUID" part with the "Identifier" value of the cited resource from the CWRC repository - a string of 32 lowercase hexadecimal digits. (object ID example: http://commons.cwrc.ca/e27a5b3a-1398-4f81-bac8-1355a4ef33a1 for the object located at: http://beta.cwrc.ca/islandora/object/islandora%3Ae27a5b3a-1398-4f81-bac8-1355a4ef33a1. If the resource is not yet included in the CWRC repository, add a RESEARCHNOTE and we will return to it once the resource has been added to the repository. Delete the now empty research notes.</RESEARCHNOTE>
         <HEADING SUBTYPE="2">Archival Holdings</HEADING>
         <RESEARCHNOTE>{Archive_material}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="2">Published Resources</HEADING>
+        <RESEARCHNOTE>Copy editor: For the entire "published texts" section: Breack the researchnotes under each heading below into separate bibliographic citations using the LISTBIBCIT>BIBCIT model. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the ID of the resource in the following format: "http://commons.cwrc.ca/UUID". Replace the "UUID" part with the "Identifier" value of the cited resource from the CWRC repository - a string of 32 lowercase hexadecimal digits. (object ID example: http://commons.cwrc.ca/e27a5b3a-1398-4f81-bac8-1355a4ef33a1 for the object located at: http://beta.cwrc.ca/islandora/object/islandora%3Ae27a5b3a-1398-4f81-bac8-1355a4ef33a1. If the resource is not yet included in the CWRC repository, add a RESEARCHNOTE and we will return to it once the resource has been added to the repository. Delete the now empty research notes.</RESEARCHNOTE>
         <RESEARCHNOTE>{Published_resources}</RESEARCHNOTE>
         <LISTBIBCIT>
-            <BIBCIT REF=""/>
+            <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
     </ENTRY>
 </CWRC>

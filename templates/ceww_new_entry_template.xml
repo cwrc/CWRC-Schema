@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/ceww.css"?>
+<!--<?xml-stylesheet type="text/css" href="../../../CWRC-Schema/templates/css/ceww.css"?>-->
 <?xml-model href="http://cwrc.ca/schemas/cwrc_entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <CWRC>
     <CWRCHEADER>
@@ -13,7 +14,7 @@
                 <AUTHORITY>Canada's Early Women Writers</AUTHORITY>
                 <AUTHORITY>Canadian Writing Research Collaboratory</AUTHORITY>
             </PUBLICATIONSTMT>
-            <SOURCEDESC/>
+            <SOURCEDESC></SOURCEDESC>
         </FILEDESC>
         <PROFILEDESC>
             <LANGUSAGE>
@@ -30,17 +31,17 @@
         </PROFILEDESC>
         <REVISIONDESC>
             <WORKFLOW RESP="MRB" WORKCATEGORY="created" WORKSTATUS="C">
-                <DATE/>
-                <ITEM/>
+                <DATE></DATE>
+                <ITEM></ITEM>
             </WORKFLOW>
         </REVISIONDESC>
     </CWRCHEADER>
     <ENTRY>
         <RESEARCHNOTE>Replace text in {} with the actual information or prose of the entry you are writing. Remove the curly brackets.</RESEARCHNOTE>
-        <HEADING SUBTYPE="1"><NAME STANDARD="">{Writer name}</NAME>({Date of birth}-{Date of Death})</HEADING>
+        <HEADING SUBTYPE="1"><NAME STANDARD="">{Writer name}</NAME>({Date of birth} &#8211; {Date of Death})</HEADING>
         <RESEARCHNOTE>Placeholder for image / image caption: {Image credits}</RESEARCHNOTE>
         <AUTHORSUMMARY>
-            <RESEARCHNOTE>Short biography of the writer <?oxy_comment_start author="ilovan" timestamp="20141103T210942-0700" comment="Karyn, do you have a maximum length for the short biography."?>(max. __wds)<?oxy_comment_end?></RESEARCHNOTE>
+            <RESEARCHNOTE>Short biography of the writer </RESEARCHNOTE>
             <P>{Short biography}</P>
         </AUTHORSUMMARY>
         <BIRTH>
@@ -52,41 +53,41 @@
         <PERSONNAME>
             <HEADING SUBTYPE="5">Name at birth: </HEADING>
             <DATASTRUCT>
-                <DATAITEM> <BIRTHNAME> <GIVEN>{Given name of writer at birth}</GIVEN> <SURNAME>{Last name of writer at birth </SURNAME> </BIRTHNAME> </DATAITEM>
+                <DATAITEM>
+                    <BIRTHNAME> <GIVEN>{Given name of writer at birth}</GIVEN> <SURNAME>{Last name of writer at birth}</SURNAME> </BIRTHNAME>
+                </DATAITEM>
             </DATASTRUCT>
         </PERSONNAME>
         <PERSONNAME>
-            <HEADING SUBTYPE="5">Variant names: </HEADING>
+            <HEADING SUBTYPE="5">Alternative names: </HEADING>
             <DATASTRUCT>
-                <DATAITEM> <RESEARCHNOTE><?oxy_comment_start author="ilovan" timestamp="20141104T153932-0700" comment="Karyn, could you add some guidelines as to what would constitute an alternative name?"?></RESEARCHNOTE><?oxy_comment_end?> <NAME>{Alternative names}</NAME> </DATAITEM>
+                <DATAITEM>
+                    <RESEARCHNOTE>Alternative names include variations on the listed name (all names/abbreviations under which the author published) as well as married names: these should be listed first in alphabetical order; pen-names and pseudonyms should then be listed in alphabetical order, in quotation marks); change alternative names that are pseudo or pen names to the NICKNAME tag</RESEARCHNOTE>
+                    <NAME>{Alternative names}</NAME>
+                </DATAITEM>
             </DATASTRUCT>
         </PERSONNAME>
         <HEADING SUBTYPE="2">Acknowledgements</HEADING>
         <FRONT>
-            <P>{Mention the Archives and resources consulted for this entry here}</P>
+            <P>{Mention of assistance from family members and members of the general public}</P>
             <P>Entry written by {Entry author name}</P>
         </FRONT>
-        <RESEARCHNOTE>Copy editor: if this has "revised by" in it, change the above text to <?oxy_comment_start author="ilovan" timestamp="20141104T155857-0700" comment="not sure how this would apply to the writing template"?>conform<?oxy_comment_end?>.</RESEARCHNOTE>
         <AUTHORSUMMARY>
-            <HEADING SUBTYPE="2"><NAME STANDARD="">{Standard name of the writer}</NAME> ({Date of birth}-{Date of death})</HEADING>
+            <HEADING SUBTYPE="2"><NAME STANDARD="">{Standard name of the writer}</NAME> ({Date of birth} &#8211; {Date of death})</HEADING>
             <P>{Biography}</P>
             <RESEARCHNOTE>Break the biography into multiple paragraphs if needed.</RESEARCHNOTE>
         </AUTHORSUMMARY>
         <HEADING SUBTYPE="2">Published Texts</HEADING>
-        <RESEARCHNOTE>For the entire "published texts" section: Under each of the sections below, where applicable, add bibliographic citations using the LISTBIBCIT>BIBCIT model (one LISTBIBCIT/type of published texts, one BIBCIT/text. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. </RESEARCHNOTE>
+        <RESEARCHNOTE>For the entire "published texts" section: Under each of the sections below, where applicable, add bibliographic citations using the LISTBIBCIT>BIBCIT model (one LISTBIBCIT/type of published texts, one BIBCIT/text. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the ID of the resource in the following format: "http://commons.cwrc.ca/UUID". Replace the "UUID" part with the "Identifier" value of the cited resource from the CWRC repository - a string of 32 lowercase hexadecimal digits. (object ID example: http://commons.cwrc.ca/e27a5b3a-1398-4f81-bac8-1355a4ef33a1 for the object located at: http://beta.cwrc.ca/islandora/object/islandora%3Ae27a5b3a-1398-4f81-bac8-1355a4ef33a1. If the resource is not yet included in the CWRC repository, add a RESEARCHNOTE and we will return to it once the resource has been added to the repository.</RESEARCHNOTE>
         <HEADING SUBTYPE="3">Fiction</HEADING>
-        <RESEARCHNOTE>Fiction:<?oxy_comment_start author="ilovan" timestamp="20141104T162407-0700" comment="maybe enummerate some genres? Similar for other sections of the Published Texts"?></RESEARCHNOTE>
-        <?oxy_comment_end?>
         <LISTBIBCIT>
             <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Non-fiction</HEADING>
-        <RESEARCHNOTE>Non-fiction:</RESEARCHNOTE>
         <LISTBIBCIT>
             <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="3">Life writing</HEADING>
-        <RESEARCHNOTE>Life writing:</RESEARCHNOTE>
         <LISTBIBCIT>
             <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
@@ -119,6 +120,20 @@
             <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="2">Other publications</HEADING>
+        <RESEARCHNOTE>Copy editor: separate out Other Publications into the correct categories, wach under a heading level 3: Contributed to, edited, translated, etc. by duplicating the Heading and Listbibcit items below as needed</RESEARCHNOTE>
+        <HEADING SUBTYPE="3">Anthologized in: </HEADING>
+        <LISTBIBCIT>
+            <BIBCIT REF=""></BIBCIT>
+        </LISTBIBCIT>
+        <HEADING SUBTYPE="3">Contributed to: </HEADING>
+        <LISTBIBCIT>
+            <BIBCIT REF=""></BIBCIT>
+        </LISTBIBCIT>
+        <HEADING SUBTYPE="3">Edited: </HEADING>
+        <LISTBIBCIT>
+            <BIBCIT REF=""></BIBCIT>
+        </LISTBIBCIT>
+        <HEADING SUBTYPE="3">Translated: </HEADING>
         <LISTBIBCIT>
             <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
@@ -146,44 +161,43 @@
         <HEADING SUBTYPE="2">Family and Relationships</HEADING>
         <FAMILY>
             <FAMILYMEMBER RELATION="FATHER">
-                <HEADING SUBTYPE="3"> <NAME>{The name of the writer's father}</NAME> </HEADING>
                 <RESEARCHNOTE>(for all CHRONSTRUCTs): if only one date is available, use DATE instead of DATERANGE. If dates are missing altogether, replace the CHROSTRUCT with a DATASTRUCT and the CHRONPROSE with a DATAITEM.</RESEARCHNOTE>
-                <CHRONSTRUCT>
-                    <DATERANGE FROM="" TO="">{Date of birth-Date of death}</DATERANGE>
-                    <CHRONPROSE>{Brief biography of the writer's father}</CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT><CHRONPROSE>Father: <NAME>{The name of the writer's father}</NAME></CHRONPROSE> <DATERANGE FROM="" TO="">{Date of birth} &#8211; {Date of death}</DATERANGE></CHRONSTRUCT>
+                <P>{Brief biography of the writer's father}</P>
             </FAMILYMEMBER>
             <FAMILYMEMBER RELATION="MOTHER">
-                <HEADING SUBTYPE="3"> <NAME>{The name of the writer's mother}</NAME> </HEADING>
-                <CHRONSTRUCT>
-                    <DATERANGE FROM="" TO="">{Date of birth-Date of death}</DATERANGE>
-                    <CHRONPROSE>{Brief biography of the writer's mother }</CHRONPROSE>
-                </CHRONSTRUCT>
+                <CHRONSTRUCT><CHRONPROSE>Mother: <NAME>{Name of the writer's mother}</NAME></CHRONPROSE> <DATERANGE FROM="" TO="">{Date of birth} &#8211; {Date of death}</DATERANGE></CHRONSTRUCT>
+                <P>{Brief biography of the writer's mother}</P>
             </FAMILYMEMBER>
             <HEADING SUBTYPE="4">Siblings</HEADING>
             <FAMILYMEMBER RELATION="">
-                <NAME>{Sibling Name}</NAME>
-                <CHRONSTRUCT> <DATERANGE FROM="" TO="">{Date of birth-Date of death}</DATERANGE> <CHRONPROSE>{additional information about sibling, items separated with semicolons}</CHRONPROSE> </CHRONSTRUCT>
+                <CHRONSTRUCT> <CHRONPROSE><NAME>{Sibling Name}</NAME></CHRONPROSE><DATERANGE FROM="" TO="">({Date of birth} &#8211; {Date of death})</DATERANGE></CHRONSTRUCT>
+                <P>(additional information about sibling) "m. [name]."</P>
+                <P>Then full sentences</P>
             </FAMILYMEMBER>
             <RESEARCHNOTE>Please repeat the spouse-children group as needed</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="HUSBAND">
-                <HEADING SUBTYPE="3"> <NAME>{The name of the writer's spouse} </NAME> <DATERANGE>({Date of birth-Date of death})</DATERANGE> </HEADING>
+                <CHRONSTRUCT><CHRONPROSE>Spouse: <NAME>{The name of the writer's spouse}</NAME> </CHRONPROSE><DATERANGE>({Date of birth} &#8211; {Date of death})</DATERANGE></CHRONSTRUCT>
                 <HEADING SUBTYPE="5">Marriage</HEADING>
                 <CHRONSTRUCT> <DATE>{Date married}, </DATE> <CHRONPROSE> <PLACE>{Place married}</PLACE> </CHRONPROSE> </CHRONSTRUCT>
                 <P>{Short biography of the spouse}</P>
             </FAMILYMEMBER>
-            <RESEARCHNOTE>only the first FAMILYMEMBER child element inside a spouse-children grouping contains a "Children" heading.</RESEARCHNOTE>
+            <RESEARCHNOTE>Copy editor: break list of children into a list of individuals using the structure below; if more than one child included, only the first child family member contains a heading tag:</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Children</HEADING>
-                <NAME>{Child name}</NAME>
-                <CHRONSTRUCT> <DATERANGE FROM="" TO=""></DATERANGE> <CHRONPROSE>{relation}</CHRONPROSE> </CHRONSTRUCT>
-                <P>{Child short bio}</P>
+                <CHRONSTRUCT><CHRONPROSE><NAME>Child name</NAME> (relation)</CHRONPROSE><DATERANGE FROM="" TO="">({Date of birth} &#8211; {Date of death})</DATERANGE></CHRONSTRUCT>
+                <P> additional info ": m. [name]."</P>
+                <RESEARCHNOTE>Copy editor: if more than one marriage, ": m. [name]; m. [name]; m. [name]."</RESEARCHNOTE>
+                <P> Then bio info in full sentences.</P>
             </FAMILYMEMBER>
-            <RESEARCHNOTE>Section below reserved for children unaffiliated with any of the writer's spousal relationships</RESEARCHNOTE>
+            <!--This part repeats for each child-->
+<RESEARCHNOTE>Section below reserved for children unaffiliated with any of the writer's spousal relationships, such as adopted children or step-children</RESEARCHNOTE>
             <FAMILYMEMBER RELATION="">
                 <HEADING SUBTYPE="4">Other children</HEADING>
-                <NAME>{Child name}</NAME>
-                <CHRONSTRUCT> <DATERANGE FROM="" TO=""></DATERANGE> <CHRONPROSE>{relation}</CHRONPROSE> </CHRONSTRUCT>
+                <CHRONSTRUCT><CHRONPROSE><NAME>{Child name}</NAME> (relation)</CHRONPROSE><DATERANGE FROM="" TO="">({Date of birth} &#8211; {Date of death})</DATERANGE></CHRONSTRUCT>
+                <P>, {relation}: {additional information about sibling "m. [name]."</P>
+                <RESEARCHNOTE>Copy editor: if more than one marriage, ": m. [name]; m. [name]; m. [name]."</RESEARCHNOTE>
+                <P> Then bio info in full sentences, no paragraph breaks.</P>
             </FAMILYMEMBER>
         </FAMILY>
         <HEADING SUBTYPE="2">Religion</HEADING>
@@ -196,37 +210,39 @@
         <HEADING SUBTYPE="2">Residences</HEADING>
         <RESIDENCEANDMOBILITY RELATIONTO="LIVED">
             <RESEARCHNOTE>Repeat if required</RESEARCHNOTE>
-            <CHRONSTRUCT> <CHRONPROSE> <PLACE>{PLace of residence}</PLACE> </CHRONPROSE> <DATERANGE>({Date moved in}-{Date moved out})</DATERANGE> </CHRONSTRUCT>
+            <P><PLACE>{Place of residence}</PLACE> <DATERANGE>({Date moved in}-{Date moved out})</DATERANGE></P>
         </RESIDENCEANDMOBILITY>
         <HEADING SUBTYPE="2">Education</HEADING>
         <RESEARCHNOTE>Break education by mode (domestic, institutional, self taught) below and put each school or period of education in an individual chronstruct.</RESEARCHNOTE>
         <EDUCATION MODE="">
-            <CHRONSTRUCT> <DATERANGE></DATERANGE> <CHRONPROSE></CHRONPROSE> </CHRONSTRUCT>
+            <P></P>
         </EDUCATION>
         <HEADING SUBTYPE="2">Awards</HEADING>
         <RECEPTION>
-            <RESEARCHNOTE>Break list of awards, as well as Employment and membership below into individual chronstructs following the provided models.</RESEARCHNOTE>
-            <CHRONSTRUCT> <CHRONPROSE><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{Name of the award received}</RRECOGNITIONNAME> (<ORGNAME>{Name of the granting organization}</ORGNAME></RRECOGNITIONSANDAWARDS>, </CHRONPROSE> <DATE>{Date awarded})</DATE></CHRONSTRUCT>
+            <RESEARCHNOTE>Break list of awards, as well as Employment and membership below into individual Ps following the provided models.</RESEARCHNOTE>
+            <P><RRECOGNITIONSANDAWARDS><RRECOGNITIONNAME>{Name of the award received}</RRECOGNITIONNAME> for <TITLE LEVEL=""></TITLE> (<ORGNAME>{Name of the granting organization}</ORGNAME></RRECOGNITIONSANDAWARDS>, <DATE>{Date awarded})</DATE>) </P>
+            <RESEARCHNOTE>Add an em-dash and "as [alternate name]" after "{Date awarded}) if necessary</RESEARCHNOTE>
         </RECEPTION>
-        <HEADING SUBTYPE="2">Employment and Volunteer Activities</HEADING>
+       <HEADING SUBTYPE="2">Employment and Volunteer Activities</HEADING>
         <OCCUPATION>
             <HEADING SUBTYPE="3">Employment</HEADING>
-            <CHRONSTRUCT> <DATERANGE></DATERANGE> <CHRONPROSE></CHRONPROSE> </CHRONSTRUCT>
+            <P>{Employment} <DATERANGE>{Date begun}-{Date finished}</DATERANGE></P>
             <HEADING SUBTYPE="3">Unpayed and volunteer work</HEADING>
-            <CHRONSTRUCT> <DATERANGE></DATERANGE> <CHRONPROSE></CHRONPROSE> </CHRONSTRUCT>
+            <P>{Employment} <DATERANGE>{Date begun}-{Date finished}</DATERANGE></P>
             <HEADING SUBTYPE="3">Memberships</HEADING>
-            <CHRONSTRUCT> <DATERANGE></DATERANGE> <CHRONPROSE></CHRONPROSE> </CHRONSTRUCT>
+            <P>{Organization name} </P>
         </OCCUPATION>
         <OTHERLIFEEVENT>
             <HEADING SUBTYPE="3">Tangential Information</HEADING>
-            <P>{Tangential information; }</P>
+            <P>{Tangential information}</P>
         </OTHERLIFEEVENT>
-        <RESEARCHNOTE>For the remaining sections: Under each of the sections below, where applicable, add bibliographic citations using the LISTBIBCIT>BIBCIT model (one LISTBIBCIT/type of published texts, one BIBCIT/text. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the PID value of the cited resource from the CWRC repository. </RESEARCHNOTE>
+        <RESEARCHNOTE>For the entire "published texts" section: Under each of the sections below, where applicable, add bibliographic citations using the LISTBIBCIT>BIBCIT model (one LISTBIBCIT/type of published texts, one BIBCIT/text. Where applicable, tag TITLE and XREF inside the BIBCIT. In the REF attribute of BIBCIT put the ID of the resource in the following format: "http://commons.cwrc.ca/UUID". Replace the "UUID" part with the "Identifier" value of the cited resource from the CWRC repository - a string of 32 lowercase hexadecimal digits. (object ID example: http://commons.cwrc.ca/e27a5b3a-1398-4f81-bac8-1355a4ef33a1 for the object located at: http://beta.cwrc.ca/islandora/object/islandora%3Ae27a5b3a-1398-4f81-bac8-1355a4ef33a1. If the resource is not yet included in the CWRC repository, add a RESEARCHNOTE and we will return to it once the resource has been added to the repository.</RESEARCHNOTE>
         <HEADING SUBTYPE="2">Archival Holdings</HEADING>
         <LISTBIBCIT>
             <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>
         <HEADING SUBTYPE="2">Published Resources</HEADING>
+        <RESEARCHNOTE>For the entire "published texts" section: Under each of the sections below, where applicable, add bibliographic citations using the LISTBIBCIT>BIBCIT model (one LISTBIBCIT/type of published texts, one BIBCIT/text. Where applicable, tag TITLE and XREF inside the BIBCIT (An XREF containing the URL should be added when the full text of the resource is available.) In the REF attribute of BIBCIT put the ID of the resource in the following format: "http://commons.cwrc.ca/UUID". Replace the "UUID" part with the "Identifier" value of the cited resource from the CWRC repository - a string of 32 lowercase hexadecimal digits. (object ID example: http://commons.cwrc.ca/e27a5b3a-1398-4f81-bac8-1355a4ef33a1 for the object located at: http://beta.cwrc.ca/islandora/object/islandora%3Ae27a5b3a-1398-4f81-bac8-1355a4ef33a1. If the resource is not yet included in the CWRC repository, add a RESEARCHNOTE and we will return to it once the resource has been added to the repository.</RESEARCHNOTE>
         <LISTBIBCIT>
             <BIBCIT REF=""></BIBCIT>
         </LISTBIBCIT>

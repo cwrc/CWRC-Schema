@@ -54,6 +54,15 @@ ENTRY{
     margin-left:3%
 }
 
+HEADING[SUBTYPE = "4"], 
+FAMILYMEMBER[RELATION = "MOTHER"] CHRONPROSE
+FAMILYMEMBER[RELATION = "FATHER"] CHRONPROSE
+{
+    font-weight:bold;
+    display:block;
+    font-size:medium;
+}
+
 P{padding-bottom:1%}
 
 HEADING[SUBTYPE = "1"]{
@@ -118,11 +127,8 @@ HEADING[SUBTYPE = "3"]{
 
 HEADING[SUBTYPE = "2"] + HEADING[SUBTYPE = "3"]{padding-top:0em}
 
-HEADING[SUBTYPE = "4"]{
-    font-weight:bold;
-    display:block;
-    font-size:medium;
-}
+
+
 
 LISTBIBCIT BIBCIT{
     display:block;
