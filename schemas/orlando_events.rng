@@ -64,11 +64,11 @@
 
         <!-- begin EVENTS element pattern -->
         <element name="EVENTS">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">chronEvent is an element that holds together all relevant information pertaining to an
-                individual chronology entry as well as its explanatory material.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Events is the root element that contains a series of chronEvent
+            elements.</a:documentation>
             <element name="CHRONEVENT">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A chronStruct is an element that holds together and therefore
-                    associates a date with the prose that describes an event.</a:documentation>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">chronEvent is an element that holds together all relevant information
+                    pertaining to an individual chronology entry as well as its explanatory material.</a:documentation>
                 <element name="CHRONSTRUCT">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A chronStruct is an element that holds together and therefore
           associates a date with the prose that describes an event.</a:documentation>
