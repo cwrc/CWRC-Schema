@@ -54,9 +54,7 @@ ENTRY{
     margin-left:3%
 }
 
-HEADING[SUBTYPE = "4"], 
-FAMILYMEMBER[RELATION = "MOTHER"] CHRONPROSE
-FAMILYMEMBER[RELATION = "FATHER"] CHRONPROSE
+HEADING[SUBTYPE = "4"]
 {
     font-weight:bold;
     display:block;
@@ -191,7 +189,39 @@ EDUCATION CHRONSTRUCT CHRONSPROSE{
 }
 AUTHORSUMMARY:nth-of-type(1){display:block; padding:1em; padding-left:15%; padding-right:15%;text-align:center}
 
+FAMILYMEMBER[RELATION = "MOTHER"] CHRONPROSE,
+FAMILYMEMBER[RELATION = "FATHER"] CHRONPROSE,
+FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT:first-child,
+FAMILYMEMBER[RELATION = "SPOUSE"] CHRONSTRUCT:first-child
+{
+    font-weight:bold;
+    display:block;
+    font-size:medium;
+    margin-bottom:1%
+}
 
+FAMILYMEMBER[RELATION = "CHILD"] CHRONSTRUCT,
+FAMILYMEMBER[RELATION = "DAUGHTER"] CHRONSTRUCT,
+FAMILYMEMBER[RELATION = "SON"] CHRONSTRUCT
+{
+    display:list-item;
+    list-style-type: square;
+    list-style-position:inside;
+    margin-left:3%
+}
 
+FAMILYMEMBER[RELATION = "CHILD"] CHRONSTRUCT NAME,
+FAMILYMEMBER[RELATION = "DAUGHTER"] CHRONSTRUCT NAME,
+FAMILYMEMBER[RELATION = "SON"] CHRONSTRUCT NAME
+{
+    font-weight:bold
+}
+FAMILYMEMBER[RELATION = "CHILD"] P,
+FAMILYMEMBER[RELATION = "DAUGHTER"] P,
+FAMILYMEMBER[RELATION = "SON"] P
+{
+    display:block;
+    margin-left:3%
+}
 
 
