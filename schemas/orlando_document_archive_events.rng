@@ -5,14 +5,16 @@
 <!-- 
     * MRB: Mon 16-Jun-2014
     *
-    * Purpose: RELAX NG schema to model Orlando events documents
+    * Purpose: RELAX NG schema to model a document that can contain Orlando CHRONEVENTs that can be individually pasted into the Orlando Document
+    *               Archive's Events textarea form field
     *
     * Description: A corpus of 13,658 Orlando freestanding events documents was used to generate a RELAX NG schema that modeled the corpus of documents.
     * Modifications included the following:
     *     - default values for some attributes were defined;
-    *     - enumerated lists of values for some attributes were defined; and
+    *     - enumerated lists of values for some attributes were defined;
     *     - element and attribute documentation was introduced via the a:documentation element (with namespace "a" [for "annotation"]).  (Note: the
-    *       documentation consists of the definition for that element or attribute taken from the Orlando Glossary or the TEI Guidelines.)
+    *       documentation consists of the definition for that element or attribute taken from the Orlando Glossary or the TEI Guidelines.); and
+    *     - changes were made so that a CHRONEVENT could be pasted into the textarea form field of the Document Archive.
     *
     * Schema design pattern: Although the standard design pattern terminology found in the literature refers to, and is most appropriate for, W3C XML
     * Schema (XSD), there is some applicability when applied to the schema design patterns in RELAX NG (RNG).  The standard four schema design patterns
@@ -33,14 +35,17 @@
 
 <!-- 
 *** Revisions ***
+* MRB: March 2015: Made the following changes:
+  - Revised the introductory "Purpose" and "Description" sections above.
+  - Made the element CHRONEVENT a repeatable element.
 * MRB: December 2014: Made the following changes:
   - Note: these changes were made to create an Orlando events schema that is used to model an Orlando events template, and the Orlando events template is used to create Orlando
-    freestanding events that can be copied and pasted into the Document Archives' Events text area form field (Isobel Grundy is the primary creator of freestanding events using this
+    freestanding events that can be copied and pasted into the Document Archive's Events textarea form field (Isobel Grundy is the primary creator of freestanding events using this
     method).
   - Changed root element from FREESTANDING_EVENT to EVENTS.
   - Added element CHRONEVENT as a child element of the root element EVENTS.
   - Removed the reference to the element BIBCITS from the element CHRONSTRUCT; this was done because a Perl error exception will be thrown if BIBCITS is a child of CHRONSTRUCT
-    when a freestanding event is pasted into the appropriate text area form field in the Document Archive.
+    when a freestanding event is pasted into the appropriate textarea form field in the Document Archive.
 * MRB: September 2014: Made the following changes:
   - Removed references to the element BIBCITS from the following parent elements: DIV2, and SHORTPROSE; one exception to the guiding principle that the parent element of BIBCITS
     must allow text is CHRONSTRUCT.
@@ -66,177 +71,179 @@
         <element name="EVENTS">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Events is the root element that contains a series of chronEvent
             elements.</a:documentation>
-            <element name="CHRONEVENT">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">chronEvent is an element that holds together all relevant information
+            <oneOrMore>
+                <element name="CHRONEVENT">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">chronEvent is an element that holds together all relevant information
                     pertaining to an individual chronology entry as well as its explanatory material.</a:documentation>
-                <element name="CHRONSTRUCT">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A chronStruct is an element that holds together and therefore
+                    <element name="CHRONSTRUCT">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A chronStruct is an element that holds together and therefore
           associates a date with the prose that describes an event.</a:documentation>
-                    <attribute name="CHRONCOLUMN">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given
+                        <attribute name="CHRONCOLUMN">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given
               chronology item as belonging to a subject-specific column of the Orlando print (and possibly electronic)
               chronology.</a:documentation>
-                        <choice>
-                            <value>NATIONALINTERNATIONAL</value>
-                            <value>BRITISHWOMENWRITERS</value>
-                            <value>WRITINGCLIMATE</value>
-                            <value>SOCIALCLIMATE</value>
-                        </choice>
-                    </attribute>
-                    <optional>
-                        <attribute name="CHRONCOLUMN1">
                             <choice>
-                                <value>NATIONALINTERNATIONAL1</value>
-                                <value>BRITISHWOMENWRITERS1</value>
-                                <value>WRITINGCLIMATE1</value>
-                                <value>SOCIALCLIMATE1</value>
+                                <value>NATIONALINTERNATIONAL</value>
+                                <value>BRITISHWOMENWRITERS</value>
+                                <value>WRITINGCLIMATE</value>
+                                <value>SOCIALCLIMATE</value>
                             </choice>
                         </attribute>
-                    </optional>
-                    <optional>
-                        <attribute name="CHRONCOLUMN2">
-                            <choice>
-                                <value>NATIONALINTERNATIONAL2</value>
-                                <value>BRITISHWOMENWRITERS2</value>
-                                <value>WRITINGCLIMATE2</value>
-                                <value>SOCIALCLIMATE2</value>
-                            </choice>
-                        </attribute>
-                    </optional>
-                    <optional>
-                        <attribute name="CHRONCOLUMN3">
-                            <choice>
-                                <value>NATIONALINTERNATIONAL3</value>
-                                <value>BRITISHWOMENWRITERS3</value>
-                                <value>WRITINGCLIMATE3</value>
-                                <value>SOCIALCLIMATE3</value>
-                            </choice>
-                        </attribute>
-                    </optional>
-                    <optional>
-                        <attribute name="ID">
-                            <data type="NCName"/>
-                        </attribute>
-                    </optional>
-                    <attribute name="RELEVANCE">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to
+                        <optional>
+                            <attribute name="CHRONCOLUMN1">
+                                <choice>
+                                    <value>NATIONALINTERNATIONAL1</value>
+                                    <value>BRITISHWOMENWRITERS1</value>
+                                    <value>WRITINGCLIMATE1</value>
+                                    <value>SOCIALCLIMATE1</value>
+                                </choice>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="CHRONCOLUMN2">
+                                <choice>
+                                    <value>NATIONALINTERNATIONAL2</value>
+                                    <value>BRITISHWOMENWRITERS2</value>
+                                    <value>WRITINGCLIMATE2</value>
+                                    <value>SOCIALCLIMATE2</value>
+                                </choice>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="CHRONCOLUMN3">
+                                <choice>
+                                    <value>NATIONALINTERNATIONAL3</value>
+                                    <value>BRITISHWOMENWRITERS3</value>
+                                    <value>WRITINGCLIMATE3</value>
+                                    <value>SOCIALCLIMATE3</value>
+                                </choice>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="ID">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <attribute name="RELEVANCE">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to
             each and every chronStruct. This element assignes importance to the chronstruct you have just created with categories for comprehensive,
             period, decade, and selective (in order of increasing importance).</a:documentation>
+                            <choice>
+                                <value>SELECTIVE</value>
+                                <value>PERIOD</value>
+                                <value>DECADE</value>
+                                <value>COMPREHENSIVE</value>
+                            </choice>
+                        </attribute>
+                        <optional>
+                            <attribute name="RELEVANCE1">
+                                <choice>
+                                    <value>SELECTIVE1</value>
+                                    <value>PERIOD1</value>
+                                    <value>DECADE1</value>
+                                    <value>COMPREHENSIVE1</value>
+                                </choice>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="RELEVANCE2">
+                                <choice>
+                                    <value>SELECTIVE2</value>
+                                    <value>PERIOD2</value>
+                                    <value>DECADE2</value>
+                                    <value>COMPREHENSIVE2</value>
+                                </choice>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="RELEVANCE3">
+                                <choice>
+                                    <value>SELECTIVE3</value>
+                                    <value>PERIOD3</value>
+                                    <value>DECADE3</value>
+                                    <value>COMPREHENSIVE3</value>
+                                </choice>
+                            </attribute>
+                        </optional>
+                        <ref name="RESP-attribute"/>
                         <choice>
-                            <value>SELECTIVE</value>
-                            <value>PERIOD</value>
-                            <value>DECADE</value>
-                            <value>COMPREHENSIVE</value>
+                            <ref name="DATE"/>
+                            <ref name="DATERANGE"/>
+                            <ref name="DATESTRUCT"/>
                         </choice>
-                    </attribute>
-                    <optional>
-                        <attribute name="RELEVANCE1">
-                            <choice>
-                                <value>SELECTIVE1</value>
-                                <value>PERIOD1</value>
-                                <value>DECADE1</value>
-                                <value>COMPREHENSIVE1</value>
-                            </choice>
-                        </attribute>
-                    </optional>
-                    <optional>
-                        <attribute name="RELEVANCE2">
-                            <choice>
-                                <value>SELECTIVE2</value>
-                                <value>PERIOD2</value>
-                                <value>DECADE2</value>
-                                <value>COMPREHENSIVE2</value>
-                            </choice>
-                        </attribute>
-                    </optional>
-                    <optional>
-                        <attribute name="RELEVANCE3">
-                            <choice>
-                                <value>SELECTIVE3</value>
-                                <value>PERIOD3</value>
-                                <value>DECADE3</value>
-                                <value>COMPREHENSIVE3</value>
-                            </choice>
-                        </attribute>
-                    </optional>
-                    <ref name="RESP-attribute"/>
-                    <choice>
-                        <ref name="DATE"/>
-                        <ref name="DATERANGE"/>
-                        <ref name="DATESTRUCT"/>
-                    </choice>
-                    <element name="CHRONPROSE">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
+                        <element name="CHRONPROSE">
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes
             the essential facts of a chronology event.</a:documentation>
-                        <oneOrMore>
-                            <choice>
-                                <text/>
-                                <ref name="BIBCITS"/>
-                                <ref name="DATE"/>
-                                <ref name="DATERANGE"/>
-                                <ref name="DATESTRUCT"/>
-                                <ref name="EMPH"/>
-                                <ref name="FOREIGN"/>
-                                <ref name="KEYWORDCLASS"/>
-                                <ref name="NAME"/>
-                                <ref name="ORGNAME"/>
-                                <ref name="PLACE"/>
-                                <ref name="QUOTE"/>
-                                <ref name="RESEARCHNOTE"/>
-                                <ref name="RS"/>
-                                <ref name="SCHOLARNOTE"/>
-                                <ref name="SIC"/>
-                                <ref name="SOCALLED"/>
-                                <ref name="TGENRE"/>
-                                <ref name="TITLE"/>
-                                <ref name="TOPIC"/>
-                                <element name="TINTERTEXTUALITY">
-                                    <ref name="TITLE"/>
-                                </element>
-                                <element name="TTHEMETOPIC">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the
-                  central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not
-                  aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</a:documentation>
+                            <oneOrMore>
+                                <choice>
                                     <text/>
-                                </element>
-                            </choice>
-                        </oneOrMore>
+                                    <ref name="BIBCITS"/>
+                                    <ref name="DATE"/>
+                                    <ref name="DATERANGE"/>
+                                    <ref name="DATESTRUCT"/>
+                                    <ref name="EMPH"/>
+                                    <ref name="FOREIGN"/>
+                                    <ref name="KEYWORDCLASS"/>
+                                    <ref name="NAME"/>
+                                    <ref name="ORGNAME"/>
+                                    <ref name="PLACE"/>
+                                    <ref name="QUOTE"/>
+                                    <ref name="RESEARCHNOTE"/>
+                                    <ref name="RS"/>
+                                    <ref name="SCHOLARNOTE"/>
+                                    <ref name="SIC"/>
+                                    <ref name="SOCALLED"/>
+                                    <ref name="TGENRE"/>
+                                    <ref name="TITLE"/>
+                                    <ref name="TOPIC"/>
+                                    <element name="TINTERTEXTUALITY">
+                                        <ref name="TITLE"/>
+                                    </element>
+                                    <element name="TTHEMETOPIC">
+                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is
+                                        the central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not
+                                        aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</a:documentation>
+                                        <text/>
+                                    </element>
+                                </choice>
+                            </oneOrMore>
+                        </element>
+                        <optional>
+                            <ref name="SCHOLARNOTES"/>
+                        </optional>
                     </element>
+                    <optional>
+                        <element name="SHORTPROSE">
+                            <oneOrMore>
+                                <choice>
+                                    <ref name="KEYWORDCLASS"/>
+                                    <ref name="P"/>
+                                </choice>
+                            </oneOrMore>
+                            <optional>
+                                <ref name="RESEARCHNOTE"/>
+                            </optional>
+                        </element>
+                    </optional>
+                    <optional>
+                        <element name="RESEARCHNOTES">
+                            <oneOrMore>
+                                <ref name="RESEARCHNOTE"/>
+                            </oneOrMore>
+                        </element>
+                    </optional>
                     <optional>
                         <ref name="SCHOLARNOTES"/>
                     </optional>
-                </element>
-                <optional>
-                    <element name="SHORTPROSE">
-                        <oneOrMore>
-                            <choice>
+                    <optional>
+                        <element name="KEYWORDCLASSES">
+                            <oneOrMore>
                                 <ref name="KEYWORDCLASS"/>
-                                <ref name="P"/>
-                            </choice>
-                        </oneOrMore>
-                        <optional>
-                            <ref name="RESEARCHNOTE"/>
-                        </optional>
-                    </element>
-                </optional>
-                <optional>
-                    <element name="RESEARCHNOTES">
-                        <oneOrMore>
-                            <ref name="RESEARCHNOTE"/>
-                        </oneOrMore>
-                    </element>
-                </optional>
-                <optional>
-                    <ref name="SCHOLARNOTES"/>
-                </optional>
-                <optional>
-                    <element name="KEYWORDCLASSES">
-                        <oneOrMore>
-                            <ref name="KEYWORDCLASS"/>
-                        </oneOrMore>
-                    </element>
-                </optional>
-            </element>
+                            </oneOrMore>
+                        </element>
+                    </optional>
+                </element>
+            </oneOrMore>
         </element>
         <!-- end EVENTS element pattern -->
 
