@@ -61,6 +61,10 @@ ENTRY{
     margin-left:3%
 }
 
+P{
+    line-height:150%
+}
+
 HEADING{
     display:block;
     font-weight:bold;
@@ -134,12 +138,12 @@ ENTRY BIRTH,
 BIRTH CHRONSTRUCT DATE,
 BIRTH CHRONSTRUCT CHRONPROSE,
 ENTRY RESIDENCEANDMOBILITY P,
-ENTRY PRODUCTION P,
+/*ENTRY PRODUCTION P,*/
 ENTRY CULTURALFORMATION P,
 FAMILY P,
 ENTRY RECEPTION,
-ENTRY OCUPATION P,
-ENTRY TEXTSCOPE
+ENTRY OCUPATION P/*,
+ENTRY TEXTSCOPE*/
 {
     display:block;
     margin-bottom:1em;
@@ -148,30 +152,33 @@ ENTRY TEXTSCOPE
 /*field labels:*/
 
 GIVEN:before{
-    content:"First Name: ";
+    content:"First Name:";
     display:inline-block;
-    margin-left:0%;
-    padding-left:0%
+    padding-right:0.5em
 
 }
 GIVEN + GIVEN{
     display:block
 }
 GIVEN + GIVEN:before{
-    content:"Middle Name: ";
-    display:inline-block
+    content:"Middle Name:";
+    display:inline-block;
+    padding-right:0.5em
 }
 
 
 SURNAME:before{
-    content:"Last Name at Birth: ";
+    content:"Last Name at Birth:";
+    padding-right:0.5em
 }
 NICKNAME:before{
-    content:"Nickname: ";
+    content:"Nickname:";
+    padding-right:0.5em
 }
 
 GENDER:before{
-    content:"Gender: ";
+    content:"Gender:";
+    padding-right:0.5em
 }
 
 /*DENOMINATION:first-of-type:before{
@@ -196,19 +203,26 @@ RECEPTION DATASTRUCT
 
 CHRONSTRUCT DATE,
 CHRONSTRUCT DATERANGE{display:table-cell; width:12em; /*border:solid;*/
-    padding-right:0%; padding-bottom:0.5em
-}
-CHRONPROSE{
-    display:table-cell; /*border:solid*/ padding-bottom:0.5em
-}
-DATASTRUCT{ /*border:solid;*/
-    width:auto; padding-bottom:0.5em
-}
-
-OTHERLIFEEVENT CHRONSTRUCT DATE,
-OTHERLIFEEVENT CHRONSTRUCT DATERANGE{
     padding-right:0%
 }
+CHRONPROSE{
+    display:table-cell; /*border:solid*/;
+    line-height:150%
+}
+DATASTRUCT{ /*border:solid;*/
+    width:auto;
+    line-height:150%
+}
+
+TEXTSCOPE PRODUCTION P{
+    display:block;
+    padding-left:12em
+}
+
+/*OTHERLIFEEVENT CHRONSTRUCT DATE,
+OTHERLIFEEVENT CHRONSTRUCT DATERANGE{
+    padding-right:0%
+}*/
 
 /*OCCUPATION CHRONSTRUCT CHRONPROSE ORGNAME{
     padding-left:3%
@@ -221,7 +235,10 @@ TEXTUALFEATURES P{
     display:block;
 }
 
-
+TEXTSCOPE PRODUCTION HEADING{
+    padding-top:0em;
+    margin-top:0em
+}
 TITLE[LEVEL = "MONOGRAPHIC"],
 TITLE[LEVEL = "UNPUBLISHED"]{
     font-style:italic
