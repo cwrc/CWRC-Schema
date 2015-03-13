@@ -102,7 +102,8 @@ TEXTSCOPE HEADING[SUBTYPE = "3"]
 HEADING[SUBTYPE = "4"]{
     font-size:1em;
     /*padding-left:4%;*/
-    padding-top:1em
+    padding-top:1em;
+    padding-bottom:0.2em
 }
 
 /*Mid-level body styling*/
@@ -138,7 +139,7 @@ ENTRY BIRTH,
 BIRTH CHRONSTRUCT DATE,
 BIRTH CHRONSTRUCT CHRONPROSE,
 ENTRY RESIDENCEANDMOBILITY P,
-/*ENTRY PRODUCTION P,*/
+ENTRY PRODUCTION P,
 ENTRY CULTURALFORMATION P,
 FAMILY P,
 ENTRY RECEPTION,
@@ -250,11 +251,9 @@ TITLE[LEVEL = "ANALYTIC"]:before{
 TITLE[LEVEL = "ANALYTIC"]:after{
     content:"\""
 }
-EMPH:before{
-    content:"\""
-}
-EMPH:after{
-    content:"\""
+
+EMPH{
+    font-style:italic
 }
 SOCALLED:before{
     content:"\""
