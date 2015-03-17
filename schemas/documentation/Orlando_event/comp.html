@@ -3,14 +3,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Schema documentation for orlando_writing.xsd</title>
+      <title>Schema documentation for orlando_event.xsd</title>
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
-        var propertiesBoxes= new Array('properties_orlando_writing.xsd', 
-				'properties_EVENTS', 
+        var propertiesBoxes= new Array('properties_orlando_event.xsd', 
+				'properties_EVENT', 
+				'properties_ORLANDOHEADER', 
+				'properties_FILEDESC', 
+				'properties_TITLESTMT', 
+				'properties_DOCTITLE', 
+				'properties_PUBLICATIONSTMT', 
+				'properties_AUTHORITY', 
+				'properties_SOURCEDESC', 
+				'properties_REVISIONDESC', 
+				'properties_RESPONSIBILITY', 
+				'properties_DATE', 
+				'properties_ITEM', 
 				'properties_CHRONEVENT', 
 				'properties_CHRONSTRUCT', 
-				'properties_DATE', 
 				'properties_DATERANGE', 
 				'properties_DATESTRUCT', 
 				'properties_DAY', 
@@ -57,6 +67,10 @@
 				'properties_DATE_CALENDAR', 
 				'properties_DATE_CERTAINTY', 
 				'properties_DATE_VALUE', 
+				'properties_RESP-attribute_RESP', 
+				'properties_RESPONSIBILITY_WORKSTATUS', 
+				'properties_RESPONSIBILITY_WORKVALUE', 
+				'properties_ORLANDOHEADER_TYPE', 
 				'properties_DATERANGE_CALENDAR', 
 				'properties_DATERANGE_CERTAINTY', 
 				'properties_DATERANGE_EXACT', 
@@ -89,7 +103,6 @@
 				'properties_ORGNAME_REF', 
 				'properties_FOREIGN_LANG', 
 				'properties_NAME_REF', 
-				'properties_RESP-attribute_RESP', 
 				'properties_XREF_URL', 
 				'properties_P_ID', 
 				'properties_SCHOLARNOTE_ID', 
@@ -101,9 +114,13 @@
 				'properties_CHRONSTRUCT_RELEVANCE', 
 				'properties_CHRONSTRUCT_RELEVANCE1', 
 				'properties_CHRONSTRUCT_RELEVANCE2', 
-				'properties_CHRONSTRUCT_RELEVANCE3');
+				'properties_CHRONSTRUCT_RELEVANCE3', 
+				'properties_EVENT_ID');
 var facetsBoxes= new Array('facets_DATE_CALENDAR', 
 				'facets_DATE_CERTAINTY', 
+				'facets_RESP-attribute_RESP', 
+				'facets_RESPONSIBILITY_WORKSTATUS', 
+				'facets_RESPONSIBILITY_WORKVALUE', 
 				'facets_DATERANGE_CALENDAR', 
 				'facets_DATERANGE_CERTAINTY', 
 				'facets_DATERANGE_EXACT', 
@@ -116,7 +133,6 @@ var facetsBoxes= new Array('facets_DATE_CALENDAR',
 				'facets_QUOTE_DIRECT', 
 				'facets_TITLE_TITLETYPE', 
 				'facets_TGENRE_GENRENAME', 
-				'facets_RESP-attribute_RESP', 
 				'facets_CHRONSTRUCT_CHRONCOLUMN', 
 				'facets_CHRONSTRUCT_CHRONCOLUMN1', 
 				'facets_CHRONSTRUCT_CHRONCOLUMN2', 
@@ -125,9 +141,19 @@ var facetsBoxes= new Array('facets_DATE_CALENDAR',
 				'facets_CHRONSTRUCT_RELEVANCE1', 
 				'facets_CHRONSTRUCT_RELEVANCE2', 
 				'facets_CHRONSTRUCT_RELEVANCE3');
-var usedByBoxes= new Array('usedBy_CHRONEVENT', 
-				'usedBy_CHRONSTRUCT', 
+var usedByBoxes= new Array('usedBy_ORLANDOHEADER', 
+				'usedBy_FILEDESC', 
+				'usedBy_TITLESTMT', 
+				'usedBy_DOCTITLE', 
+				'usedBy_PUBLICATIONSTMT', 
+				'usedBy_AUTHORITY', 
+				'usedBy_SOURCEDESC', 
+				'usedBy_REVISIONDESC', 
+				'usedBy_RESPONSIBILITY', 
 				'usedBy_DATE', 
+				'usedBy_ITEM', 
+				'usedBy_CHRONEVENT', 
+				'usedBy_CHRONSTRUCT', 
 				'usedBy_DATERANGE', 
 				'usedBy_DATESTRUCT', 
 				'usedBy_DAY', 
@@ -174,6 +200,10 @@ var usedByBoxes= new Array('usedBy_CHRONEVENT',
 				'usedBy_DATE_CALENDAR', 
 				'usedBy_DATE_CERTAINTY', 
 				'usedBy_DATE_VALUE', 
+				'usedBy_RESP-attribute_RESP', 
+				'usedBy_RESPONSIBILITY_WORKSTATUS', 
+				'usedBy_RESPONSIBILITY_WORKVALUE', 
+				'usedBy_ORLANDOHEADER_TYPE', 
 				'usedBy_DATERANGE_CALENDAR', 
 				'usedBy_DATERANGE_CERTAINTY', 
 				'usedBy_DATERANGE_EXACT', 
@@ -228,7 +258,6 @@ var usedByBoxes= new Array('usedBy_CHRONEVENT',
 				'usedBy_NAME_STANDARD', 
 				'usedBy_NAME_REF', 
 				'usedBy_KEYWORDCLASS_KEYWORDTYPE', 
-				'usedBy_RESP-attribute_RESP', 
 				'usedBy_XREF_URL', 
 				'usedBy_P_ID', 
 				'usedBy_SCHOLARNOTE_ID', 
@@ -241,11 +270,22 @@ var usedByBoxes= new Array('usedBy_CHRONEVENT',
 				'usedBy_CHRONSTRUCT_RELEVANCE1', 
 				'usedBy_CHRONSTRUCT_RELEVANCE2', 
 				'usedBy_CHRONSTRUCT_RELEVANCE3', 
+				'usedBy_EVENT_ID', 
 				'usedBy_RESP-attribute');
-var sourceBoxes= new Array('source_EVENTS', 
+var sourceBoxes= new Array('source_EVENT', 
+				'source_ORLANDOHEADER', 
+				'source_FILEDESC', 
+				'source_TITLESTMT', 
+				'source_DOCTITLE', 
+				'source_PUBLICATIONSTMT', 
+				'source_AUTHORITY', 
+				'source_SOURCEDESC', 
+				'source_REVISIONDESC', 
+				'source_RESPONSIBILITY', 
+				'source_DATE', 
+				'source_ITEM', 
 				'source_CHRONEVENT', 
 				'source_CHRONSTRUCT', 
-				'source_DATE', 
 				'source_DATERANGE', 
 				'source_DATESTRUCT', 
 				'source_DAY', 
@@ -292,6 +332,10 @@ var sourceBoxes= new Array('source_EVENTS',
 				'source_DATE_CALENDAR', 
 				'source_DATE_CERTAINTY', 
 				'source_DATE_VALUE', 
+				'source_RESP-attribute_RESP', 
+				'source_RESPONSIBILITY_WORKSTATUS', 
+				'source_RESPONSIBILITY_WORKVALUE', 
+				'source_ORLANDOHEADER_TYPE', 
 				'source_DATERANGE_CALENDAR', 
 				'source_DATERANGE_CERTAINTY', 
 				'source_DATERANGE_EXACT', 
@@ -346,7 +390,6 @@ var sourceBoxes= new Array('source_EVENTS',
 				'source_NAME_STANDARD', 
 				'source_NAME_REF', 
 				'source_KEYWORDCLASS_KEYWORDTYPE', 
-				'source_RESP-attribute_RESP', 
 				'source_XREF_URL', 
 				'source_P_ID', 
 				'source_SCHOLARNOTE_ID', 
@@ -359,8 +402,15 @@ var sourceBoxes= new Array('source_EVENTS',
 				'source_CHRONSTRUCT_RELEVANCE1', 
 				'source_CHRONSTRUCT_RELEVANCE2', 
 				'source_CHRONSTRUCT_RELEVANCE3', 
+				'source_EVENT_ID', 
 				'source_RESP-attribute');
-var instanceBoxes= new Array('instance_EVENTS', 
+var instanceBoxes= new Array('instance_EVENT', 
+				'instance_ORLANDOHEADER', 
+				'instance_FILEDESC', 
+				'instance_TITLESTMT', 
+				'instance_PUBLICATIONSTMT', 
+				'instance_REVISIONDESC', 
+				'instance_RESPONSIBILITY', 
 				'instance_CHRONEVENT', 
 				'instance_CHRONSTRUCT', 
 				'instance_DATESTRUCT', 
@@ -387,10 +437,20 @@ var instanceBoxes= new Array('instance_EVENTS',
 				'instance_SHORTPROSE', 
 				'instance_RESEARCHNOTES', 
 				'instance_KEYWORDCLASSES');
-var diagramBoxes= new Array('diagram_EVENTS', 
+var diagramBoxes= new Array('diagram_EVENT', 
+				'diagram_ORLANDOHEADER', 
+				'diagram_FILEDESC', 
+				'diagram_TITLESTMT', 
+				'diagram_DOCTITLE', 
+				'diagram_PUBLICATIONSTMT', 
+				'diagram_AUTHORITY', 
+				'diagram_SOURCEDESC', 
+				'diagram_REVISIONDESC', 
+				'diagram_RESPONSIBILITY', 
+				'diagram_DATE', 
+				'diagram_ITEM', 
 				'diagram_CHRONEVENT', 
 				'diagram_CHRONSTRUCT', 
-				'diagram_DATE', 
 				'diagram_DATERANGE', 
 				'diagram_DATESTRUCT', 
 				'diagram_DAY', 
@@ -435,10 +495,20 @@ var diagramBoxes= new Array('diagram_EVENTS',
 				'diagram_RESEARCHNOTES', 
 				'diagram_KEYWORDCLASSES', 
 				'diagram_RESP-attribute');
-var annotationBoxes= new Array('annotations_EVENTS', 
+var annotationBoxes= new Array('annotations_EVENT', 
+				'annotations_ORLANDOHEADER', 
+				'annotations_FILEDESC', 
+				'annotations_TITLESTMT', 
+				'annotations_DOCTITLE', 
+				'annotations_PUBLICATIONSTMT', 
+				'annotations_AUTHORITY', 
+				'annotations_SOURCEDESC', 
+				'annotations_REVISIONDESC', 
+				'annotations_RESPONSIBILITY', 
+				'annotations_DATE', 
+				'annotations_ITEM', 
 				'annotations_CHRONEVENT', 
 				'annotations_CHRONSTRUCT', 
-				'annotations_DATE', 
 				'annotations_DATERANGE', 
 				'annotations_DATESTRUCT', 
 				'annotations_DAY', 
@@ -472,6 +542,10 @@ var annotationBoxes= new Array('annotations_EVENTS',
 				'annotations_DATE_CALENDAR', 
 				'annotations_DATE_CERTAINTY', 
 				'annotations_DATE_VALUE', 
+				'annotations_RESP-attribute_RESP', 
+				'annotations_RESPONSIBILITY_WORKSTATUS', 
+				'annotations_RESPONSIBILITY_WORKVALUE', 
+				'annotations_ORLANDOHEADER_TYPE', 
 				'annotations_DATERANGE_CALENDAR', 
 				'annotations_DATERANGE_CERTAINTY', 
 				'annotations_DATERANGE_EXACT', 
@@ -512,12 +586,14 @@ var annotationBoxes= new Array('annotations_EVENTS',
 				'annotations_FOREIGN_REG', 
 				'annotations_NAME_STANDARD', 
 				'annotations_NAME_REF', 
-				'annotations_RESP-attribute_RESP', 
 				'annotations_XREF_URL', 
 				'annotations_CHRONSTRUCT_CHRONCOLUMN', 
 				'annotations_CHRONSTRUCT_RELEVANCE');
-var attributesBoxes= new Array('attributes_CHRONSTRUCT', 
+var attributesBoxes= new Array('attributes_EVENT', 
+				'attributes_ORLANDOHEADER', 
+				'attributes_RESPONSIBILITY', 
 				'attributes_DATE', 
+				'attributes_CHRONSTRUCT', 
 				'attributes_DATERANGE', 
 				'attributes_DATESTRUCT', 
 				'attributes_DAY', 
@@ -547,10 +623,16 @@ var attributesBoxes= new Array('attributes_CHRONSTRUCT',
 				'attributes_P', 
 				'attributes_XREF', 
 				'attributes_RESP-attribute');
-var modelBoxes= new Array('model_EVENTS', 
+var modelBoxes= new Array('model_EVENT', 
+				'model_ORLANDOHEADER', 
+				'model_FILEDESC', 
+				'model_TITLESTMT', 
+				'model_PUBLICATIONSTMT', 
+				'model_REVISIONDESC', 
+				'model_RESPONSIBILITY', 
+				'model_DATE', 
 				'model_CHRONEVENT', 
 				'model_CHRONSTRUCT', 
-				'model_DATE', 
 				'model_DATERANGE', 
 				'model_DATESTRUCT', 
 				'model_SEASON', 
@@ -857,6 +939,7 @@ var modelBoxes= new Array('model_EVENTS',
                                                 <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
                                                 <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
                                                 <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
+                                                <div><b><a href="index.html#AUTHORITY" target="_self" title="No namespace">AUTHORITY</a></b></div>
                                                 <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
                                                 <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
                                                 <div><b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b></div>
@@ -866,10 +949,13 @@ var modelBoxes= new Array('model_EVENTS',
                                                 <div><b><a href="index.html#DATERANGE" target="_self" title="No namespace">DATERANGE</a></b></div>
                                                 <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
                                                 <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
+                                                <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
-                                                <div><b><a href="index.html#EVENTS" target="_self" title="No namespace">EVENTS</a></b></div>
+                                                <div><b><a href="index.html#EVENT" target="_self" title="No namespace">EVENT</a></b></div>
+                                                <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
                                                 <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
@@ -878,13 +964,17 @@ var modelBoxes= new Array('model_EVENTS',
                                                 <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
                                                 <div><b><a href="index.html#OCCASION" target="_self" title="No namespace">OCCASION</a></b></div>
                                                 <div><b><a href="index.html#ORGNAME" target="_self" title="No namespace">ORGNAME</a></b></div>
+                                                <div><b><a href="index.html#ORLANDOHEADER" target="_self" title="No namespace">ORLANDOHEADER</a></b></div>
                                                 <div><b><a href="index.html#P" target="_self" title="No namespace">P</a></b></div>
                                                 <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
                                                 <div><b><a href="index.html#PLACENAME" target="_self" title="No namespace">PLACENAME</a></b></div>
+                                                <div><b><a href="index.html#PUBLICATIONSTMT" target="_self" title="No namespace">PUBLICATIONSTMT</a></b></div>
                                                 <div><b><a href="index.html#QUOTE" target="_self" title="No namespace">QUOTE</a></b></div>
                                                 <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b></div>
+                                                <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
+                                                <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
                                                 <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
                                                 <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
                                                 <div><b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b></div>
@@ -893,10 +983,12 @@ var modelBoxes= new Array('model_EVENTS',
                                                 <div><b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></div>
                                                 <div><b><a href="index.html#SIC" target="_self" title="No namespace">SIC</a></b></div>
                                                 <div><b><a href="index.html#SOCALLED" target="_self" title="No namespace">SOCALLED</a></b></div>
+                                                <div><b><a href="index.html#SOURCEDESC" target="_self" title="No namespace">SOURCEDESC</a></b></div>
                                                 <div><b><a href="index.html#TGENRE" target="_self" title="No namespace">TGENRE</a></b></div>
                                                 <div><b><a href="index.html#TIME" target="_self" title="No namespace">TIME</a></b></div>
                                                 <div><b><a href="index.html#TINTERTEXTUALITY" target="_self" title="No namespace">TINTERTEXTUALITY</a></b></div>
                                                 <div><b><a href="index.html#TITLE" target="_self" title="No namespace">TITLE</a></b></div>
+                                                <div><b><a href="index.html#TITLESTMT" target="_self" title="No namespace">TITLESTMT</a></b></div>
                                                 <div><b><a href="index.html#TOPIC" target="_self" title="No namespace">TOPIC</a></b></div>
                                                 <div><b><a href="index.html#TTHEMETOPIC" target="_self" title="No namespace">TTHEMETOPIC</a></b></div>
                                                 <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
@@ -986,6 +1078,7 @@ var modelBoxes= new Array('model_EVENTS',
                                           <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
                                           <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
                                           <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
+                                          <div><b><a href="index.html#AUTHORITY" target="_self" title="No namespace">AUTHORITY</a></b></div>
                                           <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
                                           <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
                                           <div><b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b></div>
@@ -995,10 +1088,13 @@ var modelBoxes= new Array('model_EVENTS',
                                           <div><b><a href="index.html#DATERANGE" target="_self" title="No namespace">DATERANGE</a></b></div>
                                           <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
                                           <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
+                                          <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                           <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
-                                          <div><b><a href="index.html#EVENTS" target="_self" title="No namespace">EVENTS</a></b></div>
+                                          <div><b><a href="index.html#EVENT" target="_self" title="No namespace">EVENT</a></b></div>
+                                          <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                           <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                           <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                          <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                           <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                           <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
                                           <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
@@ -1007,13 +1103,17 @@ var modelBoxes= new Array('model_EVENTS',
                                           <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
                                           <div><b><a href="index.html#OCCASION" target="_self" title="No namespace">OCCASION</a></b></div>
                                           <div><b><a href="index.html#ORGNAME" target="_self" title="No namespace">ORGNAME</a></b></div>
+                                          <div><b><a href="index.html#ORLANDOHEADER" target="_self" title="No namespace">ORLANDOHEADER</a></b></div>
                                           <div><b><a href="index.html#P" target="_self" title="No namespace">P</a></b></div>
                                           <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
                                           <div><b><a href="index.html#PLACENAME" target="_self" title="No namespace">PLACENAME</a></b></div>
+                                          <div><b><a href="index.html#PUBLICATIONSTMT" target="_self" title="No namespace">PUBLICATIONSTMT</a></b></div>
                                           <div><b><a href="index.html#QUOTE" target="_self" title="No namespace">QUOTE</a></b></div>
                                           <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
                                           <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
                                           <div><b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b></div>
+                                          <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
+                                          <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
                                           <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
                                           <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
                                           <div><b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b></div>
@@ -1022,10 +1122,12 @@ var modelBoxes= new Array('model_EVENTS',
                                           <div><b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></div>
                                           <div><b><a href="index.html#SIC" target="_self" title="No namespace">SIC</a></b></div>
                                           <div><b><a href="index.html#SOCALLED" target="_self" title="No namespace">SOCALLED</a></b></div>
+                                          <div><b><a href="index.html#SOURCEDESC" target="_self" title="No namespace">SOURCEDESC</a></b></div>
                                           <div><b><a href="index.html#TGENRE" target="_self" title="No namespace">TGENRE</a></b></div>
                                           <div><b><a href="index.html#TIME" target="_self" title="No namespace">TIME</a></b></div>
                                           <div><b><a href="index.html#TINTERTEXTUALITY" target="_self" title="No namespace">TINTERTEXTUALITY</a></b></div>
                                           <div><b><a href="index.html#TITLE" target="_self" title="No namespace">TITLE</a></b></div>
+                                          <div><b><a href="index.html#TITLESTMT" target="_self" title="No namespace">TITLESTMT</a></b></div>
                                           <div><b><a href="index.html#TOPIC" target="_self" title="No namespace">TOPIC</a></b></div>
                                           <div><b><a href="index.html#TTHEMETOPIC" target="_self" title="No namespace">TTHEMETOPIC</a></b></div>
                                           <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
@@ -1089,8 +1191,8 @@ var modelBoxes= new Array('model_EVENTS',
          <div class="level1" id="toc_group_by_location" style="display:none">
             <div>
                <div class="level2">
-                  <p><input id="button_gr_orlando_writing.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_writing.xsd');" class="control" /><span class="indexGroupTitle">orlando_writing.xsd</span></p>
-                  <div id="gr_orlando_writing.xsd" style="display:block">
+                  <p><input id="button_gr_orlando_event.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event.xsd');" class="control" /><span class="indexGroupTitle">orlando_event.xsd</span></p>
+                  <div id="gr_orlando_event.xsd" style="display:block">
                      <div class="horizontalLayout">
                         <table class="rt">
                            <tr>
@@ -1104,7 +1206,7 @@ var modelBoxes= new Array('model_EVENTS',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
-                                          <td class="componentGroup"><input id="button_gr_orlando_writing.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_writing.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup"><input id="button_gr_orlando_event.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event.xsdElement');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Elements</div>
                                           </td>
@@ -1112,10 +1214,11 @@ var modelBoxes= new Array('model_EVENTS',
                                        <tr>
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
-                                             <div id="gr_orlando_writing.xsdElement" class="componentGroup" style="display:block">
+                                             <div id="gr_orlando_event.xsdElement" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
                                                 <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
                                                 <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
+                                                <div><b><a href="index.html#AUTHORITY" target="_self" title="No namespace">AUTHORITY</a></b></div>
                                                 <div><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></div>
                                                 <div><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></div>
                                                 <div><b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b></div>
@@ -1125,10 +1228,13 @@ var modelBoxes= new Array('model_EVENTS',
                                                 <div><b><a href="index.html#DATERANGE" target="_self" title="No namespace">DATERANGE</a></b></div>
                                                 <div><b><a href="index.html#DATESTRUCT" target="_self" title="No namespace">DATESTRUCT</a></b></div>
                                                 <div><b><a href="index.html#DAY" target="_self" title="No namespace">DAY</a></b></div>
+                                                <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
-                                                <div><b><a href="index.html#EVENTS" target="_self" title="No namespace">EVENTS</a></b></div>
+                                                <div><b><a href="index.html#EVENT" target="_self" title="No namespace">EVENT</a></b></div>
+                                                <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
                                                 <div><b><a href="index.html#L" target="_self" title="No namespace">L</a></b></div>
@@ -1137,13 +1243,17 @@ var modelBoxes= new Array('model_EVENTS',
                                                 <div><b><a href="index.html#NAME" target="_self" title="No namespace">NAME</a></b></div>
                                                 <div><b><a href="index.html#OCCASION" target="_self" title="No namespace">OCCASION</a></b></div>
                                                 <div><b><a href="index.html#ORGNAME" target="_self" title="No namespace">ORGNAME</a></b></div>
+                                                <div><b><a href="index.html#ORLANDOHEADER" target="_self" title="No namespace">ORLANDOHEADER</a></b></div>
                                                 <div><b><a href="index.html#P" target="_self" title="No namespace">P</a></b></div>
                                                 <div><b><a href="index.html#PLACE" target="_self" title="No namespace">PLACE</a></b></div>
                                                 <div><b><a href="index.html#PLACENAME" target="_self" title="No namespace">PLACENAME</a></b></div>
+                                                <div><b><a href="index.html#PUBLICATIONSTMT" target="_self" title="No namespace">PUBLICATIONSTMT</a></b></div>
                                                 <div><b><a href="index.html#QUOTE" target="_self" title="No namespace">QUOTE</a></b></div>
                                                 <div><b><a href="index.html#REGION" target="_self" title="No namespace">REGION</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTE" target="_self" title="No namespace">RESEARCHNOTE</a></b></div>
                                                 <div><b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b></div>
+                                                <div><b><a href="index.html#RESPONSIBILITY" target="_self" title="No namespace">RESPONSIBILITY</a></b></div>
+                                                <div><b><a href="index.html#REVISIONDESC" target="_self" title="No namespace">REVISIONDESC</a></b></div>
                                                 <div><b><a href="index.html#RS" target="_self" title="No namespace">RS</a></b></div>
                                                 <div><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b></div>
                                                 <div><b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b></div>
@@ -1152,10 +1262,12 @@ var modelBoxes= new Array('model_EVENTS',
                                                 <div><b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></div>
                                                 <div><b><a href="index.html#SIC" target="_self" title="No namespace">SIC</a></b></div>
                                                 <div><b><a href="index.html#SOCALLED" target="_self" title="No namespace">SOCALLED</a></b></div>
+                                                <div><b><a href="index.html#SOURCEDESC" target="_self" title="No namespace">SOURCEDESC</a></b></div>
                                                 <div><b><a href="index.html#TGENRE" target="_self" title="No namespace">TGENRE</a></b></div>
                                                 <div><b><a href="index.html#TIME" target="_self" title="No namespace">TIME</a></b></div>
                                                 <div><b><a href="index.html#TINTERTEXTUALITY" target="_self" title="No namespace">TINTERTEXTUALITY</a></b></div>
                                                 <div><b><a href="index.html#TITLE" target="_self" title="No namespace">TITLE</a></b></div>
+                                                <div><b><a href="index.html#TITLESTMT" target="_self" title="No namespace">TITLESTMT</a></b></div>
                                                 <div><b><a href="index.html#TOPIC" target="_self" title="No namespace">TOPIC</a></b></div>
                                                 <div><b><a href="index.html#TTHEMETOPIC" target="_self" title="No namespace">TTHEMETOPIC</a></b></div>
                                                 <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
@@ -1188,7 +1300,7 @@ var modelBoxes= new Array('model_EVENTS',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
-                                          <td class="componentGroup"><input id="button_gr_orlando_writing.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_writing.xsdAttribute_Group');" class="control" /></td>
+                                          <td class="componentGroup"><input id="button_gr_orlando_event.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event.xsdAttribute_Group');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Attribute Groups</div>
                                           </td>
@@ -1196,7 +1308,7 @@ var modelBoxes= new Array('model_EVENTS',
                                        <tr>
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
-                                             <div id="gr_orlando_writing.xsdAttribute_Group" class="componentGroup" style="display:block">
+                                             <div id="gr_orlando_event.xsdAttribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
                                              </div>
                                           </td>
