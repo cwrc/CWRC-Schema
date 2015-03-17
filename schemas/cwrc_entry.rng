@@ -33,7 +33,15 @@
 
 <!-- 
 *** Revisions ***
-* MRB: December 2015: Made the following changes:
+* MRB: March 2015: Made the following changes:
+  - Created a new element CHRONEVENT, that has child elements of CHRONSTRUCT, P, RESEARCHNOTE, BIBCITS, and KEYWORDCLASS; CHRONEVENT is available in
+     the same elements that CHRONSTRUCT is available in; all child elements can only appear once, CHRONSTRUCT is required and must appear first, and the other child elements
+     are optional and can appear in any order (i.e., are interleaved).
+  - Created an attribute LAT in the element PLACE.
+  - Created an attribute LONG in the element PLACE.
+  - Created an attribute REG in the element TTHEMETOPIC.
+  - Added the enumerated list of values from the entities.rng schema's orgType element to the attribute ORGTYPE in the element ORGNAME.
+* MRB: December 2014: Made the following changes:
   - Added to the enumerated list of values for the attribute GENRENAME in the element TGENRE the following values: COLLECTIVECREATION, DANCE, MUSICAL, PHYSICALTHEATRE,
     PODPLAY, and THEATREFORYOUNGAUDIENCES.
   - Added to the enumerated list of values for the ROLE element the following values: Agent, Assistant director, Clown, Filmmaker, Mask designer, Performance artist, Playwright,
@@ -539,6 +547,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -558,6 +567,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -595,6 +605,7 @@
                     <choice>
                         <ref name="P"/>
                         <ref name="DATASTRUCT"/>
+                        <ref name="CHRONEVENT"/>
                         <ref name="CHRONSTRUCT"/>
                         <ref name="KEYWORDCLASS"/>
                         <ref name="RESEARCHNOTE"/>
@@ -612,6 +623,7 @@
                         discussions of these complexities and allow for the historical and biographical specificities of
                         one&apos;s relation to class.</a:documentation>
                             <choice>
+                                <ref name="CHRONEVENT"/>
                                 <ref name="CHRONSTRUCT"/>
                                 <ref name="P"/>
                             </choice>
@@ -682,6 +694,7 @@
                         influence of Quakerism, for example, on women&apos;s writing and lives.</a:documentation>
                             <interleave>
                                 <optional>
+                                    <ref name="CHRONEVENT"/>
                                     <ref name="CHRONSTRUCT"/>
                                 </optional>
                                 <zeroOrMore>
@@ -733,6 +746,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -755,6 +769,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -792,6 +807,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -831,6 +847,7 @@
                     <choice>
                         <ref name="P"/>
                         <ref name="DATASTRUCT"/>
+                        <ref name="CHRONEVENT"/>
                         <ref name="CHRONSTRUCT"/>
                         <ref name="KEYWORDCLASS"/>
                         <ref name="RESEARCHNOTE"/>
@@ -885,6 +902,7 @@
                             <oneOrMore>
                                 <choice>
                                     <ref name="CHILDREN"/>
+                                    <ref name="CHRONEVENT"/>
                                     <ref name="CHRONSTRUCT"/>
                                     <ref name="DATASTRUCT"/>
                                     <ref name="HEADING"/>
@@ -907,6 +925,7 @@
                             <interleave>
                                 <zeroOrMore>
                                     <choice>
+                                        <ref name="CHRONEVENT"/>
                                         <ref name="CHRONSTRUCT"/>
                                         <ref name="P"/>
                                     </choice>
@@ -942,6 +961,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -981,6 +1001,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1030,6 +1051,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1054,6 +1076,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1088,6 +1111,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1110,6 +1134,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1130,6 +1155,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1150,6 +1176,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1173,6 +1200,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1196,6 +1224,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1222,6 +1251,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1247,6 +1277,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
@@ -1326,6 +1357,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
@@ -1405,6 +1437,7 @@
                     <ref name="HEADING"/>
                     <ref name="P"/>
                     <ref name="DATASTRUCT"/>
+                    <ref name="CHRONEVENT"/>
                     <ref name="CHRONSTRUCT"/>
                     <ref name="BIBCITS"/>
                     <ref name="KEYWORDCLASS"/>
@@ -1788,6 +1821,24 @@
                     <ref name="XREF"/>
                 </choice>
             </oneOrMore>
+        </element>
+    </define>
+
+    <define name="CHRONEVENT">
+        <element name="CHRONEVENT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">chronEvent is an element that holds together all relevant information
+               pertaining to an individual chronology entry as well as its explanatory material.</a:documentation>
+            <ref name="CHRONSTRUCT"/>
+            <interleave>
+                <zeroOrMore>
+                    <choice>
+                        <ref name="P"/>
+                        <ref name="RESEARCHNOTE"/>
+                        <ref name="BIBCITS"/>
+                        <ref name="KEYWORDCLASS"/>
+                    </choice>
+                </zeroOrMore>
+            </interleave>
         </element>
     </define>
 
@@ -2612,7 +2663,23 @@
             </optional>
             <optional>
                 <attribute name="REF">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition for the entity
+                        being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="LAT">
+                    <a:documentation>Latitude in decimal degrees of the place entity. Example: for the place entity Edmonton, the latitude in decimal degrees is "53.55014" (WGS [World
+                        Geodetic System] 84 reference coordinate system).</a:documentation>
+                    <data type="decimal"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="LONG">
+                    <a:documentation>Longitude in decimal degrees of the place entity. Example: for the place entity Edmonton, the longitude in decimal degrees is "-113.46871"  (WGS
+                        [World Geodetic System] 84 reference coordinate system).</a:documentation>
+                    <data type="decimal"/>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -2808,6 +2875,8 @@
             </attribute>
             <optional>
                 <attribute name="REF">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition for the entity
+                        being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
                 </attribute>
             </optional>
@@ -3567,9 +3636,8 @@
 
     <define name="TOPIC">
         <element name="TOPIC">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the
-                central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not
-                aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element is designed to designate the name of a topic document or entry.
+                For the topic or theme of a text, use TTHEMETOPIC.</a:documentation>
             <optional>
                 <attribute name="STANDARD">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
@@ -3712,6 +3780,13 @@
             <optional>
                 <attribute name="ID">
                     <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute allows for the addition of an alternative or standardized label
+                        for a theme or topic if this is not sufficiently conveyed by contents of the tag.</a:documentation>
+                    <text/>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -4221,6 +4296,8 @@
             </optional>
             <optional>
                 <attribute name="REF">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition for the entity
+                        being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
                 </attribute>
             </optional>
@@ -8531,8 +8608,34 @@
                 and any other type of recognized organization.</a:documentation>
             <optional>
                 <attribute name="ORGTYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A carry-over from the Microsoft Access database for
-                        chronology, orgType contains a keyword descriptor of an organization. Do not use this attribute.</a:documentation>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Captures generic organization types. Based on EAC-CPF's
+                        @localType</a:documentation>
+                    <choice>
+                        <value a:fr="" a:en="labour">labour</value>
+                        <value a:fr="" a:en="club or society">club or society</value>
+                        <value a:fr="" a:en="political">political</value>
+                        <value a:fr="" a:en="academic">academic</value>
+                        <value a:fr="" a:en="research">research</value>
+                        <value a:fr="" a:en="corporate">corporate</value>
+                        <value a:fr="" a:en="activist">activist</value>
+                        <value a:fr="" a:en="governmental">governmental</value>
+                        <value a:fr="" a:en="military">military</value>
+                        <value a:fr="" a:en="law-enforcement">law-enforcement</value>
+                        <value a:fr="" a:en="professional">professional</value>
+                        <value a:fr="" a:en="sporting">sporting</value>
+                        <value a:fr="" a:en="medical">medical</value>
+                        <value a:fr="" a:en="altruistic">altruistic</value>
+                        <value a:fr="" a:en="non-profit">non-profit</value>
+                        <value a:fr="" a:en="artistic">artistic</value>
+                        <value a:fr="" a:en="dramatic">dramatic</value>
+                        <value a:fr="" a:en="ethnic">ethnic</value>
+                        <value a:fr="" a:en="iterary">literary</value>
+                        <value a:fr="" a:en="musical">musical</value>
+                        <value a:fr="" a:en="religious">religious</value>
+                        <value a:fr="" a:en="publishing">publishing</value>
+                        <value a:fr="" a:en="school">school</value>
+                        <data type="string"/>
+                    </choice>
                 </attribute>
             </optional>
             <optional>
@@ -8556,6 +8659,8 @@
             </optional>
             <optional>
                 <attribute name="REF">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition for the entity
+                        being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
                 </attribute>
             </optional>

@@ -33,6 +33,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: March 2015: Made the following changes:
+  - Created an attribute LAT in the element PLACE.
+  - Created an attribute LONG in the element PLACE.
 * MRB: September 2014: Made the following changes:
   - Removed references to the element BIBCITS from the following parent elements: BIRTH, DATASTRUCT, DEATH, DIV0, DIV2, EDUCATION, LOCATION, MARRIAGE, SCHOLARNOTE,
     and SHORTPROSE; two exceptions to the guiding principle that the parent element of BIBCITS must allow text are BIRTHNAME and CHRONSTRUCT.
@@ -1684,7 +1687,23 @@
             </optional>
             <optional>
                 <attribute name="REF">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition for the entity
+                        being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="LAT">
+                    <a:documentation>Latitude in decimal degrees of the place entity. Example: for the place entity Edmonton, the latitude in decimal degrees is "53.55014" (WGS [World
+                        Geodetic System] 84 reference coordinate system).</a:documentation>
+                    <data type="decimal"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="LONG">
+                    <a:documentation>Longitude in decimal degrees of the place entity. Example: for the place entity Edmonton, the longitude in decimal degrees is "-113.46871"  (WGS
+                        [World Geodetic System] 84 reference coordinate system).</a:documentation>
+                    <data type="decimal"/>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -2084,6 +2103,8 @@
             </attribute>
             <optional>
                 <attribute name="REF">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition for the entity
+                        being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
                 </attribute>
             </optional>
@@ -2956,6 +2977,8 @@
             </optional>
             <optional>
                 <attribute name="REF">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition for the entity
+                        being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
                 </attribute>
             </optional>
@@ -3126,9 +3149,8 @@
 
     <define name="TOPIC">
         <element name="TOPIC">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element applies to both theme and topic. Theme is the
-        central idea in a text stated either directly or indirectly; topic applies to interesting subjects appearing in a work that might not
-        aspire to the status of a "theme" and is useful in genres such as educational or non-fictional texts.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This element is designed to designate the name of a topic document or entry.
+                For the topic or theme of a text, use TTHEMETOPIC.</a:documentation>
             <optional>
                 <attribute name="STANDARD"/>
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used to record the standard name by which a person,
@@ -4210,6 +4232,8 @@
             </optional>
             <optional>
                 <attribute name="REF">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition for the entity
+                        being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
                 </attribute>
             </optional>
