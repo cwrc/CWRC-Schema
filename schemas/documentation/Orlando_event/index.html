@@ -63,6 +63,7 @@
 				'properties_SCHOLARNOTES', 
 				'properties_SHORTPROSE', 
 				'properties_RESEARCHNOTES', 
+				'properties_CHRONEVENT_BIBCITS', 
 				'properties_KEYWORDCLASSES', 
 				'properties_DATE_CALENDAR', 
 				'properties_DATE_CERTAINTY', 
@@ -328,6 +329,7 @@ var sourceBoxes= new Array('source_EVENT',
 				'source_SCHOLARNOTES', 
 				'source_SHORTPROSE', 
 				'source_RESEARCHNOTES', 
+				'source_CHRONEVENT_BIBCITS', 
 				'source_KEYWORDCLASSES', 
 				'source_DATE_CALENDAR', 
 				'source_DATE_CERTAINTY', 
@@ -436,6 +438,7 @@ var instanceBoxes= new Array('instance_EVENT',
 				'instance_SCHOLARNOTES', 
 				'instance_SHORTPROSE', 
 				'instance_RESEARCHNOTES', 
+				'instance_CHRONEVENT_BIBCITS', 
 				'instance_KEYWORDCLASSES');
 var diagramBoxes= new Array('diagram_EVENT', 
 				'diagram_ORLANDOHEADER', 
@@ -493,6 +496,7 @@ var diagramBoxes= new Array('diagram_EVENT',
 				'diagram_SCHOLARNOTES', 
 				'diagram_SHORTPROSE', 
 				'diagram_RESEARCHNOTES', 
+				'diagram_CHRONEVENT_BIBCITS', 
 				'diagram_KEYWORDCLASSES', 
 				'diagram_RESP-attribute');
 var annotationBoxes= new Array('annotations_EVENT', 
@@ -667,6 +671,7 @@ var modelBoxes= new Array('model_EVENT',
 				'model_SCHOLARNOTES', 
 				'model_SHORTPROSE', 
 				'model_RESEARCHNOTES', 
+				'model_CHRONEVENT_BIBCITS', 
 				'model_KEYWORDCLASSES');
 
       
@@ -3385,7 +3390,8 @@ var modelBoxes= new Array('model_EVENT',
                                  <area alt="index.tmp#SHORTPROSE" href="index.html#SHORTPROSE" coords="219,96,319,121" />
                                  <area alt="index.tmp#RESEARCHNOTES" href="index.html#RESEARCHNOTES" coords="219,131,339,156" />
                                  <area alt="index.tmp#SCHOLARNOTES" href="index.html#SCHOLARNOTES" coords="219,166,334,191" />
-                                 <area alt="index.tmp#KEYWORDCLASSES" href="index.html#KEYWORDCLASSES" coords="219,201,351,226" /></map></div>
+                                 <area alt="index.tmp#CHRONEVENT_BIBCITS" href="index.html#CHRONEVENT_BIBCITS" coords="219,201,288,226" />
+                                 <area alt="index.tmp#KEYWORDCLASSES" href="index.html#KEYWORDCLASSES" coords="219,236,351,261" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -3424,12 +3430,12 @@ var modelBoxes= new Array('model_EVENT',
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_CHRONEVENT" type="image" src="img/btM.gif" value="-" onclick="switchState('model_CHRONEVENT');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_CHRONEVENT" style="display:block"><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b> , <b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE{0,1}</a></b> , <b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES{0,1}</a></b> , <b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES{0,1}</a></b> , <b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES{0,1}</a></b></div>
+                           <div id="model_CHRONEVENT" style="display:block"><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b> , <b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE{0,1}</a></b> , <b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES{0,1}</a></b> , <b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES{0,1}</a></b> , <b><a href="index.html#CHRONEVENT_BIBCITS" target="_self" title="No namespace">BIBCITS{0,1}</a></b> , <b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES{0,1}</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b>, <b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b>, <b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b>, <b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b>, <b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></td>
+                        <td><b><a href="index.html#CHRONEVENT_BIBCITS" target="_self" title="No namespace">BIBCITS</a></b>, <b><a href="index.html#CHRONSTRUCT" target="_self" title="No namespace">CHRONSTRUCT</a></b>, <b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b>, <b><a href="index.html#RESEARCHNOTES" target="_self" title="No namespace">RESEARCHNOTES</a></b>, <b><a href="index.html#SCHOLARNOTES" target="_self" title="No namespace">SCHOLARNOTES</a></b>, <b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -3445,6 +3451,7 @@ var modelBoxes= new Array('model_EVENT',
   </span><span class="tEl">&lt;SHORTPROSE</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/SHORTPROSE&gt;</span><span class="tI">
   </span><span class="tEl">&lt;RESEARCHNOTES</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/RESEARCHNOTES&gt;</span><span class="tI">
   </span><span class="tEl">&lt;SCHOLARNOTES</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/SCHOLARNOTES&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;BIBCITS</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/BIBCITS&gt;</span><span class="tI">
   </span><span class="tEl">&lt;KEYWORDCLASSES</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/KEYWORDCLASSES&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/CHRONEVENT&gt;</span></pre></td>
                                  </tr>
@@ -3471,6 +3478,13 @@ var modelBoxes= new Array('model_EVENT',
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"SHORTPROSE"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"RESEARCHNOTES"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"SCHOLARNOTES"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> name=</span><span class="tAV">"BIBCITS"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> ref=</span><span class="tAV">"BIBCIT"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"KEYWORDCLASSES"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -5701,7 +5715,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_BIBCITS" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_BIBCITS');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_BIBCITS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_BIBCITS.jpeg" usemap="#orlando_event_xsd_Element_BIBCITS" /><map name="orlando_event_xsd_Element_BIBCITS" id="orlando_event_xsd_Element_BIBCITS">
+                           <div id="diagram_BIBCITS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_BIBCITS_1.jpeg" usemap="#orlando_event_xsd_Element_BIBCITS_1" /><map name="orlando_event_xsd_Element_BIBCITS_1" id="orlando_event_xsd_Element_BIBCITS_1">
                                  <area alt="index.tmp#BIBCIT" href="index.html#BIBCIT" coords="188,2,250,27" />
                                  <area alt="index.tmp#RESEARCHNOTE" href="index.html#RESEARCHNOTE" coords="188,96,301,121" /></map></div>
                         </td>
@@ -5877,8 +5891,8 @@ var modelBoxes= new Array('model_EVENT',
                            <div id="usedBy_BIBCIT" style="display:block">
                               <table class="usedByTable">
                                  <tr>
-                                    <td class="firstColumn">Element </td>
-                                    <td><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b></td>
+                                    <td class="firstColumn">Elements </td>
+                                    <td><b><a href="index.html#BIBCITS" target="_self" title="No namespace">BIBCITS</a></b>, <b><a href="index.html#CHRONEVENT_BIBCITS" target="_self" title="No namespace">CHRONEVENT/BIBCITS</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -11532,6 +11546,112 @@ var modelBoxes= new Array('model_EVENT',
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> ref=</span><span class="tAV">"RESEARCHNOTE"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="CHRONEVENT_BIBCITS"></a><div class="componentTitle">Element <span class="qname"><b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b> / BIBCITS</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_CHRONEVENT_BIBCITS" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_CHRONEVENT_BIBCITS');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_CHRONEVENT_BIBCITS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_BIBCITS.jpeg" usemap="#orlando_event_xsd_Element_BIBCITS" /><map name="orlando_event_xsd_Element_BIBCITS" id="orlando_event_xsd_Element_BIBCITS">
+                                 <area alt="index.tmp#BIBCIT" href="index.html#BIBCIT" coords="188,6,250,31" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_CHRONEVENT_BIBCITS" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_CHRONEVENT_BIBCITS');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_CHRONEVENT_BIBCITS" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_CHRONEVENT_BIBCITS" type="image" src="img/btM.gif" value="-" onclick="switchState('model_CHRONEVENT_BIBCITS');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_CHRONEVENT_BIBCITS" style="display:block"><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT+</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="index.html#BIBCIT" target="_self" title="No namespace">BIBCIT</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_CHRONEVENT_BIBCITS" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_CHRONEVENT_BIBCITS');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_CHRONEVENT_BIBCITS" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;BIBCITS</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;BIBCIT</span><span class="tT"> </span><span class="tAN">DBREF=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">PLACEHOLDER=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">QTDIN=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">REF=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/BIBCIT&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/BIBCITS&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_CHRONEVENT_BIBCITS" type="image" src="img/btM.gif" value="-" onclick="switchState('source_CHRONEVENT_BIBCITS');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_CHRONEVENT_BIBCITS" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> name=</span><span class="tAV">"BIBCITS"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> ref=</span><span class="tAV">"BIBCIT"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
