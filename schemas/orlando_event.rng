@@ -53,8 +53,8 @@
   - Removed the reference to the element BIBCITS from the element CHRONSTRUCT; this was done because a Perl error exception will be thrown if BIBCITS is a child of CHRONSTRUCT
     when a freestanding event is pasted into the appropriate textarea form field in the Document Archive.
 * MRB: September 2014: Made the following changes:
-  - Removed references to the element BIBCITS from the following parent elements: DIV2, and SHORTPROSE; one exception to the guiding principle that the parent element of BIBCITS
-    must allow text is CHRONSTRUCT.
+  - Removed references to the element BIBCITS from the following parent elements: DIV2, and SHORTPROSE; two exceptions to the guiding principle that the parent element of
+    BIBCITS must allow text are CHRONEVENT and CHRONSTRUCT.
   - Redefined the attribute TITLETYPE in the element TITLE from an optional attribute to a required attribute.
 * MRB: August 2014: Made the folloiwng changes:
   - Redefined the attribute VALUE in the elements DATE and DATESTRUCT so that the acceptable Orlando legacy date formats are explicitly defined, i.e.,
@@ -354,6 +354,13 @@
                 </optional>
                 <optional>
                     <ref name="SCHOLARNOTES"/>
+                </optional>
+                <optional>
+                    <element name="BIBCITS">
+                        <oneOrMore>
+                            <ref name="BIBCIT"/>
+                        </oneOrMore>
+                    </element>
                 </optional>
                 <optional>
                     <element name="KEYWORDCLASSES">
