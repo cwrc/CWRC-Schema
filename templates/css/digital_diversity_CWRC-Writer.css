@@ -1,0 +1,195 @@
+/* icons employed: 
+W3 Creative Lab - Creative Commons (Attribution 3.0 Unported)
+Popcic - free for commercial use
+*/
+*[_tag = "teiHeader"],
+*[_tag = "teiHeader"] *[_tag = "title"],
+*[_tag = "resp"],
+*[_tag = "publisher"],
+*[_tag = "availability"],
+*[_tag = "sourceDesc"]{
+    display:block;
+}
+*[_tag = "publisher"]:before{content:"Publisher: "}
+*[_tag = "teiHeader"]{margin-top:1.5%; padding-top:1.5%; margin-left:3%; margin-right:3%; padding-bottom:1.5%; background-color:#FFFFE0}
+text{
+    display:block;
+    margin-left:3%;
+    margin-right:3%;
+    padding-top:1.5%;
+    padding-bottom:3%;
+    font-family:sans-serif;
+    line-height:1.5;
+    background-color:#EBF5FF
+}
+*[_tag  =  "event"]{
+    display:block
+}
+
+*[_tag = "label"],
+*[_tag = "head"]{
+    display:block;
+    margin-top:2%;
+    font-weight:bold;
+    font-size:larger
+}
+
+*[_tag = "desc"] + *[_tag = "desc"],
+*[_tag = "p"]{
+    display:block;
+    margin-top:1%;
+    margin-bottom:1%
+}
+
+*[_tag = "date"],
+*[_tag = "placeName"]{
+    font-style:italic
+}
+
+*[_tag = "langUsage"]:before{content:"Language(s) of the file: "}
+
+*[_tag = "note"][type  =  "researchNote"]{
+    display:inline;
+    font-family:courier, fixed, monospace;
+    font-style:normal;
+    font-size:smaller
+
+}
+
+*[_tag = "note"][type  =  "scholarNote"],
+*[_tag = "listBibl"]{
+    display:block;
+    font-size:smaller;
+    margin-bottom:1%
+
+}
+
+*[_tag = "note"][type  =  "scholarNote"]{
+    margin-left:5%
+}
+
+*[_tag = "bibl"] > *[_tag = "note"][type  =  "researchNote"]{
+    font-size:small
+}
+
+*[_tag = "bibl"]{
+    display:list-item;
+    list-style-image:url(http://cwrc.ca/templates/images/TEI-bibl.jpg);
+    list-style-position:inside
+}
+
+*[_tag = "note"][type  =  "researchNote"]:before{
+    content:url(http://cwrc.ca/templates/images/TEI-info-RN.jpg);
+    padding-left:1em;
+    padding-right:0.5em
+}
+*[_tag = "note"][type  =  "scholarNote"]:before{
+    content:url(http://cwrc.ca/templates/images/TEI-note-SN.jpg);
+    padding-right:0.5em
+}
+*[_tag = "note"][type  =  "keyword"]:before{
+    content:url(http://cwrc.ca/templates/images/TEI-keyword.jpg);
+    padding-right:0.5em
+}
+*[_tag = "emph"]{
+    display:inline;
+    font-style:italic;
+}
+*[_tag = "q"]{
+    display:inline;
+    quotes:"\"" "\"" "\'" "\'";
+    margin:0em;
+}
+*[_tag = "q"][rend = "display"],
+*[_tag = "argument"] > *[_tag = "q"],
+*[_tag = "body"] > *[_tag = "q"],
+*[_tag = "cit"] > *[_tag = "q"],
+*[_tag = "div"] > *[_tag = "q"],
+*[_tag = "div0"] > *[_tag = "q"],
+*[_tag = "div1"] > *[_tag = "q"],
+*[_tag = "div2"] > *[_tag = "q"],
+*[_tag = "div3"] > *[_tag = "q"],
+*[_tag = "div4"] > *[_tag = "q"],
+*[_tag = "div5"] > *[_tag = "q"],
+*[_tag = "div6"] > *[_tag = "q"],
+*[_tag = "div7"] > *[_tag = "q"],
+*[_tag = "epigraph"] > *[_tag = "q"]{
+    display:block;
+    margin-bottom:0.5em;
+    margin-left:3em;
+    margin-right:3em;
+    quotes:none;
+}
+*[_tag = "q"]:before{
+    content:open-quote;
+}
+*[_tag = "q"]:after{
+    content:close-quote;
+}
+*[_tag = "quote"]{
+    display:inline;
+    quotes:"\"" "\"" "\'" "\'";
+    margin:0em;
+}
+*[_tag = "quote"][rend = "display"],
+*[_tag = "argument"] > *[_tag = "quote"],
+*[_tag = "body"] > *[_tag = "quote"],
+*[_tag = "cit"] > *[_tag = "quote"],
+*[_tag = "div"] > *[_tag = "quote"],
+*[_tag = "div0"] > *[_tag = "quote"],
+*[_tag = "div1"] > *[_tag = "quote"],
+*[_tag = "div2"] > *[_tag = "quote"],
+*[_tag = "div3"] > *[_tag = "quote"],
+*[_tag = "div4"] > *[_tag = "quote"],
+*[_tag = "div5"] > *[_tag = "quote"],
+*[_tag = "div6"] > *[_tag = "quote"],
+*[_tag = "div7"] > *[_tag = "quote"],
+*[_tag = "epigraph"] > *[_tag = "quote"]{
+    display:block;
+    margin-bottom:0.5em;
+    margin-left:3em;
+    margin-right:3em;
+    quotes:none;
+}
+*[_tag = "quote"]:before{
+    content:open-quote;
+}
+*[_tag = "quote"]:after{
+    content:close-quote;
+}
+*[_tag = "ref"]{
+    display:inline;
+    color:blue;
+    background-color:inherit;
+}
+*[_tag = "ref"]:before{
+    color:gray;
+    background-color:inherit;
+    text-decoration:underline;
+}
+*[_tag = "title"]{
+    display:inline;
+}
+*[_tag = "title"][type = "subtitle"]{
+    display:block;
+    font-weight:normal;
+}
+*[_tag = "title"][level = "m"],
+*[_tag = "title"][level = "j"]{
+    font-style:italic;
+}
+*[_tag = "title"][level = "s"]{
+    font-style:normal;
+}
+*[_tag = "title"][level = "a"],
+*[_tag = "title"][level = "u"]{
+    font-style:normal;
+}
+*[_tag = "title"][level = "a"]:before,
+*[_tag = "title"][level = "u"]:before{
+    content:open-quote;
+}
+*[_tag = "title"][level = "a"]:after,
+*[_tag = "title"][level = "u"]:after{
+    content:close-quote;
+}
