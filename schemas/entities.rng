@@ -62,6 +62,8 @@
 
 <!--
 *** Revisions ***
+      MRB: Mon 27-Apr-2015: Removed the <standardDate> regular expression patterns for the Orlando legacy
+      date format (YYYY-MM-, and YYYY-hyphen)
      MRB: Mon 23-Feb-2015
      * Added a new value of "fullNameDirectOrder" to the enumerated list for the @partType attribute; also
      changed the exisiting value of "fullName" to "fullNameInvertedOrder".
@@ -894,12 +896,14 @@
                 <data type="date"/>
                 <data type="gYearMonth"/>
                 <data type="gYear"/>
+                <!--
                 <data type="string">
                     <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
                 </data>
                 <data type="string">
                     <param name="pattern">(\d{4})(\-{2})</param>
                 </data>
+                -->
             </choice>
         </element>
     </define>
