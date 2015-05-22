@@ -3296,6 +3296,11 @@ var modelBoxes= new Array('model_cwrc',
               </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">ceww</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
           </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"cwrc"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">cwrc</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"eccji"</span><span class="tEl">&gt;</span><span class="tI">
             </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">eccji</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
@@ -3551,7 +3556,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_personDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_personDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_personDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description.jpeg" usemap="#entities_xsd_Element_description" /><map name="entities_xsd_Element_description" id="entities_xsd_Element_description">
+                           <div id="diagram_personDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_1.jpeg" usemap="#entities_xsd_Element_description_1" /><map name="entities_xsd_Element_description_1" id="entities_xsd_Element_description_1">
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,2,305,27" />
                                  <area alt="index.tmp#factuality" href="index.html#factuality" coords="223,68,561,112" />
                                  <area alt="index.tmp#genders" href="index.html#genders" coords="223,153,294,178" />
@@ -4113,18 +4118,7 @@ var modelBoxes= new Array('model_cwrc',
         </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:union</span><span class="tEl">&gt;</span><span class="tI">
             </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">&gt;</span><span class="tI">
-                </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})((\-(0[1-9]|1[0-2])\-))"</span><span class="tEl">/&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-                </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-                </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-                    </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})(\-{2})"</span><span class="tEl">/&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-                </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
             </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:token"</span><span class="tEl">&gt;</span><span class="tI">
@@ -6465,7 +6459,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_personRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_personRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
+                           <div id="diagram_personRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
                                  <area alt="index.tmp#personTypes" href="index.html#personTypes" coords="220,2,315,27" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,82,295,107" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,176,513,220" />
@@ -8311,7 +8305,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_orgRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_orgRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_1.jpeg" usemap="#entities_xsd_Element_recordInfo_1" /><map name="entities_xsd_Element_recordInfo_1" id="entities_xsd_Element_recordInfo_1">
+                           <div id="diagram_orgRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo.jpeg" usemap="#entities_xsd_Element_recordInfo" /><map name="entities_xsd_Element_recordInfo" id="entities_xsd_Element_recordInfo">
                                  <area alt="index.tmp#orgTypes" href="index.html#orgTypes" coords="220,2,297,27" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,82,295,107" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,176,513,220" />
@@ -8875,7 +8869,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_placeDescription-element_description" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeDescription-element_description');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description_1.jpeg" usemap="#entities_xsd_Element_description_1" /><map name="entities_xsd_Element_description_1" id="entities_xsd_Element_description_1">
+                           <div id="diagram_placeDescription-element_description" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_description.jpeg" usemap="#entities_xsd_Element_description" /><map name="entities_xsd_Element_description" id="entities_xsd_Element_description">
                                  <area alt="index.tmp#existDates" href="index.html#existDates" coords="223,2,305,27" />
                                  <area alt="index.tmp#factuality" href="index.html#factuality" coords="223,68,561,112" />
                                  <area alt="index.tmp#latitude" href="index.html#latitude" coords="223,153,503,197" />
@@ -10252,7 +10246,7 @@ var modelBoxes= new Array('model_cwrc',
                            <div class="floatRight"><input id="button_diagram_placeRecordInfo-element_recordInfo" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_placeRecordInfo-element_recordInfo');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_placeRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_2.jpeg" usemap="#entities_xsd_Element_recordInfo_2" /><map name="entities_xsd_Element_recordInfo_2" id="entities_xsd_Element_recordInfo_2">
+                           <div id="diagram_placeRecordInfo-element_recordInfo" style="display:block"><img alt="Diagram" border="0" src="img/entities_xsd_Element_recordInfo_1.jpeg" usemap="#entities_xsd_Element_recordInfo_1" /><map name="entities_xsd_Element_recordInfo_1" id="entities_xsd_Element_recordInfo_1">
                                  <area alt="index.tmp#placeTypes" href="index.html#placeTypes" coords="220,2,307,27" />
                                  <area alt="index.tmp#originInfo" href="index.html#originInfo" coords="220,68,295,93" />
                                  <area alt="index.tmp#entityId" href="index.html#entityId" coords="220,162,513,206" />
