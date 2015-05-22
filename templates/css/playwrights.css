@@ -260,15 +260,17 @@ SOCALLED:before{
 SOCALLED:after{
     content:"\""
 }
-TITLE[LEVEL = "UNPUBLISHED"] EMPH:before{
+/*TITLE[LEVEL = "UNPUBLISHED"] EMPH:before{
     content:"\""
 }
 TITLE[LEVEL = "UNPUBLISHED"] EMPH:after{
     content:"\""
-}
+}*/
 TITLE[LEVEL = "UNPUBLISHED"] EMPH{
-    font-style:normal
+    font-style:italic;
 }
+
+HEADING TITLE EMPH{color:brown}
 /*
 PRODUCTION CHRONSTRUCT,
 TEXTSCOPE PRODUCTION P{
