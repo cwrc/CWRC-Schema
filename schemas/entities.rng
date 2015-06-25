@@ -64,6 +64,8 @@
 *** Revisions ***
       MRB: Mon 27-Apr-2015: Removed the <standardDate> regular expression patterns for the Orlando legacy
       date format (YYYY-MM-, and YYYY-hyphen)
+     MRB: Thur 16-Apr-2015
+     * Added "emic" as an option for contribuing project.
      MRB: Mon 23-Feb-2015
      * Added a new value of "fullNameDirectOrder" to the enumerated list for the @partType attribute; also
      changed the exisiting value of "fullName" to "fullNameInvertedOrder".
@@ -1796,6 +1798,8 @@
                             <a:documentation>eccji</a:documentation>
                             <value a:en="eccji">GeoNames</value>
                             <a:documentation>GeoNames</a:documentation>
+			    <value a:en="emic">emic</value>
+                            <a:documentation>emic</a:documentation>
                             <value a:en="orlando">orlando</value>
                             <a:documentation>orlando</a:documentation>
                         </choice>
@@ -1814,6 +1818,8 @@
                     <a:documentation>eccji</a:documentation>
                     <value a:en="eccji">GeoNames</value>
                     <a:documentation>GeoNames</a:documentation>
+		    <value a:en="emic">emic</value>
+                    <a:documentation>emic</a:documentation>
                     <value a:en="orlando">orlando</value>
                     <a:documentation>orlando</a:documentation>
                 </choice>
