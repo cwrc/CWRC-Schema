@@ -4,12 +4,10 @@
             <titleStmt>
                 <title>Label/title of event</title>
                 <respStmt>
-                    <resp>Entry created by:</resp>
-                    <persName>Author name</persName>
+                    <resp>Entry created by: </resp><persName>Author name</persName>
                 </respStmt>
                 <respStmt>
-                    <resp>Entry created for:</resp>
-                    <name>Digital Diversity 2015</name>
+                    <resp>Entry created for: </resp><name>Digital Diversity 2015</name>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -26,22 +24,24 @@
         </fileDesc>
         <profileDesc>
             <langUsage>
-                <language ident="eng"/>
+                <language ident="eng"><note type="researchNote">Please change the ident attribute of the language tag using the language codes in the <ref target="http://www.loc.gov/standards/iso639-2/php/English_list.php">ISO 639-2 specification (http://www.loc.gov/standards/iso639-2/php/English_list.php)</ref>, if the language of the event is not English. Some of the most common languages: chi (Chinese languages), spa (Spanish), hin (Hindi), ara (Arabic), por (Portuguese).</note></language>
             </langUsage>
         </profileDesc>
     </teiHeader>
     <text>
         <body>
-            <note type="researchNote">Please change the ident attribute of the language tag in the header using the language codes in the <ref target="http://www.loc.gov/standards/iso639-2/php/English_list.php">ISO 639-2 specification (http://www.loc.gov/standards/iso639-2/php/English_list.php)</ref>, if the language of the event is not English. Some of the most common languages: chi (Chinese languages), spa (Spanish), hin (Hindi), ara (Arabic), por (Portuguese). Please fill in the type attribute value for the event element: bibliographical, biographical, cultural, literary, political, or social.</note>
+            <note type="researchNote">Please edit the header of this document. Click on the "Edit header" button at the top-right of the CWRC Writer window.</note>
+            <note type="researchNote">Please fill in the type attribute value for the event element below: bibliographical, biographical, cultural, literary, political, or social.</note>
             <listEvent>
                 <event type="biographical">
                     <label>Label/title of the event</label>
-                    <desc><date when="2010">Date or date-range of the event <note type="researchNote">Please fill in the "when" attribute values for single dates or the "from" and "to" attributes for date ranges. Attribute values consisting of dates must be formatted as: YYYY, YYYY-MM, or YYYY-MM-DD. (e.g., 2010, 2010-10, 2010-10-31) </note></date>, <placeName ref="http://www.geonames.org/---------/">location of the event <note type="researchNote">Please look up the GeoNames entry of your location at <ref target="http://www.geonames.org/">http://www.geonames.org/</ref>. Select it from the list of results. On the resulting map, you will most likely be told that there are multiple results in the area. Click on this notice. Out of the resulting list, select the appropriate entry, usually the first or second entry. Once you click on it, you will see a numerical id at the top-right coner of the resulting popup.Copy it and paste it in the value of the ref attribute to replace the dotted line. (e.g., the ref attribute value for Edmonton is "http://www.geonames.org/5946768/")</note></placeName></desc>
+                    <desc>Date, place.</desc>
                     <desc>Description of the event (optional)</desc>
-                    <note type="researchNote">Use multiple description tags for a multi-paragraph description.</note>
+                    <note type="researchNote">Fill in the date and location of the event inside the first description tag. Format as "Date, place" and tag as such using the "Tag Date" and "Tag Place" buttons on the ribon above. To identify the place, use the VIAF lookup primarely. If the location cannot be found there, use the Geocode or the CWRC lookups.</note>
+                    <note type="researchNote">Use multiple description tags for a multi-paragraph extended description.</note>
                     <note type="scholarNote">Scholar note <note type="researchNote">optional - delete if none.</note></note>
                     <listBibl>
-                        <bibl>Source of event description and/or note <note type="researchNote">optional - delete list bibl if none; multiple sources-separate bibl tags</note></bibl>
+                        <bibl>Source of event description and/or note <note type="researchNote">optional - delete list bibl if none; multiple sources-separate bibl tags; Use the "tag title" button to link the referenced resource to a title in the CWRC repository or the VIAF service.</note></bibl>
                     </listBibl>
                     <note type="keyword"><term></term><note type="researchNote">To make the event more discoverable, please add at least one keyword; to add more than one keyword, additional term elements (separated by commas) should be created for each additional keyword.</note></note>
                 </event>
