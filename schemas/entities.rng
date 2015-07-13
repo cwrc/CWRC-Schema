@@ -65,7 +65,10 @@
      MRB: Mon 13-Jul-2015
      * Added the <variantType> element to the interface annotation code for place entities, with the values of
      "alternate names", "deprecated", and "historic".
-     * Fixed the duplication
+     * Fixed the duplication of the "ceww" and "eccji" values in the enumerated list of values for the <projectId>
+     element.
+     * Added the <resource> element to the interface annotation code for both organization entities and place
+     entities.
       MRB: Mon 27-Apr-2015: Removed the <standardDate> regular expression patterns for the Orlando legacy
       date format (YYYY-MM-, and YYYY-hyphen)
      MRB: Thur 16-Apr-2015
