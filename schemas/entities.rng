@@ -63,7 +63,9 @@
 <!--
 *** Revisions ***
      MRB: Mon 13-Jul-2015
-     * Added 
+     * Added the <variantType> element to the interface annotation code for place entities, with the values of
+     "alternate names", "deprecated", and "historic".
+     * Fixed the duplication
       MRB: Mon 27-Apr-2015: Removed the <standardDate> regular expression patterns for the Orlando legacy
       date format (YYYY-MM-, and YYYY-hyphen)
      MRB: Thur 16-Apr-2015
@@ -734,6 +736,8 @@
                 <value a:en="Alternate Names - place">alternate names</value>
                 <a:documentation>e.g.,
                     Edmonton,Edmontona,Edmontonas,Edmontono,Edmundopolis,Edmuntun,Ehdmonton</a:documentation>
+                <value a:en="Deprecated">deprecated</value>
+                <value a:en="Historic">historic</value>
             </choice>
         </element>
     </define>
@@ -1274,7 +1278,7 @@
                 instances. Equivalent to EAC-CFPF's source element.</a:documentation>
             <xs:annotation>
                 <xs:appinfo>
-                    <interface-field path="entity/person/description/relatedResources/resource">
+                    <interface-field path="entity/person|organization|place/description/relatedResources/resource">
                         <help-text xml:lang="en">A source of evidence used in describing the entity
                             or entities instances. Equivalent to EAC-CFPF's source
                             element.</help-text>
