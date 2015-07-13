@@ -62,6 +62,8 @@
 
 <!--
 *** Revisions ***
+     MRB: Mon 13-Jul-2015
+     * Added 
       MRB: Mon 27-Apr-2015: Removed the <standardDate> regular expression patterns for the Orlando legacy
       date format (YYYY-MM-, and YYYY-hyphen)
      MRB: Thur 16-Apr-2015
@@ -661,7 +663,7 @@
                 refer to the present entity.</a:documentation>
             <xs:annotation>
                 <xs:appinfo>
-                    <interface-field path="entity/person|organization/identity/variantForms/variant/variantType">
+                    <interface-field path="entity/person|organization|place/identity/variantForms/variant/variantType">
                         <help-text xml:lang="en">If applicable, select a name type to describe
                             contexts in which this name was used to refer to the present
                             entity.</help-text>
@@ -673,7 +675,6 @@
                             <value a:en="Birth Name">birthName</value>
                             <value a:en="Married Name">marriedName</value>
                             <value a:en="Indexed Name">indexedName</value>
-                            <value a:en="Orlando Standard Name">orlandoStandardName</value>
                             <value a:en="Pseudonym">pseudonym</value>
                             <value a:en="Used Form">usedForm</value>
                             <value a:en="Nickname">nickname</value>
@@ -682,6 +683,7 @@
                             <value a:en="Self Constructed">selfConstructedName</value>
                             <value a:en="Styled">styledName</value>
                             <value a:en="Titled">titledName</value>
+                            <value a:en="Orlando Standard Name">orlandoStandardName</value>
                         </choice>
                     </values>
                     <values type="organization">
@@ -701,8 +703,10 @@
                     </values>
                     <values type="place">
                         <choice>
-                            <value a:en="alternate names">alternate names</value>
+                            <value a:en="Alternate Names">alternate names</value>
                             <a:documentation>e.g., Edmonton,Edmontona,Edmontonas</a:documentation>
+                            <value a:en="Deprecated">deprecated</value>
+                            <value a:en="Historic">historic</value>
                         </choice>
                     </values>
                 </xs:appinfo>
@@ -719,13 +723,15 @@
                 <value a:en="Self Constructed - person">selfConstructedName</value>
                 <value a:en="Styled - person">styledName</value>
                 <value a:en="Titled - person">titledName</value>
+                <value a:en="Orlando Standard Name">orlandoStandardName</value>
+                <value a:en="Organization 'Birth' Name">birthName</value>
                 <value a:en="Descriptive Name - organization">descriptive</value>
                 <a:documentation>e.g., Women's Aid Society</a:documentation>
                 <value a:en="Popular Name - organization">popular</value>
                 <a:documentation>e.g., "Wrens" for "Women's Royal Naval Service"</a:documentation>
                 <value a:en="Acronym - organization">acronym</value>
                 <a:documentation>e.g., OCLC</a:documentation>
-                <value a:en="alternate names - place">alternate names</value>
+                <value a:en="Alternate Names - place">alternate names</value>
                 <a:documentation>e.g.,
                     Edmonton,Edmontona,Edmontonas,Edmontono,Edmundopolis,Edmuntun,Ehdmonton</a:documentation>
             </choice>
@@ -1794,11 +1800,11 @@
                             <a:documentation>canwwwr</a:documentation>
                             <value a:en="ceww">ceww</value>
                             <a:documentation>ceww</a:documentation>
-                            <value a:en="ceww">cwrc</value>
+                            <value a:en="cwrc">cwrc</value>
                             <a:documentation>cwrc</a:documentation>
                             <value a:en="eccji">eccji</value>
                             <a:documentation>eccji</a:documentation>
-                            <value a:en="eccji">GeoNames</value>
+                            <value a:en="GeoNames">GeoNames</value>
                             <a:documentation>GeoNames</a:documentation>
 			    <value a:en="emic">emic</value>
                             <a:documentation>emic</a:documentation>
@@ -1814,11 +1820,11 @@
                     <a:documentation>canwwwr</a:documentation>
                     <value a:en="ceww">ceww</value>
                     <a:documentation>ceww</a:documentation>
-                    <value a:en="ceww">cwrc</value>
+                    <value a:en="cwrc">cwrc</value>
                     <a:documentation>cwrc</a:documentation>
                     <value a:en="eccji">eccji</value>
                     <a:documentation>eccji</a:documentation>
-                    <value a:en="eccji">GeoNames</value>
+                    <value a:en="GeoNames">GeoNames</value>
                     <a:documentation>GeoNames</a:documentation>
 		    <value a:en="emic">emic</value>
                     <a:documentation>emic</a:documentation>
