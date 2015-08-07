@@ -33,6 +33,11 @@
 
 <!-- 
 *** Revisions ***
+* MRB: August 2015: Made the following changes:
+  - Created a new element DISABILITY that is a child element of the element CULTURALFORMATION.
+  - Added a new attribute value of DISABILITY to the attribute ISSUE in the element HEALTH.
+  - Added a new attribute value of DOCUDRAMA to the attribute GENRENAME in the element TGENRE.
+  - Made the element ORGNAME a child element of the element PROGRAM.
 * MRB: May 2015: Made the following changes:
   - Created a new element PROGRAM, that has the same child elements and ref locations as the element DEGREE.
 * MRB: March 2015: Made the following changes:
@@ -630,6 +635,11 @@
                                 <ref name="P"/>
                             </choice>
                         </element>
+                        <element name="DISABILITY">
+                            <zeroOrMore>
+                                <ref name="P"/>
+                            </zeroOrMore>
+                        </element>
                         <element name="NATIONALITYISSUE">
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">NationalityIssue is a
                         significant sub-element within culturalFormation which captures a discussion about her nationality.
@@ -992,9 +1002,10 @@
                     the medical institution, female illnesses such as breast cancer, and women&apos;s oppression by mental
                     health institutions, to name only a few.</a:documentation>
                     <choice>
-                        <value>PHYSICAL</value>
-                        <value>MENTAL</value>
+                        <value>DISABILITY</value>
                         <value>FEMALEBODY</value>
+                        <value>MENTAL</value>
+                        <value>PHYSICAL</value>
                     </choice>
                 </attribute>
             </optional>
@@ -4407,6 +4418,7 @@
                         <value>DIDACTIC</value>
                         <value>DIRECTORY</value>
                         <value>DISSERTATION</value>
+                        <value>DOCUDRAMA</value>
                         <value>DOCUMENTARY</value>
                         <value>DOMESTIC</value>
                         <value>DRAMA</value>
@@ -5435,6 +5447,7 @@
                     <text/>
                     <ref name="DATE"/>
                     <ref name="FOREIGN"/>
+                    <ref name="ORGNAME"/>
                     <ref name="SCHOOL"/>
                     <ref name="SUBJECT"/>
                 </choice>
