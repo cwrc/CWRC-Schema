@@ -218,7 +218,8 @@ DATASTRUCT{ /*border:solid;*/
 TEXTSCOPE PRODUCTION P{
     display:block;
     padding-left:12em;
-    /*padding-bottom:1%*/
+    padding-bottom:0%;
+    margin-bottom:0%
 }
 
 /*OTHERLIFEEVENT CHRONSTRUCT DATE,
@@ -233,14 +234,21 @@ BIRTH CHRONSTRUCT CHRONPROSE{
     display:block
 }
 
+TEXTUALFEATURES {padding-top:0%; margin-top:0%}
+
+TEXTUALFEATURES HEADING {padding-top:0%; margin-top:0%}
+
 TEXTUALFEATURES P{
     display:block;
 }
 
-TEXTSCOPE PRODUCTION HEADING{
+/*TEXTSCOPE PRODUCTION{
     padding-top:0em;
     margin-top:0em
-}
+}*/
+
+
+
 TITLE[LEVEL = "MONOGRAPHIC"]{
     font-style:italic
 }
