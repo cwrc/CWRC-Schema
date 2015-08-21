@@ -34,9 +34,7 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2015: Made the following changes:
-  - Redefined the child element HEADING within the element FIGURE so that it is locally defined, and in this local definition for the element HEADING, the attribute LEVEL
-     is not defined (the LEVEL attribute is a required attribute in the globally defined HEADING element), i.e., the LEVEL attribute is omitted in this local definition of
-     the HEADING element within the FIGURE element (the concept of level does not have any meaning when it is applied to image headings).
+  - Added the element GRAPHIC as a child element to the elements CHRONPROSE, DATAITEM, and P.
   - Created a new element DISABILITY that is a child element of the element CULTURALFORMATION.
   - Added a new attribute value of DISABILITY to the attribute ISSUE in the element HEALTH.
   - Added a new attribute value of DOCUDRAMA to the attribute GENRENAME in the element TGENRE.
@@ -92,8 +90,9 @@
     and YYYY.
   - Added the attribute REF to the elements NAME, ORGNAME, PLACE, and TITLE (REF [the old DBREF] was already an attribute of the elements BIBCIT and
     TEXTSCOPE).
-  - Added the element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, HEADER, and P; FIGURE has child elements of FIGDESC and GRAPHIC
-    (GRAPHIC has an attribute URL), and REFs to child elements HEADING and P.
+  - Added the element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
+    elements of GRAPHIC, HEAD, and P.
+  - Added REFs to make the element GRAPHIC a child element of the elements CHRONPROSE, DATAITEM, and P (it was already a child element of FIGURE).
   - Merged the child elements of the element CHRONPROSE and the element DATAITEM so that they both have the same child elements; also redefined the element
     RELIGIOUSNAME from being locally defined in the element DATAITEM to being globally defined (RELGIOUSNAME is now a child element of the elements
     CHRONPROSE, DATAITEM, and P).
@@ -1676,6 +1675,7 @@
                     <ref name="GENERICRANGE"/>
                     <ref name="GENDER"/>
                     <ref name="GEOGHERITAGE"/>
+                    <ref name="GRAPHIC"/>
                     <ref name="HEADING"/>
                     <ref name="HEALTH"/>
                     <ref name="INDEXED"/>
@@ -1806,9 +1806,7 @@
                     convenient classification scheme or typology.</a:documentation>
                 <data type="NCName"/>
             </attribute>
-            <element name="HEAD">
-                <empty/>
-            </element>
+            <ref name="HEAD"/>
             <oneOrMore>
                 <ref name="L"/>
             </oneOrMore>
@@ -1966,7 +1964,7 @@
                             <ref name="EMPLOYER"/>
                             <ref name="FIGURE"/>
                             <ref name="FOREIGN"/>
-                            <ref name="GENDER"/>
+                            <ref name="GRAPHIC"/>
                             <ref name="INDEXED"/>
                             <ref name="INSTRUCTOR"/>
                             <ref name="JOBTITLE"/>
@@ -2101,6 +2099,7 @@
                                 <ref name="FIGURE"/>
                                 <ref name="FOREIGN"/>
                                 <ref name="GENDER"/>
+                                <ref name="GRAPHIC"/>
                                 <ref name="INDEXED"/>
                                 <ref name="INSTRUCTOR"/>
                                 <ref name="JOBTITLE"/>
@@ -2204,7 +2203,7 @@
 
     <define name="HEADING">
         <element name="HEADING">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">head (or heading) contains any type of heading, for example
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">heading contains any type of heading, for example
                 the title of a section, or the heading of a list, glossary, manuscript description, etc.</a:documentation>
             <attribute name="SUBTYPE">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The Subtype attribute allows you to indicate the heading
@@ -2222,7 +2221,6 @@
                     <text/>
                     <ref name="DATE"/>
                     <ref name="DATERANGE"/>
-                    <ref name="FIGURE"/>
                     <ref name="FOREIGN"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
@@ -2238,31 +2236,39 @@
         </element>
     </define>
 
+    <define name="HEAD">
+        <element name="HEAD">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">head contains a heading for the lg (line group) element and the
+                figure (graphic information) element.</a:documentation>
+            <text/>
+        </element>
+    </define>
+
+    <define name="GRAPHIC">
+        <element name="GRAPHIC">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Graphic indicates the location of an inline graphic, illustration, or
+                figure.</a:documentation>
+            <attribute name="URL">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">URL (uniform resource locator) specifies the URL from
+                    which the media concerned may be obtained.</a:documentation>
+                <data type="anyURI"/>
+            </attribute>
+        </element>
+    </define>
+
     <define name="FIGURE">
         <element name="FIGURE">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The figure element groups elements representing or containing graphic
                 information such as an illustration, formula, or figure.</a:documentation>
             <oneOrMore>
                 <choice>
-                    <element name="HEADING">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">head (or heading) contains any type of heading, for example
-                            the title of a section, or the heading of a list, glossary, manuscript description, etc.</a:documentation>
-                        <text/>
-                    </element>
+                    <ref name="HEAD"/>
                     <element name="FIGDESC">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FigDesc (description of figure) contains a brief prose description
                             of the appearance or content of a graphic figure, for use when documenting an image without displaying it.</a:documentation>
                         <text/>
                     </element>
-                    <element name="GRAPHIC">
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Graphic indicates the location of an inline graphic, illustration, or
-                            figure.</a:documentation>
-                        <attribute name="URL">
-                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">URL (uniform resource locator) specifies the URL from
-                                which the media concerned may be obtained.</a:documentation>
-                            <data type="anyURI"/>
-                        </attribute>
-                    </element>
+                    <ref name="GRAPHIC"/>
                     <ref name="P"/>
                 </choice>
             </oneOrMore>
