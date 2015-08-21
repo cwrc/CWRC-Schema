@@ -34,6 +34,9 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2015: Made the following changes:
+  - Redefined the child element HEADING within the element FIGURE so that it is locally defined, and in this local definition for the element HEADING, the attribute LEVEL
+     is not defined (the LEVEL attribute is a required attribute in the globally defined HEADING element), i.e., the LEVEL attribute is omitted in this local definition of
+     the HEADING element within the FIGURE element (the concept of level does not have any meaning when it is applied to image headings).
   - Created a new element DISABILITY that is a child element of the element CULTURALFORMATION.
   - Added a new attribute value of DISABILITY to the attribute ISSUE in the element HEALTH.
   - Added a new attribute value of DOCUDRAMA to the attribute GENRENAME in the element TGENRE.
@@ -2241,6 +2244,11 @@
                 information such as an illustration, formula, or figure.</a:documentation>
             <oneOrMore>
                 <choice>
+                    <element name="HEADING">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">head (or heading) contains any type of heading, for example
+                            the title of a section, or the heading of a list, glossary, manuscript description, etc.</a:documentation>
+                        <text/>
+                    </element>
                     <element name="FIGDESC">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FigDesc (description of figure) contains a brief prose description
                             of the appearance or content of a graphic figure, for use when documenting an image without displaying it.</a:documentation>
@@ -2255,7 +2263,6 @@
                             <data type="anyURI"/>
                         </attribute>
                     </element>
-                    <ref name="HEADING"/>
                     <ref name="P"/>
                 </choice>
             </oneOrMore>
