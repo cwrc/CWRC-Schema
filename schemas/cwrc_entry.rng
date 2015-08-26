@@ -34,7 +34,7 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2015: Made the following changes:
-  - Added the element GRAPHIC as a child element to the elements CHRONPROSE, DATAITEM, and P.
+  - Added the element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, and P.
   - Created a new element DISABILITY that is a child element of the element CULTURALFORMATION.
   - Added a new attribute value of DISABILITY to the attribute ISSUE in the element HEALTH.
   - Added a new attribute value of DOCUDRAMA to the attribute GENRENAME in the element TGENRE.
@@ -90,7 +90,8 @@
     and YYYY.
   - Added the attribute REF to the elements NAME, ORGNAME, PLACE, and TITLE (REF [the old DBREF] was already an attribute of the elements BIBCIT and
     TEXTSCOPE).
-  - Added the element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
+  - Made HEAD a global element, rather than a local element of LG; added a REF to the element HEAD within the element LG, and also made the pattern directive optional.
+  - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
     elements of GRAPHIC, HEAD, and P.
   - Added REFs to make the element GRAPHIC a child element of the elements CHRONPROSE, DATAITEM, and P (it was already a child element of FIGURE).
   - Merged the child elements of the element CHRONPROSE and the element DATAITEM so that they both have the same child elements; also redefined the element
@@ -1806,7 +1807,9 @@
                     convenient classification scheme or typology.</a:documentation>
                 <data type="NCName"/>
             </attribute>
-            <ref name="HEAD"/>
+            <optional>
+                <ref name="HEAD"/>
+            </optional>
             <oneOrMore>
                 <ref name="L"/>
             </oneOrMore>

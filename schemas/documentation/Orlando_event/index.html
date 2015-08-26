@@ -65,6 +65,10 @@
 				'properties_RESEARCHNOTES', 
 				'properties_CHRONEVENT_BIBCITS', 
 				'properties_KEYWORDCLASSES', 
+				'properties_HEAD', 
+				'properties_GRAPHIC', 
+				'properties_FIGURE', 
+				'properties_FIGDESC', 
 				'properties_DATE_CALENDAR', 
 				'properties_DATE_CERTAINTY', 
 				'properties_DATE_VALUE', 
@@ -116,7 +120,8 @@
 				'properties_CHRONSTRUCT_RELEVANCE1', 
 				'properties_CHRONSTRUCT_RELEVANCE2', 
 				'properties_CHRONSTRUCT_RELEVANCE3', 
-				'properties_EVENT_ID');
+				'properties_EVENT_ID', 
+				'properties_GRAPHIC_URL');
 var facetsBoxes= new Array('facets_DATE_CALENDAR', 
 				'facets_DATE_CERTAINTY', 
 				'facets_RESP-attribute_RESP', 
@@ -198,6 +203,9 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_SHORTPROSE', 
 				'usedBy_RESEARCHNOTES', 
 				'usedBy_KEYWORDCLASSES', 
+				'usedBy_HEAD', 
+				'usedBy_GRAPHIC', 
+				'usedBy_FIGDESC', 
 				'usedBy_DATE_CALENDAR', 
 				'usedBy_DATE_CERTAINTY', 
 				'usedBy_DATE_VALUE', 
@@ -272,6 +280,7 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_CHRONSTRUCT_RELEVANCE2', 
 				'usedBy_CHRONSTRUCT_RELEVANCE3', 
 				'usedBy_EVENT_ID', 
+				'usedBy_GRAPHIC_URL', 
 				'usedBy_RESP-attribute');
 var sourceBoxes= new Array('source_EVENT', 
 				'source_ORLANDOHEADER', 
@@ -331,6 +340,10 @@ var sourceBoxes= new Array('source_EVENT',
 				'source_RESEARCHNOTES', 
 				'source_CHRONEVENT_BIBCITS', 
 				'source_KEYWORDCLASSES', 
+				'source_HEAD', 
+				'source_GRAPHIC', 
+				'source_FIGURE', 
+				'source_FIGDESC', 
 				'source_DATE_CALENDAR', 
 				'source_DATE_CERTAINTY', 
 				'source_DATE_VALUE', 
@@ -405,6 +418,7 @@ var sourceBoxes= new Array('source_EVENT',
 				'source_CHRONSTRUCT_RELEVANCE2', 
 				'source_CHRONSTRUCT_RELEVANCE3', 
 				'source_EVENT_ID', 
+				'source_GRAPHIC_URL', 
 				'source_RESP-attribute');
 var instanceBoxes= new Array('instance_EVENT', 
 				'instance_ORLANDOHEADER', 
@@ -439,7 +453,8 @@ var instanceBoxes= new Array('instance_EVENT',
 				'instance_SHORTPROSE', 
 				'instance_RESEARCHNOTES', 
 				'instance_CHRONEVENT_BIBCITS', 
-				'instance_KEYWORDCLASSES');
+				'instance_KEYWORDCLASSES', 
+				'instance_FIGURE');
 var diagramBoxes= new Array('diagram_EVENT', 
 				'diagram_ORLANDOHEADER', 
 				'diagram_FILEDESC', 
@@ -498,6 +513,10 @@ var diagramBoxes= new Array('diagram_EVENT',
 				'diagram_RESEARCHNOTES', 
 				'diagram_CHRONEVENT_BIBCITS', 
 				'diagram_KEYWORDCLASSES', 
+				'diagram_HEAD', 
+				'diagram_GRAPHIC', 
+				'diagram_FIGURE', 
+				'diagram_FIGDESC', 
 				'diagram_RESP-attribute');
 var annotationBoxes= new Array('annotations_EVENT', 
 				'annotations_ORLANDOHEADER', 
@@ -543,6 +562,10 @@ var annotationBoxes= new Array('annotations_EVENT',
 				'annotations_P', 
 				'annotations_XREF', 
 				'annotations_TTHEMETOPIC', 
+				'annotations_HEAD', 
+				'annotations_GRAPHIC', 
+				'annotations_FIGURE', 
+				'annotations_FIGDESC', 
 				'annotations_DATE_CALENDAR', 
 				'annotations_DATE_CERTAINTY', 
 				'annotations_DATE_VALUE', 
@@ -592,7 +615,8 @@ var annotationBoxes= new Array('annotations_EVENT',
 				'annotations_NAME_REF', 
 				'annotations_XREF_URL', 
 				'annotations_CHRONSTRUCT_CHRONCOLUMN', 
-				'annotations_CHRONSTRUCT_RELEVANCE');
+				'annotations_CHRONSTRUCT_RELEVANCE', 
+				'annotations_GRAPHIC_URL');
 var attributesBoxes= new Array('attributes_EVENT', 
 				'attributes_ORLANDOHEADER', 
 				'attributes_RESPONSIBILITY', 
@@ -626,6 +650,7 @@ var attributesBoxes= new Array('attributes_EVENT',
 				'attributes_SCHOLARNOTE', 
 				'attributes_P', 
 				'attributes_XREF', 
+				'attributes_GRAPHIC', 
 				'attributes_RESP-attribute');
 var modelBoxes= new Array('model_EVENT', 
 				'model_ORLANDOHEADER', 
@@ -672,7 +697,8 @@ var modelBoxes= new Array('model_EVENT',
 				'model_SHORTPROSE', 
 				'model_RESEARCHNOTES', 
 				'model_CHRONEVENT_BIBCITS', 
-				'model_KEYWORDCLASSES');
+				'model_KEYWORDCLASSES', 
+				'model_FIGURE');
 
       
         var button_prefix = 'button_';
@@ -1008,9 +1034,13 @@ var modelBoxes= new Array('model_EVENT',
                                                 <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                                 <div><b><a href="index.html#EVENT" target="_self" title="No namespace">EVENT</a></b></div>
+                                                <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                                <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                                 <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
+                                                <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                                 <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
@@ -1147,9 +1177,13 @@ var modelBoxes= new Array('model_EVENT',
                                           <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                           <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                           <div><b><a href="index.html#EVENT" target="_self" title="No namespace">EVENT</a></b></div>
+                                          <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                          <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                           <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                           <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                           <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                          <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
+                                          <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                           <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                           <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                           <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
@@ -1287,9 +1321,13 @@ var modelBoxes= new Array('model_EVENT',
                                                 <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                                 <div><b><a href="index.html#EVENT" target="_self" title="No namespace">EVENT</a></b></div>
+                                                <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                                <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                                 <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
+                                                <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                                 <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
@@ -10668,7 +10706,7 @@ var modelBoxes= new Array('model_EVENT',
                               <table class="usedByTable">
                                  <tr>
                                     <td class="firstColumn">Elements </td>
-                                    <td><b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b>, <b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></td>
+                                    <td><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b>, <b><a href="index.html#SCHOLARNOTE" target="_self" title="No namespace">SCHOLARNOTE</a></b>, <b><a href="index.html#SHORTPROSE" target="_self" title="No namespace">SHORTPROSE</a></b></td>
                                  </tr>
                               </table>
                            </div>
@@ -11772,6 +11810,504 @@ var modelBoxes= new Array('model_EVENT',
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> ref=</span><span class="tAV">"KEYWORDCLASS"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="HEAD"></a><div class="componentTitle">Element <span class="qname">HEAD</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_HEAD" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_HEAD');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_HEAD" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">head contains a heading for the lg (line group) element and the</span><span class="tI">
+</span><span class="tT">figure (graphic information) element.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_HEAD" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_HEAD');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_HEAD" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_HEAD.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:string</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_HEAD" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_HEAD');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_HEAD" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_HEAD" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_HEAD');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_HEAD" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_HEAD" type="image" src="img/btM.gif" value="-" onclick="switchState('source_HEAD');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_HEAD" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"HEAD"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">head contains a heading for the lg (line group) element and the figure (graphic information) element.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="GRAPHIC"></a><div class="componentTitle">Element <span class="qname">GRAPHIC</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_GRAPHIC" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_GRAPHIC');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_GRAPHIC" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">Graphic indicates the location of an inline graphic, illustration, or</span><span class="tI">
+</span><span class="tT">figure.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_GRAPHIC" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_GRAPHIC');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_GRAPHIC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_GRAPHIC.jpeg" usemap="#orlando_event_xsd_Element_GRAPHIC" /><map name="orlando_event_xsd_Element_GRAPHIC" id="orlando_event_xsd_Element_GRAPHIC">
+                                 <area alt="index.tmp#GRAPHIC_URL" href="index.html#GRAPHIC_URL" coords="138,41,250,85" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_GRAPHIC" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_GRAPHIC');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_GRAPHIC" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_GRAPHIC" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_GRAPHIC');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_GRAPHIC" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_GRAPHIC" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_GRAPHIC');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_GRAPHIC" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th>Annotation</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="index.html#GRAPHIC_URL" target="_self" title="No namespace">URL</a></b></td>
+                                    <td><b>xs:anyURI</b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">URL (uniform resource locator) specifies the URL from</span><span class="tI">
+</span><span class="tT">which the media concerned may be obtained.</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_GRAPHIC" type="image" src="img/btM.gif" value="-" onclick="switchState('source_GRAPHIC');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_GRAPHIC" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"GRAPHIC"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Graphic indicates the location of an inline graphic, illustration, or figure.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"URL"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">URL (uniform resource locator) specifies the URL from which the media concerned may be obtained.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="FIGURE"></a><div class="componentTitle">Element <span class="qname">FIGURE</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_FIGURE" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_FIGURE');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_FIGURE" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">The figure element groups elements representing or containing graphic</span><span class="tI">
+</span><span class="tT">information such as an illustration, formula, or figure.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_FIGURE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_FIGURE');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_FIGURE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_FIGURE.jpeg" usemap="#orlando_event_xsd_Element_FIGURE" /><map name="orlando_event_xsd_Element_FIGURE" id="orlando_event_xsd_Element_FIGURE">
+                                 <area alt="index.tmp#HEAD" href="index.html#HEAD" coords="206,2,311,46" />
+                                 <area alt="index.tmp#FIGDESC" href="index.html#FIGDESC" coords="206,101,311,145" />
+                                 <area alt="index.tmp#GRAPHIC" href="index.html#GRAPHIC" coords="206,214,282,239" />
+                                 <area alt="index.tmp#P" href="index.html#P" coords="206,294,257,319" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_FIGURE" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_FIGURE');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_FIGURE" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_FIGURE" type="image" src="img/btM.gif" value="-" onclick="switchState('model_FIGURE');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_FIGURE" style="display:block"><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b> | <b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b> | <b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b> | <b><a href="index.html#P" target="_self" title="No namespace">P</a></b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Children</b></td>
+                        <td><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b>, <b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b>, <b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b>, <b><a href="index.html#P" target="_self" title="No namespace">P</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Instance</b></div>
+                           <div class="floatRight"><input id="button_instance_FIGURE" type="image" src="img/btM.gif" value="-" onclick="switchState('instance_FIGURE');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="instance_FIGURE" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;FIGURE</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;HEAD</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/HEAD&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;FIGDESC</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/FIGDESC&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;GRAPHIC</span><span class="tT"> </span><span class="tAN">URL=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/GRAPHIC&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;P</span><span class="tT"> </span><span class="tAN">ID=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/P&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/FIGURE&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_FIGURE" type="image" src="img/btM.gif" value="-" onclick="switchState('source_FIGURE');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_FIGURE" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"FIGURE"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The figure element groups elements representing or containing graphic information such as an illustration, formula, or figure.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:choice</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"HEAD"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"FIGDESC"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"GRAPHIC"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"P"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:choice&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="FIGDESC"></a><div class="componentTitle">Element <span class="qname">FIGDESC</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_FIGDESC" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_FIGDESC');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_FIGDESC" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">FigDesc (description of figure) contains a brief prose description</span><span class="tI">
+</span><span class="tT">of the appearance or content of a graphic figure, for use when documenting an image without displaying it.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_FIGDESC" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_FIGDESC');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_FIGDESC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_FIGDESC.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:string</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_FIGDESC" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_FIGDESC');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_FIGDESC" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>simple</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_FIGDESC" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_FIGDESC');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_FIGDESC" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_FIGDESC" type="image" src="img/btM.gif" value="-" onclick="switchState('source_FIGDESC');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_FIGDESC" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"FIGDESC"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">FigDesc (description of figure) contains a brief prose description of the appearance or content of a graphic figure, for use when documenting an image without displaying it.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -24112,6 +24648,106 @@ var modelBoxes= new Array('model_EVENT',
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"ID"</span><span class="tAN"> type=</span><span class="tAV">"xs:NCName"</span><span class="tEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="GRAPHIC_URL"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b> / @URL</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_GRAPHIC_URL" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_GRAPHIC_URL');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_GRAPHIC_URL" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">URL (uniform resource locator) specifies the URL from</span><span class="tI">
+</span><span class="tT">which the media concerned may be obtained.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b>xs:anyURI</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_GRAPHIC_URL" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_GRAPHIC_URL');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_GRAPHIC_URL" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_GRAPHIC_URL" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_GRAPHIC_URL');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_GRAPHIC_URL" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_GRAPHIC_URL" type="image" src="img/btM.gif" value="-" onclick="switchState('source_GRAPHIC_URL');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_GRAPHIC_URL" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"URL"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tAN"> type=</span><span class="tAV">"xs:anyURI"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">URL (uniform resource locator) specifies the URL from which the media concerned may be obtained.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>

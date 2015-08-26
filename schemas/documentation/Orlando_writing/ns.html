@@ -132,6 +132,9 @@
 				'properties_WORKSCITED', 
 				'properties_SOURCE', 
 				'properties_BIOGPROSE', 
+				'properties_GRAPHIC', 
+				'properties_FIGURE', 
+				'properties_FIGDESC', 
 				'properties_DATERANGE_CALENDAR', 
 				'properties_DATERANGE_CERTAINTY', 
 				'properties_DATERANGE_EXACT', 
@@ -213,7 +216,8 @@
 				'properties_DIV2_ID', 
 				'properties_WRITING_ID', 
 				'properties_WRITING_PERSON', 
-				'properties_WRITING_SEX');
+				'properties_WRITING_SEX', 
+				'properties_GRAPHIC_URL');
 var facetsBoxes= new Array('facets_DATERANGE_CALENDAR', 
 				'facets_DATERANGE_CERTAINTY', 
 				'facets_DATERANGE_EXACT', 
@@ -388,6 +392,8 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_WORKSCITED', 
 				'usedBy_SOURCE', 
 				'usedBy_BIOGPROSE', 
+				'usedBy_GRAPHIC', 
+				'usedBy_FIGDESC', 
 				'usedBy_DATERANGE_CALENDAR', 
 				'usedBy_DATERANGE_CERTAINTY', 
 				'usedBy_DATERANGE_EXACT', 
@@ -506,6 +512,7 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_WRITING_ID', 
 				'usedBy_WRITING_PERSON', 
 				'usedBy_WRITING_SEX', 
+				'usedBy_GRAPHIC_URL', 
 				'usedBy_RESP-attribute');
 var sourceBoxes= new Array('source_WRITING', 
 				'source_ORLANDOHEADER', 
@@ -632,6 +639,9 @@ var sourceBoxes= new Array('source_WRITING',
 				'source_WORKSCITED', 
 				'source_SOURCE', 
 				'source_BIOGPROSE', 
+				'source_GRAPHIC', 
+				'source_FIGURE', 
+				'source_FIGDESC', 
 				'source_DATERANGE_CALENDAR', 
 				'source_DATERANGE_CERTAINTY', 
 				'source_DATERANGE_EXACT', 
@@ -750,6 +760,7 @@ var sourceBoxes= new Array('source_WRITING',
 				'source_WRITING_ID', 
 				'source_WRITING_PERSON', 
 				'source_WRITING_SEX', 
+				'source_GRAPHIC_URL', 
 				'source_RESP-attribute');
 var instanceBoxes= new Array('instance_WRITING', 
 				'instance_ORLANDOHEADER', 
@@ -854,7 +865,8 @@ var instanceBoxes= new Array('instance_WRITING',
 				'instance_RECEPTION', 
 				'instance_DIV2', 
 				'instance_WORKSCITED', 
-				'instance_SOURCE');
+				'instance_SOURCE', 
+				'instance_FIGURE');
 var diagramBoxes= new Array('diagram_WRITING', 
 				'diagram_ORLANDOHEADER', 
 				'diagram_FILEDESC', 
@@ -980,6 +992,9 @@ var diagramBoxes= new Array('diagram_WRITING',
 				'diagram_WORKSCITED', 
 				'diagram_SOURCE', 
 				'diagram_BIOGPROSE', 
+				'diagram_GRAPHIC', 
+				'diagram_FIGURE', 
+				'diagram_FIGDESC', 
 				'diagram_RESP-attribute');
 var annotationBoxes= new Array('annotations_WRITING', 
 				'annotations_ORLANDOHEADER', 
@@ -1074,6 +1089,7 @@ var annotationBoxes= new Array('annotations_WRITING',
 				'annotations_XREF', 
 				'annotations_LB', 
 				'annotations_LG', 
+				'annotations_HEAD', 
 				'annotations_ADDRESS', 
 				'annotations_ADDRLINE', 
 				'annotations_GEOG', 
@@ -1093,6 +1109,9 @@ var annotationBoxes= new Array('annotations_WRITING',
 				'annotations_DIV2', 
 				'annotations_WORKSCITED', 
 				'annotations_SOURCE', 
+				'annotations_GRAPHIC', 
+				'annotations_FIGURE', 
+				'annotations_FIGDESC', 
 				'annotations_DATERANGE_CALENDAR', 
 				'annotations_DATERANGE_CERTAINTY', 
 				'annotations_DATERANGE_EXACT', 
@@ -1169,7 +1188,8 @@ var annotationBoxes= new Array('annotations_WRITING',
 				'annotations_CHRONSTRUCT_CHRONCOLUMN', 
 				'annotations_CHRONSTRUCT_RELEVANCE', 
 				'annotations_WRITING_PERSON', 
-				'annotations_WRITING_SEX');
+				'annotations_WRITING_SEX', 
+				'annotations_GRAPHIC_URL');
 var attributesBoxes= new Array('attributes_WRITING', 
 				'attributes_ORLANDOHEADER', 
 				'attributes_RESPONSIBILITY', 
@@ -1227,6 +1247,7 @@ var attributesBoxes= new Array('attributes_WRITING',
 				'attributes_TEXTSCOPE', 
 				'attributes_CHRONSTRUCT', 
 				'attributes_DIV2', 
+				'attributes_GRAPHIC', 
 				'attributes_RESP-attribute');
 var modelBoxes= new Array('model_WRITING', 
 				'model_ORLANDOHEADER', 
@@ -1340,7 +1361,8 @@ var modelBoxes= new Array('model_WRITING',
 				'model_RECEPTION', 
 				'model_DIV2', 
 				'model_WORKSCITED', 
-				'model_SOURCE');
+				'model_SOURCE', 
+				'model_FIGURE');
 
       
         var button_prefix = 'button_';
@@ -1629,10 +1651,13 @@ var modelBoxes= new Array('model_WRITING',
                                                 <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                                 <div><b><a href="index.html#EXTENTOFOEUVRE" target="_self" title="No namespace">EXTENTOFOEUVRE</a></b></div>
+                                                <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                                <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                                 <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#GENERICRANGE" target="_self" title="No namespace">GENERICRANGE</a></b></div>
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
                                                 <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                                 <div><b><a href="index.html#HEADING" target="_self" title="No namespace">HEADING</a></b></div>
                                                 <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
@@ -1836,10 +1861,13 @@ var modelBoxes= new Array('model_WRITING',
                                           <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                           <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                           <div><b><a href="index.html#EXTENTOFOEUVRE" target="_self" title="No namespace">EXTENTOFOEUVRE</a></b></div>
+                                          <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                          <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                           <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                           <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                           <div><b><a href="index.html#GENERICRANGE" target="_self" title="No namespace">GENERICRANGE</a></b></div>
                                           <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                          <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
                                           <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                           <div><b><a href="index.html#HEADING" target="_self" title="No namespace">HEADING</a></b></div>
                                           <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
@@ -2044,10 +2072,13 @@ var modelBoxes= new Array('model_WRITING',
                                                 <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                                 <div><b><a href="index.html#EXTENTOFOEUVRE" target="_self" title="No namespace">EXTENTOFOEUVRE</a></b></div>
+                                                <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                                <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                                 <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#GENERICRANGE" target="_self" title="No namespace">GENERICRANGE</a></b></div>
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
                                                 <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                                 <div><b><a href="index.html#HEADING" target="_self" title="No namespace">HEADING</a></b></div>
                                                 <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>

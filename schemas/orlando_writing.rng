@@ -33,6 +33,11 @@
 
 <!-- 
 *** Revisions ***
+* MRB: August 2015: Made the following changes:
+  - Made HEAD a global element, rather than a local element of LG; added a REF to the element HEAD within the element LG, and also made the pattern directive optional.
+  - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, and P.
+  - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
+    elements of GRAPHIC, HEAD, and P.
 * MRB: March 2015: Made the following changes:
   - Created an attribute LAT in the element PLACE.
   - Created an attribute LONG in the element PLACE.
@@ -404,6 +409,45 @@
                     <ref name="RESEARCHNOTE"/>
                     <ref name="SOCALLED"/>
                     <ref name="TITLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="HEAD">
+        <element name="HEAD">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">head contains a heading for the lg (line group) element and the
+                figure (graphic information) element.</a:documentation>
+            <text/>
+        </element>
+    </define>
+
+    <define name="GRAPHIC">
+        <element name="GRAPHIC">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Graphic indicates the location of an inline graphic, illustration, or
+                figure.</a:documentation>
+            <attribute name="URL">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">URL (uniform resource locator) specifies the URL from
+                    which the media concerned may be obtained.</a:documentation>
+                <data type="anyURI"/>
+            </attribute>
+        </element>
+    </define>
+
+    <define name="FIGURE">
+        <element name="FIGURE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The figure element groups elements representing or containing graphic
+                information such as an illustration, formula, or figure.</a:documentation>
+            <oneOrMore>
+                <choice>
+                    <ref name="HEAD"/>
+                    <element name="FIGDESC">
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FigDesc (description of figure) contains a brief prose description
+                            of the appearance or content of a graphic figure, for use when documenting an image without displaying it.</a:documentation>
+                        <text/>
+                    </element>
+                    <ref name="GRAPHIC"/>
+                    <ref name="P"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1201,9 +1245,9 @@
                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using any
                 convenient classification scheme or typology.</a:documentation>
                         </attribute>
-                        <element name="HEAD">
-                            <empty/>
-                        </element>
+                        <optional>
+                            <ref name="HEAD"/>
+                        </optional>
                         <oneOrMore>
                             <ref name="L"/>
                         </oneOrMore>

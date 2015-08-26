@@ -65,6 +65,10 @@
 				'properties_RESEARCHNOTES', 
 				'properties_CHRONEVENT_BIBCITS', 
 				'properties_KEYWORDCLASSES', 
+				'properties_HEAD', 
+				'properties_GRAPHIC', 
+				'properties_FIGURE', 
+				'properties_FIGDESC', 
 				'properties_DATE_CALENDAR', 
 				'properties_DATE_CERTAINTY', 
 				'properties_DATE_VALUE', 
@@ -116,7 +120,8 @@
 				'properties_CHRONSTRUCT_RELEVANCE1', 
 				'properties_CHRONSTRUCT_RELEVANCE2', 
 				'properties_CHRONSTRUCT_RELEVANCE3', 
-				'properties_EVENT_ID');
+				'properties_EVENT_ID', 
+				'properties_GRAPHIC_URL');
 var facetsBoxes= new Array('facets_DATE_CALENDAR', 
 				'facets_DATE_CERTAINTY', 
 				'facets_RESP-attribute_RESP', 
@@ -198,6 +203,9 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_SHORTPROSE', 
 				'usedBy_RESEARCHNOTES', 
 				'usedBy_KEYWORDCLASSES', 
+				'usedBy_HEAD', 
+				'usedBy_GRAPHIC', 
+				'usedBy_FIGDESC', 
 				'usedBy_DATE_CALENDAR', 
 				'usedBy_DATE_CERTAINTY', 
 				'usedBy_DATE_VALUE', 
@@ -272,6 +280,7 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_CHRONSTRUCT_RELEVANCE2', 
 				'usedBy_CHRONSTRUCT_RELEVANCE3', 
 				'usedBy_EVENT_ID', 
+				'usedBy_GRAPHIC_URL', 
 				'usedBy_RESP-attribute');
 var sourceBoxes= new Array('source_EVENT', 
 				'source_ORLANDOHEADER', 
@@ -331,6 +340,10 @@ var sourceBoxes= new Array('source_EVENT',
 				'source_RESEARCHNOTES', 
 				'source_CHRONEVENT_BIBCITS', 
 				'source_KEYWORDCLASSES', 
+				'source_HEAD', 
+				'source_GRAPHIC', 
+				'source_FIGURE', 
+				'source_FIGDESC', 
 				'source_DATE_CALENDAR', 
 				'source_DATE_CERTAINTY', 
 				'source_DATE_VALUE', 
@@ -405,6 +418,7 @@ var sourceBoxes= new Array('source_EVENT',
 				'source_CHRONSTRUCT_RELEVANCE2', 
 				'source_CHRONSTRUCT_RELEVANCE3', 
 				'source_EVENT_ID', 
+				'source_GRAPHIC_URL', 
 				'source_RESP-attribute');
 var instanceBoxes= new Array('instance_EVENT', 
 				'instance_ORLANDOHEADER', 
@@ -439,7 +453,8 @@ var instanceBoxes= new Array('instance_EVENT',
 				'instance_SHORTPROSE', 
 				'instance_RESEARCHNOTES', 
 				'instance_CHRONEVENT_BIBCITS', 
-				'instance_KEYWORDCLASSES');
+				'instance_KEYWORDCLASSES', 
+				'instance_FIGURE');
 var diagramBoxes= new Array('diagram_EVENT', 
 				'diagram_ORLANDOHEADER', 
 				'diagram_FILEDESC', 
@@ -498,6 +513,10 @@ var diagramBoxes= new Array('diagram_EVENT',
 				'diagram_RESEARCHNOTES', 
 				'diagram_CHRONEVENT_BIBCITS', 
 				'diagram_KEYWORDCLASSES', 
+				'diagram_HEAD', 
+				'diagram_GRAPHIC', 
+				'diagram_FIGURE', 
+				'diagram_FIGDESC', 
 				'diagram_RESP-attribute');
 var annotationBoxes= new Array('annotations_EVENT', 
 				'annotations_ORLANDOHEADER', 
@@ -543,6 +562,10 @@ var annotationBoxes= new Array('annotations_EVENT',
 				'annotations_P', 
 				'annotations_XREF', 
 				'annotations_TTHEMETOPIC', 
+				'annotations_HEAD', 
+				'annotations_GRAPHIC', 
+				'annotations_FIGURE', 
+				'annotations_FIGDESC', 
 				'annotations_DATE_CALENDAR', 
 				'annotations_DATE_CERTAINTY', 
 				'annotations_DATE_VALUE', 
@@ -592,7 +615,8 @@ var annotationBoxes= new Array('annotations_EVENT',
 				'annotations_NAME_REF', 
 				'annotations_XREF_URL', 
 				'annotations_CHRONSTRUCT_CHRONCOLUMN', 
-				'annotations_CHRONSTRUCT_RELEVANCE');
+				'annotations_CHRONSTRUCT_RELEVANCE', 
+				'annotations_GRAPHIC_URL');
 var attributesBoxes= new Array('attributes_EVENT', 
 				'attributes_ORLANDOHEADER', 
 				'attributes_RESPONSIBILITY', 
@@ -626,6 +650,7 @@ var attributesBoxes= new Array('attributes_EVENT',
 				'attributes_SCHOLARNOTE', 
 				'attributes_P', 
 				'attributes_XREF', 
+				'attributes_GRAPHIC', 
 				'attributes_RESP-attribute');
 var modelBoxes= new Array('model_EVENT', 
 				'model_ORLANDOHEADER', 
@@ -672,7 +697,8 @@ var modelBoxes= new Array('model_EVENT',
 				'model_SHORTPROSE', 
 				'model_RESEARCHNOTES', 
 				'model_CHRONEVENT_BIBCITS', 
-				'model_KEYWORDCLASSES');
+				'model_KEYWORDCLASSES', 
+				'model_FIGURE');
 
       
         var button_prefix = 'button_';
@@ -957,9 +983,13 @@ var modelBoxes= new Array('model_EVENT',
                                                 <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                                 <div><b><a href="index.html#EVENT" target="_self" title="No namespace">EVENT</a></b></div>
+                                                <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                                <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                                 <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
+                                                <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                                 <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
@@ -1096,9 +1126,13 @@ var modelBoxes= new Array('model_EVENT',
                                           <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                           <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                           <div><b><a href="index.html#EVENT" target="_self" title="No namespace">EVENT</a></b></div>
+                                          <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                          <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                           <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                           <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                           <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                          <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
+                                          <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                           <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                           <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                           <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>
@@ -1236,9 +1270,13 @@ var modelBoxes= new Array('model_EVENT',
                                                 <div><b><a href="index.html#DOCTITLE" target="_self" title="No namespace">DOCTITLE</a></b></div>
                                                 <div><b><a href="index.html#EMPH" target="_self" title="No namespace">EMPH</a></b></div>
                                                 <div><b><a href="index.html#EVENT" target="_self" title="No namespace">EVENT</a></b></div>
+                                                <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                                <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                                 <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
+                                                <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
+                                                <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                                 <div><b><a href="index.html#ITEM" target="_self" title="No namespace">ITEM</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASS" target="_self" title="No namespace">KEYWORDCLASS</a></b></div>
                                                 <div><b><a href="index.html#KEYWORDCLASSES" target="_self" title="No namespace">KEYWORDCLASSES</a></b></div>

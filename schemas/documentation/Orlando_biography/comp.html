@@ -134,6 +134,10 @@
 				'properties_WORKSCITED', 
 				'properties_SOURCE', 
 				'properties_BIOGPROSE', 
+				'properties_HEAD', 
+				'properties_GRAPHIC', 
+				'properties_FIGURE', 
+				'properties_FIGDESC', 
 				'properties_DATERANGE_CALENDAR', 
 				'properties_DATERANGE_CERTAINTY', 
 				'properties_DATERANGE_EXACT', 
@@ -252,7 +256,8 @@
 				'properties_STANDARD_WROTEORPUBLISHEDAS', 
 				'properties_BIOGRAPHY_ID', 
 				'properties_BIOGRAPHY_PERSON', 
-				'properties_BIOGRAPHY_SEX');
+				'properties_BIOGRAPHY_SEX', 
+				'properties_GRAPHIC_URL');
 var facetsBoxes= new Array('facets_DATERANGE_CALENDAR', 
 				'facets_DATERANGE_CERTAINTY', 
 				'facets_DATERANGE_EXACT', 
@@ -456,6 +461,9 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_WORKSCITED', 
 				'usedBy_SOURCE', 
 				'usedBy_BIOGPROSE', 
+				'usedBy_HEAD', 
+				'usedBy_GRAPHIC', 
+				'usedBy_FIGDESC', 
 				'usedBy_DATERANGE_CALENDAR', 
 				'usedBy_DATERANGE_CERTAINTY', 
 				'usedBy_DATERANGE_EXACT', 
@@ -635,6 +643,7 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_BIOGRAPHY_ID', 
 				'usedBy_BIOGRAPHY_PERSON', 
 				'usedBy_BIOGRAPHY_SEX', 
+				'usedBy_GRAPHIC_URL', 
 				'usedBy_RESP-attribute');
 var sourceBoxes= new Array('source_BIOGRAPHY', 
 				'source_ORLANDOHEADER', 
@@ -763,6 +772,10 @@ var sourceBoxes= new Array('source_BIOGRAPHY',
 				'source_WORKSCITED', 
 				'source_SOURCE', 
 				'source_BIOGPROSE', 
+				'source_HEAD', 
+				'source_GRAPHIC', 
+				'source_FIGURE', 
+				'source_FIGDESC', 
 				'source_DATERANGE_CALENDAR', 
 				'source_DATERANGE_CERTAINTY', 
 				'source_DATERANGE_EXACT', 
@@ -942,6 +955,7 @@ var sourceBoxes= new Array('source_BIOGRAPHY',
 				'source_BIOGRAPHY_ID', 
 				'source_BIOGRAPHY_PERSON', 
 				'source_BIOGRAPHY_SEX', 
+				'source_GRAPHIC_URL', 
 				'source_RESP-attribute');
 var instanceBoxes= new Array('instance_BIOGRAPHY', 
 				'instance_ORLANDOHEADER', 
@@ -1050,7 +1064,8 @@ var instanceBoxes= new Array('instance_BIOGRAPHY',
 				'instance_HEALTH', 
 				'instance_WORKSCITED', 
 				'instance_SOURCE', 
-				'instance_BIOGPROSE');
+				'instance_BIOGPROSE', 
+				'instance_FIGURE');
 var diagramBoxes= new Array('diagram_BIOGRAPHY', 
 				'diagram_ORLANDOHEADER', 
 				'diagram_FILEDESC', 
@@ -1178,6 +1193,10 @@ var diagramBoxes= new Array('diagram_BIOGRAPHY',
 				'diagram_WORKSCITED', 
 				'diagram_SOURCE', 
 				'diagram_BIOGPROSE', 
+				'diagram_HEAD', 
+				'diagram_GRAPHIC', 
+				'diagram_FIGURE', 
+				'diagram_FIGDESC', 
 				'diagram_RESP-attribute');
 var annotationBoxes= new Array('annotations_BIOGRAPHY', 
 				'annotations_ORLANDOHEADER', 
@@ -1296,6 +1315,10 @@ var annotationBoxes= new Array('annotations_BIOGRAPHY',
 				'annotations_HEALTH', 
 				'annotations_WORKSCITED', 
 				'annotations_SOURCE', 
+				'annotations_HEAD', 
+				'annotations_GRAPHIC', 
+				'annotations_FIGURE', 
+				'annotations_FIGDESC', 
 				'annotations_DATERANGE_CALENDAR', 
 				'annotations_DATERANGE_CERTAINTY', 
 				'annotations_DATERANGE_EXACT', 
@@ -1433,7 +1456,8 @@ var annotationBoxes= new Array('annotations_BIOGRAPHY',
 				'annotations_HEALTH_ISSUE', 
 				'annotations_STANDARD_WROTEORPUBLISHEDAS', 
 				'annotations_BIOGRAPHY_PERSON', 
-				'annotations_BIOGRAPHY_SEX');
+				'annotations_BIOGRAPHY_SEX', 
+				'annotations_GRAPHIC_URL');
 var attributesBoxes= new Array('attributes_BIOGRAPHY', 
 				'attributes_ORLANDOHEADER', 
 				'attributes_RESPONSIBILITY', 
@@ -1506,6 +1530,7 @@ var attributesBoxes= new Array('attributes_BIOGRAPHY',
 				'attributes_LOCATION', 
 				'attributes_HEALTH', 
 				'attributes_STANDARD', 
+				'attributes_GRAPHIC', 
 				'attributes_RESP-attribute');
 var modelBoxes= new Array('model_BIOGRAPHY', 
 				'model_ORLANDOHEADER', 
@@ -1624,7 +1649,8 @@ var modelBoxes= new Array('model_BIOGRAPHY',
 				'model_STANDARD', 
 				'model_WORKSCITED', 
 				'model_SOURCE', 
-				'model_BIOGPROSE');
+				'model_BIOGPROSE', 
+				'model_FIGURE');
 
       
         var button_prefix = 'button_';
@@ -1935,6 +1961,8 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                                 <div><b><a href="index.html#EMPLOYER" target="_self" title="No namespace">EMPLOYER</a></b></div>
                                                 <div><b><a href="index.html#ETHNICITY" target="_self" title="No namespace">ETHNICITY</a></b></div>
                                                 <div><b><a href="index.html#FAMILY" target="_self" title="No namespace">FAMILY</a></b></div>
+                                                <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                                <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                                 <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#FRIENDSASSOCIATES" target="_self" title="No namespace">FRIENDSASSOCIATES</a></b></div>
@@ -1942,6 +1970,8 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
                                                 <div><b><a href="index.html#GEOGHERITAGE" target="_self" title="No namespace">GEOGHERITAGE</a></b></div>
                                                 <div><b><a href="index.html#GIVEN" target="_self" title="No namespace">GIVEN</a></b></div>
+                                                <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
+                                                <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                                 <div><b><a href="index.html#HEADING" target="_self" title="No namespace">HEADING</a></b></div>
                                                 <div><b><a href="index.html#HEALTH" target="_self" title="No namespace">HEALTH</a></b></div>
                                                 <div><b><a href="index.html#INDEXED" target="_self" title="No namespace">INDEXED</a></b></div>
@@ -2144,6 +2174,8 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                           <div><b><a href="index.html#EMPLOYER" target="_self" title="No namespace">EMPLOYER</a></b></div>
                                           <div><b><a href="index.html#ETHNICITY" target="_self" title="No namespace">ETHNICITY</a></b></div>
                                           <div><b><a href="index.html#FAMILY" target="_self" title="No namespace">FAMILY</a></b></div>
+                                          <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                          <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                           <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                           <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                           <div><b><a href="index.html#FRIENDSASSOCIATES" target="_self" title="No namespace">FRIENDSASSOCIATES</a></b></div>
@@ -2151,6 +2183,8 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                           <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
                                           <div><b><a href="index.html#GEOGHERITAGE" target="_self" title="No namespace">GEOGHERITAGE</a></b></div>
                                           <div><b><a href="index.html#GIVEN" target="_self" title="No namespace">GIVEN</a></b></div>
+                                          <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
+                                          <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                           <div><b><a href="index.html#HEADING" target="_self" title="No namespace">HEADING</a></b></div>
                                           <div><b><a href="index.html#HEALTH" target="_self" title="No namespace">HEALTH</a></b></div>
                                           <div><b><a href="index.html#INDEXED" target="_self" title="No namespace">INDEXED</a></b></div>
@@ -2354,6 +2388,8 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                                 <div><b><a href="index.html#EMPLOYER" target="_self" title="No namespace">EMPLOYER</a></b></div>
                                                 <div><b><a href="index.html#ETHNICITY" target="_self" title="No namespace">ETHNICITY</a></b></div>
                                                 <div><b><a href="index.html#FAMILY" target="_self" title="No namespace">FAMILY</a></b></div>
+                                                <div><b><a href="index.html#FIGDESC" target="_self" title="No namespace">FIGDESC</a></b></div>
+                                                <div><b><a href="index.html#FIGURE" target="_self" title="No namespace">FIGURE</a></b></div>
                                                 <div><b><a href="index.html#FILEDESC" target="_self" title="No namespace">FILEDESC</a></b></div>
                                                 <div><b><a href="index.html#FOREIGN" target="_self" title="No namespace">FOREIGN</a></b></div>
                                                 <div><b><a href="index.html#FRIENDSASSOCIATES" target="_self" title="No namespace">FRIENDSASSOCIATES</a></b></div>
@@ -2361,6 +2397,8 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                                 <div><b><a href="index.html#GEOG" target="_self" title="No namespace">GEOG</a></b></div>
                                                 <div><b><a href="index.html#GEOGHERITAGE" target="_self" title="No namespace">GEOGHERITAGE</a></b></div>
                                                 <div><b><a href="index.html#GIVEN" target="_self" title="No namespace">GIVEN</a></b></div>
+                                                <div><b><a href="index.html#GRAPHIC" target="_self" title="No namespace">GRAPHIC</a></b></div>
+                                                <div><b><a href="index.html#HEAD" target="_self" title="No namespace">HEAD</a></b></div>
                                                 <div><b><a href="index.html#HEADING" target="_self" title="No namespace">HEADING</a></b></div>
                                                 <div><b><a href="index.html#HEALTH" target="_self" title="No namespace">HEALTH</a></b></div>
                                                 <div><b><a href="index.html#INDEXED" target="_self" title="No namespace">INDEXED</a></b></div>
