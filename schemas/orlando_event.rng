@@ -35,6 +35,7 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2015: Made the following changes:
+  - Made the pattern directives optional for the element LG attribute TYPE.
   - Created a new element HEAD.
   - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, and P.
   - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
@@ -797,11 +798,13 @@
                     <element name="LG">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lg contains a group of verse lines functioning as a formal
               unit, e.g. a stanza, refrain, verse paragraph, etc.</a:documentation>
-                        <attribute name="TYPE">
-                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using any
+                        <optional>
+                            <attribute name="TYPE">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using any
                 convenient classification scheme or typology.</a:documentation>
-                            <data type="NCName"/>
-                        </attribute>
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
                         <oneOrMore>
                             <ref name="L"/>
                         </oneOrMore>

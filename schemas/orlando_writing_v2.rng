@@ -34,7 +34,8 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2015: Made the following changes:
-  - Made HEAD a global element, rather than a local element of LG; added a REF to the element HEAD within the element LG, and also made the pattern directive optional.
+  - Made HEAD a global element, rather than a local element of LG; added a REF to the element HEAD within the element LG, and also made the pattern directives optional
+    for both the LG attribute TYPE and the child element HEAD.
   - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, and P.
   - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
     elements of GRAPHIC, HEAD, and P.
@@ -1240,10 +1241,12 @@
                     <element name="LG">
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lg contains a group of verse lines functioning as a formal
               unit, e.g. a stanza, refrain, verse paragraph, etc.</a:documentation>
-                        <attribute name="TYPE">
-                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using any
+                        <optional>
+                            <attribute name="TYPE">
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using any
                 convenient classification scheme or typology.</a:documentation>
-                        </attribute>
+                            </attribute>
+                        </optional>
                         <optional>
                             <ref name="HEAD"/>
                         </optional>
