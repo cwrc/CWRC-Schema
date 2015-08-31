@@ -34,9 +34,9 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2015: Made the following changes:
-  - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, and P.
-  - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
-    elements of GRAPHIC, HEAD, and P.
+  - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, P, and RESEARCHNOTE.
+  - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, P, and RESEARCHNOTE; FIGURE has a child element of FIGDESC, and
+    REFs to child elements of GRAPHIC, HEAD, and P.
 * MRB: Mon 04-May-2015: *_v2 schema copy uses the ISO 8601 date format rather than the customized Orlando date format; this meant making changes
    to the defined pattern in the VALUE attribute in the DATE element, the FROM and TO attributes in the DATERANGE element, and the VALUE attribute in
    the DATESTRUCT element.
@@ -1000,9 +1000,11 @@
                     <ref name="EMPH"/>
                     <ref name="EMPLOYER"/>
                     <ref name="ETHNICITY"/>
+                    <ref name="FIGURE"/>
                     <ref name="FOREIGN"/>
                     <ref name="GENDER"/>
                     <ref name="GEOGHERITAGE"/>
+                    <ref name="GRAPHIC"/>
                     <ref name="INDEXED"/>
                     <ref name="INSTRUCTOR"/>
                     <ref name="JOB"/>
@@ -1166,8 +1168,10 @@
                         <ref name="DIVORCE"/>
                         <ref name="EMPH"/>
                         <ref name="EMPLOYER"/>
+                        <ref name="FIGURE"/>
                         <ref name="FOREIGN"/>
                         <ref name="GENDER"/>
+                        <ref name="GRAPHIC"/>
                         <ref name="INSTRUCTOR"/>
                         <ref name="JOB"/>
                         <ref name="KEYWORDCLASS"/>
@@ -1493,6 +1497,8 @@
                     <text/>
                     <ref name="BIBCITS"/>
                     <ref name="EMPH"/>
+                    <ref name="FIGURE"/>
+                    <ref name="GRAPHIC"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
@@ -1578,6 +1584,8 @@
                                             <text/>
                                             <ref name="BIBCITS"/>
                                             <ref name="BIRTHNAME"/>
+                                            <ref name="FIGURE"/>
+                                            <ref name="GRAPHIC"/>
                                             <ref name="INDEXED"/>
                                             <ref name="MARRIED"/>
                                             <ref name="NAME"/>

@@ -36,8 +36,8 @@
 * MRB: August 2015: Made the following changes:
   - Made HEAD a global element, rather than a local element of LG; added a REF to the element HEAD within the element LG, and also made the pattern directives optional
     for both the LG attribute TYPE and the child element HEAD.
-  - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, and P.
-  - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
+  - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE.
+  - Created a new element FIGURE as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE; FIGURE has a child element of FIGDESC, and REFs to child
     elements of GRAPHIC, HEAD, and P.
 * MRB: Mon 04-May-2015: *_v2 schema copy uses the ISO 8601 date format rather than the customized Orlando date format; this meant making changes
    to the defined pattern in the VALUE attribute in the DATE element, the FROM and TO attributes in the DATERANGE element, and the VALUE attribute in
@@ -463,6 +463,8 @@
                     <text/>
                     <ref name="BIBCITS"/>
                     <ref name="EMPH"/>
+                    <ref name="FIGURE"/>
+                    <ref name="GRAPHIC"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PAUTHORSHIP"/>
@@ -721,7 +723,9 @@
                         <ref name="DATERANGE"/>
                         <ref name="DATESTRUCT"/>
                         <ref name="EMPH"/>
+                        <ref name="FIGURE"/>
                         <ref name="FOREIGN"/>
+                        <ref name="GRAPHIC"/>
                         <ref name="KEYWORDCLASS"/>
                         <ref name="NAME"/>
                         <ref name="ORGNAME"/>
@@ -1008,8 +1012,10 @@
                     <ref name="DATESTRUCT"/>
                     <ref name="EMPH"/>
                     <ref name="EXTENTOFOEUVRE"/>
+                    <ref name="FIGURE"/>
                     <ref name="FOREIGN"/>
                     <ref name="GENERICRANGE"/>
+                    <ref name="GRAPHIC"/>
                     <ref name="JOB"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="L"/>

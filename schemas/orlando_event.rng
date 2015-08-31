@@ -37,8 +37,8 @@
 * MRB: August 2015: Made the following changes:
   - Made the pattern directives optional for the element LG attribute TYPE.
   - Created a new element HEAD.
-  - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, and P.
-  - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
+   - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE.
+  - Created a new element FIGURE as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE; FIGURE has a child element of FIGDESC, and REFs to child
     elements of GRAPHIC, HEAD, and P.
 * MRB: March 2015: Made the following changes:
   - Modified a copy of the events schema used to model events that could be pasted into the Document Archive textarea form field (i.e., orlando_document_archive_events.rng) into
@@ -307,7 +307,9 @@
                                 <ref name="DATERANGE"/>
                                 <ref name="DATESTRUCT"/>
                                 <ref name="EMPH"/>
+                                <ref name="FIGURE"/>
                                 <ref name="FOREIGN"/>
+                                <ref name="GRAPHIC"/>
                                 <ref name="KEYWORDCLASS"/>
                                 <ref name="NAME"/>
                                 <ref name="ORGNAME"/>
@@ -756,6 +758,8 @@
             <oneOrMore>
                 <choice>
                     <text/>
+                    <ref name="FIGURE"/>
+                    <ref name="GRAPHIC"/>
                     <ref name="NAME"/>
                     <ref name="RESEARCHNOTE"/>
                     <ref name="TITLE"/>
@@ -1515,7 +1519,9 @@
                     <ref name="DATERANGE"/>
                     <ref name="DATESTRUCT"/>
                     <ref name="EMPH"/>
+                    <ref name="FIGURE"/>
                     <ref name="FOREIGN"/>
+                    <ref name="GRAPHIC"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>

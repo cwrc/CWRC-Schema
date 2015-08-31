@@ -34,7 +34,7 @@
 <!-- 
 *** Revisions ***
 * MRB: August 2015: Made the following changes:
-  - Added the element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, and P.
+  - Added the element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, P, and RESEARCHNOTE.
   - Created a new element DISABILITY that is a child element of the element CULTURALFORMATION.
   - Added a new attribute value of DISABILITY to the attribute ISSUE in the element HEALTH.
   - Added a new attribute value of DOCUDRAMA to the attribute GENRENAME in the element TGENRE.
@@ -92,8 +92,8 @@
     TEXTSCOPE).
   - Made HEAD a global element, rather than a local element of LG; added a REF to the element HEAD within the element LG, and also made the pattern directives optional
     for both the LG attribute TYPE and the child element HEAD.
-  - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
-    elements of GRAPHIC, HEAD, and P.
+  - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, P, and RESEARCHNOTE; FIGURE has a child element of FIGDESC, and
+    REFs to child elements of GRAPHIC, HEAD, and P.
   - Added REFs to make the element GRAPHIC a child element of the elements CHRONPROSE, DATAITEM, and P (it was already a child element of FIGURE).
   - Merged the child elements of the element CHRONPROSE and the element DATAITEM so that they both have the same child elements; also redefined the element
     RELIGIOUSNAME from being locally defined in the element DATAITEM to being globally defined (RELGIOUSNAME is now a child element of the elements
@@ -1828,6 +1828,8 @@
                 <choice>
                     <text/>
                     <ref name="BIBCITS"/>
+                    <ref name="FIGURE"/>
+                    <ref name="GRAPHIC"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PAUTHORSHIP"/>

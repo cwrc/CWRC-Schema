@@ -36,8 +36,8 @@
 * MRB: August 2015: Made the following changes:
   - Made HEAD a global element, rather than a local element of LG; added a REF to the element HEAD within the element LG,and also made the pattern directives optional
     for both the LG attribute TYPE and the child element HEAD.
-  - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, and P.
-  - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, and P; FIGURE has a child element of FIGDESC, and REFs to child
+  - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE.
+  - Created a new element FIGURE as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE; FIGURE has a child element of FIGDESC, and REFs to child
     elements of GRAPHIC, HEAD, and P.
 * MRB: March 2015: Made the following changes:
   - Created an attribute LAT in the element PLACE.
@@ -464,6 +464,8 @@
                     <text/>
                     <ref name="BIBCITS"/>
                     <ref name="EMPH"/>
+                    <ref name="FIGURE"/>
+                    <ref name="GRAPHIC"/>
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PAUTHORSHIP"/>
@@ -722,7 +724,9 @@
                         <ref name="DATERANGE"/>
                         <ref name="DATESTRUCT"/>
                         <ref name="EMPH"/>
+                        <ref name="FIGURE"/>
                         <ref name="FOREIGN"/>
+                        <ref name="GRAPHIC"/>
                         <ref name="KEYWORDCLASS"/>
                         <ref name="NAME"/>
                         <ref name="ORGNAME"/>
@@ -1009,8 +1013,10 @@
                     <ref name="DATESTRUCT"/>
                     <ref name="EMPH"/>
                     <ref name="EXTENTOFOEUVRE"/>
+                    <ref name="FIGURE"/>
                     <ref name="FOREIGN"/>
                     <ref name="GENERICRANGE"/>
+                    <ref name="GRAPHIC"/>
                     <ref name="JOB"/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="L"/>
