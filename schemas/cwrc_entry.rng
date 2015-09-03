@@ -299,9 +299,10 @@
                                             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) Supplies a language code which is used to identify the
                                             language documented by this element.</a:documentation>
                                         </attribute>
+                                    </optional>
+                                    <optional>
                                         <text/>
                                     </optional>
-                                    <text/>
                                 </element>
                             </oneOrMore>
                         </element>
@@ -3824,7 +3825,6 @@
                 <attribute name="REG">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute allows for the addition of an alternative or standardized label
                         for a theme or topic if this is not sufficiently conveyed by contents of the tag.</a:documentation>
-                    <text/>
                 </attribute>
             </optional>
             <oneOrMore>

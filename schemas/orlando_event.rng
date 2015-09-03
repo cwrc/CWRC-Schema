@@ -34,6 +34,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: September 2015: Made the following changes:
+  - Created a new element SOURCES, with a child element SOURCE; SOURCES is a child element of the element CHRONEVENT, and comes between its sibbling
+    elements BIBCITS and KEYWORDCLASSES in the pattern directive ordering of the child elements of CHRONEVENT.
 * MRB: August 2015: Made the following changes:
   - Made the pattern directives optional for the element LG attribute TYPE.
   - Created a new element HEAD.
@@ -367,6 +370,13 @@
                     <element name="BIBCITS">
                         <oneOrMore>
                             <ref name="BIBCIT"/>
+                        </oneOrMore>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="SOURCES">
+                        <oneOrMore>
+                            <ref name="SOURCE"/>
                         </oneOrMore>
                     </element>
                 </optional>
@@ -1433,6 +1443,21 @@
             <optional>
                 <ref name="RESEARCHNOTE"/>
             </optional>
+        </element>
+    </define>
+
+    <define name="SOURCE">
+        <element name="SOURCE">
+            <optional>
+                <attribute name="FILENAME"/>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="RESEARCHNOTE"/>
+                </choice>
+            </oneOrMore>
         </element>
     </define>
 
