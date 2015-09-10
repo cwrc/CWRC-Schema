@@ -186,13 +186,20 @@
                                     <!-- MRB: O? -->
                                 </choice>
                             </attribute>
-                            <ref name="DATE"/>
+                            <choice>
+                                <ref name="DATE"/>
+                                <ref name="DATESTRUCT"/>
+                                <ref name="DATERANGE"/>
+                            </choice>
                             <zeroOrMore>
-                                <element name="ITEM">
-                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">item contains one component of a
+                                <choice>
+                                    <element name="ITEM">
+                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">item contains one component of a
                                         list.</a:documentation>
-                                    <text/>
-                                </element>
+                                        <text/>
+                                    </element>
+                                    <ref name="RESEARCHNOTE"/>
+                                </choice>
                             </zeroOrMore>
                         </element>
                     </oneOrMore>
@@ -750,6 +757,7 @@
                     <ref name="NAME"/>
                     <ref name="ORGNAME"/>
                     <ref name="PLACE"/>
+                    <ref name="QUOTE"/>
                     <ref name="RS"/>
                     <ref name="SIC"/>
                     <ref name="SOCALLED"/>
