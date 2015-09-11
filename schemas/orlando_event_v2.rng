@@ -718,17 +718,19 @@
                     <data type="NCName"/>
                 </attribute>
             </optional>
-            <attribute name="TITLETYPE">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
+            <optional>
+                <attribute name="TITLETYPE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of title, titleType indicates whether a
           title is a part of another work, an entire work, a journal, or a series.</a:documentation>
-                <choice>
-                    <value>MONOGRAPHIC</value>
-                    <value>ANALYTIC</value>
-                    <value>JOURNAL</value>
-                    <value>SERIES</value>
-                    <value>UNPUBLISHED</value>
-                </choice>
-            </attribute>
+                    <choice>
+                        <value>MONOGRAPHIC</value>
+                        <value>ANALYTIC</value>
+                        <value>JOURNAL</value>
+                        <value>SERIES</value>
+                        <value>UNPUBLISHED</value>
+                    </choice>
+                </attribute>
+            </optional>
             <optional>
                 <attribute name="REF">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition for the entity
