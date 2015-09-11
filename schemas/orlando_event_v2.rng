@@ -35,6 +35,7 @@
 <!-- 
 *** Revisions ***
 * MRB: September 2015: Made the following changes:
+  - Created three new optional attributes for the root element EVENT: EID, FILENAME, and SUBSET.
   - Created a new element SOURCES, with a child element SOURCE; SOURCES is a child element of the element CHRONEVENT, and comes between its sibbling
     elements BIBCITS and KEYWORDCLASSES in the pattern directive ordering of the child elements of CHRONEVENT.
   - Created a new element SOURCE, with an attribute FILENAME and five child elements: NAME, RESEARCHNOTE, SCHOLARNOTE, SOCALLED, and TITLE.
@@ -90,6 +91,21 @@
                 documents.</a:documentation>
             <optional>
                 <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="EID">
+                    <data type="integer"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="FILENAME">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="SUBSET">
                     <data type="NCName"/>
                 </attribute>
             </optional>
@@ -795,6 +811,7 @@
                 <choice>
                     <text/>
                     <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
                     <ref name="EMPH"/>
                     <ref name="FOREIGN"/>
                     <ref name="L"/>
