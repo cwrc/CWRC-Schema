@@ -1,0 +1,298 @@
+/*General, high level styling*/
+
+*{
+    color:black;
+    font-family:sans-serif;
+    background-color:#fdf8e5
+}
+
+*[_tag="RESEARCHNOTE"]{
+    display:none;
+    background-color:#FBEFEF;
+    color:#663366;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:smaller;
+    margin:0%;
+    padding:0%;
+}
+
+
+#comment{
+    display:none
+
+} /*check syntax*/
+
+/*Header styling*/
+
+
+*[_tag="CWRCHEADER"],
+*[_tag="FILEDESC"],
+*[_tag="DOCTITLE"],
+*[_tag="DOCAUTHOR"]
+{
+    display:list-item
+}
+
+*[_tag="FILEDESC"]{
+    content:url(http://cwrc.ca/templates/images/CWRC_logo.png);
+    background-color:#B8B891;
+    color:#555;
+    font-weight:normal;
+}
+*[_tag="DOCTITLE"]{
+    font-variant:small-caps;
+    font-size:x-large;
+    font-weight:bold;
+}
+*[_tag="DOCAUTHOR"]{
+    font-weight:bold
+}
+*[_tag="PUBLICATIONSTMT"],
+*[_tag="SOURCEDESC"],
+*[_tag="REVISIONDESC"],
+*[_tag="RESPONSIBILITY"]{
+    display:none
+}
+
+/*High-level body styling*/
+
+*[_tag="ENTRY"]{
+    display:block;
+    margin-left:3%
+}
+
+*[_tag="P"]{
+    line-height:150%
+}
+
+*[_tag="HEADING"]{
+    display:block;
+    font-weight:bold;
+    color:brown;
+    padding-bottom:12pt
+}
+
+*[_tag="HEADING"][SUBTYPE = "1"]{
+    font-size:3em;
+    text-align:center;
+    padding-top:1em
+}
+
+*[_tag="HEADING"][SUBTYPE = "2"]{
+    font-size:2em;
+    padding-bottom:1%;
+    margin-bottom:1%;
+    border-bottom:solid;
+    padding-top:2%;
+    border-color:black
+}
+
+*[_tag="HEADING"][SUBTYPE = "3"]{
+    font-size:1.5em;
+    padding-left:4%;
+    padding-top:1em;
+    padding-bottom:0.5em
+}
+
+*[_tag="TEXTSCOPE"] *[_tag="HEADING"][SUBTYPE = "3"]
+{
+   padding-left:0%
+}
+
+*[_tag="HEADING"][SUBTYPE = "4"]{
+    font-size:1em;
+    /*padding-left:4%;*/
+    padding-top:1em;
+    padding-bottom:0.2em
+}
+
+/*Mid-level body styling*/
+
+*[_tag="ENTRY"] *[_tag="PERSONNAME"],
+*[_tag="ENTRY"] *[_tag="BIRTH"],
+*[_tag="ENTRY"] *[_tag="RESIDENCEANDMOBILITY"],
+*[_tag="ENTRY"] *[_tag="CULTURALFORMATION"],
+*[_tag="ENTRY"] *[_tag="PRODUCTION"],
+*[_tag="ENTRY"] *[_tag="FAMILY"],
+*[_tag="ENTRY"] *[_tag="RECEPTION"],
+*[_tag="ENTRY"] *[_tag="OCCUPATION"],
+*[_tag="ENTRY"] *[_tag="EDUCATION"],
+*[_tag="ENTRY"] *[_tag="OTHERLIFEEVENT"],
+*[_tag="ENTRY"] *[_tag="TEXTSCOPE"]
+{
+    display:block;
+    margin-left:4%;
+}
+
+*[_tag="TEXTSCOPE"] *[_tag="PRODUCTION"],
+*[_tag="TEXTSCOPE"] *[_tag="RECEPTION"]
+{
+    display:block;
+    margin-left:0%
+}
+
+*[_tag="PERSONNAME"] *[_tag="P"] *[_tag="BIRTHNAME"],
+*[_tag="BIRTHNAME"] *[_tag="GIVEN"],
+*[_tag="BIRTHNAME"] *[_tag="SURNAME"],
+*[_tag="PERSONNAME"] *[_tag="P"] *[_tag="NICKNAME"],
+*[_tag="ENTRY"] *[_tag="BIRTH"],
+*[_tag="BIRTH"] *[_tag="CHRONSTRUCT"] *[_tag="DATE"],
+*[_tag="BIRTH"] *[_tag="CHRONSTRUCT"] *[_tag="CHRONPROSE"],
+*[_tag="ENTRY"] *[_tag="RESIDENCEANDMOBILITY"] *[_tag="P"],
+*[_tag="ENTRY"] *[_tag="PRODUCTION"] *[_tag="P"],
+*[_tag="ENTRY"] *[_tag="CULTURALFORMATION"] *[_tag="P"],
+*[_tag="FAMILY"] *[_tag="P"],
+*[_tag="ENTRY"] *[_tag="RECEPTION"],
+*[_tag="ENTRY"] *[_tag="OCUPATION"] *[_tag="P"]/*,
+*[_tag="ENTRY"] *[_tag="TEXTSCOPE"]*/
+{
+    display:block;
+    margin-bottom:1em;
+}
+
+/*field labels:*/
+
+*[_tag="GIVEN"]:before{
+    content:"First Name:";
+    display:inline-block;
+    padding-right:0.5em
+
+}
+*[_tag="GIVEN"] + *[_tag="GIVEN"]{
+    display:block
+}
+*[_tag="GIVEN"] + *[_tag="GIVEN"]:before{
+    content:"Middle Name:";
+    display:inline-block;
+    padding-right:0.5em
+}
+
+
+*[_tag="SURNAME"]:before{
+    content:"Last Name at Birth:";
+    padding-right:0.5em
+}
+*[_tag="NICKNAME"]:before{
+    content:"Nickname:";
+    padding-right:0.5em
+}
+
+*[_tag="GENDER"]:before{
+    content:"Gender:";
+    padding-right:0.5em
+}
+
+/* *[_tag="DENOMINATION"]:first-of-type:before{
+    content:"Religious Affiliation: ";
+}*/
+
+
+
+*[_tag="EDUCATION"] *[_tag="CHRONSTRUCT"],
+*[_tag="OTHERLIFEEVENT"] *[_tag="CHRONSTRUCT"],
+*[_tag="OCCUPATION"] *[_tag="CHRONSTRUCT"],
+*[_tag="RECEPTION"] *[_tag="CHRONSTRUCT"],
+*[_tag="EDUCATION"] *[_tag="DATASTRUCT"],
+*[_tag="OTHERLIFEEVENT"] *[_tag="DATASTRUCT"],
+*[_tag="OCCUPATION"] *[_tag="DATASTRUCT"],
+*[_tag="RECEPTION"] *[_tag="DATASTRUCT"]
+{
+    display:block
+}
+
+
+
+*[_tag="CHRONSTRUCT"] *[_tag="DATE"],
+*[_tag="CHRONSTRUCT"] *[_tag="DATERANGE"]{display:table-cell; width:12em; /*border:solid;*/
+    padding-right:0%
+}
+*[_tag="CHRONPROSE"]{
+    display:table-cell; /*border:solid*/;
+    line-height:150%
+}
+*[_tag="DATASTRUCT"]{ /*border:solid;*/
+    width:auto;
+    line-height:150%
+}
+
+*[_tag="TEXTSCOPE"] *[_tag="PRODUCTION"] *[_tag="P"]{
+    display:block;
+    padding-left:12em;
+    padding-bottom:0%;
+    margin-bottom:0%
+}
+
+/* *[_tag="OTHERLIFEEVENT"] *[_tag="CHRONSTRUCT"] *[_tag="DATE"],
+*[_tag="OTHERLIFEEVENT"] *[_tag="CHRONSTRUCT"] *[_tag="DATERANGE"]{
+    padding-right:0%
+}*/
+
+/* *[_tag="OCCUPATION"] *[_tag="CHRONSTRUCT"] *[_tag="CHRONPROSE"] *[_tag="ORGNAME"]{
+    padding-left:3%
+}*/
+*[_tag="BIRTH"] *[_tag="CHRONSTRUCT"] *[_tag="CHRONPROSE"]{
+    display:block
+}
+
+*[_tag="TEXTUALFEATURES"] {padding-top:0%; margin-top:0%}
+
+*[_tag="TEXTUALFEATURES"] *[_tag="HEADING"] {padding-top:0%; margin-top:0%}
+
+*[_tag="TEXTUALFEATURES"] *[_tag="P"]{
+    display:block;
+}
+
+/* *[_tag="TEXTSCOPE"] *[_tag="PRODUCTION"]{
+    padding-top:0em;
+    margin-top:0em
+}*/
+
+
+
+*[_tag="TITLE"][LEVEL = "MONOGRAPHIC"]{
+    font-style:italic
+}
+
+*[_tag="TITLE"][LEVEL = "ANALYTIC"]:before{
+    content:"\""
+}
+*[_tag="TITLE"][LEVEL = "ANALYTIC"]:after{
+    content:"\""
+}
+
+*[_tag="EMPH"]{
+    font-style:italic
+}
+*[_tag="SOCALLED"]:before{
+    content:"\""
+}
+*[_tag="SOCALLED"]:after{
+    content:"\""
+}
+/* *[_tag="TITLE"][LEVEL = "UNPUBLISHED"] *[_tag="EMPH"]:before{
+    content:"\""
+}
+*[_tag="TITLE"][LEVEL = "UNPUBLISHED"] *[_tag="EMPH"]:after{
+    content:"\""
+}*/
+*[_tag="TITLE"][LEVEL = "UNPUBLISHED"] *[_tag="EMPH"]{
+    font-style:italic;
+}
+
+*[_tag="HEADING*[_tag="] *[_tag="TITLE"] *[_tag="EMPH"]{color:brown}
+/*
+*[_tag="PRODUCTION"] *[_tag="CHRONSTRUCT"],
+*[_tag="TEXTSCOPE] *[_tag="PRODUCTION"] *[_tag="P"]{
+    display:block;
+    padding-left:5%
+}*/
+
+*[_tag="HEADING"] *[_tag="TITLE"]{
+    display:inline;
+    padding-top:1%;
+    padding-bottom:1%;
+    color:brown
+}
+
+*[_tag="TITLE"][LEVEL = "MONOGRAPHIC"] *[_tag="TITLE"][LEVEL = "MONOGRAPHIC"]{font-style:normal}
+
