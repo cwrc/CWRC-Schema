@@ -35,6 +35,7 @@
 <!-- 
 *** Revisions ***
 * MRB: September 2015: Made the following changes:
+  - Removed the attribute PROPOSEDALTERNATIVENAME from the element TGENRE.
   - Created three new optional attributes for the root element EVENT: EID, FILENAME, and SUBSET.
   - Created a new element SOURCES, with a child element SOURCE; SOURCES is a child element of the element CHRONEVENT, and comes between its sibbling
     elements BIBCITS and KEYWORDCLASSES in the pattern directive ordering of the child elements of CHRONEVENT.
@@ -1135,11 +1136,6 @@
                         <value>YOUNGADULTWRITING</value>
                     </choice>
                 </attribute>
-            </optional>
-            <optional>
-                <attribute name="PROPOSEDALTERNATIVENAME"/>
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute, attached to tGenre, can be
-          used when there is no appropriate name for a genre on the Orlando pick list found under the attribute genreName.</a:documentation>
             </optional>
             <oneOrMore>
                 <choice>

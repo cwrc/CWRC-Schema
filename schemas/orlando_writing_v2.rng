@@ -33,6 +33,8 @@
 
 <!-- 
 *** Revisions ***
+* MRB: September 2015: Made the following changes:
+  - Removed the attribute PROPOSEDALTERNATIVENAME from the element TGENRE.
 * MRB: August 2015: Made the following changes:
   - Made HEAD a global element, rather than a local element of LG; added a REF to the element HEAD within the element LG, and also made the pattern directives optional
     for both the LG attribute TYPE and the child element HEAD.
@@ -2701,11 +2703,6 @@
                         <value>YOUNGADULTWRITING</value>
                     </choice>
                 </attribute>
-            </optional>
-            <optional>
-                <attribute name="PROPOSEDALTERNATIVENAME"/>
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute, attached to tGenre, can be
-          used when there is no appropriate name for a genre on the Orlando pick list found under the attribute genreName.</a:documentation>
             </optional>
             <oneOrMore>
                 <choice>
