@@ -73,7 +73,7 @@ variant authorizedBy projectId{
     display:inline
 }
 variantForms variant variantType:before{
-    content:"("
+    content:" ("
 }
 variantForms variant variantType:after{
     content:"; "
@@ -168,10 +168,6 @@ interest ~ interest:before{
     content:", "
 }
 
-occupation,
-activity,
-interest{}
-
 /*resources*/
 
 relatedResources{
@@ -183,11 +179,12 @@ relatedResources:before{
     color:#707070;
     margin-left:3%
 }
-resource{
-    display:list-item;
-    list-style-image:url(http://cwrc.ca/templates/images/TEI-bibl.jpg);
-    margin-left:8%
+resource:before{
+    content:url(http://cwrc.ca/templates/images/TEI-bibl.jpg);
+    margin-left:6%
 }
+
+
 
 
 
