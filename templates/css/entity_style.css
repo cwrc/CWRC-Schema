@@ -1,0 +1,195 @@
+*{
+    /*    display:block;*/
+    font-family:Lato
+}
+entity{
+    margin:2%
+}
+:empty{
+    display:none
+}
+
+/*record info*/
+
+recordInfo{
+    display:block;
+    margin-bottom:2%
+}
+originInfo recordChangeDate,
+originInfo recordCreationDate,
+originInfo projectId,
+recordInfo personTypes personType{
+    display:block;
+    color:#707070;
+    font-size:smaller;
+}
+recordChangeDate:before{
+    content:"Last modified: "
+}
+recordCreationDate:before{
+    content:"Record created: "
+}
+originInfo projectId:before{
+    content:"Entity record created by: "
+}
+personType:before{
+    content:"Person type: "
+}
+
+/*identity*/
+identity{
+    display:block;
+    margin-bottom:2%
+}
+preferredForm{
+    display:block;
+    font-size:x-large;
+    font-weight:bold
+}
+preferredForm namePart{
+    display:inline-block
+}
+displayLabel:before{
+    content:"Standard name: ";
+    color:#707070;
+    margin-left:3%
+}
+variantForms:before{
+    content:"Variant names: ";
+    color:#707070;
+    margin-left:3%
+}
+variantForms{
+    display:block
+}
+variantForms variant{
+    display:list-item;
+    margin-left:6%
+
+}
+variantForms variant namePart,
+variantForms variant variantType,
+variant authorizedBy projectId{
+    display:inline
+}
+variantForms variant variantType:before{
+    content:"("
+}
+variantForms variant variantType:after{
+    content:"; "
+}
+variant authorizedBy projectId:before{
+    content:"name preferred by "
+}
+variant authorizedBy projectId:after{
+    content:")"
+}
+identity sameAs{
+    display:block;
+    margin-top:2%;
+}
+identity sameAs:before{
+    content:"Same as entity described at: ";
+    color:#707070;
+    margin-left:3%
+}
+
+/*description*/
+
+description{
+    display:block;
+    margin-bottom:2%
+}
+description:before{
+    content:"Description:";
+    color:#707070;
+    margin-left:3%
+}
+description existDates dateSingle,
+factuality,
+genders,
+occupations,
+activities,
+researchInterests{
+    display:list-item;
+    margin-left:6%
+}
+existDates dateSingle standardDate,
+existDates dateSingle dateType{
+    display:inline-block
+}
+existDates dateSingle dateType:before{
+    content:"("
+}
+existDates dateSingle dateType:after{
+    content:" date)"
+}
+existDates dateSingle note{
+    display:block;
+    margin-left:3%
+}
+existDates dateSingle note:before{
+    content:url(http://cwrc.ca/templates/images/TEI-note-SN.jpg)
+}
+factuality:before{
+    content:"Factuality: ";
+    color:#707070;
+}
+description factuality:after{
+    content:" entity"
+}
+genders:before{
+    content:"Gender: ";
+    color:#707070;
+}
+occupations:before{
+    content:"Occupation(s): ";
+    color:#707070;
+}
+activities:before{
+    content:"Activitie(s): ";
+    color:#707070;
+}
+researchInterests:before{
+    content:"Research interest(s): ";
+    color:#707070;
+}
+descriptiveNotes note{
+    display:block;
+    margin-left:6%
+}
+descriptiveNotes note:before{
+    content:url(http://cwrc.ca/templates/images/TEI-note-SN.jpg)
+}
+
+occupation ~ occupation:before,
+activity ~ activity:before,
+interest ~ interest:before{
+    content:", "
+}
+
+occupation,
+activity,
+interest{}
+
+/*resources*/
+
+relatedResources{
+    display:block;
+    margin-top:2%
+}
+relatedResources:before{
+    content:"Resources: ";
+    color:#707070;
+    margin-left:3%
+}
+resource{
+    display:list-item;
+    list-style-image:url(http://cwrc.ca/templates/images/TEI-bibl.jpg);
+    margin-left:8%
+}
+
+
+
+
+
