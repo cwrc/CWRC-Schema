@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://cwrc.ca/schemas/entities.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/entity_style.css"?>
+<entity>
+  <person>
+    <recordInfo>
+      <accessCondition type="use and reproduction"></accessCondition>
+      <originInfo>
+        <recordChangeDate>2015-07-15</recordChangeDate>
+        <recordCreationDate>2015-06-29</recordCreationDate>
+        <projectId>cwrc</projectId>
+      </originInfo>
+      <personTypes>
+        <personType>creator</personType>
+      </personTypes>
+    </recordInfo>
+    <identity>
+      <preferredForm>
+        <namePart partType="given">Mihaela</namePart>
+        <namePart partType="family">Ilovan</namePart>
+      </preferredForm>
+      <displayLabel>Ilovan, Mihaela</displayLabel>
+      <variantForms>
+        <variant>
+          <namePart partType="given">Mihaela</namePart>
+          <namePart partType="family">Mihalachi</namePart>
+          <variantType>birthName</variantType>
+          <authorizedBy>
+            <projectId>cwrc</projectId>
+          </authorizedBy>
+        </variant>
+      </variantForms>
+      <sameAs cert="4">http://www.cwrc.ca</sameAs>
+    </identity>
+    <description>
+      <existDates>
+        <dateSingle cert="4">
+          <standardDate qualifier="approximate">1981-01-25</standardDate>
+          <dateType>birth</dateType>
+          <note>born in Birlad, Romania</note>
+        </dateSingle>
+      </existDates>
+      <factuality>real</factuality>
+      <genders>
+        <gender cert="4">female</gender>
+      </genders>
+      <occupations>
+        <occupation>
+          <term cert="4">project manager</term>
+        </occupation>
+      </occupations>
+      <activities>
+        <activity>
+          <term cert="4">conference attendance</term>
+        </activity>
+      </activities>
+      <researchInterests>
+        <interest>
+          <term cert="4">user experience</term>
+        </interest>
+        <interest>
+          <term cert="4">history of human-computer interaction</term>
+        </interest>
+        <interest>
+          <term cert="4">interface design</term>
+        </interest>
+      </researchInterests>
+      <descriptiveNotes>
+        <note>test person: created in integrated CWRC-Writer</note>
+      </descriptiveNotes>
+      <relatedResources>
+        <resource>Source of the information</resource>
+      </relatedResources>
+    </description>
+  </person>
+</entity>
