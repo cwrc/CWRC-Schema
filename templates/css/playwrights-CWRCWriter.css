@@ -68,7 +68,7 @@
 *[_tag="HEADING"]{
     display:block;
     font-weight:bold;
-    color:#115667;
+    color:#990000;
     padding-bottom:12pt
 }
 
@@ -203,15 +203,12 @@
 
 
 *[_tag="CHRONSTRUCT"] *[_tag="DATE"],
-*[_tag="CHRONSTRUCT"] *[_tag="DATERANGE"]{display:table-cell; width:12em; /*border:solid;*/
-    padding-right:0%
+*[_tag="CHRONSTRUCT"] *[_tag="DATERANGE"]{display:table-cell; width:12em; padding-right:0%
 }
 *[_tag="CHRONPROSE"]{
-    display:table-cell; /*border:solid*/;
-    line-height:150%
+    display:table-cell; line-height:150%
 }
-*[_tag="DATASTRUCT"]{ /*border:solid;*/
-    width:auto;
+*[_tag="DATASTRUCT"]{width:auto;
     line-height:150%
 }
 
