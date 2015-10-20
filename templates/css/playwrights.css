@@ -7,7 +7,7 @@
 }
 
 RESEARCHNOTE{
-    display:none;
+    display:block;
     background-color:#FBEFEF;
     color:#663366;
     font-family:Arial, Helvetica, sans-serif;
@@ -96,7 +96,7 @@ HEADING[SUBTYPE = "3"]{
 
 TEXTSCOPE HEADING[SUBTYPE = "3"]
 {
-   padding-left:0%
+    padding-left:0%
 }
 
 HEADING[SUBTYPE = "4"]{
@@ -143,7 +143,7 @@ ENTRY PRODUCTION P,
 ENTRY CULTURALFORMATION P,
 FAMILY P,
 ENTRY RECEPTION,
-ENTRY OCUPATION P/*,
+ENTRY OCUPATION P /*,
 ENTRY TEXTSCOPE*/
 {
     display:block;
@@ -203,11 +203,14 @@ RECEPTION DATASTRUCT
 
 
 CHRONSTRUCT DATE,
-CHRONSTRUCT DATERANGE{display:table-cell; width:12em; /*border:solid;*/
+CHRONSTRUCT DATERANGE{
+    display:table-cell;
+    width:12em; /*border:solid;*/
     padding-right:0%
 }
 CHRONPROSE{
-    display:table-cell; /*border:solid*/;
+    display:table-cell; /*border:solid
+    ;*/
     line-height:150%
 }
 DATASTRUCT{ /*border:solid;*/
@@ -234,9 +237,15 @@ BIRTH CHRONSTRUCT CHRONPROSE{
     display:block
 }
 
-TEXTUALFEATURES {padding-top:0%; margin-top:0%}
+TEXTUALFEATURES{
+    padding-top:0%;
+    margin-top:0%
+}
 
-TEXTUALFEATURES HEADING {padding-top:0%; margin-top:0%}
+TEXTUALFEATURES HEADING{
+    padding-top:0%;
+    margin-top:0%
+}
 
 TEXTUALFEATURES P{
     display:block;
@@ -279,7 +288,9 @@ TITLE[LEVEL = "UNPUBLISHED"] EMPH{
     font-style:italic;
 }
 
-HEADING TITLE EMPH{color:brown}
+HEADING TITLE EMPH{
+    color:brown
+}
 /*
 PRODUCTION CHRONSTRUCT,
 TEXTSCOPE PRODUCTION P{
@@ -294,5 +305,6 @@ HEADING TITLE{
     color:brown
 }
 
-TITLE[LEVEL = "MONOGRAPHIC"] TITLE[LEVEL = "MONOGRAPHIC"]{font-style:normal}
-
+TITLE[LEVEL = "MONOGRAPHIC"] TITLE[LEVEL = "MONOGRAPHIC"]{
+    font-style:normal
+}
