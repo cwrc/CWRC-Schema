@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Title</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+    <body>
+    <!-- The type attribute in the <div> tags determines how DToC will read that section. The general DToC document structure includes multiple chapers followed by an index. However, you can add forward, afterwords, etc. by chaging the <div> type attribute -->
+        <div type="chapter">
+            <head>
+                <bibl>
+                    <title>Title</title>
+                    <author>Author</author>
+                </bibl>
+            </head>
+           <p xml:id="P1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	       <p xml:id="P2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+ 		<div type="chapter">
+            <head>
+                <bibl>
+                    <title>Title</title>
+                    <author>Author</author>
+                </bibl>
+            </head>
+           <p xml:id="P3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	       <p xml:id="P4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <!-- To add an index -->
+        <div type="index">
+                <list>
+                        <item xml:id="I1"><ref target="P2">term</ref></item>
+                        <item xml:id="I2"><ref target="P2 P3">term</ref></item>
+                        <item xml:id="I3"><ref target="P4">term</ref></item>  
+                        
+                        <!-- To create a subsection of terms -->
+                        <item xml:id="I4"><ref target="P1">term</ref>
+                        	<list>
+                        		<item><ref target="P1">subterm</ref></item>
+                        		<item><ref target="P2">subterm</ref></item>
+                        		<item><ref target="P4">subterm</ref></item>
+                        	</list>
+                        </item>  
+                        
+                        <!-- To create index cross references -->     	
+                        	    <item xml:id="I5">
+                        	        <ref target="P4">term</ref>
+                        	        <list>
+                        	            <head>
+                        	                <hi rend="italic">See also</hi>
+                        	            </head>
+                        	            <item><ref target="I1">associated term</ref></item>
+                        	            <item><ref target="I1">associated term</ref></item>
+                        	        </list>
+                        	    </item>           	                    
+               </list>
+           </div>
+         </body>
+    </text>
+</TEI>
