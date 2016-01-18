@@ -11,7 +11,7 @@
   <start>
     <element name="DOCUMENTATION">
       <attribute name="ID">
-        <data type="NCName"/>
+        <data type="ID"/>
       </attribute>
       <element name="ORLANDOHEADER">
         <element name="FILEDESC">
@@ -70,7 +70,7 @@
         <element name="DIV">
           <optional>
             <attribute name="ID">
-              <data type="NCName"/>
+              <data type="ID"/>
             </attribute>
           </optional>
           <optional>
@@ -83,7 +83,7 @@
             <element name="DIV1">
               <optional>
                 <attribute name="ID">
-                  <data type="NCName"/>
+                  <data type="ID"/>
                 </attribute>
               </optional>
               <optional>
@@ -102,7 +102,7 @@
                 <element name="DIV2">
                   <optional>
                     <attribute name="ID">
-                      <data type="NCName"/>
+                      <data type="ID"/>
                     </attribute>
                   </optional>
                   <optional>
@@ -121,7 +121,7 @@
                     <element name="DIV3">
                       <optional>
                         <attribute name="ID">
-                          <data type="NCName"/>
+                          <data type="ID"/>
                         </attribute>
                       </optional>
                       <optional>
@@ -136,7 +136,7 @@
                       <zeroOrMore>
                         <element name="DIV4">
                           <attribute name="ID">
-                            <data type="NCName"/>
+                            <data type="ID"/>
                           </attribute>
                           <ref name="HEADING"/>
                           <oneOrMore>
@@ -154,7 +154,7 @@
         <element name="GLOSSARY">
           <optional>
             <attribute name="ID">
-              <data type="NCName"/>
+              <data type="ID"/>
             </attribute>
           </optional>
           <attribute name="SECTIONALIZE">
@@ -170,7 +170,7 @@
                 <ref name="XREF"/>
                 <element name="GLOSSGROUP">
                   <attribute name="ID">
-                    <data type="NCName"/>
+                    <data type="ID"/>
                   </attribute>
                   <attribute name="SECTIONALIZE">
                     <data type="NCName"/>
@@ -212,7 +212,7 @@
                 <element name="LI">
                   <optional>
                     <attribute name="ID">
-                      <data type="NCName"/>
+                      <data type="ID"/>
                     </attribute>
                   </optional>
                   <oneOrMore>
@@ -262,7 +262,7 @@
           </element>
           <element name="MAP">
             <attribute name="ID">
-              <data type="NCName"/>
+              <data type="ID"/>
             </attribute>
             <attribute name="NAME">
               <data type="NCName"/>
@@ -310,7 +310,7 @@
       </attribute>
       <optional>
         <attribute name="ID">
-          <data type="NCName"/>
+          <data type="ID"/>
         </attribute>
       </optional>
       <ref name="HEADING"/>
