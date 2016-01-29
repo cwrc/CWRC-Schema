@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <?xml-model href="http://cwrc.ca/schemas/cwrc_tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="css/DToC%20glossary.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title></title>
+                <author></author>
+            </titleStmt>
+            <editionStmt>
+                <p></p>
+            </editionStmt>
+            <extent></extent>
+            <publicationStmt>
+                <publisher></publisher>
+                <address><index><term></term></index><name></name><index><term></term></index></address>
+            </publicationStmt>
+            <seriesStmt>
+                <p></p>
+            </seriesStmt>
+            <notesStmt>
+                <note></note>
+            </notesStmt>
+            <sourceDesc>
+                <p></p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p></p>
+            </projectDesc>
+        </encodingDesc>
+        <revisionDesc>
+            <list>
+                <byline></byline>
+                <item></item>
+                <index>
+                    <term></term>
+                </index>
+                <byline></byline>
+                <index>
+                    <term></term>
+                </index>
+            </list>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+           <div type="glossary">
+           	<list type="gloss">
+           	    <head>Semantic tags employed in the Dynamic Table of Contexts edition</head>
+           	    <item>
+           	        <label>Anthologization</label><rs>#anthologization</rs>
+           	        <gloss>Encodes information about a work's appearance and selection in collections and anthologies.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Archive</label><rs>#archive</rs>
+           	        <gloss>Encodes discussions about archived material.</gloss>
+           	    </item>
+           	    <item> 
+           	    	<label>Archival Location</label><rs>#archival_location</rs>
+           	    	<gloss>Encodes information about location or ownership of gignificant copies, manuscript or rare printed texts. It includes existing collections, dated known locations of copies or collections, or historical information about lost/found copies.</gloss> </item>
+           	    <item>
+           	        <label>Attitudes to Women Writing</label><rs>#attitudes_to_women_writing</rs>
+           	        <gloss>Contains material about author’s attitudes specifically to authorship, gender, and the relations between them. It comments on the writer's common beliefs and assumptions about the practice and profession of writing and the relationship of gender to it.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Authority</label><rs>#authority</rs>
+           	        <gloss>Encodes statements about larger issues of cultural authority.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Authorship</label><rs>#authorship</rs>
+           	        <gloss>Contains discussions of authorship and discussions about the difficulty to identify a text's authorship.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Canon Formation</label><rs>#canon_formation</rs>
+           	        <gloss>Encodes material about the transmission and production of the canon and of intellectual history.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Censorship</label><rs>#censorship</rs>
+           	        <gloss>Encodes discussion of censorship. This tag flags when censorship has been one of the penalizing responses to a work.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Characterization</label><rs>#characterization</rs>
+           	        <gloss>Encodes all of the relevant information about those fictional characters who populate an author's work.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Class Issue</label><rs>#class_issue</rs>
+           	        <gloss>Encodes discussion related to class and/or an individual’s class position and the specificities of one's relation to class. Encludes information about how the writer's socio-economic conditions affected their life and writing.  </gloss>
+           	    </item>
+           	    <item>
+           	        <label>Close Reading</label><rs>#close_reading</rs>
+           	        <gloss>Encodes passages of close reading. Dealing with the text at the granular level.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Collaboration</label><rs>#collaboration</rs>
+           	        <gloss>Encodes substantial discussions of collaboration.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Critique of Canon</label><rs>#critique_of_canon</rs>
+           	        <gloss>Encodes critical discussions of the canon.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Economics</label><rs>#economics</rs>
+           	        <gloss>Encodes material related to wealth, power, etc.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Editions</label><rs>#editions</rs>
+           	        <gloss>Contains information about later editions, re-issues, reprints, or translations. Also provides space for discussions about bowdlerization, revisions, emendations, the author's preference for certain editions, or which edition is preferable from a scholarly point of view because of completeness.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Education</label><rs>#education</rs>
+           	        <gloss>Encodes all information about educational background: schools or institutions, gender issues (affecting women’s access to education), subjects and crucial works studies (making connections between a subject studied by the writer and topics of writing), people encountered,  behaviour, awards, and qualifications gained.
+           	        </gloss>
+           	    </item>
+           	    <item>
+           	        <label>Formal Response</label><rs>#response_formal</rs>
+           	        <gloss>Encodes a formal response to a literary work, whether written or otherwise made public, e.g. a review.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Gender Issue</label><rs>#gender_issue</rs>
+           	        <gloss>Encodes the relation of a particular political engagement to gender issues, broadly defined.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Gendered Response</label><rs>#response_gendered</rs>
+           	        <gloss>Indicates whether or not a literary response is predicated on the writer’s gender.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Genre</label><rs>#genre</rs>
+           	        <gloss>Discussions of genre in general.</gloss>
+           	    </item>
+           		<item>
+           			<label>Genres</label><rs>#genre_drama #genre_fiction #genre_journalism #genre_lifeWriting #genre_music #genre_novel #genre_non-fiction #genre_poetry #genre_short_story #genre_scholarlyWriting</rs>
+           			<gloss>Encodes various genres according to a project-generated list of genre names: drama, fiction, journalism, life writing, music, novel, non-fiction, poetry, performance, short story, scholarly writing.</gloss>
+           		</item>
+           	    <item>
+           	        <label>Genre Issue</label><rs>#genre_issue</rs>
+           	        <gloss>Encodes discussions of disputable generic allegiance or unusual generic mixtures.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Health Issue</label><rs>#health_issue</rs>
+           	        <gloss>Encodes passages relating to well-being or illness (mental or physical).</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Historical Oppression</label><rs>#historical_oppression</rs>
+           	        <gloss>Encodes material on the exclusion of certain groups from the production of history (literay or other).</gloss>
+           	    </item>
+           	    <item>
+           	        <label>History</label><rs>#history</rs>
+           	        <gloss>Encodes references to historical events or periods.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Informal Response</label><rs>#response_informal</rs>
+           	        <gloss>Encodes an informal response to a work, e.g. a comment or a letter, a hearty slap on the back, rude looks from strangers on busses, snubbing by a writer's social set.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Intellectual History</label><rs>#intellectual_history</rs>
+           	        <gloss>Encodes discussion of literary communities and their influences on intellectual history.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Intertextuality</label><rs>#intertextuality</rs>
+           	        <gloss>Encodes discussion of gestures in a text toward other texts. Includes exchange, debate, influence of one writer on another.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Literary Schools</label><rs>#intertextuality</rs>
+           	        <gloss>Encodes a single reference to a literary or artistic school of thought, or discussions about commonly identified schools of literary theory.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Manuscript History</label><rs>#manuscript_history</rs>
+           	        <gloss>Encodes discussion of the pre-publication history of a text, and the manuscript's circualtion before and after its publication.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Men Writing</label><rs>#men_writing</rs>
+           	        <gloss>Discussions of male writing as gendered, or as a tradition (not all discussions of writing by men).</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Methodology</label><rs>#methodology</rs>
+           	        <gloss>Encodes discussion of someone's methodological approach, or that of another critic. Methodological categories include: feminist, Canadianist, new historical, psychoanalitic, globalism, post-colonialism, sustainability, deconstructionist, etc. Encodes discussion about theory or critical framework, e.g. new historical, globalism, feminism, etc.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Motif</label><rs>#motif</rs>
+           	        <gloss>Encodes much-used or standard tropes, scenes, or ideas in the text. Motifs are localized or contained within the plot and may recur in multiple works or multiple times in the same work.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Nationality Issue</label><rs>#nationality</rs>
+           	        <gloss>Encodes passages discussing a person's nationality, multiple nationalities, and changes in citizenship.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Non Book Media</label><rs>#non-book_media</rs>
+           	        <gloss>Refers to a non-textual work or non-textual packaging of a written work, e.g. a book is adapted into an opera, a film, a sound recording or a dance.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Non survival (of text)</label><rs>#non-survival_of_text</rs>
+           	        <gloss>Encodes material on non-extant texts. Includes any mishaps or disasters that happen on the road to publication, e.g. the manuscript was in a tree, burned, or flew out of the stage coach window; the publishers went bankrupt and lost the manuscript.</gloss>
+           	    </item>
+           		<item>
+           			<label>P</label>
+           			<gloss>Marks paragraphs in prose.</gloss>
+           		</item>
+           	    <item>
+           	        <label>Place of Publication</label><rs>#place_of_publication</rs>
+           	        <gloss>Encloses significant statements about where books were published, or place of publication. Especially useful in instances where censorable books were published with an imprint of Amsterdam but actually published in London.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Politics</label><rs>#politics</rs>
+           	        <gloss>Encodes information concerning a person's political life, including their political activities and involvement in political organizations. Also applies to how political awareness influenced a writer's writing and how writing influenced political activity.</gloss>
+           	    </item>
+           		<item>
+           			<label>Q</label>
+           			<gloss>Encodes all citations of a source.</gloss>
+           		</item>
+           	    <item>
+           	        <label>Recent Response</label><rs>#response_recent</rs>
+           	        <gloss>Encodes time frame of a literary response to a work.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Recognitions</label><rs>#recognitions</rs>
+           	        <gloss>Encodes material about all the positive results and consequences of writing, as well as acclaim offered to literary works, usually in the form of awards and prizes, or expressed numerically (in terms of the value).</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Re-evaluation Response</label><rs>#response_re-evaluation</rs>
+           	        <gloss>Encodes a response that is a re-evaluation of a literary work.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Religion</label><rs>#religion</rs>
+           	        <gloss>Encodes discussion of religious issues: religion as writer's identity, an issue in their life, their religious beliefs and affiliations. Includes discussions on the effect of a religious upbringing on a person, a person's relationships with religious institutions, as well as the role of religious movements in their writing.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Representation of Women</label><rs>#representation_of_women</rs>
+           	        <gloss>Encodes discussion of representation of women, literary or other.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Representation of Men</label><rs>#representation_of_men</rs>
+           	        <gloss>Encodes discussion of representation of men, literary or other.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Sexuality</label><rs>#sexuality</rs>
+           	        <gloss>Encodes discussions of sexuality in terms of culture, behaviour, or identity. It is not meant to capture individual sexual experiences and realtionships. Some issues gestured towards are: the politics of outing, the historical specificity of some categories such as "congenital invert," or the multiple forms of relating to one's own sexuality.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Social Movement</label><rs>#social_movement</rs>
+           	        <gloss>Encodes material related to the history of a social movement and discussion of social movements.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Spatiality</label><rs>#spatiality</rs>
+           	        <gloss>Encodes substantial discussions of space, geographical location and relative position.</gloss>
+           	    </item>
+           		<item>
+           			<label>Title</label>
+           			<gloss>Encodes the title of a work, whether article, book, journal (newspaper, magazine), series, or unpublished.</gloss>
+           		</item>
+           	    <item>
+           	        <label>Technology</label><rs>#technology</rs>
+           	        <gloss>Encodes substantial discussions of technology.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Textual Agency</label><rs>#textual_agency</rs>
+           	        <gloss>Encodes material about the relation between books and social transformation and development, i.e. effects of a certain text on worldly conditions. Also, discussions of reader or audience agency.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Textual Strategies</label><rs>#textual_strategies</rs>
+           	        <gloss>Encodes comment on use of various kinds of verbal, rhetorical, and discursive effects.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Theme or Topic</label><rs>#theme_or_topic</rs>
+           	        <gloss>Encodes both theme (concepts central to a particular text stated either directly or indirectly) and topic (interesting subjects of less central weight).</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Theory</label><rs>#theory</rs>
+           	        <gloss>Encodes discussions on larger conceptual issues, critical theory, philosophy, history of ideas.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Tone or Style</label><rs>#tone_or_style</rs>
+           	        <gloss>Applies to manner of expression, whether of a writer, text, or fictional character (how they say things, how their attitude is reflected, their mood and moral outlook).</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Violence</label><rs>#violence</rs>
+           	        <gloss>Encodes instances of physical, sexual, institutional, or emotional abuse, whether the person was a victim or a perpetrator. It can include a discussion of the effect of an exposure to violence.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Voice or Narration</label><rs>#voice_or_narration</rs>
+           	        <gloss>Encodes discussion of narrative techniques and narrator's voice in the text. Features of the text - how a story gets told, not what order the story is told in.</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Women Writing</label><rs>#women_writing</rs>
+           	        <gloss>Discussions of women’s writing as gendered, or as a tradition (not all discussions of writing by women).</gloss>
+           	    </item>
+           	    <item>
+           	        <label>Writing Climate</label><rs>#writing_climate</rs>
+           	        <gloss>Encodes any physical, economic, or emotional circumstances affecting a writer’s work.</gloss>
+           	    </item>
+           	</list>
+           </div> 
+        </body>
+        
+    </text>
+</TEI>
