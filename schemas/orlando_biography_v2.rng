@@ -33,6 +33,10 @@
 
 <!-- 
 *** Revisions ***
+* MRB: January 2016: Made the following change:
+  - Created a new optional rdf:RDF element, that can contain any type of descendant node (element, attribute, or content); this is so that documents
+     can be used in CWRC-Writer (which stores RDF annotation information in the "rdf:RDF" element bundle) as well as other XML editors, and still
+     validate correctly if the rdf:RDF element is present or not present.
 * MRB: August 2015: Made the following changes:
   - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, P, and RESEARCHNOTE.
   - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, P, and RESEARCHNOTE; FIGURE has a child element of FIGDESC, and
@@ -68,7 +72,7 @@
 -->
 
 <!-- begin root <grammar> element -->
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
     <!-- begin <start> element pattern -->
     <start>
@@ -107,6 +111,13 @@
                     <data type="string"/>
                 </choice>
             </attribute>
+
+            <!-- begin optional RDF element pattern -->
+            <optional>
+                <element name="rdf:RDF" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <ref name="any_content"/>
+                </element>
+            </optional>
 
             <!-- begin ORLANDOHEADER element pattern -->
             <element name="ORLANDOHEADER">
@@ -4679,6 +4690,37 @@
         </attribute>
     </define>
     <!-- end @RESP attribute pattern -->
+
+    <!-- begin globally defined any node pattern -->
+
+    <define name="any_content">
+        <interleave>
+            <zeroOrMore>
+                <ref name="any_element"/>
+            </zeroOrMore>
+            <text/>
+        </interleave>
+    </define>
+
+    <define name="any_element">
+        <element>
+            <anyName/>
+            <zeroOrMore>
+                <ref name="any_attribute"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="any_content"/>
+            </zeroOrMore>
+        </element>
+    </define>
+
+    <define name="any_attribute">
+        <attribute>
+            <anyName/>
+        </attribute>
+    </define>
+
+    <!-- end globally defined any node pattern -->
 
 </grammar>
 <!-- end root <grammar> element -->
