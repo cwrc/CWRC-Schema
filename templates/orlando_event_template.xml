@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://cwrc.ca/schemas/orlando_event.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://cwrc.ca/schemas/orlando_event_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/orlando.css"?>
 
 <!DOCTYPE ORLANDO [ <!ENTITY % character_entities SYSTEM "http://cwrc.ca/schemas/character_entities.dtd"> %character_entities; ]>
@@ -24,7 +24,7 @@
     </ORLANDOHEADER>
     <CHRONEVENT>
         <CHRONSTRUCT CHRONCOLUMN="NATIONALINTERNATIONAL" RELEVANCE="DECADE" RESP="SYS">
-            <DATE CALENDAR="NEWSTYLE" CERTAINTY="CERT" VALUE="1822--">[Insert date here, e.g., 1822]</DATE>
+            <DATE CALENDAR="NEWSTYLE" CERTAINTY="CERT" VALUE="1822">[Insert date here, e.g., 1822]</DATE>
             <CHRONPROSE>[Insert summary of event here, including location if relevant and known]
                 <PLACE REF="http://www.geonames.org/---------/">location of the event</PLACE> <RESEARCHNOTE>Please look up the GeoNames entry of your location at http://www.geonames.org/. Select it from the list of results. On the resulting map, you will most likely be told that there are multiple results in the area. Click on this notice. Out of the resulting list, select the appropriate entry, usually the first or second entry. Once you click on it, you will see a numerical id at the top-right coner of the resulting popup. Copy it and paste it in the value of the REF attribute to replace the dotted line. (e.g., the REF attribute value for Edmonton is "http://www.geonames.org/5946768/")</RESEARCHNOTE> </CHRONPROSE>
         </CHRONSTRUCT>
