@@ -33,6 +33,10 @@
 
 <!-- 
 *** Revisions ***
+* MRB: January 2016: Made the following change:
+  - Created a new optional rdf:RDF element, that can contain any type of descendant node (element, attribute, or content); this is so that documents
+     can be used in CWRC-Writer (which stores RDF annotation information in the "rdf:RDF" element bundle) as well as other XML editors, and still
+     validate correctly if the rdf:RDF element is present or not present.
 * MRB: September 2015: Made the following changes:
   - Removed the attribute PROPOSEDALTERNATIVENAME from the element TGENRE.
 * MRB: August 2015: Made the following changes:
@@ -155,7 +159,7 @@
 -->
 
 <!-- begin root <grammar> element -->
-<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
     <!-- begin <start> element pattern -->
     <start>
@@ -212,12 +216,22 @@
                         </list>
                     </attribute>
                 </optional>
+                <optional>
+                    <ref name="RDF"/>
+                </optional>
                 <ref name="CWRCHEADER"/>
                 <ref name="ENTRY"/>
             </element>
         </choice>
     </start>
     <!-- end <start> element pattern -->
+
+    <!-- begin optional RDF element pattern -->
+    <define name="RDF">
+        <element name="rdf:RDF" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+            <ref name="any"/>
+        </element>
+    </define>
 
     <!-- begin <CWRCHEADER> element pattern -->
     <define name="CWRCHEADER">
@@ -9974,6 +9988,23 @@
         </attribute>
     </define>
     <!-- end @RESP attribute pattern -->
+
+    <!-- begin globally defined any node pattern -->
+    <define name="any">
+        <zeroOrMore>
+            <choice>
+                <attribute>
+                    <anyName/>
+                </attribute>
+                <text/>
+                <element>
+                    <anyName/>
+                    <ref name="any"/>
+                </element>
+            </choice>
+        </zeroOrMore>
+    </define>
+    <!-- end globally defined any node pattern -->
 
 </grammar>
 <!-- end root <grammar> element -->
