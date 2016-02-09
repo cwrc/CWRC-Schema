@@ -2,9 +2,56 @@
 <!-- File name: cwrc_tei_lite.xml -->
 <!-- 
     * Purpose: CWRC ODD XML file to generate the customized CWRC TEI Lite RELAX NG schema (cwrc_tei_lite.rng)
+    * Description: Use the TEI Roma tool (located at http://www.tei-c.org/Roma/) to upload this ODD customization
+       file and then export a RELAX NG schema with the name cwrc_tei_lite.rng.  After the cwrc_tei_lite.rng schema
+       has been generated, two blocks of XML code need to be pasted into the resulting cwrc_tei_lite.rng schema so
+       that an optional rdf:RDF element will be defined; see the "Revisions" section below for a description of the
+       function of the rdf:RDF element.
+       
+       The first XML code block that needs to be copied is the optional reference to the RDF_block definition, which
+       needs to get pasted as the first child node of the root TEI element, pasted just before the group block to
+       the reference to the teiHeader definition.  The first XML code block is below:
+       
+        <optional>
+            <ref name="RDF_block"/>
+        </optional>
+   
+        The second XML code block that needs to be copied is the two definitions for the RDF_block definition and
+        for the any_node definition.  These can be pasted anywhere off of the schema root grammar element.  The
+        second XML code block consisting of the two definition blocks is below:
+    
+       <define name="RDF_block">
+           <element name="rdf:RDF" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+               <ref name="any_node"/>
+           </element>
+       </define>
+       <define name="any_node">
+           <zeroOrMore>
+               <choice>
+                   <attribute>
+                       <anyName>
+                           <except>
+                               <name>xml:id</name>
+                           </except>      
+                       </anyName>
+                   </attribute>
+                   <text/>
+                   <element>
+                       <anyName/>
+                       <ref name="any_node"/>
+                   </element>
+               </choice>
+           </zeroOrMore>
+       </define>
 -->
 <!-- 
 *** Revisions ***
+* 2016
+  - Created a new optional rdf:RDF element as the first child element of the root TEI element, that can contain any type of descendant node
+     (element, attribute, or content); this is so that documents can be used in CWRC-Writer (which stores RDF annotation information in the
+     "rdf:RDF" element bundle) as well as other XML editors, and still validate correctly if the rdf:RDF element is present or not present.  The rdf:RDF
+     element references a globally defined any_node pattern; this allows any element, attribute, or text node to appear as a descendant in the
+     rdf:RDF element (with the exception of the "xml:id" attribute).
 * 2014
   - Added the att.canonical attribute class (which contains the ref attribute) to the bibl element.
   - Created a new annotationId attribute in the att.global class of attributes; provides a unique annotation identifier for the element
@@ -16,6 +63,9 @@
   - In the event element in the namesdates module, locally defined the type attribute to provide the following closed list of event
      type category values: bibliographical, biographical, cultural, literary, political, and social.
   - In the keywords element in the header module, changed the scheme attribute from required to optional.
+ * pre-March 2013
+  - In the certainty element in the namesdates module, locally defined the cert attribute to provide the following closed list of
+    certainty category values: definite, reasonably certain, probable, and speculative.
 -->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
     <teiHeader>

@@ -34,9 +34,12 @@
 <!-- 
 *** Revisions ***
 * MRB: January 2016: Made the following change:
-  - Created a new optional rdf:RDF element, that can contain any type of descendant node (element, attribute, or content); this is so that documents
-     can be used in CWRC-Writer (which stores RDF annotation information in the "rdf:RDF" element bundle) as well as other XML editors, and still
-     validate correctly if the rdf:RDF element is present or not present.
+  - Created a new optional rdf:RDF element as the first child element of the root BIOGRAPHY element, that can contain any type of descendant node
+     (element, attribute, or content); this is so that documents can be used in CWRC-Writer (which stores RDF annotation information in the
+     "rdf:RDF" element bundle) as well as other XML editors, and still validate correctly if the rdf:RDF element is present or not present.  The rdf:RDF
+     element references a globally defined any_content pattern, which in turn references a globally defined any_element pattern, which in turn
+     references a globally defined any_attribute pattern; this allows any element, attribute, or text node to appear as a descendant in the rdf:RDF
+     element.
 * MRB: August 2015: Made the following changes:
   - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, P, and RESEARCHNOTE.
   - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, P, and RESEARCHNOTE; FIGURE has a child element of FIGDESC, and

@@ -34,9 +34,11 @@
 <!-- 
 *** Revisions ***
 * MRB: January 2016: Made the following change:
-  - Created a new optional rdf:RDF element, that can contain any type of descendant node (element, attribute, or content); this is so that documents
-     can be used in CWRC-Writer (which stores RDF annotation information in the "rdf:RDF" element bundle) as well as other XML editors, and still
-     validate correctly if the rdf:RDF element is present or not present.
+  - Created a new optional rdf:RDF element as the first child element of the root CWRC element, that can contain any type of descendant node
+     (element, attribute, or content); this is so that documents can be used in CWRC-Writer (which stores RDF annotation information in the
+     "rdf:RDF" element bundle) as well as other XML editors, and still validate correctly if the rdf:RDF element is present or not present.  The rdf:RDF
+     element references a globally defined any_node pattern; this allows any element, attribute, or text node to appear as a descendant in the
+     rdf:RDF element.
 * MRB: September 2015: Made the following changes:
   - Removed the attribute PROPOSEDALTERNATIVENAME from the element TGENRE.
 * MRB: August 2015: Made the following changes:
@@ -229,7 +231,7 @@
     <!-- begin optional RDF element pattern -->
     <define name="RDF">
         <element name="rdf:RDF" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-            <ref name="any"/>
+            <ref name="any_node"/>
         </element>
     </define>
 
@@ -9990,7 +9992,7 @@
     <!-- end @RESP attribute pattern -->
 
     <!-- begin globally defined any node pattern -->
-    <define name="any">
+    <define name="any_node">
         <zeroOrMore>
             <choice>
                 <attribute>
@@ -9999,7 +10001,7 @@
                 <text/>
                 <element>
                     <anyName/>
-                    <ref name="any"/>
+                    <ref name="any_node"/>
                 </element>
             </choice>
         </zeroOrMore>
