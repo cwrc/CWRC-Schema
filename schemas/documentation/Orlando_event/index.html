@@ -3,11 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Schema documentation for orlando_event.xsd</title>
+      <title>Schema documentation for orlando_event_v2.xsd</title>
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
-        var propertiesBoxes= new Array('properties_orlando_event.xsd', 
+        var propertiesBoxes= new Array('properties_orlando_event_v2.xsd', 
+				'properties_rdf.xsd', 
 				'properties_EVENT', 
+				'properties_RDF', 
 				'properties_ORLANDOHEADER', 
 				'properties_FILEDESC', 
 				'properties_TITLESTMT', 
@@ -71,6 +73,7 @@
 				'properties_SOURCES', 
 				'properties_SOURCE', 
 				'properties_KEYWORDCLASSES', 
+				'properties_any_content', 
 				'properties_DATE_CALENDAR', 
 				'properties_DATE_CERTAINTY', 
 				'properties_DATE_VALUE', 
@@ -152,7 +155,8 @@ var facetsBoxes= new Array('facets_DATE_CALENDAR',
 				'facets_CHRONSTRUCT_RELEVANCE1', 
 				'facets_CHRONSTRUCT_RELEVANCE2', 
 				'facets_CHRONSTRUCT_RELEVANCE3');
-var usedByBoxes= new Array('usedBy_ORLANDOHEADER', 
+var usedByBoxes= new Array('usedBy_RDF', 
+				'usedBy_ORLANDOHEADER', 
 				'usedBy_FILEDESC', 
 				'usedBy_TITLESTMT', 
 				'usedBy_DOCTITLE', 
@@ -214,6 +218,7 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_SOURCES', 
 				'usedBy_SOURCE', 
 				'usedBy_KEYWORDCLASSES', 
+				'usedBy_any_content', 
 				'usedBy_DATE_CALENDAR', 
 				'usedBy_DATE_CERTAINTY', 
 				'usedBy_DATE_VALUE', 
@@ -292,8 +297,10 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_EVENT_EID', 
 				'usedBy_EVENT_FILENAME', 
 				'usedBy_EVENT_SUBSET', 
+				'usedBy_any_element', 
 				'usedBy_RESP-attribute');
 var sourceBoxes= new Array('source_EVENT', 
+				'source_RDF', 
 				'source_ORLANDOHEADER', 
 				'source_FILEDESC', 
 				'source_TITLESTMT', 
@@ -357,6 +364,7 @@ var sourceBoxes= new Array('source_EVENT',
 				'source_SOURCES', 
 				'source_SOURCE', 
 				'source_KEYWORDCLASSES', 
+				'source_any_content', 
 				'source_DATE_CALENDAR', 
 				'source_DATE_CERTAINTY', 
 				'source_DATE_VALUE', 
@@ -435,7 +443,9 @@ var sourceBoxes= new Array('source_EVENT',
 				'source_EVENT_EID', 
 				'source_EVENT_FILENAME', 
 				'source_EVENT_SUBSET', 
-				'source_RESP-attribute');
+				'source_any_element', 
+				'source_RESP-attribute', 
+				'source_any_attribute');
 var instanceBoxes= new Array('instance_EVENT', 
 				'instance_ORLANDOHEADER', 
 				'instance_FILEDESC', 
@@ -474,6 +484,7 @@ var instanceBoxes= new Array('instance_EVENT',
 				'instance_SOURCE', 
 				'instance_KEYWORDCLASSES');
 var diagramBoxes= new Array('diagram_EVENT', 
+				'diagram_RDF', 
 				'diagram_ORLANDOHEADER', 
 				'diagram_FILEDESC', 
 				'diagram_TITLESTMT', 
@@ -537,7 +548,10 @@ var diagramBoxes= new Array('diagram_EVENT',
 				'diagram_SOURCES', 
 				'diagram_SOURCE', 
 				'diagram_KEYWORDCLASSES', 
-				'diagram_RESP-attribute');
+				'diagram_any_content', 
+				'diagram_any_element', 
+				'diagram_RESP-attribute', 
+				'diagram_any_attribute');
 var annotationBoxes= new Array('annotations_EVENT', 
 				'annotations_ORLANDOHEADER', 
 				'annotations_FILEDESC', 
@@ -672,8 +686,10 @@ var attributesBoxes= new Array('attributes_EVENT',
 				'attributes_XREF', 
 				'attributes_CHRONSTRUCT', 
 				'attributes_SOURCE', 
-				'attributes_RESP-attribute');
+				'attributes_RESP-attribute', 
+				'attributes_any_attribute');
 var modelBoxes= new Array('model_EVENT', 
+				'model_RDF', 
 				'model_ORLANDOHEADER', 
 				'model_FILEDESC', 
 				'model_TITLESTMT', 
@@ -721,7 +737,9 @@ var modelBoxes= new Array('model_EVENT',
 				'model_CHRONEVENT_BIBCITS', 
 				'model_SOURCES', 
 				'model_SOURCE', 
-				'model_KEYWORDCLASSES');
+				'model_KEYWORDCLASSES', 
+				'model_any_content', 
+				'model_any_element');
 
       
         var button_prefix = 'button_';
@@ -1132,6 +1150,82 @@ var modelBoxes= new Array('model_EVENT',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Complex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Complex_Type');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Complex Types</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Complex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#any_content" target="_self" title="No namespace">any_content</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Element_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Element_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Element Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Element_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#any_element" target="_self" title="No namespace">any_element</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
                                           <td class="componentGroup"><input id="button_boxIdNamespace1Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Attribute_Group');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Attribute Groups</div>
@@ -1142,6 +1236,51 @@ var modelBoxes= new Array('model_EVENT',
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                                <div><b><a href="index.html#any_attribute" target="_self" title="No namespace">any_attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+               <div class="level2">
+                  <p><input id="button_boxIdNamespace2" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2');" class="control" /><span class="indexGroupTitle">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span></p>
+                  <div id="boxIdNamespace2" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace2Element" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2Element');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace2Element" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -1249,6 +1388,83 @@ var modelBoxes= new Array('model_EVENT',
                                           <div><b><a href="index.html#TTHEMETOPIC" target="_self" title="No namespace">TTHEMETOPIC</a></b></div>
                                           <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
                                           <div><b><a href="index.html#YEAR" target="_self" title="No namespace">YEAR</a></b></div>
+                                          <div><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Complex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('Complex_Type');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Complex Types</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Complex_Type" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#any_content" target="_self" title="No namespace">any_content</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Element_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('Element_Group');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Element Groups</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Element_Group" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#any_element" target="_self" title="No namespace">any_element</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -1287,6 +1503,7 @@ var modelBoxes= new Array('model_EVENT',
                                     <td class="componentGroup">
                                        <div id="Attribute_Group" class="componentGroup" style="display:block">
                                           <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                          <div><b><a href="index.html#any_attribute" target="_self" title="No namespace">any_attribute</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -1308,8 +1525,8 @@ var modelBoxes= new Array('model_EVENT',
          <div class="level1" id="toc_group_by_location" style="display:none">
             <div>
                <div class="level2">
-                  <p><input id="button_gr_orlando_event.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event.xsd');" class="control" /><span class="indexGroupTitle">orlando_event.xsd</span></p>
-                  <div id="gr_orlando_event.xsd" style="display:block">
+                  <p><input id="button_gr_orlando_event_v2.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event_v2.xsd');" class="control" /><span class="indexGroupTitle">orlando_event_v2.xsd</span></p>
+                  <div id="gr_orlando_event_v2.xsd" style="display:block">
                      <div class="horizontalLayout">
                         <table class="rt">
                            <tr>
@@ -1323,7 +1540,7 @@ var modelBoxes= new Array('model_EVENT',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
-                                          <td class="componentGroup"><input id="button_gr_orlando_event.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup"><input id="button_gr_orlando_event_v2.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event_v2.xsdElement');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Elements</div>
                                           </td>
@@ -1331,7 +1548,7 @@ var modelBoxes= new Array('model_EVENT',
                                        <tr>
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
-                                             <div id="gr_orlando_event.xsdElement" class="componentGroup" style="display:block">
+                                             <div id="gr_orlando_event_v2.xsdElement" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
                                                 <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
                                                 <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
@@ -1423,7 +1640,83 @@ var modelBoxes= new Array('model_EVENT',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
-                                          <td class="componentGroup"><input id="button_gr_orlando_event.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event.xsdAttribute_Group');" class="control" /></td>
+                                          <td class="componentGroup"><input id="button_gr_orlando_event_v2.xsdComplex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event_v2.xsdComplex_Type');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Complex Types</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_orlando_event_v2.xsdComplex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#any_content" target="_self" title="No namespace">any_content</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_orlando_event_v2.xsdElement_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event_v2.xsdElement_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Element Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_orlando_event_v2.xsdElement_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#any_element" target="_self" title="No namespace">any_element</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_orlando_event_v2.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_event_v2.xsdAttribute_Group');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Attribute Groups</div>
                                           </td>
@@ -1431,8 +1724,53 @@ var modelBoxes= new Array('model_EVENT',
                                        <tr>
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
-                                             <div id="gr_orlando_event.xsdAttribute_Group" class="componentGroup" style="display:block">
+                                             <div id="gr_orlando_event_v2.xsdAttribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                                <div><b><a href="index.html#any_attribute" target="_self" title="No namespace">any_attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+               <div class="level2">
+                  <p><input id="button_gr_rdf.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_rdf.xsd');" class="control" /><span class="indexGroupTitle">rdf.xsd</span></p>
+                  <div id="gr_rdf.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_rdf.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_rdf.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_rdf.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -1453,7 +1791,27 @@ var modelBoxes= new Array('model_EVENT',
                </div>
             </div>
          </div>
-      </div><a id="orlando_event.xsd"></a><div class="componentTitle">Main schema <span class="qname">orlando_event.xsd</span></div>
+      </div>
+      <p class="sHierarchyTitle">Resource hierarchy:</p>
+      <ul class="schemaHierarchy">
+         <li>
+            <p class="componentTitle"><input id="button_sHorlando_event_v2.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('sHorlando_event_v2.xsd');" class="control" /><a href="index.html#orlando_event_v2.xsd" target="_self">orlando_event_v2.xsd</a></p>
+            <div id="sHorlando_event_v2.xsd" style="display:block">
+               <ul>
+                  <li class="schemaHierarchy">
+                     <p><input id="button_sHorlando_event_v2.xsdrdf.xsd" type="image" value="-" src="img/btP.gif" onclick="switchState('sHorlando_event_v2.xsdrdf.xsd');" class="control" /><img src="img/HierarchyArrow12.jpg" /> <img src="img/Import12.gif" title="Imported by  'orlando_event_v2.xsd'." /> <a href="index.html#rdf.xsd" target="_self" title="Imported by  'orlando_event_v2.xsd'.">rdf.xsd</a></p>
+                     <div id="sHorlando_event_v2.xsdrdf.xsd" style="display:none">
+                        <ul>
+                           <li class="schemaHierarchy">
+                              <p><img src="img/Cycle12.png" title="Imported by  'rdf.xsd'. Cycle detected." /> <img src="img/Import12.gif" title="Imported by  'rdf.xsd'." /> <a href="index.html#orlando_event_v2.xsd" target="_self" title="Imported by  'rdf.xsd'.">orlando_event_v2.xsd</a></p>
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </li>
+      </ul><a id="orlando_event_v2.xsd"></a><div class="componentTitle">Main schema <span class="qname">orlando_event_v2.xsd</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -1472,10 +1830,57 @@ var modelBoxes= new Array('model_EVENT',
                      <tr>
                         <td class="firstColumn">
                            <div class="floatLeft"><b>Properties</b></div>
-                           <div class="floatRight"><input id="button_properties_orlando_event.xsd" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_orlando_event.xsd');" class="control" /></div>
+                           <div class="floatRight"><input id="button_properties_orlando_event_v2.xsd" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_orlando_event_v2.xsd');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="properties_orlando_event.xsd" style="display:block">
+                           <div id="properties_orlando_event_v2.xsd" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">attribute form default</td>
+                                    <td><b>unqualified</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">element form default</td>
+                                    <td><b>qualified</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="rdf.xsd"></a><div class="componentTitle">Imported schema <span class="qname">rdf.xsd</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_rdf.xsd" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_rdf.xsd');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_rdf.xsd" style="display:block">
                               <table class="propertiesTable">
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">attribute form default</td>
@@ -1540,13 +1945,14 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_EVENT" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_EVENT');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_EVENT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_EVENT.jpeg" usemap="#orlando_event_xsd_Element_EVENT" /><map name="orlando_event_xsd_Element_EVENT" id="orlando_event_xsd_Element_EVENT">
+                           <div id="diagram_EVENT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_EVENT.jpeg" usemap="#orlando_event_v2_xsd_Element_EVENT" /><map name="orlando_event_v2_xsd_Element_EVENT" id="orlando_event_v2_xsd_Element_EVENT">
                                  <area alt="index.tmp#EVENT_ID" href="index.html#EVENT_ID" coords="126,41,245,85" />
                                  <area alt="index.tmp#EVENT_EID" href="index.html#EVENT_EID" coords="126,95,237,139" />
                                  <area alt="index.tmp#EVENT_FILENAME" href="index.html#EVENT_FILENAME" coords="126,149,231,193" />
                                  <area alt="index.tmp#EVENT_SUBSET" href="index.html#EVENT_SUBSET" coords="126,203,231,247" />
-                                 <area alt="index.tmp#ORLANDOHEADER" href="index.html#ORLANDOHEADER" coords="183,264,306,289" />
-                                 <area alt="index.tmp#CHRONEVENT" href="index.html#CHRONEVENT" coords="183,344,283,369" /></map></div>
+                                 <area alt="index.tmp#RDF" href="index.html#RDF" coords="183,264,251,289" />
+                                 <area alt="index.tmp#ORLANDOHEADER" href="index.html#ORLANDOHEADER" coords="183,299,306,324" />
+                                 <area alt="index.tmp#CHRONEVENT" href="index.html#CHRONEVENT" coords="183,379,283,404" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -1569,12 +1975,12 @@ var modelBoxes= new Array('model_EVENT',
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_EVENT" type="image" src="img/btM.gif" value="-" onclick="switchState('model_EVENT');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_EVENT" style="display:block"><b><a href="index.html#ORLANDOHEADER" target="_self" title="No namespace">ORLANDOHEADER</a></b> , <b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b></div>
+                           <div id="model_EVENT" style="display:block"><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF{0,1}</a></b> , <b><a href="index.html#ORLANDOHEADER" target="_self" title="No namespace">ORLANDOHEADER</a></b> , <b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b>, <b><a href="index.html#ORLANDOHEADER" target="_self" title="No namespace">ORLANDOHEADER</a></b></td>
+                        <td><b><a href="index.html#CHRONEVENT" target="_self" title="No namespace">CHRONEVENT</a></b>, <b><a href="index.html#ORLANDOHEADER" target="_self" title="No namespace">ORLANDOHEADER</a></b>, <b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -1585,7 +1991,8 @@ var modelBoxes= new Array('model_EVENT',
                            <div id="instance_EVENT" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;EVENT</span><span class="tT"> </span><span class="tAN">EID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">FILENAME=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">ID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">SUBSET=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;EVENT</span><span class="tT"> </span><span class="tAN">EID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">FILENAME=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">ID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">SUBSET=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xmlns:rdf=</span><span class="tAV">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;rdf:RDF</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/rdf:RDF&gt;</span><span class="tI">
   </span><span class="tEl">&lt;ORLANDOHEADER</span><span class="tT"> </span><span class="tAN">TYPE=</span><span class="tAV">"text"</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/ORLANDOHEADER&gt;</span><span class="tI">
   </span><span class="tEl">&lt;CHRONEVENT</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/CHRONEVENT&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/EVENT&gt;</span></pre></td>
@@ -1661,6 +2068,7 @@ var modelBoxes= new Array('model_EVENT',
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:element</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> ref=</span><span class="tAV">"rdf:RDF"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"ORLANDOHEADER"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:element</span><span class="tAN"> ref=</span><span class="tAV">"CHRONEVENT"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
@@ -1670,6 +2078,106 @@ var modelBoxes= new Array('model_EVENT',
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"SUBSET"</span><span class="tAN"> type=</span><span class="tAV">"xs:string"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="RDF"></a><div class="componentTitle">Element <span class="qname">rdf:RDF</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_RDF" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_RDF');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_RDF" style="display:block"><img alt="Diagram" border="0" src="img/rdf_xsd_Element_rdf_RDF.jpeg" usemap="#rdf_xsd_Element_rdf_RDF" /><map name="rdf_xsd_Element_rdf_RDF" id="rdf_xsd_Element_rdf_RDF">
+                                 <area alt="index.tmp#any_element" href="index.html#any_element" coords="116,62,232,88" />
+                                 <area alt="index.tmp#any_content" href="index.html#any_content" coords="102,3,213,44" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="index.html#any_content" target="_self" title="No namespace">any_content</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_RDF" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_RDF');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_RDF" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">mixed</td>
+                                    <td><b>true</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_RDF" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_RDF');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_RDF" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#EVENT" target="_self" title="No namespace">EVENT</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_RDF" type="image" src="img/btM.gif" value="-" onclick="switchState('model_RDF');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_RDF" style="display:block"><b>ANY element from ANY namespace</b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_RDF" type="image" src="img/btM.gif" value="-" onclick="switchState('source_RDF');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_RDF" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"RDF"</span><span class="tAN"> type=</span><span class="tAV">"any_content"</span><span class="tEl">/&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -1726,7 +2234,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_ORLANDOHEADER" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ORLANDOHEADER');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_ORLANDOHEADER" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_ORLANDOHEADER.jpeg" usemap="#orlando_event_xsd_Element_ORLANDOHEADER" /><map name="orlando_event_xsd_Element_ORLANDOHEADER" id="orlando_event_xsd_Element_ORLANDOHEADER">
+                           <div id="diagram_ORLANDOHEADER" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_ORLANDOHEADER.jpeg" usemap="#orlando_event_v2_xsd_Element_ORLANDOHEADER" /><map name="orlando_event_v2_xsd_Element_ORLANDOHEADER" id="orlando_event_v2_xsd_Element_ORLANDOHEADER">
                                  <area alt="index.tmp#ORLANDOHEADER_TYPE" href="index.html#ORLANDOHEADER_TYPE" coords="185,41,595,104" />
                                  <area alt="index.tmp#FILEDESC" href="index.html#FILEDESC" coords="242,152,320,177" />
                                  <area alt="index.tmp#REVISIONDESC" href="index.html#REVISIONDESC" coords="242,232,347,257" /></map></div>
@@ -1927,7 +2435,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_FILEDESC" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_FILEDESC');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_FILEDESC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_FILEDESC.jpeg" usemap="#orlando_event_xsd_Element_FILEDESC" /><map name="orlando_event_xsd_Element_FILEDESC" id="orlando_event_xsd_Element_FILEDESC">
+                           <div id="diagram_FILEDESC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_FILEDESC.jpeg" usemap="#orlando_event_v2_xsd_Element_FILEDESC" /><map name="orlando_event_v2_xsd_Element_FILEDESC" id="orlando_event_v2_xsd_Element_FILEDESC">
                                  <area alt="index.tmp#TITLESTMT" href="index.html#TITLESTMT" coords="197,2,281,27" />
                                  <area alt="index.tmp#PUBLICATIONSTMT" href="index.html#PUBLICATIONSTMT" coords="197,82,321,107" />
                                  <area alt="index.tmp#SOURCEDESC" href="index.html#SOURCEDESC" coords="197,162,302,206" /></map></div>
@@ -2072,7 +2580,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_TITLESTMT" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_TITLESTMT');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_TITLESTMT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_TITLESTMT.jpeg" usemap="#orlando_event_xsd_Element_TITLESTMT" /><map name="orlando_event_xsd_Element_TITLESTMT" id="orlando_event_xsd_Element_TITLESTMT">
+                           <div id="diagram_TITLESTMT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_TITLESTMT.jpeg" usemap="#orlando_event_v2_xsd_Element_TITLESTMT" /><map name="orlando_event_v2_xsd_Element_TITLESTMT" id="orlando_event_v2_xsd_Element_TITLESTMT">
                                  <area alt="index.tmp#DOCTITLE" href="index.html#DOCTITLE" coords="203,2,308,46" /></map></div>
                         </td>
                      </tr>
@@ -2212,7 +2720,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_DOCTITLE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_DOCTITLE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_DOCTITLE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_DOCTITLE.jpeg" /></div>
+                           <div id="diagram_DOCTITLE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_DOCTITLE.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -2321,7 +2829,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_PUBLICATIONSTMT" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_PUBLICATIONSTMT');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_PUBLICATIONSTMT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_PUBLICATIONSTMT.jpeg" usemap="#orlando_event_xsd_Element_PUBLICATIONSTMT" /><map name="orlando_event_xsd_Element_PUBLICATIONSTMT" id="orlando_event_xsd_Element_PUBLICATIONSTMT">
+                           <div id="diagram_PUBLICATIONSTMT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_PUBLICATIONSTMT.jpeg" usemap="#orlando_event_v2_xsd_Element_PUBLICATIONSTMT" /><map name="orlando_event_v2_xsd_Element_PUBLICATIONSTMT" id="orlando_event_v2_xsd_Element_PUBLICATIONSTMT">
                                  <area alt="index.tmp#AUTHORITY" href="index.html#AUTHORITY" coords="243,2,348,46" /></map></div>
                         </td>
                      </tr>
@@ -2460,7 +2968,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_AUTHORITY" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_AUTHORITY');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_AUTHORITY" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_AUTHORITY.jpeg" /></div>
+                           <div id="diagram_AUTHORITY" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_AUTHORITY.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -2570,7 +3078,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_SOURCEDESC" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SOURCEDESC');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_SOURCEDESC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_SOURCEDESC.jpeg" /></div>
+                           <div id="diagram_SOURCEDESC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_SOURCEDESC.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -2679,7 +3187,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_REVISIONDESC" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_REVISIONDESC');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_REVISIONDESC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_REVISIONDESC.jpeg" usemap="#orlando_event_xsd_Element_REVISIONDESC" /><map name="orlando_event_xsd_Element_REVISIONDESC" id="orlando_event_xsd_Element_REVISIONDESC">
+                           <div id="diagram_REVISIONDESC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_REVISIONDESC.jpeg" usemap="#orlando_event_v2_xsd_Element_REVISIONDESC" /><map name="orlando_event_v2_xsd_Element_REVISIONDESC" id="orlando_event_v2_xsd_Element_REVISIONDESC">
                                  <area alt="index.tmp#RESPONSIBILITY" href="index.html#RESPONSIBILITY" coords="244,6,356,31" /></map></div>
                         </td>
                      </tr>
@@ -2818,7 +3326,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_RESPONSIBILITY" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_RESPONSIBILITY');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_RESPONSIBILITY" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_RESPONSIBILITY.jpeg" usemap="#orlando_event_xsd_Element_RESPONSIBILITY" /><map name="orlando_event_xsd_Element_RESPONSIBILITY" id="orlando_event_xsd_Element_RESPONSIBILITY">
+                           <div id="diagram_RESPONSIBILITY" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_RESPONSIBILITY.jpeg" usemap="#orlando_event_v2_xsd_Element_RESPONSIBILITY" /><map name="orlando_event_v2_xsd_Element_RESPONSIBILITY" id="orlando_event_v2_xsd_Element_RESPONSIBILITY">
                                  <area alt="index.tmp#RESP-attribute" href="index.html#RESP-attribute" coords="177,44,301,70" />
                                  <area alt="index.tmp#RESPONSIBILITY_WORKSTATUS" href="index.html#RESPONSIBILITY_WORKSTATUS" coords="174,85,349,129" />
                                  <area alt="index.tmp#RESPONSIBILITY_WORKVALUE" href="index.html#RESPONSIBILITY_WORKVALUE" coords="174,170,349,214" />
@@ -3127,10 +3635,10 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_DATE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_DATE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_DATE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_DATE.jpeg" usemap="#orlando_event_xsd_Element_DATE" /><map name="orlando_event_xsd_Element_DATE" id="orlando_event_xsd_Element_DATE">
+                           <div id="diagram_DATE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_DATE.jpeg" usemap="#orlando_event_v2_xsd_Element_DATE" /><map name="orlando_event_v2_xsd_Element_DATE" id="orlando_event_v2_xsd_Element_DATE">
                                  <area alt="index.tmp#DATE_CALENDAR" href="index.html#DATE_CALENDAR" coords="120,41,305,104" />
                                  <area alt="index.tmp#DATE_CERTAINTY" href="index.html#DATE_CERTAINTY" coords="120,159,305,222" />
-                                 <area alt="index.tmp#DATE_VALUE" href="index.html#DATE_VALUE" coords="120,277,502,321" /></map></div>
+                                 <area alt="index.tmp#DATE_VALUE" href="index.html#DATE_VALUE" coords="120,277,401,321" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -3227,7 +3735,7 @@ var modelBoxes= new Array('model_EVENT',
                                  </tr>
                                  <tr>
                                     <td class="firstColumn"><b><a href="index.html#DATE_VALUE" target="_self" title="No namespace">VALUE</a></b></td>
-                                    <td>union of(<b>xs:date</b>, restriction of <b>xs:string</b>, restriction of <b>xs:string</b>)
+                                    <td>union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>)
                                     </td>
                                     <td></td>
                                     <td>optional</td>
@@ -3315,18 +3823,7 @@ var modelBoxes= new Array('model_EVENT',
         </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Value is used to record a formatted date-related value.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})((\-(0[1-9]|1[0-2])\-))"</span><span class="tEl">/&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})(\-{2})"</span><span class="tEl">/&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -3389,10 +3886,10 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_DATESTRUCT" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_DATESTRUCT');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_DATESTRUCT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_DATESTRUCT.jpeg" usemap="#orlando_event_xsd_Element_DATESTRUCT" /><map name="orlando_event_xsd_Element_DATESTRUCT" id="orlando_event_xsd_Element_DATESTRUCT">
+                           <div id="diagram_DATESTRUCT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_DATESTRUCT.jpeg" usemap="#orlando_event_v2_xsd_Element_DATESTRUCT" /><map name="orlando_event_v2_xsd_Element_DATESTRUCT" id="orlando_event_v2_xsd_Element_DATESTRUCT">
                                  <area alt="index.tmp#DATESTRUCT_CALENDAR" href="index.html#DATESTRUCT_CALENDAR" coords="180,41,365,104" />
                                  <area alt="index.tmp#DATESTRUCT_CERTAINTY" href="index.html#DATESTRUCT_CERTAINTY" coords="180,159,355,203" />
-                                 <area alt="index.tmp#DATESTRUCT_VALUE" href="index.html#DATESTRUCT_VALUE" coords="180,258,562,302" />
+                                 <area alt="index.tmp#DATESTRUCT_VALUE" href="index.html#DATESTRUCT_VALUE" coords="180,258,461,302" />
                                  <area alt="index.tmp#DAY" href="index.html#DAY" coords="237,350,415,394" />
                                  <area alt="index.tmp#MONTH" href="index.html#MONTH" coords="237,449,423,493" />
                                  <area alt="index.tmp#OCCASION" href="index.html#OCCASION" coords="237,548,342,592" />
@@ -3521,7 +4018,7 @@ var modelBoxes= new Array('model_EVENT',
                                  </tr>
                                  <tr>
                                     <td class="firstColumn"><b><a href="index.html#DATESTRUCT_VALUE" target="_self" title="No namespace">VALUE</a></b></td>
-                                    <td>union of(<b>xs:date</b>, restriction of <b>xs:string</b>, restriction of <b>xs:string</b>)
+                                    <td>union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>)
                                     </td>
                                     <td></td>
                                     <td>optional</td>
@@ -3617,18 +4114,7 @@ var modelBoxes= new Array('model_EVENT',
         </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Value is used to record a formatted date-related value.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})((\-(0[1-9]|1[0-2])\-))"</span><span class="tEl">/&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})(\-{2})"</span><span class="tEl">/&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -3689,7 +4175,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_DAY" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_DAY');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_DAY" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_DAY.jpeg" usemap="#orlando_event_xsd_Element_DAY" /><map name="orlando_event_xsd_Element_DAY" id="orlando_event_xsd_Element_DAY">
+                           <div id="diagram_DAY" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_DAY.jpeg" usemap="#orlando_event_v2_xsd_Element_DAY" /><map name="orlando_event_v2_xsd_Element_DAY" id="orlando_event_v2_xsd_Element_DAY">
                                  <area alt="index.tmp#DAY_VALUE" href="index.html#DAY_VALUE" coords="240,122,351,166" /></map></div>
                         </td>
                      </tr>
@@ -3846,7 +4332,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_MONTH" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_MONTH');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_MONTH" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_MONTH.jpeg" usemap="#orlando_event_xsd_Element_MONTH" /><map name="orlando_event_xsd_Element_MONTH" id="orlando_event_xsd_Element_MONTH">
+                           <div id="diagram_MONTH" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_MONTH.jpeg" usemap="#orlando_event_v2_xsd_Element_MONTH" /><map name="orlando_event_v2_xsd_Element_MONTH" id="orlando_event_v2_xsd_Element_MONTH">
                                  <area alt="index.tmp#MONTH_CERTAINTY" href="index.html#MONTH_CERTAINTY" coords="248,122,433,185" />
                                  <area alt="index.tmp#MONTH_VALUE" href="index.html#MONTH_VALUE" coords="248,240,359,284" /></map></div>
                         </td>
@@ -4060,7 +4546,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_OCCASION" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_OCCASION');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_OCCASION" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_OCCASION.jpeg" /></div>
+                           <div id="diagram_OCCASION" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_OCCASION.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -4151,7 +4637,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_SEASON" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SEASON');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_SEASON" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_SEASON.jpeg" usemap="#orlando_event_xsd_Element_SEASON" /><map name="orlando_event_xsd_Element_SEASON" id="orlando_event_xsd_Element_SEASON">
+                           <div id="diagram_SEASON" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_SEASON.jpeg" usemap="#orlando_event_v2_xsd_Element_SEASON" /><map name="orlando_event_v2_xsd_Element_SEASON" id="orlando_event_v2_xsd_Element_SEASON">
                                  <area alt="index.tmp#SEASON_CERTAINTY" href="index.html#SEASON_CERTAINTY" coords="116,41,301,104" />
                                  <area alt="index.tmp#SEASON_VALUE" href="index.html#SEASON_VALUE" coords="116,159,243,203" /></map></div>
                         </td>
@@ -4365,7 +4851,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_TIME" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_TIME');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_TIME" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_TIME.jpeg" /></div>
+                           <div id="diagram_TIME" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_TIME.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -4456,7 +4942,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_YEAR" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_YEAR');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_YEAR" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_YEAR.jpeg" usemap="#orlando_event_xsd_Element_YEAR" /><map name="orlando_event_xsd_Element_YEAR" id="orlando_event_xsd_Element_YEAR">
+                           <div id="diagram_YEAR" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_YEAR.jpeg" usemap="#orlando_event_v2_xsd_Element_YEAR" /><map name="orlando_event_v2_xsd_Element_YEAR" id="orlando_event_v2_xsd_Element_YEAR">
                                  <area alt="index.tmp#YEAR_CERTAINTY" href="index.html#YEAR_CERTAINTY" coords="102,41,287,104" />
                                  <area alt="index.tmp#YEAR_VALUE" href="index.html#YEAR_VALUE" coords="102,159,229,203" /></map></div>
                         </td>
@@ -4671,12 +5157,12 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_DATERANGE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_DATERANGE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_DATERANGE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_DATERANGE.jpeg" usemap="#orlando_event_xsd_Element_DATERANGE" /><map name="orlando_event_xsd_Element_DATERANGE" id="orlando_event_xsd_Element_DATERANGE">
+                           <div id="diagram_DATERANGE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_DATERANGE.jpeg" usemap="#orlando_event_v2_xsd_Element_DATERANGE" /><map name="orlando_event_v2_xsd_Element_DATERANGE" id="orlando_event_v2_xsd_Element_DATERANGE">
                                  <area alt="index.tmp#DATERANGE_CALENDAR" href="index.html#DATERANGE_CALENDAR" coords="156,41,341,104" />
                                  <area alt="index.tmp#DATERANGE_CERTAINTY" href="index.html#DATERANGE_CERTAINTY" coords="156,159,341,222" />
                                  <area alt="index.tmp#DATERANGE_EXACT" href="index.html#DATERANGE_EXACT" coords="156,277,331,321" />
-                                 <area alt="index.tmp#DATERANGE_FROM" href="index.html#DATERANGE_FROM" coords="156,376,538,420" />
-                                 <area alt="index.tmp#DATERANGE_TO" href="index.html#DATERANGE_TO" coords="156,461,538,505" /></map></div>
+                                 <area alt="index.tmp#DATERANGE_FROM" href="index.html#DATERANGE_FROM" coords="156,376,437,420" />
+                                 <area alt="index.tmp#DATERANGE_TO" href="index.html#DATERANGE_TO" coords="156,461,437,505" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -4789,7 +5275,7 @@ var modelBoxes= new Array('model_EVENT',
                                  </tr>
                                  <tr>
                                     <td class="firstColumn"><b><a href="index.html#DATERANGE_FROM" target="_self" title="No namespace">FROM</a></b></td>
-                                    <td>union of(<b>xs:date</b>, restriction of <b>xs:string</b>, restriction of <b>xs:string</b>)
+                                    <td>union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>)
                                     </td>
                                     <td></td>
                                     <td>optional</td>
@@ -4806,7 +5292,7 @@ var modelBoxes= new Array('model_EVENT',
                                  </tr>
                                  <tr>
                                     <td class="firstColumn"><b><a href="index.html#DATERANGE_TO" target="_self" title="No namespace">TO</a></b></td>
-                                    <td>union of(<b>xs:date</b>, restriction of <b>xs:string</b>, restriction of <b>xs:string</b>)
+                                    <td>union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>)
                                     </td>
                                     <td></td>
                                     <td>optional</td>
@@ -4907,18 +5393,7 @@ var modelBoxes= new Array('model_EVENT',
         </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">From is used to record a formatted date-related value.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})((\-(0[1-9]|1[0-2])\-))"</span><span class="tEl">/&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})(\-{2})"</span><span class="tEl">/&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"TO"</span><span class="tEl">&gt;</span><span class="tI">
@@ -4926,18 +5401,7 @@ var modelBoxes= new Array('model_EVENT',
         </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">To is used to record a formatted date-related value.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})((\-(0[1-9]|1[0-2])\-))"</span><span class="tEl">/&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})(\-{2})"</span><span class="tEl">/&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -4998,7 +5462,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_ITEM" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ITEM');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_ITEM" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_ITEM.jpeg" /></div>
+                           <div id="diagram_ITEM" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_ITEM.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -5108,7 +5572,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_RESEARCHNOTE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_RESEARCHNOTE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_RESEARCHNOTE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_RESEARCHNOTE.jpeg" usemap="#orlando_event_xsd_Element_RESEARCHNOTE" /><map name="orlando_event_xsd_Element_RESEARCHNOTE" id="orlando_event_xsd_Element_RESEARCHNOTE">
+                           <div id="diagram_RESEARCHNOTE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_RESEARCHNOTE.jpeg" usemap="#orlando_event_v2_xsd_Element_RESEARCHNOTE" /><map name="orlando_event_v2_xsd_Element_RESEARCHNOTE" id="orlando_event_v2_xsd_Element_RESEARCHNOTE">
                                  <area alt="index.tmp#FIGURE" href="index.html#FIGURE" coords="252,2,319,27" />
                                  <area alt="index.tmp#GRAPHIC" href="index.html#GRAPHIC" coords="252,96,328,121" />
                                  <area alt="index.tmp#NAME" href="index.html#NAME" coords="252,176,312,201" />
@@ -5263,7 +5727,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_FIGURE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_FIGURE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_FIGURE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_FIGURE.jpeg" usemap="#orlando_event_xsd_Element_FIGURE" /><map name="orlando_event_xsd_Element_FIGURE" id="orlando_event_xsd_Element_FIGURE">
+                           <div id="diagram_FIGURE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_FIGURE.jpeg" usemap="#orlando_event_v2_xsd_Element_FIGURE" /><map name="orlando_event_v2_xsd_Element_FIGURE" id="orlando_event_v2_xsd_Element_FIGURE">
                                  <area alt="index.tmp#HEAD" href="index.html#HEAD" coords="206,2,311,46" />
                                  <area alt="index.tmp#FIGDESC" href="index.html#FIGDESC" coords="206,101,311,145" />
                                  <area alt="index.tmp#GRAPHIC" href="index.html#GRAPHIC" coords="206,214,282,239" />
@@ -5411,7 +5875,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_HEAD" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_HEAD');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_HEAD" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_HEAD.jpeg" /></div>
+                           <div id="diagram_HEAD" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_HEAD.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -5520,7 +5984,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_FIGDESC" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_FIGDESC');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_FIGDESC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_FIGDESC.jpeg" /></div>
+                           <div id="diagram_FIGDESC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_FIGDESC.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -5629,7 +6093,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_GRAPHIC" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_GRAPHIC');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_GRAPHIC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_GRAPHIC.jpeg" usemap="#orlando_event_xsd_Element_GRAPHIC" /><map name="orlando_event_xsd_Element_GRAPHIC" id="orlando_event_xsd_Element_GRAPHIC">
+                           <div id="diagram_GRAPHIC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_GRAPHIC.jpeg" usemap="#orlando_event_v2_xsd_Element_GRAPHIC" /><map name="orlando_event_v2_xsd_Element_GRAPHIC" id="orlando_event_v2_xsd_Element_GRAPHIC">
                                  <area alt="index.tmp#GRAPHIC_URL" href="index.html#GRAPHIC_URL" coords="138,41,250,85" /></map></div>
                         </td>
                      </tr>
@@ -5776,7 +6240,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_P" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_P');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_P" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_P.jpeg" usemap="#orlando_event_xsd_Element_P" /><map name="orlando_event_xsd_Element_P" id="orlando_event_xsd_Element_P">
+                           <div id="diagram_P" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_P.jpeg" usemap="#orlando_event_v2_xsd_Element_P" /><map name="orlando_event_v2_xsd_Element_P" id="orlando_event_v2_xsd_Element_P">
                                  <area alt="index.tmp#P_ID" href="index.html#P_ID" coords="133,41,252,85" />
                                  <area alt="index.tmp#BIBCITS" href="index.html#BIBCITS" coords="190,102,259,127" />
                                  <area alt="index.tmp#DATE" href="index.html#DATE" coords="190,137,248,162" />
@@ -5991,7 +6455,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_BIBCITS" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_BIBCITS');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_BIBCITS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_BIBCITS.jpeg" usemap="#orlando_event_xsd_Element_BIBCITS" /><map name="orlando_event_xsd_Element_BIBCITS" id="orlando_event_xsd_Element_BIBCITS">
+                           <div id="diagram_BIBCITS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_BIBCITS_1.jpeg" usemap="#orlando_event_v2_xsd_Element_BIBCITS_1" /><map name="orlando_event_v2_xsd_Element_BIBCITS_1" id="orlando_event_v2_xsd_Element_BIBCITS_1">
                                  <area alt="index.tmp#BIBCIT" href="index.html#BIBCIT" coords="188,2,250,27" />
                                  <area alt="index.tmp#RESEARCHNOTE" href="index.html#RESEARCHNOTE" coords="188,96,301,121" /></map></div>
                         </td>
@@ -6131,7 +6595,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_BIBCIT" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_BIBCIT');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_BIBCIT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_BIBCIT.jpeg" usemap="#orlando_event_xsd_Element_BIBCIT" /><map name="orlando_event_xsd_Element_BIBCIT" id="orlando_event_xsd_Element_BIBCIT">
+                           <div id="diagram_BIBCIT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_BIBCIT.jpeg" usemap="#orlando_event_v2_xsd_Element_BIBCIT" /><map name="orlando_event_v2_xsd_Element_BIBCIT" id="orlando_event_v2_xsd_Element_BIBCIT">
                                  <area alt="index.tmp#BIBCIT_DBREF" href="index.html#BIBCIT_DBREF" coords="124,41,235,85" />
                                  <area alt="index.tmp#BIBCIT_PLACEHOLDER" href="index.html#BIBCIT_PLACEHOLDER" coords="124,95,237,120" />
                                  <area alt="index.tmp#BIBCIT_QTDIN" href="index.html#BIBCIT_QTDIN" coords="124,130,299,174" />
@@ -6315,7 +6779,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_EMPH" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_EMPH');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_EMPH" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_EMPH.jpeg" /></div>
+                           <div id="diagram_EMPH" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_EMPH.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -6424,7 +6888,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_FOREIGN" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_FOREIGN');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_FOREIGN" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_FOREIGN.jpeg" usemap="#orlando_event_xsd_Element_FOREIGN" /><map name="orlando_event_xsd_Element_FOREIGN" id="orlando_event_xsd_Element_FOREIGN">
+                           <div id="diagram_FOREIGN" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_FOREIGN.jpeg" usemap="#orlando_event_v2_xsd_Element_FOREIGN" /><map name="orlando_event_v2_xsd_Element_FOREIGN" id="orlando_event_v2_xsd_Element_FOREIGN">
                                  <area alt="index.tmp#FOREIGN_LANG" href="index.html#FOREIGN_LANG" coords="157,41,276,85" />
                                  <area alt="index.tmp#FOREIGN_REG" href="index.html#FOREIGN_REG" coords="157,140,217,165" />
                                  <area alt="index.tmp#ORGNAME" href="index.html#ORGNAME" coords="214,227,297,252" />
@@ -6634,7 +7098,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_ORGNAME" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ORGNAME');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_ORGNAME" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_ORGNAME.jpeg" usemap="#orlando_event_xsd_Element_ORGNAME" /><map name="orlando_event_xsd_Element_ORGNAME" id="orlando_event_xsd_Element_ORGNAME">
+                           <div id="diagram_ORGNAME" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_ORGNAME.jpeg" usemap="#orlando_event_v2_xsd_Element_ORGNAME" /><map name="orlando_event_v2_xsd_Element_ORGNAME" id="orlando_event_v2_xsd_Element_ORGNAME">
                                  <area alt="index.tmp#ORGNAME_ORGTYPE" href="index.html#ORGNAME_ORGTYPE" coords="165,41,253,66" />
                                  <area alt="index.tmp#ORGNAME_REG" href="index.html#ORGNAME_REG" coords="165,121,225,146" />
                                  <area alt="index.tmp#ORGNAME_STANDARD" href="index.html#ORGNAME_STANDARD" coords="165,201,261,226" />
@@ -6885,7 +7349,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_NAME" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_NAME');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_NAME" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_NAME.jpeg" usemap="#orlando_event_xsd_Element_NAME" /><map name="orlando_event_xsd_Element_NAME" id="orlando_event_xsd_Element_NAME">
+                           <div id="diagram_NAME" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_NAME.jpeg" usemap="#orlando_event_v2_xsd_Element_NAME" /><map name="orlando_event_v2_xsd_Element_NAME" id="orlando_event_v2_xsd_Element_NAME">
                                  <area alt="index.tmp#NAME_STANDARD" href="index.html#NAME_STANDARD" coords="122,41,218,66" />
                                  <area alt="index.tmp#NAME_REF" href="index.html#NAME_REF" coords="122,121,234,165" />
                                  <area alt="index.tmp#SIC" href="index.html#SIC" coords="179,227,230,252" />
@@ -7092,7 +7556,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_SIC" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SIC');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_SIC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_SIC.jpeg" usemap="#orlando_event_xsd_Element_SIC" /><map name="orlando_event_xsd_Element_SIC" id="orlando_event_xsd_Element_SIC">
+                           <div id="diagram_SIC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_SIC.jpeg" usemap="#orlando_event_v2_xsd_Element_SIC" /><map name="orlando_event_v2_xsd_Element_SIC" id="orlando_event_v2_xsd_Element_SIC">
                                  <area alt="index.tmp#SIC_CORR" href="index.html#SIC_CORR" coords="113,41,232,85" /></map></div>
                         </td>
                      </tr>
@@ -7240,7 +7704,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_SOCALLED" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SOCALLED');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_SOCALLED" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_SOCALLED.jpeg" usemap="#orlando_event_xsd_Element_SOCALLED" /><map name="orlando_event_xsd_Element_SOCALLED" id="orlando_event_xsd_Element_SOCALLED">
+                           <div id="diagram_SOCALLED" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_SOCALLED.jpeg" usemap="#orlando_event_v2_xsd_Element_SOCALLED" /><map name="orlando_event_v2_xsd_Element_SOCALLED" id="orlando_event_v2_xsd_Element_SOCALLED">
                                  <area alt="index.tmp#FOREIGN" href="index.html#FOREIGN" coords="225,2,300,27" />
                                  <area alt="index.tmp#NAME" href="index.html#NAME" coords="225,96,285,121" />
                                  <area alt="index.tmp#ORGNAME" href="index.html#ORGNAME" coords="225,131,308,156" />
@@ -7383,7 +7847,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_PLACE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_PLACE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_PLACE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_PLACE.jpeg" usemap="#orlando_event_xsd_Element_PLACE" /><map name="orlando_event_xsd_Element_PLACE" id="orlando_event_xsd_Element_PLACE">
+                           <div id="diagram_PLACE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_PLACE.jpeg" usemap="#orlando_event_v2_xsd_Element_PLACE" /><map name="orlando_event_v2_xsd_Element_PLACE" id="orlando_event_v2_xsd_Element_PLACE">
                                  <area alt="index.tmp#PLACE_REF" href="index.html#PLACE_REF" coords="126,41,238,85" />
                                  <area alt="index.tmp#PLACE_LAT" href="index.html#PLACE_LAT" coords="126,140,240,184" />
                                  <area alt="index.tmp#PLACE_LONG" href="index.html#PLACE_LONG" coords="126,239,240,283" />
@@ -7624,7 +8088,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_ADDRESS" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ADDRESS');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_ADDRESS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_ADDRESS.jpeg" usemap="#orlando_event_xsd_Element_ADDRESS" /><map name="orlando_event_xsd_Element_ADDRESS" id="orlando_event_xsd_Element_ADDRESS">
+                           <div id="diagram_ADDRESS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_ADDRESS.jpeg" usemap="#orlando_event_v2_xsd_Element_ADDRESS" /><map name="orlando_event_v2_xsd_Element_ADDRESS" id="orlando_event_v2_xsd_Element_ADDRESS">
                                  <area alt="index.tmp#ADDRESS_CURRENT" href="index.html#ADDRESS_CURRENT" coords="142,41,228,66" />
                                  <area alt="index.tmp#ADDRESS_REG" href="index.html#ADDRESS_REG" coords="142,76,202,101" />
                                  <area alt="index.tmp#ADDRLINE" href="index.html#ADDRLINE" coords="219,163,324,207" /></map></div>
@@ -7815,7 +8279,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_ADDRLINE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_ADDRLINE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_ADDRLINE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_ADDRLINE.jpeg" /></div>
+                           <div id="diagram_ADDRLINE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_ADDRLINE.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -7906,7 +8370,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_AREA" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_AREA');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_AREA" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_AREA.jpeg" usemap="#orlando_event_xsd_Element_AREA" /><map name="orlando_event_xsd_Element_AREA" id="orlando_event_xsd_Element_AREA">
+                           <div id="diagram_AREA" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_AREA.jpeg" usemap="#orlando_event_v2_xsd_Element_AREA" /><map name="orlando_event_v2_xsd_Element_AREA" id="orlando_event_v2_xsd_Element_AREA">
                                  <area alt="index.tmp#AREA_REG" href="index.html#AREA_REG" coords="102,41,162,66" /></map></div>
                         </td>
                      </tr>
@@ -8067,7 +8531,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_GEOG" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_GEOG');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_GEOG" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_GEOG.jpeg" usemap="#orlando_event_xsd_Element_GEOG" /><map name="orlando_event_xsd_Element_GEOG" id="orlando_event_xsd_Element_GEOG">
+                           <div id="diagram_GEOG" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_GEOG.jpeg" usemap="#orlando_event_v2_xsd_Element_GEOG" /><map name="orlando_event_v2_xsd_Element_GEOG" id="orlando_event_v2_xsd_Element_GEOG">
                                  <area alt="index.tmp#GEOG_CURRENT" href="index.html#GEOG_CURRENT" coords="123,41,209,66" />
                                  <area alt="index.tmp#GEOG_REG" href="index.html#GEOG_REG" coords="123,76,183,101" /></map></div>
                         </td>
@@ -8243,7 +8707,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_PLACENAME" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_PLACENAME');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_PLACENAME" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_PLACENAME.jpeg" usemap="#orlando_event_xsd_Element_PLACENAME" /><map name="orlando_event_xsd_Element_PLACENAME" id="orlando_event_xsd_Element_PLACENAME">
+                           <div id="diagram_PLACENAME" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_PLACENAME.jpeg" usemap="#orlando_event_v2_xsd_Element_PLACENAME" /><map name="orlando_event_v2_xsd_Element_PLACENAME" id="orlando_event_v2_xsd_Element_PLACENAME">
                                  <area alt="index.tmp#PLACENAME_CURRENT" href="index.html#PLACENAME_CURRENT" coords="155,41,241,66" />
                                  <area alt="index.tmp#PLACENAME_REG" href="index.html#PLACENAME_REG" coords="155,76,215,101" /></map></div>
                         </td>
@@ -8416,7 +8880,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_REGION" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_REGION');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_REGION" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_REGION.jpeg" usemap="#orlando_event_xsd_Element_REGION" /><map name="orlando_event_xsd_Element_REGION" id="orlando_event_xsd_Element_REGION">
+                           <div id="diagram_REGION" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_REGION.jpeg" usemap="#orlando_event_v2_xsd_Element_REGION" /><map name="orlando_event_v2_xsd_Element_REGION" id="orlando_event_v2_xsd_Element_REGION">
                                  <area alt="index.tmp#REGION_CURRENT" href="index.html#REGION_CURRENT" coords="131,41,217,66" />
                                  <area alt="index.tmp#REGION_REG" href="index.html#REGION_REG" coords="131,76,191,101" /></map></div>
                         </td>
@@ -8586,7 +9050,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_SETTLEMENT" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SETTLEMENT');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_SETTLEMENT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_SETTLEMENT.jpeg" usemap="#orlando_event_xsd_Element_SETTLEMENT" /><map name="orlando_event_xsd_Element_SETTLEMENT" id="orlando_event_xsd_Element_SETTLEMENT">
+                           <div id="diagram_SETTLEMENT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_SETTLEMENT.jpeg" usemap="#orlando_event_v2_xsd_Element_SETTLEMENT" /><map name="orlando_event_v2_xsd_Element_SETTLEMENT" id="orlando_event_v2_xsd_Element_SETTLEMENT">
                                  <area alt="index.tmp#SETTLEMENT_CURRENT" href="index.html#SETTLEMENT_CURRENT" coords="157,41,243,66" />
                                  <area alt="index.tmp#SETTLEMENT_REG" href="index.html#SETTLEMENT_REG" coords="157,76,217,101" /></map></div>
                         </td>
@@ -8756,7 +9220,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_TGENRE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_TGENRE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_TGENRE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_TGENRE.jpeg" usemap="#orlando_event_xsd_Element_TGENRE" /><map name="orlando_event_xsd_Element_TGENRE" id="orlando_event_xsd_Element_TGENRE">
+                           <div id="diagram_TGENRE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_TGENRE.jpeg" usemap="#orlando_event_v2_xsd_Element_TGENRE" /><map name="orlando_event_v2_xsd_Element_TGENRE" id="orlando_event_v2_xsd_Element_TGENRE">
                                  <area alt="index.tmp#TGENRE_GENRENAME" href="index.html#TGENRE_GENRENAME" coords="153,41,328,85" />
                                  <area alt="index.tmp#FOREIGN" href="index.html#FOREIGN" coords="210,147,285,172" />
                                  <area alt="index.tmp#ORGNAME" href="index.html#ORGNAME" coords="210,241,293,266" />
@@ -9218,7 +9682,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_TITLE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_TITLE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_TITLE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_TITLE.jpeg" usemap="#orlando_event_xsd_Element_TITLE" /><map name="orlando_event_xsd_Element_TITLE" id="orlando_event_xsd_Element_TITLE">
+                           <div id="diagram_TITLE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_TITLE.jpeg" usemap="#orlando_event_v2_xsd_Element_TITLE" /><map name="orlando_event_v2_xsd_Element_TITLE" id="orlando_event_v2_xsd_Element_TITLE">
                                  <area alt="index.tmp#TITLE_REG" href="index.html#TITLE_REG" coords="139,41,199,66" />
                                  <area alt="index.tmp#TITLE_REND" href="index.html#TITLE_REND" coords="139,121,258,165" />
                                  <area alt="index.tmp#TITLE_TITLETYPE" href="index.html#TITLE_TITLETYPE" coords="139,220,314,264" />
@@ -9508,7 +9972,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_QUOTE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_QUOTE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_QUOTE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_QUOTE.jpeg" usemap="#orlando_event_xsd_Element_QUOTE" /><map name="orlando_event_xsd_Element_QUOTE" id="orlando_event_xsd_Element_QUOTE">
+                           <div id="diagram_QUOTE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_QUOTE.jpeg" usemap="#orlando_event_v2_xsd_Element_QUOTE" /><map name="orlando_event_v2_xsd_Element_QUOTE" id="orlando_event_v2_xsd_Element_QUOTE">
                                  <area alt="index.tmp#QUOTE_DIRECT" href="index.html#QUOTE_DIRECT" coords="148,41,333,104" />
                                  <area alt="index.tmp#BIBCITS" href="index.html#BIBCITS" coords="205,166,274,191" />
                                  <area alt="index.tmp#DATE" href="index.html#DATE" coords="205,201,263,226" />
@@ -9743,7 +10207,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_L" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_L');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_L" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_L.jpeg" usemap="#orlando_event_xsd_Element_L" /><map name="orlando_event_xsd_Element_L" id="orlando_event_xsd_Element_L">
+                           <div id="diagram_L" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_L.jpeg" usemap="#orlando_event_v2_xsd_Element_L" /><map name="orlando_event_v2_xsd_Element_L" id="orlando_event_v2_xsd_Element_L">
                                  <area alt="index.tmp#BIBCITS" href="index.html#BIBCITS" coords="190,2,259,27" />
                                  <area alt="index.tmp#SOCALLED" href="index.html#SOCALLED" coords="190,37,276,62" /></map></div>
                         </td>
@@ -9889,7 +10353,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_TOPIC" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_TOPIC');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_TOPIC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_TOPIC.jpeg" usemap="#orlando_event_xsd_Element_TOPIC" /><map name="orlando_event_xsd_Element_TOPIC" id="orlando_event_xsd_Element_TOPIC">
+                           <div id="diagram_TOPIC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_TOPIC.jpeg" usemap="#orlando_event_v2_xsd_Element_TOPIC" /><map name="orlando_event_v2_xsd_Element_TOPIC" id="orlando_event_v2_xsd_Element_TOPIC">
                                  <area alt="index.tmp#TOPIC_STANDARD" href="index.html#TOPIC_STANDARD" coords="142,41,238,66" />
                                  <area alt="index.tmp#QUOTE" href="index.html#QUOTE" coords="199,83,265,108" />
                                  <area alt="index.tmp#SOCALLED" href="index.html#SOCALLED" coords="199,163,285,188" />
@@ -10068,7 +10532,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_LG" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_LG');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_LG" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_LG.jpeg" usemap="#orlando_event_xsd_Element_LG" /><map name="orlando_event_xsd_Element_LG" id="orlando_event_xsd_Element_LG">
+                           <div id="diagram_LG" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_LG.jpeg" usemap="#orlando_event_v2_xsd_Element_LG" /><map name="orlando_event_v2_xsd_Element_LG" id="orlando_event_v2_xsd_Element_LG">
                                  <area alt="index.tmp#LG_TYPE" href="index.html#LG_TYPE" coords="113,41,232,85" />
                                  <area alt="index.tmp#L" href="index.html#L" coords="190,151,241,176" /></map></div>
                         </td>
@@ -10249,7 +10713,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_RS" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_RS');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_RS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_RS.jpeg" usemap="#orlando_event_xsd_Element_RS" /><map name="orlando_event_xsd_Element_RS" id="orlando_event_xsd_Element_RS">
+                           <div id="diagram_RS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_RS.jpeg" usemap="#orlando_event_v2_xsd_Element_RS" /><map name="orlando_event_v2_xsd_Element_RS" id="orlando_event_v2_xsd_Element_RS">
                                  <area alt="index.tmp#RS_REG" href="index.html#RS_REG" coords="113,41,232,85" />
                                  <area alt="index.tmp#RS_TYPE" href="index.html#RS_TYPE" coords="113,140,178,165" /></map></div>
                         </td>
@@ -10401,7 +10865,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_KEYWORDCLASS" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_KEYWORDCLASS');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_KEYWORDCLASS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_KEYWORDCLASS.jpeg" usemap="#orlando_event_xsd_Element_KEYWORDCLASS" /><map name="orlando_event_xsd_Element_KEYWORDCLASS" id="orlando_event_xsd_Element_KEYWORDCLASS">
+                           <div id="diagram_KEYWORDCLASS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_KEYWORDCLASS.jpeg" usemap="#orlando_event_v2_xsd_Element_KEYWORDCLASS" /><map name="orlando_event_v2_xsd_Element_KEYWORDCLASS" id="orlando_event_v2_xsd_Element_KEYWORDCLASS">
                                  <area alt="index.tmp#KEYWORDCLASS_KEYWORDTYPE" href="index.html#KEYWORDCLASS_KEYWORDTYPE" coords="181,41,299,66" />
                                  <area alt="index.tmp#KEYWORDCLASS" href="index.html#KEYWORDCLASS" coords="238,83,346,108" />
                                  <area alt="index.tmp#RESEARCHNOTE" href="index.html#RESEARCHNOTE" coords="238,118,351,143" /></map></div>
@@ -10556,7 +11020,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_SCHOLARNOTE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SCHOLARNOTE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_SCHOLARNOTE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_SCHOLARNOTE.jpeg" usemap="#orlando_event_xsd_Element_SCHOLARNOTE" /><map name="orlando_event_xsd_Element_SCHOLARNOTE" id="orlando_event_xsd_Element_SCHOLARNOTE">
+                           <div id="diagram_SCHOLARNOTE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_SCHOLARNOTE.jpeg" usemap="#orlando_event_v2_xsd_Element_SCHOLARNOTE" /><map name="orlando_event_v2_xsd_Element_SCHOLARNOTE" id="orlando_event_v2_xsd_Element_SCHOLARNOTE">
                                  <area alt="index.tmp#SCHOLARNOTE_ID" href="index.html#SCHOLARNOTE_ID" coords="170,41,289,85" />
                                  <area alt="index.tmp#DATE" href="index.html#DATE" coords="227,102,285,127" />
                                  <area alt="index.tmp#NAME" href="index.html#NAME" coords="227,196,287,221" />
@@ -10738,7 +11202,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_XREF" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_XREF');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_XREF" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_XREF.jpeg" usemap="#orlando_event_xsd_Element_XREF" /><map name="orlando_event_xsd_Element_XREF" id="orlando_event_xsd_Element_XREF">
+                           <div id="diagram_XREF" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_XREF.jpeg" usemap="#orlando_event_v2_xsd_Element_XREF" /><map name="orlando_event_v2_xsd_Element_XREF" id="orlando_event_v2_xsd_Element_XREF">
                                  <area alt="index.tmp#RESP-attribute" href="index.html#RESP-attribute" coords="244,125,368,151" />
                                  <area alt="index.tmp#XREF_URL" href="index.html#XREF_URL" coords="241,166,353,210" /></map></div>
                         </td>
@@ -10911,7 +11375,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_CHRONEVENT" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_CHRONEVENT');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_CHRONEVENT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_CHRONEVENT.jpeg" usemap="#orlando_event_xsd_Element_CHRONEVENT" /><map name="orlando_event_xsd_Element_CHRONEVENT" id="orlando_event_xsd_Element_CHRONEVENT">
+                           <div id="diagram_CHRONEVENT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_CHRONEVENT.jpeg" usemap="#orlando_event_v2_xsd_Element_CHRONEVENT" /><map name="orlando_event_v2_xsd_Element_CHRONEVENT" id="orlando_event_v2_xsd_Element_CHRONEVENT">
                                  <area alt="index.tmp#CHRONSTRUCT" href="index.html#CHRONSTRUCT" coords="219,2,326,27" />
                                  <area alt="index.tmp#SHORTPROSE" href="index.html#SHORTPROSE" coords="219,96,319,121" />
                                  <area alt="index.tmp#RESEARCHNOTES" href="index.html#RESEARCHNOTES" coords="219,131,339,156" />
@@ -11074,7 +11538,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_CHRONSTRUCT" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_CHRONSTRUCT');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_CHRONSTRUCT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_CHRONSTRUCT.jpeg" usemap="#orlando_event_xsd_Element_CHRONSTRUCT" /><map name="orlando_event_xsd_Element_CHRONSTRUCT" id="orlando_event_xsd_Element_CHRONSTRUCT">
+                           <div id="diagram_CHRONSTRUCT" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_CHRONSTRUCT.jpeg" usemap="#orlando_event_v2_xsd_Element_CHRONSTRUCT" /><map name="orlando_event_v2_xsd_Element_CHRONSTRUCT" id="orlando_event_v2_xsd_Element_CHRONSTRUCT">
                                  <area alt="index.tmp#CHRONSTRUCT_CHRONCOLUMN" href="index.html#CHRONSTRUCT_CHRONCOLUMN" coords="169,41,344,85" />
                                  <area alt="index.tmp#CHRONSTRUCT_CHRONCOLUMN1" href="index.html#CHRONSTRUCT_CHRONCOLUMN1" coords="169,140,344,184" />
                                  <area alt="index.tmp#CHRONSTRUCT_CHRONCOLUMN2" href="index.html#CHRONSTRUCT_CHRONCOLUMN2" coords="169,194,344,238" />
@@ -11448,7 +11912,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_CHRONPROSE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_CHRONPROSE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_CHRONPROSE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_CHRONPROSE.jpeg" usemap="#orlando_event_xsd_Element_CHRONPROSE" /><map name="orlando_event_xsd_Element_CHRONPROSE" id="orlando_event_xsd_Element_CHRONPROSE">
+                           <div id="diagram_CHRONPROSE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_CHRONPROSE.jpeg" usemap="#orlando_event_v2_xsd_Element_CHRONPROSE" /><map name="orlando_event_v2_xsd_Element_CHRONPROSE" id="orlando_event_v2_xsd_Element_CHRONPROSE">
                                  <area alt="index.tmp#BIBCITS" href="index.html#BIBCITS" coords="240,2,309,27" />
                                  <area alt="index.tmp#DATE" href="index.html#DATE" coords="240,37,298,62" />
                                  <area alt="index.tmp#DATERANGE" href="index.html#DATERANGE" coords="240,131,334,156" />
@@ -11639,7 +12103,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_TINTERTEXTUALITY" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_TINTERTEXTUALITY');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_TINTERTEXTUALITY" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_TINTERTEXTUALITY.jpeg" usemap="#orlando_event_xsd_Element_TINTERTEXTUALITY" /><map name="orlando_event_xsd_Element_TINTERTEXTUALITY" id="orlando_event_xsd_Element_TINTERTEXTUALITY">
+                           <div id="diagram_TINTERTEXTUALITY" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_TINTERTEXTUALITY.jpeg" usemap="#orlando_event_v2_xsd_Element_TINTERTEXTUALITY" /><map name="orlando_event_v2_xsd_Element_TINTERTEXTUALITY" id="orlando_event_v2_xsd_Element_TINTERTEXTUALITY">
                                  <area alt="index.tmp#TITLE" href="index.html#TITLE" coords="226,6,283,31" /></map></div>
                         </td>
                      </tr>
@@ -11776,7 +12240,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_TTHEMETOPIC" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_TTHEMETOPIC');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_TTHEMETOPIC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_TTHEMETOPIC.jpeg" /></div>
+                           <div id="diagram_TTHEMETOPIC" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_TTHEMETOPIC.jpeg" /></div>
                         </td>
                      </tr>
                      <tr>
@@ -11867,7 +12331,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_SCHOLARNOTES" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SCHOLARNOTES');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_SCHOLARNOTES" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_SCHOLARNOTES.jpeg" usemap="#orlando_event_xsd_Element_SCHOLARNOTES" /><map name="orlando_event_xsd_Element_SCHOLARNOTES" id="orlando_event_xsd_Element_SCHOLARNOTES">
+                           <div id="diagram_SCHOLARNOTES" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_SCHOLARNOTES.jpeg" usemap="#orlando_event_v2_xsd_Element_SCHOLARNOTES" /><map name="orlando_event_v2_xsd_Element_SCHOLARNOTES" id="orlando_event_v2_xsd_Element_SCHOLARNOTES">
                                  <area alt="index.tmp#SCHOLARNOTE" href="index.html#SCHOLARNOTE" coords="214,6,322,31" /></map></div>
                         </td>
                      </tr>
@@ -11985,7 +12449,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_SHORTPROSE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SHORTPROSE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_SHORTPROSE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_SHORTPROSE.jpeg" usemap="#orlando_event_xsd_Element_SHORTPROSE" /><map name="orlando_event_xsd_Element_SHORTPROSE" id="orlando_event_xsd_Element_SHORTPROSE">
+                           <div id="diagram_SHORTPROSE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_SHORTPROSE.jpeg" usemap="#orlando_event_v2_xsd_Element_SHORTPROSE" /><map name="orlando_event_v2_xsd_Element_SHORTPROSE" id="orlando_event_v2_xsd_Element_SHORTPROSE">
                                  <area alt="index.tmp#KEYWORDCLASS" href="index.html#KEYWORDCLASS" coords="290,2,409,27" />
                                  <area alt="index.tmp#P" href="index.html#P" coords="290,37,341,62" />
                                  <area alt="index.tmp#RESEARCHNOTE" href="index.html#RESEARCHNOTE" coords="219,103,332,128" /></map></div>
@@ -12111,7 +12575,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_RESEARCHNOTES" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_RESEARCHNOTES');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_RESEARCHNOTES" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_RESEARCHNOTES.jpeg" usemap="#orlando_event_xsd_Element_RESEARCHNOTES" /><map name="orlando_event_xsd_Element_RESEARCHNOTES" id="orlando_event_xsd_Element_RESEARCHNOTES">
+                           <div id="diagram_RESEARCHNOTES" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_RESEARCHNOTES.jpeg" usemap="#orlando_event_v2_xsd_Element_RESEARCHNOTES" /><map name="orlando_event_v2_xsd_Element_RESEARCHNOTES" id="orlando_event_v2_xsd_Element_RESEARCHNOTES">
                                  <area alt="index.tmp#RESEARCHNOTE" href="index.html#RESEARCHNOTE" coords="239,6,352,31" /></map></div>
                         </td>
                      </tr>
@@ -12229,7 +12693,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_CHRONEVENT_BIBCITS" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_CHRONEVENT_BIBCITS');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_CHRONEVENT_BIBCITS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_BIBCITS_1.jpeg" usemap="#orlando_event_xsd_Element_BIBCITS_1" /><map name="orlando_event_xsd_Element_BIBCITS_1" id="orlando_event_xsd_Element_BIBCITS_1">
+                           <div id="diagram_CHRONEVENT_BIBCITS" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_BIBCITS.jpeg" usemap="#orlando_event_v2_xsd_Element_BIBCITS" /><map name="orlando_event_v2_xsd_Element_BIBCITS" id="orlando_event_v2_xsd_Element_BIBCITS">
                                  <area alt="index.tmp#BIBCIT" href="index.html#BIBCIT" coords="188,6,250,31" /></map></div>
                         </td>
                      </tr>
@@ -12335,7 +12799,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_SOURCES" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SOURCES');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_SOURCES" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_SOURCES.jpeg" usemap="#orlando_event_xsd_Element_SOURCES" /><map name="orlando_event_xsd_Element_SOURCES" id="orlando_event_xsd_Element_SOURCES">
+                           <div id="diagram_SOURCES" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_SOURCES.jpeg" usemap="#orlando_event_v2_xsd_Element_SOURCES" /><map name="orlando_event_v2_xsd_Element_SOURCES" id="orlando_event_v2_xsd_Element_SOURCES">
                                  <area alt="index.tmp#SOURCE" href="index.html#SOURCE" coords="199,6,272,31" /></map></div>
                         </td>
                      </tr>
@@ -12453,7 +12917,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_SOURCE" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_SOURCE');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_SOURCE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_SOURCE.jpeg" usemap="#orlando_event_xsd_Element_SOURCE" /><map name="orlando_event_xsd_Element_SOURCE" id="orlando_event_xsd_Element_SOURCE">
+                           <div id="diagram_SOURCE" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_SOURCE.jpeg" usemap="#orlando_event_v2_xsd_Element_SOURCE" /><map name="orlando_event_v2_xsd_Element_SOURCE" id="orlando_event_v2_xsd_Element_SOURCE">
                                  <area alt="index.tmp#SOURCE_FILENAME" href="index.html#SOURCE_FILENAME" coords="135,41,223,66" />
                                  <area alt="index.tmp#NAME" href="index.html#NAME" coords="192,83,252,108" />
                                  <area alt="index.tmp#RESEARCHNOTE" href="index.html#RESEARCHNOTE" coords="192,118,305,143" />
@@ -12617,7 +13081,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_KEYWORDCLASSES" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_KEYWORDCLASSES');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_KEYWORDCLASSES" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Element_KEYWORDCLASSES.jpeg" usemap="#orlando_event_xsd_Element_KEYWORDCLASSES" /><map name="orlando_event_xsd_Element_KEYWORDCLASSES" id="orlando_event_xsd_Element_KEYWORDCLASSES">
+                           <div id="diagram_KEYWORDCLASSES" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_KEYWORDCLASSES.jpeg" usemap="#orlando_event_v2_xsd_Element_KEYWORDCLASSES" /><map name="orlando_event_v2_xsd_Element_KEYWORDCLASSES" id="orlando_event_v2_xsd_Element_KEYWORDCLASSES">
                                  <area alt="index.tmp#KEYWORDCLASS" href="index.html#KEYWORDCLASS" coords="251,6,370,31" /></map></div>
                         </td>
                      </tr>
@@ -12697,6 +13161,99 @@ var modelBoxes= new Array('model_EVENT',
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="any_content"></a><div class="componentTitle">Complex Type <span class="qname">any_content</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_any_content" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_any_content');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_any_content" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Complex_Type_any_content.jpeg" usemap="#orlando_event_v2_xsd_Complex_Type_any_content" /><map name="orlando_event_v2_xsd_Complex_Type_any_content" id="orlando_event_v2_xsd_Complex_Type_any_content">
+                                 <area alt="index.tmp#any_element" href="index.html#any_element" coords="166,3,282,29" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_any_content" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_any_content');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_any_content" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">mixed</td>
+                                    <td><b>true</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_any_content" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_any_content');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_any_content" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_any_content" type="image" src="img/btM.gif" value="-" onclick="switchState('model_any_content');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_any_content" style="display:block"><b>ANY element from ANY namespace</b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_any_content" type="image" src="img/btM.gif" value="-" onclick="switchState('source_any_content');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_any_content" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:complexType</span><span class="tAN"> name=</span><span class="tAV">"any_content"</span><span class="tAN"> mixed=</span><span class="tAV">"true"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:group</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tAN"> maxOccurs=</span><span class="tAV">"unbounded"</span><span class="tAN"> ref=</span><span class="tAV">"any_element"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:complexType&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>
@@ -13105,7 +13662,7 @@ var modelBoxes= new Array('model_EVENT',
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td>union of(<b>xs:date</b>, restriction of <b>xs:string</b>, restriction of <b>xs:string</b>)
+                        <td>union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>)
                         </td>
                      </tr>
                      <tr>
@@ -13154,18 +13711,7 @@ var modelBoxes= new Array('model_EVENT',
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Value is used to record a formatted date-related value.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})((\-(0[1-9]|1[0-2])\-))"</span><span class="tEl">/&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})(\-{2})"</span><span class="tEl">/&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
@@ -14648,7 +15194,7 @@ var modelBoxes= new Array('model_EVENT',
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td>union of(<b>xs:date</b>, restriction of <b>xs:string</b>, restriction of <b>xs:string</b>)
+                        <td>union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>)
                         </td>
                      </tr>
                      <tr>
@@ -14697,18 +15243,7 @@ var modelBoxes= new Array('model_EVENT',
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Value is used to record a formatted date-related value.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})((\-(0[1-9]|1[0-2])\-))"</span><span class="tEl">/&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})(\-{2})"</span><span class="tEl">/&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
@@ -15267,7 +15802,7 @@ var modelBoxes= new Array('model_EVENT',
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td>union of(<b>xs:date</b>, restriction of <b>xs:string</b>, restriction of <b>xs:string</b>)
+                        <td>union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>)
                         </td>
                      </tr>
                      <tr>
@@ -15316,18 +15851,7 @@ var modelBoxes= new Array('model_EVENT',
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">From is used to record a formatted date-related value.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})((\-(0[1-9]|1[0-2])\-))"</span><span class="tEl">/&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})(\-{2})"</span><span class="tEl">/&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
@@ -15382,7 +15906,7 @@ var modelBoxes= new Array('model_EVENT',
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td>union of(<b>xs:date</b>, restriction of <b>xs:string</b>, restriction of <b>xs:string</b>)
+                        <td>union of(<b>xs:date</b>, <b>xs:gYearMonth</b>, <b>xs:gYear</b>)
                         </td>
                      </tr>
                      <tr>
@@ -15431,18 +15955,7 @@ var modelBoxes= new Array('model_EVENT',
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">To is used to record a formatted date-related value.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date"</span><span class="tEl">&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})((\-(0[1-9]|1[0-2])\-))"</span><span class="tEl">/&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"(\d{4})(\-{2})"</span><span class="tEl">/&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;/xs:union&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"xs:date xs:gYearMonth xs:gYear"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>
@@ -22636,6 +23149,19 @@ var modelBoxes= new Array('model_EVENT',
                                        </div>
                                     </td>
                                  </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>CMH</b></td>
+                                    <td>
+                                       <div class="annotation">
+                                          <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                             <tr>
+                                                <td width="100%"><pre><span class="tT">Corrinne Harol</span></pre></td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </td>
+                                 </tr>
                               </table>
                            </div>
                         </td>
@@ -23127,6 +23653,11 @@ var modelBoxes= new Array('model_EVENT',
       </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"MRM"</span><span class="tEl">&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Miriam Mabrouk</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"CMH"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Corrinne Harol</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
@@ -25422,6 +25953,84 @@ var modelBoxes= new Array('model_EVENT',
             <td class="rt_cornerBottomRight"></td>
          </tr>
       </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="any_element"></a><div class="componentTitle">Element Group <span class="qname">any_element</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_any_element" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_any_element');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_any_element" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Element_Group_any_element.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_any_element" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_any_element');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_any_element" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Complex Type </td>
+                                    <td><b><a href="index.html#any_content" target="_self" title="No namespace">any_content</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_any_element" type="image" src="img/btM.gif" value="-" onclick="switchState('model_any_element');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="model_any_element" style="display:block"><b>ANY element from ANY namespace</b></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_any_element" type="image" src="img/btM.gif" value="-" onclick="switchState('source_any_element');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_any_element" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:group</span><span class="tAN"> name=</span><span class="tAV">"any_element"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:sequence</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:any</span><span class="tAN"> processContents=</span><span class="tAV">"skip"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:group&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
       <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="RESP-attribute"></a><div class="componentTitle">Attribute Group <span class="qname">RESP-attribute</span></div>
       <table class="rt">
          <tr>
@@ -25444,7 +26053,7 @@ var modelBoxes= new Array('model_EVENT',
                            <div class="floatRight"><input id="button_diagram_RESP-attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_RESP-attribute');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_RESP-attribute" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_xsd_Attribute_Group_RESP-attribute.jpeg" usemap="#orlando_event_xsd_Attribute_Group_RESP-attribute" /><map name="orlando_event_xsd_Attribute_Group_RESP-attribute" id="orlando_event_xsd_Attribute_Group_RESP-attribute">
+                           <div id="diagram_RESP-attribute" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Attribute_Group_RESP-attribute.jpeg" usemap="#orlando_event_v2_xsd_Attribute_Group_RESP-attribute" /><map name="orlando_event_v2_xsd_Attribute_Group_RESP-attribute" id="orlando_event_v2_xsd_Attribute_Group_RESP-attribute">
                                  <area alt="index.tmp#RESP-attribute_RESP" href="index.html#RESP-attribute_RESP" coords="152,0,327,44" /></map></div>
                         </td>
                      </tr>
@@ -25973,9 +26582,83 @@ var modelBoxes= new Array('model_EVENT',
             </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Miriam Mabrouk</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
           </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"CMH"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Corrinne Harol</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attributeGroup&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="any_attribute"></a><div class="componentTitle">Attribute Group <span class="qname">any_attribute</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_any_attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_any_attribute');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_any_attribute" style="display:block"><img alt="Diagram" border="0" src="img/orlando_event_v2_xsd_Attribute_Group_any_attribute.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_any_attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_any_attribute');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_any_attribute" style="display:block">
+                              <table>
+                                 <tr>
+                                    <td width="100%"><b>Wildcard:  </b>ANY attribute from ANY namespace
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_any_attribute" type="image" src="img/btM.gif" value="-" onclick="switchState('source_any_attribute');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_any_attribute" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attributeGroup</span><span class="tAN"> name=</span><span class="tAV">"any_attribute"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:anyAttribute</span><span class="tAN"> processContents=</span><span class="tAV">"skip"</span><span class="tEl">/&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attributeGroup&gt;</span></pre></td>
                                  </tr>
                               </table>

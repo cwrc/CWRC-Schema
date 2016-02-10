@@ -7,7 +7,9 @@
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
         var propertiesBoxes= new Array('properties_cwrc_entry.xsd', 
+				'properties_rdf.xsd', 
 				'properties_CWRC', 
+				'properties_RDF', 
 				'properties_CWRCHEADER', 
 				'properties_FILEDESC', 
 				'properties_TITLESTMT', 
@@ -200,6 +202,7 @@
 				'properties_STANDARD', 
 				'properties_WORKSCITED', 
 				'properties_SOURCE', 
+				'properties_any_node', 
 				'properties_DATERANGE_CALENDAR', 
 				'properties_DATERANGE_CERTAINTY', 
 				'properties_DATERANGE_EXACT', 
@@ -443,7 +446,8 @@ var facetsBoxes= new Array('facets_DATERANGE_CALENDAR',
 				'facets_STANDARD_WROTEORPUBLISHEDAS', 
 				'facets_CWRC_PERSON', 
 				'facets_CWRC_NATIONALITYCATEGORY');
-var usedByBoxes= new Array('usedBy_CWRCHEADER', 
+var usedByBoxes= new Array('usedBy_RDF', 
+				'usedBy_CWRCHEADER', 
 				'usedBy_FILEDESC', 
 				'usedBy_TITLESTMT', 
 				'usedBy_DOCTITLE', 
@@ -635,6 +639,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_STANDARD', 
 				'usedBy_WORKSCITED', 
 				'usedBy_SOURCE', 
+				'usedBy_any_node', 
 				'usedBy_DATERANGE_CALENDAR', 
 				'usedBy_DATERANGE_CERTAINTY', 
 				'usedBy_DATERANGE_EXACT', 
@@ -841,6 +846,7 @@ var usedByBoxes= new Array('usedBy_CWRCHEADER',
 				'usedBy_CWRC_NATIONALITYCATEGORY', 
 				'usedBy_RESP-attribute');
 var sourceBoxes= new Array('source_CWRC', 
+				'source_RDF', 
 				'source_CWRCHEADER', 
 				'source_FILEDESC', 
 				'source_TITLESTMT', 
@@ -1033,6 +1039,7 @@ var sourceBoxes= new Array('source_CWRC',
 				'source_STANDARD', 
 				'source_WORKSCITED', 
 				'source_SOURCE', 
+				'source_any_node', 
 				'source_DATERANGE_CALENDAR', 
 				'source_DATERANGE_CERTAINTY', 
 				'source_DATERANGE_EXACT', 
@@ -1415,6 +1422,7 @@ var instanceBoxes= new Array('instance_CWRC',
 				'instance_WORKSCITED', 
 				'instance_SOURCE');
 var diagramBoxes= new Array('diagram_CWRC', 
+				'diagram_RDF', 
 				'diagram_CWRCHEADER', 
 				'diagram_FILEDESC', 
 				'diagram_TITLESTMT', 
@@ -1607,6 +1615,7 @@ var diagramBoxes= new Array('diagram_CWRC',
 				'diagram_STANDARD', 
 				'diagram_WORKSCITED', 
 				'diagram_SOURCE', 
+				'diagram_any_node', 
 				'diagram_RESP-attribute');
 var annotationBoxes= new Array('annotations_CWRC', 
 				'annotations_CWRCHEADER', 
@@ -1959,6 +1968,7 @@ var annotationBoxes= new Array('annotations_CWRC',
 				'annotations_CWRC_PERSON', 
 				'annotations_CWRC_NATIONALITYCATEGORY');
 var attributesBoxes= new Array('attributes_CWRC', 
+				'attributes_RDF', 
 				'attributes_CWRCHEADER', 
 				'attributes_BIBCITS', 
 				'attributes_BIBCIT', 
@@ -2054,8 +2064,10 @@ var attributesBoxes= new Array('attributes_CWRC',
 				'attributes_KEYWORDS', 
 				'attributes_WORKFLOW', 
 				'attributes_STANDARD', 
+				'attributes_any_node', 
 				'attributes_RESP-attribute');
 var modelBoxes= new Array('model_CWRC', 
+				'model_RDF', 
 				'model_CWRCHEADER', 
 				'model_FILEDESC', 
 				'model_TITLESTMT', 
@@ -2236,7 +2248,8 @@ var modelBoxes= new Array('model_CWRC',
 				'model_FRONT', 
 				'model_STANDARD', 
 				'model_WORKSCITED', 
-				'model_SOURCE');
+				'model_SOURCE', 
+				'model_any_node');
 
       
         var button_prefix = 'button_';
@@ -2726,6 +2739,44 @@ var modelBoxes= new Array('model_CWRC',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Complex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Complex_Type');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Complex Types</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Complex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#any_node" target="_self" title="No namespace">any_node</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
                                           <td class="componentGroup"><input id="button_boxIdNamespace1Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Attribute_Group');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Attribute Groups</div>
@@ -2736,6 +2787,50 @@ var modelBoxes= new Array('model_CWRC',
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+               <div class="level2">
+                  <p><input id="button_boxIdNamespace2" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2');" class="control" /><span class="indexGroupTitle">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span></p>
+                  <div id="boxIdNamespace2" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace2Element" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2Element');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace2Element" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -2973,6 +3068,45 @@ var modelBoxes= new Array('model_CWRC',
                                           <div><b><a href="index.html#WORKFLOW" target="_self" title="No namespace">WORKFLOW</a></b></div>
                                           <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
                                           <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
+                                          <div><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Complex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('Complex_Type');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Complex Types</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Complex_Type" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#any_node" target="_self" title="No namespace">any_node</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -3277,6 +3411,44 @@ var modelBoxes= new Array('model_CWRC',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
+                                          <td class="componentGroup"><input id="button_gr_cwrc_entry.xsdComplex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_cwrc_entry.xsdComplex_Type');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Complex Types</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_cwrc_entry.xsdComplex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#any_node" target="_self" title="No namespace">any_node</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
                                           <td class="componentGroup"><input id="button_gr_cwrc_entry.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_cwrc_entry.xsdAttribute_Group');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Attribute Groups</div>
@@ -3287,6 +3459,50 @@ var modelBoxes= new Array('model_CWRC',
                                           <td class="componentGroup">
                                              <div id="gr_cwrc_entry.xsdAttribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+               <div class="level2">
+                  <p><input id="button_gr_rdf.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_rdf.xsd');" class="control" /><span class="indexGroupTitle">rdf.xsd</span></p>
+                  <div id="gr_rdf.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_rdf.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_rdf.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_rdf.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></div>
                                              </div>
                                           </td>
                                        </tr>

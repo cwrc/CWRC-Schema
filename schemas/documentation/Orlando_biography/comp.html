@@ -3,11 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Schema documentation for orlando_biography.xsd</title>
+      <title>Schema documentation for orlando_biography_v2.xsd</title>
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
-        var propertiesBoxes= new Array('properties_orlando_biography.xsd', 
+        var propertiesBoxes= new Array('properties_orlando_biography_v2.xsd', 
+				'properties_rdf.xsd', 
 				'properties_BIOGRAPHY', 
+				'properties_RDF', 
 				'properties_ORLANDOHEADER', 
 				'properties_FILEDESC', 
 				'properties_TITLESTMT', 
@@ -138,6 +140,7 @@
 				'properties_WORKSCITED', 
 				'properties_SOURCE', 
 				'properties_BIOGPROSE', 
+				'properties_any_content', 
 				'properties_DATERANGE_CALENDAR', 
 				'properties_DATERANGE_CERTAINTY', 
 				'properties_DATERANGE_EXACT', 
@@ -335,7 +338,8 @@ var facetsBoxes= new Array('facets_DATERANGE_CALENDAR',
 				'facets_HEALTH_ISSUE', 
 				'facets_STANDARD_WROTEORPUBLISHEDAS', 
 				'facets_BIOGRAPHY_PERSON');
-var usedByBoxes= new Array('usedBy_ORLANDOHEADER', 
+var usedByBoxes= new Array('usedBy_RDF', 
+				'usedBy_ORLANDOHEADER', 
 				'usedBy_FILEDESC', 
 				'usedBy_TITLESTMT', 
 				'usedBy_DOCTITLE', 
@@ -465,6 +469,7 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_WORKSCITED', 
 				'usedBy_SOURCE', 
 				'usedBy_BIOGPROSE', 
+				'usedBy_any_content', 
 				'usedBy_DATERANGE_CALENDAR', 
 				'usedBy_DATERANGE_CERTAINTY', 
 				'usedBy_DATERANGE_EXACT', 
@@ -645,8 +650,10 @@ var usedByBoxes= new Array('usedBy_ORLANDOHEADER',
 				'usedBy_BIOGRAPHY_ID', 
 				'usedBy_BIOGRAPHY_PERSON', 
 				'usedBy_BIOGRAPHY_SEX', 
+				'usedBy_any_element', 
 				'usedBy_RESP-attribute');
 var sourceBoxes= new Array('source_BIOGRAPHY', 
+				'source_RDF', 
 				'source_ORLANDOHEADER', 
 				'source_FILEDESC', 
 				'source_TITLESTMT', 
@@ -777,6 +784,7 @@ var sourceBoxes= new Array('source_BIOGRAPHY',
 				'source_WORKSCITED', 
 				'source_SOURCE', 
 				'source_BIOGPROSE', 
+				'source_any_content', 
 				'source_DATERANGE_CALENDAR', 
 				'source_DATERANGE_CERTAINTY', 
 				'source_DATERANGE_EXACT', 
@@ -957,7 +965,9 @@ var sourceBoxes= new Array('source_BIOGRAPHY',
 				'source_BIOGRAPHY_ID', 
 				'source_BIOGRAPHY_PERSON', 
 				'source_BIOGRAPHY_SEX', 
-				'source_RESP-attribute');
+				'source_any_element', 
+				'source_RESP-attribute', 
+				'source_any_attribute');
 var instanceBoxes= new Array('instance_BIOGRAPHY', 
 				'instance_ORLANDOHEADER', 
 				'instance_FILEDESC', 
@@ -1068,6 +1078,7 @@ var instanceBoxes= new Array('instance_BIOGRAPHY',
 				'instance_SOURCE', 
 				'instance_BIOGPROSE');
 var diagramBoxes= new Array('diagram_BIOGRAPHY', 
+				'diagram_RDF', 
 				'diagram_ORLANDOHEADER', 
 				'diagram_FILEDESC', 
 				'diagram_TITLESTMT', 
@@ -1198,7 +1209,10 @@ var diagramBoxes= new Array('diagram_BIOGRAPHY',
 				'diagram_WORKSCITED', 
 				'diagram_SOURCE', 
 				'diagram_BIOGPROSE', 
-				'diagram_RESP-attribute');
+				'diagram_any_content', 
+				'diagram_any_element', 
+				'diagram_RESP-attribute', 
+				'diagram_any_attribute');
 var annotationBoxes= new Array('annotations_BIOGRAPHY', 
 				'annotations_ORLANDOHEADER', 
 				'annotations_FILEDESC', 
@@ -1532,8 +1546,10 @@ var attributesBoxes= new Array('attributes_BIOGRAPHY',
 				'attributes_LOCATION', 
 				'attributes_HEALTH', 
 				'attributes_STANDARD', 
-				'attributes_RESP-attribute');
+				'attributes_RESP-attribute', 
+				'attributes_any_attribute');
 var modelBoxes= new Array('model_BIOGRAPHY', 
+				'model_RDF', 
 				'model_ORLANDOHEADER', 
 				'model_FILEDESC', 
 				'model_TITLESTMT', 
@@ -1651,7 +1667,9 @@ var modelBoxes= new Array('model_BIOGRAPHY',
 				'model_STANDARD', 
 				'model_WORKSCITED', 
 				'model_SOURCE', 
-				'model_BIOGPROSE');
+				'model_BIOGPROSE', 
+				'model_any_content', 
+				'model_any_element');
 
       
         var button_prefix = 'button_';
@@ -2079,6 +2097,82 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Complex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Complex_Type');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Complex Types</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Complex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#any_content" target="_self" title="No namespace">any_content</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace1Element_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Element_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Element Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace1Element_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#any_element" target="_self" title="No namespace">any_element</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
                                           <td class="componentGroup"><input id="button_boxIdNamespace1Attribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1Attribute_Group');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Attribute Groups</div>
@@ -2089,6 +2183,51 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                           <td class="componentGroup">
                                              <div id="boxIdNamespace1Attribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                                <div><b><a href="index.html#any_attribute" target="_self" title="No namespace">any_attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+               <div class="level2">
+                  <p><input id="button_boxIdNamespace2" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2');" class="control" /><span class="indexGroupTitle">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span></p>
+                  <div id="boxIdNamespace2" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_boxIdNamespace2Element" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace2Element');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="boxIdNamespace2Element" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
@@ -2264,6 +2403,83 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                           <div><b><a href="index.html#WORKSCITED" target="_self" title="No namespace">WORKSCITED</a></b></div>
                                           <div><b><a href="index.html#XREF" target="_self" title="No namespace">XREF</a></b></div>
                                           <div><b><a href="index.html#YEAR" target="_self" title="No namespace">YEAR</a></b></div>
+                                          <div><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Complex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('Complex_Type');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Complex Types</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Complex_Type" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#any_content" target="_self" title="No namespace">any_content</a></b></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td class="rt_lineRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cornerBottomLeft"></td>
+                        <td class="rt_lineBottom"></td>
+                        <td class="rt_cornerBottomRight"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cornerTopLeft"></td>
+                        <td class="rt_lineTop"></td>
+                        <td class="rt_cornerTopRight"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lineLeft"></td>
+                        <td class="rt_content">
+                           <table class="componentGroup">
+                              <tbody>
+                                 <tr>
+                                    <td class="componentGroup"><input id="button_Element_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('Element_Group');" class="control" /></td>
+                                    <td class="componentGroup">
+                                       <div class="componentGroupTitle">Element Groups</div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="componentGroup"></td>
+                                    <td class="componentGroup">
+                                       <div id="Element_Group" class="componentGroup" style="display:block">
+                                          <div><b><a href="index.html#any_element" target="_self" title="No namespace">any_element</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -2302,6 +2518,7 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                     <td class="componentGroup">
                                        <div id="Attribute_Group" class="componentGroup" style="display:block">
                                           <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                          <div><b><a href="index.html#any_attribute" target="_self" title="No namespace">any_attribute</a></b></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -2323,8 +2540,8 @@ var modelBoxes= new Array('model_BIOGRAPHY',
          <div class="level1" id="toc_group_by_location" style="display:none">
             <div>
                <div class="level2">
-                  <p><input id="button_gr_orlando_biography.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography.xsd');" class="control" /><span class="indexGroupTitle">orlando_biography.xsd</span></p>
-                  <div id="gr_orlando_biography.xsd" style="display:block">
+                  <p><input id="button_gr_orlando_biography_v2.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography_v2.xsd');" class="control" /><span class="indexGroupTitle">orlando_biography_v2.xsd</span></p>
+                  <div id="gr_orlando_biography_v2.xsd" style="display:block">
                      <div class="horizontalLayout">
                         <table class="rt">
                            <tr>
@@ -2338,7 +2555,7 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
-                                          <td class="componentGroup"><input id="button_gr_orlando_biography.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup"><input id="button_gr_orlando_biography_v2.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography_v2.xsdElement');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Elements</div>
                                           </td>
@@ -2346,7 +2563,7 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                        <tr>
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
-                                             <div id="gr_orlando_biography.xsdElement" class="componentGroup" style="display:block">
+                                             <div id="gr_orlando_biography_v2.xsdElement" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#ADDRESS" target="_self" title="No namespace">ADDRESS</a></b></div>
                                                 <div><b><a href="index.html#ADDRLINE" target="_self" title="No namespace">ADDRLINE</a></b></div>
                                                 <div><b><a href="index.html#AREA" target="_self" title="No namespace">AREA</a></b></div>
@@ -2506,7 +2723,83 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                  <table class="componentGroup">
                                     <tbody>
                                        <tr>
-                                          <td class="componentGroup"><input id="button_gr_orlando_biography.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography.xsdAttribute_Group');" class="control" /></td>
+                                          <td class="componentGroup"><input id="button_gr_orlando_biography_v2.xsdComplex_Type" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography_v2.xsdComplex_Type');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Complex Types</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_orlando_biography_v2.xsdComplex_Type" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#any_content" target="_self" title="No namespace">any_content</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_orlando_biography_v2.xsdElement_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography_v2.xsdElement_Group');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Element Groups</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_orlando_biography_v2.xsdElement_Group" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#any_element" target="_self" title="No namespace">any_element</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_orlando_biography_v2.xsdAttribute_Group" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_orlando_biography_v2.xsdAttribute_Group');" class="control" /></td>
                                           <td class="componentGroup">
                                              <div class="componentGroupTitle">Attribute Groups</div>
                                           </td>
@@ -2514,8 +2807,53 @@ var modelBoxes= new Array('model_BIOGRAPHY',
                                        <tr>
                                           <td class="componentGroup"></td>
                                           <td class="componentGroup">
-                                             <div id="gr_orlando_biography.xsdAttribute_Group" class="componentGroup" style="display:block">
+                                             <div id="gr_orlando_biography_v2.xsdAttribute_Group" class="componentGroup" style="display:block">
                                                 <div><b><a href="index.html#RESP-attribute" target="_self" title="No namespace">RESP-attribute</a></b></div>
+                                                <div><b><a href="index.html#any_attribute" target="_self" title="No namespace">any_attribute</a></b></div>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                              <td class="rt_lineRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cornerBottomLeft"></td>
+                              <td class="rt_lineBottom"></td>
+                              <td class="rt_cornerBottomRight"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+               <div class="level2">
+                  <p><input id="button_gr_rdf.xsd" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_rdf.xsd');" class="control" /><span class="indexGroupTitle">rdf.xsd</span></p>
+                  <div id="gr_rdf.xsd" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cornerTopLeft"></td>
+                              <td class="rt_lineTop"></td>
+                              <td class="rt_cornerTopRight"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lineLeft"></td>
+                              <td class="rt_content">
+                                 <table class="componentGroup">
+                                    <tbody>
+                                       <tr>
+                                          <td class="componentGroup"><input id="button_gr_rdf.xsdElement" type="image" value="-" src="img/btM.gif" onclick="switchState('gr_rdf.xsdElement');" class="control" /></td>
+                                          <td class="componentGroup">
+                                             <div class="componentGroupTitle">Elements</div>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td class="componentGroup"></td>
+                                          <td class="componentGroup">
+                                             <div id="gr_rdf.xsdElement" class="componentGroup" style="display:block">
+                                                <div><b><a href="index.html#RDF" target="_self" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf:RDF</a></b></div>
                                              </div>
                                           </td>
                                        </tr>
