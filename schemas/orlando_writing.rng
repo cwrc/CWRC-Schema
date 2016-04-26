@@ -33,6 +33,8 @@
 
 <!-- 
 *** Revisions ***
+* MRB: April 2016: Made the following changes:
+  - Removed the attribute STANDARD from the element TITLE.
 * MRB: September 2015: Made the following changes:
   - Removed the attribute PROPOSEDALTERNATIVENAME from the element TGENRE.
 * MRB: August 2015: Made the following changes:
@@ -654,12 +656,6 @@
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rend
                     (or rendition) indicates how the element in question was rendered or presented
                     in the source text.</a:documentation>
-            </optional>
-            <optional>
-                <attribute name="STANDARD"/>
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used
-                    to record the standard name by which a person, organization, or topic is
-                    known</a:documentation>
             </optional>
             <attribute name="TITLETYPE">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An

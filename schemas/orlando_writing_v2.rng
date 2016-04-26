@@ -33,6 +33,8 @@
 
 <!-- 
 *** Revisions ***
+* MRB: April 2016: Made the following changes:
+  - Removed the attribute STANDARD from the element TITLE.
 * MRB: January 2016: Made the following change:
   - Created a new optional rdf:RDF element as the first child element of the root WRITING element, that can contain any type of descendant node
      (element, attribute, or content); this is so that documents can be used in CWRC-Writer (which stores RDF annotation information in the
@@ -88,11 +90,7 @@
 -->
 
 <!-- begin root <grammar> element -->
-<grammar xmlns="http://relaxng.org/ns/structure/1.0"
-    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
     <!-- begin <start> element pattern -->
     <start>
@@ -107,8 +105,7 @@
                 </attribute>
             </optional>
             <attribute name="PERSON">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    >Person is an attribute applied to the Writing document as a whole, and
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Person is an attribute applied to the Writing document as a whole, and
                     specifies information about the type of person who is the subject of the
                     document; for example, if they are known primarily as a writer, or a historical
                     figure.</a:documentation>
@@ -145,14 +142,12 @@
 
             <!-- begin ORLANDOHEADER element pattern -->
             <element name="ORLANDOHEADER">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    >Equivalent to TEI's TEIHeader, OrlandoHeader supplies the descriptive and
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Equivalent to TEI's TEIHeader, OrlandoHeader supplies the descriptive and
                     declarative information making up an electronic title page prefixed to every
                     TEI-conformant text.</a:documentation>
                 <optional>
                     <attribute name="TYPE" a:defaultValue="text">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type
                             specifies the kind of document to which the header is attached, for
                             example whether it is a corpus or individual text. Sample values
                             include: 1] text; 2] corpus.</a:documentation>
@@ -164,18 +159,14 @@
                     </attribute>
                 </optional>
                 <element name="FILEDESC">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >fileDesc contains a full bibliographic description of an electronic
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">fileDesc contains a full bibliographic description of an electronic
                         file.</a:documentation>
                     <element name="TITLESTMT">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">titleStmt
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">titleStmt
                             groups information about the title of a work and those responsible for
                             its intellectual content.</a:documentation>
                         <element name="DOCTITLE">
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                >docTitle is an element in the OrlandoHeader that contains the title
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">docTitle is an element in the OrlandoHeader that contains the title
                                 of the document at hand for cataloguing purposes. This title will be
                                 in the template for most of the documents created on the Orlando
                                 Project, but will need to be filled in for certain documents, such
@@ -185,21 +176,17 @@
                         </element>
                     </element>
                     <element name="PUBLICATIONSTMT">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                            >publicationStmt groups information concerning the publication or
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">publicationStmt groups information concerning the publication or
                             distribution of an electronic or other text.</a:documentation>
                         <element name="AUTHORITY">
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
                                 authority element contains the name of the person or organization
                                 responsible for the construction of an XML file.</a:documentation>
                             <text/>
                         </element>
                     </element>
                     <element name="SOURCEDESC">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">sourceDesc
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">sourceDesc
                             describes the source from which an electronic text was derived or
                             generated, typically a bibliographic description in the case of a
                             digitized text, or a phrase such as "born digital" for a text which has
@@ -208,20 +195,16 @@
                     </element>
                 </element>
                 <element name="REVISIONDESC">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >revisionDesc (or revision description) summarizes the revision history for
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">revisionDesc (or revision description) summarizes the revision history for
                         a file.</a:documentation>
                     <oneOrMore>
                         <element name="RESPONSIBILITY">
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
                                 responsibility element records a particular workflow activity in the
                                 workflow chain.</a:documentation>
                             <ref name="RESP-attribute"/>
                             <attribute name="WORKSTATUS" a:defaultValue="SUB">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Describes the work status of a document.</a:documentation>
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Describes the work status of a document.</a:documentation>
                                 <choice>
                                     <value type="token">SUB</value>
                                     <a:documentation>Submitted (SUB)</a:documentation>
@@ -251,9 +234,7 @@
                                 </choice>
                             </attribute>
                             <attribute name="WORKVALUE" a:defaultValue="I">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Records the completion information of a particular work status
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records the completion information of a particular work status
                                     phase of a document.</a:documentation>
                                 <choice>
                                     <value>I</value>
@@ -269,9 +250,7 @@
                             <ref name="DATE"/>
                             <zeroOrMore>
                                 <element name="ITEM">
-                                    <a:documentation
-                                        xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                        >item contains one component of a list.</a:documentation>
+                                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">item contains one component of a list.</a:documentation>
                                     <text/>
                                 </element>
                             </zeroOrMore>
@@ -295,8 +274,7 @@
                         <ref name="HEADING"/>
                         <ref name="RESEARCHNOTE"/>
                         <element name="AUTHORSUMMARY">
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
                                 element authorSummary is specially devised for researchers to make
                                 summary statements about an author before opening individual
                                 production, reception, or textual features elements. You are
@@ -310,8 +288,7 @@
                             </optional>
                         </element>
                         <element name="DIV1">
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Div1
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Div1
                                 (i.e. level-1 text division) is an element that marks the second
                                 largest structural division in a document.</a:documentation>
                             <optional>
@@ -322,9 +299,7 @@
                                     <ref name="RESEARCHNOTE"/>
                                     <ref name="TEXTSCOPE"/>
                                     <element name="DIV2">
-                                        <a:documentation
-                                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                            >Div2 (i.e. level-2 text division) is an element that
+                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Div2 (i.e. level-2 text division) is an element that
                                             marks the third largest structural division in a
                                             document.</a:documentation>
                                         <optional>
@@ -353,9 +328,7 @@
                             </zeroOrMore>
                         </element>
                         <element name="STANDARD">
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                >Standard is an element used to record the standard name by which a
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Standard is an element used to record the standard name by which a
                                 woman writer is known. It prefaces the document and should reflect
                                 the name under which she wrote or the name chosen as standard by the
                                     <em>Feminist Companion</em> or the <em>Drabble Oxford
@@ -363,8 +336,7 @@
                             <text/>
                         </element>
                         <element name="WORKSCITED">
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
                                 WorksCited is an informal but complete list of all sources used in
                                 the writing of documents. You should ensure that all of these
                                 sources are also entered in the bibliography
@@ -373,9 +345,7 @@
                                 <choice>
                                     <ref name="RESEARCHNOTE"/>
                                     <element name="SOURCE">
-                                        <a:documentation
-                                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                            >source describes the original source for the
+                                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">source describes the original source for the
                                             information contained with a manuscript
                                             description.</a:documentation>
                                         <oneOrMore>
@@ -420,8 +390,7 @@
                 non-chronology material across project documents.</a:documentation>
             <optional>
                 <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >An attribute of date, dateRange, and dateStruct, calendar is used to
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct, calendar is used to
                         indicate when a given date took place.</a:documentation>
                     <choice>
                         <value>NEWSTYLE</value>
@@ -431,8 +400,7 @@
             </optional>
             <optional>
                 <attribute name="CERTAINTY" a:defaultValue="CERT">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Certainty is an attribute of date, dateRange, and dateStruct and is used to
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and dateStruct and is used to
                         indicate the nature of certainty that you have about a given
                         date.</a:documentation>
                     <choice>
@@ -458,8 +426,7 @@
             </optional>
             <optional>
                 <attribute name="VALUE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Value is used to record a formatted date-related value.</a:documentation>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related value.</a:documentation>
                     <choice>
                         <data type="date"/>
                         <data type="gYearMonth"/>
@@ -529,8 +496,7 @@
                 <choice>
                     <ref name="HEAD"/>
                     <element name="FIGDESC">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FigDesc
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FigDesc
                             (description of figure) contains a brief prose description of the
                             appearance or content of a graphic figure, for use when documenting an
                             image without displaying it.</a:documentation>
@@ -545,8 +511,7 @@
 
     <define name="RESEARCHNOTE">
         <element name="RESEARCHNOTE">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                >ResearchNote is available everywhere, and it allows us to comment among ourselves
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ResearchNote is available everywhere, and it allows us to comment among ourselves
                 on the work at hand; not to be confused with scholarNotes that will be readable by
                 end users, the contents of this element will be seen only by project
                 members.</a:documentation>
@@ -658,8 +623,7 @@
                 magazine), series, or unpublished.</a:documentation>
             <optional>
                 <attribute name="REG" a:documentation="Regularized value">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Reg (or regularization) contains a reading which has been regularized or
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been regularized or
                         normalized in some sense.</a:documentation>
                 </attribute>
             </optional>
@@ -668,12 +632,6 @@
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rend
                     (or rendition) indicates how the element in question was rendered or presented
                     in the source text.</a:documentation>
-            </optional>
-            <optional>
-                <attribute name="STANDARD"/>
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Used
-                    to record the standard name by which a person, organization, or topic is
-                    known</a:documentation>
             </optional>
             <attribute name="TITLETYPE">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An
@@ -689,8 +647,7 @@
             </attribute>
             <optional>
                 <attribute name="REF">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Ref (or reference) provides an explicit means of locating a full definition
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition
                         for the entity being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
                 </attribute>
@@ -741,8 +698,7 @@
                 chronStruct is an element that holds together and therefore associates a date with
                 the prose that describes an event.</a:documentation>
             <attribute name="CHRONCOLUMN">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    >ChronColumn is an attribute which designates a given chronology item as
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronColumn is an attribute which designates a given chronology item as
                     belonging to a subject-specific column of the Orlando print (and possibly
                     electronic) chronology.</a:documentation>
                 <choice>
@@ -783,8 +739,7 @@
                 </attribute>
             </optional>
             <attribute name="RELEVANCE">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    >Relevance is a sister attribute to chronColumn, attached to each and every
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relevance is a sister attribute to chronColumn, attached to each and every
                     chronStruct. This element assignes importance to the chronstruct you have just
                     created with categories for comprehensive, period, decade, and selective (in
                     order of increasing importance).</a:documentation>
@@ -822,8 +777,7 @@
                 <ref name="DATESTRUCT"/>
             </choice>
             <element name="CHRONPROSE">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    >ChronProse is an element that briefly describes the essential facts of a
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ChronProse is an element that briefly describes the essential facts of a
                     chronology event.</a:documentation>
                 <oneOrMore>
                     <choice>
@@ -938,8 +892,7 @@
                 centred.</a:documentation>
             <optional>
                 <attribute name="FORMALITY">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Formality is an attribute attached to rResponses which allows you to
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Formality is an attribute attached to rResponses which allows you to
                         indicate whether a response to a work was formal or informal. "Formal" means
                         that the response was written or otherwise made public; "informal" refers to
                         those incidents more difficult to define: a hearty slap on the back, rude
@@ -953,8 +906,7 @@
             </optional>
             <optional>
                 <attribute name="GENDEREDRESPONSE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This attribute attached to rResponses indicates whether or not a response
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute attached to rResponses indicates whether or not a response
                         to a work was predicated on the writer's gender.</a:documentation>
                     <choice>
                         <value>ADFEMINAM</value>
@@ -965,8 +917,7 @@
             </optional>
             <optional>
                 <attribute name="RESPONSETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >ResponseType is an optional attribute that specifies the historical timing
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ResponseType is an optional attribute that specifies the historical timing
                         of a response to a written work through its values of "recent,"
                         "re-evaluation," or "initial."</a:documentation>
                     <choice>
@@ -1058,8 +1009,7 @@
 
     <define name="PRODUCTION">
         <element name="PRODUCTION">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                >Production is one of the three major components of the writing document (in
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Production is one of the three major components of the writing document (in
                 combination with TextualFeatures and Reception). It should enclose discussions about
                 the conditions of a text's production whether they be material or cultural. All
                 other influences on the writer's life will be covered by the biography section.
@@ -1106,8 +1056,7 @@
 
     <define name="TEXTUALFEATURES">
         <element name="TEXTUALFEATURES">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                >Previously called literary characteristics and content, this element addresses
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Previously called literary characteristics and content, this element addresses
                 features of critical interest in texts and provides space for textual analysis/close
                 readings as perceived by project members.</a:documentation>
             <zeroOrMore>
@@ -1283,8 +1232,7 @@
                 source.</a:documentation>
             <optional>
                 <attribute name="DIRECT" a:defaultValue="Y">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Direct is an attribute of the quote element and is intended to indicate
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Direct is an attribute of the quote element and is intended to indicate
                         whether a source is being quoted directly or indirectly. For display
                         purposes, it will be necessary to set off direct quotations (double
                         quotation marks) from indirect ones (single quotation
@@ -1365,8 +1313,7 @@
                     <ref name="TTONESTYLE"/>
                     <ref name="TVOICENARRATION"/>
                     <element name="LB">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lb marks
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lb marks
                             the start of a new (typographic) line in some edition or version of a
                             text.</a:documentation>
                         <oneOrMore>
@@ -1379,15 +1326,12 @@
                         </oneOrMore>
                     </element>
                     <element name="LG">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lg
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lg
                             contains a group of verse lines functioning as a formal unit, e.g. a
                             stanza, refrain, verse paragraph, etc.</a:documentation>
                         <optional>
                             <attribute name="TYPE">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Type characterizes the element in some sense, using any
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type characterizes the element in some sense, using any
                                     convenient classification scheme or typology.</a:documentation>
                             </attribute>
                         </optional>
@@ -1418,8 +1362,7 @@
             </optional>
             <optional>
                 <attribute name="REG" a:documentation="Regularized value">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Reg (or regularization) contains a reading which has been regularized or
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been regularized or
                         normalized in some sense.</a:documentation>
                 </attribute>
             </optional>
@@ -1446,8 +1389,7 @@
                 authorship.</a:documentation>
             <optional>
                 <attribute name="AUTHORNAMETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This attribute attached to pAuthorship allows us to distinguish between
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute attached to pAuthorship allows us to distinguish between
                         different kinds of authorship problems such as anonymous and pseudonymous
                         texts, and texts whose authorship is only alluded to.</a:documentation>
                     <choice>
@@ -1459,8 +1401,7 @@
             </optional>
             <optional>
                 <attribute name="AUTHORSHIPCONTROVERSY">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This attribute attached to pAuthorship reflects the difficulties scholars
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute attached to pAuthorship reflects the difficulties scholars
                         sometimes encounter when trying to identify the authorship of a
                         text.</a:documentation>
                     <choice>
@@ -1473,16 +1414,14 @@
             </optional>
             <optional>
                 <attribute name="COLLABORATION">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This attribute attached to pAuthorship allows us to distinguish those texts
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute attached to pAuthorship allows us to distinguish those texts
                         authored by more than a single author.</a:documentation>
                     <value>COLLABORATIONYES</value>
                 </attribute>
             </optional>
             <optional>
                 <attribute name="CONTROVERSYDATE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This optional attribute attached to pAuthorship designates the current
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute attached to pAuthorship designates the current
                         standing of a controversy surrounding authorship.</a:documentation>
                     <choice>
                         <value>PRESENT</value>
@@ -1576,8 +1515,7 @@
                 pertain to individual texts or her work as a whole.</a:documentation>
             <optional>
                 <attribute name="INFLUENCETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >InfluenceType is an attribute affiliated with the element pInfluencesHer
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">InfluenceType is an attribute affiliated with the element pInfluencesHer
                         and is used to indicate how someone or something influenced a woman
                         writer.</a:documentation>
                     <choice>
@@ -1662,8 +1600,7 @@
             </optional>
             <optional>
                 <attribute name="REF">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Ref (or reference) provides an explicit means of locating a full definition
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition
                         for the entity being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
                 </attribute>
@@ -1693,8 +1630,7 @@
                 <choice>
                     <ref name="RESEARCHNOTE"/>
                     <element name="BIBCIT">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
                             element named bibCit is designed to capture bibliographical information
                             in much the same way as an MLA parenthetical citation and should always
                             reside within a bibCits container tag.</a:documentation>
@@ -1828,8 +1764,7 @@
             </optional>
             <optional>
                 <attribute name="REG" a:documentation="Regularized value">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Reg (or regularization) contains a reading which has been regularized or
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been regularized or
                         normalized in some sense.</a:documentation>
                 </attribute>
             </optional>
@@ -1841,8 +1776,7 @@
             </optional>
             <optional>
                 <attribute name="REF">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Ref (or reference) provides an explicit means of locating a full definition
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition
                         for the entity being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
                 </attribute>
@@ -1868,8 +1802,7 @@
                 future," or relative to a non-dateable event "after the war."</a:documentation>
             <optional>
                 <attribute name="SETTINGDATETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >SettingDateType is an optional attribute that specifies the historical era
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">SettingDateType is an optional attribute that specifies the historical era
                         of a setting.</a:documentation>
                     <choice>
                         <value>PAST</value>
@@ -2062,8 +1995,7 @@
                 the same work.</a:documentation>
             <optional>
                 <attribute name="MOTIFNAME">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Atribute on tMotif used to regularize discussions of motifs to one of the
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Atribute on tMotif used to regularize discussions of motifs to one of the
                         descriptors listed under Motif.</a:documentation>
                 </attribute>
             </optional>
@@ -2244,8 +2176,7 @@
                 prose, we will be able to map that event to the place tagged. </a:documentation>
             <optional>
                 <attribute name="REF">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Ref (or reference) provides an explicit means of locating a full definition
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition
                         for the entity being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
                 </attribute>
@@ -2274,8 +2205,7 @@
                     <ref name="QUOTE"/>
                     <ref name="SOCALLED"/>
                     <element name="ADDRESS">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Address, a
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Address, a
                             sub-element within place, captures the specific address where a person
                             lived or where a specific and significant event occurred. Before tagging
                             an address, consider whether it is significant enough to capture in SGML
@@ -2285,22 +2215,16 @@
                             to the document you are writing.</a:documentation>
                         <optional>
                             <attribute name="CURRENT"/>
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                >Current name for geographical location.</a:documentation>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical location.</a:documentation>
                         </optional>
                         <optional>
                             <attribute name="REG" a:documentation="Regularized value">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Reg (or regularization) contains a reading which has been
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been
                                     regularized or normalized in some sense.</a:documentation>
                             </attribute>
                         </optional>
                         <element name="ADDRLINE">
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                >AddrLine is the required sub-element of address. For definition of
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">AddrLine is the required sub-element of address. For definition of
                                 an address, see address.</a:documentation>
                             <text/>
                         </element>
@@ -2308,23 +2232,18 @@
                     <element name="AREA">
                         <optional>
                             <attribute name="CURRENT"/>
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                >Current name for geographical location.</a:documentation>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical location.</a:documentation>
                         </optional>
                         <optional>
                             <attribute name="REG" a:documentation="Regularized value">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Reg (or regularization) contains a reading which has been
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been
                                     regularized or normalized in some sense.</a:documentation>
                             </attribute>
                         </optional>
                         <text/>
                     </element>
                     <element name="GEOG">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Geog
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Geog
                             captures names of places which are nation states or larger conceptual
                             geographical entities. The following is a list of the types of places
                             geog captures: Nation states: Italy, China, Canada; Groups of Nation
@@ -2337,23 +2256,18 @@
                             "Sri Lanka"].</a:documentation>
                         <optional>
                             <attribute name="CURRENT"/>
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                >Current name for geographical location.</a:documentation>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical location.</a:documentation>
                         </optional>
                         <optional>
                             <attribute name="REG" a:documentation="Regularized value">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Reg (or regularization) contains a reading which has been
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been
                                     regularized or normalized in some sense.</a:documentation>
                             </attribute>
                         </optional>
                         <text/>
                     </element>
                     <element name="PLACENAME">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Placename,
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Placename,
                             a sub-element within place, captures specific and easily identifiable
                             places that are known by their name but are not places in the same way
                             geographical or political entities are places. For example, "Trafalgar
@@ -2371,23 +2285,18 @@
                             Cemeteries: Paddington Cemetery.</a:documentation>
                         <optional>
                             <attribute name="CURRENT"/>
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                >Current name for geographical location.</a:documentation>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical location.</a:documentation>
                         </optional>
                         <optional>
                             <attribute name="REG" a:documentation="Regularized value">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Reg (or regularization) contains a reading which has been
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been
                                     regularized or normalized in some sense.</a:documentation>
                             </attribute>
                         </optional>
                         <text/>
                     </element>
                     <element name="REGION">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Region, a
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Region, a
                             sub-element of place, captures the following geographical and political
                             units: Political regions of the British Isles: Cornwall, Durham,
                             Hampshire; Political regions of other countries: Alberta, Madras,
@@ -2399,15 +2308,11 @@
                             Tibetan border.</a:documentation>
                         <optional>
                             <attribute name="CURRENT"/>
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                >Current name for geographical location.</a:documentation>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical location.</a:documentation>
                         </optional>
                         <optional>
                             <attribute name="REG" a:documentation="Regularized value">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Reg (or regularization) contains a reading which has been
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been
                                     regularized or normalized in some sense.</a:documentation>
                             </attribute>
                         </optional>
@@ -2419,22 +2324,16 @@
                         </oneOrMore>
                     </element>
                     <element name="SETTLEMENT">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                            >Settlement, a sub-element of place, captures the names of cities,
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Settlement, a sub-element of place, captures the names of cities,
                             towns, villages, hamlets and areas within larger settlements (for
                             example, districts of London).</a:documentation>
                         <optional>
                             <attribute name="CURRENT"/>
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                >Current name for geographical location.</a:documentation>
+                            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Current name for geographical location.</a:documentation>
                         </optional>
                         <optional>
                             <attribute name="REG" a:documentation="Regularized value">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Reg (or regularization) contains a reading which has been
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been
                                     regularized or normalized in some sense.</a:documentation>
                             </attribute>
                         </optional>
@@ -2458,8 +2357,7 @@
                 effects: these are devices such as assonance and metaphor.</a:documentation>
             <optional>
                 <attribute name="TECHNIQUETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >TechniqueType is an optional attribute that addresses the different kinds
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">TechniqueType is an optional attribute that addresses the different kinds
                         of literary techniques that an author might use in their
                         work.</a:documentation>
                     <choice>
@@ -2559,8 +2457,7 @@
                 element allows us to tag the names of significant characters.</a:documentation>
             <optional>
                 <attribute name="REG" a:documentation="Regularized value">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Reg (or regularization) contains a reading which has been regularized or
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been regularized or
                         normalized in some sense.</a:documentation>
                 </attribute>
             </optional>
@@ -2673,8 +2570,7 @@
                 list of genre names.</a:documentation>
             <optional>
                 <attribute name="GENRENAME">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >GenreName is an optional attribute that provides a pick-list of possible
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">GenreName is an optional attribute that provides a pick-list of possible
                         genre names to modify the element tGenre. It will prove especially useful in
                         situations where the prose does not allow the concise naming of a genre that
                         would be easily understood by a simpler name. Ultimately, this attribute
@@ -3031,8 +2927,7 @@
                 work? Did she hide the manuscript while writing?</a:documentation>
             <optional>
                 <attribute name="DISPLACEMENT">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This optional attribute attached to materialconditions applies to
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute attached to materialconditions applies to
                         information about women who wrote from a displaced position (geographical or
                         physical in some sense).</a:documentation>
                     <value>DISPLACEMENTYES</value>
@@ -3211,8 +3106,7 @@
                 throughout.</a:documentation>
             <optional>
                 <attribute name="INVOLVEMENT" a:defaultValue="INVOLVEMENTYES">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This optional attribute attached to politicalAffiliation in Biography and
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute attached to politicalAffiliation in Biography and
                         PLiterarySchools in Writing, in conjunction with its sibling attributes,
                         designates the degree of political engagement with the political affiliation
                         or literary school specified. Involvement denotes an intermediate level of
@@ -3230,8 +3124,7 @@
             </optional>
             <optional>
                 <attribute name="REG" a:documentation="Regularized value">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Reg (or regularization) contains a reading which has been regularized or
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been regularized or
                         normalized in some sense.</a:documentation>
                 </attribute>
             </optional>
@@ -3259,8 +3152,7 @@
                 set.</a:documentation>
             <optional>
                 <attribute name="SETTINGCLASS">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >SettingClass is an optional attribute that specifies the socio-economic
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">SettingClass is an optional attribute that specifies the socio-economic
                         status of a settingPlace.</a:documentation>
                     <choice>
                         <value>UPPERCLASS</value>
@@ -3272,8 +3164,7 @@
             </optional>
             <optional>
                 <attribute name="SETTINGPLACETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >SettingPlaceType is an optional attribute that specifies the real or
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">SettingPlaceType is an optional attribute that specifies the real or
                         imaginary location of textual events.</a:documentation>
                     <choice>
                         <value>FICTIVE</value>
@@ -3359,8 +3250,7 @@
                 covered by the name, orgName, place, or title elements.</a:documentation>
             <optional>
                 <attribute name="REG" a:documentation="Regularized value">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Reg (or regularization) contains a reading which has been regularized or
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been regularized or
                         normalized in some sense.</a:documentation>
                 </attribute>
             </optional>
@@ -3387,8 +3277,7 @@
             </optional>
             <optional>
                 <attribute name="MOTIVETYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >MotiveType is an attribute affiliated with the element
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">MotiveType is an attribute affiliated with the element
                         pMotives.</a:documentation>
                     <choice>
                         <value>ASCRIBED</value>
@@ -3476,8 +3365,7 @@
                 a specified span of time.</a:documentation>
             <optional>
                 <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >An attribute of date, dateRange, and dateStruct, calendar is used to
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct, calendar is used to
                         indicate when a given date took place.</a:documentation>
                     <choice>
                         <value>NEWSTYLE</value>
@@ -3487,8 +3375,7 @@
             </optional>
             <optional>
                 <attribute name="CERTAINTY" a:defaultValue="CERT">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Certainty is an attribute of date, dateRange, and dateStruct and is used to
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and dateStruct and is used to
                         indicate the nature of certainty that you have about a given
                         date.</a:documentation>
                     <choice>
@@ -3509,8 +3396,7 @@
             </optional>
             <optional>
                 <attribute name="EXACT">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >An attribute of dateRange, exact is used in conjunction with the to and
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of dateRange, exact is used in conjunction with the to and
                         from attributes to express the certainty of each end of a
                         dateRange.</a:documentation>
                     <choice>
@@ -3523,8 +3409,7 @@
             </optional>
             <optional>
                 <attribute name="FROM">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >From is used to record a formatted date-related value.</a:documentation>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">From is used to record a formatted date-related value.</a:documentation>
                     <choice>
                         <data type="date"/>
                         <data type="gYearMonth"/>
@@ -3539,8 +3424,7 @@
             </optional>
             <optional>
                 <attribute name="TO">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >To is used to record a formatted date-related value.</a:documentation>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">To is used to record a formatted date-related value.</a:documentation>
                     <choice>
                         <data type="date"/>
                         <data type="gYearMonth"/>
@@ -3561,8 +3445,7 @@
                 a mother, record it here.</a:documentation>
             <optional>
                 <attribute name="PROTAGONIST">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This attribute defines the type of character where
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute defines the type of character where
                         useful.</a:documentation>
                     <choice>
                         <value>MALE</value>
@@ -3601,8 +3484,7 @@
 
     <define name="DATESTRUCT">
         <element name="DATESTRUCT">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                >DateStruct is one of three elements, along with dateRange and date, used to
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">DateStruct is one of three elements, along with dateRange and date, used to
                 systematize the capture of dates across project documents. DateStruct is used to tag
                 all singular dates (not ranges) for which individual components (day, month, year)
                 have a varying degrees of certainty or for which only a general season or occasion
@@ -3610,8 +3492,7 @@
                 occurred.</a:documentation>
             <optional>
                 <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >An attribute of date, dateRange, and dateStruct, calendar is used to
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An attribute of date, dateRange, and dateStruct, calendar is used to
                         indicate when a given date took place.</a:documentation>
                     <choice>
                         <value>NEWSTYLE</value>
@@ -3621,8 +3502,7 @@
             </optional>
             <optional>
                 <attribute name="CERTAINTY" a:defaultValue="CERT">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Certainty is an attribute of date, dateRange, and dateStruct and is used to
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and dateStruct and is used to
                         indicate the nature of certainty that you have about a given
                         date.</a:documentation>
                     <choice>
@@ -3643,8 +3523,7 @@
             </optional>
             <optional>
                 <attribute name="VALUE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Value is used to record a formatted date-related value.</a:documentation>
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date-related value.</a:documentation>
                     <choice>
                         <data type="date"/>
                         <data type="gYearMonth"/>
@@ -3658,15 +3537,12 @@
                     <ref name="BIBCITS"/>
                     <ref name="TIME"/>
                     <element name="DAY">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A
                             sub-element of dateStruct, day is used to tag the specific day on which
                             an event occurred.</a:documentation>
                         <optional>
                             <attribute name="VALUE">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Value is used to record a formatted date- or time-related
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or time-related
                                     value.</a:documentation>
                                 <data type="integer"/>
                             </attribute>
@@ -3674,16 +3550,13 @@
                         <text/>
                     </element>
                     <element name="MONTH">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Month is a
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Month is a
                             sub-element of dateStruct and is meant to record only the month portion
                             of a date for which there is a contested or varying degree of certainty
                             among date components.</a:documentation>
                         <optional>
                             <attribute name="CERTAINTY" a:defaultValue="CERT">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Certainty is an attribute of date, dateRange, and dateStruct
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and dateStruct
                                     and is used to indicate the nature of certainty that you have
                                     about a given date.</a:documentation>
                                 <choice>
@@ -3704,9 +3577,7 @@
                         </optional>
                         <optional>
                             <attribute name="VALUE">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Value is used to record a formatted date- or time-related
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or time-related
                                     value.</a:documentation>
                                 <data type="integer"/>
                             </attribute>
@@ -3714,8 +3585,7 @@
                         <data type="NCName"/>
                     </element>
                     <element name="OCCASION">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
                             occasion element surrounds dates, such as holidays, that are best
                             referred to by name not date.</a:documentation>
                         <data type="NCName"/>
@@ -3723,9 +3593,7 @@
                     <element name="SEASON">
                         <optional>
                             <attribute name="CERTAINTY" a:defaultValue="CERT">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Certainty is an attribute of date, dateRange, and dateStruct
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and dateStruct
                                     and is used to indicate the nature of certainty that you have
                                     about a given date.</a:documentation>
                                 <choice>
@@ -3746,18 +3614,14 @@
                         </optional>
                         <optional>
                             <attribute name="REG" a:documentation="Regularized value">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Reg (or regularization) contains a reading which has been
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been
                                     regularized or normalized in some sense.</a:documentation>
                                 <data type="NMTOKEN"/>
                             </attribute>
                         </optional>
                         <optional>
                             <attribute name="VALUE">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Value is used to record a formatted date- or time-related
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or time-related
                                     value.</a:documentation>
                                 <data type="NMTOKEN"/>
                             </attribute>
@@ -3765,8 +3629,7 @@
                         <text/>
                     </element>
                     <element name="YEAR">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The year
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The year
                             element surrounds the name of a year in a dateStruct element. Most years
                             that will be tagged on a project can be included in a simple date
                             element, but those years that have a degree of certainty different from
@@ -3774,9 +3637,7 @@
                             dateStruct--year element.</a:documentation>
                         <optional>
                             <attribute name="CERTAINTY" a:defaultValue="CERT">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Certainty is an attribute of date, dateRange, and dateStruct
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certainty is an attribute of date, dateRange, and dateStruct
                                     and is used to indicate the nature of certainty that you have
                                     about a given date.</a:documentation>
                                 <choice>
@@ -3797,18 +3658,14 @@
                         </optional>
                         <optional>
                             <attribute name="REG" a:documentation="Regularized value">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Reg (or regularization) contains a reading which has been
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been
                                     regularized or normalized in some sense.</a:documentation>
                                 <data type="NMTOKEN"/>
                             </attribute>
                         </optional>
                         <optional>
                             <attribute name="VALUE">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Value is used to record a formatted date- or time-related
+                                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Value is used to record a formatted date- or time-related
                                     value.</a:documentation>
                                 <data type="NMTOKEN"/>
                             </attribute>
@@ -3828,8 +3685,7 @@
                 whether or not the destruction was carried out.</a:documentation>
             <optional>
                 <attribute name="DESTROYEDBY">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This attribute, attached to rDestructionOfWork, allows you to indicate who
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute, attached to rDestructionOfWork, allows you to indicate who
                         destroyed the work.</a:documentation>
                     <choice>
                         <value>SELF</value>
@@ -4033,8 +3889,7 @@
                 which were published in bits.</a:documentation>
             <optional>
                 <attribute name="FORMOFSERIALIZATION">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This attribute is attached to the element pSerialization and specifies
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute is attached to the element pSerialization and specifies
                         whether the work appeared in "volumeForm" or
                         "periodicalForm."</a:documentation>
                     <choice>
@@ -4331,8 +4186,7 @@
                 award or prize given to an author.</a:documentation>
             <optional>
                 <attribute name="REG" a:documentation="Regularized value">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >Reg (or regularization) contains a reading which has been regularized or
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reg (or regularization) contains a reading which has been regularized or
                         normalized in some sense.</a:documentation>
                 </attribute>
             </optional>
@@ -5257,8 +5111,7 @@
                 the existence of other texts.</a:documentation>
             <optional>
                 <attribute name="GENDEROFAUTHOR">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >genderOfAuthor is an optional attribute modifying the element
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">genderOfAuthor is an optional attribute modifying the element
                         tIntertextuality; therefore, it allows you to identify the sex of the author
                         who wrote the intertext. It will prove useful for researching how women
                         responded to other texts written by male or female
@@ -5271,8 +5124,7 @@
             </optional>
             <optional>
                 <attribute name="INTERTEXTTYPE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >IntertextType is an attribute used to modify the element tIntertextuality.
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">IntertextType is an attribute used to modify the element tIntertextuality.
                         It allows greater specificity to indicate how an intertext has been used in
                         connection with any one text.</a:documentation>
                     <choice>
@@ -5521,8 +5373,7 @@
                 writing.</a:documentation>
             <optional>
                 <attribute name="CENSORSHIP">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >If a book is censored, we consider that action a type of penalty. This
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If a book is censored, we consider that action a type of penalty. This
                         attribute flags when censorship has been one of the penalizing responses to
                         a work.</a:documentation>
                     <value>CENSORSHIPYES</value>
@@ -5827,8 +5678,7 @@
                 publisher).</a:documentation>
             <optional>
                 <attribute name="PUBLICATIONMODE">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This optional attribute allows you to identify how a text was
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This optional attribute allows you to identify how a text was
                         published.</a:documentation>
                     <choice>
                         <value>SELF-PUBLICATION</value>
@@ -6130,8 +5980,7 @@
                 line contains a single, possibly incomplete, line of verse</a:documentation>
             <optional>
                 <attribute name="PART" a:defaultValue="N">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >The part attribute specifies whether or not its parent element is
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The part attribute specifies whether or not its parent element is
                         fragmented in some way, typically by some other overlapping structure: for
                         example a speech which is divided between two or more verse stanzas, a
                         paragraph which is split across a page division, a verse line which is
