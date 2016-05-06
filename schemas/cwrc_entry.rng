@@ -33,6 +33,8 @@
 
 <!-- 
 *** Revisions ***
+* MRB: May 2016: Made the following change:
+  - Made the @RESP attribute in the XREF element an optional attribute, rather than a required attribute.
 * MRB: January 2016: Made the following change:
   - Created a new optional rdf:RDF element as the first child element of the root CWRC element, that can contain any type of descendant node
      (element, attribute, or content); this is so that documents can be used in CWRC-Writer (which stores RDF annotation information in the
@@ -3961,7 +3963,9 @@
         <element name="XREF">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The xref element surrounds a url which you wish to make into a
                 hyperlink.</a:documentation>
-            <ref name="RESP-attribute"/>
+            <optional>
+                <ref name="RESP-attribute"/>
+            </optional>
             <attribute name="URL">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">URL (uniform resource locator) specifies the URL from
                     which the media concerned may be obtained.</a:documentation>
