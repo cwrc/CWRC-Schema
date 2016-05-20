@@ -34,9 +34,9 @@
 <!-- 
 *** Revisions ***
 * MRB: May 2016: Made the following changes:
-  - Created a new annotationId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, SCHOLARNOTE
+  - Created a new annotationId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, SCHOLARNOTE,
      RESEARCHNOTE, BIBCIT, and KEYWORDCLASS; provides a unique annotation identifier for the element bearing the attribute.
-  - Created a new offsetId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, SCHOLARNOTE
+  - Created a new offsetId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, SCHOLARNOTE,
      RESEARCHNOTE, BIBCIT, and KEYWORDCLASS; designates the parent tag from which the offset is being counted.
   - Made the @RESP attribute in the XREF element an optional attribute, rather than a required attribute.
 * MRB: January 2016: Made the following change:
