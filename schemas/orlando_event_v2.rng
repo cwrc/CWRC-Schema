@@ -34,6 +34,12 @@
 
 <!-- 
 *** Revisions ***
+* MRB: May 2016: Made the following changes:
+  - Created a new annotationId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, DATESTRUCT,
+     SCHOLARNOTE, RESEARCHNOTE, BIBCIT, and KEYWORDCLASS; provides a unique annotation identifier for the element bearing the attribute.
+  - Created a new offsetId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, DATESTRUCT,
+     SCHOLARNOTE, RESEARCHNOTE, BIBCIT, and KEYWORDCLASS; designates the parent tag from which the offset is being counted.
+  - Added the XREF element, so that the link annotation object in CWRC-Writer could be invoked in Orlando event documents.
 * MRB: January 2016: Made the following change:
   - Created a new optional rdf:RDF element as the first child element of the root EVENT element, that can contain any type of descendant node
      (element, attribute, or content); this is so that documents can be used in CWRC-Writer (which stores RDF annotation information in the
@@ -543,6 +549,20 @@
                     </choice>
                 </attribute>
             </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
+                </attribute>
+            </optional>
             <text/>
         </element>
     </define>
@@ -596,6 +616,20 @@
                         <data type="gYearMonth"/>
                         <data type="gYear"/>
                     </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -820,6 +854,20 @@
                     </choice>
                 </attribute>
             </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
+                </attribute>
+            </optional>
             <text/>
         </element>
     </define>
@@ -866,6 +914,20 @@
                     <data type="anyURI"/>
                 </attribute>
             </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -893,6 +955,20 @@
                 on the work at hand; not to be confused with scholarNotes that will be readable by
                 end users, the contents of this element will be seen only by project
                 members.</a:documentation>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -980,6 +1056,20 @@
                         >Ref (or reference) provides an explicit means of locating a full definition
                         for the entity being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -1329,6 +1419,20 @@
                     <data type="NCName"/>
                 </attribute>
             </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -1388,6 +1492,20 @@
                         (WGS [World Geodetic System] 84 reference coordinate
                         system).</a:documentation>
                     <data type="decimal"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -1593,6 +1711,20 @@
                     <data type="NCName"/>
                 </attribute>
             </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
+                </attribute>
+            </optional>
             <text/>
         </element>
     </define>
@@ -1672,11 +1804,62 @@
             <optional>
                 <attribute name="KEYWORDTYPE"/>
             </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
                     <ref name="KEYWORDCLASS"/>
                     <ref name="RESEARCHNOTE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="XREF">
+        <element name="XREF">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The xref
+                element surrounds a url which you wish to make into a hyperlink.</a:documentation>
+            <optional>
+                <ref name="RESP-attribute"/>
+            </optional>
+            <attribute name="URL">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">URL
+                    (uniform resource locator) specifies the URL from which the media concerned may
+                    be obtained.</a:documentation>
+                <data type="anyURI"/>
+            </attribute>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="ORGNAME"/>
+                    <ref name="TITLE"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1715,6 +1898,20 @@
                         >Ref (or reference) provides an explicit means of locating a full definition
                         for the entity being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
                 </attribute>
             </optional>
             <oneOrMore>
@@ -1813,6 +2010,20 @@
             <optional>
                 <attribute name="REF">
                     <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
                 </attribute>
             </optional>
             <text/>
