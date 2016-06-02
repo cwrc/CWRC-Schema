@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://cwrc.ca/schemas/orlando_event_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/orlando.css"?>
+
+
+<EVENT>
+    <ORLANDOHEADER>
+        <FILEDESC>
+            <TITLESTMT>
+                <DOCTITLE>[Insert label/title of event here]</DOCTITLE>
+            </TITLESTMT>
+            <PUBLICATIONSTMT>
+                <AUTHORITY>Canadian Writing Research Collaboratory</AUTHORITY>
+            </PUBLICATIONSTMT>
+            <SOURCEDESC>Created from original research by members of [insert project name here]</SOURCEDESC>
+        </FILEDESC>
+        <REVISIONDESC>
+            <RESPONSIBILITY RESP="SYS" WORKSTATUS="SUB" WORKVALUE="I">
+                <DATE VALUE="2015-03-18">18 March 2015</DATE>
+                <ITEM>Event document template complete</ITEM>
+            </RESPONSIBILITY>
+        </REVISIONDESC>
+    </ORLANDOHEADER>
+    <CHRONEVENT>
+        <CHRONSTRUCT CHRONCOLUMN="NATIONALINTERNATIONAL" RELEVANCE="DECADE" RESP="SYS">
+            <DATE CALENDAR="NEWSTYLE" CERTAINTY="CERT" VALUE="1822">[Insert date here, e.g., 1822]</DATE>
+            <CHRONPROSE>[Insert summary of event here, including location if relevant and known]
+                <PLACE REF="http://www.geonames.org/---------/">location of the event</PLACE></CHRONPROSE>
+        </CHRONSTRUCT>
+        <SHORTPROSE>
+            <P>[Insert details of event here]</P>
+        </SHORTPROSE>
+        <RESEARCHNOTES>
+            <RESEARCHNOTE>[If needed, insert research note here]</RESEARCHNOTE>
+        </RESEARCHNOTES>
+        <BIBCITS>
+            <BIBCIT>[Insert bibliographic citation information here]</BIBCIT>
+        </BIBCITS>
+        <KEYWORDCLASSES>
+            <KEYWORDCLASS>[Insert keyword here]</KEYWORDCLASS>
+        </KEYWORDCLASSES>
+    </CHRONEVENT>
+</EVENT>
