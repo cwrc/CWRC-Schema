@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://cwrc.ca/schemas/cwrc_tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/tei.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>{label}</title>
+                <respStmt>
+                    <resp>This library and archives record created by the</resp>
+                    <orgName>Canadian Writing Research Collaboratory</orgName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher> <orgName>Canadian Writing Research Collaboratory</orgName> </publisher>
+                <availability>
+                    <p>Use of this public-domain resource is governed by the <ref target="http://creativecommons.org/licenses/by-nc/4.0/">Creative
+                     Commons Attribution-NonCommercial 4.0 International License</ref>.</p>
+                </availability>
+                <date when="2016-06">June 2016</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>Derived from "<title>Canada's Libraries and Archives</title>:  RSC Expert Panel on <emph>The Status
+                and Future of Canada's Libraries and Archives</emph>", created and hosted by the <publisher>Canadian Writing Research
+                Collaboratory</publisher>, in <date>June 2014</date> (<ref target="http://cwrc.ca/rsc-src/">http://cwrc.ca/rsc-src/</ref>).</bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>The Canadian libraries and archives records were originally compiled in June 2014 in
+                TSV and JSON formats as part of the work for the Royal Society of Canada's Expert Panel
+                on The Status and Future of Canada's Libraries and Archives.  The records were transformed
+                from TSV format to TEI format using custom PHP code in June 2016.</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listEvent>
+                <event type="cultural">
+                    <label>{label}</label>
+                    <desc><hi rend="bold"><placeName ref="{geoNamesURI}">{community}, {province}</placeName></hi></desc>
+                    <desc><hi rend="bold">Institution:</hi> {institutionType}</desc>
+                    <desc><hi rend="bold">Type:</hi> {libraryType}</desc>
+                    <desc><hi rend="bold">Population served:</hi> {population}</desc>
+                    <desc><hi rend="bold">Established in:</hi> <date when="{startDate}">{startDate}</date></desc>
+                    <desc><hi rend="bold">URL:</hi> <ref target="{url}">{url}</ref></desc>
+                    <listBibl>
+                        <bibl><ref target="http://cwrc.ca/rsc-src/">Canada's Libraries and Archives</ref> mapping and timeline application, at
+                        http://cwrc.ca/rsc-src/</bibl>
+                    </listBibl>
+                    <note type="keyword"><term>Canadian libraries and archives</term></note>
+                </event>
+            </listEvent>
+        </body>
+    </text>
+</TEI>
