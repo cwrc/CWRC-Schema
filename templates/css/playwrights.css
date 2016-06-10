@@ -2,7 +2,7 @@
 
 *{
     color:black;
-    font-family:sans-serif/* ;
+    font-family:sans-serif /* ;
    background-color:#fdf8e5*/
 }
 
@@ -106,6 +106,16 @@ HEADING[SUBTYPE = "4"]{
     padding-bottom:0.2em
 }
 
+
+/*Figures styling*/
+
+FIGURE{
+    text-align:center;
+    padding-top:1em
+}
+GRAPHIC{display:block; padding:1%; border:black}
+
+
 /*Mid-level body styling*/
 
 ENTRY PERSONNAME,
@@ -205,7 +215,7 @@ RECEPTION DATASTRUCT
 CHRONSTRUCT DATE,
 CHRONSTRUCT DATERANGE{
     display:table-cell;
-    width:12em; /*border:solid;*/
+    width:9em; /*border:solid;*/
     padding-right:0%
 }
 CHRONPROSE{
@@ -242,10 +252,10 @@ TEXTUALFEATURES{
     margin-top:0%
 }
 
-TEXTUALFEATURES HEADING{
+/*TEXTUALFEATURES HEADING{
     padding-top:0%;
     margin-top:0%
-}
+}*/
 
 TEXTUALFEATURES P{
     display:block;
