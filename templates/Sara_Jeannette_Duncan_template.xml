@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://cwrc.ca/schemas/cwrc_tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/tei.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Label/title of event</title>
+                <respStmt>
+                    <resp>This event created by the students in in the class</resp>
+                    <name>"Online Collaborative Scholarship: Principles and Practices (A CWRCShop)",
+                        at DHSI 2016 (Digital Humanities Summer Institute 2016).</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName>Canadian Writing Research Collaboratory</orgName>
+                </publisher>
+                <availability>
+                    <p>Use of this public-domain resource is governed by the <ref
+                            target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
+                            Attribution-NonCommercial 4.0 International License</ref>.</p>
+                </availability>
+                <date when="2016-06">June 2016</date>
+            </publicationStmt>
+            <sourceDesc>
+                <p>No source; originally written in digital form.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>The event records were originally compiled during the week of 13-17 June 2016 in
+                    TEI format by students in the class "Online Collaborative Scholarship:
+                    Principles and Practices (A CWRCShop)", at DHSI 2016 (Digital Humanities Summer
+                    Institute 2016). The event records were transformed from TEI format to JSON format
+                    using custom XQuery code.</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listEvent>
+                <event type="biographical">
+                    <label>Sara Jeannette Duncan's first residence</label>
+                    <desc><hi rend="bold">Date:</hi>
+                        <date when="2016-06-14">14 June 2016</date></desc>
+                    <desc><hi rend="bold">Place:</hi>
+                        <placeName ref="http://www.geonames.org/6174041">Victoria, British Columbia</placeName></desc>
+                    <desc><hi rend="bold">Description:</hi> 
+                    Sara Jeannette Duncan's first residence was in Victoria, British Columbia, where she lived from 2012 until
+                    June 2016.  This is a photograph of the house where she lived, taken on 14 June 2016.
+                    </desc>
+                    <listBibl>
+                        <bibl><ref target="http://www.hellobc.com/victoria/things-to-do/arts-culture-history/historic-heritage-sites.aspx">Historic 
+                            &amp; Heritage Sites</ref>, located at http://www.hellobc.com/victoria/things-to-do/arts-culture-history/historic-heritage-sites.aspx</bibl>
+                    </listBibl>
+                    <note type="keyword"><term>Sara Jeannette Duncan</term></note>
+                    <note type="keyword"><term>houses</term></note>
+                </event>
+            </listEvent>
+        </body>
+    </text>
+</TEI>
