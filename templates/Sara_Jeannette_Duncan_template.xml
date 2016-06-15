@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://cwrc.ca/schemas/cwrc_tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/digital_diversity.css"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/tei.css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -32,8 +32,8 @@
                 <p>The event records were originally compiled during the week of 13-17 June 2016 in
                     TEI format by students in the class "Online Collaborative Scholarship:
                     Principles and Practices (A CWRCShop)", at DHSI 2016 (Digital Humanities Summer
-                    Institute 2016). The event records were transformed from TEI format to JSON format
-                    using custom XQuery code.</p>
+                    Institute 2016). The event records were transformed from TEI format to JSON
+                    format using custom XQuery code.</p>
             </projectDesc>
         </encodingDesc>
         <profileDesc>
@@ -50,14 +50,15 @@
                     <desc><hi rend="bold">Date:</hi>
                         <date when="1861-12-22">22 December 1861</date></desc>
                     <desc><hi rend="bold">Place:</hi>
-                        <placeName ref="http://www.geonames.org/5907990">Brantford, Ontario</placeName></desc>
-                    <desc> 
-                        Sara Jeannette Duncan was born in Brantford, Ontario, on December 22, 1861, the eldest daughter of Charles Duncan and Jane Duncan (née Bell).
+                        <placeName ref="http://www.geonames.org/5907990">Brantford,
+                            Ontario</placeName></desc>
+                    <desc> Sara Jeannette Duncan was born in Brantford, Ontario, on December 22,
+                        1861, the eldest daughter of Charles Duncan and Jane Duncan (née Bell).
                     </desc>
-                </event>  
+                </event>
             </listEvent>
             <figure>
-                <graphic url=""></graphic>
+                <graphic url=""/>
             </figure>
         </body>
     </text>
