@@ -61,7 +61,8 @@ ENTRY{
     margin-left:3%
 }
 
-P, LISTBIBCIT{
+P,
+LISTBIBCIT{
     line-height:150%
 }
 
@@ -110,10 +111,16 @@ HEADING[SUBTYPE = "4"]{
 /*Figures styling*/
 
 FIGURE{
-    text-align:center;
-    padding-top:1em
+    display:block;
+    text-align:center
 }
-GRAPHIC{display:block; padding:1%; border:black}
+GRAPHIC{
+    display:block;
+    border:thin silver solid;
+    margin:0.5em;
+    padding:0.5em;
+}
+
 
 
 /*Mid-level body styling*/
