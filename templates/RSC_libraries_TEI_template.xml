@@ -43,16 +43,17 @@
         <body>
             <listEvent>
                 <event type="cultural">
-                    <label>{label}</label>
-                    <desc><hi rend="bold"><placeName ref="{geonamesURI}">{community}, {province}</placeName></hi></desc>
-                    <desc><hi rend="bold">Institution:</hi> {institutionType}</desc>
-                    <desc><hi rend="bold">Type:</hi> {libraryType}</desc>
-                    <desc><hi rend="bold">Population served:</hi> {population}</desc>
-                    <desc><hi rend="bold">Established in:</hi> <date when="{startDate}">{startDate}</date></desc>
-                    <desc><hi rend="bold">URL:</hi> <ref target="{url}">{url}</ref></desc>
+                    <p><label>{label}</label></p>
+                    <p><label>Place:</label> <placeName ref="{geonamesURI}">{community}, {province}</placeName></p>
+                    <p><label>Institution:</label> {institutionType}</p>
+                    <p><label>Type:</label> {libraryType}</p>
+                    <p><label>Population served:</label> {population}</p>
+                    <p><label>Established in:</label> <date when="{startDate}">{startDate}</date></p>
+                    <p><label>URL:</label> <ref target="{url}">{url}</ref></p>
                     <listBibl>
-                        <bibl><ref target="http://cwrc.ca/rsc-src/">Canada's Libraries and Archives</ref> mapping and timeline application, at
-                        http://cwrc.ca/rsc-src/</bibl>
+                        <head><emph>Data source:</emph></head>
+                        <bibl>Canada's Libraries and Archives mapping and timeline application, at
+                            <ref target="http://cwrc.ca/rsc-src/">http://cwrc.ca/rsc-src/</ref></bibl>
                     </listBibl>
                     <note type="keyword"><term>Canadian libraries and archives</term></note>
                 </event>
