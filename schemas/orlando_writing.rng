@@ -33,6 +33,8 @@
 
 <!-- 
 *** Revisions ***
+* JCA: 2016-07-29: 
+  - TEXTSCOPE: removed ability to add optional child element/text
 * MRB: April 2016: Made the following changes:
   - Removed the attribute STANDARD from the element TITLE.
 * MRB: September 2015: Made the following changes:
@@ -627,6 +629,7 @@
                     <data type="anyURI"/>
                 </attribute>
             </optional>
+            <!-- 
             <oneOrMore>
                 <choice>
                     <text/>
@@ -636,6 +639,7 @@
                     <ref name="TEXTUALFEATURES"/>
                 </choice>
             </oneOrMore>
+            -->
         </element>
     </define>
 

@@ -33,6 +33,8 @@
 
 <!-- 
 *** Revisions ***
+* JCA: 2016-07-29: 
+  - TEXTSCOPE: removed ability to add optional child element/text
 * MRB: May 2016: Made the following changes:
   - Created a new annotationId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, DATESTRUCT,
      SCHOLARNOTE, RESEARCHNOTE, BIBCIT, and KEYWORDCLASS; provides a unique annotation identifier for the element bearing the attribute.
@@ -688,6 +690,7 @@
                     <data type="anyURI"/>
                 </attribute>
             </optional>
+            <!-- 
             <oneOrMore>
                 <choice>
                     <text/>
@@ -697,6 +700,7 @@
                     <ref name="TEXTUALFEATURES"/>
                 </choice>
             </oneOrMore>
+             -->
         </element>
     </define>
 
