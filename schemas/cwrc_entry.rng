@@ -33,6 +33,7 @@
 
 <!-- 
 *** Revisions ***
+* JCA: 2016-08-25: add REG to place
 * MRB: May 2016: Made the following changes:
   - Created a new annotationId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, SCHOLARNOTE,
      RESEARCHNOTE, BIBCIT, and KEYWORDCLASS; provides a unique annotation identifier for the element bearing the attribute.
@@ -2788,6 +2789,13 @@
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ref (or reference) provides an explicit means of locating a full definition for the entity
                         being named by means of a URI.</a:documentation>
                     <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Reg (or regularization) contains a reading which has been regularized or
+                        normalized in some sense.</a:documentation>
                 </attribute>
             </optional>
             <optional>
