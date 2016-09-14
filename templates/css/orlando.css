@@ -230,6 +230,7 @@ BIBCIT::after {
 }
 */
 /* 2016-09-13 - test: bibcit to show the placeholder tag only */
+/* 2016-09-14 - breaks oxygen - can't see tag contents
 BIBCIT {
     font-size : 0;
 }
@@ -237,7 +238,10 @@ BIBCIT::before {
     content : " (" attr(PLACEHOLDER) ") ";
     font-size : small;
 }
-
+*/
+BIBCIT {
+    content : url(http://cwrc.ca/templates/images/bibcit.gif);
+    }
 BIBCITS {
     background-color : #FFC;
 }
