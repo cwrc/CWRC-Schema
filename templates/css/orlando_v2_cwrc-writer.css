@@ -1,3 +1,15 @@
+/*
+ * 2016-09-16 - largely a duplicate of "//cwrc.ca/templates/css/orlando.css"
+ * but with CWRc-Writer specific modifications (ones that don't work well 
+ * with Oxygen and the current Bibcit checking process)
+ *
+ * Tried to use @import url("//cwrc.ca/templates/css/orlando.css");
+ * but CWRc-Writer processes the CSS into CWRC-Writer specific selectors
+ * and importing doesn't work
+ *
+ *
+ * */
+
 EVENTS {
     font-family : "Times New Roman", Times, serif;
 }
@@ -162,7 +174,7 @@ CHRONSTRUCT {
 CHRONSTRUCT DATE {
     font-weight : bold;
 }
-CHRONSTRUCT[CHRONCOLUMN = "BRITISHWOMENWRITERS"] {
+CHRONSTRUCT[CHRONCOLUMN = "BRITISHWOMENWRITERS"]::before {
     content : url(http://cwrc.ca/templates/images/pen1.gif);
 }
 /*
@@ -176,7 +188,7 @@ CHRONSTRUCT[CHRONCOLUMN = "BRITISHWOMENWRITERS"] {
   content:url(http://cwrc.ca/templates/images/pen1.gif);
   }
  */
-CHRONSTRUCT[CHRONCOLUMN = "NATIONALINTERNATIONAL"] {
+CHRONSTRUCT[CHRONCOLUMN = "NATIONALINTERNATIONAL"]::before {
     content : url(http://cwrc.ca/templates/images/earth1.gif);
 }
 /*
@@ -190,7 +202,7 @@ CHRONSTRUCT[CHRONCOLUMN = "NATIONALINTERNATIONAL"] {
   content:url(http://cwrc.ca/templates/images/earth1.gif);
   }
  */
-CHRONSTRUCT[CHRONCOLUMN = "SOCIALCLIMATE"] {
+CHRONSTRUCT[CHRONCOLUMN = "SOCIALCLIMATE"]::before {
     content : url(http://cwrc.ca/templates/images/people1.gif);
 }
 /*
@@ -204,7 +216,7 @@ CHRONSTRUCT[CHRONCOLUMN = "SOCIALCLIMATE"] {
   content:url(http://cwrc.ca/templates/images/people1.gif);
   }
  */
-CHRONSTRUCT[CHRONCOLUMN = "WRITINGCLIMATE"] {
+CHRONSTRUCT[CHRONCOLUMN = "WRITINGCLIMATE"]::before {
     content : url(http://cwrc.ca/templates/images/book1.gif);
 }
 /*
@@ -221,6 +233,7 @@ CHRONSTRUCT[CHRONCOLUMN = "WRITINGCLIMATE"] {
 SHORTPROSE {
     padding-left : 4em;
 }
+
 /* 2016-09-13 - test: bibcit to show the placeholder tag, then a comma and space, then the contents of the tag
 BIBCIT::before {
     content : " (" attr(PLACEHOLDER) ", ";
@@ -231,19 +244,20 @@ BIBCIT::after {
 */
 /* 2016-09-13 - test: bibcit to show the placeholder tag only */
 /* 2016-09-14 - breaks oxygen - can't see tag contents
+*/
 BIBCIT {
     font-size : 0;
 }
 BIBCIT::before {
-    content : " (" attr(PLACEHOLDER) ") ";
-    font-size : small;
-}
-*/
-BIBCIT {
     content : url(http://cwrc.ca/templates/images/bibcit.gif);
-    }
-BIBCITS {
+}
+BIBCIT::after {
+    content : "(" attr(PLACEHOLDER) ")";
+    font-size : small;
     background-color : #FFC;
+    }
+BIBCITS::after {
+    content : " ";
 }
 BIBCITS::before {
     content : " ";
@@ -298,3 +312,4 @@ SOCALLED:before {
 SOCALLED:after {
     content : "'";
 }
+
