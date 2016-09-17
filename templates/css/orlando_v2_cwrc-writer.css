@@ -247,7 +247,6 @@ BIBCIT::after {
 */
 BIBCIT {
     font-size : 0;
-    margin : 0px 10px;
 }
 BIBCIT::before {
     content : url(http://cwrc.ca/templates/images/bibcit.gif);
@@ -257,7 +256,7 @@ BIBCIT::after {
     font-size : small;
     }
 BIBCITS::after {
-    content : " ";
+    content : "";
 }
 BIBCITS::before {
     content : " ";
