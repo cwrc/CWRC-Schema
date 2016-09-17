@@ -261,9 +261,15 @@ BIBCITS::after {
 BIBCITS::before {
     content : " ";
 }
-SCHOLARNOTE P {
+SCHOLARNOTE::before {
     content : url(http://cwrc.ca/templates/images/note.gif);
     background-color : #E0E0F8;
+}
+SCHOLARNOTE P::before {
+    content : " [";
+}
+SCHOLARNOTE P::after {
+    content : "] ";
 }
 NAME {
     font-weight : bold;
