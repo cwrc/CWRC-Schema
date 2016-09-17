@@ -247,6 +247,7 @@ BIBCIT::after {
 */
 BIBCIT {
     font-size : 0;
+    margin : 0px 3px;
 }
 BIBCIT::before {
     content : url(http://cwrc.ca/templates/images/bibcit.gif);
@@ -254,7 +255,6 @@ BIBCIT::before {
 BIBCIT::after {
     content : "(" attr(PLACEHOLDER) ")";
     font-size : small;
-    background-color : #FFC;
     }
 BIBCITS::after {
     content : " ";
