@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://cwrc.ca/schemas/cwrc_tei_lite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/tei.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>{Year}: {Event}</title>
+                <respStmt>
+                    <resp>This record created by the</resp>
+                    <orgName>Canadian Writing Research Collaboratory</orgName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName>Canadian Writing Research Collaboratory</orgName>
+                </publisher>
+                <availability>
+                    <p>Use of this public-domain resource is governed by the <ref
+                            target="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
+                            Attribution-NonCommercial 4.0 International License</ref>.</p>
+                </availability>
+                <date when="2016-09">September 2016</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>Derived from data created and hosted by the <publisher>Canadian Women Writing
+                        and Reading from 1950 project (CanWWR)</publisher> (<ref
+                        target="http://canwwrfrom1950.org/">http://canwwrfrom1950.org/</ref>).
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>The events data were originally compiled and hosted on a Web site by the Canadian
+                    Women Writing and Reading from 1950 project (CanWWR), which began in 2007. The
+                    awards data were extracted from a MySQL database as a CSV file, and then
+                    transformed into TEI files using custom PHP code in September 2016.</p>
+            </projectDesc>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="eng">English</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listEvent>
+                <event type="{Type}">
+                    <p><label><date when="{Year}">{Year}</date>:</label> {Event}</p>
+                    <listBibl>
+                        <head><emph>Data source:</emph></head>
+                        <bibl>Canadian Women Writing and Reading from 1950 project, at <ref
+                                target="http://canwwrfrom1950.org/"
+                            >http://canwwrfrom1950.org/</ref></bibl>
+                    </listBibl>
+                    <note type="keyword"><term>historical events</term></note>
+                </event>
+            </listEvent>
+        </body>
+    </text>
+</TEI>

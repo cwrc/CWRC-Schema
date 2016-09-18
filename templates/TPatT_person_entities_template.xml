@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="http://cwrc.ca/schemas/entities.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<entity>
+    <person>
+        <recordInfo>
+            <originInfo>
+                <projectId>cwrc</projectId>
+                <recordCreationDate>2016-09-17</recordCreationDate>
+                <recordChangeDate>2016-09-17</recordChangeDate>
+            </originInfo>
+            <personTypes/>
+            <accessCondition type="use and reproduction">Use of this public-domain resource is governed by the <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</accessCondition>
+        </recordInfo>
+        <identity>
+            <preferredForm>
+                <namePart partType="family">{Last_name}</namePart>
+                <namePart partType="given">{First_name}</namePart>
+            </preferredForm>
+            <variantForms/>
+        </identity>
+        <description>
+            <existDates>
+                <dateSingle>
+                    <standardDate>{Birth_date}</standardDate>
+                    <dateType>birth</dateType>
+                </dateSingle>
+                <dateSingle>
+                    <standardDate>{Death_date}</standardDate>
+                    <dateType>death</dateType>
+                </dateSingle>
+            </existDates>
+            <descriptiveNotes>
+                <note>Nation: {Nation_1}</note>
+            </descriptiveNotes>
+            <factuality>real</factuality>
+        </description>
+    </person>
+</entity>
