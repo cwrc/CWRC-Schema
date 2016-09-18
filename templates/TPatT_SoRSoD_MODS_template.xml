@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+    <titleInfo>
+        <title>{Chapter_title}</title>
+    </titleInfo>
+    <name type="personal">
+        <namePart type="family">{Family_name}</namePart>
+        <namePart type="given">{Given_name}</namePart>
+        <namePart>{Pseudonym}</namePart>
+        <role>
+            <roleTerm type="code" authority="marcrealtor">aut</roleTerm>
+        </role>
+    </name>
+    <typeOfResource>text</typeOfResource>
+    <genre authority="cwrc" type="format">Part</genre>
+    <genre authority="cwrc" type="primaryGenre">{Primary_genres}</genre>
+    <genre authority="cwrc" type="subgenre">Aboriginal</genre>
+    <language>
+        <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        <scriptTerm type="code" authority="iso15924">Latn</scriptTerm>
+    </language>
+    <physicalDescription>
+        <form authority="marcform">print</form>
+    </physicalDescription>
+    <relatedItem type="host">
+        <titleInfo>
+            <title>Son of Raven, Son of Deer: Fables of the Tse-Shaht People</title>
+        </titleInfo>
+        <name type="personal">
+            <namePart type="family">Clutesi</namePart>
+            <namePart type="given">George</namePart>
+            <role>
+                <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+            </role>
+        </name>
+        <originInfo>
+            <place>
+                <placeTerm type="text">Sidney, British Columbia</placeTerm>
+            </place>
+            <publisher>Gray's Publishing</publisher>
+            <dateIssued encoding="w3cdtf">1967</dateIssued>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <part>
+            <extent unit="pages">
+                <list>{Pages}</list>
+            </extent>
+        </part>
+    </relatedItem>
+    <accessCondition type="use and reproduction">This work is licensed under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative
+            Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> (CC BY-NC-SA
+        4.0).</accessCondition>
+    <recordInfo>
+        <recordContentSource>The People and the Text project</recordContentSource>
+        <recordContentSource>Canadian Writing Research Collaboratory</recordContentSource>
+        <recordCreationDate encoding="w3cdtf">2016-09-18</recordCreationDate>
+        <recordOrigin>The bibliographic data were downloaded from a Google Sheet spreadsheet
+            as a CSV file, and then transformed into MODS files using custom PHP code.</recordOrigin>
+        <languageOfCataloging>
+            <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+            <scriptTerm type="code" authority="iso15924">Latn</scriptTerm>
+        </languageOfCataloging>
+    </recordInfo>
+</mods>
