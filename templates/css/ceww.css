@@ -45,26 +45,29 @@ DOCAUTHOR{
 PUBLICATIONSTMT,
 SOURCEDESC,
 REVISIONDESC,
-RESPONSIBILITY{
+RESPONSIBILITY,
+LANG,
+KEYWORDS{
     display:none
 }
 
+
 ENTRY{
     display:block;
-    margin-left:3%
+    margin-left:2.5em
 }
 
-HEADING[SUBTYPE = "4"]
+
+P 
 {
-    font-weight:bold;
+    padding-bottom:1%;
     display:block;
-    font-size:medium;
+    margin-left:2em
 }
 
-P{padding-bottom:1%}
 
 HEADING[SUBTYPE = "1"]{
-    color:black;
+    color:#af1100;
     font-size:xx-large;
     font-weight:bold
 }
@@ -77,12 +80,19 @@ BIRTH:before{
 BIRTH,
 DEATH,
 PERSONNAME{
-    display:block
+    display:block;
+    padding-top:1em
 }
 
-PERSONNAME DATASTRUCT DATAITEM{display:block}
+AUTHORSUMMARY PERSONNAME DATASTRUCT DATAITEM:first-child
+{
+    display:inline-block
+}
 
-BIRTHNAME GIVEN{padding-right:1em}
+PERSONNAME DATASTRUCT DATAITEM{
+    display:block;
+    margin-left:2em
+}
 
 DEATH:before{
     content:"Death: ";
@@ -95,22 +105,58 @@ HEADING[SUBTYPE = "5"]{
 }
 
 HEADING[SUBTYPE = "2"]{
+    color:#af1100;
     display:block;
     font-size:x-large;
     font-weight:bold;
     padding-top:1em;
     padding-bottom:1em
 }
+HEADING[SUBTYPE = "1"] NAME, HEADING[SUBTYPE = "2"] NAME{
+    color:#af1100
+}
+
+
+HEADING[SUBTYPE = "4"]
+{
+    font-weight:bold;
+    display:block;
+    font-size:medium;
+}
 
 FRONT P{
     display:block;
     font-style:italic;
 }
-AUTHORSUMMARY P{display:block}
+
+
+
+AUTHORSUMMARY P:first-child
+{
+    text-align:center;
+    display:block;
+    border:solid;
+    padding:3mm;
+    border-radius:2mm;
+    border-width:0.4mm;
+    border-color:#af1100
+    }
+
+AUTHORSUMMARY:nth-of-type(1){
+    display:block; 
+    padding:1em; 
+    padding-left:15%; 
+    padding-right:15%;
+    text-align:center}
+    
+AUTHORSUMMARY P{
+    display:block
+}
 
 FRONT P + P{
     display:block;
     text-align:right;
+    padding-left:2em;
     padding-right:2em;
     font-style:normal
 }
@@ -123,26 +169,23 @@ HEADING[SUBTYPE = "3"]{
     padding-bottom:0.5em
 }
 
-HEADING[SUBTYPE = "2"] + HEADING[SUBTYPE = "3"]{padding-top:0em}
-
-
-
+HEADING[SUBTYPE = "2"] + HEADING[SUBTYPE = "3"]{
+    padding-top:0em
+}
 
 LISTBIBCIT BIBCIT{
     display:block;
-    padding-left:2%;
+    margin-left:4em;
+    text-indent:-2em;
     padding-bottom:0.5em
 }
 
 TITLE[LEVEL = "MONOGRAPHIC"]{font-style:italic}
-TITLE[LEVEL = "ANALYTIC"]:before{content:"&quot;"}
-TITLE[LEVEL = "ANALYTIC"]:after{content:"&quot;"}
+TITLE[LEVEL = "JOURNAL"]{font-style:italic}
+TITLE[LEVEL = "UNPUBLISHED"]{font-style:italic}
+TITLE[LEVEL = "ANALYTIC"]:before, TITLE[LEVEL = "ANALYTIC"]:after{content:'"'}
 
 FAMILYMEMBER{
-    display:block
-}
-
-FAMILYMEMBER P{
     display:block
 }
 
@@ -156,83 +199,141 @@ FAMILYMEMBER[RELATION = "MOTHER"] HEADING:before{
     font-weight:bold
 }
 
+FAMILYMEMBER[RELATION = "HUSBAND"] HEADING:first-child:before{
+    content:"Spouse: ";
+    font-weight:bold
+}
+
 FAMILYMEMBER[RELATION = "FATHER"],
-FAMILYMEMBER[RELATION = "MOTHER"]{padding-bottom:1em}
+FAMILYMEMBER[RELATION = "MOTHER"]{
+    display:inline-block;
+    padding-bottom:1em
+}
 
-FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT DATERANGE,
+FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT DATERANGE
 FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT DATERANGE{
-    display:block;
-    font-weight:bold;
-    font-size:medium;
-    color:green
-}
-
-FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT CHRONPROSE,
-FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT CHRONPROSE{
-    display:block;
-}
-
-EDUCATION CHRONSTRUCT,
-RECEPTION CHRONSTRUCT,
-OCCUPATION CHRONSTRUCT,
-RESIDENCEANDMOBILITY CHRONSTRUCT{
-    display:block
+    display:inline-block;
+    font-size:medium
 }
 
 EDUCATION P,
 RECEPTION P,
 OCCUPATION P,
-CULTURALFORMATION P
 OTHERLIFEEVENT P,
-RESIDENCEANDMOBILITY P{
-    display:block
+RESIDENCEANDMOBILITY P
+AWARDS P{
+   display:block;
+   margin-left:2em; 
+   padding-right:5em
 }
 
-
-EDUCATION CHRONSTRUCT DATERANGE{
-    display:inline-block;
-    padding-right:5em
+CULTURALFORMATION RELIGION DENOMINATION{
+   display:block;
+   margin-left:2em; 
+   padding-right:5em;
+   padding-bottom:1em
 }
 
-EDUCATION CHRONSTRUCT CHRONSPROSE{
-    display:inline-block
+AWARDS RECEPTION P{
+   display:block;
+   margin-left:2em; 
+   padding-right:5em
 }
-AUTHORSUMMARY:nth-of-type(1){display:block; padding:1em; padding-left:15%; padding-right:15%;text-align:center}
 
 FAMILYMEMBER[RELATION = "MOTHER"] CHRONPROSE,
-FAMILYMEMBER[RELATION = "FATHER"] CHRONPROSE,
-FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT:first-child,
-FAMILYMEMBER[RELATION = "SPOUSE"] CHRONSTRUCT:first-child
+FAMILYMEMBER[RELATION = "FATHER"] CHRONPROSE{
+    font-weight:bold;
+    display:inline-block;
+    font-size:medium;
+    margin-bottom:1em;
+    padding-top:1em
+}
+
+FAMILYMEMBER[RELATION = "MOTHER"] DATAITEM NAME,
+FAMILYMEMBER[RELATION = "FATHER"] DATAITEM NAME{
+    font-weight:bold;
+    display:inline-block;
+    font-size:medium;
+    margin-bottom:1em;
+    padding-top:1em
+}
+FAMILYMEMBER[RELATION = "HUSBAND"] HEADING[SUBTYPE = "5"]
+{
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT:first-child
 {
     font-weight:bold;
     display:block;
     font-size:medium;
-    margin-bottom:1%
+    margin-bottom:1em;
+    padding-top:1em
 }
 
-FAMILYMEMBER[RELATION = "CHILD"] CHRONSTRUCT,
+FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT DATERANGE{
+    font-weight:normal
+}
+
+
+FAMILYMEMBER[RELATION = "SIBLING"] CHRONSTRUCT,
+FAMILYMEMBER[RELATION = "BROTHER"] CHRONSTRUCT,
+FAMILYMEMBER[RELATION = "SISTER"] CHRONSTRUCT,
 FAMILYMEMBER[RELATION = "DAUGHTER"] CHRONSTRUCT,
-FAMILYMEMBER[RELATION = "SON"] CHRONSTRUCT
+FAMILYMEMBER[RELATION = "SON"] CHRONSTRUCT,
+FAMILYMEMBER[RELATION = "STEPSON"] CHRONSTRUCT,
+FAMILYMEMBER[RELATION = "STEPDAUGHTER"] CHRONSTRUCT
 {
-    display:list-item;
-    list-style-type: square;
-    list-style-position:inside;
-    margin-left:3%
+    padding-top:1em;
+    display:block;
+    margin-left:2em;
+    font-weight:normal
 }
 
-FAMILYMEMBER[RELATION = "CHILD"] CHRONSTRUCT NAME,
-FAMILYMEMBER[RELATION = "DAUGHTER"] CHRONSTRUCT NAME,
-FAMILYMEMBER[RELATION = "SON"] CHRONSTRUCT NAME
-{
-    font-weight:bold
-}
-FAMILYMEMBER[RELATION = "CHILD"] P,
+
+FAMILYMEMBER[RELATION = "SIBLING"] P,
+FAMILYMEMBER[RELATION = "BROTHER"] P,
+FAMILYMEMBER[RELATION = "SISTER"] P,
 FAMILYMEMBER[RELATION = "DAUGHTER"] P,
-FAMILYMEMBER[RELATION = "SON"] P
+FAMILYMEMBER[RELATION = "SON"] P,
+FAMILYMEMBER[RELATION = "STEPSON"] P,
+FAMILYMEMBER[RELATION = "STEPDAUGHTER"] P
 {
     display:block;
-    margin-left:3%
+    margin-left:4%;
+    padding-bottom:0
 }
+
+FAMILYMEMBER[RELATION = "SIBLING"] DATASTRUCT,
+FAMILYMEMBER[RELATION = "BROTHER"] DATASTRUCT,
+FAMILYMEMBER[RELATION = "SISTER"] DATASTRUCT,
+FAMILYMEMBER[RELATION = "DAUGHTER"] DATASTRUCT,
+FAMILYMEMBER[RELATION = "SON"] DATASTRUCT,
+FAMILYMEMBER[RELATION = "STEPSON"] DATASTRUCT,
+FAMILYMEMBER[RELATION = "STEPDAUGHTER"] DATASTRUCT
+{
+    padding-top:1em;
+    display:block;
+    margin-left:2em
+}
+
+
+FAMILYMEMBER[RELATION = "SIBLING"] HEADING[SUBTYPE = "4"],
+FAMILYMEMBER[RELATION = "BROTHER"] HEADING[SUBTYPE = "4"],
+FAMILYMEMBER[RELATION = "SISTER"] HEADING[SUBTYPE = "4"],
+FAMILYMEMBER[RELATION = "DAUGHTER"] HEADING[SUBTYPE = "4"],
+FAMILYMEMBER[RELATION = "SON"] HEADING[SUBTYPE = "4"],
+FAMILYMEMBER[RELATION = "STEPSON"] HEADING[SUBTYPE = "4"],
+FAMILYMEMBER[RELATION = "STEPDAUGHTER"] HEADING[SUBTYPE = "4"]
+{
+    padding-top:1em;
+    display:block;
+    margin-left:2em
+}
+
 
 EMPH{
     font-style:italic
@@ -240,7 +341,10 @@ EMPH{
 
 OTHERLIFEEVENT DATASTRUCT {display:block}
 
-OTHERLIFEEVENT DATASTRUCT DATAITEM{    display:list-item;
-    list-style-type: square;
-    list-style-position:inside;
-    margin-left:3%}
+OTHERLIFEEVENT DATASTRUCT DATAITEM
+{
+    display:block;
+    margin-left:2em
+}
+
+
