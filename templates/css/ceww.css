@@ -204,16 +204,49 @@ FAMILYMEMBER[RELATION = "HUSBAND"] HEADING:first-child:before{
     font-weight:bold
 }
 
-FAMILYMEMBER[RELATION = "FATHER"],
-FAMILYMEMBER[RELATION = "MOTHER"]{
+FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT,
+FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT{
     display:inline-block;
     padding-bottom:1em
 }
 
+FAMILYMEMBER[RELATION = "MOTHER"] CHRONPROSE,
+FAMILYMEMBER[RELATION = "FATHER"] CHRONPROSE{
+    font-weight:bold;
+    display:inline-block;
+    font-size:medium;
+    margin-bottom:1em
+}
+
+
 FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT DATERANGE
 FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT DATERANGE{
+    font-weight:normal;
     display:inline-block;
     font-size:medium
+}
+
+FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT DATE
+FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT DATE{
+    font-weight:normal;
+    display:inline-block;
+    font-size:medium
+}
+
+
+FAMILYMEMBER[RELATION = "MOTHER"] DATASTRUCT,
+FAMILYMEMBER[RELATION = "FATHER"] DATASTRUCT{
+    display:block;
+    font-weight:bold;
+    font-size:medium
+}
+
+FAMILYMEMBER[RELATION = "MOTHER"] DATAITEM NAME,
+FAMILYMEMBER[RELATION = "FATHER"] DATAITEM NAME{
+    font-weight:bold;
+    display:inline-block;
+    font-size:medium;
+    margin-bottom:1em
 }
 
 EDUCATION P,
@@ -227,36 +260,7 @@ AWARDS P{
    padding-right:5em
 }
 
-CULTURALFORMATION RELIGION DENOMINATION{
-   display:block;
-   margin-left:2em; 
-   padding-right:5em;
-   padding-bottom:1em
-}
 
-AWARDS RECEPTION P{
-   display:block;
-   margin-left:2em; 
-   padding-right:5em
-}
-
-FAMILYMEMBER[RELATION = "MOTHER"] CHRONPROSE,
-FAMILYMEMBER[RELATION = "FATHER"] CHRONPROSE{
-    font-weight:bold;
-    display:inline-block;
-    font-size:medium;
-    margin-bottom:1em;
-    padding-top:1em
-}
-
-FAMILYMEMBER[RELATION = "MOTHER"] DATAITEM NAME,
-FAMILYMEMBER[RELATION = "FATHER"] DATAITEM NAME{
-    font-weight:bold;
-    display:inline-block;
-    font-size:medium;
-    margin-bottom:1em;
-    padding-top:1em
-}
 FAMILYMEMBER[RELATION = "HUSBAND"] HEADING[SUBTYPE = "5"]
 {
     display: inline-block;
@@ -278,6 +282,9 @@ FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT DATERANGE{
     font-weight:normal
 }
 
+FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT DATE{
+    font-weight:normal
+}
 
 FAMILYMEMBER[RELATION = "SIBLING"] CHRONSTRUCT,
 FAMILYMEMBER[RELATION = "BROTHER"] CHRONSTRUCT,
@@ -302,8 +309,9 @@ FAMILYMEMBER[RELATION = "SON"] P,
 FAMILYMEMBER[RELATION = "STEPSON"] P,
 FAMILYMEMBER[RELATION = "STEPDAUGHTER"] P
 {
+    padding-top:1em;
     display:block;
-    margin-left:4%;
+    margin-left:2em;
     padding-bottom:0
 }
 
@@ -334,6 +342,18 @@ FAMILYMEMBER[RELATION = "STEPDAUGHTER"] HEADING[SUBTYPE = "4"]
     margin-left:2em
 }
 
+CULTURALFORMATION RELIGION DENOMINATION{
+   display:block;
+   margin-left:2em; 
+   padding-right:5em;
+   padding-bottom:1em
+}
+
+AWARDS RECEPTION P{
+   display:block;
+   margin-left:2em; 
+   padding-right:5em
+}
 
 EMPH{
     font-style:italic
@@ -346,5 +366,4 @@ OTHERLIFEEVENT DATASTRUCT DATAITEM
     display:block;
     margin-left:2em
 }
-
 
