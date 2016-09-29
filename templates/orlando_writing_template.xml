@@ -2,8 +2,6 @@
 <?xml-model href="http://cwrc.ca/schemas/orlando_writing_v2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/orlando.css"?>
 
-<!DOCTYPE ORLANDO [ <!ENTITY % character_entities SYSTEM "http://cwrc.ca/schemas/character_entities.dtd"> %character_entities; ]>
-
 <WRITING PERSON="BRWWRITER" SEX="FEMALE">
     <ORLANDOHEADER>
         <FILEDESC>
@@ -13,8 +11,7 @@
             <PUBLICATIONSTMT>
                 <AUTHORITY>Canadian Writing and Research Collaboratory</AUTHORITY>
             </PUBLICATIONSTMT>
-            <SOURCEDESC>Created from original research by members of [insert project name
-                here]</SOURCEDESC>
+            <SOURCEDESC>Created from original research by members of [insert project name here]</SOURCEDESC>
         </FILEDESC>
         <REVISIONDESC>
             <RESPONSIBILITY RESP="MPO" WORKSTATUS="SUB" WORKVALUE="I">
@@ -28,93 +25,68 @@
         <STANDARD>[InsertAuthorStandardName]</STANDARD>
         <AUTHORSUMMARY>
             <SHORTPROSE>
-                <RESEARCHNOTE>This subsection (AUTHORSUMMARY) usually encloses summary
-                    statements about an author (a short preface) before opening the writing
-                    document of each woman writer. This element can contain a short writer
-                    profile, or an entry summary (similar to an abstract). It is useful both for
-                    minor writers about whom little is known, and for major writers whose work
-                    needs to be sumarized before launching into the details. </RESEARCHNOTE>
+                <RESEARCHNOTE>This subsection (AUTHORSUMMARY) usually encloses summary statements about an author (a short preface) which are visible before opening the writing document of each woman writer. This element can contain a short writer profile, or an entry summary (similar to an abstract). It is useful both for minor writers about whom little is known, and for major writers whose work needs to be summarized before launching into the details. In results on a tag search, access to the AuthorSummary appears as Profile; users click on it for a thumbnail on authors appearing in their results. For this reason it should be kept short (ideally not more than five lines) but should usually specify time-period and most important genres written, and should indicate what is interesting in this writer.</RESEARCHNOTE>
                 <P>[Insert author summary here]</P>
             </SHORTPROSE>
         </AUTHORSUMMARY>
         <DIV1>
-            <HEADING>Insert Subtitle 1</HEADING>
+            <HEADING>[Insert first heading: could be Novels, or Before her First Travels, or Left Unpublished, depending on how you decide to organize the document.]</HEADING>
             <DIV2>
+                <HEADING>Insert first subheading if you wish. If you are going to comment on a string of works, you may want a new div2 for each, whose subheadings are all titles. If you&apos;re giving just 2 paragraphs to her novels, grouping them all together, you probably don&apos;t want any subheading at all.</HEADING><RESEARCHNOTE>If it&apos;s one div2 per text, then you need a bibliography entry for each, and a Textscope tag (which goes, as here, inside the div2 tag, after the heading). A textscope has no <SOCALLED>prose</SOCALLED>, only the attribute values filled in for dbref and placeholder. The first is the bibl dbase number, the latter lists author, Reg title, and date, e.g. Jane Austen, Pride and Prejudice, 1813. The textscope exists to link all citations of a primary text to the core discussion of it. Before making any new entry in the bibliography database, check to see if this text (in this edition) is already listed there; if so, use the existing bibl dbase number.</RESEARCHNOTE>
                 <TEXTSCOPE>
-                    <PRODUCTION>
-                        <RESEARCHNOTE>PRODUCTION : In this section you can expand on
-                            literary activity related to the work or group of works in
-                            question, writing influences, literary schools, material
-                            conditions of writing, authorship issues, relationships with
-                            publishers, rejections, earnings, editions, mode of publication,
-                            type of press, place of publication, price, editions, periodical
-                            publication, circulation, press run, advertising,
-                            anthologization, media, manuscript history, current archival
-                            locations, etc.</RESEARCHNOTE>
-                        <CHRONSTRUCT CHRONCOLUMN="WRITINGCLIMATE" RELEVANCE="SELECTIVE" RESP="SYS">
-                            <DATE>DD Month YYY</DATE>
-                            <CHRONPROSE>[Event Prose (publication, prize, any literary
-                                activity)]</CHRONPROSE>
-                        </CHRONSTRUCT>
-                        <SHORTPROSE>
-                            <P>[Details of Event / other production ]</P>
-                        </SHORTPROSE>
-                    </PRODUCTION>
-                    <TEXTUALFEATURES>
-                        <RESEARCHNOTE>TEXTUALFEATURES: Descriptions or summaries of plot,
-                            setting, genre names, tone/style, voice/narration, literary
-                            techniques, theme/topic, motifs, characters, and
-                            intertextuality</RESEARCHNOTE>
-                        <SHORTPROSE>
-                            <P>[Textual features prose here]</P>
-                        </SHORTPROSE>
-                    </TEXTUALFEATURES>
-                    <RECEPTION>
-                        <SHORTPROSE>
-                            <RESEARCHNOTE>RECEPTION: Responses to his/her work: reviews,
-                                self-description, fictionalized treatments of the author,
-                                recognitions with name and value where appropriate, penalties,
-                                destruction of work, influence exerted, best known work,
-                                landmark text (if any)</RESEARCHNOTE>
-                            <P>[Reception prose here]</P>
-                        </SHORTPROSE>
-                    </RECEPTION>
                 </TEXTSCOPE>
+                <PRODUCTION>
+                    <RESEARCHNOTE>PRODUCTION : In this section you can supply basic facts about composition and publication. You can also as far as you wish expand on literary activity related to the work or group of works in question, writing influences, literary schools, material conditions of writing, authorship issues, relationships with publishers, rejections, earnings, editions, mode of publication, type of press, place of publication, price, editions, periodical publication, circulation, press run, advertising, anthologization, media, manuscript history, current archival locations, etc.</RESEARCHNOTE>
+                    <CHRONSTRUCT CHRONCOLUMN="WRITINGCLIMATE" RELEVANCE="SELECTIVE" RESP="SYS"> <DATE>DD Month YYYY</DATE> <CHRONPROSE>[Insert brief (ideally not more than two lines) statement as to composition (if this is dated) or publication. Include title of work and if possible name and tag its genre(s). Though you may wish to name publisher and/or place of publication you don&apos;t need to, since this will be available in the bibliographic listing.]<RESEARCHNOTE>You may not wish to tie any statement about this text or group of texts to a date (for appearing in timelines). In that case delete the Chronstruct and position your comments in Shortprose.</RESEARCHNOTE></CHRONPROSE><BIBCITS><BIBCIT>
+                        <RESEARCHNOTE>You need a citation for specific facts (see Life template).</RESEARCHNOTE>
+                        </BIBCIT></BIBCITS> </CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>[Add more details, as above, about this text and its making.]<RESEARCHNOTE>As in everything else, your best guide is to look at existing Orlando entries and see how they are structured.</RESEARCHNOTE><BIBCITS><BIBCIT></BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </PRODUCTION>
+                <TEXTUALFEATURES>
+                    <RESEARCHNOTE>TEXTUALFEATURES: Descriptions or summaries of plot, setting, genre names, tone/style, voice/narration, literary techniques, theme/topic, motifs, characters, intertextuality:anything you want to say about this text(s).</RESEARCHNOTE>
+                    <SHORTPROSE>
+                        <P>[Textual features prose here]</P>
+                    </SHORTPROSE>
+                </TEXTUALFEATURES>
+                <RECEPTION>
+                    <SHORTPROSE>
+                        <RESEARCHNOTE>RECEPTION: Responses to his/her work: reviews, self-description, fictionalized treatments of the author, recognitions with name and value where appropriate, penalties, destruction of work, influence exerted, best known work, status as landmark text (if any, and if not said in publication Chronstruct). N.b. responses to a specific work are best discussed in its div2; reponses to a writer&apos;s oeuvre are best kept for separate Reception tag late in the entry.</RESEARCHNOTE>
+                        <P>[Reception prose here]<BIBCITS><BIBCIT></BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </RECEPTION>
             </DIV2>
         </DIV1>
         <DIV1>
-            <HEADING>Insert Subtitle 2</HEADING>
+            <HEADING>Insert second heading: could be Poetry, or After Visiting Asia, or In Periodicals, etc.</HEADING>
+            <RESEARCHNOTE>To create more sections or subsections, EITHER copy this entire DIV1 and paste below, after the div1 ends and before the WORKSCITED tag, OR copy the div2 that follows and paste it after the div2 ends but before the div1 ends. You may need to do this several times or many times. Do it BEFORE you begin writing within the existing div1 or div2.</RESEARCHNOTE>
             <DIV2>
-                <TEXTSCOPE>
-                    <PRODUCTION>
-                        <CHRONSTRUCT CHRONCOLUMN="WRITINGCLIMATE" RELEVANCE="SELECTIVE" RESP="SYS">
-                            <DATE>DD Month YYY</DATE>
-                            <CHRONPROSE>[Event Prose (publication, prize, literary
-                                activity)]</CHRONPROSE>
-                        </CHRONSTRUCT>
-                        <SHORTPROSE>
-                            <P>[Details of Event / other production ]</P>
-                        </SHORTPROSE>
-                    </PRODUCTION>
-                    <TEXTUALFEATURES>
-                        <SHORTPROSE>
-                            <P>[Textual features prose here]</P>
-                        </SHORTPROSE>
-                    </TEXTUALFEATURES>
-                    <RECEPTION>
-                        <SHORTPROSE>
-                            <P>[Reception prose here]</P>
-                        </SHORTPROSE>
-                    </RECEPTION>
-                </TEXTSCOPE>
+                <HEADING>Insert subheading if desired.</HEADING>
+                <TEXTSCOPE></TEXTSCOPE>
+                <PRODUCTION>
+                    <CHRONSTRUCT CHRONCOLUMN="WRITINGCLIMATE" RELEVANCE="SELECTIVE" RESP="SYS"> <DATE>DD Month YYYY</DATE> <CHRONPROSE>[Event Prose: anything that needs to be tied to a date, like composition, submission/rejection, publication.</CHRONPROSE> <BIBCITS><BIBCIT></BIBCIT></BIBCITS></CHRONSTRUCT>
+                    <SHORTPROSE>
+                        <P>[further details of composition and publication ]<BIBCITS><BIBCIT></BIBCIT></BIBCITS></P>
+                    </SHORTPROSE>
+                </PRODUCTION>
+                <TEXTUALFEATURES>
+                    <SHORTPROSE>
+                        <P>[Textual features prose here]</P>
+                    </SHORTPROSE>
+                </TEXTUALFEATURES>
+                <RECEPTION>
+                    <SHORTPROSE>
+                        <P>[Reception prose here]</P>
+                    </SHORTPROSE>
+                </RECEPTION>
             </DIV2>
-            <RESEARCHNOTE>To create more subsections, copy this entire DIV1 and paste below,
-                before the WORKSCITED tag </RESEARCHNOTE>
         </DIV1>
+        <RESEARCHNOTE>You may wish to close with a &lt;div1>&lt;div2>&lt;production>&lt;shortprose>&lt;p> containing a general statement about e.g. editions or translations or illustration or performance, or about whereabouts of archives. And/or with parallel &lt;textualfeatures> or &lt;reception> sections about general characteristics of her oeuvre, and/or about initial success and later attack, or vice versa, or reputation generally. You may or may not wish to give such a paragraph or paragraphs a Heading. Don&apos;t forget to compare with some existing Orlando entries!</RESEARCHNOTE>
         <WORKSCITED>
-            <SOURCE> Unless otherwise noted, all information is from
-                <TITLE TITLETYPE="MONOGRAPHIC">[InsertTitle]</TITLE>. </SOURCE>
-            <SOURCE>[InsertWorkCited]</SOURCE>
+            <SOURCE>
+                <RESEARCHNOTE>You may find it useful to insert here details of sources you have used, if for instance someone else, not yourself, is going to enter them in the bibl dbase.</RESEARCHNOTE>
+            </SOURCE>
         </WORKSCITED>
     </DIV0>
 </WRITING>
