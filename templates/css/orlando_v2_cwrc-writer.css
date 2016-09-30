@@ -149,6 +149,13 @@ AVAILABILITY {
 P {
     display : block;
 }
+RESEARCHNOTE:before {
+    content:'research note: [';
+    font-variant:small-caps;
+}
+RESEARCHNOTE:before {
+    content:']';
+}
 RESEARCHNOTE {
     background-color : #FBEFEF;
     color : #663366;
