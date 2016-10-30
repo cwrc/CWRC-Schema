@@ -34,6 +34,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: 30-Oct-2016
+  - Revised the element FIGDESC so that in addition to the child element of text, added child elements of BIBCITS, DATE, NAME,
+    ORGNAME, PLACE, and TITLE.
 * MRB: September 2015: Made the following changes:
   - Removed the attribute PROPOSEDALTERNATIVENAME from the element TGENRE.
   - Created three new optional attributes for the root element EVENT: EID, FILENAME, and SUBSET.
@@ -43,7 +46,7 @@
 * MRB: August 2015: Made the following changes:
   - Made the pattern directives optional for the element LG attribute TYPE.
   - Created a new element HEAD.
-   - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE.
+  - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE.
   - Created a new element FIGURE as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE; FIGURE has a child element of FIGDESC, and REFs to child
     elements of GRAPHIC, HEAD, and P.
 * MRB: March 2015: Made the following changes:
@@ -1869,6 +1872,12 @@
                             appearance or content of a graphic figure, for use when documenting an
                             image without displaying it.</a:documentation>
                         <text/>
+                        <ref name="BIBCITS"/>
+                        <ref name="DATE"/>
+                        <ref name="NAME"/>
+                        <ref name="ORGNAME"/>
+                        <ref name="PLACE"/>
+                        <ref name="TITLE"/>
                     </element>
                     <ref name="GRAPHIC"/>
                     <ref name="P"/>

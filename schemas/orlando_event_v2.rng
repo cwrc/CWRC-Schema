@@ -34,6 +34,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: 30-Oct-2016
+  - Revised the element FIGDESC so that in addition to the child element of text, added child elements of BIBCITS, DATE, NAME,
+    ORGNAME, PLACE, TITLE, and XREF.
 * MRB: May 2016: Made the following changes:
   - Created a new annotationId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, DATESTRUCT,
      SCHOLARNOTE, RESEARCHNOTE, BIBCIT, and KEYWORDCLASS; provides a unique annotation identifier for the element bearing the attribute.
@@ -2082,6 +2085,13 @@
                             appearance or content of a graphic figure, for use when documenting an
                             image without displaying it.</a:documentation>
                         <text/>
+                        <ref name="BIBCITS"/>
+                        <ref name="DATE"/>
+                        <ref name="NAME"/>
+                        <ref name="ORGNAME"/>
+                        <ref name="PLACE"/>
+                        <ref name="TITLE"/>
+                        <ref name="XREF"/>
                     </element>
                     <ref name="GRAPHIC"/>
                     <ref name="P"/>

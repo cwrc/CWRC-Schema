@@ -33,6 +33,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: 30-Oct-2016
+  - Revised the element FIGDESC so that in addition to the child element of text, added child elements of BIBCITS, DATE, NAME,
+    ORGNAME, PLACE, and TITLE.
 * MRB: August 2015: Made the following changes:
   - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, DATAITEM, P, and RESEARCHNOTE.
   - Created a new element FIGURE as a child element to the elements CHRONPROSE, DATAITEM, P, and RESEARCHNOTE; FIGURE has a child element of FIGDESC, and
@@ -968,6 +971,12 @@
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FigDesc (description of figure) contains a brief prose description
                             of the appearance or content of a graphic figure, for use when documenting an image without displaying it.</a:documentation>
                         <text/>
+                        <ref name="BIBCITS"/>
+                        <ref name="DATE"/>
+                        <ref name="NAME"/>
+                        <ref name="ORGNAME"/>
+                        <ref name="PLACE"/>
+                        <ref name="TITLE"/>
                     </element>
                     <ref name="GRAPHIC"/>
                     <ref name="P"/>

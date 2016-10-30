@@ -33,6 +33,9 @@
 
 <!-- 
 *** Revisions ***
+* MRB: 30-Oct-2016
+  - Revised the element FIGDESC so that in addition to the child element of text, added child elements of BIBCITS, DATE, NAME,
+    ORGNAME, PLACE, TITLE, and XREF.
 * JCA: 2016-08-25: 
   - add REG to place
 * JCA: 2016-07-29: 
@@ -560,6 +563,13 @@
                             appearance or content of a graphic figure, for use when documenting an
                             image without displaying it.</a:documentation>
                         <text/>
+                        <ref name="BIBCITS"/>
+                        <ref name="DATE"/>
+                        <ref name="NAME"/>
+                        <ref name="ORGNAME"/>
+                        <ref name="PLACE"/>
+                        <ref name="TITLE"/>
+                        <ref name="XREF"/>
                     </element>
                     <ref name="GRAPHIC"/>
                     <ref name="P"/>
