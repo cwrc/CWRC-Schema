@@ -252,22 +252,53 @@ BIBCIT::after {
 /* 2016-09-13 - test: bibcit to show the placeholder tag only */
 /* 2016-09-14 - breaks oxygen - can't see tag contents
 */
-BIBCIT {
-    font-size : 0;
-}
+/* 
+* 2016-10-31
+* display element text in parenthesis 
+* hover popup displays placeholder text
+*/
+BIBCIT {                                                                        
+    display: inline;
+    position: relative;
+}    
 BIBCIT::before {
-    content : url(http://cwrc.ca/templates/images/bibcit.gif);
-}
+    content : "(";
+}    
 BIBCIT::after {
-    content : "(" attr(PLACEHOLDER) ")";
+    content : ")";
+}    
+BIBCIT:hover:before {
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px; 
+    content: "";
+    z-index: 99;
+    position: absolute;
+    left: 50%;
+}    
+BIBCIT:hover:after {
+    content : " (" attr(PLACEHOLDER) ") ";
     font-size : small;
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    padding: 5px 15px;
+    z-index: 98; 
+    position: absolute;
+    left: 20%;
+    /*
+    width: 220px;
+    */
     }
-BIBCITS::after {
-    content : "";
-}
 BIBCITS::before {
     content : " ";
-}
+}    
+BIBCITS::after {
+    content : " ";
+}    
 SCHOLARNOTE::before {
     content : url(http://cwrc.ca/templates/images/note.gif);
     padding-left : 1ex;
