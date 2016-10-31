@@ -278,7 +278,7 @@ BIBCIT:hover:before {
     left: 50%;
 }    
 BIBCIT:hover:after {
-    content : " (" attr(PLACEHOLDER) ") ";
+    content : "" attr(PLACEHOLDER) "";
     font-size : small;
     background: #333;
     background: rgba(0,0,0,.8);
