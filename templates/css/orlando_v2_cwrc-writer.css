@@ -300,8 +300,10 @@ BIBCITS::after {
     content : " ";
 }    
 SCHOLARNOTE::before {
+    /* 
     content : url(http://cwrc.ca/templates/images/note.gif);
     padding-left : 1ex;
+    */
 }
 SCHOLARNOTE P::before {
     content : " [";
