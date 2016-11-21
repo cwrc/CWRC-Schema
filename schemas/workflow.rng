@@ -53,6 +53,9 @@
 				<ref name="attribute-time"/>
 			</optional>
 			<optional>
+				<ref name="attribute-timestamp"/>
+			</optional>
+			<optional>
 				<ref name="attribute-workflowID"/>
 			</optional>
 			<ref name="attribute-userID"/>
@@ -170,6 +173,13 @@
 		</attribute>
 	</define>
 
+	<define name="attribute-timestamp">
+		<attribute name="timestamp">
+			<a:documentation>Timestamp of the activity in ISO 8601 format - YYYY-MM-DDThh:mm:ss.0000UTC. Accuracy: fractional seconds to aid in matching to Fedora Commons version timestamps. Manditory timezone otherwise unsure the timezone of record</a:documentation>
+			<data type="dateTime"/>
+		</attribute>
+	</define>
+	
 	<define name="attribute-workflowID">
 		<attribute name="workflowID">
 			<a:documentation>Attribute workflowID captures a string that identifies a particular workflow (set of processes to be tracked by workflow system) defined by users.</a:documentation>
