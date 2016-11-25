@@ -267,7 +267,7 @@ BIBCIT::before {
 BIBCIT::after {
     content : ")";
 }    
-/* 2016-11-03: remove hover popup - replaced by javascript
+/* 
 BIBCIT:hover:before {
     border: solid;
     border-color: #333 transparent;
@@ -278,6 +278,8 @@ BIBCIT:hover:before {
     position: absolute;
     left: 50%;
 }    
+*/
+/* 2016-11-03: remove hover popup - replaced by javascript
 BIBCIT:hover:after {
     content : "" attr(PLACEHOLDER) "";
     font-size : small;
@@ -290,9 +292,7 @@ BIBCIT:hover:after {
     z-index: 98; 
     position: absolute;
     left: 0%;
-    /*
     width: 220px;
-    */
     }
     */
 BIBCITS::before {
