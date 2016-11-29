@@ -1,17 +1,18 @@
-*{
+CWRC{
     color:black;
     font-family:sans-serif;
-    background-color:#FFFAF0
+    background-color:#fffcf5
 }
 
 RESEARCHNOTE{
-    background-color:#FBEFEF;
+    background-color:#fffcf5;
     color:#663366;
-    font-family:Arial, Helvetica, sans-serif;
     font-size:smaller;
+    text-align:center;
     display:block;
-    margin:0%;
-    padding:0%
+    margin-left:8em;
+    margin-right:8em;
+    padding:1em
 }
 
 
@@ -25,15 +26,11 @@ FILEDESC,
 DOCTITLE,
 DOCAUTHOR
 {
-    display:list-item
+    display:none
 }
 
-FILEDESC{
-    content:url(http://cwrc.ca/templates/images/CWRC_logo.png);
-    background-color:#B8B891;
-    color:#555;
-    font-weight:normal;
-}
+
+
 DOCTITLE{
     font-variant:small-caps;
     font-size:x-large;
@@ -57,103 +54,43 @@ ENTRY{
     margin-left:2.5em
 }
 
+ENTRY FRONT DATASTRUCT DATAITEM + DATAITEM 
+{
+    display:compact;
+    font-size:smaller;
+    text-align:center
+}
+
+ENTRY FRONT DATASTRUCT DATAITEM FIGURE
+{
+    display:block;
+    text-align:center;
+    border:thin solid white;
+    margin:0.5em;
+    padding:0.5em;
+    max-width:480px
+}
+
 
 P 
 {
     padding-bottom:1%;
     display:block;
-    margin-left:2em
+    margin-left:2em;
+    margin-right:1em
 }
 
 
-HEADING[SUBTYPE = "1"]{
-    color:#af1100;
-    font-size:xx-large;
-    font-weight:bold
-}
-
-BIRTH:before{
-    content:"Birth: ";
-    font-weight:bold
-}
-
-BIRTH,
-DEATH,
-PERSONNAME{
-    display:block;
-    padding-top:1em
-}
-
-AUTHORSUMMARY PERSONNAME DATASTRUCT DATAITEM:first-child
+FRONT P
 {
-    display:inline-block
-}
-
-PERSONNAME DATASTRUCT DATAITEM{
-    display:block;
-    margin-left:2em
-}
-
-DEATH:before{
-    content:"Death: ";
-    font-weight:bold
-}
-
-HEADING[SUBTYPE = "5"]{
-    display:inline;
-    font-weight:bold
-}
-
-HEADING[SUBTYPE = "2"]{
-    color:#af1100;
-    display:block;
-    font-size:x-large;
-    font-weight:bold;
-    padding-top:1em;
-    padding-bottom:1em
-}
-HEADING[SUBTYPE = "1"] NAME, HEADING[SUBTYPE = "2"] NAME{
-    color:#af1100
-}
-
-
-HEADING[SUBTYPE = "4"]
-{
-    font-weight:bold;
-    display:block;
-    font-size:medium;
-}
-
-FRONT P{
     display:block;
     font-style:italic;
 }
 
 
-
-AUTHORSUMMARY P:first-child
+FRONT P + P
 {
-    text-align:center;
-    display:block;
-    border:solid;
-    padding:3mm;
-    border-radius:2mm;
-    border-width:0.4mm;
-    border-color:#af1100
-    }
-
-AUTHORSUMMARY:nth-of-type(1){
-    display:block; 
-    padding:1em; 
-    padding-left:15%; 
-    padding-right:15%;
-    text-align:center}
-    
-AUTHORSUMMARY P{
-    display:block
-}
-
-FRONT P + P{
+    font-size:smaller;
     display:block;
     text-align:right;
     padding-left:2em;
@@ -161,7 +98,42 @@ FRONT P + P{
     font-style:normal
 }
 
-HEADING[SUBTYPE = "3"]{
+FIGURE
+{
+    text-align:center;
+    display:block;
+    margin:0.5em;
+    padding:0.5em  
+}
+
+
+
+
+HEADING[SUBTYPE = "1"]
+{
+    text-align:center;
+    font-size:xx-large;
+    font-weight:bold;
+    color:#7c1a0f;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    display:block
+}
+
+HEADING[SUBTYPE = "2"],
+HEADING[SUBTYPE = "2"] NAME
+{
+    font-weight:bold;
+    color:#7c1a0f;
+    display:inline-block;
+    font-size:x-large;
+    font-weight:bold;
+    padding-top:1em;
+    padding-bottom:1em
+}
+
+HEADING[SUBTYPE = "3"]
+{
     display:block;
     font-size:large;
     font-weight:bold;
@@ -173,7 +145,89 @@ HEADING[SUBTYPE = "2"] + HEADING[SUBTYPE = "3"]{
     padding-top:0em
 }
 
-LISTBIBCIT BIBCIT{
+HEADING[SUBTYPE = "4"]
+{
+    font-weight:bold;
+    display:block;
+    font-size:medium;
+}
+
+HEADING[SUBTYPE = "5"]
+{
+    display:inline;
+    font-weight:bold
+}
+
+
+
+
+AUTHORSUMMARY P
+{
+    display:block
+}
+
+AUTHORSUMMARY P:first-child
+{
+    font-size:medium;
+    text-align:center;
+    display:block;
+    border:solid;
+    padding:3mm;
+    border-radius:2mm;
+    border-width:0.4mm;
+    border-color:#7c1a0f
+}
+
+AUTHORSUMMARY:nth-of-type(1)
+{
+    font-size:smaller;
+    display:block; 
+    padding:1em; 
+    padding-left:15%; 
+    padding-right:15%;
+    text-align:center
+    }
+    
+
+AUTHORSUMMARY PERSONNAME DATASTRUCT DATAITEM:first-child
+{
+    display:inline-block
+}
+
+PERSONNAME DATASTRUCT DATAITEM
+{
+    display:block;
+    margin-left:2em
+}
+
+BIRTH:before
+{
+    content:"Birth: ";
+    font-weight:bold
+}
+
+BIRTH,
+DEATH,
+PERSONNAME
+{
+    display:block;
+    padding-top:1em
+}
+
+DEATH:before
+{
+    content:"Death: ";
+    font-weight:bold
+}
+
+
+
+
+
+
+
+LISTBIBCIT BIBCIT
+{
     display:block;
     margin-left:4em;
     text-indent:-2em;
@@ -185,49 +239,57 @@ TITLE[LEVEL = "JOURNAL"]{font-style:italic}
 TITLE[LEVEL = "UNPUBLISHED"]{font-style:italic}
 TITLE[LEVEL = "ANALYTIC"]:before, TITLE[LEVEL = "ANALYTIC"]:after{content:'"'}
 
-FAMILYMEMBER{
+FAMILYMEMBER
+{
     display:block
 }
 
-FAMILYMEMBER[RELATION = "FATHER"] HEADING:before{
+FAMILYMEMBER[RELATION = "FATHER"] HEADING:before
+{
     content:"Father: ";
     font-weight:bold
 }
 
-FAMILYMEMBER[RELATION = "MOTHER"] HEADING:before{
+FAMILYMEMBER[RELATION = "MOTHER"] HEADING:before
+{
     content:"Mother: ";
     font-weight:bold
 }
 
-FAMILYMEMBER[RELATION = "HUSBAND"] HEADING:first-child:before{
+FAMILYMEMBER[RELATION = "HUSBAND"] HEADING:first-child:before
+{
     content:"Spouse: ";
     font-weight:bold
 }
 
 FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT,
-FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT{
+FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT
+{
     display:inline-block;
-    padding-bottom:1em
+    padding-bottom:1em;
+    padding-top:1em
 }
 
 FAMILYMEMBER[RELATION = "MOTHER"] CHRONPROSE,
-FAMILYMEMBER[RELATION = "FATHER"] CHRONPROSE{
+FAMILYMEMBER[RELATION = "FATHER"] CHRONPROSE
+{
     font-weight:bold;
     display:inline-block;
     font-size:medium;
-    margin-bottom:1em
 }
 
 
 FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT DATERANGE
-FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT DATERANGE{
+FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT DATERANGE
+{
     font-weight:normal;
     display:inline-block;
     font-size:medium
 }
 
 FAMILYMEMBER[RELATION = "FATHER"] CHRONSTRUCT DATE
-FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT DATE{
+FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT DATE
+{
     font-weight:normal;
     display:inline-block;
     font-size:medium
@@ -235,18 +297,20 @@ FAMILYMEMBER[RELATION = "MOTHER"] CHRONSTRUCT DATE{
 
 
 FAMILYMEMBER[RELATION = "MOTHER"] DATASTRUCT,
-FAMILYMEMBER[RELATION = "FATHER"] DATASTRUCT{
+FAMILYMEMBER[RELATION = "FATHER"] DATASTRUCT
+{
     display:block;
     font-weight:bold;
-    font-size:medium
+    font-size:medium;
+    padding-bottom:1em
 }
 
 FAMILYMEMBER[RELATION = "MOTHER"] DATAITEM NAME,
-FAMILYMEMBER[RELATION = "FATHER"] DATAITEM NAME{
+FAMILYMEMBER[RELATION = "FATHER"] DATAITEM NAME
+{
     font-weight:bold;
     display:inline-block;
-    font-size:medium;
-    margin-bottom:1em
+    font-size:medium
 }
 
 EDUCATION P,
@@ -254,12 +318,17 @@ RECEPTION P,
 OCCUPATION P,
 OTHERLIFEEVENT P,
 RESIDENCEANDMOBILITY P
-AWARDS P{
+AWARDS P
+{
    display:block;
    margin-left:2em; 
    padding-right:5em
 }
 
+FAMILY HEADING[SUBTYPE = "4"]
+{
+    padding-top:1em    
+}
 
 FAMILYMEMBER[RELATION = "HUSBAND"] HEADING[SUBTYPE = "5"]
 {
@@ -278,11 +347,13 @@ FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT:first-child
     padding-top:1em
 }
 
-FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT DATERANGE{
+FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT DATERANGE
+{
     font-weight:normal
 }
 
-FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT DATE{
+FAMILYMEMBER[RELATION = "HUSBAND"] CHRONSTRUCT DATE
+{
     font-weight:normal
 }
 
@@ -342,24 +413,30 @@ FAMILYMEMBER[RELATION = "STEPDAUGHTER"] HEADING[SUBTYPE = "4"]
     margin-left:2em
 }
 
-CULTURALFORMATION RELIGION DENOMINATION{
+CULTURALFORMATION RELIGION DENOMINATION
+{
    display:block;
    margin-left:2em; 
    padding-right:5em;
    padding-bottom:1em
 }
 
-AWARDS RECEPTION P{
+AWARDS RECEPTION P
+{
    display:block;
    margin-left:2em; 
    padding-right:5em
 }
 
-EMPH{
+EMPH
+{
     font-style:italic
 }
 
-OTHERLIFEEVENT DATASTRUCT {display:block}
+OTHERLIFEEVENT DATASTRUCT 
+{
+     display:block
+}
 
 OTHERLIFEEVENT DATASTRUCT DATAITEM
 {
