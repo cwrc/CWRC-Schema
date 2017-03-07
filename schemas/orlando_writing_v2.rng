@@ -374,13 +374,14 @@
                                 the name under which she wrote or the name chosen as standard by the
                                     <em>Feminist Companion</em> or the <em>Drabble Oxford
                                     Companion</em>.</a:documentation>
-                            <attribute name="REF">
-                                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                                    Ref (or reference) provides an explicit means of locating a full definition
-                                    for the entity being named by means of a URI.</a:documentation>
-                                 <data type="anyURI"/>
-                            </attribute>
-                            <text/>
+                            <optional>                            
+                                <attribute name="REF">
+                                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                                        Ref (or reference) provides an explicit means of locating a full definition
+                                        for the entity being named by means of a URI.</a:documentation>
+                                     <data type="anyURI"/>
+                                </attribute>
+                            </optional>                                           <text/>
                         </element>
                         <element name="WORKSCITED">
                             <a:documentation
