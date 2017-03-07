@@ -812,6 +812,14 @@
                                     <value>WROTEPUBLISHEDASYES</value>
                                 </attribute>
                             </optional>
+                            <optional>                            
+                                <attribute name="REF">
+                                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                                        Ref (or reference) provides an explicit means of locating a full definition
+                                        for the entity being named by means of a URI.</a:documentation>
+                                     <data type="anyURI"/>
+                                </attribute>
+                            </optional>                            
                             <text/>
                         </element>
                         <element name="WORKSCITED">
