@@ -73,6 +73,7 @@ back {
 bibl {
     display : inline;
 }
+
 div[type="works"] {
     text-indent: -2em;
     margin:0 0 0 2em;
@@ -124,6 +125,12 @@ listBibl > biblFull > biblFull,
 taxonomy > biblFull {
     display : block;
     margin-bottom : 0.5em;
+}
+listBibl > bibl {
+    display : block;
+    margin-left : 2em;
+    margin-bottom : 0.5em;
+    text-indent : -2em
 }
 biblScope {
     display : inline;
@@ -734,6 +741,12 @@ note[place = "right"] {
 note[place = "inline"],
 note[place = "unspecified"] {
     display : inline;
+}
+note[place = "inline"]:before {
+    content: '('
+}
+note[place = "inline"]:after {
+    content: ')'
 }
 notesStmt {
     display : block;
