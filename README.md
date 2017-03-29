@@ -2,7 +2,7 @@
 #CWRC Schema and Templates 
 ================
 
-CWRC Schemas and supporting documents
+CWRC Schemas and supporting documents.
 
 ## Contents
 
