@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listPerson>
+            <person sameAs="" sex="f">
+               <idno></idno>
+               <persName type="prefered">
+                  <name type="forename">Mihaela</name>
+                  <name type="middlename">Viorica</name>
+                  <name type="surname">Ilovan</name>
+                  <genName>the third</genName>
+                  <reg>Ilovan, Mihaela</reg>
+               </persName>
+               <persName type="variant">
+                  <name type="forename">Mihaela</name>
+                  <name type="middlename">Viorica</name>
+                  <name type="surname">Ilovan</name>
+                  <note>
+                     <label>Contributing project: </label>
+                     <desc>
+                        <orgName sameAs=""></orgName>
+                     </desc>
+                  </note>
+               </persName>
+               <birth>
+                  <date cert="high" precision="high"></date>
+                  <note></note>
+               </birth>
+               <death>
+                  <date cert="high" precision="low" notBefore="2017-07-21">?</date>
+                  <note></note>
+               </death>
+               <trait type="factuality"></trait>
+               <occupation></occupation>
+
+               <note></note>
+               <respons locus="name">
+                  <desc>
+                     <date type="created" resp="userID"></date>
+                     <orgName sameAs=""></orgName>
+                  </desc>
+                  <desc><date type="created" resp="userID"></date>
+                     <orgName sameAs=""></orgName></desc>
+               </respons>
+               <respons locus="name"></respons>
+            </person>
+         </listPerson>
+      </body>
+   </text>
+</TEI>
