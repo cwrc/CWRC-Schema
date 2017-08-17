@@ -6,13 +6,14 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Title</title>
+            <title>First Name Middle Name Last Name</title>
          </titleStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <publisher>Canadian Writing Research Collaboratory</publisher>
          </publicationStmt>
+         <notesStmt><note>Person entity record</note></notesStmt>
          <sourceDesc>
-            <p>Information about the source</p>
+            <p>born digital</p>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
@@ -22,44 +23,47 @@
             <person sameAs="" sex="f">
                <idno></idno>
                <persName type="prefered">
-                  <name type="forename">Mihaela</name>
-                  <name type="middlename">Viorica</name>
-                  <name type="surname">Ilovan</name>
-                  <genName>the third</genName>
-                  <reg>Ilovan, Mihaela</reg>
+                  <name type="forename">Forename</name>
+                  <name type="middlename">Middle Name</name>
+                  <name type="surname">Last Name</name>
+                  <genName>(e.g. the IIIrd, senior, junior, etc.)</genName>
+                  <roleName>offical title or rank</roleName>
                </persName>
                <persName type="variant">
-                  <name type="forename">Mihaela</name>
-                  <name type="middlename">Viorica</name>
-                  <name type="surname">Ilovan</name>
+                  <name type="forename">Forename</name>
+                  <name type="middlename">Middle Name</name>
+                  <name type="surname">Last Name 2</name>
+                  <genName>(e.g. the IIIrd, senior, junior, etc.)</genName>
+                  <roleName>offical title or rank</roleName>
                   <note>
-                     <label>Contributing project: </label>
+                     <label>Named prefered by: </label>
                      <desc>
-                        <orgName sameAs=""></orgName>
+                        <orgName sameAs="">Name of the project that uses the variant name</orgName>
                      </desc>
                   </note>
                </persName>
+               <persName><reg>Last Name, First Name <!--(manually inputed in the form)--></reg></persName>
                <birth>
-                  <date cert="high" precision="high"></date>
-                  <note></note>
+                  <date cert="high" precision="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of birth</placeName>
+                  
                </birth>
                <death>
-                  <date cert="high" precision="low" notBefore="2017-07-21">?</date>
-                  <note></note>
+                  <date cert="high" precision="low" notBefore="2017-07-21">? <!--format for living persons; for dead persons, structure the same as for D.O.B.--></date>
+                  
                </death>
-               <trait type="factuality"></trait>
-               <occupation></occupation>
-
-               <note></note>
-               <respons locus="name">
+               <floruit><date from-iso="2000-10-30" to-iso="2000-10-30"></date><note></note></floruit>
+               <note>General note re person.</note>
+               <trait type="factuality"><ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab></trait>
+               <nationality>Nationality (zero or more)</nationality>
+               <occupation>Ocupation (zero or more)</occupation>
+              <respons locus="name"><!-- New resp tag added for each entity modification -->
                   <desc>
-                     <date type="created" resp="userID"></date>
-                     <orgName sameAs=""></orgName>
+                     <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
+                     <orgName sameAs="">Project (CWRC, Reed, Orlando)</orgName>
                   </desc>
-                  <desc><date type="created" resp="userID"></date>
-                     <orgName sameAs=""></orgName></desc>
                </respons>
-               <respons locus="name"></respons>
+               <respons locus="name"><desc><date type="modified" resp="userID"></date>
+                  <orgName sameAs=""></orgName></desc></respons>
             </person>
          </listPerson>
       </body>
