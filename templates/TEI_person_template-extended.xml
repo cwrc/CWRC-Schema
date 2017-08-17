@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>First Name Middle Name Last Name</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Canadian Writing Research Collaboratory</publisher>
+         </publicationStmt>
+         <notesStmt><note>Person entity record</note></notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listPerson>
+            <person sameAs="" sex="f">
+               <idno></idno>
+               <persName type="prefered">
+                  <name type="forename">Forename</name>
+                  <name type="middlename">Middle Name</name>
+                  <name type="surname">Last Name</name>
+                  <genName>(e.g. the IIIrd, senior, junior, etc.)</genName>
+                  <roleName>offical title or rank</roleName>
+               </persName>
+               <persName type="variant">
+                  <name type="forename">Forename</name>
+                  <name type="middlename">Middle Name</name>
+                  <name type="surname">Last Name 2</name>
+                  <note>
+                     <label>Named prefered by: </label>
+                     <desc>
+                        <orgName sameAs="">Name of the project that uses the variant name</orgName>
+                     </desc>
+                  </note>
+               </persName>
+               <persName><reg>Last Name, First Name <!--(manually inputed in the form)--></reg></persName>
+               <birth>
+                  <date cert="high" precision="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of birth</placeName>
+                  <note>Additional info re. birth</note>
+               </birth>
+               <death>
+                  <date cert="high" precision="low" notBefore="2017-07-21">? <!--format for living persons; for dead persons, structure the same as for D.O.B.--></date>
+                  <note>Additional info re. death</note>
+               </death>
+               <floruit><date from-iso="2000-10-30" to-iso="2000-10-30"></date><note></note></floruit>
+               <note>General note re person.</note>
+               <trait type="factuality"><ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, both--></ab></trait>
+               <nationality>Nationality (zero or more)</nationality>
+               <education>Nationality (zero or more)</education>
+               <occupation>Nationality (zero or more)</occupation>
+               <langKnowledge><langKnown tag="">Language (zero or more)</langKnown></langKnowledge>
+               <faith>Faith (zero or more)</faith>
+               <event><!--one or more --><label>significant event associated with the person</label><desc>more detailed description of the event</desc></event>
+               
+               <respons locus="name"><!-- New resp tag added for each entity modification -->
+                  <desc>
+                     <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
+                     <orgName sameAs="">Project (CWRC, Reed, Orlando)</orgName>
+                  </desc>
+               </respons>
+               <respons locus="name"><desc><date type="modified" resp="userID"></date>
+                  <orgName sameAs=""></orgName></desc></respons>
+            </person>
+         </listPerson>
+      </body>
+   </text>
+</TEI>
