@@ -8,6 +8,6 @@ CWRC Schemas and supporting documents.
 
 * CWRC Schemas
 * CWRC XML templates and CSS files
-* Namspaces
+* Namespaces
 * Ontologies
 * Terms
