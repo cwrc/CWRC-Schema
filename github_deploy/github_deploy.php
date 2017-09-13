@@ -4,7 +4,8 @@
 // https://jonathanstark.com/blog/deploying-code-automatically-with-github-webhooks
 
 // Init vars
-$LOCAL_ROOT         = "/data2/www/cwrc/WEB_ROOT";
+//$LOCAL_ROOT         = "/data2/www/cwrc/WEB_ROOT";
+$LOCAL_ROOT         = "/data/opt/cwrc";
 $LOCAL_REPO_NAME    = "CWRC-Schema";
 $LOCAL_REPO         = "{$LOCAL_ROOT}/{$LOCAL_REPO_NAME}";
 $REMOTE_REPO        = "https://github.com/cwrc/CWRC-Schema.git";
