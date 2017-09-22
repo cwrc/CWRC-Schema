@@ -42,7 +42,7 @@
                      </desc>
                   </note>
                </persName>
-               <persName><reg>Last Name, First Name <!--(manually inputed in the form)--></reg></persName>
+               <persName type="standard"><name>Last Name, First Name </name></persName>
                <birth>
                   <date cert="high" precision="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of birth</placeName>
                   
@@ -56,13 +56,13 @@
                <trait type="factuality"><ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab></trait>
                <nationality>Nationality (zero or more)</nationality>
                <occupation>Ocupation (zero or more)</occupation>
-              <respons locus="name"><!-- New resp tag added for each entity modification -->
+              <respons locus="value"><!-- New resp tag added for each entity modification -->
                   <desc>
                      <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
                      <orgName sameAs="">Project (CWRC, Reed, Orlando)</orgName>
                   </desc>
                </respons>
-               <respons locus="name"><desc><date type="modified" resp="userID"></date>
+               <respons locus="value"><desc><date type="modified" resp="userID"></date>
                   <orgName sameAs=""></orgName></desc></respons>
             </person>
          </listPerson>

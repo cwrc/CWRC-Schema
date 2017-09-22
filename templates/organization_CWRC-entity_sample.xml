@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://cwrc.ca/schemas/entities.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="http://cwrc.ca/templates/css/entity_style.css"?>
+<cwrc>
+    <entity>
+        <organization>
+            <recordInfo>
+                <accessCondition type="use and reproduction"></accessCondition>
+                <originInfo>
+                    <recordChangeDate>2015-07-15</recordChangeDate>
+                    <recordCreationDate>2015-06-29</recordCreationDate>
+                    <projectId>cwrc</projectId>
+                </originInfo><orgTypes><orgType>academic</orgType></orgTypes>
+            </recordInfo>
+            <identity>
+                <preferredForm>
+                    <namePart>Test CWRC Organization Entity</namePart>
+                </preferredForm>
+                <displayLabel>TOE CWRC</displayLabel>
+                <variantForms>
+                    <variant>
+                        <namePart>T-CWRC-OE</namePart>
+                        <variantType>acronym</variantType>
+                        <authorizedBy><projectId>cwrc</projectId></authorizedBy>
+                    </variant>
+                </variantForms>
+                <sameAs cert="1">URI
+                </sameAs>
+            </identity>
+            <description>
+                <existDates>
+                    <dateSingle cert="1">
+                        <standardDate qualifier="approximate">2017-01</standardDate>
+                        <dateType>establishment</dateType>
+                        <note>Note re founding date</note>
+                    </dateSingle>
+                    <dateSingle>
+                        <standardDate qualifier="approximate">2017-09-01</standardDate><dateType>dissolution</dateType><note>Note re founding date</note>
+                    </dateSingle>
+                </existDates>
+                <factuality>fictional</factuality>
+                <descriptiveNotes><note>This is a general note about the organization</note></descriptiveNotes><relatedResources><resource>Source of the information</resource></relatedResources>
+            </description>
+        </organization>
+    </entity>
+</cwrc>
