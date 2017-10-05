@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://cwrc.ca/schemas/entities.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<entity>
+    <place>
+        <recordInfo>
+            <accessCondition type="use and reproduction">Use of this public-domain resource is governed by the <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Attribution-NonCommercial 4.0 International License</a>.</accessCondition>
+            <originInfo>
+                <recordCreationDate>2017-10-04</recordCreationDate>
+                <recordChangeDate>2017-10-04</recordChangeDate>
+                <projectId>cwrc</projectId>
+            </originInfo>
+            <placeTypes>
+                <placeType>currentHumanPlace</placeType>
+            </placeTypes>
+        </recordInfo>
+        <identity>
+            <preferredForm>
+                <namePart>Omega Farm Test</namePart>
+            </preferredForm>
+            <variantForms>
+                <variant>
+                    <namePart>Test place entity</namePart>
+                    <variantType>alternate names</variantType>
+                    <authorizedBy>
+                        <projectId>cwrc</projectId>
+                    </authorizedBy>
+                </variant>
+            </variantForms>
+            <sameAs cert="4">alternate URI</sameAs>
+        </identity>
+        <description>
+            <existDates>
+                <dateSingle cert="4">
+                    <standardDate qualifier="approximate">2016</standardDate>
+                    <dateType>establishment</dateType>
+                    <note>Note about the establishment</note>
+                </dateSingle>
+                <dateSingle cert="4">
+                    <standardDate qualifier="inferred">2017</standardDate>
+                    <dateType>dissolution</dateType>
+                    <note>Note about disolution</note>
+                </dateSingle>
+            </existDates>
+            <factuality>real</factuality>
+            <latitude>53.55014</latitude>
+            <longitude>-113.46871</longitude>
+            <featureClass>Populated Place Feature</featureClass>
+            <featureCodeLabel>seat of a first-order administrative division</featureCodeLabel>
+            <countryName>Canada</countryName>
+            <firstAdministrativeDivision>Alberta</firstAdministrativeDivision>
+            <secondAdministrativeDivision>Edmonton Region</secondAdministrativeDivision>
+            <elevation>650</elevation>
+            <averageElevation>643</averageElevation>
+            <timeZoneOffset>-7.0</timeZoneOffset>
+            <descriptiveNotes>
+                <note>General note about the place</note>
+            </descriptiveNotes>
+            <relatedResources>
+                <resource>Resource one</resource>
+            </relatedResources>
+        </description>
+    </place>
+</entity>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Organization standard Name</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Canadian Writing Research Collaboratory</publisher>
+         </publicationStmt>
+         <notesStmt>
+            <note>Organization entity record</note>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listPlace>
+            <place sameAs="">
+               <idno></idno>
+               <place type="standard">
+                  <placeName type="standard">
+                     <name>CWRC Organization Entity, Test</name>
+                  </placeName>
+                  <placeName type="prefered">
+                     <name>Test CWRC Place Entity</name>
+                  </placeName>
+                  <placeName type="variant">
+                     <name>Old name for the place</name>
+                     <note>
+                        <label>Named prefered by: </label>
+                        <desc>
+                           <orgName sameAs="">Name of the project that uses the variant name</orgName>
+                        </desc>
+                     </note>
+                  </placeName>
+
+                  <desc>
+                     <date type="establishment">
+                        <date from-iso="2017-01" cert="high">2017-01</date>
+                        <note>Note about the establishment</note>
+                     </date>
+                     <date type="dissolution">
+                        <date to-iso="2017-09-01" cert="high">2017-09-01</date>
+                        <note>Note about disolution</note>
+                     </date>
+                     <trait type="factuality"><ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab></trait>
+                  </desc>
+                  <location>
+                     <country nymRef="ISO 3166-1">Thre letter code for country, picked from dropdown</country>
+                     <region>Region name</region>
+                     <geo decls="#WGS">53.226658 -0.541254</geo>
+                  </location>
+                  <note type="general"> This is a general note about the place. </note>
+                  <note type="project-specific">
+                     <note>This is a project-specific note about the place.</note>
+                     <respons locus="value">
+                        <desc>
+                           <orgName sameAs="">Project (CWRC, Reed, Orlando)</orgName>
+                        </desc>
+                     </respons>
+                  </note>
+                  <note type="resp_statement">
+                     <respons locus="value">
+                        <!-- New resp tag added for each entity modification -->
+                        <desc>
+                           <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
+                           <orgName sameAs="">Project (CWRC, Reed, Orlando)</orgName>
+                        </desc>
+                     </respons>
+                  </note>
+               </place>
+
+
+            </place>
+         </listPlace>
+      </body>
+   </text>
+</TEI>

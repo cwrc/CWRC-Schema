@@ -45,17 +45,25 @@
                <persName type="standard"><name>Last Name, First Name </name></persName>
                <birth>
                   <date cert="high" precision="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of birth</placeName>
-                  
+               <note></note>   
                </birth>
                <death>
                   <date cert="high" precision="low" notBefore="2017-07-21">? <!--format for living persons; for dead persons, structure the same as for D.O.B.--></date>
-                  
+               <note></note>   
                </death>
                <floruit><date from-iso="2000-10-30" to-iso="2000-10-30"></date><note></note></floruit>
-               <note>General note re person.</note>
                <trait type="factuality"><ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab></trait>
                <nationality>Nationality (zero or more)</nationality>
                <occupation>Ocupation (zero or more)</occupation>
+               <note type="general"> This is a general note about the person. </note>
+               <note type="project-specific">
+                  <note>This is a project-specific note about the person.</note>
+                  <respons locus="value">
+                     <desc>
+                        <orgName sameAs="">Project (CWRC, REED, Orlando)</orgName>
+                     </desc>
+                  </respons>
+               </note>
               <respons locus="value"><!-- New resp tag added for each entity modification -->
                   <desc>
                      <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
