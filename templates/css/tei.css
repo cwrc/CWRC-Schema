@@ -770,15 +770,32 @@ p {
     margin-bottom : 0.5em;
 }
 pb {
-    display : block;
+	display: block;
 }
+pb:before {
+	content: '\00a0';
+	box-shadow: 0px 1em 0px 1px #000;
+}
+pb:after {
+	content: attr(n);
+	box-shadow: 5em 1em 0px 1px #000;
+	text-indent: 30px;
+}
+pb:before, pb:after {
+    display: inline-block;
+    height: 0px;
+    width: 35%;
+    position: relative;
+    left: 10%;
+}/*
+
 pb:after {
     content : attr(n);
     font-weight : bold;
     margin-bottom : 1em;
     margin-top : 1em;
     text-align : center;
-}
+}*/
 div persName, div placeName, div orgName, div title {
     color: #336699;
 }
