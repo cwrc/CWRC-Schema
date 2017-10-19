@@ -50,11 +50,16 @@
                         <date to-iso="2017-09-01" cert="high">2017-09-01</date>
                         <note>Note about disolution</note>
                      </date>
-                     <trait type="factuality"><ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab></trait>
+                     <trait type="factuality">
+                        <ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
+                     </trait>
                   </desc>
                   <location>
-                     <country nymRef="ISO 3166-1">Three letter code for country, picked from dropdown</country>
-                     <region>Region name</region>
+                     <address>
+                        <country nymRef="ISO 3166-1">Three letter code for country, picked from dropdown</country>
+                        <region>Region name</region>
+                        <addrLine></addrLine>
+                     </address>
                      <geo decls="#WGS">53.226658 -0.541254</geo>
                   </location>
                   <note type="general"> This is a general note about the place. </note>
@@ -66,7 +71,8 @@
                         </desc>
                      </respons>
                   </note>
-                  <listBibl><head>Sources:</head>
+                  <listBibl>
+                     <head>Sources:</head>
                      <bibl></bibl>
                   </listBibl>
                   <note type="resp_statement">
