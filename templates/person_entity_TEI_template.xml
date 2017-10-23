@@ -10,6 +10,11 @@
          </titleStmt>
          <publicationStmt>
             <publisher>Canadian Writing Research Collaboratory</publisher>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <p></p>
+               </licence>
+            </availability>
          </publicationStmt>
          <notesStmt><note>Person entity record</note></notesStmt>
          <sourceDesc>
@@ -23,14 +28,14 @@
             <person sameAs="" sex="f">
                <idno></idno>
                <persName type="standard"><name>Last Name, First Name </name></persName>
-               <persName type="prefered">
+               <persName type="prefered" xml:lang="ENG">
                   <name type="forename">Forename</name>
                   <name type="middlename">Middle Name</name>
                   <name type="surname">Last Name</name>
                   <genName>(e.g. the IIIrd, senior, junior, etc.)</genName>
                   <roleName>offical title or rank</roleName>
                </persName>
-               <persName type="variant">
+               <persName type="variant" role="variant_name_type" xml:lang="ENG">
                   <name type="forename">Forename</name>
                   <name type="middlename">Middle Name</name>
                   <name type="surname">Last Name 2</name>
@@ -51,11 +56,11 @@
                   <date cert="high" precision="low" notBefore="2017-07-21">? <!--format for living persons; for dead persons, structure the same as for D.O.B.--></date>, <placeName>Place of death</placeName>
                <note></note>   
                </death>
-               <floruit><date from-iso="2000-10-30" to-iso="2000-10-30"></date><note></note></floruit>
-               <trait type="factuality"><ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab></trait>
-               <nationality>Nationality (zero or more)</nationality>
-               <occupation>Ocupation (zero or more)</occupation>
-               <note type="general"> This is a general note about the person. </note>
+               <floruit><date ></date><note></note></floruit>
+               <trait type="factuality" cert="high"><ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab></trait>
+               <nationality cert="high">Nationality (zero or more)</nationality>
+               <occupation cert="high">Ocupation (zero or more)</occupation>
+               <note type="general" xml:lang="ENG"> This is a general note about the person. </note>
                <note type="project-specific">
                   <note>This is a project-specific note about the person.</note>
                   <respons locus="value">
