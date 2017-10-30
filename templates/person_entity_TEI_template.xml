@@ -28,7 +28,7 @@
       <body>
          <listPerson>
             <person sex="f">
-               <idno type="VIAF" cert="high">VIAF URI</idno>
+               <idno type="Authority_name" cert="high">VIAF URI</idno>
                <persName type="standard">
                   <name>Last Name, First Name </name>
                </persName>
@@ -52,8 +52,8 @@
                      </desc>
                   </note>
                </persName>
-               <birth> <date cert="high" precision="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of birth</placeName> <note></note> </birth>
-               <death> <date cert="high" precision="low" notBefore="2017-07-21">? <!--format for living persons; for dead persons, structure the same as for D.O.B.--></date>, <placeName>Place of death</placeName> <note></note> </death>
+               <birth> <date cert="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of birth</placeName> <note></note> </birth>
+               <death> <date cert="high" notBefore="2017-07-21">? <!--format for living persons; for dead persons, structure the same as for D.O.B.--></date>, <placeName>Place of death</placeName> <note></note> </death>
                <floruit>
                   <date></date>
                   <note></note>
@@ -63,24 +63,23 @@
                </trait>
                <nationality cert="high" ref="http://sparql.cwrc.ca/ontology/cwrc.html">Nationality (zero or more)</nationality>
                <occupation cert="high">Ocupation (zero or more)Use Orlando picklist values</occupation>
-               <note type="general" xml:lang="ENG"> This is a general note about the person. </note>
-               <note type="project-specific">
+               <note type="general" xml:lang="ENG"> This is a general note about the person.</note>
+               <note type="project-specific" xml:lang="ENG">
                   <note>This is a project-specific note about the person.</note>
                   <respons locus="value">
                      <desc>
-                        <orgName ref="URI">Project (CWRC, REED, Orlando)</orgName>
+                        <orgName ref="URI">Project (e.g.CWRC, REED, Orlando)</orgName>
                      </desc>
                   </respons>
                </note>
                <listBibl>
                   <head>Sources:</head>
-                  <bibl></bibl>
+                  <bibl><title></title><idno type="WorldCat"></idno></bibl>
                </listBibl>
                <respons locus="value">
                   <!-- New resp tag added for each entity modification -->
                   <desc>
                      <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
-                     <orgName ref="URI">Project (CWRC, Reed, Orlando)</orgName>
                   </desc>
                </respons>
             </person>

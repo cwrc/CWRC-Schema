@@ -10,6 +10,10 @@
          </titleStmt>
          <publicationStmt>
             <publisher>Canadian Writing Research Collaboratory</publisher>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <p></p>
+               </licence></availability>
          </publicationStmt>
          <notesStmt>
             <note>Organization entity record</note>
@@ -22,53 +26,58 @@
    <text>
       <body>
          <listOrg>
-            <org sameAs="" type="oranization_type">
+            <org>
                <!-- organization type taxonomy enforced through dialogs -->
-               <idno></idno>
-               <orgName type="prefered">
-                  <name>Test CWRC Organization Entity</name>
+               <idno type="Authority_name" cert="high"/>
+               <orgName type="standard">
+                  <name>CWRC Organization Entity, Test</name>
                </orgName>
-               <orgName type="variant">
+               <orgName type="prefered" xml:lang="ENG">
+                  <name type="full">Test CWRC Organization Entity</name>
+               </orgName>
+               <orgName type="variant" xml:lang="ENG">
                   <name type="acronym">TOE CWRC</name>
                   <note>
                      <label>Named preferred by: </label>
                      <desc>
-                        <orgName sameAs="">Name of the project that uses the variant name</orgName>
+                        <orgName ref="URI">Name of the project that uses the variant name</orgName>
                      </desc>
                   </note>
                </orgName>
-               <orgName type="standard">
-                  <name>CWRC Organization Entity, Test</name>
-               </orgName>
                <desc>
-                  <date type="establishment" from-iso="2017-01" cert="high">2017-01</date>
-                  <date type="dissolution" to-iso="2017-09-01" cert="high">2017-09-01</date>
+                  <date type="establishment">
+                     <date from-iso="2017-01" cert="high">2017-01</date>
+                     <placeName ref="URI"></placeName>
+                     <note>Note about the establishment</note>
+                  </date>
                </desc>
-               <trait type="factuality"><ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab></trait>
-               <note type="general"> This is a general note about the organization. </note>
-               <note type="project-specific">
+               <trait type="factuality" cert="high" ref="Onthology"> 
+                  <ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
+               </trait>
+               <trait type="orgType" cert="high" ref="OnthologyURL"><ab></ab></trait>
+               <note type="general" xml:lang="ENG"> This is a general note about the organization. </note>
+               <note type="project-specific" xml:lang="ENG">
                   <note>This is a project-specific note about the organization.</note>
                   <respons locus="value">
                      <desc>
-                        <orgName sameAs="">Project (CWRC, REED, Orlando)</orgName>
+                        <orgName ref="URI">Project (e.g.CWRC, REED, Orlando)</orgName>
                      </desc>
                   </respons>
                </note>
-               <listBibl><head>Sources:</head>
-                  <bibl></bibl>
+               <listBibl>
+                  <head>Sources:</head>
+                  <bibl><title></title><idno type="WorldCat"></idno></bibl>
                </listBibl>
                <note type="resp_statement">
                   <respons locus="value">
                      <!-- New resp tag added for each entity modification -->
                      <desc>
                         <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
-                        <orgName sameAs="">Project (CWRC, Reed, Orlando)</orgName>
-                     </desc>
+                        </desc>
                   </respons>
                   <respons locus="value">
                      <desc>
-                        <date type="modified" resp="userID"></date>
-                        <orgName sameAs=""></orgName>
+                        <date type="modified" resp="userID"/>
                      </desc>
                   </respons>
                </note>

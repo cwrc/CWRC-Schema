@@ -10,6 +10,10 @@
          </titleStmt>
          <publicationStmt>
             <publisher>Canadian Writing Research Collaboratory</publisher>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <p></p>
+               </licence></availability>
          </publicationStmt>
          <notesStmt>
             <note>Place entity record</note>
@@ -22,21 +26,21 @@
    <text>
       <body>
          <listPlace>
-            <place sameAs="" type="populated_place">
-               <idno></idno>
+            <place>
+               <idno type="Authority_name" cert="high"></idno>
                <place>
                   <placeName type="standard">
                      <name>CWRC Place Entity, Test</name>
                   </placeName>
-                  <placeName type="prefered">
-                     <name>Test CWRC Place Entity</name>
+                  <placeName type="prefered" xml:lang="ENG">
+                     <name type="full">Test CWRC Place Entity</name>
                   </placeName>
-                  <placeName type="variant">
-                     <name>Old name for the place</name>
+                  <placeName type="variant" xml:lang="ENG">
+                     <name type="deprecated">Old name for the place</name>
                      <note>
                         <label>Named prefered by: </label>
                         <desc>
-                           <orgName sameAs="">Name of the project that uses the variant name</orgName>
+                           <orgName ref="URI">Name of the project that uses the variant name</orgName>
                         </desc>
                      </note>
                   </placeName>
@@ -50,37 +54,37 @@
                         <date to-iso="2017-09-01" cert="high">2017-09-01</date>
                         <note>Note about disolution</note>
                      </date>
-                     <trait type="factuality">
+                     <trait type="factuality" cert="high" ref="Onthology">
                         <ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
                      </trait>
+                     <trait type="placeType" cert="high" ref="OnthologyURL"><ab></ab></trait>
                   </desc>
                   <location>
                      <address>
-                        <country nymRef="ISO 3166-1">Three letter code for country, picked from dropdown</country>
+                        <country ref="ISO 3166-1">Three letter code for country, picked from dropdown</country>
                         <region>Region name</region>
                         <addrLine></addrLine>
                      </address>
                      <geo decls="#WGS">53.226658 -0.541254</geo>
                   </location>
-                  <note type="general"> This is a general note about the place. </note>
-                  <note type="project-specific">
+                  <note type="general" xml:lang="ENG"> This is a general note about the place. </note>
+                  <note type="project-specific" xml:lang="ENG">
                      <note>This is a project-specific note about the place.</note>
                      <respons locus="value">
                         <desc>
-                           <orgName sameAs="">Project (CWRC, Reed, Orlando)</orgName>
+                           <orgName ref="URI">Project (CWRC, Reed, Orlando)</orgName>
                         </desc>
                      </respons>
                   </note>
                   <listBibl>
                      <head>Sources:</head>
-                     <bibl></bibl>
+                     <bibl><title></title><idno type="WorldCat"></idno></bibl>
                   </listBibl>
                   <note type="resp_statement">
                      <respons locus="value">
                         <!-- New resp tag added for each entity modification -->
                         <desc>
                            <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
-                           <orgName sameAs="">Project (CWRC, Reed, Orlando)</orgName>
                         </desc>
                      </respons>
                   </note>
