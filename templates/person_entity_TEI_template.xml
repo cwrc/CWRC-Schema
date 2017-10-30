@@ -12,7 +12,7 @@
             <publisher>Canadian Writing Research Collaboratory</publisher>
             <availability>
                <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <p></p>
+                  <p/>
                </licence>
             </availability>
          </publicationStmt>
@@ -52,11 +52,17 @@
                      </desc>
                   </note>
                </persName>
-               <birth> <date cert="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of birth</placeName> <note></note> </birth>
-               <death> <date cert="high" notBefore="2017-07-21">? <!--format for living persons; for dead persons, structure the same as for D.O.B.--></date>, <placeName>Place of death</placeName> <note></note> </death>
+               <birth>
+                  <date cert="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of birth</placeName>
+                  <note/>
+               </birth>
+               <death>
+                  <date cert="high" notBefore="2017-07-21">? <!--format for living persons; for dead persons, structure the same as for D.O.B.--></date>, <placeName>Place of death</placeName>
+                  <note/>
+               </death>
                <floruit>
-                  <date></date>
-                  <note></note>
+                  <date/>
+                  <note/>
                </floruit>
                <trait type="factuality" cert="high">
                   <ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
@@ -74,7 +80,7 @@
                </note>
                <listBibl>
                   <head>Sources:</head>
-                  <bibl><title></title><idno type="WorldCat"></idno></bibl>
+                  <bibl><title/><idno type="WorldCat"/></bibl>
                </listBibl>
                <respons locus="value">
                   <!-- New resp tag added for each entity modification -->
