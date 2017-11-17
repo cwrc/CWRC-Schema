@@ -11,9 +11,10 @@
          <publicationStmt>
             <publisher>Canadian Writing Research Collaboratory</publisher>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <p></p>
-               </licence></availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/legalcode">
+                  <p/>
+               </licence>
+            </availability>
          </publicationStmt>
          <notesStmt>
             <note>Organization entity record</note>
@@ -47,14 +48,17 @@
                <desc>
                   <date type="establishment">
                      <date from-iso="2017-01" cert="high">2017-01</date>
-                     <placeName ref="URI"></placeName>
+                     <placeName ref="URI"/>
                      <note>Note about the establishment</note>
                   </date>
                </desc>
-               <trait type="factuality" cert="high" ref="Ontology"> 
-                  <ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
+               <trait type="factuality" cert="high" ref="Ontology">
+                  <ab>real/fictional
+                     <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
                </trait>
-               <trait type="orgType" cert="high" ref="OntologyURL"><ab></ab></trait>
+               <trait type="orgType" cert="high" ref="OntologyURL">
+                  <ab/>
+               </trait>
                <note type="general" xml:lang="ENG"> This is a general note about the organization. </note>
                <note type="project-specific" xml:lang="ENG">
                   <note>This is a project-specific note about the organization.</note>
@@ -66,14 +70,15 @@
                </note>
                <listBibl>
                   <head>Sources:</head>
-                  <bibl><title></title><idno type="WorldCat"></idno></bibl>
+                  <bibl><title/><idno type="WorldCat"/></bibl>
                </listBibl>
                <note type="resp_statement">
                   <respons locus="value">
                      <!-- New resp tag added for each entity modification -->
                      <desc>
-                        <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
-                        </desc>
+                        <date type="created" resp="userID">Real name of
+                           user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
+                     </desc>
                   </respons>
                   <respons locus="value">
                      <desc>

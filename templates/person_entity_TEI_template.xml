@@ -11,7 +11,7 @@
          <publicationStmt>
             <publisher>Canadian Writing Research Collaboratory</publisher>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+               <licence target="https://creativecommons.org/licenses/by/4.0/legalcode">
                   <p/>
                </licence>
             </availability>
@@ -53,11 +53,14 @@
                   </note>
                </persName>
                <birth>
-                  <date cert="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of birth</placeName>
+                  <date cert="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of
+                     birth</placeName>
                   <note/>
                </birth>
                <death>
-                  <date cert="high" notBefore="2017-07-21">? <!--format for living persons; for dead persons, structure the same as for D.O.B.--></date>, <placeName>Place of death</placeName>
+                  <date cert="high" notBefore="2017-07-21">?
+                     <!--format for living persons; for dead persons, structure the same as for D.O.B.--></date>,
+                     <placeName>Place of death</placeName>
                   <note/>
                </death>
                <floruit>
@@ -65,10 +68,13 @@
                   <note/>
                </floruit>
                <trait type="factuality" cert="high">
-                  <ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
+                  <ab>real/fictional
+                     <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
                </trait>
-               <nationality cert="high" ref="http://sparql.cwrc.ca/ontology/cwrc.html">Nationality (zero or more)</nationality>
-               <occupation cert="high">Ocupation (zero or more)Use Orlando picklist values</occupation>
+               <nationality cert="high" ref="http://sparql.cwrc.ca/ontology/cwrc.html">Nationality
+                  (zero or more)</nationality>
+               <occupation cert="high">Ocupation (zero or more)Use Orlando picklist
+                  values</occupation>
                <note type="general" xml:lang="ENG"> This is a general note about the person.</note>
                <note type="project-specific" xml:lang="ENG">
                   <note>This is a project-specific note about the person.</note>
@@ -85,7 +91,8 @@
                <respons locus="value">
                   <!-- New resp tag added for each entity modification -->
                   <desc>
-                     <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
+                     <date type="created" resp="userID">Real name of
+                        user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
                   </desc>
                </respons>
             </person>

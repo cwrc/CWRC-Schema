@@ -11,9 +11,10 @@
          <publicationStmt>
             <publisher>Canadian Writing Research Collaboratory</publisher>
             <availability>
-               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-                  <p></p>
-               </licence></availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/legalcode">
+                  <p/>
+               </licence>
+            </availability>
          </publicationStmt>
          <notesStmt>
             <note>Place entity record</note>
@@ -27,7 +28,7 @@
       <body>
          <listPlace>
             <place>
-               <idno type="Authority_name" cert="high"></idno>
+               <idno type="Authority_name" cert="high"/>
                <place>
                   <placeName type="standard">
                      <name>CWRC Place Entity, Test</name>
@@ -40,7 +41,8 @@
                      <note>
                         <label>Named prefered by: </label>
                         <desc>
-                           <orgName ref="URI">Name of the project that uses the variant name</orgName>
+                           <orgName ref="URI">Name of the project that uses the variant
+                              name</orgName>
                         </desc>
                      </note>
                   </placeName>
@@ -55,15 +57,18 @@
                         <note>Note about disolution</note>
                      </date>
                      <trait type="factuality" cert="high" ref="Ontology">
-                        <ab>real/fictional <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
+                        <ab>real/fictional
+                           <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
                      </trait>
-                     <trait type="placeType" cert="high" ref="OntologyURL"><ab></ab></trait>
+                     <trait type="placeType" cert="high" ref="OntologyURL">
+                        <ab/>
+                     </trait>
                   </desc>
                   <location>
                      <address>
                         <country ref="ISO 3166-1">Three letter code for country, picked from dropdown</country>
                         <region>Region name</region>
-                        <addrLine></addrLine>
+                        <addrLine/>
                      </address>
                      <geo decls="#WGS">53.226658 -0.541254</geo>
                   </location>
@@ -78,13 +83,14 @@
                   </note>
                   <listBibl>
                      <head>Sources:</head>
-                     <bibl><title></title><idno type="WorldCat"></idno></bibl>
+                     <bibl><title/><idno type="WorldCat"/></bibl>
                   </listBibl>
                   <note type="resp_statement">
                      <respons locus="value">
                         <!-- New resp tag added for each entity modification -->
                         <desc>
-                           <date type="created" resp="userID">Real name of user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
+                           <date type="created" resp="userID">Real name of
+                              user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
                         </desc>
                      </respons>
                   </note>
