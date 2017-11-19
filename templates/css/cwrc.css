@@ -1,7 +1,12 @@
 #comment {
 	color: #08eb03;
-	display: block;
-	margin: 0.5em;
+	font-size:smaller
+}
+#comment:before {
+    content: "<!--"
+}
+#comment:after {
+    content: "-->"
 }
 EVENTS {
     font-family : "Times New Roman", Times, serif;

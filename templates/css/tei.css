@@ -75,8 +75,13 @@ bibl {
 }
 #comment {
 	color: #08eb03;
-	display: block;
-	margin: 0.5em;
+	font-size:smaller
+}
+#comment:before {
+    content: "<!--"
+}
+#comment:after {
+    content: "-->"
 }
 div[type="works"] {
     text-indent: -2em;
