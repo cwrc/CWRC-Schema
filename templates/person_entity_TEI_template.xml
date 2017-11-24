@@ -6,10 +6,10 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Standard name</title>
+            <title>Person standard name</title>
          </titleStmt>
          <publicationStmt>
-            <publisher>Canadian Writing Research Collaboratory</publisher>
+            <publisher>Canadian Writing Research Collaboratory (CWRC)</publisher>
             <availability>
                <licence target="https://creativecommons.org/licenses/by/4.0/legalcode">
                   <p/>
@@ -27,7 +27,7 @@
    <text>
       <body>
          <listPerson>
-            <person sex="f">
+            <person xml:id="PID_entity_record" sex="f">
                <idno type="Authority_name" cert="high">VIAF URI</idno>
                <persName type="standard">
                   <name>Last Name, First Name </name>
@@ -53,7 +53,7 @@
                   </note>
                </persName>
                <birth>
-                  <date cert="high" when-iso="2000-10-30">D.O.B </date>, <placeName>Place of
+                  <date cert="high"  source="https://www.w3.org/TR/NOTE-datetime" when="2000-10-30">D.O.B </date>, <placeName>Place of
                      birth</placeName>
                   <note/>
                </birth>
@@ -67,15 +67,17 @@
                   <date/>
                   <note/>
                </floruit>
+               <sex source="http://sparql.cwrc.ca/ontology/cwrc.html#Gender" value="GenderQueer" cert="high"/>
                <trait type="factuality" cert="high">
                   <ab>real/fictional
-                     <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
+                     <!--form should contain a dropdown with three options: real, fictional, both, unknown--></ab>
                </trait>
                <nationality cert="high" ref="http://sparql.cwrc.ca/ontology/cwrc.html">Nationality
                   (zero or more)</nationality>
                <occupation cert="high">Ocupation (zero or more)Use Orlando picklist
                   values</occupation>
-               <note type="general" xml:lang="ENG"> This is a general note about the person.</note>
+               <affiliation cert="high">User input</affiliation>
+               <note type="general" xml:lang="ENG"> This is a general note about the person. </note>
                <note type="project-specific" xml:lang="ENG">
                   <note>This is a project-specific note about the person.</note>
                   <respons locus="value">
@@ -86,15 +88,20 @@
                </note>
                <listBibl>
                   <head>Sources:</head>
-                  <bibl><title/><idno type="WorldCat"/></bibl>
+                  <bibl><title></title><ref source="WorldCat" target="Resource_URI"></ref></bibl>
                </listBibl>
-               <respons locus="value">
-                  <!-- New resp tag added for each entity modification -->
-                  <desc>
-                     <date type="created" resp="userID">Real name of
-                        user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
-                  </desc>
-               </respons>
+                  <respons locus="value">
+                     <desc> 
+                        <date type="created" source="https://www.w3.org/TR/NOTE-datetime" when="2017-11-06"/>
+                        <persName ref="URI-to-user-record">User real name</persName>
+                     </desc>
+                  </respons>
+                  <respons locus="value">
+                     <desc> 
+                        <date type="modified" source="https://www.w3.org/TR/NOTE-datetime" when="2017-11-07"/>
+                        <persName ref="URI-to-user-record">User real name</persName>
+                     </desc>
+                  </respons>
             </person>
          </listPerson>
       </body>

@@ -6,10 +6,10 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Place Standard Name</title>
+            <title>Place standard name</title>
          </titleStmt>
          <publicationStmt>
-            <publisher>Canadian Writing Research Collaboratory</publisher>
+            <publisher>Canadian Writing Research Collaboratory (CWRC)</publisher>
             <availability>
                <licence target="https://creativecommons.org/licenses/by/4.0/legalcode">
                   <p/>
@@ -27,9 +27,7 @@
    <text>
       <body>
          <listPlace>
-            <place>
-               <idno type="Authority_name" cert="high"/>
-               <place>
+            <place xml:id="PID_entity_record">
                   <placeName type="standard">
                      <name>CWRC Place Entity, Test</name>
                   </placeName>
@@ -46,24 +44,21 @@
                         </desc>
                      </note>
                   </placeName>
-
-                  <desc>
-                     <date type="establishment">
-                        <date from-iso="2017-01" cert="high">2017-01</date>
-                        <note>Note about the establishment</note>
-                     </date>
-                     <date type="dissolution">
-                        <date to-iso="2017-09-01" cert="high">2017-09-01</date>
-                        <note>Note about disolution</note>
-                     </date>
+                     <event type="establishment" source="https://www.w3.org/TR/NOTE-datetime" from="2017-01" cert="high" >
+                        <desc><placeName ref="URI">Place Name</placeName><desc>Note about the establishment</desc>
+                        </desc>
+                     </event>
+               <event type="dissolution" source="https://www.w3.org/TR/NOTE-datetime" to="2017-09-01" cert="high">
+                       <desc>Note about disolution</desc>
+                     </event>
                      <trait type="factuality" cert="high" ref="Ontology">
                         <ab>real/fictional
-                           <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
+                           <!--form should contain a dropdown with three options: real, fictional, both, unknown--></ab>
                      </trait>
                      <trait type="placeType" cert="high" ref="OntologyURL">
                         <ab/>
                      </trait>
-                  </desc>
+                  
                   <location>
                      <address>
                         <country ref="ISO 3166-1">Three letter code for country, picked from dropdown</country>
@@ -72,29 +67,34 @@
                      </address>
                      <geo decls="#WGS">53.226658 -0.541254</geo>
                   </location>
-                  <note type="general" xml:lang="ENG"> This is a general note about the place. </note>
+                  <note type="general" xml:lang="ENG"> This is a general note about the place.</note>
                   <note type="project-specific" xml:lang="ENG">
                      <note>This is a project-specific note about the place.</note>
                      <respons locus="value">
                         <desc>
-                           <orgName ref="URI">Project (CWRC, Reed, Orlando)</orgName>
+                           <orgName ref="URI">Project (e.g.CWRC, REED, Orlando)</orgName>
                         </desc>
                      </respons>
                   </note>
                   <listBibl>
                      <head>Sources:</head>
-                     <bibl><title/><idno type="WorldCat"/></bibl>
+                     <bibl><title></title><ref source="WorldCat" target="Resource_URI"></ref></bibl>
                   </listBibl>
                   <note type="resp_statement">
                      <respons locus="value">
-                        <!-- New resp tag added for each entity modification -->
-                        <desc>
-                           <date type="created" resp="userID">Real name of
-                              user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
+                        <desc> 
+                           <date type="created" source="https://www.w3.org/TR/NOTE-datetime" when="2017-11-06"/>
+                           <persName ref="URI-to-user-record">User real name</persName>
+                        </desc>
+                     </respons>
+                     <respons locus="value">
+                        <desc> 
+                           <date type="modified" source="https://www.w3.org/TR/NOTE-datetime" when="2017-11-07"/>
+                           <persName ref="URI-to-user-record">User real name</persName>
                         </desc>
                      </respons>
                   </note>
-               </place>
+               <idno type="Authority_name" cert="high"/>
 
 
             </place>

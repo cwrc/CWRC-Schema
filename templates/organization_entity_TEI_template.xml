@@ -6,10 +6,10 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Organization standard Name</title>
+            <title>Organization standard name</title>
          </titleStmt>
          <publicationStmt>
-            <publisher>Canadian Writing Research Collaboratory</publisher>
+            <publisher>Canadian Writing Research Collaboratory (CWRC)</publisher>
             <availability>
                <licence target="https://creativecommons.org/licenses/by/4.0/legalcode">
                   <p/>
@@ -27,8 +27,7 @@
    <text>
       <body>
          <listOrg>
-            <org>
-               <!-- organization type taxonomy enforced through dialogs -->
+            <org xml:id="PID_entity_record">
                <idno type="Authority_name" cert="high"/>
                <orgName type="standard">
                   <name>CWRC Organization Entity, Test</name>
@@ -45,19 +44,16 @@
                      </desc>
                   </note>
                </orgName>
-               <desc>
-                  <date type="establishment">
-                     <date from-iso="2017-01" cert="high">2017-01</date>
-                     <placeName ref="URI"/>
-                     <note>Note about the establishment</note>
-                  </date>
-               </desc>
+               <event type="establishment" source="https://www.w3.org/TR/NOTE-datetime" from="2017-01" cert="high" >
+                  <desc><placeName ref="URI">Place Name</placeName><desc>Note about the establishment</desc>
+                     </desc>
+                  </event>
                <trait type="factuality" cert="high" ref="Ontology">
                   <ab>real/fictional
-                     <!--form should contain a dropdown with three options: real, fictional, or both--></ab>
+                     <!--form should contain a dropdown with three options: real, fictional, both, unknown--></ab>
                </trait>
                <trait type="orgType" cert="high" ref="OntologyURL">
-                  <ab/>
+                  <ab>Org Type</ab>
                </trait>
                <note type="general" xml:lang="ENG"> This is a general note about the organization. </note>
                <note type="project-specific" xml:lang="ENG">
@@ -70,19 +66,19 @@
                </note>
                <listBibl>
                   <head>Sources:</head>
-                  <bibl><title/><idno type="WorldCat"/></bibl>
+                  <bibl><title></title><ref source="WorldCat" target="Resource_URI"></ref></bibl>
                </listBibl>
                <note type="resp_statement">
                   <respons locus="value">
-                     <!-- New resp tag added for each entity modification -->
-                     <desc>
-                        <date type="created" resp="userID">Real name of
-                           user.<!--(ideally; machine generated; if realname too dificult, user id would sufice)--></date>
-                     </desc>
+                     <desc> 
+                        <date type="created" source="https://www.w3.org/TR/NOTE-datetime" when="2017-11-06"/>
+                        <persName ref="URI-to-user-record">User real name</persName>
+                        </desc>
                   </respons>
                   <respons locus="value">
-                     <desc>
-                        <date type="modified" resp="userID"/>
+                     <desc> 
+                        <date type="modified" source="https://www.w3.org/TR/NOTE-datetime" when="2017-11-07"/>
+                        <persName ref="URI-to-user-record">User real name</persName>
                      </desc>
                   </respons>
                </note>
