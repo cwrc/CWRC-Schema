@@ -4,7 +4,9 @@
     * Purpose: CWRC ODD XML file to generate the customized CWRC TEI Lite RELAX NG schema (cwrc_tei_lite.rng)
     * Description: Use the TEI Roma tool (located at http://www.tei-c.org/Roma/) to upload this ODD customization
        file and then export a RELAX NG schema with the name cwrc_tei_lite.rng.  After the cwrc_tei_lite.rng schema
-       has been generated, two blocks of XML code need to be pasted into the resulting cwrc_tei_lite.rng schema so
+       has been generated, the following changes need to be implemented by hand:
+       
+       1. two blocks of XML code need to be pasted into the resulting cwrc_tei_lite.rng schema so
        that an optional rdf:RDF element will be defined; see the "Revisions" section below for a description of the
        function of the rdf:RDF element.
        
@@ -43,9 +45,38 @@
                </choice>
            </zeroOrMore>
        </define>
+       
+       
+       2. Two blocks of XML code need to be pasted into the resulting cwrc_tei_lite.rng schema so
+       that the facs attribute is defined and allowed inside the pb element; see the "Revisions" section below for a description of the
+       function of the this attribute.
+       
+       Under the definition for att.global.attributes add the following:
+       
+   <define name="att.global.facs.attributes">
+      <ref name="att.global.facs.attribute.facs"/>
+   </define>
+   <define name="att.global.facs.attribute.facs">
+      <optional>
+         <attribute name="facs">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(facsimile) points to all or part of an image which corresponds with the content of the element.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+       
+       Inside the definition of the pb element, add the following to the references:
+       
+   <ref name="att.global.facs.attributes"/>
 -->
 <!-- 
 *** Revisions ***
+* 2018
+  - Defined att.global.facs and added to the pb element definition to allow  users to add image references to pb elements for the side-by-side CWRC-Writer
 * 2016
   - Created a new optional rdf:RDF element as the first child element of the root TEI element, that can contain any type of descendant node
      (element, attribute, or content); this is so that documents can be used in CWRC-Writer (which stores RDF annotation information in the
