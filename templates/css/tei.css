@@ -727,13 +727,16 @@ opener note {
     display : block;
     color:#999;
 }
-opener note:before {
+/* opener note:before {
     content:'';
     font-variant:normal;
 }
 opener note[type]:before {
     content:'';
-}
+} */
+
+/* rules removed to fix: https://github.com/cwrc/CWRC-WriterBase/issues/49 */
+
 note[n]:before {
     content : attr(n) " ";
     vertical-align : super;
