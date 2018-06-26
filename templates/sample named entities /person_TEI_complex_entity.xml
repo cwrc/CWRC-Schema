@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Marcus Aurelius</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Canadian Writing Research Collaboratory (CWRC)</publisher>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/legalcode">
+                  <p/>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>Person entity record</note>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listPerson>
+            <person xml:id="PID_entity_record" sex="f">
+               <idno type="VIAF" cert="high">https://viaf.org/viaf/102895066</idno>
+               <persName type="standard">
+                  <name>Last Name, First Name </name>
+               </persName>
+               <persName type="prefered" xml:lang="ENG">
+                  <name type="prenomen">Marcus</name>
+                  <name type="nomen">Aurelius</name>
+                  <name type="cognomen">Antoninus</name>
+                  <roleName>Augustus</roleName>
+               </persName>
+               <persName type="variant" role="birth" xml:lang="LAT">
+                  <name type="prenomen">Marcus</name>
+                  <name type="nomen">Annius</name>
+                  <name type="cognomen">Verus</name>
+                  <note>
+                     <label>Named prefered by: </label>
+                     <desc>
+                        <orgName ref="https://beta.cwrc.ca/project/canada%E2%80%99s-early-women-writers">Canada's Early Women Writers</orgName>
+                     </desc>
+                  </note>
+               </persName>
+               <birth>
+                  <date cert="high"  source="https://www.w3.org/TR/NOTE-datetime" when="0121-04-26">26 April 121</date>, <placeName>Rome</placeName>
+                  <note/>
+               </birth>
+               <death>
+                  <date cert="high" when="0180-03-17"> 17 March 180</date>,
+                  <placeName>Vindobona</placeName>
+                  <note/>
+               </death>
+               <floruit>
+                  <date cert="high" from="0161-03-08" to="0180-03-17">8 March 161 - 17 March 180</date>
+                  <note>Reign</note>
+               </floruit>
+               <sex source="http://sparql.cwrc.ca/ontology/cwrc.html#Gender" value="cisMan" cert="high"/>
+               <trait type="factuality" cert="high">
+                  <ab>real</ab>
+               </trait>
+               <nationality cert="high">Roman</nationality>
+               <occupation cert="high">Emperor of the Roman Empire</occupation>
+               <affiliation cert="high">Stoic philosopher</affiliation>
+               <note type="general" xml:lang="ENG"> Considered the last of the "Good Emperors" </note>
+               <note type="project-specific" xml:lang="ENG">
+                  <note>He wrote the "Meditations"</note>
+                  <respons locus="value">
+                     <desc>
+                        <orgName ref="https://beta.cwrc.ca/project/canada%E2%80%99s-early-women-writers">Canada's Early Women Writers</orgName>
+                     </desc>
+                  </respons>
+               </note>
+               <listBibl>
+                  <head>Sources:</head>
+                  <bibl><title>Spiritual Teachings of Marcus Aurelius</title><ref source="VIAF" target="https://viaf.org/viaf/7301152503064410800002/#Forstater,_Mark._%7C_Spiritual_teachings_of_marcus_aurelius"></ref></bibl>
+               </listBibl>
+               <respons locus="value">
+                  <desc> 
+                     <date type="created" source="https://www.w3.org/TR/NOTE-datetime" when="2017-11-06"/>
+                     <persName ref="https://beta.cwrc.ca/users/mihaela-ilovan">Mihaela Ilovan</persName>
+                  </desc>
+               </respons>
+               <respons locus="value">
+                  <desc> 
+                     <date type="modified" source="https://www.w3.org/TR/NOTE-datetime" when="2017-11-07"/>
+                     <persName ref="https://beta.cwrc.ca/users/karyn-huenemann">Karyn Huenemann</persName>
+                  </desc>
+               </respons>
+            </person>
+         </listPerson>
+      </body>
+   </text>
+</TEI>
+

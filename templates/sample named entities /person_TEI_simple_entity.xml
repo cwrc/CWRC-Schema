@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Jane Doe</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Canadian Writing Research Collaboratory (CWRC)</publisher>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/legalcode">
+                  <p/>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>Person entity record</note>
+         </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listPerson>
+            <person xml:id="PID_entity_record">
+               <idno type="VIAF" cert="high">https://viaf.org/viaf/48150746896916300255</idno>
+               <persName type="standard">
+                  <name>Doe, Jane</name>
+               </persName>
+               <persName type="prefered" xml:lang="ENG">
+                  <name type="forename">Jane</name>
+                  <name type="surname">Doe</name>
+               </persName>
+               <sex source="http://sparql.cwrc.ca/ontology/cwrc.html#Gender" value="GenderQueer" cert="high"/>
+               <trait type="factuality" cert="low">
+                  <ab>real</ab>
+               </trait>
+               <respons locus="value">
+                  <desc> 
+                     <date type="created" source="https://www.w3.org/TR/NOTE-datetime" when="2017-11-06"/>
+                     <persName ref="https://beta.cwrc.ca/users/mihaela-ilovan">Mihaela Ilovan</persName>
+                  </desc>
+               </respons>
+            </person>
+         </listPerson>
+      </body>
+   </text>
+</TEI>
