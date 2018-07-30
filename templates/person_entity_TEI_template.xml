@@ -27,7 +27,7 @@
    <text>
       <body>
          <listPerson>
-            <person xml:id="PID_entity_record" sex="f">
+            <person xml:id="PID_entity_record">
                <idno type="Authority_name" cert="high">VIAF URI</idno>
                <persName type="standard">
                   <name>Last Name, First Name </name>
@@ -79,7 +79,7 @@
                <affiliation cert="high">User input</affiliation>
                <note type="general" xml:lang="ENG"> This is a general note about the person. </note>
                <note type="project-specific" xml:lang="ENG">
-                  <note>This is a project-specific note about the person.</note>
+                 This is a project-specific note about the person.
                   <respons locus="value">
                      <desc>
                         <orgName ref="URI">Project (e.g.CWRC, REED, Orlando)</orgName>
