@@ -1169,8 +1169,11 @@ docTitle {
 /* Added padding for default TEI sections  */
 
 body,
-div[type="chapter"]{padding-right:3%}
-
+div[type="chapter"]{
+    display : block;
+    padding-left : 0.5em;
+    padding-right : 0.5em;
+}
 
 /* OUCS additions */
 /*Button {
