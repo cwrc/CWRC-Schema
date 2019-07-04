@@ -10,7 +10,7 @@
             2003-11-06 list attr list-style-type was none, now disc. kl
             2007-06  reworking for TEI P5 and oxygen 
      DToC-specific changes:
-      2019
+      2019 
       * removed body from xpath reference when styling headers  
       * added padding to div @type="chapter"
       * changed figDesc to block  
@@ -179,9 +179,6 @@ cell {
 cell[role = 'label'] {
     color: inherit;
     background-color: #BBBBBB;
-}
-cell[cols = '2']{
-    display:table-cell;
 }
 change {
     display: block;
