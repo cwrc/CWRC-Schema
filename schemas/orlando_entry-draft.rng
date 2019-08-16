@@ -1162,7 +1162,404 @@
 
         </element>
     </define>
-    
+
+    <define name="AWARD">
+        <element name="AWARD">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                element captures important educational awards given to women
+                writers.</a:documentation>
+            <optional>
+                <attribute name="AWARDTYPE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >This attribute distinguishes between the different kinds of awards:
+                        &quot;scholarship,&quot; &quot;prize,&quot; and &quot;other.&quot; An
+                        entrance scholarship to Oxford is different from winning first prize in a
+                        Spelling Bee and distinguishing between awards will help understand the
+                        material conditions affecting women&apos;s access to
+                        education.</a:documentation>
+                    <choice>
+                        <value>SCHOLARSHIP</value>
+                        <value>PRIZE</value>
+                        <value>OTHER</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Reg (or regularization) contains a reading which has been regularized or
+                        normalized in some sense.</a:documentation>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="FOREIGN"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="SCHOOL"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="SUBJECT"/>
+                    <ref name="TEXT"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="BIBCITS">
+        <element name="BIBCITS">
+            <optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <zeroOrMore>
+                <choice>
+                    <ref name="RESEARCHNOTE"/>
+                    <element name="BIBCIT">
+                        <a:documentation
+                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
+                            element named bibCit is designed to capture bibliographical information
+                            in much the same way as an MLA parenthetical citation and should always
+                            reside within a bibCits container tag.</a:documentation>
+                        <optional>
+                            <attribute name="DBREF">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="ID">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="PLACEHOLDER"/>
+                        </optional>
+                        <optional>
+                            <attribute name="QTDIN">
+                                <value>QTDINYES</value>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="REF">
+                                <data type="anyURI"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="annotationId">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >Provides a unique annotation identifier for the element bearing
+                                    the attribute.</a:documentation>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="offsetId">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >Designates the parent tag from which the offset is being
+                                    counted.</a:documentation>
+                            </attribute>
+                        </optional>
+                        <oneOrMore>
+                            <choice>
+                                <text/>
+                                <ref name="RESEARCHNOTE"/>
+                                <ref name="SCHOLARNOTE"/>
+                            </choice>
+                        </oneOrMore>
+                    </element>
+                </choice>
+            </zeroOrMore>
+            <optional>
+                <ref name="KEYWORDCLASS"/>
+            </optional>
+        </element>
+    </define>
+
+    <define name="CHILDREN">
+        <element name="CHILDREN">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Children,
+                a sub-element available within Family, systematizes information concerning the
+                number of children a woman had and is meant to capture issues around children rather
+                than a discussion of specific children. It allows us to discuss her children in
+                general outside the context of one child member.</a:documentation>
+            <optional>
+                <attribute name="NUMBER">
+                    <data type="integer"/>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="CHILDLESSNESS"/>
+                    <ref name="CHILDREN"/>
+                    <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
+                    <ref name="DATESTRUCT"/>
+                    <ref name="JOB"/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="RS"/>
+                    <ref name="SCHOLARNOTE"/>
+                    <ref name="SIGNIFICANTACTIVITY"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TITLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="CHRONSTRUCT">
+        <element name="CHRONSTRUCT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A
+                chronStruct is an element that holds together and therefore associates a date with
+                the prose that describes an event.</a:documentation>
+            <attribute name="CHRONCOLUMN">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    >ChronColumn is an attribute which designates a given chronology item as
+                    belonging to a subject-specific column of the Orlando print (and possibly
+                    electronic) chronology.</a:documentation>
+                <choice>
+                    <value>NATIONALINTERNATIONAL</value>
+                    <value>BRITISHWOMENWRITERS</value>
+                    <value>WRITINGCLIMATE</value>
+                    <value>SOCIALCLIMATE</value>
+                </choice>
+            </attribute>
+            <optional>
+                <attribute name="CHRONCOLUMN1">
+                    <choice>
+                        <value>NATIONALINTERNATIONAL1</value>
+                        <value>BRITISHWOMENWRITERS1</value>
+                        <value>WRITINGCLIMATE1</value>
+                        <value>SOCIALCLIMATE1</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CHRONCOLUMN2">
+                    <choice>
+                        <value>NATIONALINTERNATIONAL2</value>
+                        <value>BRITISHWOMENWRITERS2</value>
+                        <value>WRITINGCLIMATE2</value>
+                        <value>SOCIALCLIMATE2</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CHRONCOLUMN3">
+                    <choice>
+                        <value>NATIONALINTERNATIONAL3</value>
+                        <value>BRITISHWOMENWRITERS3</value>
+                        <value>WRITINGCLIMATE3</value>
+                        <value>SOCIALCLIMATE3</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <attribute name="RELEVANCE">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    >Relevance is a sister attribute to chronColumn, attached to each and every
+                    chronStruct. This element assignes importance to the chronstruct you have just
+                    created with categories for comprehensive, period, decade, and selective (in
+                    order of increasing importance).</a:documentation>
+                <choice>
+                    <value>SELECTIVE</value>
+                    <value>PERIOD</value>
+                    <value>DECADE</value>
+                    <value>COMPREHENSIVE</value>
+                </choice>
+            </attribute>
+            <optional>
+                <attribute name="RELEVANCE1">
+                    <choice>
+                        <value>SELECTIVE1</value>
+                        <value>PERIOD1</value>
+                        <value>DECADE1</value>
+                        <value>COMPREHENSIVE1</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="RELEVANCE2">
+                    <choice>
+                        <value>SELECTIVE2</value>
+                        <value>PERIOD2</value>
+                        <value>DECADE2</value>
+                        <value>COMPREHENSIVE2</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="RELEVANCE3">
+                    <choice>
+                        <value>SELECTIVE3</value>
+                        <value>PERIOD3</value>
+                        <value>DECADE3</value>
+                        <value>COMPREHENSIVE3</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <ref name="RESP-attribute"/>
+            <choice>
+                <ref name="DATE"/>
+                <ref name="DATERANGE"/>
+                <ref name="DATESTRUCT"/>
+            </choice>
+            <element name="CHRONPROSE">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    >ChronProse is an element that briefly describes the essential facts of a
+                    chronology event.</a:documentation>
+                <oneOrMore>
+                    <choice>
+                        <text/>
+                        <ref name="AWARD"/>
+                        <ref name="BIBCITS"/>
+                        <ref name="BIRTHPOSITION"/>
+                        <ref name="CAUSE"/>
+                        <ref name="CHILDLESSNESS"/>
+                        <ref name="CHILDREN"/>
+                        <ref name="CLASS"/>
+                        <ref name="COMPANION"/>
+                        <ref name="CONTESTEDBEHAVIOUR"/>
+                        <ref name="DATE"/>
+                        <ref name="DATERANGE"/>
+                        <ref name="DATESTRUCT"/>
+                        <ref name="DEGREE"/>
+                        <ref name="DENOMINATION"/>
+                        <ref name="DIVORCE"/>
+                        <ref name="EMPH"/>
+                        <ref name="EMPLOYER"/>
+                        <ref name="FIGURE"/>
+                        <ref name="FOREIGN"/>
+                        <ref name="GENDER"/>
+                        <ref name="GRAPHIC"/>
+                        <ref name="INSTRUCTOR"/>
+                        <ref name="JOB"/>
+                        <ref name="KEYWORDCLASS"/>
+                        <ref name="LIVESWITH"/>
+                        <ref name="NAME"/>
+                        <ref name="NATIONALITY"/>
+                        <ref name="ORGNAME"/>
+                        <ref name="PLACE"/>
+                        <ref name="POLITICALAFFILIATION"/>
+                        <ref name="QUOTE"/>
+                        <ref name="REMUNERATION"/>
+                        <ref name="RESEARCHNOTE"/>
+                        <ref name="RS"/>
+                        <ref name="SCHOLARNOTE"/>
+                        <ref name="SCHOOL"/>
+                        <ref name="SEPARATION"/>
+                        <ref name="SEXUALIDENTITY"/>
+                        <ref name="SIGNIFICANTACTIVITY"/>
+                        <ref name="SOCALLED"/>
+                        <ref name="SUBJECT"/>
+                        <ref name="TEXT"/>
+                        <ref name="TITLE"/>
+                        <ref name="TOPIC"/>
+                        <ref name="TGENRE"></ref>
+                    </choice>
+                </oneOrMore>
+                <oneOrMore>
+                    <choice>
+                        <text/>
+                        <ref name="BIBCITS"/>
+                        <ref name="DATE"/>
+                        <ref name="DATERANGE"/>
+                        <ref name="DATESTRUCT"/>
+                        <ref name="EMPH"/>
+                        <ref name="FIGURE"/>
+                        <ref name="FOREIGN"/>
+                        <ref name="GRAPHIC"/>
+                        <ref name="KEYWORDCLASS"/>
+                        <ref name="NAME"/>
+                        <ref name="ORGNAME"/>
+                        <ref name="PADVERTISING"/>
+                        <ref name="PANTHOLOGIZATION"/>
+                        <ref name="PARCHIVALLOCATION"/>
+                        <ref name="PATTITUDES"/>
+                        <ref name="PAUTHORSHIP"/>
+                        <ref name="PCIRCULATION"/>
+                        <ref name="PCONTRACT"/>
+                        <ref name="PCOPYRIGHT"/>
+                        <ref name="PDEDICATION"/>
+                        <ref name="PEARNINGS"/>
+                        <ref name="PEDITIONS"/>
+                        <ref name="PFIRSTLITERARYACTIVITY"/>
+                        <ref name="PINFLUENCESHER"/>
+                        <ref name="PLACE"/>
+                        <ref name="PLASTLITERARYACTIVITY"/>
+                        <ref name="PLITERARYSCHOOLS"/>
+                        <ref name="PMANUSCRIPTHISTORY"/>
+                        <ref name="PMATERIALCONDITIONS"/>
+                        <ref name="PMODEOFPUBLICATION"/>
+                        <ref name="PMOTIVES"/>
+                        <ref name="PNONBOOKMEDIA"/>
+                        <ref name="PNONSURVIVAL"/>
+                        <ref name="PPERFORMANCE"/>
+                        <ref name="PPERIODICALPUBLICATION"/>
+                        <ref name="PPLACEOFPUBLICATION"/>
+                        <ref name="PPRESSRUN"/>
+                        <ref name="PPRICE"/>
+                        <ref name="PRARITIESFEATURESDECORATIONS"/>
+                        <ref name="PRELATIONSWITHPUBLISHER"/>
+                        <ref name="PSERIALIZATION"/>
+                        <ref name="PSUBMISSIONSREJECTIONS"/>
+                        <ref name="PTYPEOFPRESS"/>
+                        <ref name="QUOTE"/>
+                        <ref name="RBESTKNOWNWORK"/>
+                        <ref name="RDESTRUCTIONOFWORK"/>
+                        <ref name="RESEARCHNOTE"/>
+                        <ref name="RFICTIONALIZATION"/>
+                        <ref name="RLANDMARKTEXT"/>
+                        <ref name="RPENALTIES"/>
+                        <ref name="RRECOGNITIONNAME"/>
+                        <ref name="RRECOGNITIONS"/>
+                        <ref name="RRECOGNITIONVALUE"/>
+                        <ref name="RRESPONSES"/>
+                        <ref name="RSELFDESCRIPTION"/>
+                        <ref name="RSHEINFLUENCED"/>
+                        <ref name="RWRITINGMILESTONE"/>
+                        <ref name="SCHOLARNOTE"/>
+                        <ref name="SIC"/>
+                        <ref name="SOCALLED"/>
+                        <ref name="TCHARACTERIZATION"/>
+                        <ref name="TCHARACTERNAME"/>
+                        <ref name="TCHARACTERTYPEROLE"/>
+                        <ref name="TGENRE"/>
+                        <ref name="TGENREISSUE"/>
+                        <ref name="TIME"/>
+                        <ref name="TINTERTEXTUALITY"/>
+                        <ref name="TITLE"/>
+                        <ref name="TMOTIF"/>
+                        <ref name="TOPIC"/>
+                        <ref name="TPLOT"/>
+                        <ref name="TSETTINGDATE"/>
+                        <ref name="TSETTINGPLACE"/>
+                        <ref name="TTECHNIQUES"/>
+                        <ref name="TTHEMETOPIC"/>
+                        <ref name="TTONESTYLE"/>
+                        <ref name="TVOICENARRATION"/>
+                    </choice>
+                </oneOrMore>
+            </element>
+            <zeroOrMore>
+                <choice>
+                    <ref name="BIBCITS"/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="SCHOLARNOTE"/>
+                </choice>
+            </zeroOrMore>
+        </element>
+    </define>
+
     <define name="COMPANION">
         <element name="COMPANION">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
@@ -1174,6 +1571,105 @@
                     <text/>
                     <ref name="NAME"/>
                     <ref name="SOCALLED"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="DATERANGE">
+        <element name="DATERANGE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Along
+                with date and dateStruct, dateRange is one of three elements used for systematizing
+                dates across project documents. Use dateRange for all events that occurred over a
+                span of time or for all dates that are uncertain but that certainly occurred within
+                a specified span of time.</a:documentation>
+            <optional>
+                <attribute name="CALENDAR" a:defaultValue="NEWSTYLE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >An attribute of date, dateRange, and dateStruct, calendar is used to
+                        indicate when a given date took place.</a:documentation>
+                    <choice>
+                        <value>NEWSTYLE</value>
+                        <value>BC</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CERTAINTY" a:defaultValue="CERT">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Certainty is an attribute of date, dateRange, and dateStruct and is used to
+                        indicate the nature of certainty that you have about a given
+                        date.</a:documentation>
+                    <choice>
+                        <value>CERT</value>
+                        <a:documentation>Certain</a:documentation>
+                        <value>C</value>
+                        <a:documentation>Circa</a:documentation>
+                        <value>BY</value>
+                        <a:documentation>By this date</a:documentation>
+                        <value>AFTER</value>
+                        <a:documentation>After this date</a:documentation>
+                        <value>UNKNOWN</value>
+                        <a:documentation>Unknown date</a:documentation>
+                        <value>ROUGHLYDATED</value>
+                        <a:documentation>Rough certainty</a:documentation>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="EXACT">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >An attribute of dateRange, exact is used in conjunction with the to and
+                        from attributes to express the certainty of each end of a
+                        dateRange.</a:documentation>
+                    <choice>
+                        <value>TO</value>
+                        <value>FROM</value>
+                        <value>BOTH</value>
+                        <value>NEITHER</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="FROM">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >From is used to record a formatted date-related value.</a:documentation>
+                    <choice>
+                        <data type="date"/>
+                        <data type="gYearMonth"/>
+                        <data type="gYear"/>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="TO">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >To is used to record a formatted date-related value.</a:documentation>
+                    <choice>
+                        <data type="date"/>
+                        <data type="gYearMonth"/>
+                        <data type="gYear"/>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="RESEARCHNOTE"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1462,6 +1958,67 @@
         </element>
     </define>
 
+    <define name="DENOMINATION">
+        <element name="DENOMINATION">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                >Denomination captures the names of religious denominations associated with a
+                person&apos;s life. We are defining denomination very broadly to include a wide
+                range of categories from Christian to atheist to Seekers to Clapham Sect. While we
+                recognize that many of the denominations listed below are conceptually different
+                (for example, Buddhhierarchicalism is on a different hierarchical, conceptual level
+                than Calvinist), for the purposes of this Project we are overlooking these
+                distinctions.</a:documentation>
+            <optional>
+                <attribute name="CURRENTALTERNATIVETERM"/>
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                    attribute allows you to capture changes in terminology over time. The older name
+                    in your prose may not be familiar to your reader nor helpful for indexing
+                    purposes and therefore needs explanation.</a:documentation>
+            </optional>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Reg (or regularization) contains a reading which has been regularized or
+                        normalized in some sense.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="SELF-DEFINED" a:defaultValue="SELFUNKNOWN">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Self-defined is an attribute attached to all identity categories within
+                        biography. Its purpose is to distinguish between people who place themselves
+                        within an identity category (i.e., &quot;Jeannette Winterson identifies as
+                        lesbian&quot;) and those whom we place in that category though they
+                        themselves did not (i.e., &quot;While she denied being a lesbian, she
+                        maintained relationships with women throughout her life&quot;). This
+                        attribute acknowledges the importance of personal, political and historical
+                        placements of one&apos;s own subject position; it assumes that identities
+                        are not simply labels we assign to other people but shifting categories
+                        which we both place ourselves within, and, in which history places
+                        us.</a:documentation>
+                    <choice>
+                        <value>SELFYES</value>
+                        <value>SELFNO</value>
+                        <value>SELFUNKNOWN</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DENOMINATION"/>
+                    <ref name="ETHNICITY"/>
+                    <ref name="NAME"/>
+                    <ref name="NATIONALHERITAGE"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="QUOTE"/>
+                    <ref name="SOCALLED"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
     <define name="DIV2">
         <element name="DIV2">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Div2
@@ -1608,6 +2165,65 @@
         </element>
     </define>
 
+    <define name="EMPH">
+        <element name="EMPH">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Short for
+                emphasis, emph is an element that marks words or phrases which are stressed or
+                emphasized for linguistic or rhetorical effect.</a:documentation>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="FOREIGN"/>
+                    <ref name="NAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="SIC"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TMOTIF"/>
+                    <ref name="TOPIC"/>
+                    <ref name="TTHEMETOPIC"/>
+                </choice>
+            </oneOrMore>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="DENOMINATION"/>
+                    <ref name="FOREIGN"/>
+                    <ref name="QUOTE"/>
+                    <ref name="SIC"/>
+                    <ref name="SOCALLED"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="EMPLOYER">
+        <element name="EMPLOYER">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                sub-element within occupation captures the names of a person&apos;s employers. We
+                are interested in tracking if particular kinds of organizations and institutions
+                supported women&apos;s work or attracted women writers more than
+                others.</a:documentation>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
+                    <ref name="EMPLOYER"/>
+                    <ref name="JOB"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="TITLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
     <define name="ETHNICITY">
         <element name="ETHNICITY">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ethnicity
@@ -1672,6 +2288,36 @@
                     <ref name="NATIONALITY"/>
                     <ref name="QUOTE"/>
                     <ref name="RACECOLOUR"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="FIGURE">
+        <element name="FIGURE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
+                figure element groups elements representing or containing graphic information such
+                as an illustration, formula, or figure.</a:documentation>
+            <oneOrMore>
+                <choice>
+                    <ref name="HEAD"/>
+                    <element name="FIGDESC">
+                        <a:documentation
+                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">FigDesc
+                            (description of figure) contains a brief prose description of the
+                            appearance or content of a graphic figure, for use when documenting an
+                            image without displaying it.</a:documentation>
+                        <text/>
+                        <ref name="BIBCITS"/>
+                        <ref name="DATE"/>
+                        <ref name="NAME"/>
+                        <ref name="ORGNAME"/>
+                        <ref name="PLACE"/>
+                        <ref name="TITLE"/>
+                        <ref name="XREF"/>
+                    </element>
+                    <ref name="GRAPHIC"/>
+                    <ref name="P"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -1940,6 +2586,35 @@
                     <ref name="L"/>
                     <ref name="QUOTE"/>
                     <ref name="RESEARCHNOTE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="LIVESWITH">
+        <element name="LIVESWITH">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Using
+                livesWith denotes the material living arrangements of the subject of the biography.
+                It does not assume that the person with whom she is living is her sexual partner nor
+                does it assume that sexual partners are excluded. Using this sub-element will help
+                to capture the material conditions of a woman&apos;s writing (i.e., did she have a
+                room of her own?) and women&apos;s non-traditional living
+                arrangements.</a:documentation>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
+                    <ref name="DATESTRUCT"/>
+                    <ref name="FOREIGN"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="QUOTE"/>
+                    <ref name="SEXUALIDENTITY"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TITLE"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -2299,6 +2974,194 @@
         </element>
     </define>
 
+    <define name="PANTHOLOGIZATION">
+        <element name="PANTHOLOGIZATION">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                element creates a record of a work's appearance and selection in anthologies; it
+                contains relevant details surrounding significant instances when a text is
+                anthologized (how framed; how described; how frequently it occurs); the appearance
+                of the text in significant or major anthologies (Gilbert and Gubar, Palgrave,
+                Norton).</a:documentation>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PARCHIVALLOCATION"/>
+                    <ref name="PATTITUDES"/>
+                    <ref name="PAUTHORSHIP"/>
+                    <ref name="PCIRCULATION"/>
+                    <ref name="PEDITIONS"/>
+                    <ref name="PFIRSTLITERARYACTIVITY"/>
+                    <ref name="PINFLUENCESHER"/>
+                    <ref name="PLACE"/>
+                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PMATERIALCONDITIONS"/>
+                    <ref name="PMODEOFPUBLICATION"/>
+                    <ref name="PMOTIVES"/>
+                    <ref name="PNONBOOKMEDIA"/>
+                    <ref name="PPERIODICALPUBLICATION"/>
+                    <ref name="PPLACEOFPUBLICATION"/>
+                    <ref name="PRARITIESFEATURESDECORATIONS"/>
+                    <ref name="PTYPEOFPRESS"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RBESTKNOWNWORK"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="RRECOGNITIONS"/>
+                    <ref name="RRESPONSES"/>
+                    <ref name="RSELFDESCRIPTION"/>
+                    <ref name="RSHEINFLUENCED"/>
+                    <ref name="SCHOLARNOTE"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TCHARACTERIZATION"/>
+                    <ref name="TCHARACTERTYPEROLE"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TGENREISSUE"/>
+                    <ref name="TINTERTEXTUALITY"/>
+                    <ref name="TITLE"/>
+                    <ref name="TMOTIF"/>
+                    <ref name="TOPIC"/>
+                    <ref name="TSETTINGPLACE"/>
+                    <ref name="TTECHNIQUES"/>
+                    <ref name="TTHEMETOPIC"/>
+                    <ref name="TTONESTYLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="PAUTHORSHIP">
+        <element name="PAUTHORSHIP">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                elements elicits discussion of controversy surrounding a text's
+                authorship.</a:documentation>
+            <optional>
+                <attribute name="AUTHORNAMETYPE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >This attribute attached to pAuthorship allows us to distinguish between
+                        different kinds of authorship problems such as anonymous and pseudonymous
+                        texts, and texts whose authorship is only alluded to.</a:documentation>
+                    <choice>
+                        <value>ANONYMOUS</value>
+                        <value>PSEUDONYMOUS</value>
+                        <value>ALLUSIVEAUTHORSHIP</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="AUTHORSHIPCONTROVERSY">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >This attribute attached to pAuthorship reflects the difficulties scholars
+                        sometimes encounter when trying to identify the authorship of a
+                        text.</a:documentation>
+                    <choice>
+                        <value>FORGERY</value>
+                        <value>SPURIOUS</value>
+                        <value>MISATTRIBUTION</value>
+                        <value>DOUBTFUL</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="COLLABORATION">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >This attribute attached to pAuthorship allows us to distinguish those texts
+                        authored by more than a single author.</a:documentation>
+                    <value>COLLABORATIONYES</value>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="CONTROVERSYDATE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >This optional attribute attached to pAuthorship designates the current
+                        standing of a controversy surrounding authorship.</a:documentation>
+                    <choice>
+                        <value>PRESENT</value>
+                        <value>HISTORICAL</value>
+                        <value>ONGOING</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
+                    <ref name="DATESTRUCT"/>
+                    <ref name="EMPH"/>
+                    <ref name="FOREIGN"/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PADVERTISING"/>
+                    <ref name="PANTHOLOGIZATION"/>
+                    <ref name="PARCHIVALLOCATION"/>
+                    <ref name="PATTITUDES"/>
+                    <ref name="PAUTHORSHIP"/>
+                    <ref name="PCIRCULATION"/>
+                    <ref name="PCONTRACT"/>
+                    <ref name="PCOPYRIGHT"/>
+                    <ref name="PDEDICATION"/>
+                    <ref name="PEARNINGS"/>
+                    <ref name="PEDITIONS"/>
+                    <ref name="PFIRSTLITERARYACTIVITY"/>
+                    <ref name="PINFLUENCESHER"/>
+                    <ref name="PLACE"/>
+                    <ref name="PLASTLITERARYACTIVITY"/>
+                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PMANUSCRIPTHISTORY"/>
+                    <ref name="PMATERIALCONDITIONS"/>
+                    <ref name="PMODEOFPUBLICATION"/>
+                    <ref name="PMOTIVES"/>
+                    <ref name="PNONBOOKMEDIA"/>
+                    <ref name="PNONSURVIVAL"/>
+                    <ref name="PPERFORMANCE"/>
+                    <ref name="PPERIODICALPUBLICATION"/>
+                    <ref name="PPLACEOFPUBLICATION"/>
+                    <ref name="PPRESSRUN"/>
+                    <ref name="PPRICE"/>
+                    <ref name="PRARITIESFEATURESDECORATIONS"/>
+                    <ref name="PRELATIONSWITHPUBLISHER"/>
+                    <ref name="PSERIALIZATION"/>
+                    <ref name="PSUBMISSIONSREJECTIONS"/>
+                    <ref name="PTYPEOFPRESS"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RBESTKNOWNWORK"/>
+                    <ref name="RDESTRUCTIONOFWORK"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="RLANDMARKTEXT"/>
+                    <ref name="RPENALTIES"/>
+                    <ref name="RRECOGNITIONS"/>
+                    <ref name="RRESPONSES"/>
+                    <ref name="RSELFDESCRIPTION"/>
+                    <ref name="RSHEINFLUENCED"/>
+                    <ref name="SCHOLARNOTE"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TCHARACTERIZATION"/>
+                    <ref name="TCHARACTERNAME"/>
+                    <ref name="TCHARACTERTYPEROLE"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TGENREISSUE"/>
+                    <ref name="TINTERTEXTUALITY"/>
+                    <ref name="TITLE"/>
+                    <ref name="TMOTIF"/>
+                    <ref name="TOPIC"/>
+                    <ref name="TPLOT"/>
+                    <ref name="TSETTINGDATE"/>
+                    <ref name="TSETTINGPLACE"/>
+                    <ref name="TTECHNIQUES"/>
+                    <ref name="TTHEMETOPIC"/>
+                    <ref name="TTONESTYLE"/>
+                    <ref name="TVOICENARRATION"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
     <define name="PCIRCULATION">
         <element name="PCIRCULATION">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
@@ -2368,6 +3231,51 @@
                     <ref name="TSETTINGDATE"/>
                     <ref name="TSETTINGPLACE"/>
                     <ref name="TTECHNIQUES"/>
+                    <ref name="TTHEMETOPIC"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="PCONTRACT">
+        <element name="PCONTRACT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                element captures descriptions of the formal or informal agreement between a writer
+                and a publisher.</a:documentation>
+            <optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PARCHIVALLOCATION"/>
+                    <ref name="PATTITUDES"/>
+                    <ref name="PAUTHORSHIP"/>
+                    <ref name="PCIRCULATION"/>
+                    <ref name="PCONTRACT"/>
+                    <ref name="PCOPYRIGHT"/>
+                    <ref name="PEARNINGS"/>
+                    <ref name="PEDITIONS"/>
+                    <ref name="PLACE"/>
+                    <ref name="PMATERIALCONDITIONS"/>
+                    <ref name="PMOTIVES"/>
+                    <ref name="PNONBOOKMEDIA"/>
+                    <ref name="PPERIODICALPUBLICATION"/>
+                    <ref name="PPRESSRUN"/>
+                    <ref name="PPRICE"/>
+                    <ref name="PRELATIONSWITHPUBLISHER"/>
+                    <ref name="PSUBMISSIONSREJECTIONS"/>
+                    <ref name="QUOTE"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TITLE"/>
                     <ref name="TTHEMETOPIC"/>
                 </choice>
             </oneOrMore>
@@ -2679,6 +3587,288 @@
         </element>
     </define>
 
+    <define name="PLACE">
+        <element name="PLACE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Place is
+                a universal element, available throughout most Orlando Project XML elements, which
+                structures information about geographical location. Locating events and people is a
+                priority of our Project. By emphasizing the facts of where events occurred, we will
+                be able to bring together people and places, uncovering geographical connections
+                between writers as yet undiscovered. <br/>There are two main goals for tagging
+                place: mapping and indexing. We hope to automatically provide our end users with
+                maps of literary history. For example, by using the places tagged with biography
+                documents, we hope to generate a map for each woman writer&apos;s life which places
+                her in specific places at specific times in her life. We also hope to allow end
+                users to see a map of events for a particular year which would bring together
+                geographical information from all Project documents. In order to automate mapping,
+                it is crucial that we provide place information in a structured and recognizable
+                way. In addition to mapping, we want to provide end users with an index of places.
+                For example, we want to be able to index all women writers who lived in Bloomsbury
+                or all events which took place in Bath. <br/>While we prioritize the tagging of
+                place, not all places require tagging. We hope to enhance our geographical
+                information by context specific tagging. For example, by tagging only places where
+                events occurred inside Event chronstructs and not all places mentioned within the
+                prose, we will be able to map that event to the place tagged. </a:documentation>
+            <optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Ref (or reference) provides an explicit means of locating a full definition
+                        for the entity being named by means of a URI.</a:documentation>
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Reg (or regularization) contains a reading which has been regularized or
+                        normalized in some sense.</a:documentation>
+                </attribute>
+            </optional>            
+            <optional>
+                <attribute name="LAT">
+                    <a:documentation>Latitude in decimal degrees of the place entity. Example: for
+                        the place entity Edmonton, the latitude in decimal degrees is "53.55014"
+                        (WGS [World Geodetic System] 84 reference coordinate
+                        system).</a:documentation>
+                    <data type="decimal"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="LONG">
+                    <a:documentation>Longitude in decimal degrees of the place entity. Example: for
+                        the place entity Edmonton, the longitude in decimal degrees is "-113.46871"
+                        (WGS [World Geodetic System] 84 reference coordinate
+                        system).</a:documentation>
+                    <data type="decimal"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="annotationId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Provides a unique annotation identifier for the element bearing the
+                        attribute.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="offsetId">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Designates the parent tag from which the offset is being
+                        counted.</a:documentation>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="FOREIGN"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="SCHOOL"/>
+                    <ref name="SEPARATION"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TITLE"/>
+                    <element name="ADDRESS">
+                        <a:documentation
+                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Address, a
+                            sub-element within place, captures the specific address where a person
+                            lived or where a specific and significant event occurred. Before tagging
+                            an address, consider whether it is significant enough to capture in SGML
+                            (if a woman writer lived at the address, capture it; if she visited a
+                            friend there, probably not). Often for recent writers many addresses are
+                            available. Don&apos;t include them all. Include only those significant
+                            to the document you are writing.</a:documentation>
+                        <optional>
+                            <attribute name="CURRENT"/>
+                            <a:documentation
+                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                >Current name for geographical location.</a:documentation>
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >Reg (or regularization) contains a reading which has been
+                                    regularized or normalized in some sense.</a:documentation>
+                            </attribute>
+                        </optional>
+                        <oneOrMore>
+                            <element name="ADDRLINE">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >AddrLine is the required sub-element of address. For definition
+                                    of an address, see address.</a:documentation>
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                    </element>
+                    <element name="AREA">
+                        <optional>
+                            <attribute name="CURRENT">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >Current name for geographical location.</a:documentation>
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >Reg (or regularization) contains a reading which has been
+                                    regularized or normalized in some sense.</a:documentation>
+                            </attribute>
+                        </optional>
+                        <text/>
+                    </element>
+                    <element name="GEOG">
+                        <a:documentation
+                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Geog
+                            captures names of places which are nation states or larger conceptual
+                            geographical entities. The following is a list of the types of places
+                            geog captures: Nation states: Italy, China, Canada; Groups of Nation
+                            States: Low Countries, Baltic Countries; Continents: Europe, North
+                            America, South America, Africa, Asia; Colonies: French Indo-China,
+                            British North America, British Protectorate of Bechuanaland [Note: use
+                            current attribute wherever possible.]; Conceptual Geographical
+                            Groupings: Far East, Caribbean; Historical Geo-political units: Siam,
+                            Ceylon [Note: use "current" attribute to regularize to "Thailand" and
+                            "Sri Lanka"].</a:documentation>
+                        <optional>
+                            <attribute name="CURRENT"/>
+                            <a:documentation
+                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                >Current name for geographical location.</a:documentation>
+                        </optional>
+                        <optional>
+                            <attribute name="ID">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >Reg (or regularization) contains a reading which has been
+                                    regularized or normalized in some sense.</a:documentation>
+                            </attribute>
+                        </optional>
+                        <oneOrMore>
+                            <choice>
+                                <text/>
+                                <ref name="SOCALLED"/>
+                            </choice>
+                        </oneOrMore>
+                    </element>
+                    <element name="PLACENAME">
+                        <a:documentation
+                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Placename,
+                            a sub-element within place, captures specific and easily identifiable
+                            places that are known by their name but are not places in the same way
+                            geographical or political entities are places. For example, "Trafalgar
+                            Square" is a placename. We are only interested in capturing placenames
+                            for those places that are important to women's literary history (i.e.,
+                            those placenames that are likely to come up more than once in Orlando).
+                            For example, Sissinghurst, the estate of Vita Sackville-West, is
+                            significant and should be given a placename. However, an obscure
+                            reference to an unknown estate should not be tagged. The following are
+                            common types of placenames: Buildings and Estates: British Museum,
+                            Knole; Farms and Gardens: Kew Gardens; Squares: Bedford Square,
+                            Trafalgar Square; Streets: Fleet Street, The Strand, Old Change;
+                            Specific Mountains: while ranges are considered regions, the names of
+                            specific mountains are placenames, for example, Mount Everest;
+                            Cemeteries: Paddington Cemetery.</a:documentation>
+                        <optional>
+                            <attribute name="CURRENT"/>
+                            <a:documentation
+                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                >Current name for geographical location.</a:documentation>
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >Reg (or regularization) contains a reading which has been
+                                    regularized or normalized in some sense.</a:documentation>
+                            </attribute>
+                        </optional>
+                        <oneOrMore>
+                            <choice>
+                                <text/>
+                                <ref name="SIC"/>
+                                <ref name="SOCALLED"/>
+                            </choice>
+                        </oneOrMore>
+                    </element>
+                    <element name="REGION">
+                        <a:documentation
+                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Region, a
+                            sub-element of place, captures the following geographical and political
+                            units: Political regions of the British Isles: Cornwall, Durham,
+                            Hampshire; Political regions of other countries: Alberta, Madras,
+                            California; Topographical features: all mountains ranges, islands (when
+                            not nation states), valleys, etc.; Bodies of Waters (including oceans,
+                            rivers, lakes): Lake Simcoe, English Channel, Nile, Atlantic ocean;
+                            Geographical regions: Lake District, Scottish Highlands; Greater Urban
+                            areas: Greater London, Greater Manchester; Borders: Welsh border,
+                            Tibetan border.</a:documentation>
+                        <optional>
+                            <attribute name="CURRENT"/>
+                            <a:documentation
+                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                >Current name for geographical location.</a:documentation>
+                        </optional>
+                        <optional>
+                            <attribute name="ID">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >Reg (or regularization) contains a reading which has been
+                                    regularized or normalized in some sense.</a:documentation>
+                            </attribute>
+                        </optional>
+                        <oneOrMore>
+                            <choice>
+                                <text/>
+                                <ref name="SOCALLED"/>
+                            </choice>
+                        </oneOrMore>
+                    </element>
+                    <element name="SETTLEMENT">
+                        <a:documentation
+                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                            >Settlement, a sub-element of place, captures the names of cities,
+                            towns, villages, hamlets and areas within larger settlements (for
+                            example, districts of London).</a:documentation>
+                        <optional>
+                            <attribute name="CURRENT"/>
+                            <a:documentation
+                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                >Current name for geographical location.</a:documentation>
+                        </optional>
+                        <optional>
+                            <attribute name="REG" a:documentation="Regularized value">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >Reg (or regularization) contains a reading which has been
+                                    regularized or normalized in some sense.</a:documentation>
+                            </attribute>
+                        </optional>
+                        <text/>
+                    </element>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
     <define name="PLASTLITERARYACTIVITY">
         <element name="PLASTLITERARYACTIVITY">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
@@ -2794,6 +3984,99 @@
         </element>
     </define>
 
+    <define name="PMATERIALCONDITIONS">
+        <element name="PMATERIALCONDITIONS">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                element in the Production component describes the physical and economic
+                circumstances that governed a woman's writing. This category is meant to answer
+                questions like: did she have a room of her own? Was it the laundry room or a posh
+                cabin on the French Riviera? Was she losing her eyesight while writing a particular
+                work? Did she hide the manuscript while writing?</a:documentation>
+            <optional>
+                <attribute name="DISPLACEMENT">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >This optional attribute attached to materialconditions applies to
+                        information about women who wrote from a displaced position (geographical or
+                        physical in some sense).</a:documentation>
+                    <value>DISPLACEMENTYES</value>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
+                    <ref name="DATESTRUCT"/>
+                    <ref name="EMPH"/>
+                    <ref name="FOREIGN"/>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PADVERTISING"/>
+                    <ref name="PARCHIVALLOCATION"/>
+                    <ref name="PATTITUDES"/>
+                    <ref name="PAUTHORSHIP"/>
+                    <ref name="PCIRCULATION"/>
+                    <ref name="PCONTRACT"/>
+                    <ref name="PCOPYRIGHT"/>
+                    <ref name="PDEDICATION"/>
+                    <ref name="PEARNINGS"/>
+                    <ref name="PEDITIONS"/>
+                    <ref name="PFIRSTLITERARYACTIVITY"/>
+                    <ref name="PINFLUENCESHER"/>
+                    <ref name="PLACE"/>
+                    <ref name="PLASTLITERARYACTIVITY"/>
+                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="PMANUSCRIPTHISTORY"/>
+                    <ref name="PMATERIALCONDITIONS"/>
+                    <ref name="PMODEOFPUBLICATION"/>
+                    <ref name="PMOTIVES"/>
+                    <ref name="PNONSURVIVAL"/>
+                    <ref name="PPERFORMANCE"/>
+                    <ref name="PPERIODICALPUBLICATION"/>
+                    <ref name="PPLACEOFPUBLICATION"/>
+                    <ref name="PPRESSRUN"/>
+                    <ref name="PRARITIESFEATURESDECORATIONS"/>
+                    <ref name="PRELATIONSWITHPUBLISHER"/>
+                    <ref name="PSERIALIZATION"/>
+                    <ref name="PSUBMISSIONSREJECTIONS"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RBESTKNOWNWORK"/>
+                    <ref name="RDESTRUCTIONOFWORK"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="RLANDMARKTEXT"/>
+                    <ref name="RPENALTIES"/>
+                    <ref name="RRECOGNITIONNAME"/>
+                    <ref name="RRECOGNITIONS"/>
+                    <ref name="RRESPONSES"/>
+                    <ref name="RS"/>
+                    <ref name="RSELFDESCRIPTION"/>
+                    <ref name="RSHEINFLUENCED"/>
+                    <ref name="SCHOLARNOTE"/>
+                    <ref name="SIC"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TCHARACTERIZATION"/>
+                    <ref name="TCHARACTERNAME"/>
+                    <ref name="TCHARACTERTYPEROLE"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TGENREISSUE"/>
+                    <ref name="TINTERTEXTUALITY"/>
+                    <ref name="TITLE"/>
+                    <ref name="TMOTIF"/>
+                    <ref name="TOPIC"/>
+                    <ref name="TPLOT"/>
+                    <ref name="TSETTINGDATE"/>
+                    <ref name="TSETTINGPLACE"/>
+                    <ref name="TTECHNIQUES"/>
+                    <ref name="TTHEMETOPIC"/>
+                    <ref name="TTONESTYLE"/>
+                    <ref name="TVOICENARRATION"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+    
     <define name="PMODEOFPUBLICATION">
         <element name="PMODEOFPUBLICATION">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
@@ -3036,6 +4319,69 @@
                     <ref name="TTHEMETOPIC"/>
                     <ref name="TTONESTYLE"/>
                     <ref name="TVOICENARRATION"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="PNONSURVIVAL">
+        <element name="PNONSURVIVAL">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                element addresses texts that we do not have today for some reason or another.
+                Describes any mishaps or disasters that happen on the road to publication. If the
+                manuscript was in a tree, burned, or flew out the stage coach window; if the
+                publishers went bankrupt and lost her manuscript, all of these incidents can be
+                recorded here.</a:documentation>
+            <optional>
+                <attribute name="TYPEOFNONSURVIVAL">
+                    <choice>
+                        <value>ACCIDENT</value>
+                        <value>UNKNOWN</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
+                    <ref name="DATESTRUCT"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PADVERTISING"/>
+                    <ref name="PARCHIVALLOCATION"/>
+                    <ref name="PATTITUDES"/>
+                    <ref name="PAUTHORSHIP"/>
+                    <ref name="PCIRCULATION"/>
+                    <ref name="PEDITIONS"/>
+                    <ref name="PFIRSTLITERARYACTIVITY"/>
+                    <ref name="PINFLUENCESHER"/>
+                    <ref name="PLACE"/>
+                    <ref name="PLASTLITERARYACTIVITY"/>
+                    <ref name="PMANUSCRIPTHISTORY"/>
+                    <ref name="PMATERIALCONDITIONS"/>
+                    <ref name="PMODEOFPUBLICATION"/>
+                    <ref name="PMOTIVES"/>
+                    <ref name="PRARITIESFEATURESDECORATIONS"/>
+                    <ref name="PRELATIONSWITHPUBLISHER"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RDESTRUCTIONOFWORK"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="RRESPONSES"/>
+                    <ref name="RSELFDESCRIPTION"/>
+                    <ref name="SCHOLARNOTE"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TCHARACTERTYPEROLE"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TGENREISSUE"/>
+                    <ref name="TINTERTEXTUALITY"/>
+                    <ref name="TITLE"/>
+                    <ref name="TMOTIF"/>
+                    <ref name="TSETTINGDATE"/>
+                    <ref name="TSETTINGPLACE"/>
+                    <ref name="TTHEMETOPIC"/>
+                    <ref name="TTONESTYLE"/>
                 </choice>
             </oneOrMore>
         </element>
@@ -3511,7 +4857,76 @@
             </oneOrMore>
         </element>
     </define>
-
+    
+    <define name="RACECOLOUR">
+        <element name="RACECOLOUR">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                >RaceColour captures information about a person&apos;s race. See raceAndEthnicity
+                for a detailed description of the complexities of this element.</a:documentation>
+            <optional>
+                <attribute name="FOREBEAR" a:defaultValue="FAMILY">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >This optional attribute is attached to various categories within
+                        culturalFormation. It allows the tagger to specify the family member to
+                        which the information in the element applies.</a:documentation>
+                    <choice>
+                        <value>FATHER</value>
+                        <value>MOTHER</value>
+                        <value>PARENTS</value>
+                        <value>GRANDFATHER</value>
+                        <value>GRANDMOTHER</value>
+                        <value>GRANDPARENTS</value>
+                        <value>AUNT</value>
+                        <value>UNCLE</value>
+                        <value>OTHER</value>
+                        <value>FAMILY</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Reg (or regularization) contains a reading which has been regularized or
+                        normalized in some sense.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="SELF-DEFINED" a:defaultValue="SELFUNKNOWN">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Self-defined is an attribute attached to all identity categories within
+                        biography. Its purpose is to distinguish between people who place themselves
+                        within an identity category (i.e., &quot;Jeannette Winterson identifies as
+                        lesbian&quot;) and those whom we place in that category though they
+                        themselves did not (i.e., &quot;While she denied being a lesbian, she
+                        maintained relationships with women throughout her life&quot;). This
+                        attribute acknowledges the importance of personal, political and historical
+                        placements of one&apos;s own subject position; it assumes that identities
+                        are not simply labels we assign to other people but shifting categories
+                        which we both place ourselves within, and, in which history places
+                        us.</a:documentation>
+                    <choice>
+                        <value>SELFYES</value>
+                        <value>SELFNO</value>
+                        <value>SELFUNKNOWN</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="CLASS"/>
+                    <ref name="DENOMINATION"/>
+                    <ref name="ETHNICITY"/>
+                    <ref name="NATIONALITY"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RACECOLOUR"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TITLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+    
     <define name="RESEARCHNOTE">
         <element name="RESEARCHNOTE">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
@@ -4173,6 +5588,81 @@
         </element>
     </define>
 
+    <define name="SIGNIFICANTACTIVITY">
+        <element name="SIGNIFICANTACTIVITY">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                element captures all unpaid work, volunteer work, or other significant activity that
+                a person was engaged in. We hope to counter the ideological assumption which does
+                not recognize women&apos;s unpaid work as work; for example, parenting and unpaid
+                domestic labour are not included when the International Monetary Fund calculates the
+                gross national product of a country. We hope to counter this ideological assumption
+                by emphasizing the need to systematically capture women&apos;s exclusion from the
+                paid workforce and their participation in the unpaid workforce.</a:documentation>
+            <optional>
+                <attribute name="PHILANTHROPYVOLUNTEER" a:defaultValue="PHILANTHROPYVOLUNTEERYES">
+                    <value>PHILANTHROPYVOLUNTEERYES</value>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Reg (or regularization) contains a reading which has been regularized or
+                        normalized in some sense.</a:documentation>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
+                    <ref name="DATERANGE"/>
+                    <ref name="EMPLOYER"/>
+                    <ref name="FOREIGN"/>
+                    <ref name="JOB"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="QUOTE"/>
+                    <ref name="SIGNIFICANTACTIVITY"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TITLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+    
+    <define name="SUBJECT">
+        <element name="SUBJECT">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                content sub-element in Education records areas of study which are significant to a
+                woman writer&apos;s education. We are particularly interested in subjects which
+                influenced her writing (for example, she studied archeology and her first novel was
+                set at an archeological dig), language studies for women writers in the early period
+                (in order to record importance of Classical Greek and the ability to translate), and
+                subjects which were non-traditional for women (for example, she studied engineering
+                at a Mechanical school in 1910).</a:documentation>
+            <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Reg (or regularization) contains a reading which has been regularized or
+                        normalized in some sense.</a:documentation>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="NAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="QUOTE"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="SUBJECT"/>
+                    <ref name="TEXT"/>
+                    <ref name="TITLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+    
     <define name="TCHARACTERIZATION">
         <element name="TCHARACTERIZATION">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
@@ -4260,6 +5750,373 @@
                     <ref name="SUBJECT"/>
                     <ref name="TEXT"/>
                     <ref name="TITLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="TEXTUALFEATURES">
+        <element name="TEXTUALFEATURES">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                >Previously called literary characteristics and content, this element addresses
+                features of critical interest in texts and provides space for textual analysis/close
+                readings as perceived by project members.</a:documentation>
+            <zeroOrMore>
+                <choice>
+                    <ref name="CHRONSTRUCT"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="SHORTPROSE"/>
+                </choice>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="KEYWORDCLASS"/>
+            </zeroOrMore>
+        </element>
+    </define>
+
+    <define name="TEXTSCOPE">
+        <element name="TEXTSCOPE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">TextScope
+                identifies the work under discussion in a Div 2. Structurally, TextScope resembles
+                Bibcit in many ways: in a writing document, the TextScope tag itself is empty and
+                most of the pertinent information is contained in attributes. Textscope has two key
+                attributes: DBREF, which contains the dbref number of the corresponding bibliography
+                item in the bibl database, and PLACEHOLDER, which contains a brief mention of the
+                work under discussion and consists of the BWW's initials, a short title, and
+                date.<br/> This element must be used in conjunction with a Div 2. You may not use it
+                at the Div 1 level. You do not need to use a TextScope for each individual text you
+                are discussing, or even for each text to which you devote an entire Div 2. Use the
+                TextScope to demarcate discussions of major texts only. A useful rule of thumb is to
+                consider whether you would enter the work under discussion in the bibliography
+                database. If you would, then use a textscope for your discussion. Minor works would
+                not be entered in the bibliography database and so do not require a textscope.<br/>
+                The TextScope is not the same as a heading (and in fact may directly repeat your
+                heading). Instead, the textScope demarcates the main discussion of a text for
+                searching/indexing purposes. It is also used as a bibliographic pointer that will
+                invisibly direct end-users to the bibliographic information about the text under
+                discussion. The textScope tag will not appear in the reader's version of your
+                document. It is an invisible tag for linking and searching
+                purposes.</a:documentation>
+            <optional>
+                <attribute name="DBREF"/>
+            </optional>
+            <optional>
+                <attribute name="PLACEHOLDER"/>
+            </optional>
+            <optional>
+                <attribute name="REF">
+                    <data type="anyURI"/>
+                </attribute>
+            </optional>
+            <!-- 
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="PRODUCTION"/>
+                    <ref name="RECEPTION"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="TEXTUALFEATURES"/>
+                </choice>
+            </oneOrMore>
+             -->
+        </element>
+    </define>
+
+    <define name="TGENRE">
+        <element name="TGENRE">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">GenreName
+                (or tGenre) is used to tag the name of the genre according to a project-generated
+                list of genre names.</a:documentation>
+            <optional>
+                <attribute name="GENRENAME">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >GenreName is an optional attribute that provides a pick-list of possible
+                        genre names to modify the element tGenre. It will prove especially useful in
+                        situations where the prose does not allow the concise naming of a genre that
+                        would be easily understood by a simpler name. Ultimately, this attribute
+                        will help us systematize and index references to various genre
+                        names.</a:documentation>
+                    <choice>
+                        <value>ABRIDGEMENT</value>
+                        <value>ACLEF</value>
+                        <value>ACROSTIC</value>
+                        <value>ADAPTATION</value>
+                        <value>ADVENTUREWRITING</value>
+                        <value>ADVERTISINGCOPY</value>
+                        <value>AFTERPIECE</value>
+                        <value>AFTERWORD</value>
+                        <value>AGITPROP</value>
+                        <value>ALLEGORY</value>
+                        <value>ALMANAC</value>
+                        <value>ANACREONTIC</value>
+                        <value>ANAGRAM</value>
+                        <value>ANNOTATION</value>
+                        <value>ANSWER</value>
+                        <value>ANTHEM</value>
+                        <value>ANTHOLOGY</value>
+                        <value>ANTIROMANCE</value>
+                        <value>APHORISM</value>
+                        <value>APOLOGY</value>
+                        <value>ARTCRITICISM</value>
+                        <value>AUTOBIOGRAPHY</value>
+                        <value>BALLAD</value>
+                        <value>BALLADE</value>
+                        <value>BALLADOPERA</value>
+                        <value>BALLET</value>
+                        <value>BERGAMASQUE</value>
+                        <value>BESTIARY</value>
+                        <value>BIBLICALPARAPHRASE</value>
+                        <value>BILDUNGSROMAN</value>
+                        <value>BIOGRAPHICALDICTIONARY</value>
+                        <value>BIOGRAPHY</value>
+                        <value>BISEXUALFICTION</value>
+                        <value>BLACKCOMEDY</value>
+                        <value>BOUTSRIMES</value>
+                        <value>BROADSIDE</value>
+                        <value>BURLETTA</value>
+                        <value>CABARET</value>
+                        <value>CAPTIVITYNARRATIVE</value>
+                        <value>CATECHISM</value>
+                        <value>CHAPBOOK</value>
+                        <value>CHARACTER</value>
+                        <value>CHARADE</value>
+                        <value>CHILDRENSLITERATURE</value>
+                        <value>CLERIHEW</value>
+                        <value>CLOSETDRAMA</value>
+                        <value>COLOURINGBOOK</value>
+                        <value>COMEDY</value>
+                        <value>COMEDYOFHUMOURS</value>
+                        <value>COMEDYOFINTRIGUE</value>
+                        <value>COMEDYOFMANNERS</value>
+                        <value>COMEDYOFMENACE</value>
+                        <value>COMICBOOK</value>
+                        <value>COMINGOUT</value>
+                        <value>COMMONPLACEBOOK</value>
+                        <value>COMPANION</value>
+                        <value>COMPUTERPROGRAM</value>
+                        <value>CONDITIONOFENGLANDNOVEL</value>
+                        <value>CONDUCTLITERATURE</value>
+                        <value>COOKBOOK</value>
+                        <value>COURTSHIPFICTION</value>
+                        <value>CRIMINOLOGY</value>
+                        <value>DEDICATION</value>
+                        <value>DETECTIVE</value>
+                        <value>DEVOTIONAL</value>
+                        <value>DIALOGUEORDEBATE</value>
+                        <value>DIARY</value>
+                        <value>DIALOGUEOFTHEDEAD</value>
+                        <value>DICTIONARY</value>
+                        <value>DIDACTIC</value>
+                        <value>DIRECTORY</value>
+                        <value>DISSERTATION</value>
+                        <value>DOCUMENTARY</value>
+                        <value>DOMESTIC</value>
+                        <value>DRAMA</value>
+                        <value>DRAMATICMONOLOGUE</value>
+                        <value>DREAMVISION</value>
+                        <value>DYSTOPIA</value>
+                        <value>ECLOGUE</value>
+                        <value>EDITING</value>
+                        <value>ELEGY</value>
+                        <value>ENCYCLOPAEDIA</value>
+                        <value>EPIC</value>
+                        <value>EPICTHEATRE</value>
+                        <value>EPIGRAM</value>
+                        <value>EPILOGUE</value>
+                        <value>EPISODICLITERATURE</value>
+                        <value>EPISTLE</value>
+                        <value>EPISTOLARY</value>
+                        <value>EPITAPH</value>
+                        <value>EPITHALAMIUM</value>
+                        <value>EPYLLION</value>
+                        <value>EROTICAPORNOGRAPHY</value>
+                        <value>ESSAY</value>
+                        <value>EULOGY</value>
+                        <value>EXHIBITIONCATALOGUE</value>
+                        <value>EXPRESSIONISTWRITING</value>
+                        <value>FABLE</value>
+                        <value>FABLIAU</value>
+                        <value>FAIRYTALE</value>
+                        <value>FANTASY</value>
+                        <value>FARCE</value>
+                        <value>FEMINIST</value>
+                        <value>FEMINISTTHEORY</value>
+                        <value>FICTION</value>
+                        <value>FILMTVSCRIPT</value>
+                        <value>FOLKSONG</value>
+                        <value>GARDENINGBOOK</value>
+                        <value>GENEALOGY</value>
+                        <value>GEORGIC</value>
+                        <value>GHOSTSTORY</value>
+                        <value>GIFTBOOK</value>
+                        <value>GOTHIC</value>
+                        <value>GOVERNMENTREPORT</value>
+                        <value>GRAMMAR</value>
+                        <value>GRAVEYARDPOETRY</value>
+                        <value>GUERILLATHEATRE</value>
+                        <value>GUIDEBOOK</value>
+                        <value>HAGIOGRAPHY</value>
+                        <value>HAIKU</value>
+                        <value>HARLEQUINADE</value>
+                        <value>HEROIC</value>
+                        <value>HISTORICAL</value>
+                        <value>HISTORY</value>
+                        <value>HYMN</value>
+                        <value>IMITATION</value>
+                        <value>IMPROVISATION</value>
+                        <value>INDUSTRIALNOVEL</value>
+                        <value>INTRODUCTION</value>
+                        <value>JOURNALISM</value>
+                        <value>JUVENILIA</value>
+                        <value>KITCHENSINKDRAMA</value>
+                        <value>KUNSTLERROMAN</value>
+                        <value>LAIS</value>
+                        <value>LAMPOON</value>
+                        <value>LEGALWRITING</value>
+                        <value>LEGENDFOLKTALE</value>
+                        <value>LESBIAN</value>
+                        <value>LETTER</value>
+                        <value>LETTERSFROMTHEDEADTOTHELIVING</value>
+                        <value>LIBRETTO</value>
+                        <value>LITERARYCRITICISM</value>
+                        <value>LITURGY</value>
+                        <value>LOVE</value>
+                        <value>LYRIC</value>
+                        <value>MAGICREALIST</value>
+                        <value>MANIFESTO</value>
+                        <value>MANUAL</value>
+                        <value>MAP</value>
+                        <value>MASQUE</value>
+                        <value>MEDICALWRITING</value>
+                        <value>MELODRAMA</value>
+                        <value>MIXEDMEDIA</value>
+                        <value>MOCKFORMS</value>
+                        <value>MONOLOGUE</value>
+                        <value>MORALITYMYSTERYPLAY</value>
+                        <value>MULTIMEDIA</value>
+                        <value>MUSICOLOGY</value>
+                        <value>MYSTERY</value>
+                        <value>MYTH</value>
+                        <value>NARRATIVEPOETRY</value>
+                        <value>NATIONALISTFICTION</value>
+                        <value>NATIONALTALE</value>
+                        <value>NOTEBOOK</value>
+                        <value>NOVEL</value>
+                        <value>NOVELLA</value>
+                        <value>NURSERYRHYME</value>
+                        <value>OBITUARY</value>
+                        <value>OCCASIONALPOETRY</value>
+                        <value>ODE</value>
+                        <value>ONEACTPLAY</value>
+                        <value>OPERA</value>
+                        <value>ORATORIO</value>
+                        <value>ORIENTAL</value>
+                        <value>PAGEANT</value>
+                        <value>PANEGYRIC</value>
+                        <value>PANTOMIME</value>
+                        <value>PARABLE</value>
+                        <value>PARATEXTS</value>
+                        <value>PARLIAMENTARYREPORT</value>
+                        <value>PARODY</value>
+                        <value>PASTORAL</value>
+                        <value>PEDAGOGY</value>
+                        <value>PERFORMANCEPOETRY</value>
+                        <value>PERIODICAL</value>
+                        <value>PETITION</value>
+                        <value>PHILOSOPHICAL</value>
+                        <value>PHILOSOPHY</value>
+                        <value>PICARESQUE</value>
+                        <value>PINDARIC</value>
+                        <value>POETRY</value>
+                        <value>POLEMIC</value>
+                        <value>POLITICALWRITING</value>
+                        <value>POPULAR</value>
+                        <value>PRAYER</value>
+                        <value>PREFATORYPIECE</value>
+                        <value>PROGRAMNOTES</value>
+                        <value>PROLETARIANWRITING</value>
+                        <value>PROLOGUE</value>
+                        <value>PROPAGANDA</value>
+                        <value>PROPHECY</value>
+                        <value>PSALM</value>
+                        <value>PSYCHOANALYTICAL</value>
+                        <value>QUIZ</value>
+                        <value>RADIODRAMA</value>
+                        <value>REALIST</value>
+                        <value>REGIONAL</value>
+                        <value>RELIGIOUS</value>
+                        <value>REVIEW</value>
+                        <value>REVUE</value>
+                        <value>RIDDLE</value>
+                        <value>ROMANCE</value>
+                        <value>SAGEWRITING</value>
+                        <value>SATIRE</value>
+                        <value>SCHOLARSHIP</value>
+                        <value>SCHOOLFICTION</value>
+                        <value>SCIENCEFICTION</value>
+                        <value>SCIENTIFICWRITING</value>
+                        <value>SCRAPBOOK</value>
+                        <value>SENSATIONNOVEL</value>
+                        <value>SENSIBILITY</value>
+                        <value>SENTIMENTAL</value>
+                        <value>SEQUEL</value>
+                        <value>SERMON</value>
+                        <value>SEXUALAWAKENINGFICTION</value>
+                        <value>SHORTSTORY</value>
+                        <value>SILVERFORKNOVEL</value>
+                        <value>SKETCH</value>
+                        <value>SKETCHBOOK</value>
+                        <value>SLAVENARRATIVE</value>
+                        <value>SOCIALSCIENCE</value>
+                        <value>SONG</value>
+                        <value>SONNET</value>
+                        <value>SPEECH</value>
+                        <value>STAGEREVIEW</value>
+                        <value>TESTIMONY</value>
+                        <value>TEXTBOOK</value>
+                        <value>THEATREOFCRUELTY</value>
+                        <value>THEATREOFTHEABSURD</value>
+                        <value>THEOLOGY</value>
+                        <value>THESAURUS</value>
+                        <value>THRILLER</value>
+                        <value>TOPOGRAPHICALPOETRY</value>
+                        <value>TRACTPAMPHLET</value>
+                        <value>TRAGEDY</value>
+                        <value>TRAGICOMEDY</value>
+                        <value>TRANSLATION</value>
+                        <value>TRAVELWRITING</value>
+                        <value>TREATISE</value>
+                        <value>UTOPIA</value>
+                        <value>VERSENOVEL</value>
+                        <value>VIGNETTE</value>
+                        <value>VILLANELLE</value>
+                        <value>YOUNGADULTWRITING</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="BIBCITS"/>
+                    <ref name="DATE"/>
+                    <ref name="EMPH"/>
+                    <ref name="FOREIGN"/>
+                    <ref name="NAME"/>
+                    <ref name="ORGNAME"/>
+                    <ref name="PLACE"/>
+                    <ref name="PLITERARYSCHOOLS"/>
+                    <ref name="QUOTE"/>
+                    <ref name="RESEARCHNOTE"/>
+                    <ref name="SIC"/>
+                    <ref name="SOCALLED"/>
+                    <ref name="TCHARACTERNAME"/>
+                    <ref name="TCHARACTERTYPEROLE"/>
+                    <ref name="TGENRE"/>
+                    <ref name="TITLE"/>
+                    <ref name="TMOTIF"/>
+                    <ref name="TOPIC"/>
+                    <ref name="TTHEMETOPIC"/>
+                    <ref name="TVOICENARRATION"/>
                 </choice>
             </oneOrMore>
         </element>
