@@ -140,6 +140,43 @@
                 </element>
             </element>
             <element name="DIV0">
+                <element name="STANDARD">
+                    <a:documentation
+                        xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Standard
+                        is an element used to record the standard name by which a woman writer
+                        is known. It prefaces the document and should reflect the name under
+                        which she wrote or the name chosen as standard by the <em>Feminist
+                            Companion</em> or the <em>Drabble Oxford
+                                Companion</em>.</a:documentation>
+                    <optional>
+                        <attribute name="WROTEORPUBLISHEDAS"
+                            a:defaultValue="WROTEPUBLISHEDASYES">
+                            <a:documentation
+                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                >WroteOrPublishedAs is an attribute attached to all the types of
+                                a person&apos;s name captured within their biography section.
+                                This attribute will allow us to track all the different names
+                                women writers published under. While we assume that most writers
+                                published under their standard name and pseudonyms, they may
+                                also have used a nickname or their married name, for instance,
+                                to publish material. This attribute works in conjunction with
+                                the authorname in the bibliography to link the name a text was
+                                published under with the name of the person.</a:documentation>
+                            <value>WROTEPUBLISHEDASYES</value>
+                        </attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="REF">
+                            <a:documentation
+                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                                Ref (or reference) provides an explicit means of locating a full
+                                definition for the entity being named by means of a
+                                URI.</a:documentation>
+                            <data type="anyURI"/>
+                        </attribute>
+                    </optional>
+                    <text/>
+                </element>
                 <element name="AUTHORSUMMARY">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                         >The element authorSummary is specially devised for researchers to make
@@ -167,6 +204,11 @@
         <element name="BIOGRAPHY">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Biography
                 is the large, all-encompassing element in all biography documents.</a:documentation>
+            <optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <ref name="HEADING"/>
@@ -985,43 +1027,7 @@
                             </choice>
                         </zeroOrMore>
                     </element>
-                    <element name="STANDARD">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Standard
-                            is an element used to record the standard name by which a woman writer
-                            is known. It prefaces the document and should reflect the name under
-                            which she wrote or the name chosen as standard by the <em>Feminist
-                                Companion</em> or the <em>Drabble Oxford
-                            Companion</em>.</a:documentation>
-                        <optional>
-                            <attribute name="WROTEORPUBLISHEDAS"
-                                a:defaultValue="WROTEPUBLISHEDASYES">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >WroteOrPublishedAs is an attribute attached to all the types of
-                                    a person&apos;s name captured within their biography section.
-                                    This attribute will allow us to track all the different names
-                                    women writers published under. While we assume that most writers
-                                    published under their standard name and pseudonyms, they may
-                                    also have used a nickname or their married name, for instance,
-                                    to publish material. This attribute works in conjunction with
-                                    the authorname in the bibliography to link the name a text was
-                                    published under with the name of the person.</a:documentation>
-                                <value>WROTEPUBLISHEDASYES</value>
-                            </attribute>
-                        </optional>
-                        <optional>
-                            <attribute name="REF">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                                    Ref (or reference) provides an explicit means of locating a full
-                                    definition for the entity being named by means of a
-                                    URI.</a:documentation>
-                                <data type="anyURI"/>
-                            </attribute>
-                        </optional>
-                        <text/>
-                    </element>
+                    
                     <element name="WORKSCITED">
                         <a:documentation
                             xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
@@ -2121,6 +2127,11 @@
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                         >Designates the parent tag from which the offset is being
                         counted.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="ID">
+                    <data type="NCName"/>
                 </attribute>
             </optional>
             <oneOrMore>
