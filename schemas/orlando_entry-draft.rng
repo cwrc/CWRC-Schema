@@ -4,6 +4,10 @@
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     <start>
         <element name="ENTRY">
+            <attribute name="ID">
+                <a:documentation>Attribute ID on the ENTRY element is meant to keep the legacy 6 letter code for each author bio &amp; writing document pairs.</a:documentation>
+                <data type="NCName"/>
+            </attribute>
             <element name="ORLANDOHEADER">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     >Equivalent to TEI's TEIHeader, OrlandoHeader supplies the descriptive and
@@ -141,35 +145,33 @@
             </element>
             <element name="DIV0">
                 <element name="STANDARD">
-                    <a:documentation
-                        xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Standard
-                        is an element used to record the standard name by which a woman writer
-                        is known. It prefaces the document and should reflect the name under
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Standard is an element used to record the standard name by which a woman
+                        writer is known. It prefaces the document and should reflect the name under
                         which she wrote or the name chosen as standard by the <em>Feminist
                             Companion</em> or the <em>Drabble Oxford
-                                Companion</em>.</a:documentation>
+                        Companion</em>.</a:documentation>
                     <optional>
-                        <attribute name="WROTEORPUBLISHEDAS"
-                            a:defaultValue="WROTEPUBLISHEDASYES">
+                        <attribute name="WROTEORPUBLISHEDAS" a:defaultValue="WROTEPUBLISHEDASYES">
                             <a:documentation
                                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                >WroteOrPublishedAs is an attribute attached to all the types of
-                                a person&apos;s name captured within their biography section.
-                                This attribute will allow us to track all the different names
-                                women writers published under. While we assume that most writers
-                                published under their standard name and pseudonyms, they may
-                                also have used a nickname or their married name, for instance,
-                                to publish material. This attribute works in conjunction with
-                                the authorname in the bibliography to link the name a text was
-                                published under with the name of the person.</a:documentation>
+                                >WroteOrPublishedAs is an attribute attached to all the types of a
+                                person&apos;s name captured within their biography section. This
+                                attribute will allow us to track all the different names women
+                                writers published under. While we assume that most writers published
+                                under their standard name and pseudonyms, they may also have used a
+                                nickname or their married name, for instance, to publish material.
+                                This attribute works in conjunction with the authorname in the
+                                bibliography to link the name a text was published under with the
+                                name of the person.</a:documentation>
                             <value>WROTEPUBLISHEDASYES</value>
                         </attribute>
                     </optional>
                     <optional>
                         <attribute name="REF">
                             <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                                Ref (or reference) provides an explicit means of locating a full
+                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"> Ref
+                                (or reference) provides an explicit means of locating a full
                                 definition for the entity being named by means of a
                                 URI.</a:documentation>
                             <data type="anyURI"/>
@@ -1027,7 +1029,7 @@
                             </choice>
                         </zeroOrMore>
                     </element>
-                    
+
                     <element name="WORKSCITED">
                         <a:documentation
                             xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
@@ -1418,7 +1420,7 @@
         </element>
     </define>
 
-    <define name="CAUSE"> 
+    <define name="CAUSE">
         <element name="CAUSE">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Cause is
                 the element in which we capture all information concerning the causes of death.
@@ -1663,7 +1665,7 @@
                         <ref name="TEXT"/>
                         <ref name="TITLE"/>
                         <ref name="TOPIC"/>
-                        <ref name="TGENRE"></ref>
+                        <ref name="TGENRE"/>
                     </choice>
                 </oneOrMore>
                 <oneOrMore>
@@ -3300,8 +3302,10 @@
                         counted.</a:documentation>
                 </attribute>
             </optional>
-<choice>            <data type="anyURI"/>
-            <text/></choice>
+            <choice>
+                <data type="anyURI"/>
+                <text/>
+            </choice>
         </element>
     </define>
 
@@ -4093,7 +4097,7 @@
             </oneOrMore>
         </element>
     </define>
-    
+
     <define name="PANTHOLOGIZATION">
         <element name="PANTHOLOGIZATION">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
@@ -4992,7 +4996,7 @@
                         >Reg (or regularization) contains a reading which has been regularized or
                         normalized in some sense.</a:documentation>
                 </attribute>
-            </optional>            
+            </optional>
             <optional>
                 <attribute name="LAT">
                     <a:documentation>Latitude in decimal degrees of the place entity. Example: for
@@ -5515,7 +5519,7 @@
             </oneOrMore>
         </element>
     </define>
-    
+
     <define name="PMODEOFPUBLICATION">
         <element name="PMODEOFPUBLICATION">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
@@ -6685,6 +6689,19 @@
                     <data type="NCName"/>
                 </attribute>
             </optional>
+            <optional>
+                <attribute name="LAYOUT" a:defaultValue="INLINE">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Layout is an attribute of QUOTE that determines the possition of the QOUTE
+                        in relation to the surrounding text of the entry</a:documentation>
+                    <choice>
+                        <value>INLINE</value>
+                        <a:documentation>Use for short quotes.</a:documentation>
+                        <value>BLOCK</value>
+                        <a:documentation>Use for longer quotes.</a:documentation>
+                    </choice>
+                </attribute>
+            </optional>
             <oneOrMore>
                 <choice>
                     <text/>
@@ -6821,7 +6838,7 @@
             </oneOrMore>
         </element>
     </define>
-    
+
     <define name="RACECOLOUR">
         <element name="RACECOLOUR">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
@@ -7368,7 +7385,7 @@
             </oneOrMore>
         </element>
     </define>
-    
+
     <define name="RRECOGNITIONS">
         <element name="RRECOGNITIONS">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
@@ -7943,30 +7960,6 @@
         </element>
     </define>
 
-    <define name="SHORTPROSE">
-        <element name="SHORTPROSE">
-            <optional>
-                <choice>
-                    <ref name="TPLOT"/>
-                    <ref name="TSETTINGDATE"/>
-                </choice>
-            </optional>
-            <oneOrMore>
-                <choice>
-                    <ref name="KEYWORDCLASS"/>
-                    <ref name="P"/>
-                    <ref name="RESEARCHNOTE"/>
-                </choice>
-            </oneOrMore>
-            <optional>
-                <choice>
-                    <ref name="PARCHIVALLOCATION"/>
-                    <ref name="RRESPONSES"/>
-                </choice>
-            </optional>
-        </element>
-    </define>
-
     <define name="SELFCONSTRUCTED">
         <element name="SELFCONSTRUCTED">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
@@ -8119,6 +8112,30 @@
                     <ref name="SOCALLED"/>
                 </choice>
             </oneOrMore>
+        </element>
+    </define>
+
+    <define name="SHORTPROSE">
+        <element name="SHORTPROSE">
+            <optional>
+                <choice>
+                    <ref name="TPLOT"/>
+                    <ref name="TSETTINGDATE"/>
+                </choice>
+            </optional>
+            <oneOrMore>
+                <choice>
+                    <ref name="KEYWORDCLASS"/>
+                    <ref name="P"/>
+                    <ref name="RESEARCHNOTE"/>
+                </choice>
+            </oneOrMore>
+            <optional>
+                <choice>
+                    <ref name="PARCHIVALLOCATION"/>
+                    <ref name="RRESPONSES"/>
+                </choice>
+            </optional>
         </element>
     </define>
 
@@ -8328,7 +8345,7 @@
             </oneOrMore>
         </element>
     </define>
-        
+
     <define name="TCHARACTERIZATION">
         <element name="TCHARACTERIZATION">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
@@ -10119,7 +10136,7 @@
                 <a:documentation>Bhuva Narayanni</a:documentation>
                 <!-- JCA: 2016-08-23: add the following RAs -->
                 <value type="token">KPM</value>
-                <a:documentation>Karen McFadyen</a:documentation>    
+                <a:documentation>Karen McFadyen</a:documentation>
                 <value type="token">SCD</value>
                 <a:documentation>Sarah Davidson</a:documentation>
                 <value type="token">DJA</value>
@@ -10170,7 +10187,7 @@
             <text/>
         </interleave>
     </define>
-    
+
     <define name="any_element">
         <element>
             <anyName/>
@@ -10182,13 +10199,13 @@
             </zeroOrMore>
         </element>
     </define>
-    
+
     <define name="any_attribute">
         <attribute>
             <anyName/>
         </attribute>
     </define>
-    
+
     <!-- end globally defined any node pattern -->
 
 </grammar>
