@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="any_content">
+   <title>Element Group any_content</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_Group_any_content">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_Group_any_content.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>244,3,366,29</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_Group_any_element.dita#any_element"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>ANY element from ANY namespace</entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:group name="any_content"&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:group minOccurs="0" maxOccurs="unbounded" ref="any_element"/&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:group&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

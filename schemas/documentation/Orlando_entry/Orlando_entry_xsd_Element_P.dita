@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="P">
+   <title>Element P</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">p marks
+paragraphs in prose.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>mixed: </entry>
+                                    <entry>
+                                       <b>true</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Elements </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_AUTHORSUMMARY.dita#AUTHORSUMMARY"/>, <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2_SHORTPROSE"/>, <xref href="Orlando_entry_xsd_Element_FIGURE.dita#FIGURE"/>, <xref href="Orlando_entry_xsd_Element_PRODUCTION.dita#PRODUCTION"/>, <xref href="Orlando_entry_xsd_Element_SCHOLARNOTE.dita#SCHOLARNOTE"/>, <xref href="Orlando_entry_xsd_Element_SHORTPROSE.dita#SHORTPROSE"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>(<xref href="Orlando_entry_xsd_Element_AWARD.dita#AWARD"/> | <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/> | <xref href="Orlando_entry_xsd_Element_BIRTHNAME.dita#BIRTHNAME"/> | <xref href="Orlando_entry_xsd_Element_BIRTHPOSITION.dita#BIRTHPOSITION"/> | <xref href="Orlando_entry_xsd_Element_CAUSE.dita#CAUSE"/> | <xref href="Orlando_entry_xsd_Element_CHILDLESSNESS.dita#CHILDLESSNESS"/> | <xref href="Orlando_entry_xsd_Element_CHILDREN.dita#CHILDREN"/> | <xref href="Orlando_entry_xsd_Element_CLASS.dita#CLASS"/> | <xref href="Orlando_entry_xsd_Element_COMPANION.dita#COMPANION"/> | <xref href="Orlando_entry_xsd_Element_CONTESTEDBEHAVIOUR.dita#CONTESTEDBEHAVIOUR"/> | <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/> | <xref href="Orlando_entry_xsd_Element_DATERANGE.dita#DATERANGE"/> | <xref href="Orlando_entry_xsd_Element_DATESTRUCT.dita#DATESTRUCT"/> | <xref href="Orlando_entry_xsd_Element_DEGREE.dita#DEGREE"/> | <xref href="Orlando_entry_xsd_Element_DENOMINATION.dita#DENOMINATION"/> | <xref href="Orlando_entry_xsd_Element_DIVORCE.dita#DIVORCE"/> | <xref href="Orlando_entry_xsd_Element_EMPH.dita#EMPH"/> | <xref href="Orlando_entry_xsd_Element_EMPLOYER.dita#EMPLOYER"/> | <xref href="Orlando_entry_xsd_Element_ETHNICITY.dita#ETHNICITY"/> | <xref href="Orlando_entry_xsd_Element_FIGURE.dita#FIGURE"/> | <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/> | <xref href="Orlando_entry_xsd_Element_GENDER.dita#GENDER"/> | <xref href="Orlando_entry_xsd_Element_GEOGHERITAGE.dita#GEOGHERITAGE"/> | <xref href="Orlando_entry_xsd_Element_GRAPHIC.dita#GRAPHIC"/> | <xref href="Orlando_entry_xsd_Element_INDEXED.dita#INDEXED"/> | <xref href="Orlando_entry_xsd_Element_INSTRUCTOR.dita#INSTRUCTOR"/> | <xref href="Orlando_entry_xsd_Element_JOB.dita#JOB"/> | <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/> | <xref href="Orlando_entry_xsd_Element_LANGUAGE.dita#LANGUAGE"/> | <xref href="Orlando_entry_xsd_Element_LIVESWITH.dita#LIVESWITH"/> | <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/> | <xref href="Orlando_entry_xsd_Element_NATIONALHERITAGE.dita#NATIONALHERITAGE"/> | <xref href="Orlando_entry_xsd_Element_NATIONALITY.dita#NATIONALITY"/> | <xref href="Orlando_entry_xsd_Element_NICKNAME.dita#NICKNAME"/> | <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/> | <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/> | <xref href="Orlando_entry_xsd_Element_POLITICALAFFILIATION.dita#POLITICALAFFILIATION"/> | <xref href="Orlando_entry_xsd_Element_PSEUDONYM.dita#PSEUDONYM"/> | <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/> | <xref href="Orlando_entry_xsd_Element_RACECOLOUR.dita#RACECOLOUR"/> | <xref href="Orlando_entry_xsd_Element_REMUNERATION.dita#REMUNERATION"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="Orlando_entry_xsd_Element_ROYAL.dita#ROYAL"/> | <xref href="Orlando_entry_xsd_Element_RS.dita#RS"/> | <xref href="Orlando_entry_xsd_Element_SCHOLARNOTE.dita#SCHOLARNOTE"/> | <xref href="Orlando_entry_xsd_Element_SCHOOL.dita#SCHOOL"/> | <xref href="Orlando_entry_xsd_Element_SELFCONSTRUCTED.dita#SELFCONSTRUCTED"/> | <xref href="Orlando_entry_xsd_Element_SEPARATION.dita#SEPARATION"/> | <xref href="Orlando_entry_xsd_Element_SEXUALIDENTITY.dita#SEXUALIDENTITY"/> | <xref href="Orlando_entry_xsd_Element_SIC.dita#SIC"/> | <xref href="Orlando_entry_xsd_Element_SIGNIFICANTACTIVITY.dita#SIGNIFICANTACTIVITY"/> | <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/> | <xref href="Orlando_entry_xsd_Element_SUBJECT.dita#SUBJECT"/> | <xref href="Orlando_entry_xsd_Element_TEXT.dita#TEXT"/> | <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/> | <xref href="Orlando_entry_xsd_Element_TOPIC.dita#TOPIC"/> | <xref href="#P_XREF"/>) , (<xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/> | <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/> | <xref href="Orlando_entry_xsd_Element_DATERANGE.dita#DATERANGE"/> | <xref href="Orlando_entry_xsd_Element_DATESTRUCT.dita#DATESTRUCT"/> | <xref href="Orlando_entry_xsd_Element_EMPH.dita#EMPH"/> | <xref href="Orlando_entry_xsd_Element_EXTENTOFOEUVRE.dita#EXTENTOFOEUVRE"/> | <xref href="Orlando_entry_xsd_Element_FIGURE.dita#FIGURE"/> | <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/> | <xref href="Orlando_entry_xsd_Element_GENERICRANGE.dita#GENERICRANGE"/> | <xref href="Orlando_entry_xsd_Element_GRAPHIC.dita#GRAPHIC"/> | <xref href="Orlando_entry_xsd_Element_JOB.dita#JOB"/> | <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/> | <xref href="Orlando_entry_xsd_Element_L.dita#L"/> | <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/> | <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/> | <xref href="Orlando_entry_xsd_Element_PADVERTISING.dita#PADVERTISING"/> | <xref href="Orlando_entry_xsd_Element_PANTHOLOGIZATION.dita#PANTHOLOGIZATION"/> | <xref href="Orlando_entry_xsd_Element_PARCHIVALLOCATION.dita#PARCHIVALLOCATION"/> | <xref href="Orlando_entry_xsd_Element_PATTITUDES.dita#PATTITUDES"/> | <xref href="Orlando_entry_xsd_Element_PAUTHORSHIP.dita#PAUTHORSHIP"/> | <xref href="Orlando_entry_xsd_Element_PCIRCULATION.dita#PCIRCULATION"/> | <xref href="Orlando_entry_xsd_Element_PCONTRACT.dita#PCONTRACT"/> | <xref href="Orlando_entry_xsd_Element_PCOPYRIGHT.dita#PCOPYRIGHT"/> | <xref href="Orlando_entry_xsd_Element_PDEDICATION.dita#PDEDICATION"/> | <xref href="Orlando_entry_xsd_Element_PEARNINGS.dita#PEARNINGS"/> | <xref href="Orlando_entry_xsd_Element_PEDITIONS.dita#PEDITIONS"/> | <xref href="Orlando_entry_xsd_Element_PFIRSTLITERARYACTIVITY.dita#PFIRSTLITERARYACTIVITY"/> | <xref href="Orlando_entry_xsd_Element_PINFLUENCESHER.dita#PINFLUENCESHER"/> | <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/> | <xref href="Orlando_entry_xsd_Element_PLASTLITERARYACTIVITY.dita#PLASTLITERARYACTIVITY"/> | <xref href="Orlando_entry_xsd_Element_PLITERARYSCHOOLS.dita#PLITERARYSCHOOLS"/> | <xref href="Orlando_entry_xsd_Element_PMANUSCRIPTHISTORY.dita#PMANUSCRIPTHISTORY"/> | <xref href="Orlando_entry_xsd_Element_PMATERIALCONDITIONS.dita#PMATERIALCONDITIONS"/> | <xref href="Orlando_entry_xsd_Element_PMODEOFPUBLICATION.dita#PMODEOFPUBLICATION"/> | <xref href="Orlando_entry_xsd_Element_PMOTIVES.dita#PMOTIVES"/> | <xref href="Orlando_entry_xsd_Element_PNONBOOKMEDIA.dita#PNONBOOKMEDIA"/> | <xref href="Orlando_entry_xsd_Element_PNONSURVIVAL.dita#PNONSURVIVAL"/> | <xref href="Orlando_entry_xsd_Element_PPERFORMANCE.dita#PPERFORMANCE"/> | <xref href="Orlando_entry_xsd_Element_PPERIODICALPUBLICATION.dita#PPERIODICALPUBLICATION"/> | <xref href="Orlando_entry_xsd_Element_PPLACEOFPUBLICATION.dita#PPLACEOFPUBLICATION"/> | <xref href="Orlando_entry_xsd_Element_PPRESSRUN.dita#PPRESSRUN"/> | <xref href="Orlando_entry_xsd_Element_PPRICE.dita#PPRICE"/> | <xref href="Orlando_entry_xsd_Element_PRARITIESFEATURESDECORATIONS.dita#PRARITIESFEATURESDECORATIONS"/> | <xref href="Orlando_entry_xsd_Element_PRELATIONSWITHPUBLISHER.dita#PRELATIONSWITHPUBLISHER"/> | <xref href="Orlando_entry_xsd_Element_PSERIALIZATION.dita#PSERIALIZATION"/> | <xref href="Orlando_entry_xsd_Element_PSUBMISSIONSREJECTIONS.dita#PSUBMISSIONSREJECTIONS"/> | <xref href="Orlando_entry_xsd_Element_PTYPEOFPRESS.dita#PTYPEOFPRESS"/> | <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/> | <xref href="Orlando_entry_xsd_Element_RBESTKNOWNWORK.dita#RBESTKNOWNWORK"/> | <xref href="Orlando_entry_xsd_Element_RDESTRUCTIONOFWORK.dita#RDESTRUCTIONOFWORK"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="Orlando_entry_xsd_Element_RFICTIONALIZATION.dita#RFICTIONALIZATION"/> | <xref href="Orlando_entry_xsd_Element_RLANDMARKTEXT.dita#RLANDMARKTEXT"/> | <xref href="Orlando_entry_xsd_Element_RPENALTIES.dita#RPENALTIES"/> | <xref href="Orlando_entry_xsd_Element_RRECOGNITIONNAME.dita#RRECOGNITIONNAME"/> | <xref href="Orlando_entry_xsd_Element_RRECOGNITIONS.dita#RRECOGNITIONS"/> | <xref href="Orlando_entry_xsd_Element_RRECOGNITIONVALUE.dita#RRECOGNITIONVALUE"/> | <xref href="Orlando_entry_xsd_Element_RRESPONSES.dita#RRESPONSES"/> | <xref href="Orlando_entry_xsd_Element_RS.dita#RS"/> | <xref href="Orlando_entry_xsd_Element_RSELFDESCRIPTION.dita#RSELFDESCRIPTION"/> | <xref href="Orlando_entry_xsd_Element_RSHEINFLUENCED.dita#RSHEINFLUENCED"/> | <xref href="Orlando_entry_xsd_Element_RWRITINGMILESTONE.dita#RWRITINGMILESTONE"/> | <xref href="Orlando_entry_xsd_Element_SCHOLARNOTE.dita#SCHOLARNOTE"/> | <xref href="Orlando_entry_xsd_Element_SIC.dita#SIC"/> | <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/> | <xref href="Orlando_entry_xsd_Element_TCHARACTERIZATION.dita#TCHARACTERIZATION"/> | <xref href="Orlando_entry_xsd_Element_TCHARACTERNAME.dita#TCHARACTERNAME"/> | <xref href="Orlando_entry_xsd_Element_TCHARACTERTYPEROLE.dita#TCHARACTERTYPEROLE"/> | <xref href="Orlando_entry_xsd_Element_TGENRE.dita#TGENRE"/> | <xref href="Orlando_entry_xsd_Element_TGENREISSUE.dita#TGENREISSUE"/> | <xref href="Orlando_entry_xsd_Element_TINTERTEXTUALITY.dita#TINTERTEXTUALITY"/> | <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/> | <xref href="Orlando_entry_xsd_Element_TMOTIF.dita#TMOTIF"/> | <xref href="Orlando_entry_xsd_Element_TOPIC.dita#TOPIC"/> | <xref href="Orlando_entry_xsd_Element_TPLOT.dita#TPLOT"/> | <xref href="Orlando_entry_xsd_Element_TSETTINGDATE.dita#TSETTINGDATE"/> | <xref href="Orlando_entry_xsd_Element_TSETTINGPLACE.dita#TSETTINGPLACE"/> | <xref href="Orlando_entry_xsd_Element_TTECHNIQUES.dita#TTECHNIQUES"/> | <xref href="Orlando_entry_xsd_Element_TTHEMETOPIC.dita#TTHEMETOPIC"/> | <xref href="Orlando_entry_xsd_Element_TTONESTYLE.dita#TTONESTYLE"/> | <xref href="Orlando_entry_xsd_Element_TVOICENARRATION.dita#TVOICENARRATION"/> | <xref href="Orlando_entry_xsd_Element_XREF.dita#XREF"/>)</entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_AWARD.dita#AWARD"/>, <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/>, <xref href="Orlando_entry_xsd_Element_BIRTHNAME.dita#BIRTHNAME"/>, <xref href="Orlando_entry_xsd_Element_BIRTHPOSITION.dita#BIRTHPOSITION"/>, <xref href="Orlando_entry_xsd_Element_CAUSE.dita#CAUSE"/>, <xref href="Orlando_entry_xsd_Element_CHILDLESSNESS.dita#CHILDLESSNESS"/>, <xref href="Orlando_entry_xsd_Element_CHILDREN.dita#CHILDREN"/>, <xref href="Orlando_entry_xsd_Element_CLASS.dita#CLASS"/>, <xref href="Orlando_entry_xsd_Element_COMPANION.dita#COMPANION"/>, <xref href="Orlando_entry_xsd_Element_CONTESTEDBEHAVIOUR.dita#CONTESTEDBEHAVIOUR"/>, <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/>, <xref href="Orlando_entry_xsd_Element_DATERANGE.dita#DATERANGE"/>, <xref href="Orlando_entry_xsd_Element_DATESTRUCT.dita#DATESTRUCT"/>, <xref href="Orlando_entry_xsd_Element_DEGREE.dita#DEGREE"/>, <xref href="Orlando_entry_xsd_Element_DENOMINATION.dita#DENOMINATION"/>, <xref href="Orlando_entry_xsd_Element_DIVORCE.dita#DIVORCE"/>, <xref href="Orlando_entry_xsd_Element_EMPH.dita#EMPH"/>, <xref href="Orlando_entry_xsd_Element_EMPLOYER.dita#EMPLOYER"/>, <xref href="Orlando_entry_xsd_Element_ETHNICITY.dita#ETHNICITY"/>, <xref href="Orlando_entry_xsd_Element_EXTENTOFOEUVRE.dita#EXTENTOFOEUVRE"/>, <xref href="Orlando_entry_xsd_Element_FIGURE.dita#FIGURE"/>, <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/>, <xref href="Orlando_entry_xsd_Element_GENDER.dita#GENDER"/>, <xref href="Orlando_entry_xsd_Element_GENERICRANGE.dita#GENERICRANGE"/>, <xref href="Orlando_entry_xsd_Element_GEOGHERITAGE.dita#GEOGHERITAGE"/>, <xref href="Orlando_entry_xsd_Element_GRAPHIC.dita#GRAPHIC"/>, <xref href="Orlando_entry_xsd_Element_INDEXED.dita#INDEXED"/>, <xref href="Orlando_entry_xsd_Element_INSTRUCTOR.dita#INSTRUCTOR"/>, <xref href="Orlando_entry_xsd_Element_JOB.dita#JOB"/>, <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/>, <xref href="Orlando_entry_xsd_Element_L.dita#L"/>, <xref href="Orlando_entry_xsd_Element_LANGUAGE.dita#LANGUAGE"/>, <xref href="Orlando_entry_xsd_Element_LIVESWITH.dita#LIVESWITH"/>, <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>, <xref href="Orlando_entry_xsd_Element_NATIONALHERITAGE.dita#NATIONALHERITAGE"/>, <xref href="Orlando_entry_xsd_Element_NATIONALITY.dita#NATIONALITY"/>, <xref href="Orlando_entry_xsd_Element_NICKNAME.dita#NICKNAME"/>, <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>, <xref href="Orlando_entry_xsd_Element_PADVERTISING.dita#PADVERTISING"/>, <xref href="Orlando_entry_xsd_Element_PANTHOLOGIZATION.dita#PANTHOLOGIZATION"/>, <xref href="Orlando_entry_xsd_Element_PARCHIVALLOCATION.dita#PARCHIVALLOCATION"/>, <xref href="Orlando_entry_xsd_Element_PATTITUDES.dita#PATTITUDES"/>, <xref href="Orlando_entry_xsd_Element_PAUTHORSHIP.dita#PAUTHORSHIP"/>, <xref href="Orlando_entry_xsd_Element_PCIRCULATION.dita#PCIRCULATION"/>, <xref href="Orlando_entry_xsd_Element_PCONTRACT.dita#PCONTRACT"/>, <xref href="Orlando_entry_xsd_Element_PCOPYRIGHT.dita#PCOPYRIGHT"/>, <xref href="Orlando_entry_xsd_Element_PDEDICATION.dita#PDEDICATION"/>, <xref href="Orlando_entry_xsd_Element_PEARNINGS.dita#PEARNINGS"/>, <xref href="Orlando_entry_xsd_Element_PEDITIONS.dita#PEDITIONS"/>, <xref href="Orlando_entry_xsd_Element_PFIRSTLITERARYACTIVITY.dita#PFIRSTLITERARYACTIVITY"/>, <xref href="Orlando_entry_xsd_Element_PINFLUENCESHER.dita#PINFLUENCESHER"/>, <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>, <xref href="Orlando_entry_xsd_Element_PLASTLITERARYACTIVITY.dita#PLASTLITERARYACTIVITY"/>, <xref href="Orlando_entry_xsd_Element_PLITERARYSCHOOLS.dita#PLITERARYSCHOOLS"/>, <xref href="Orlando_entry_xsd_Element_PMANUSCRIPTHISTORY.dita#PMANUSCRIPTHISTORY"/>, <xref href="Orlando_entry_xsd_Element_PMATERIALCONDITIONS.dita#PMATERIALCONDITIONS"/>, <xref href="Orlando_entry_xsd_Element_PMODEOFPUBLICATION.dita#PMODEOFPUBLICATION"/>, <xref href="Orlando_entry_xsd_Element_PMOTIVES.dita#PMOTIVES"/>, <xref href="Orlando_entry_xsd_Element_PNONBOOKMEDIA.dita#PNONBOOKMEDIA"/>, <xref href="Orlando_entry_xsd_Element_PNONSURVIVAL.dita#PNONSURVIVAL"/>, <xref href="Orlando_entry_xsd_Element_POLITICALAFFILIATION.dita#POLITICALAFFILIATION"/>, <xref href="Orlando_entry_xsd_Element_PPERFORMANCE.dita#PPERFORMANCE"/>, <xref href="Orlando_entry_xsd_Element_PPERIODICALPUBLICATION.dita#PPERIODICALPUBLICATION"/>, <xref href="Orlando_entry_xsd_Element_PPLACEOFPUBLICATION.dita#PPLACEOFPUBLICATION"/>, <xref href="Orlando_entry_xsd_Element_PPRESSRUN.dita#PPRESSRUN"/>, <xref href="Orlando_entry_xsd_Element_PPRICE.dita#PPRICE"/>, <xref href="Orlando_entry_xsd_Element_PRARITIESFEATURESDECORATIONS.dita#PRARITIESFEATURESDECORATIONS"/>, <xref href="Orlando_entry_xsd_Element_PRELATIONSWITHPUBLISHER.dita#PRELATIONSWITHPUBLISHER"/>, <xref href="Orlando_entry_xsd_Element_PSERIALIZATION.dita#PSERIALIZATION"/>, <xref href="Orlando_entry_xsd_Element_PSEUDONYM.dita#PSEUDONYM"/>, <xref href="Orlando_entry_xsd_Element_PSUBMISSIONSREJECTIONS.dita#PSUBMISSIONSREJECTIONS"/>, <xref href="Orlando_entry_xsd_Element_PTYPEOFPRESS.dita#PTYPEOFPRESS"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>, <xref href="Orlando_entry_xsd_Element_RACECOLOUR.dita#RACECOLOUR"/>, <xref href="Orlando_entry_xsd_Element_RBESTKNOWNWORK.dita#RBESTKNOWNWORK"/>, <xref href="Orlando_entry_xsd_Element_RDESTRUCTIONOFWORK.dita#RDESTRUCTIONOFWORK"/>, <xref href="Orlando_entry_xsd_Element_REMUNERATION.dita#REMUNERATION"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="Orlando_entry_xsd_Element_RFICTIONALIZATION.dita#RFICTIONALIZATION"/>, <xref href="Orlando_entry_xsd_Element_RLANDMARKTEXT.dita#RLANDMARKTEXT"/>, <xref href="Orlando_entry_xsd_Element_ROYAL.dita#ROYAL"/>, <xref href="Orlando_entry_xsd_Element_RPENALTIES.dita#RPENALTIES"/>, <xref href="Orlando_entry_xsd_Element_RRECOGNITIONNAME.dita#RRECOGNITIONNAME"/>, <xref href="Orlando_entry_xsd_Element_RRECOGNITIONS.dita#RRECOGNITIONS"/>, <xref href="Orlando_entry_xsd_Element_RRECOGNITIONVALUE.dita#RRECOGNITIONVALUE"/>, <xref href="Orlando_entry_xsd_Element_RRESPONSES.dita#RRESPONSES"/>, <xref href="Orlando_entry_xsd_Element_RS.dita#RS"/>, <xref href="Orlando_entry_xsd_Element_RSELFDESCRIPTION.dita#RSELFDESCRIPTION"/>, <xref href="Orlando_entry_xsd_Element_RSHEINFLUENCED.dita#RSHEINFLUENCED"/>, <xref href="Orlando_entry_xsd_Element_RWRITINGMILESTONE.dita#RWRITINGMILESTONE"/>, <xref href="Orlando_entry_xsd_Element_SCHOLARNOTE.dita#SCHOLARNOTE"/>, <xref href="Orlando_entry_xsd_Element_SCHOOL.dita#SCHOOL"/>, <xref href="Orlando_entry_xsd_Element_SELFCONSTRUCTED.dita#SELFCONSTRUCTED"/>, <xref href="Orlando_entry_xsd_Element_SEPARATION.dita#SEPARATION"/>, <xref href="Orlando_entry_xsd_Element_SEXUALIDENTITY.dita#SEXUALIDENTITY"/>, <xref href="Orlando_entry_xsd_Element_SIC.dita#SIC"/>, <xref href="Orlando_entry_xsd_Element_SIGNIFICANTACTIVITY.dita#SIGNIFICANTACTIVITY"/>, <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>, <xref href="Orlando_entry_xsd_Element_SUBJECT.dita#SUBJECT"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERIZATION.dita#TCHARACTERIZATION"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERNAME.dita#TCHARACTERNAME"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERTYPEROLE.dita#TCHARACTERTYPEROLE"/>, <xref href="Orlando_entry_xsd_Element_TEXT.dita#TEXT"/>, <xref href="Orlando_entry_xsd_Element_TGENRE.dita#TGENRE"/>, <xref href="Orlando_entry_xsd_Element_TGENREISSUE.dita#TGENREISSUE"/>, <xref href="Orlando_entry_xsd_Element_TINTERTEXTUALITY.dita#TINTERTEXTUALITY"/>, <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>, <xref href="Orlando_entry_xsd_Element_TMOTIF.dita#TMOTIF"/>, <xref href="Orlando_entry_xsd_Element_TOPIC.dita#TOPIC"/>, <xref href="Orlando_entry_xsd_Element_TPLOT.dita#TPLOT"/>, <xref href="Orlando_entry_xsd_Element_TSETTINGDATE.dita#TSETTINGDATE"/>, <xref href="Orlando_entry_xsd_Element_TSETTINGPLACE.dita#TSETTINGPLACE"/>, <xref href="Orlando_entry_xsd_Element_TTECHNIQUES.dita#TTECHNIQUES"/>, <xref href="Orlando_entry_xsd_Element_TTHEMETOPIC.dita#TTHEMETOPIC"/>, <xref href="Orlando_entry_xsd_Element_TTONESTYLE.dita#TTONESTYLE"/>, <xref href="Orlando_entry_xsd_Element_TVOICENARRATION.dita#TVOICENARRATION"/>, <xref href="Orlando_entry_xsd_Element_XREF.dita#XREF"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;P&gt;
+  &lt;AWARD AWARDTYPE="" REG=""&gt;{1,1}&lt;/AWARD&gt;
+  &lt;BIBCITS ID=""&gt;{1,1}&lt;/BIBCITS&gt;
+  &lt;BIRTHNAME REG="" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"&gt;{1,1}&lt;/BIRTHNAME&gt;
+  &lt;BIRTHPOSITION POSITION="ELDEST"&gt;{1,1}&lt;/BIRTHPOSITION&gt;
+  &lt;CAUSE REG=""&gt;{1,1}&lt;/CAUSE&gt;
+  &lt;CHILDLESSNESS&gt;{1,1}&lt;/CHILDLESSNESS&gt;
+  &lt;CHILDREN NUMBER=""&gt;{1,1}&lt;/CHILDREN&gt;
+  &lt;CLASS REG="" SELF-DEFINED="SELFUNKNOWN" SOCIALRANK="OTHER"&gt;{1,1}&lt;/CLASS&gt;
+  &lt;COMPANION&gt;{1,1}&lt;/COMPANION&gt;
+  &lt;CONTESTEDBEHAVIOUR&gt;{1,1}&lt;/CONTESTEDBEHAVIOUR&gt;
+  &lt;DATE annotationId="" CALENDAR="NEWSTYLE" CERTAINTY="CERT" ID="" offsetId="" VALUE=""&gt;{1,1}&lt;/DATE&gt;
+  &lt;DATERANGE annotationId="" CALENDAR="NEWSTYLE" CERTAINTY="CERT" EXACT="" FROM="" ID="" offsetId="" TO=""&gt;{1,1}&lt;/DATERANGE&gt;
+  &lt;DATESTRUCT annotationId="" CALENDAR="NEWSTYLE" CERTAINTY="CERT" offsetId="" VALUE=""&gt;{1,1}&lt;/DATESTRUCT&gt;
+  &lt;DEGREE REG=""&gt;{1,1}&lt;/DEGREE&gt;
+  &lt;DENOMINATION CURRENTALTERNATIVETERM="" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;{1,1}&lt;/DENOMINATION&gt;
+  &lt;DIVORCE&gt;{1,1}&lt;/DIVORCE&gt;
+  &lt;EMPH&gt;{1,1}&lt;/EMPH&gt;
+  &lt;EMPLOYER&gt;{1,1}&lt;/EMPLOYER&gt;
+  &lt;ETHNICITY FOREBEAR="FAMILY" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;{1,1}&lt;/ETHNICITY&gt;
+  &lt;FIGURE&gt;{1,1}&lt;/FIGURE&gt;
+  &lt;FOREIGN LANG="" REG=""&gt;{1,1}&lt;/FOREIGN&gt;
+  &lt;GENDER CURRENTALTERNATIVETERM="" GENDER="" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;{1,1}&lt;/GENDER&gt;
+  &lt;GEOGHERITAGE FOREBEAR="FAMILY" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;{1,1}&lt;/GEOGHERITAGE&gt;
+  &lt;GRAPHIC URL=""&gt;{1,1}&lt;/GRAPHIC&gt;
+  &lt;INDEXED INDEXSOURCE="LC" REG="" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"&gt;{1,1}&lt;/INDEXED&gt;
+  &lt;INSTRUCTOR&gt;{1,1}&lt;/INSTRUCTOR&gt;
+  &lt;JOB CURRENTALTERNATIVETERM="" FAMILYBUSINESS="" HISTORICALTERM="" HISTORICALTERMCONTEXTDATE="" ID="" REG=""&gt;{1,1}&lt;/JOB&gt;
+  &lt;KEYWORDCLASS annotationId="" KEYWORDTYPE="" offsetId=""&gt;{1,1}&lt;/KEYWORDCLASS&gt;
+  &lt;LANGUAGE COMPETENCE="OTHER" REG=""&gt;{1,1}&lt;/LANGUAGE&gt;
+  &lt;LIVESWITH&gt;{1,1}&lt;/LIVESWITH&gt;
+  &lt;NAME annotationId="" offsetId="" REF="" STANDARD=""&gt;{1,1}&lt;/NAME&gt;
+  &lt;NATIONALHERITAGE CURRENTALTERNATIVETERM="" FOREBEAR="FAMILY" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;{1,1}&lt;/NATIONALHERITAGE&gt;
+  &lt;NATIONALITY CURRENTALTERNATIVETERM="" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;{1,1}&lt;/NATIONALITY&gt;
+  &lt;NICKNAME ID="" NAMECONNOTATION="ABUSIVE" NAMESIGNIFIER="CRYPTIC" NAMETYPE="LITERARY" REG="" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"&gt;{1,1}&lt;/NICKNAME&gt;
+  &lt;ORGNAME annotationId="" offsetId="" ORGTYPE="" REF="" REG="" STANDARD=""&gt;{1,1}&lt;/ORGNAME&gt;
+  &lt;PLACE annotationId="" ID="" LAT="" LONG="" offsetId="" REF="" REG=""&gt;{1,1}&lt;/PLACE&gt;
+  &lt;POLITICALAFFILIATION ACTIVISM="ACTIVISTYES" CURRENTALTERNATIVETERM="" ID="" INVOLVEMENT="INVOLVEMENTYES" MEMBERSHIP="MEMBERSHIPYES" REG="" WOMAN-GENDERISSUE="GENDERYES"&gt;{1,1}&lt;/POLITICALAFFILIATION&gt;
+  &lt;PSEUDONYM NAMESIGNIFIER="CRYPTIC" REG="" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"&gt;{1,1}&lt;/PSEUDONYM&gt;
+  &lt;QUOTE DIRECT="Y" ID="" LAYOUT="INLINE"&gt;{1,1}&lt;/QUOTE&gt;
+  &lt;RACECOLOUR FOREBEAR="FAMILY" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;{1,1}&lt;/RACECOLOUR&gt;
+  &lt;REMUNERATION&gt;{1,1}&lt;/REMUNERATION&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;ROYAL REG="" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"&gt;{1,1}&lt;/ROYAL&gt;
+  &lt;RS REG="" TYPE=""&gt;{1,1}&lt;/RS&gt;
+  &lt;SCHOLARNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/SCHOLARNOTE&gt;
+  &lt;SCHOOL INSTITUTION="" INSTITUTIONLEVEL="" REG="" RELIGIOUS="RELIGIOUSYES" STUDENTBODY=""&gt;{1,1}&lt;/SCHOOL&gt;
+  &lt;SELFCONSTRUCTED NAMESIGNIFIER="CRYPTIC" REG="" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"&gt;{1,1}&lt;/SELFCONSTRUCTED&gt;
+  &lt;SEPARATION&gt;{1,1}&lt;/SEPARATION&gt;
+  &lt;SEXUALIDENTITY CURRENTALTERNATIVETERM="" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;{1,1}&lt;/SEXUALIDENTITY&gt;
+  &lt;SIC annotationId="" CORR="" offsetId=""&gt;{1,1}&lt;/SIC&gt;
+  &lt;SIGNIFICANTACTIVITY PHILANTHROPYVOLUNTEER="PHILANTHROPYVOLUNTEERYES" REG=""&gt;{1,1}&lt;/SIGNIFICANTACTIVITY&gt;
+  &lt;SOCALLED&gt;{1,1}&lt;/SOCALLED&gt;
+  &lt;SUBJECT REG=""&gt;{1,1}&lt;/SUBJECT&gt;
+  &lt;TEXT REG=""&gt;{1,1}&lt;/TEXT&gt;
+  &lt;TITLE annotationId="" offsetId="" REF="" REG="" REND="" TITLETYPE=""&gt;{1,1}&lt;/TITLE&gt;
+  &lt;TOPIC STANDARD=""&gt;{1,1}&lt;/TOPIC&gt;
+  &lt;XREF RESP="" URL=""&gt;{1,1}&lt;/XREF&gt;
+  &lt;BIBCITS ID=""&gt;{1,1}&lt;/BIBCITS&gt;
+  &lt;DATE annotationId="" CALENDAR="NEWSTYLE" CERTAINTY="CERT" ID="" offsetId="" VALUE=""&gt;{1,1}&lt;/DATE&gt;
+  &lt;DATERANGE annotationId="" CALENDAR="NEWSTYLE" CERTAINTY="CERT" EXACT="" FROM="" ID="" offsetId="" TO=""&gt;{1,1}&lt;/DATERANGE&gt;
+  &lt;DATESTRUCT annotationId="" CALENDAR="NEWSTYLE" CERTAINTY="CERT" offsetId="" VALUE=""&gt;{1,1}&lt;/DATESTRUCT&gt;
+  &lt;EMPH&gt;{1,1}&lt;/EMPH&gt;
+  &lt;EXTENTOFOEUVRE&gt;{1,1}&lt;/EXTENTOFOEUVRE&gt;
+  &lt;FIGURE&gt;{1,1}&lt;/FIGURE&gt;
+  &lt;FOREIGN LANG="" REG=""&gt;{1,1}&lt;/FOREIGN&gt;
+  &lt;GENERICRANGE&gt;{1,1}&lt;/GENERICRANGE&gt;
+  &lt;GRAPHIC URL=""&gt;{1,1}&lt;/GRAPHIC&gt;
+  &lt;JOB CURRENTALTERNATIVETERM="" FAMILYBUSINESS="" HISTORICALTERM="" HISTORICALTERMCONTEXTDATE="" ID="" REG=""&gt;{1,1}&lt;/JOB&gt;
+  &lt;KEYWORDCLASS annotationId="" KEYWORDTYPE="" offsetId=""&gt;{1,1}&lt;/KEYWORDCLASS&gt;
+  &lt;L PART="N" RHYME=""&gt;{1,1}&lt;/L&gt;
+  &lt;NAME annotationId="" offsetId="" REF="" STANDARD=""&gt;{1,1}&lt;/NAME&gt;
+  &lt;ORGNAME annotationId="" offsetId="" ORGTYPE="" REF="" REG="" STANDARD=""&gt;{1,1}&lt;/ORGNAME&gt;
+  &lt;PADVERTISING&gt;{1,1}&lt;/PADVERTISING&gt;
+  &lt;PANTHOLOGIZATION&gt;{1,1}&lt;/PANTHOLOGIZATION&gt;
+  &lt;PARCHIVALLOCATION&gt;{1,1}&lt;/PARCHIVALLOCATION&gt;
+  &lt;PATTITUDES&gt;{1,1}&lt;/PATTITUDES&gt;
+  &lt;PAUTHORSHIP AUTHORNAMETYPE="" AUTHORSHIPCONTROVERSY="" COLLABORATION="" CONTROVERSYDATE=""&gt;{1,1}&lt;/PAUTHORSHIP&gt;
+  &lt;PCIRCULATION&gt;{1,1}&lt;/PCIRCULATION&gt;
+  &lt;PCONTRACT ID=""&gt;{1,1}&lt;/PCONTRACT&gt;
+  &lt;PCOPYRIGHT&gt;{1,1}&lt;/PCOPYRIGHT&gt;
+  &lt;PDEDICATION&gt;{1,1}&lt;/PDEDICATION&gt;
+  &lt;PEARNINGS&gt;{1,1}&lt;/PEARNINGS&gt;
+  &lt;PEDITIONS&gt;{1,1}&lt;/PEDITIONS&gt;
+  &lt;PFIRSTLITERARYACTIVITY&gt;{1,1}&lt;/PFIRSTLITERARYACTIVITY&gt;
+  &lt;PINFLUENCESHER INFLUENCETYPE=""&gt;{1,1}&lt;/PINFLUENCESHER&gt;
+  &lt;PLACE annotationId="" ID="" LAT="" LONG="" offsetId="" REF="" REG=""&gt;{1,1}&lt;/PLACE&gt;
+  &lt;PLASTLITERARYACTIVITY&gt;{1,1}&lt;/PLASTLITERARYACTIVITY&gt;
+  &lt;PLITERARYSCHOOLS INVOLVEMENT="INVOLVEMENTYES" REG=""&gt;{1,1}&lt;/PLITERARYSCHOOLS&gt;
+  &lt;PMANUSCRIPTHISTORY&gt;{1,1}&lt;/PMANUSCRIPTHISTORY&gt;
+  &lt;PMATERIALCONDITIONS DISPLACEMENT=""&gt;{1,1}&lt;/PMATERIALCONDITIONS&gt;
+  &lt;PMODEOFPUBLICATION PUBLICATIONMODE=""&gt;{1,1}&lt;/PMODEOFPUBLICATION&gt;
+  &lt;PMOTIVES ID="" MOTIVETYPE=""&gt;{1,1}&lt;/PMOTIVES&gt;
+  &lt;PNONBOOKMEDIA&gt;{1,1}&lt;/PNONBOOKMEDIA&gt;
+  &lt;PNONSURVIVAL TYPEOFNONSURVIVAL=""&gt;{1,1}&lt;/PNONSURVIVAL&gt;
+  &lt;PPERFORMANCE&gt;{1,1}&lt;/PPERFORMANCE&gt;
+  &lt;PPERIODICALPUBLICATION&gt;{1,1}&lt;/PPERIODICALPUBLICATION&gt;
+  &lt;PPLACEOFPUBLICATION&gt;{1,1}&lt;/PPLACEOFPUBLICATION&gt;
+  &lt;PPRESSRUN&gt;{1,1}&lt;/PPRESSRUN&gt;
+  &lt;PPRICE&gt;{1,1}&lt;/PPRICE&gt;
+  &lt;PRARITIESFEATURESDECORATIONS&gt;{1,1}&lt;/PRARITIESFEATURESDECORATIONS&gt;
+  &lt;PRELATIONSWITHPUBLISHER RELATIONSHIPTYPE=""&gt;{1,1}&lt;/PRELATIONSWITHPUBLISHER&gt;
+  &lt;PSERIALIZATION FORMOFSERIALIZATION=""&gt;{1,1}&lt;/PSERIALIZATION&gt;
+  &lt;PSUBMISSIONSREJECTIONS&gt;{1,1}&lt;/PSUBMISSIONSREJECTIONS&gt;
+  &lt;PTYPEOFPRESS&gt;{1,1}&lt;/PTYPEOFPRESS&gt;
+  &lt;QUOTE DIRECT="Y" ID="" LAYOUT="INLINE"&gt;{1,1}&lt;/QUOTE&gt;
+  &lt;RBESTKNOWNWORK&gt;{1,1}&lt;/RBESTKNOWNWORK&gt;
+  &lt;RDESTRUCTIONOFWORK DESTROYEDBY=""&gt;{1,1}&lt;/RDESTRUCTIONOFWORK&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;RFICTIONALIZATION&gt;{1,1}&lt;/RFICTIONALIZATION&gt;
+  &lt;RLANDMARKTEXT&gt;{1,1}&lt;/RLANDMARKTEXT&gt;
+  &lt;RPENALTIES CENSORSHIP=""&gt;{1,1}&lt;/RPENALTIES&gt;
+  &lt;RRECOGNITIONNAME REG=""&gt;{1,1}&lt;/RRECOGNITIONNAME&gt;
+  &lt;RRECOGNITIONS&gt;{1,1}&lt;/RRECOGNITIONS&gt;
+  &lt;RRECOGNITIONVALUE&gt;{1,1}&lt;/RRECOGNITIONVALUE&gt;
+  &lt;RRESPONSES FORMALITY="" GENDEREDRESPONSE="" RESPONSETYPE=""&gt;{1,1}&lt;/RRESPONSES&gt;
+  &lt;RS REG="" TYPE=""&gt;{1,1}&lt;/RS&gt;
+  &lt;RSELFDESCRIPTION&gt;{1,1}&lt;/RSELFDESCRIPTION&gt;
+  &lt;RSHEINFLUENCED&gt;{1,1}&lt;/RSHEINFLUENCED&gt;
+  &lt;RWRITINGMILESTONE&gt;{1,1}&lt;/RWRITINGMILESTONE&gt;
+  &lt;SCHOLARNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/SCHOLARNOTE&gt;
+  &lt;SIC annotationId="" CORR="" offsetId=""&gt;{1,1}&lt;/SIC&gt;
+  &lt;SOCALLED&gt;{1,1}&lt;/SOCALLED&gt;
+  &lt;TCHARACTERIZATION&gt;{1,1}&lt;/TCHARACTERIZATION&gt;
+  &lt;TCHARACTERNAME REG=""&gt;{1,1}&lt;/TCHARACTERNAME&gt;
+  &lt;TCHARACTERTYPEROLE PROTAGONIST=""&gt;{1,1}&lt;/TCHARACTERTYPEROLE&gt;
+  &lt;TGENRE GENRENAME=""&gt;{1,1}&lt;/TGENRE&gt;
+  &lt;TGENREISSUE&gt;{1,1}&lt;/TGENREISSUE&gt;
+  &lt;TINTERTEXTUALITY GENDEROFAUTHOR="" INTERTEXTTYPE=""&gt;{1,1}&lt;/TINTERTEXTUALITY&gt;
+  &lt;TITLE annotationId="" offsetId="" REF="" REG="" REND="" TITLETYPE=""&gt;{1,1}&lt;/TITLE&gt;
+  &lt;TMOTIF MOTIFNAME=""&gt;{1,1}&lt;/TMOTIF&gt;
+  &lt;TOPIC STANDARD=""&gt;{1,1}&lt;/TOPIC&gt;
+  &lt;TPLOT&gt;{1,1}&lt;/TPLOT&gt;
+  &lt;TSETTINGDATE SETTINGDATETYPE=""&gt;{1,1}&lt;/TSETTINGDATE&gt;
+  &lt;TSETTINGPLACE SETTINGCLASS="" SETTINGPLACETYPE=""&gt;{1,1}&lt;/TSETTINGPLACE&gt;
+  &lt;TTECHNIQUES TECHNIQUETYPE=""&gt;{1,1}&lt;/TTECHNIQUES&gt;
+  &lt;TTHEMETOPIC ID=""&gt;{1,1}&lt;/TTHEMETOPIC&gt;
+  &lt;TTONESTYLE&gt;{1,1}&lt;/TTONESTYLE&gt;
+  &lt;TVOICENARRATION&gt;{1,1}&lt;/TVOICENARRATION&gt;
+  &lt;XREF annotationId="" offsetId="" RESP="" URL=""&gt;{1,1}&lt;/XREF&gt;
+&lt;/P&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="P"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;p marks paragraphs in prose.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType mixed="true"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element ref="AWARD"/&gt;
+        &lt;xs:element ref="BIBCITS"/&gt;
+        &lt;xs:element ref="BIRTHNAME"/&gt;
+        &lt;xs:element ref="BIRTHPOSITION"/&gt;
+        &lt;xs:element ref="CAUSE"/&gt;
+        &lt;xs:element ref="CHILDLESSNESS"/&gt;
+        &lt;xs:element ref="CHILDREN"/&gt;
+        &lt;xs:element ref="CLASS"/&gt;
+        &lt;xs:element ref="COMPANION"/&gt;
+        &lt;xs:element ref="CONTESTEDBEHAVIOUR"/&gt;
+        &lt;xs:element ref="DATE"/&gt;
+        &lt;xs:element ref="DATERANGE"/&gt;
+        &lt;xs:element ref="DATESTRUCT"/&gt;
+        &lt;xs:element ref="DEGREE"/&gt;
+        &lt;xs:element ref="DENOMINATION"/&gt;
+        &lt;xs:element ref="DIVORCE"/&gt;
+        &lt;xs:element ref="EMPH"/&gt;
+        &lt;xs:element ref="EMPLOYER"/&gt;
+        &lt;xs:element ref="ETHNICITY"/&gt;
+        &lt;xs:element ref="FIGURE"/&gt;
+        &lt;xs:element ref="FOREIGN"/&gt;
+        &lt;xs:element ref="GENDER"/&gt;
+        &lt;xs:element ref="GEOGHERITAGE"/&gt;
+        &lt;xs:element ref="GRAPHIC"/&gt;
+        &lt;xs:element ref="INDEXED"/&gt;
+        &lt;xs:element ref="INSTRUCTOR"/&gt;
+        &lt;xs:element ref="JOB"/&gt;
+        &lt;xs:element ref="KEYWORDCLASS"/&gt;
+        &lt;xs:element ref="LANGUAGE"/&gt;
+        &lt;xs:element ref="LIVESWITH"/&gt;
+        &lt;xs:element ref="NAME"/&gt;
+        &lt;xs:element ref="NATIONALHERITAGE"/&gt;
+        &lt;xs:element ref="NATIONALITY"/&gt;
+        &lt;xs:element ref="NICKNAME"/&gt;
+        &lt;xs:element ref="ORGNAME"/&gt;
+        &lt;xs:element ref="PLACE"/&gt;
+        &lt;xs:element ref="POLITICALAFFILIATION"/&gt;
+        &lt;xs:element ref="PSEUDONYM"/&gt;
+        &lt;xs:element ref="QUOTE"/&gt;
+        &lt;xs:element ref="RACECOLOUR"/&gt;
+        &lt;xs:element ref="REMUNERATION"/&gt;
+        &lt;xs:element ref="RESEARCHNOTE"/&gt;
+        &lt;xs:element ref="ROYAL"/&gt;
+        &lt;xs:element ref="RS"/&gt;
+        &lt;xs:element ref="SCHOLARNOTE"/&gt;
+        &lt;xs:element ref="SCHOOL"/&gt;
+        &lt;xs:element ref="SELFCONSTRUCTED"/&gt;
+        &lt;xs:element ref="SEPARATION"/&gt;
+        &lt;xs:element ref="SEXUALIDENTITY"/&gt;
+        &lt;xs:element ref="SIC"/&gt;
+        &lt;xs:element ref="SIGNIFICANTACTIVITY"/&gt;
+        &lt;xs:element ref="SOCALLED"/&gt;
+        &lt;xs:element ref="SUBJECT"/&gt;
+        &lt;xs:element ref="TEXT"/&gt;
+        &lt;xs:element ref="TITLE"/&gt;
+        &lt;xs:element ref="TOPIC"/&gt;
+        &lt;xs:element name="XREF"&gt;
+          &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;The xref element surrounds a url which you wish to make into a hyperlink.&lt;/xs:documentation&gt;
+          &lt;/xs:annotation&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:simpleContent&gt;
+              &lt;xs:extension base="xs:anyURI"&gt;
+                &lt;xs:attributeGroup ref="RESP-attribute"/&gt;
+                &lt;xs:attribute name="URL" use="required" type="xs:anyURI"&gt;
+                  &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;URL (uniform resource locator) specifies the URL from which the media concerned may be obtained.&lt;/xs:documentation&gt;
+                  &lt;/xs:annotation&gt;
+                &lt;/xs:attribute&gt;
+              &lt;/xs:extension&gt;
+            &lt;/xs:simpleContent&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element ref="BIBCITS"/&gt;
+        &lt;xs:element ref="DATE"/&gt;
+        &lt;xs:element ref="DATERANGE"/&gt;
+        &lt;xs:element ref="DATESTRUCT"/&gt;
+        &lt;xs:element ref="EMPH"/&gt;
+        &lt;xs:element ref="EXTENTOFOEUVRE"/&gt;
+        &lt;xs:element ref="FIGURE"/&gt;
+        &lt;xs:element ref="FOREIGN"/&gt;
+        &lt;xs:element ref="GENERICRANGE"/&gt;
+        &lt;xs:element ref="GRAPHIC"/&gt;
+        &lt;xs:element ref="JOB"/&gt;
+        &lt;xs:element ref="KEYWORDCLASS"/&gt;
+        &lt;xs:element ref="L"/&gt;
+        &lt;xs:element ref="NAME"/&gt;
+        &lt;xs:element ref="ORGNAME"/&gt;
+        &lt;xs:element ref="PADVERTISING"/&gt;
+        &lt;xs:element ref="PANTHOLOGIZATION"/&gt;
+        &lt;xs:element ref="PARCHIVALLOCATION"/&gt;
+        &lt;xs:element ref="PATTITUDES"/&gt;
+        &lt;xs:element ref="PAUTHORSHIP"/&gt;
+        &lt;xs:element ref="PCIRCULATION"/&gt;
+        &lt;xs:element ref="PCONTRACT"/&gt;
+        &lt;xs:element ref="PCOPYRIGHT"/&gt;
+        &lt;xs:element ref="PDEDICATION"/&gt;
+        &lt;xs:element ref="PEARNINGS"/&gt;
+        &lt;xs:element ref="PEDITIONS"/&gt;
+        &lt;xs:element ref="PFIRSTLITERARYACTIVITY"/&gt;
+        &lt;xs:element ref="PINFLUENCESHER"/&gt;
+        &lt;xs:element ref="PLACE"/&gt;
+        &lt;xs:element ref="PLASTLITERARYACTIVITY"/&gt;
+        &lt;xs:element ref="PLITERARYSCHOOLS"/&gt;
+        &lt;xs:element ref="PMANUSCRIPTHISTORY"/&gt;
+        &lt;xs:element ref="PMATERIALCONDITIONS"/&gt;
+        &lt;xs:element ref="PMODEOFPUBLICATION"/&gt;
+        &lt;xs:element ref="PMOTIVES"/&gt;
+        &lt;xs:element ref="PNONBOOKMEDIA"/&gt;
+        &lt;xs:element ref="PNONSURVIVAL"/&gt;
+        &lt;xs:element ref="PPERFORMANCE"/&gt;
+        &lt;xs:element ref="PPERIODICALPUBLICATION"/&gt;
+        &lt;xs:element ref="PPLACEOFPUBLICATION"/&gt;
+        &lt;xs:element ref="PPRESSRUN"/&gt;
+        &lt;xs:element ref="PPRICE"/&gt;
+        &lt;xs:element ref="PRARITIESFEATURESDECORATIONS"/&gt;
+        &lt;xs:element ref="PRELATIONSWITHPUBLISHER"/&gt;
+        &lt;xs:element ref="PSERIALIZATION"/&gt;
+        &lt;xs:element ref="PSUBMISSIONSREJECTIONS"/&gt;
+        &lt;xs:element ref="PTYPEOFPRESS"/&gt;
+        &lt;xs:element ref="QUOTE"/&gt;
+        &lt;xs:element ref="RBESTKNOWNWORK"/&gt;
+        &lt;xs:element ref="RDESTRUCTIONOFWORK"/&gt;
+        &lt;xs:element ref="RESEARCHNOTE"/&gt;
+        &lt;xs:element ref="RFICTIONALIZATION"/&gt;
+        &lt;xs:element ref="RLANDMARKTEXT"/&gt;
+        &lt;xs:element ref="RPENALTIES"/&gt;
+        &lt;xs:element ref="RRECOGNITIONNAME"/&gt;
+        &lt;xs:element ref="RRECOGNITIONS"/&gt;
+        &lt;xs:element ref="RRECOGNITIONVALUE"/&gt;
+        &lt;xs:element ref="RRESPONSES"/&gt;
+        &lt;xs:element ref="RS"/&gt;
+        &lt;xs:element ref="RSELFDESCRIPTION"/&gt;
+        &lt;xs:element ref="RSHEINFLUENCED"/&gt;
+        &lt;xs:element ref="RWRITINGMILESTONE"/&gt;
+        &lt;xs:element ref="SCHOLARNOTE"/&gt;
+        &lt;xs:element ref="SIC"/&gt;
+        &lt;xs:element ref="SOCALLED"/&gt;
+        &lt;xs:element ref="TCHARACTERIZATION"/&gt;
+        &lt;xs:element ref="TCHARACTERNAME"/&gt;
+        &lt;xs:element ref="TCHARACTERTYPEROLE"/&gt;
+        &lt;xs:element ref="TGENRE"/&gt;
+        &lt;xs:element ref="TGENREISSUE"/&gt;
+        &lt;xs:element ref="TINTERTEXTUALITY"/&gt;
+        &lt;xs:element ref="TITLE"/&gt;
+        &lt;xs:element ref="TMOTIF"/&gt;
+        &lt;xs:element ref="TOPIC"/&gt;
+        &lt;xs:element ref="TPLOT"/&gt;
+        &lt;xs:element ref="TSETTINGDATE"/&gt;
+        &lt;xs:element ref="TSETTINGPLACE"/&gt;
+        &lt;xs:element ref="TTECHNIQUES"/&gt;
+        &lt;xs:element ref="TTHEMETOPIC"/&gt;
+        &lt;xs:element ref="TTONESTYLE"/&gt;
+        &lt;xs:element ref="TVOICENARRATION"/&gt;
+        &lt;xs:element ref="XREF"/&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="P_XREF">
+      <title>Element P / XREF</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">The xref
+element surrounds a url which you wish to make into a
+hyperlink.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Diagram</entry>
+                     <entry>
+                        <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_XREF_1">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_XREF_1.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>259,122,391,148</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Attribute_Group_RESP-attribute.dita#RESP-attribute"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>256,163,374,205</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#P_P_XREF_URL"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>extension of xs:anyURI</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>complex</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Attributes</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                                 <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                                 <colspec colnum="3" colname="col3" align="left" colwidth="1*"/>
+                                 <thead>
+                                    <row>
+                                       <entry>QName</entry>
+                                       <entry>Type</entry>
+                                       <entry>Use</entry>
+                                    </row>
+                                 </thead>
+                                 <tbody>
+                                    <row>
+                                       <entry>
+                                          <xref href="Orlando_entry_xsd_Attribute_Group_RESP-attribute.dita#RESP-attribute_RESP"/>
+                                       </entry>
+                                       <entry>restriction of xs:token</entry>
+                                       <entry>required</entry>
+                                    </row>
+                                    <row>
+                                       <entry namest="col1" nameend="col3">
+                                          <codeblock outputclass="language-xml">Resp (or
+responsibility) contains a three-letter initialism of an individual who contributed
+to the production or distribution of a document.</codeblock>
+                                       </entry>
+                                    </row>
+                                    <row>
+                                       <entry>
+                                          <xref href="#P_P_XREF_URL"/>
+                                       </entry>
+                                       <entry>xs:anyURI</entry>
+                                       <entry>required</entry>
+                                    </row>
+                                    <row>
+                                       <entry namest="col1" nameend="col3">
+                                          <codeblock outputclass="language-xml">URL
+(uniform resource locator) specifies the URL from which the media
+concerned may be obtained.</codeblock>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:element name="XREF"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;The xref element surrounds a url which you wish to make into a hyperlink.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:simpleContent&gt;
+      &lt;xs:extension base="xs:anyURI"&gt;
+        &lt;xs:attributeGroup ref="RESP-attribute"/&gt;
+        &lt;xs:attribute name="URL" use="required" type="xs:anyURI"&gt;
+          &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;URL (uniform resource locator) specifies the URL from which the media concerned may be obtained.&lt;/xs:documentation&gt;
+          &lt;/xs:annotation&gt;
+        &lt;/xs:attribute&gt;
+      &lt;/xs:extension&gt;
+    &lt;/xs:simpleContent&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="P_P_XREF_URL">
+      <title>Attribute P / XREF / @URL</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">URL
+(uniform resource locator) specifies the URL from which the media
+concerned may be obtained.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>xs:anyURI</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>use: </entry>
+                                       <entry>
+                                          <b>required</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#P_XREF"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="URL" use="required" type="xs:anyURI"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;URL (uniform resource locator) specifies the URL from which the media concerned may be obtained.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

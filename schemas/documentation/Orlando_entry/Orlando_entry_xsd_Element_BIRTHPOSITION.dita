@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="BIRTHPOSITION">
+   <title>Element BIRTHPOSITION</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">This
+sub-element within birth captures information about a woman writer's position
+within her family. In systematically capturing information about birth position, we
+are suggesting positions within families, specifically in relation to gender
+position, influence the material conditions of a woman's
+life.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_BIRTHPOSITION">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_BIRTHPOSITION.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,40,400,100</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIRTHPOSITION_POSITION"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,160,323,184</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,194,355,218</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIRTHPOSITION"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,284,313,308</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,374,331,398</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,464,371,488</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,498,315,522</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,532,339,556</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,622,318,646</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,656,323,680</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,733,370,757</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,810,366,834</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_SCHOLARNOTE.dita#SCHOLARNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,844,341,868</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,934,313,958</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>mixed: </entry>
+                                    <entry>
+                                       <b>true</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Elements </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_BIRTH.dita#BIRTH"/>, <xref href="#BIRTHPOSITION"/>, <xref href="Orlando_entry_xsd_Element_CHRONPROSE.dita#CHRONPROSE"/>, <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>, <xref href="Orlando_entry_xsd_Element_P.dita#P"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/> | <xref href="#BIRTHPOSITION"/> | <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/> | <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/> | <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/> | <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/> | <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/> | <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/> | <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="Orlando_entry_xsd_Element_SCHOLARNOTE.dita#SCHOLARNOTE"/> | <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/> | <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/>, <xref href="#BIRTHPOSITION"/>, <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/>, <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/>, <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/>, <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>, <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>, <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="Orlando_entry_xsd_Element_SCHOLARNOTE.dita#SCHOLARNOTE"/>, <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>, <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;BIRTHPOSITION POSITION="ELDEST"&gt;
+  &lt;BIBCITS ID=""&gt;{1,1}&lt;/BIBCITS&gt;
+  &lt;BIRTHPOSITION POSITION="ELDEST"&gt;{1,1}&lt;/BIRTHPOSITION&gt;
+  &lt;DATE annotationId="" CALENDAR="NEWSTYLE" CERTAINTY="CERT" ID="" offsetId="" VALUE=""&gt;{1,1}&lt;/DATE&gt;
+  &lt;FOREIGN LANG="" REG=""&gt;{1,1}&lt;/FOREIGN&gt;
+  &lt;KEYWORDCLASS annotationId="" KEYWORDTYPE="" offsetId=""&gt;{1,1}&lt;/KEYWORDCLASS&gt;
+  &lt;NAME annotationId="" offsetId="" REF="" STANDARD=""&gt;{1,1}&lt;/NAME&gt;
+  &lt;ORGNAME annotationId="" offsetId="" ORGTYPE="" REF="" REG="" STANDARD=""&gt;{1,1}&lt;/ORGNAME&gt;
+  &lt;PLACE annotationId="" ID="" LAT="" LONG="" offsetId="" REF="" REG=""&gt;{1,1}&lt;/PLACE&gt;
+  &lt;QUOTE DIRECT="Y" ID="" LAYOUT="INLINE"&gt;{1,1}&lt;/QUOTE&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;SCHOLARNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/SCHOLARNOTE&gt;
+  &lt;SOCALLED&gt;{1,1}&lt;/SOCALLED&gt;
+  &lt;TITLE annotationId="" offsetId="" REF="" REG="" REND="" TITLETYPE=""&gt;{1,1}&lt;/TITLE&gt;
+&lt;/BIRTHPOSITION&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="4">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="2*"/>
+                              <colspec colnum="4" colname="col4" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Default</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#BIRTHPOSITION_POSITION"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry>ELDEST</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">This optional attribute attached to birthPosition allows us to systematize
+information concerning women writers who were the eldest, youngest and only
+children in their families.</codeblock>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="BIRTHPOSITION"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;This sub-element within birth captures information about a woman writer's position within her family. In systematically capturing information about birth position, we are suggesting positions within families, specifically in relation to gender position, influence the material conditions of a woman's life.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType mixed="true"&gt;
+    &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+      &lt;xs:element ref="BIBCITS"/&gt;
+      &lt;xs:element ref="BIRTHPOSITION"/&gt;
+      &lt;xs:element ref="DATE"/&gt;
+      &lt;xs:element ref="FOREIGN"/&gt;
+      &lt;xs:element ref="KEYWORDCLASS"/&gt;
+      &lt;xs:element ref="NAME"/&gt;
+      &lt;xs:element ref="ORGNAME"/&gt;
+      &lt;xs:element ref="PLACE"/&gt;
+      &lt;xs:element ref="QUOTE"/&gt;
+      &lt;xs:element ref="RESEARCHNOTE"/&gt;
+      &lt;xs:element ref="SCHOLARNOTE"/&gt;
+      &lt;xs:element ref="SOCALLED"/&gt;
+      &lt;xs:element ref="TITLE"/&gt;
+    &lt;/xs:choice&gt;
+    &lt;xs:attribute name="POSITION" default="ELDEST"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;This optional attribute attached to birthPosition allows us to systematize information concerning women writers who were the eldest, youngest and only children in their families.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="ELDEST"/&gt;
+          &lt;xs:enumeration value="YOUNGEST"/&gt;
+          &lt;xs:enumeration value="ONLY"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="BIRTHPOSITION_POSITION">
+      <title>Attribute BIRTHPOSITION / @POSITION</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">This optional attribute attached to birthPosition allows us to systematize
+information concerning women writers who were the eldest, youngest and only
+children in their families.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>default: </entry>
+                                       <entry>
+                                          <b>ELDEST</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ELDEST</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>YOUNGEST</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ONLY</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#BIRTHPOSITION"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="POSITION" default="ELDEST"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;This optional attribute attached to birthPosition allows us to systematize information concerning women writers who were the eldest, youngest and only children in their families.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="ELDEST"/&gt;
+      &lt;xs:enumeration value="YOUNGEST"/&gt;
+      &lt;xs:enumeration value="ONLY"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

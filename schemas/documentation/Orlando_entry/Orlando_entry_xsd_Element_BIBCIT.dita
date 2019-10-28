@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="BIBCIT">
+   <title>Element BIBCIT</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">The
+element named bibCit is designed to capture bibliographical information
+in much the same way as an MLA parenthetical citation and should always
+reside within a bibCits container tag.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_BIBCIT">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_BIBCIT.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>147,40,269,82</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIBCIT_DBREF"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>147,92,274,134</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIBCIT_ID"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>147,144,262,168</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIBCIT_PLACEHOLDER"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>147,178,339,220</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIBCIT_QTDIN"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>147,230,265,272</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIBCIT_REF"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>147,282,252,306</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIBCIT_annotationId"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>147,359,225,383</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIBCIT_offsetId"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>204,443,321,467</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>204,520,317,544</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_SCHOLARNOTE.dita#SCHOLARNOTE"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>mixed: </entry>
+                                    <entry>
+                                       <b>true</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="Orlando_entry_xsd_Element_SCHOLARNOTE.dita#SCHOLARNOTE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="Orlando_entry_xsd_Element_SCHOLARNOTE.dita#SCHOLARNOTE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;BIBCIT annotationId="" DBREF="" ID="" offsetId="" PLACEHOLDER="" QTDIN="" REF=""&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;SCHOLARNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/SCHOLARNOTE&gt;
+&lt;/BIBCIT&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="3">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#BIBCIT_DBREF"/>
+                                    </entry>
+                                    <entry>xs:decimal</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#BIBCIT_ID"/>
+                                    </entry>
+                                    <entry>xs:NCName</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#BIBCIT_PLACEHOLDER"/>
+                                    </entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#BIBCIT_QTDIN"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#BIBCIT_REF"/>
+                                    </entry>
+                                    <entry>xs:anyURI</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#BIBCIT_annotationId"/>
+                                    </entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col3">
+                                       <codeblock outputclass="language-xml">Provides a unique annotation identifier for the element bearing
+the attribute.</codeblock>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#BIBCIT_offsetId"/>
+                                    </entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col3">
+                                       <codeblock outputclass="language-xml">Designates the parent tag from which the offset is being
+counted.</codeblock>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="BIBCIT"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;The element named bibCit is designed to capture bibliographical information in much the same way as an MLA parenthetical citation and should always reside within a bibCits container tag.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType mixed="true"&gt;
+    &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+      &lt;xs:element ref="RESEARCHNOTE"/&gt;
+      &lt;xs:element ref="SCHOLARNOTE"/&gt;
+    &lt;/xs:choice&gt;
+    &lt;xs:attribute name="DBREF" type="xs:decimal"/&gt;
+    &lt;xs:attribute name="ID" type="xs:NCName"/&gt;
+    &lt;xs:attribute name="PLACEHOLDER"/&gt;
+    &lt;xs:attribute name="QTDIN"&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="QTDINYES"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="REF" type="xs:anyURI"/&gt;
+    &lt;xs:attribute name="annotationId"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Provides a unique annotation identifier for the element bearing the attribute.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="offsetId"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Designates the parent tag from which the offset is being counted.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+    &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="BIBCIT_DBREF">
+      <title>Attribute BIBCIT / @DBREF</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>xs:decimal</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#BIBCIT"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="DBREF" type="xs:decimal"/&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="BIBCIT_ID">
+      <title>Attribute BIBCIT / @ID</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>xs:NCName</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#BIBCIT"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="ID" type="xs:NCName"/&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="BIBCIT_PLACEHOLDER">
+      <title>Attribute BIBCIT / @PLACEHOLDER</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#BIBCIT"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="PLACEHOLDER"/&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="BIBCIT_QTDIN">
+      <title>Attribute BIBCIT / @QTDIN</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>QTDINYES</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#BIBCIT"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="QTDIN"&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="QTDINYES"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="BIBCIT_REF">
+      <title>Attribute BIBCIT / @REF</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>xs:anyURI</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#BIBCIT"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="REF" type="xs:anyURI"/&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="BIBCIT_annotationId">
+      <title>Attribute BIBCIT / @annotationId</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Provides a unique annotation identifier for the element bearing
+the attribute.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#BIBCIT"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="annotationId"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Provides a unique annotation identifier for the element bearing the attribute.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="BIBCIT_offsetId">
+      <title>Attribute BIBCIT / @offsetId</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Designates the parent tag from which the offset is being
+counted.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#BIBCIT"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="offsetId"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Designates the parent tag from which the offset is being counted.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

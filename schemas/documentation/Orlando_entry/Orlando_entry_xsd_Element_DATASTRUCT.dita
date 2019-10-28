@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="DATASTRUCT">
+   <title>Element DATASTRUCT</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">A
+dataStruct is a container element for one or more individual pieces of
+tabular data in the document.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_DATASTRUCT">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_DATASTRUCT.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>316,2,393,26</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_INDEXED.dita#INDEXED"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>316,92,433,116</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>316,169,453,193</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_SELFCONSTRUCTED.dita#SELFCONSTRUCTED"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>316,246,403,270</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DATAITEM.dita#DATAITEM"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>316,323,395,347</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_MARRIED.dita#MARRIED"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>316,413,404,437</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_NICKNAME.dita#NICKNAME"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>(<xref href="Orlando_entry_xsd_Element_INDEXED.dita#INDEXED"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="Orlando_entry_xsd_Element_SELFCONSTRUCTED.dita#SELFCONSTRUCTED"/> | <xref href="Orlando_entry_xsd_Element_DATAITEM.dita#DATAITEM"/>) , (<xref href="Orlando_entry_xsd_Element_MARRIED.dita#MARRIED"/> | <xref href="Orlando_entry_xsd_Element_NICKNAME.dita#NICKNAME"/>)</entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_DATAITEM.dita#DATAITEM"/>, <xref href="Orlando_entry_xsd_Element_INDEXED.dita#INDEXED"/>, <xref href="Orlando_entry_xsd_Element_MARRIED.dita#MARRIED"/>, <xref href="Orlando_entry_xsd_Element_NICKNAME.dita#NICKNAME"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="Orlando_entry_xsd_Element_SELFCONSTRUCTED.dita#SELFCONSTRUCTED"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;DATASTRUCT&gt;
+  &lt;INDEXED INDEXSOURCE="LC" REG="" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"&gt;{1,1}&lt;/INDEXED&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;SELFCONSTRUCTED NAMESIGNIFIER="CRYPTIC" REG="" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"&gt;{1,1}&lt;/SELFCONSTRUCTED&gt;
+  &lt;DATAITEM&gt;{1,1}&lt;/DATAITEM&gt;
+  &lt;MARRIED REG="" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"&gt;{1,1}&lt;/MARRIED&gt;
+  &lt;NICKNAME ID="" NAMECONNOTATION="ABUSIVE" NAMESIGNIFIER="CRYPTIC" NAMETYPE="LITERARY" REG="" WROTEORPUBLISHEDAS="WROTEPUBLISHEDASYES"&gt;{1,1}&lt;/NICKNAME&gt;
+&lt;/DATASTRUCT&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="DATASTRUCT"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;A dataStruct is a container element for one or more individual pieces of tabular data in the document.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:choice maxOccurs="unbounded"&gt;
+        &lt;xs:element ref="INDEXED"/&gt;
+        &lt;xs:element ref="RESEARCHNOTE"/&gt;
+        &lt;xs:element ref="SELFCONSTRUCTED"/&gt;
+        &lt;xs:element ref="DATAITEM"/&gt;
+      &lt;/xs:choice&gt;
+      &lt;xs:choice minOccurs="0"&gt;
+        &lt;xs:element ref="MARRIED"/&gt;
+        &lt;xs:element ref="NICKNAME"/&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

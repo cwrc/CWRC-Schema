@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="WRITING">
+   <title>Element WRITING</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">Writing
+is the large, all-encompassing element in all writing documents.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_WRITING">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_WRITING.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>138,40,265,82</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#WRITING_ID"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>287,99,367,123</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>287,189,404,213</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>287,266,343,290</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#WRITING_DIV1"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>287,356,388,380</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_WORKSCITED.dita#WORKSCITED"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>216,446,329,488</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_BIOGPROSE.dita#BIOGPROSE"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_DIV0.dita#DIV0"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>(<xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="#WRITING_DIV1"/> | <xref href="Orlando_entry_xsd_Element_WORKSCITED.dita#WORKSCITED"/>) , <xref href="Orlando_entry_xsd_Element_BIOGPROSE.dita#BIOGPROSE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_BIOGPROSE.dita#BIOGPROSE"/>, <xref href="#WRITING_DIV1"/>, <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="Orlando_entry_xsd_Element_WORKSCITED.dita#WORKSCITED"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;WRITING ID=""&gt;
+  &lt;HEADING&gt;{1,1}&lt;/HEADING&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;DIV1&gt;{1,1}&lt;/DIV1&gt;
+  &lt;WORKSCITED&gt;{1,1}&lt;/WORKSCITED&gt;
+  &lt;BIOGPROSE&gt;{0,1}&lt;/BIOGPROSE&gt;
+&lt;/WRITING&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="3">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#WRITING_ID"/>
+                                    </entry>
+                                    <entry>xs:NCName</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="WRITING"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Writing is the large, all-encompassing element in all writing documents.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:choice maxOccurs="unbounded"&gt;
+        &lt;xs:element ref="HEADING"/&gt;
+        &lt;xs:element ref="RESEARCHNOTE"/&gt;
+        &lt;xs:element name="DIV1"&gt;
+          &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;Div1 (i.e. level-1 text division) is an element that marks the second largest structural division in a document.&lt;/xs:documentation&gt;
+          &lt;/xs:annotation&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element minOccurs="0" ref="HEADING"/&gt;
+              &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+                &lt;xs:element ref="RESEARCHNOTE"/&gt;
+                &lt;xs:element ref="TEXTSCOPE"/&gt;
+                &lt;xs:element name="DIV2"&gt;
+                  &lt;xs:annotation&gt;
+                    &lt;xs:documentation&gt;Div2 (i.e. level-2 text division) is an element that marks the third largest structural division in a document.&lt;/xs:documentation&gt;
+                  &lt;/xs:annotation&gt;
+                  &lt;xs:complexType&gt;
+                    &lt;xs:sequence&gt;
+                      &lt;xs:choice minOccurs="0"&gt;
+                        &lt;xs:element ref="HEADING"/&gt;
+                        &lt;xs:element ref="TITLE"/&gt;
+                      &lt;/xs:choice&gt;
+                      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+                        &lt;xs:element ref="KEYWORDCLASS"/&gt;
+                        &lt;xs:element ref="PRODUCTION"/&gt;
+                        &lt;xs:element ref="RECEPTION"/&gt;
+                        &lt;xs:element ref="RESEARCHNOTE"/&gt;
+                        &lt;xs:element ref="TEXTSCOPE"/&gt;
+                        &lt;xs:element ref="TEXTUALFEATURES"/&gt;
+                      &lt;/xs:choice&gt;
+                    &lt;/xs:sequence&gt;
+                    &lt;xs:attribute name="ID" type="xs:NCName"/&gt;
+                  &lt;/xs:complexType&gt;
+                &lt;/xs:element&gt;
+              &lt;/xs:choice&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+        &lt;xs:element ref="WORKSCITED"/&gt;
+      &lt;/xs:choice&gt;
+      &lt;xs:element minOccurs="0" ref="BIOGPROSE"/&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:attribute name="ID" type="xs:NCName"/&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="WRITING_DIV1">
+      <title>Element WRITING / DIV1</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Div1 (i.e.
+level-1 text division) is an element that marks the second largest
+structural division in a document.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Diagram</entry>
+                     <entry>
+                        <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_DIV1_1">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_DIV1_1.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,2,276,26</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,92,384,116</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,169,360,193</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TEXTSCOPE.dita#TEXTSCOPE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,203,323,227</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#WRITING_WRITING_DIV1_DIV2"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>complex</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Model</entry>
+                     <entry>
+                        <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/> , (<xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="Orlando_entry_xsd_Element_TEXTSCOPE.dita#TEXTSCOPE"/> | <xref href="#WRITING_WRITING_DIV1_DIV2"/>)</entry>
+                  </row>
+                  <row>
+                     <entry>Children</entry>
+                     <entry>
+                        <xref href="#WRITING_WRITING_DIV1_DIV2"/>, <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="Orlando_entry_xsd_Element_TEXTSCOPE.dita#TEXTSCOPE"/>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Instance</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;DIV1&gt;
+  &lt;HEADING&gt;{0,1}&lt;/HEADING&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;TEXTSCOPE DBREF="" PLACEHOLDER="" REF=""&gt;{1,1}&lt;/TEXTSCOPE&gt;
+  &lt;DIV2 ID=""&gt;{1,1}&lt;/DIV2&gt;
+&lt;/DIV1&gt;</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:element name="DIV1"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Div1 (i.e. level-1 text division) is an element that marks the second largest structural division in a document.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element minOccurs="0" ref="HEADING"/&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element ref="RESEARCHNOTE"/&gt;
+        &lt;xs:element ref="TEXTSCOPE"/&gt;
+        &lt;xs:element name="DIV2"&gt;
+          &lt;xs:annotation&gt;
+            &lt;xs:documentation&gt;Div2 (i.e. level-2 text division) is an element that marks the third largest structural division in a document.&lt;/xs:documentation&gt;
+          &lt;/xs:annotation&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:choice minOccurs="0"&gt;
+                &lt;xs:element ref="HEADING"/&gt;
+                &lt;xs:element ref="TITLE"/&gt;
+              &lt;/xs:choice&gt;
+              &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+                &lt;xs:element ref="KEYWORDCLASS"/&gt;
+                &lt;xs:element ref="PRODUCTION"/&gt;
+                &lt;xs:element ref="RECEPTION"/&gt;
+                &lt;xs:element ref="RESEARCHNOTE"/&gt;
+                &lt;xs:element ref="TEXTSCOPE"/&gt;
+                &lt;xs:element ref="TEXTUALFEATURES"/&gt;
+              &lt;/xs:choice&gt;
+            &lt;/xs:sequence&gt;
+            &lt;xs:attribute name="ID" type="xs:NCName"/&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="WRITING_WRITING_DIV1_DIV2">
+      <title>Element WRITING / DIV1 / DIV2</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Div2 (i.e. level-2 text division) is an element that marks
+the third largest structural division in a
+document.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Diagram</entry>
+                     <entry>
+                        <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_DIV2_1">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_DIV2_1.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>118,40,245,82</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#WRITING_WRITING_DIV1_WRITING_WRITING_DIV1_DIV2_ID"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,99,347,123</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,189,327,213</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,279,385,303</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,313,371,337</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_PRODUCTION.dita#PRODUCTION"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,403,358,427</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RECEPTION.dita#RECEPTION"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,493,384,517</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,570,360,594</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TEXTSCOPE.dita#TEXTSCOPE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>267,604,401,628</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TEXTUALFEATURES.dita#TEXTUALFEATURES"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>complex</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Model</entry>
+                     <entry>(<xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/> | <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>) , (<xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/> | <xref href="Orlando_entry_xsd_Element_PRODUCTION.dita#PRODUCTION"/> | <xref href="Orlando_entry_xsd_Element_RECEPTION.dita#RECEPTION"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="Orlando_entry_xsd_Element_TEXTSCOPE.dita#TEXTSCOPE"/> | <xref href="Orlando_entry_xsd_Element_TEXTUALFEATURES.dita#TEXTUALFEATURES"/>)</entry>
+                  </row>
+                  <row>
+                     <entry>Children</entry>
+                     <entry>
+                        <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>, <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/>, <xref href="Orlando_entry_xsd_Element_PRODUCTION.dita#PRODUCTION"/>, <xref href="Orlando_entry_xsd_Element_RECEPTION.dita#RECEPTION"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="Orlando_entry_xsd_Element_TEXTSCOPE.dita#TEXTSCOPE"/>, <xref href="Orlando_entry_xsd_Element_TEXTUALFEATURES.dita#TEXTUALFEATURES"/>, <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Instance</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;DIV2 ID=""&gt;
+  &lt;HEADING&gt;{1,1}&lt;/HEADING&gt;
+  &lt;TITLE annotationId="" offsetId="" REF="" REG="" REND="" TITLETYPE=""&gt;{1,1}&lt;/TITLE&gt;
+  &lt;KEYWORDCLASS annotationId="" KEYWORDTYPE="" offsetId=""&gt;{1,1}&lt;/KEYWORDCLASS&gt;
+  &lt;PRODUCTION&gt;{1,1}&lt;/PRODUCTION&gt;
+  &lt;RECEPTION&gt;{1,1}&lt;/RECEPTION&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;TEXTSCOPE DBREF="" PLACEHOLDER="" REF=""&gt;{1,1}&lt;/TEXTSCOPE&gt;
+  &lt;TEXTUALFEATURES&gt;{1,1}&lt;/TEXTUALFEATURES&gt;
+&lt;/DIV2&gt;</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Attributes</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                                 <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                                 <colspec colnum="3" colname="col3" align="left" colwidth="1*"/>
+                                 <thead>
+                                    <row>
+                                       <entry>QName</entry>
+                                       <entry>Type</entry>
+                                       <entry>Use</entry>
+                                    </row>
+                                 </thead>
+                                 <tbody>
+                                    <row>
+                                       <entry>
+                                          <xref href="#WRITING_WRITING_DIV1_WRITING_WRITING_DIV1_DIV2_ID"/>
+                                       </entry>
+                                       <entry>xs:NCName</entry>
+                                       <entry>optional</entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:element name="DIV2"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Div2 (i.e. level-2 text division) is an element that marks the third largest structural division in a document.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:choice minOccurs="0"&gt;
+        &lt;xs:element ref="HEADING"/&gt;
+        &lt;xs:element ref="TITLE"/&gt;
+      &lt;/xs:choice&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element ref="KEYWORDCLASS"/&gt;
+        &lt;xs:element ref="PRODUCTION"/&gt;
+        &lt;xs:element ref="RECEPTION"/&gt;
+        &lt;xs:element ref="RESEARCHNOTE"/&gt;
+        &lt;xs:element ref="TEXTSCOPE"/&gt;
+        &lt;xs:element ref="TEXTUALFEATURES"/&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:attribute name="ID" type="xs:NCName"/&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="WRITING_WRITING_DIV1_WRITING_WRITING_DIV1_DIV2_ID">
+      <title>Attribute WRITING / DIV1 / DIV2 / @ID</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>xs:NCName</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#WRITING_WRITING_DIV1_DIV2"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="ID" type="xs:NCName"/&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="WRITING_ID">
+      <title>Attribute WRITING / @ID</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>xs:NCName</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#WRITING"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="ID" type="xs:NCName"/&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

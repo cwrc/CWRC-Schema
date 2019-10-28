@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="NATIONALITYISSUE">
+   <title>Element NATIONALITYISSUE</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">NationalityIssue is a significant sub-element
+within culturalFormation which captures a
+discussion about her nationality. It works in
+conjunction with the nationality element to
+structure the national subject positions of women
+writers. Use to discuss issues of importance
+around a woman's nationality as it impinges
+upon identity. For the most part, writers will
+have geog, national or ethnic heritage of note,
+and in the element "nationalityIssue,"
+we can discuss or name a writer's nationality
+as English, Irish, Scottish, Welsh. Avoid using
+British in the nationality tag, and use more
+specific designations when you can because these
+probably mattered more.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_NATIONALITYISSUE">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_NATIONALITYISSUE.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>253,6,309,30</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_CULTURALFORMATION.dita#CULTURALFORMATION"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;NATIONALITYISSUE&gt;
+  &lt;DIV2 ID=""&gt;{1,1}&lt;/DIV2&gt;
+&lt;/NATIONALITYISSUE&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="NATIONALITYISSUE"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;NationalityIssue is a significant sub-element within culturalFormation which captures a discussion about her nationality. It works in conjunction with the nationality element to structure the national subject positions of women writers. Use to discuss issues of importance around a woman's nationality as it impinges upon identity. For the most part, writers will have geog, national or ethnic heritage of note, and in the element "nationalityIssue," we can discuss or name a writer's nationality as English, Irish, Scottish, Welsh. Avoid using British in the nationality tag, and use more specific designations when you can because these probably mattered more.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element ref="DIV2"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

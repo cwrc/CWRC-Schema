@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="RS">
+   <title>Element RS</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">The rs
+element is a general purpose name element for all names that merit tagging for
+either display purposes or for search and retrieval, but that are not adequately
+covered by the name, orgName, place, or title elements.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_RS">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_RS.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>113,40,240,82</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#RS_REG"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>113,135,176,159</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#RS_TYPE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>191,236,253,260</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>mixed: </entry>
+                                    <entry>
+                                       <b>true</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Elements </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_CHILDREN.dita#CHILDREN"/>, <xref href="Orlando_entry_xsd_Element_CHRONPROSE.dita#CHRONPROSE"/>, <xref href="Orlando_entry_xsd_Element_P.dita#P"/>, <xref href="Orlando_entry_xsd_Element_PMATERIALCONDITIONS.dita#PMATERIALCONDITIONS"/>, <xref href="Orlando_entry_xsd_Element_PMOTIVES.dita#PMOTIVES"/>, <xref href="Orlando_entry_xsd_Element_PPERFORMANCE.dita#PPERFORMANCE"/>, <xref href="Orlando_entry_xsd_Element_PPERIODICALPUBLICATION.dita#PPERIODICALPUBLICATION"/>, <xref href="Orlando_entry_xsd_Element_PRARITIESFEATURESDECORATIONS.dita#PRARITIESFEATURESDECORATIONS"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>, <xref href="Orlando_entry_xsd_Element_RRECOGNITIONS.dita#RRECOGNITIONS"/>, <xref href="Orlando_entry_xsd_Element_RRESPONSES.dita#RRESPONSES"/>, <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERTYPEROLE.dita#TCHARACTERTYPEROLE"/>, <xref href="Orlando_entry_xsd_Element_TINTERTEXTUALITY.dita#TINTERTEXTUALITY"/>, <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>, <xref href="Orlando_entry_xsd_Element_TPLOT.dita#TPLOT"/>, <xref href="Orlando_entry_xsd_Element_TSETTINGPLACE.dita#TSETTINGPLACE"/>, <xref href="Orlando_entry_xsd_Element_TTECHNIQUES.dita#TTECHNIQUES"/>, <xref href="Orlando_entry_xsd_Element_TTHEMETOPIC.dita#TTHEMETOPIC"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;RS REG="" TYPE=""&gt;
+  &lt;NAME annotationId="" offsetId="" REF="" STANDARD=""&gt;{0,unbounded}&lt;/NAME&gt;
+&lt;/RS&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="3">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#RS_REG"/>
+                                    </entry>
+                                    <entry>xs:NCName</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col3">
+                                       <codeblock outputclass="language-xml">Reg (or regularization) contains a reading which has been regularized or
+normalized in some sense.</codeblock>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#RS_TYPE"/>
+                                    </entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col3">
+                                       <codeblock outputclass="language-xml">Type characterizes the element in some sense, using any convenient
+classification scheme or typology.</codeblock>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="RS"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;The rs element is a general purpose name element for all names that merit tagging for either display purposes or for search and retrieval, but that are not adequately covered by the name, orgName, place, or title elements.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType mixed="true"&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element minOccurs="0" maxOccurs="unbounded" ref="NAME"/&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:attribute name="REG" type="xs:NCName"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Reg (or regularization) contains a reading which has been regularized or normalized in some sense.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="TYPE"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Type characterizes the element in some sense, using any convenient classification scheme or typology.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+    &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="RS_REG">
+      <title>Attribute RS / @REG</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Reg (or regularization) contains a reading which has been regularized or
+normalized in some sense.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>xs:NCName</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#RS"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="REG" type="xs:NCName"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Reg (or regularization) contains a reading which has been regularized or normalized in some sense.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="RS_TYPE">
+      <title>Attribute RS / @TYPE</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Type characterizes the element in some sense, using any convenient
+classification scheme or typology.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#RS"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="TYPE"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Type characterizes the element in some sense, using any convenient classification scheme or typology.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="SEXUALITY">
+   <title>Element SEXUALITY</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">Sexuality is one of the issues (along with
+religion, race and ethnicity, language, class, and
+nationality) we have defined as significant in
+discussing the cultural formation of a woman. This
+element captures discussions of her sexuality as
+an identity or as an issue in her life. It is not
+meant to capture individual sexual experiences and
+relationships (see intimateRelationships).
+Relationships with others should be discussed here
+within the context of the effect on her life and
+the effect on her understanding of her own
+sexuality. But descriptions of those relationships
+should be captured in intimateRelationships. We
+are attempting, within this element, to gesture
+towards some of the complicated issues around
+sexuality, for example, the politics of outing,
+the historical specificity of some categories such
+as "congenital invert," or the multiple
+forms of relating to one's own sexuality.
+Capturing discussions of her sexuality within this
+element, will help researchers interested in the
+historical, ideological and gendered constructions
+of sexuality.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_SEXUALITY">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_SEXUALITY.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>229,6,285,30</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_CULTURALFORMATION.dita#CULTURALFORMATION"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;SEXUALITY&gt;
+  &lt;DIV2 ID=""&gt;{1,unbounded}&lt;/DIV2&gt;
+&lt;/SEXUALITY&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="SEXUALITY"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Sexuality is one of the issues (along with religion, race and ethnicity, language, class, and nationality) we have defined as significant in discussing the cultural formation of a woman. This element captures discussions of her sexuality as an identity or as an issue in her life. It is not meant to capture individual sexual experiences and relationships (see intimateRelationships). Relationships with others should be discussed here within the context of the effect on her life and the effect on her understanding of her own sexuality. But descriptions of those relationships should be captured in intimateRelationships. We are attempting, within this element, to gesture towards some of the complicated issues around sexuality, for example, the politics of outing, the historical specificity of some categories such as "congenital invert," or the multiple forms of relating to one's own sexuality. Capturing discussions of her sexuality within this element, will help researchers interested in the historical, ideological and gendered constructions of sexuality.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element maxOccurs="unbounded" ref="DIV2"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

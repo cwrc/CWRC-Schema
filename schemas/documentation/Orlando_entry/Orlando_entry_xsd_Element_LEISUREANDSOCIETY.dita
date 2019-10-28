@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="LEISUREANDSOCIETY">
+   <title>Element LEISUREANDSOCIETY</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">Leisure and Society is one of the 16 major biography
+elements defined as integral to mapping a woman's life.
+It captures information concerning the cultural and social
+activities of a person, including hobbies, sporting life and
+non-literary cultural life. Individual friendships should be
+captured under friendsAssociates and volunteer philanthropic
+activities should be captured under occupation but her
+hosting a literary salon or her mountain climbing should be
+entered here. For the purposes of this Project, we are not
+defining "leisure" as what she does with her
+"free time" because this assumes a gendered and
+classed notion of labour. "Society" in this
+context refers to the larger community and her social life
+within it, not an elite, fashionable social
+circle.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_LEISUREANDSOCIETY">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_LEISUREANDSOCIETY.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>283,2,397,26</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>283,92,339,116</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_BIOGRAPHY.dita#BIOGRAPHY_DIV1"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/> , <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/>, <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;LEISUREANDSOCIETY&gt;
+  &lt;CHRONSTRUCT CHRONCOLUMN="" CHRONCOLUMN1="" CHRONCOLUMN2="" CHRONCOLUMN3="" RELEVANCE="" RELEVANCE1="" RELEVANCE2="" RELEVANCE3="" RESP=""&gt;{0,1}&lt;/CHRONSTRUCT&gt;
+  &lt;DIV2 ID=""&gt;{0,unbounded}&lt;/DIV2&gt;
+&lt;/LEISUREANDSOCIETY&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="LEISUREANDSOCIETY"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Leisure and Society is one of the 16 major biography elements defined as integral to mapping a woman's life. It captures information concerning the cultural and social activities of a person, including hobbies, sporting life and non-literary cultural life. Individual friendships should be captured under friendsAssociates and volunteer philanthropic activities should be captured under occupation but her hosting a literary salon or her mountain climbing should be entered here. For the purposes of this Project, we are not defining "leisure" as what she does with her "free time" because this assumes a gendered and classed notion of labour. "Society" in this context refers to the larger community and her social life within it, not an elite, fashionable social circle.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element minOccurs="0" ref="CHRONSTRUCT"/&gt;
+      &lt;xs:element minOccurs="0" maxOccurs="unbounded" ref="DIV2"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

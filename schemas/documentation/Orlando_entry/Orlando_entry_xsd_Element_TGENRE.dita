@@ -1,0 +1,2324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="TGENRE">
+   <title>Element TGENRE</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">GenreName
+(or tGenre) is used to tag the name of the genre according to a project-generated
+list of genre names.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_TGENRE">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_TGENRE.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>156,40,348,82</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#TGENRE_GENRENAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,142,283,166</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,176,273,200</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,266,273,290</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_EMPH.dita#EMPH"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,356,291,380</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,446,275,470</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,480,299,504</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,570,278,594</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,604,353,628</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_PLITERARYSCHOOLS.dita#PLITERARYSCHOOLS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,681,283,705</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,758,330,782</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,835,264,859</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_SIC.dita#SIC"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,925,301,949</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,1015,349,1039</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TCHARACTERNAME.dita#TCHARACTERNAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,1092,372,1116</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TCHARACTERTYPEROLE.dita#TCHARACTERTYPEROLE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,1169,275,1193</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#TGENRE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,1259,273,1283</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,1349,285,1373</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TMOTIF.dita#TMOTIF"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,1439,277,1463</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TOPIC.dita#TOPIC"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,1529,320,1553</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TTHEMETOPIC.dita#TTHEMETOPIC"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>213,1619,349,1643</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TVOICENARRATION.dita#TVOICENARRATION"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>mixed: </entry>
+                                    <entry>
+                                       <b>true</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Elements </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_CHRONPROSE.dita#CHRONPROSE"/>, <xref href="Orlando_entry_xsd_Element_EMPH.dita#EMPH"/>, <xref href="Orlando_entry_xsd_Element_EXTENTOFOEUVRE.dita#EXTENTOFOEUVRE"/>, <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/>, <xref href="Orlando_entry_xsd_Element_GENERICRANGE.dita#GENERICRANGE"/>, <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>, <xref href="Orlando_entry_xsd_Element_P.dita#P"/>, <xref href="Orlando_entry_xsd_Element_PADVERTISING.dita#PADVERTISING"/>, <xref href="Orlando_entry_xsd_Element_PANTHOLOGIZATION.dita#PANTHOLOGIZATION"/>, <xref href="Orlando_entry_xsd_Element_PARCHIVALLOCATION.dita#PARCHIVALLOCATION"/>, <xref href="Orlando_entry_xsd_Element_PATTITUDES.dita#PATTITUDES"/>, <xref href="Orlando_entry_xsd_Element_PAUTHORSHIP.dita#PAUTHORSHIP"/>, <xref href="Orlando_entry_xsd_Element_PCIRCULATION.dita#PCIRCULATION"/>, <xref href="Orlando_entry_xsd_Element_PCONTRACT.dita#PCONTRACT"/>, <xref href="Orlando_entry_xsd_Element_PCOPYRIGHT.dita#PCOPYRIGHT"/>, <xref href="Orlando_entry_xsd_Element_PDEDICATION.dita#PDEDICATION"/>, <xref href="Orlando_entry_xsd_Element_PEARNINGS.dita#PEARNINGS"/>, <xref href="Orlando_entry_xsd_Element_PEDITIONS.dita#PEDITIONS"/>, <xref href="Orlando_entry_xsd_Element_PFIRSTLITERARYACTIVITY.dita#PFIRSTLITERARYACTIVITY"/>, <xref href="Orlando_entry_xsd_Element_PINFLUENCESHER.dita#PINFLUENCESHER"/>, <xref href="Orlando_entry_xsd_Element_PLASTLITERARYACTIVITY.dita#PLASTLITERARYACTIVITY"/>, <xref href="Orlando_entry_xsd_Element_PLITERARYSCHOOLS.dita#PLITERARYSCHOOLS"/>, <xref href="Orlando_entry_xsd_Element_PMANUSCRIPTHISTORY.dita#PMANUSCRIPTHISTORY"/>, <xref href="Orlando_entry_xsd_Element_PMATERIALCONDITIONS.dita#PMATERIALCONDITIONS"/>, <xref href="Orlando_entry_xsd_Element_PMODEOFPUBLICATION.dita#PMODEOFPUBLICATION"/>, <xref href="Orlando_entry_xsd_Element_PMOTIVES.dita#PMOTIVES"/>, <xref href="Orlando_entry_xsd_Element_PNONBOOKMEDIA.dita#PNONBOOKMEDIA"/>, <xref href="Orlando_entry_xsd_Element_PNONSURVIVAL.dita#PNONSURVIVAL"/>, <xref href="Orlando_entry_xsd_Element_PPERFORMANCE.dita#PPERFORMANCE"/>, <xref href="Orlando_entry_xsd_Element_PPERIODICALPUBLICATION.dita#PPERIODICALPUBLICATION"/>, <xref href="Orlando_entry_xsd_Element_PPLACEOFPUBLICATION.dita#PPLACEOFPUBLICATION"/>, <xref href="Orlando_entry_xsd_Element_PPRESSRUN.dita#PPRESSRUN"/>, <xref href="Orlando_entry_xsd_Element_PPRICE.dita#PPRICE"/>, <xref href="Orlando_entry_xsd_Element_PRARITIESFEATURESDECORATIONS.dita#PRARITIESFEATURESDECORATIONS"/>, <xref href="Orlando_entry_xsd_Element_PRELATIONSWITHPUBLISHER.dita#PRELATIONSWITHPUBLISHER"/>, <xref href="Orlando_entry_xsd_Element_PSERIALIZATION.dita#PSERIALIZATION"/>, <xref href="Orlando_entry_xsd_Element_PSUBMISSIONSREJECTIONS.dita#PSUBMISSIONSREJECTIONS"/>, <xref href="Orlando_entry_xsd_Element_PTYPEOFPRESS.dita#PTYPEOFPRESS"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>, <xref href="Orlando_entry_xsd_Element_RBESTKNOWNWORK.dita#RBESTKNOWNWORK"/>, <xref href="Orlando_entry_xsd_Element_RDESTRUCTIONOFWORK.dita#RDESTRUCTIONOFWORK"/>, <xref href="Orlando_entry_xsd_Element_RFICTIONALIZATION.dita#RFICTIONALIZATION"/>, <xref href="Orlando_entry_xsd_Element_RLANDMARKTEXT.dita#RLANDMARKTEXT"/>, <xref href="Orlando_entry_xsd_Element_RPENALTIES.dita#RPENALTIES"/>, <xref href="Orlando_entry_xsd_Element_RRECOGNITIONNAME.dita#RRECOGNITIONNAME"/>, <xref href="Orlando_entry_xsd_Element_RRECOGNITIONS.dita#RRECOGNITIONS"/>, <xref href="Orlando_entry_xsd_Element_RRESPONSES.dita#RRESPONSES"/>, <xref href="Orlando_entry_xsd_Element_RSELFDESCRIPTION.dita#RSELFDESCRIPTION"/>, <xref href="Orlando_entry_xsd_Element_RSHEINFLUENCED.dita#RSHEINFLUENCED"/>, <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERIZATION.dita#TCHARACTERIZATION"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERNAME.dita#TCHARACTERNAME"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERTYPEROLE.dita#TCHARACTERTYPEROLE"/>, <xref href="#TGENRE"/>, <xref href="Orlando_entry_xsd_Element_TGENREISSUE.dita#TGENREISSUE"/>, <xref href="Orlando_entry_xsd_Element_TINTERTEXTUALITY.dita#TINTERTEXTUALITY"/>, <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>, <xref href="Orlando_entry_xsd_Element_TMOTIF.dita#TMOTIF"/>, <xref href="Orlando_entry_xsd_Element_TOPIC.dita#TOPIC"/>, <xref href="Orlando_entry_xsd_Element_TPLOT.dita#TPLOT"/>, <xref href="Orlando_entry_xsd_Element_TSETTINGDATE.dita#TSETTINGDATE"/>, <xref href="Orlando_entry_xsd_Element_TSETTINGPLACE.dita#TSETTINGPLACE"/>, <xref href="Orlando_entry_xsd_Element_TTECHNIQUES.dita#TTECHNIQUES"/>, <xref href="Orlando_entry_xsd_Element_TTHEMETOPIC.dita#TTHEMETOPIC"/>, <xref href="Orlando_entry_xsd_Element_TTONESTYLE.dita#TTONESTYLE"/>, <xref href="Orlando_entry_xsd_Element_TVOICENARRATION.dita#TVOICENARRATION"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/> | <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/> | <xref href="Orlando_entry_xsd_Element_EMPH.dita#EMPH"/> | <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/> | <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/> | <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/> | <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/> | <xref href="Orlando_entry_xsd_Element_PLITERARYSCHOOLS.dita#PLITERARYSCHOOLS"/> | <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="Orlando_entry_xsd_Element_SIC.dita#SIC"/> | <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/> | <xref href="Orlando_entry_xsd_Element_TCHARACTERNAME.dita#TCHARACTERNAME"/> | <xref href="Orlando_entry_xsd_Element_TCHARACTERTYPEROLE.dita#TCHARACTERTYPEROLE"/> | <xref href="#TGENRE"/> | <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/> | <xref href="Orlando_entry_xsd_Element_TMOTIF.dita#TMOTIF"/> | <xref href="Orlando_entry_xsd_Element_TOPIC.dita#TOPIC"/> | <xref href="Orlando_entry_xsd_Element_TTHEMETOPIC.dita#TTHEMETOPIC"/> | <xref href="Orlando_entry_xsd_Element_TVOICENARRATION.dita#TVOICENARRATION"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/>, <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/>, <xref href="Orlando_entry_xsd_Element_EMPH.dita#EMPH"/>, <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/>, <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>, <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>, <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>, <xref href="Orlando_entry_xsd_Element_PLITERARYSCHOOLS.dita#PLITERARYSCHOOLS"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="Orlando_entry_xsd_Element_SIC.dita#SIC"/>, <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERNAME.dita#TCHARACTERNAME"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERTYPEROLE.dita#TCHARACTERTYPEROLE"/>, <xref href="#TGENRE"/>, <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>, <xref href="Orlando_entry_xsd_Element_TMOTIF.dita#TMOTIF"/>, <xref href="Orlando_entry_xsd_Element_TOPIC.dita#TOPIC"/>, <xref href="Orlando_entry_xsd_Element_TTHEMETOPIC.dita#TTHEMETOPIC"/>, <xref href="Orlando_entry_xsd_Element_TVOICENARRATION.dita#TVOICENARRATION"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;TGENRE GENRENAME=""&gt;
+  &lt;BIBCITS ID=""&gt;{1,1}&lt;/BIBCITS&gt;
+  &lt;DATE annotationId="" CALENDAR="NEWSTYLE" CERTAINTY="CERT" ID="" offsetId="" VALUE=""&gt;{1,1}&lt;/DATE&gt;
+  &lt;EMPH&gt;{1,1}&lt;/EMPH&gt;
+  &lt;FOREIGN LANG="" REG=""&gt;{1,1}&lt;/FOREIGN&gt;
+  &lt;NAME annotationId="" offsetId="" REF="" STANDARD=""&gt;{1,1}&lt;/NAME&gt;
+  &lt;ORGNAME annotationId="" offsetId="" ORGTYPE="" REF="" REG="" STANDARD=""&gt;{1,1}&lt;/ORGNAME&gt;
+  &lt;PLACE annotationId="" ID="" LAT="" LONG="" offsetId="" REF="" REG=""&gt;{1,1}&lt;/PLACE&gt;
+  &lt;PLITERARYSCHOOLS INVOLVEMENT="INVOLVEMENTYES" REG=""&gt;{1,1}&lt;/PLITERARYSCHOOLS&gt;
+  &lt;QUOTE DIRECT="Y" ID="" LAYOUT="INLINE"&gt;{1,1}&lt;/QUOTE&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;SIC annotationId="" CORR="" offsetId=""&gt;{1,1}&lt;/SIC&gt;
+  &lt;SOCALLED&gt;{1,1}&lt;/SOCALLED&gt;
+  &lt;TCHARACTERNAME REG=""&gt;{1,1}&lt;/TCHARACTERNAME&gt;
+  &lt;TCHARACTERTYPEROLE PROTAGONIST=""&gt;{1,1}&lt;/TCHARACTERTYPEROLE&gt;
+  &lt;TGENRE GENRENAME=""&gt;{1,1}&lt;/TGENRE&gt;
+  &lt;TITLE annotationId="" offsetId="" REF="" REG="" REND="" TITLETYPE=""&gt;{1,1}&lt;/TITLE&gt;
+  &lt;TMOTIF MOTIFNAME=""&gt;{1,1}&lt;/TMOTIF&gt;
+  &lt;TOPIC STANDARD=""&gt;{1,1}&lt;/TOPIC&gt;
+  &lt;TTHEMETOPIC ID=""&gt;{1,1}&lt;/TTHEMETOPIC&gt;
+  &lt;TVOICENARRATION&gt;{1,1}&lt;/TVOICENARRATION&gt;
+&lt;/TGENRE&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="3">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#TGENRE_GENRENAME"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col3">
+                                       <codeblock outputclass="language-xml">GenreName is an optional attribute that provides a pick-list of possible
+genre names to modify the element tGenre. It will prove especially useful in
+situations where the prose does not allow the concise naming of a genre that
+would be easily understood by a simpler name. Ultimately, this attribute
+will help us systematize and index references to various genre
+names.</codeblock>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="TGENRE"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;GenreName (or tGenre) is used to tag the name of the genre according to a project-generated list of genre names.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType mixed="true"&gt;
+    &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+      &lt;xs:element ref="BIBCITS"/&gt;
+      &lt;xs:element ref="DATE"/&gt;
+      &lt;xs:element ref="EMPH"/&gt;
+      &lt;xs:element ref="FOREIGN"/&gt;
+      &lt;xs:element ref="NAME"/&gt;
+      &lt;xs:element ref="ORGNAME"/&gt;
+      &lt;xs:element ref="PLACE"/&gt;
+      &lt;xs:element ref="PLITERARYSCHOOLS"/&gt;
+      &lt;xs:element ref="QUOTE"/&gt;
+      &lt;xs:element ref="RESEARCHNOTE"/&gt;
+      &lt;xs:element ref="SIC"/&gt;
+      &lt;xs:element ref="SOCALLED"/&gt;
+      &lt;xs:element ref="TCHARACTERNAME"/&gt;
+      &lt;xs:element ref="TCHARACTERTYPEROLE"/&gt;
+      &lt;xs:element ref="TGENRE"/&gt;
+      &lt;xs:element ref="TITLE"/&gt;
+      &lt;xs:element ref="TMOTIF"/&gt;
+      &lt;xs:element ref="TOPIC"/&gt;
+      &lt;xs:element ref="TTHEMETOPIC"/&gt;
+      &lt;xs:element ref="TVOICENARRATION"/&gt;
+    &lt;/xs:choice&gt;
+    &lt;xs:attribute name="GENRENAME"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;GenreName is an optional attribute that provides a pick-list of possible genre names to modify the element tGenre. It will prove especially useful in situations where the prose does not allow the concise naming of a genre that would be easily understood by a simpler name. Ultimately, this attribute will help us systematize and index references to various genre names.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="ABRIDGEMENT"/&gt;
+          &lt;xs:enumeration value="ACLEF"/&gt;
+          &lt;xs:enumeration value="ACROSTIC"/&gt;
+          &lt;xs:enumeration value="ADAPTATION"/&gt;
+          &lt;xs:enumeration value="ADVENTUREWRITING"/&gt;
+          &lt;xs:enumeration value="ADVERTISINGCOPY"/&gt;
+          &lt;xs:enumeration value="AFTERPIECE"/&gt;
+          &lt;xs:enumeration value="AFTERWORD"/&gt;
+          &lt;xs:enumeration value="AGITPROP"/&gt;
+          &lt;xs:enumeration value="ALLEGORY"/&gt;
+          &lt;xs:enumeration value="ALMANAC"/&gt;
+          &lt;xs:enumeration value="ANACREONTIC"/&gt;
+          &lt;xs:enumeration value="ANAGRAM"/&gt;
+          &lt;xs:enumeration value="ANNOTATION"/&gt;
+          &lt;xs:enumeration value="ANSWER"/&gt;
+          &lt;xs:enumeration value="ANTHEM"/&gt;
+          &lt;xs:enumeration value="ANTHOLOGY"/&gt;
+          &lt;xs:enumeration value="ANTIROMANCE"/&gt;
+          &lt;xs:enumeration value="APHORISM"/&gt;
+          &lt;xs:enumeration value="APOLOGY"/&gt;
+          &lt;xs:enumeration value="ARTCRITICISM"/&gt;
+          &lt;xs:enumeration value="AUTOBIOGRAPHY"/&gt;
+          &lt;xs:enumeration value="BALLAD"/&gt;
+          &lt;xs:enumeration value="BALLADE"/&gt;
+          &lt;xs:enumeration value="BALLADOPERA"/&gt;
+          &lt;xs:enumeration value="BALLET"/&gt;
+          &lt;xs:enumeration value="BERGAMASQUE"/&gt;
+          &lt;xs:enumeration value="BESTIARY"/&gt;
+          &lt;xs:enumeration value="BIBLICALPARAPHRASE"/&gt;
+          &lt;xs:enumeration value="BILDUNGSROMAN"/&gt;
+          &lt;xs:enumeration value="BIOGRAPHICALDICTIONARY"/&gt;
+          &lt;xs:enumeration value="BIOGRAPHY"/&gt;
+          &lt;xs:enumeration value="BISEXUALFICTION"/&gt;
+          &lt;xs:enumeration value="BLACKCOMEDY"/&gt;
+          &lt;xs:enumeration value="BOUTSRIMES"/&gt;
+          &lt;xs:enumeration value="BROADSIDE"/&gt;
+          &lt;xs:enumeration value="BURLETTA"/&gt;
+          &lt;xs:enumeration value="CABARET"/&gt;
+          &lt;xs:enumeration value="CAPTIVITYNARRATIVE"/&gt;
+          &lt;xs:enumeration value="CATECHISM"/&gt;
+          &lt;xs:enumeration value="CHAPBOOK"/&gt;
+          &lt;xs:enumeration value="CHARACTER"/&gt;
+          &lt;xs:enumeration value="CHARADE"/&gt;
+          &lt;xs:enumeration value="CHILDRENSLITERATURE"/&gt;
+          &lt;xs:enumeration value="CLERIHEW"/&gt;
+          &lt;xs:enumeration value="CLOSETDRAMA"/&gt;
+          &lt;xs:enumeration value="COLOURINGBOOK"/&gt;
+          &lt;xs:enumeration value="COMEDY"/&gt;
+          &lt;xs:enumeration value="COMEDYOFHUMOURS"/&gt;
+          &lt;xs:enumeration value="COMEDYOFINTRIGUE"/&gt;
+          &lt;xs:enumeration value="COMEDYOFMANNERS"/&gt;
+          &lt;xs:enumeration value="COMEDYOFMENACE"/&gt;
+          &lt;xs:enumeration value="COMICBOOK"/&gt;
+          &lt;xs:enumeration value="COMINGOUT"/&gt;
+          &lt;xs:enumeration value="COMMONPLACEBOOK"/&gt;
+          &lt;xs:enumeration value="COMPANION"/&gt;
+          &lt;xs:enumeration value="COMPUTERPROGRAM"/&gt;
+          &lt;xs:enumeration value="CONDITIONOFENGLANDNOVEL"/&gt;
+          &lt;xs:enumeration value="CONDUCTLITERATURE"/&gt;
+          &lt;xs:enumeration value="COOKBOOK"/&gt;
+          &lt;xs:enumeration value="COURTSHIPFICTION"/&gt;
+          &lt;xs:enumeration value="CRIMINOLOGY"/&gt;
+          &lt;xs:enumeration value="DEDICATION"/&gt;
+          &lt;xs:enumeration value="DETECTIVE"/&gt;
+          &lt;xs:enumeration value="DEVOTIONAL"/&gt;
+          &lt;xs:enumeration value="DIALOGUEORDEBATE"/&gt;
+          &lt;xs:enumeration value="DIARY"/&gt;
+          &lt;xs:enumeration value="DIALOGUEOFTHEDEAD"/&gt;
+          &lt;xs:enumeration value="DICTIONARY"/&gt;
+          &lt;xs:enumeration value="DIDACTIC"/&gt;
+          &lt;xs:enumeration value="DIRECTORY"/&gt;
+          &lt;xs:enumeration value="DISSERTATION"/&gt;
+          &lt;xs:enumeration value="DOCUMENTARY"/&gt;
+          &lt;xs:enumeration value="DOMESTIC"/&gt;
+          &lt;xs:enumeration value="DRAMA"/&gt;
+          &lt;xs:enumeration value="DRAMATICMONOLOGUE"/&gt;
+          &lt;xs:enumeration value="DREAMVISION"/&gt;
+          &lt;xs:enumeration value="DYSTOPIA"/&gt;
+          &lt;xs:enumeration value="ECLOGUE"/&gt;
+          &lt;xs:enumeration value="EDITING"/&gt;
+          &lt;xs:enumeration value="ELEGY"/&gt;
+          &lt;xs:enumeration value="ENCYCLOPAEDIA"/&gt;
+          &lt;xs:enumeration value="EPIC"/&gt;
+          &lt;xs:enumeration value="EPICTHEATRE"/&gt;
+          &lt;xs:enumeration value="EPIGRAM"/&gt;
+          &lt;xs:enumeration value="EPILOGUE"/&gt;
+          &lt;xs:enumeration value="EPISODICLITERATURE"/&gt;
+          &lt;xs:enumeration value="EPISTLE"/&gt;
+          &lt;xs:enumeration value="EPISTOLARY"/&gt;
+          &lt;xs:enumeration value="EPITAPH"/&gt;
+          &lt;xs:enumeration value="EPITHALAMIUM"/&gt;
+          &lt;xs:enumeration value="EPYLLION"/&gt;
+          &lt;xs:enumeration value="EROTICAPORNOGRAPHY"/&gt;
+          &lt;xs:enumeration value="ESSAY"/&gt;
+          &lt;xs:enumeration value="EULOGY"/&gt;
+          &lt;xs:enumeration value="EXHIBITIONCATALOGUE"/&gt;
+          &lt;xs:enumeration value="EXPRESSIONISTWRITING"/&gt;
+          &lt;xs:enumeration value="FABLE"/&gt;
+          &lt;xs:enumeration value="FABLIAU"/&gt;
+          &lt;xs:enumeration value="FAIRYTALE"/&gt;
+          &lt;xs:enumeration value="FANTASY"/&gt;
+          &lt;xs:enumeration value="FARCE"/&gt;
+          &lt;xs:enumeration value="FEMINIST"/&gt;
+          &lt;xs:enumeration value="FEMINISTTHEORY"/&gt;
+          &lt;xs:enumeration value="FICTION"/&gt;
+          &lt;xs:enumeration value="FILMTVSCRIPT"/&gt;
+          &lt;xs:enumeration value="FOLKSONG"/&gt;
+          &lt;xs:enumeration value="GARDENINGBOOK"/&gt;
+          &lt;xs:enumeration value="GENEALOGY"/&gt;
+          &lt;xs:enumeration value="GEORGIC"/&gt;
+          &lt;xs:enumeration value="GHOSTSTORY"/&gt;
+          &lt;xs:enumeration value="GIFTBOOK"/&gt;
+          &lt;xs:enumeration value="GOTHIC"/&gt;
+          &lt;xs:enumeration value="GOVERNMENTREPORT"/&gt;
+          &lt;xs:enumeration value="GRAMMAR"/&gt;
+          &lt;xs:enumeration value="GRAVEYARDPOETRY"/&gt;
+          &lt;xs:enumeration value="GUERILLATHEATRE"/&gt;
+          &lt;xs:enumeration value="GUIDEBOOK"/&gt;
+          &lt;xs:enumeration value="HAGIOGRAPHY"/&gt;
+          &lt;xs:enumeration value="HAIKU"/&gt;
+          &lt;xs:enumeration value="HARLEQUINADE"/&gt;
+          &lt;xs:enumeration value="HEROIC"/&gt;
+          &lt;xs:enumeration value="HISTORICAL"/&gt;
+          &lt;xs:enumeration value="HISTORY"/&gt;
+          &lt;xs:enumeration value="HYMN"/&gt;
+          &lt;xs:enumeration value="IMITATION"/&gt;
+          &lt;xs:enumeration value="IMPROVISATION"/&gt;
+          &lt;xs:enumeration value="INDUSTRIALNOVEL"/&gt;
+          &lt;xs:enumeration value="INTRODUCTION"/&gt;
+          &lt;xs:enumeration value="JOURNALISM"/&gt;
+          &lt;xs:enumeration value="JUVENILIA"/&gt;
+          &lt;xs:enumeration value="KITCHENSINKDRAMA"/&gt;
+          &lt;xs:enumeration value="KUNSTLERROMAN"/&gt;
+          &lt;xs:enumeration value="LAIS"/&gt;
+          &lt;xs:enumeration value="LAMPOON"/&gt;
+          &lt;xs:enumeration value="LEGALWRITING"/&gt;
+          &lt;xs:enumeration value="LEGENDFOLKTALE"/&gt;
+          &lt;xs:enumeration value="LESBIAN"/&gt;
+          &lt;xs:enumeration value="LETTER"/&gt;
+          &lt;xs:enumeration value="LETTERSFROMTHEDEADTOTHELIVING"/&gt;
+          &lt;xs:enumeration value="LIBRETTO"/&gt;
+          &lt;xs:enumeration value="LITERARYCRITICISM"/&gt;
+          &lt;xs:enumeration value="LITURGY"/&gt;
+          &lt;xs:enumeration value="LOVE"/&gt;
+          &lt;xs:enumeration value="LYRIC"/&gt;
+          &lt;xs:enumeration value="MAGICREALIST"/&gt;
+          &lt;xs:enumeration value="MANIFESTO"/&gt;
+          &lt;xs:enumeration value="MANUAL"/&gt;
+          &lt;xs:enumeration value="MAP"/&gt;
+          &lt;xs:enumeration value="MASQUE"/&gt;
+          &lt;xs:enumeration value="MEDICALWRITING"/&gt;
+          &lt;xs:enumeration value="MELODRAMA"/&gt;
+          &lt;xs:enumeration value="MIXEDMEDIA"/&gt;
+          &lt;xs:enumeration value="MOCKFORMS"/&gt;
+          &lt;xs:enumeration value="MONOLOGUE"/&gt;
+          &lt;xs:enumeration value="MORALITYMYSTERYPLAY"/&gt;
+          &lt;xs:enumeration value="MULTIMEDIA"/&gt;
+          &lt;xs:enumeration value="MUSICOLOGY"/&gt;
+          &lt;xs:enumeration value="MYSTERY"/&gt;
+          &lt;xs:enumeration value="MYTH"/&gt;
+          &lt;xs:enumeration value="NARRATIVEPOETRY"/&gt;
+          &lt;xs:enumeration value="NATIONALISTFICTION"/&gt;
+          &lt;xs:enumeration value="NATIONALTALE"/&gt;
+          &lt;xs:enumeration value="NOTEBOOK"/&gt;
+          &lt;xs:enumeration value="NOVEL"/&gt;
+          &lt;xs:enumeration value="NOVELLA"/&gt;
+          &lt;xs:enumeration value="NURSERYRHYME"/&gt;
+          &lt;xs:enumeration value="OBITUARY"/&gt;
+          &lt;xs:enumeration value="OCCASIONALPOETRY"/&gt;
+          &lt;xs:enumeration value="ODE"/&gt;
+          &lt;xs:enumeration value="ONEACTPLAY"/&gt;
+          &lt;xs:enumeration value="OPERA"/&gt;
+          &lt;xs:enumeration value="ORATORIO"/&gt;
+          &lt;xs:enumeration value="ORIENTAL"/&gt;
+          &lt;xs:enumeration value="PAGEANT"/&gt;
+          &lt;xs:enumeration value="PANEGYRIC"/&gt;
+          &lt;xs:enumeration value="PANTOMIME"/&gt;
+          &lt;xs:enumeration value="PARABLE"/&gt;
+          &lt;xs:enumeration value="PARATEXTS"/&gt;
+          &lt;xs:enumeration value="PARLIAMENTARYREPORT"/&gt;
+          &lt;xs:enumeration value="PARODY"/&gt;
+          &lt;xs:enumeration value="PASTORAL"/&gt;
+          &lt;xs:enumeration value="PEDAGOGY"/&gt;
+          &lt;xs:enumeration value="PERFORMANCEPOETRY"/&gt;
+          &lt;xs:enumeration value="PERIODICAL"/&gt;
+          &lt;xs:enumeration value="PETITION"/&gt;
+          &lt;xs:enumeration value="PHILOSOPHICAL"/&gt;
+          &lt;xs:enumeration value="PHILOSOPHY"/&gt;
+          &lt;xs:enumeration value="PICARESQUE"/&gt;
+          &lt;xs:enumeration value="PINDARIC"/&gt;
+          &lt;xs:enumeration value="POETRY"/&gt;
+          &lt;xs:enumeration value="POLEMIC"/&gt;
+          &lt;xs:enumeration value="POLITICALWRITING"/&gt;
+          &lt;xs:enumeration value="POPULAR"/&gt;
+          &lt;xs:enumeration value="PRAYER"/&gt;
+          &lt;xs:enumeration value="PREFATORYPIECE"/&gt;
+          &lt;xs:enumeration value="PROGRAMNOTES"/&gt;
+          &lt;xs:enumeration value="PROLETARIANWRITING"/&gt;
+          &lt;xs:enumeration value="PROLOGUE"/&gt;
+          &lt;xs:enumeration value="PROPAGANDA"/&gt;
+          &lt;xs:enumeration value="PROPHECY"/&gt;
+          &lt;xs:enumeration value="PSALM"/&gt;
+          &lt;xs:enumeration value="PSYCHOANALYTICAL"/&gt;
+          &lt;xs:enumeration value="QUIZ"/&gt;
+          &lt;xs:enumeration value="RADIODRAMA"/&gt;
+          &lt;xs:enumeration value="REALIST"/&gt;
+          &lt;xs:enumeration value="REGIONAL"/&gt;
+          &lt;xs:enumeration value="RELIGIOUS"/&gt;
+          &lt;xs:enumeration value="REVIEW"/&gt;
+          &lt;xs:enumeration value="REVUE"/&gt;
+          &lt;xs:enumeration value="RIDDLE"/&gt;
+          &lt;xs:enumeration value="ROMANCE"/&gt;
+          &lt;xs:enumeration value="SAGEWRITING"/&gt;
+          &lt;xs:enumeration value="SATIRE"/&gt;
+          &lt;xs:enumeration value="SCHOLARSHIP"/&gt;
+          &lt;xs:enumeration value="SCHOOLFICTION"/&gt;
+          &lt;xs:enumeration value="SCIENCEFICTION"/&gt;
+          &lt;xs:enumeration value="SCIENTIFICWRITING"/&gt;
+          &lt;xs:enumeration value="SCRAPBOOK"/&gt;
+          &lt;xs:enumeration value="SENSATIONNOVEL"/&gt;
+          &lt;xs:enumeration value="SENSIBILITY"/&gt;
+          &lt;xs:enumeration value="SENTIMENTAL"/&gt;
+          &lt;xs:enumeration value="SEQUEL"/&gt;
+          &lt;xs:enumeration value="SERMON"/&gt;
+          &lt;xs:enumeration value="SEXUALAWAKENINGFICTION"/&gt;
+          &lt;xs:enumeration value="SHORTSTORY"/&gt;
+          &lt;xs:enumeration value="SILVERFORKNOVEL"/&gt;
+          &lt;xs:enumeration value="SKETCH"/&gt;
+          &lt;xs:enumeration value="SKETCHBOOK"/&gt;
+          &lt;xs:enumeration value="SLAVENARRATIVE"/&gt;
+          &lt;xs:enumeration value="SOCIALSCIENCE"/&gt;
+          &lt;xs:enumeration value="SONG"/&gt;
+          &lt;xs:enumeration value="SONNET"/&gt;
+          &lt;xs:enumeration value="SPEECH"/&gt;
+          &lt;xs:enumeration value="STAGEREVIEW"/&gt;
+          &lt;xs:enumeration value="TESTIMONY"/&gt;
+          &lt;xs:enumeration value="TEXTBOOK"/&gt;
+          &lt;xs:enumeration value="THEATREOFCRUELTY"/&gt;
+          &lt;xs:enumeration value="THEATREOFTHEABSURD"/&gt;
+          &lt;xs:enumeration value="THEOLOGY"/&gt;
+          &lt;xs:enumeration value="THESAURUS"/&gt;
+          &lt;xs:enumeration value="THRILLER"/&gt;
+          &lt;xs:enumeration value="TOPOGRAPHICALPOETRY"/&gt;
+          &lt;xs:enumeration value="TRACTPAMPHLET"/&gt;
+          &lt;xs:enumeration value="TRAGEDY"/&gt;
+          &lt;xs:enumeration value="TRAGICOMEDY"/&gt;
+          &lt;xs:enumeration value="TRANSLATION"/&gt;
+          &lt;xs:enumeration value="TRAVELWRITING"/&gt;
+          &lt;xs:enumeration value="TREATISE"/&gt;
+          &lt;xs:enumeration value="UTOPIA"/&gt;
+          &lt;xs:enumeration value="VERSENOVEL"/&gt;
+          &lt;xs:enumeration value="VIGNETTE"/&gt;
+          &lt;xs:enumeration value="VILLANELLE"/&gt;
+          &lt;xs:enumeration value="YOUNGADULTWRITING"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="TGENRE_GENRENAME">
+      <title>Attribute TGENRE / @GENRENAME</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">GenreName is an optional attribute that provides a pick-list of possible
+genre names to modify the element tGenre. It will prove especially useful in
+situations where the prose does not allow the concise naming of a genre that
+would be easily understood by a simpler name. Ultimately, this attribute
+will help us systematize and index references to various genre
+names.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ABRIDGEMENT</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ACLEF</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ACROSTIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ADAPTATION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ADVENTUREWRITING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ADVERTISINGCOPY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>AFTERPIECE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>AFTERWORD</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>AGITPROP</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ALLEGORY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ALMANAC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ANACREONTIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ANAGRAM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ANNOTATION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ANSWER</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ANTHEM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ANTHOLOGY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ANTIROMANCE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>APHORISM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>APOLOGY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ARTCRITICISM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>AUTOBIOGRAPHY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BALLAD</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BALLADE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BALLADOPERA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BALLET</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BERGAMASQUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BESTIARY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BIBLICALPARAPHRASE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BILDUNGSROMAN</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BIOGRAPHICALDICTIONARY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BIOGRAPHY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BISEXUALFICTION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BLACKCOMEDY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BOUTSRIMES</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BROADSIDE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BURLETTA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CABARET</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CAPTIVITYNARRATIVE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CATECHISM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CHAPBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CHARACTER</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CHARADE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CHILDRENSLITERATURE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CLERIHEW</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CLOSETDRAMA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COLOURINGBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMEDY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMEDYOFHUMOURS</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMEDYOFINTRIGUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMEDYOFMANNERS</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMEDYOFMENACE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMICBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMINGOUT</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMMONPLACEBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMPANION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMPUTERPROGRAM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CONDITIONOFENGLANDNOVEL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CONDUCTLITERATURE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COOKBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COURTSHIPFICTION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CRIMINOLOGY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DEDICATION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DETECTIVE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DEVOTIONAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DIALOGUEORDEBATE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DIARY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DIALOGUEOFTHEDEAD</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DICTIONARY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DIDACTIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DIRECTORY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DISSERTATION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DOCUMENTARY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DOMESTIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DRAMA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DRAMATICMONOLOGUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DREAMVISION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DYSTOPIA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ECLOGUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EDITING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ELEGY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ENCYCLOPAEDIA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EPIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EPICTHEATRE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EPIGRAM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EPILOGUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EPISODICLITERATURE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EPISTLE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EPISTOLARY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EPITAPH</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EPITHALAMIUM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EPYLLION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EROTICAPORNOGRAPHY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ESSAY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EULOGY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EXHIBITIONCATALOGUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>EXPRESSIONISTWRITING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FABLE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FABLIAU</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FAIRYTALE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FANTASY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FARCE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FEMINIST</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FEMINISTTHEORY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FICTION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FILMTVSCRIPT</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FOLKSONG</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GARDENINGBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GENEALOGY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GEORGIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GHOSTSTORY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GIFTBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GOTHIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GOVERNMENTREPORT</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GRAMMAR</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GRAVEYARDPOETRY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GUERILLATHEATRE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GUIDEBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>HAGIOGRAPHY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>HAIKU</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>HARLEQUINADE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>HEROIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>HISTORICAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>HISTORY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>HYMN</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>IMITATION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>IMPROVISATION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>INDUSTRIALNOVEL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>INTRODUCTION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>JOURNALISM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>JUVENILIA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>KITCHENSINKDRAMA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>KUNSTLERROMAN</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LAIS</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LAMPOON</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LEGALWRITING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LEGENDFOLKTALE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LESBIAN</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LETTER</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LETTERSFROMTHEDEADTOTHELIVING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LIBRETTO</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LITERARYCRITICISM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LITURGY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LOVE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LYRIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MAGICREALIST</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MANIFESTO</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MANUAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MAP</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MASQUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MEDICALWRITING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MELODRAMA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MIXEDMEDIA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MOCKFORMS</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MONOLOGUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MORALITYMYSTERYPLAY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MULTIMEDIA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MUSICOLOGY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MYSTERY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MYTH</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>NARRATIVEPOETRY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>NATIONALISTFICTION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>NATIONALTALE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>NOTEBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>NOVEL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>NOVELLA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>NURSERYRHYME</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>OBITUARY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>OCCASIONALPOETRY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ODE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ONEACTPLAY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>OPERA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ORATORIO</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ORIENTAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PAGEANT</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PANEGYRIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PANTOMIME</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PARABLE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PARATEXTS</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PARLIAMENTARYREPORT</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PARODY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PASTORAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PEDAGOGY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PERFORMANCEPOETRY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PERIODICAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PETITION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PHILOSOPHICAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PHILOSOPHY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PICARESQUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PINDARIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>POETRY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>POLEMIC</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>POLITICALWRITING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>POPULAR</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PRAYER</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PREFATORYPIECE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PROGRAMNOTES</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PROLETARIANWRITING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PROLOGUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PROPAGANDA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PROPHECY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PSALM</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PSYCHOANALYTICAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>QUIZ</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>RADIODRAMA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>REALIST</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>REGIONAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>RELIGIOUS</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>REVIEW</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>REVUE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>RIDDLE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>ROMANCE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SAGEWRITING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SATIRE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SCHOLARSHIP</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SCHOOLFICTION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SCIENCEFICTION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SCIENTIFICWRITING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SCRAPBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SENSATIONNOVEL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SENSIBILITY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SENTIMENTAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SEQUEL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SERMON</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SEXUALAWAKENINGFICTION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SHORTSTORY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SILVERFORKNOVEL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SKETCH</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SKETCHBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SLAVENARRATIVE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SOCIALSCIENCE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SONG</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SONNET</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SPEECH</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>STAGEREVIEW</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TESTIMONY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TEXTBOOK</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>THEATREOFCRUELTY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>THEATREOFTHEABSURD</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>THEOLOGY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>THESAURUS</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>THRILLER</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TOPOGRAPHICALPOETRY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TRACTPAMPHLET</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TRAGEDY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TRAGICOMEDY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TRANSLATION</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TRAVELWRITING</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TREATISE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>UTOPIA</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>VERSENOVEL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>VIGNETTE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>VILLANELLE</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>YOUNGADULTWRITING</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#TGENRE"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="GENRENAME"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;GenreName is an optional attribute that provides a pick-list of possible genre names to modify the element tGenre. It will prove especially useful in situations where the prose does not allow the concise naming of a genre that would be easily understood by a simpler name. Ultimately, this attribute will help us systematize and index references to various genre names.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="ABRIDGEMENT"/&gt;
+      &lt;xs:enumeration value="ACLEF"/&gt;
+      &lt;xs:enumeration value="ACROSTIC"/&gt;
+      &lt;xs:enumeration value="ADAPTATION"/&gt;
+      &lt;xs:enumeration value="ADVENTUREWRITING"/&gt;
+      &lt;xs:enumeration value="ADVERTISINGCOPY"/&gt;
+      &lt;xs:enumeration value="AFTERPIECE"/&gt;
+      &lt;xs:enumeration value="AFTERWORD"/&gt;
+      &lt;xs:enumeration value="AGITPROP"/&gt;
+      &lt;xs:enumeration value="ALLEGORY"/&gt;
+      &lt;xs:enumeration value="ALMANAC"/&gt;
+      &lt;xs:enumeration value="ANACREONTIC"/&gt;
+      &lt;xs:enumeration value="ANAGRAM"/&gt;
+      &lt;xs:enumeration value="ANNOTATION"/&gt;
+      &lt;xs:enumeration value="ANSWER"/&gt;
+      &lt;xs:enumeration value="ANTHEM"/&gt;
+      &lt;xs:enumeration value="ANTHOLOGY"/&gt;
+      &lt;xs:enumeration value="ANTIROMANCE"/&gt;
+      &lt;xs:enumeration value="APHORISM"/&gt;
+      &lt;xs:enumeration value="APOLOGY"/&gt;
+      &lt;xs:enumeration value="ARTCRITICISM"/&gt;
+      &lt;xs:enumeration value="AUTOBIOGRAPHY"/&gt;
+      &lt;xs:enumeration value="BALLAD"/&gt;
+      &lt;xs:enumeration value="BALLADE"/&gt;
+      &lt;xs:enumeration value="BALLADOPERA"/&gt;
+      &lt;xs:enumeration value="BALLET"/&gt;
+      &lt;xs:enumeration value="BERGAMASQUE"/&gt;
+      &lt;xs:enumeration value="BESTIARY"/&gt;
+      &lt;xs:enumeration value="BIBLICALPARAPHRASE"/&gt;
+      &lt;xs:enumeration value="BILDUNGSROMAN"/&gt;
+      &lt;xs:enumeration value="BIOGRAPHICALDICTIONARY"/&gt;
+      &lt;xs:enumeration value="BIOGRAPHY"/&gt;
+      &lt;xs:enumeration value="BISEXUALFICTION"/&gt;
+      &lt;xs:enumeration value="BLACKCOMEDY"/&gt;
+      &lt;xs:enumeration value="BOUTSRIMES"/&gt;
+      &lt;xs:enumeration value="BROADSIDE"/&gt;
+      &lt;xs:enumeration value="BURLETTA"/&gt;
+      &lt;xs:enumeration value="CABARET"/&gt;
+      &lt;xs:enumeration value="CAPTIVITYNARRATIVE"/&gt;
+      &lt;xs:enumeration value="CATECHISM"/&gt;
+      &lt;xs:enumeration value="CHAPBOOK"/&gt;
+      &lt;xs:enumeration value="CHARACTER"/&gt;
+      &lt;xs:enumeration value="CHARADE"/&gt;
+      &lt;xs:enumeration value="CHILDRENSLITERATURE"/&gt;
+      &lt;xs:enumeration value="CLERIHEW"/&gt;
+      &lt;xs:enumeration value="CLOSETDRAMA"/&gt;
+      &lt;xs:enumeration value="COLOURINGBOOK"/&gt;
+      &lt;xs:enumeration value="COMEDY"/&gt;
+      &lt;xs:enumeration value="COMEDYOFHUMOURS"/&gt;
+      &lt;xs:enumeration value="COMEDYOFINTRIGUE"/&gt;
+      &lt;xs:enumeration value="COMEDYOFMANNERS"/&gt;
+      &lt;xs:enumeration value="COMEDYOFMENACE"/&gt;
+      &lt;xs:enumeration value="COMICBOOK"/&gt;
+      &lt;xs:enumeration value="COMINGOUT"/&gt;
+      &lt;xs:enumeration value="COMMONPLACEBOOK"/&gt;
+      &lt;xs:enumeration value="COMPANION"/&gt;
+      &lt;xs:enumeration value="COMPUTERPROGRAM"/&gt;
+      &lt;xs:enumeration value="CONDITIONOFENGLANDNOVEL"/&gt;
+      &lt;xs:enumeration value="CONDUCTLITERATURE"/&gt;
+      &lt;xs:enumeration value="COOKBOOK"/&gt;
+      &lt;xs:enumeration value="COURTSHIPFICTION"/&gt;
+      &lt;xs:enumeration value="CRIMINOLOGY"/&gt;
+      &lt;xs:enumeration value="DEDICATION"/&gt;
+      &lt;xs:enumeration value="DETECTIVE"/&gt;
+      &lt;xs:enumeration value="DEVOTIONAL"/&gt;
+      &lt;xs:enumeration value="DIALOGUEORDEBATE"/&gt;
+      &lt;xs:enumeration value="DIARY"/&gt;
+      &lt;xs:enumeration value="DIALOGUEOFTHEDEAD"/&gt;
+      &lt;xs:enumeration value="DICTIONARY"/&gt;
+      &lt;xs:enumeration value="DIDACTIC"/&gt;
+      &lt;xs:enumeration value="DIRECTORY"/&gt;
+      &lt;xs:enumeration value="DISSERTATION"/&gt;
+      &lt;xs:enumeration value="DOCUMENTARY"/&gt;
+      &lt;xs:enumeration value="DOMESTIC"/&gt;
+      &lt;xs:enumeration value="DRAMA"/&gt;
+      &lt;xs:enumeration value="DRAMATICMONOLOGUE"/&gt;
+      &lt;xs:enumeration value="DREAMVISION"/&gt;
+      &lt;xs:enumeration value="DYSTOPIA"/&gt;
+      &lt;xs:enumeration value="ECLOGUE"/&gt;
+      &lt;xs:enumeration value="EDITING"/&gt;
+      &lt;xs:enumeration value="ELEGY"/&gt;
+      &lt;xs:enumeration value="ENCYCLOPAEDIA"/&gt;
+      &lt;xs:enumeration value="EPIC"/&gt;
+      &lt;xs:enumeration value="EPICTHEATRE"/&gt;
+      &lt;xs:enumeration value="EPIGRAM"/&gt;
+      &lt;xs:enumeration value="EPILOGUE"/&gt;
+      &lt;xs:enumeration value="EPISODICLITERATURE"/&gt;
+      &lt;xs:enumeration value="EPISTLE"/&gt;
+      &lt;xs:enumeration value="EPISTOLARY"/&gt;
+      &lt;xs:enumeration value="EPITAPH"/&gt;
+      &lt;xs:enumeration value="EPITHALAMIUM"/&gt;
+      &lt;xs:enumeration value="EPYLLION"/&gt;
+      &lt;xs:enumeration value="EROTICAPORNOGRAPHY"/&gt;
+      &lt;xs:enumeration value="ESSAY"/&gt;
+      &lt;xs:enumeration value="EULOGY"/&gt;
+      &lt;xs:enumeration value="EXHIBITIONCATALOGUE"/&gt;
+      &lt;xs:enumeration value="EXPRESSIONISTWRITING"/&gt;
+      &lt;xs:enumeration value="FABLE"/&gt;
+      &lt;xs:enumeration value="FABLIAU"/&gt;
+      &lt;xs:enumeration value="FAIRYTALE"/&gt;
+      &lt;xs:enumeration value="FANTASY"/&gt;
+      &lt;xs:enumeration value="FARCE"/&gt;
+      &lt;xs:enumeration value="FEMINIST"/&gt;
+      &lt;xs:enumeration value="FEMINISTTHEORY"/&gt;
+      &lt;xs:enumeration value="FICTION"/&gt;
+      &lt;xs:enumeration value="FILMTVSCRIPT"/&gt;
+      &lt;xs:enumeration value="FOLKSONG"/&gt;
+      &lt;xs:enumeration value="GARDENINGBOOK"/&gt;
+      &lt;xs:enumeration value="GENEALOGY"/&gt;
+      &lt;xs:enumeration value="GEORGIC"/&gt;
+      &lt;xs:enumeration value="GHOSTSTORY"/&gt;
+      &lt;xs:enumeration value="GIFTBOOK"/&gt;
+      &lt;xs:enumeration value="GOTHIC"/&gt;
+      &lt;xs:enumeration value="GOVERNMENTREPORT"/&gt;
+      &lt;xs:enumeration value="GRAMMAR"/&gt;
+      &lt;xs:enumeration value="GRAVEYARDPOETRY"/&gt;
+      &lt;xs:enumeration value="GUERILLATHEATRE"/&gt;
+      &lt;xs:enumeration value="GUIDEBOOK"/&gt;
+      &lt;xs:enumeration value="HAGIOGRAPHY"/&gt;
+      &lt;xs:enumeration value="HAIKU"/&gt;
+      &lt;xs:enumeration value="HARLEQUINADE"/&gt;
+      &lt;xs:enumeration value="HEROIC"/&gt;
+      &lt;xs:enumeration value="HISTORICAL"/&gt;
+      &lt;xs:enumeration value="HISTORY"/&gt;
+      &lt;xs:enumeration value="HYMN"/&gt;
+      &lt;xs:enumeration value="IMITATION"/&gt;
+      &lt;xs:enumeration value="IMPROVISATION"/&gt;
+      &lt;xs:enumeration value="INDUSTRIALNOVEL"/&gt;
+      &lt;xs:enumeration value="INTRODUCTION"/&gt;
+      &lt;xs:enumeration value="JOURNALISM"/&gt;
+      &lt;xs:enumeration value="JUVENILIA"/&gt;
+      &lt;xs:enumeration value="KITCHENSINKDRAMA"/&gt;
+      &lt;xs:enumeration value="KUNSTLERROMAN"/&gt;
+      &lt;xs:enumeration value="LAIS"/&gt;
+      &lt;xs:enumeration value="LAMPOON"/&gt;
+      &lt;xs:enumeration value="LEGALWRITING"/&gt;
+      &lt;xs:enumeration value="LEGENDFOLKTALE"/&gt;
+      &lt;xs:enumeration value="LESBIAN"/&gt;
+      &lt;xs:enumeration value="LETTER"/&gt;
+      &lt;xs:enumeration value="LETTERSFROMTHEDEADTOTHELIVING"/&gt;
+      &lt;xs:enumeration value="LIBRETTO"/&gt;
+      &lt;xs:enumeration value="LITERARYCRITICISM"/&gt;
+      &lt;xs:enumeration value="LITURGY"/&gt;
+      &lt;xs:enumeration value="LOVE"/&gt;
+      &lt;xs:enumeration value="LYRIC"/&gt;
+      &lt;xs:enumeration value="MAGICREALIST"/&gt;
+      &lt;xs:enumeration value="MANIFESTO"/&gt;
+      &lt;xs:enumeration value="MANUAL"/&gt;
+      &lt;xs:enumeration value="MAP"/&gt;
+      &lt;xs:enumeration value="MASQUE"/&gt;
+      &lt;xs:enumeration value="MEDICALWRITING"/&gt;
+      &lt;xs:enumeration value="MELODRAMA"/&gt;
+      &lt;xs:enumeration value="MIXEDMEDIA"/&gt;
+      &lt;xs:enumeration value="MOCKFORMS"/&gt;
+      &lt;xs:enumeration value="MONOLOGUE"/&gt;
+      &lt;xs:enumeration value="MORALITYMYSTERYPLAY"/&gt;
+      &lt;xs:enumeration value="MULTIMEDIA"/&gt;
+      &lt;xs:enumeration value="MUSICOLOGY"/&gt;
+      &lt;xs:enumeration value="MYSTERY"/&gt;
+      &lt;xs:enumeration value="MYTH"/&gt;
+      &lt;xs:enumeration value="NARRATIVEPOETRY"/&gt;
+      &lt;xs:enumeration value="NATIONALISTFICTION"/&gt;
+      &lt;xs:enumeration value="NATIONALTALE"/&gt;
+      &lt;xs:enumeration value="NOTEBOOK"/&gt;
+      &lt;xs:enumeration value="NOVEL"/&gt;
+      &lt;xs:enumeration value="NOVELLA"/&gt;
+      &lt;xs:enumeration value="NURSERYRHYME"/&gt;
+      &lt;xs:enumeration value="OBITUARY"/&gt;
+      &lt;xs:enumeration value="OCCASIONALPOETRY"/&gt;
+      &lt;xs:enumeration value="ODE"/&gt;
+      &lt;xs:enumeration value="ONEACTPLAY"/&gt;
+      &lt;xs:enumeration value="OPERA"/&gt;
+      &lt;xs:enumeration value="ORATORIO"/&gt;
+      &lt;xs:enumeration value="ORIENTAL"/&gt;
+      &lt;xs:enumeration value="PAGEANT"/&gt;
+      &lt;xs:enumeration value="PANEGYRIC"/&gt;
+      &lt;xs:enumeration value="PANTOMIME"/&gt;
+      &lt;xs:enumeration value="PARABLE"/&gt;
+      &lt;xs:enumeration value="PARATEXTS"/&gt;
+      &lt;xs:enumeration value="PARLIAMENTARYREPORT"/&gt;
+      &lt;xs:enumeration value="PARODY"/&gt;
+      &lt;xs:enumeration value="PASTORAL"/&gt;
+      &lt;xs:enumeration value="PEDAGOGY"/&gt;
+      &lt;xs:enumeration value="PERFORMANCEPOETRY"/&gt;
+      &lt;xs:enumeration value="PERIODICAL"/&gt;
+      &lt;xs:enumeration value="PETITION"/&gt;
+      &lt;xs:enumeration value="PHILOSOPHICAL"/&gt;
+      &lt;xs:enumeration value="PHILOSOPHY"/&gt;
+      &lt;xs:enumeration value="PICARESQUE"/&gt;
+      &lt;xs:enumeration value="PINDARIC"/&gt;
+      &lt;xs:enumeration value="POETRY"/&gt;
+      &lt;xs:enumeration value="POLEMIC"/&gt;
+      &lt;xs:enumeration value="POLITICALWRITING"/&gt;
+      &lt;xs:enumeration value="POPULAR"/&gt;
+      &lt;xs:enumeration value="PRAYER"/&gt;
+      &lt;xs:enumeration value="PREFATORYPIECE"/&gt;
+      &lt;xs:enumeration value="PROGRAMNOTES"/&gt;
+      &lt;xs:enumeration value="PROLETARIANWRITING"/&gt;
+      &lt;xs:enumeration value="PROLOGUE"/&gt;
+      &lt;xs:enumeration value="PROPAGANDA"/&gt;
+      &lt;xs:enumeration value="PROPHECY"/&gt;
+      &lt;xs:enumeration value="PSALM"/&gt;
+      &lt;xs:enumeration value="PSYCHOANALYTICAL"/&gt;
+      &lt;xs:enumeration value="QUIZ"/&gt;
+      &lt;xs:enumeration value="RADIODRAMA"/&gt;
+      &lt;xs:enumeration value="REALIST"/&gt;
+      &lt;xs:enumeration value="REGIONAL"/&gt;
+      &lt;xs:enumeration value="RELIGIOUS"/&gt;
+      &lt;xs:enumeration value="REVIEW"/&gt;
+      &lt;xs:enumeration value="REVUE"/&gt;
+      &lt;xs:enumeration value="RIDDLE"/&gt;
+      &lt;xs:enumeration value="ROMANCE"/&gt;
+      &lt;xs:enumeration value="SAGEWRITING"/&gt;
+      &lt;xs:enumeration value="SATIRE"/&gt;
+      &lt;xs:enumeration value="SCHOLARSHIP"/&gt;
+      &lt;xs:enumeration value="SCHOOLFICTION"/&gt;
+      &lt;xs:enumeration value="SCIENCEFICTION"/&gt;
+      &lt;xs:enumeration value="SCIENTIFICWRITING"/&gt;
+      &lt;xs:enumeration value="SCRAPBOOK"/&gt;
+      &lt;xs:enumeration value="SENSATIONNOVEL"/&gt;
+      &lt;xs:enumeration value="SENSIBILITY"/&gt;
+      &lt;xs:enumeration value="SENTIMENTAL"/&gt;
+      &lt;xs:enumeration value="SEQUEL"/&gt;
+      &lt;xs:enumeration value="SERMON"/&gt;
+      &lt;xs:enumeration value="SEXUALAWAKENINGFICTION"/&gt;
+      &lt;xs:enumeration value="SHORTSTORY"/&gt;
+      &lt;xs:enumeration value="SILVERFORKNOVEL"/&gt;
+      &lt;xs:enumeration value="SKETCH"/&gt;
+      &lt;xs:enumeration value="SKETCHBOOK"/&gt;
+      &lt;xs:enumeration value="SLAVENARRATIVE"/&gt;
+      &lt;xs:enumeration value="SOCIALSCIENCE"/&gt;
+      &lt;xs:enumeration value="SONG"/&gt;
+      &lt;xs:enumeration value="SONNET"/&gt;
+      &lt;xs:enumeration value="SPEECH"/&gt;
+      &lt;xs:enumeration value="STAGEREVIEW"/&gt;
+      &lt;xs:enumeration value="TESTIMONY"/&gt;
+      &lt;xs:enumeration value="TEXTBOOK"/&gt;
+      &lt;xs:enumeration value="THEATREOFCRUELTY"/&gt;
+      &lt;xs:enumeration value="THEATREOFTHEABSURD"/&gt;
+      &lt;xs:enumeration value="THEOLOGY"/&gt;
+      &lt;xs:enumeration value="THESAURUS"/&gt;
+      &lt;xs:enumeration value="THRILLER"/&gt;
+      &lt;xs:enumeration value="TOPOGRAPHICALPOETRY"/&gt;
+      &lt;xs:enumeration value="TRACTPAMPHLET"/&gt;
+      &lt;xs:enumeration value="TRAGEDY"/&gt;
+      &lt;xs:enumeration value="TRAGICOMEDY"/&gt;
+      &lt;xs:enumeration value="TRANSLATION"/&gt;
+      &lt;xs:enumeration value="TRAVELWRITING"/&gt;
+      &lt;xs:enumeration value="TREATISE"/&gt;
+      &lt;xs:enumeration value="UTOPIA"/&gt;
+      &lt;xs:enumeration value="VERSENOVEL"/&gt;
+      &lt;xs:enumeration value="VIGNETTE"/&gt;
+      &lt;xs:enumeration value="VILLANELLE"/&gt;
+      &lt;xs:enumeration value="YOUNGADULTWRITING"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

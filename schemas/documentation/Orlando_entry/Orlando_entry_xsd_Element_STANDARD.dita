@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="STANDARD">
+   <title>Element STANDARD</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_STANDARD">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_STANDARD.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>133,40,338,100</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#STANDARD_WROTEORPUBLISHEDAS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>133,153,251,195</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#STANDARD_REF"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>mixed: </entry>
+                                    <entry>
+                                       <b>true</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_DIV0.dita#DIV0"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry/>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="4">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="2*"/>
+                              <colspec colnum="4" colname="col4" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Default</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#STANDARD_REF"/>
+                                    </entry>
+                                    <entry>xs:anyURI</entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">Ref
+(or reference) provides an explicit means of locating a full
+definition for the entity being named by means of a
+URI.</codeblock>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#STANDARD_WROTEORPUBLISHEDAS"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry>WROTEPUBLISHEDASYES</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">WroteOrPublishedAs is an attribute attached to all the types of a
+person's name captured within their biography section. This
+attribute will allow us to track all the different names women
+writers published under. While we assume that most writers published
+under their standard name and pseudonyms, they may also have used a
+nickname or their married name, for instance, to publish material.
+This attribute works in conjunction with the authorname in the
+bibliography to link the name a text was published under with the
+name of the person.</codeblock>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="STANDARD"&gt;
+  &lt;xs:complexType mixed="true"&gt;
+    &lt;xs:attribute name="WROTEORPUBLISHEDAS" default="WROTEPUBLISHEDASYES"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;WroteOrPublishedAs is an attribute attached to all the types of a person's name captured within their biography section. This attribute will allow us to track all the different names women writers published under. While we assume that most writers published under their standard name and pseudonyms, they may also have used a nickname or their married name, for instance, to publish material. This attribute works in conjunction with the authorname in the bibliography to link the name a text was published under with the name of the person.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="WROTEPUBLISHEDASYES"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="REF" type="xs:anyURI"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Ref (or reference) provides an explicit means of locating a full definition for the entity being named by means of a URI.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+    &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="STANDARD_WROTEORPUBLISHEDAS">
+      <title>Attribute STANDARD / @WROTEORPUBLISHEDAS</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">WroteOrPublishedAs is an attribute attached to all the types of a
+person's name captured within their biography section. This
+attribute will allow us to track all the different names women
+writers published under. While we assume that most writers published
+under their standard name and pseudonyms, they may also have used a
+nickname or their married name, for instance, to publish material.
+This attribute works in conjunction with the authorname in the
+bibliography to link the name a text was published under with the
+name of the person.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>default: </entry>
+                                       <entry>
+                                          <b>WROTEPUBLISHEDASYES</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>WROTEPUBLISHEDASYES</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#STANDARD"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="WROTEORPUBLISHEDAS" default="WROTEPUBLISHEDASYES"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;WroteOrPublishedAs is an attribute attached to all the types of a person's name captured within their biography section. This attribute will allow us to track all the different names women writers published under. While we assume that most writers published under their standard name and pseudonyms, they may also have used a nickname or their married name, for instance, to publish material. This attribute works in conjunction with the authorname in the bibliography to link the name a text was published under with the name of the person.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="WROTEPUBLISHEDASYES"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="STANDARD_REF">
+      <title>Attribute STANDARD / @REF</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Ref
+(or reference) provides an explicit means of locating a full
+definition for the entity being named by means of a
+URI.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>xs:anyURI</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#STANDARD"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="REF" type="xs:anyURI"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Ref (or reference) provides an explicit means of locating a full definition for the entity being named by means of a URI.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

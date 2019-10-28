@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="SIC">
+   <title>Element SIC</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">This
+element is left over from the TEI set of elements and is meant to be used in the
+same way that you would use a [sic] tag in regular prose. For our purposes, we have
+devised a set of practice directives to guide you in your use of this element. It is
+primarily a formatting tag which inserts the word [sic] in rendered
+text.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_SIC">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_SIC.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>134,40,202,64</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#SIC_CORR"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>134,74,239,98</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#SIC_annotationId"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>134,151,212,175</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#SIC_offsetId"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>191,235,253,259</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>191,269,256,293</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>191,303,261,327</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>mixed: </entry>
+                                    <entry>
+                                       <b>true</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Elements </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_CHRONPROSE.dita#CHRONPROSE"/>, <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/>, <xref href="Orlando_entry_xsd_Element_EMPH.dita#EMPH"/>, <xref href="Orlando_entry_xsd_Element_FOREIGN.dita#FOREIGN"/>, <xref href="Orlando_entry_xsd_Element_L.dita#L"/>, <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>, <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>, <xref href="Orlando_entry_xsd_Element_P.dita#P"/>, <xref href="Orlando_entry_xsd_Element_PLACENAME.dita#PLACENAME"/>, <xref href="Orlando_entry_xsd_Element_PMATERIALCONDITIONS.dita#PMATERIALCONDITIONS"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>, <xref href="Orlando_entry_xsd_Element_RPENALTIES.dita#RPENALTIES"/>, <xref href="Orlando_entry_xsd_Element_RRECOGNITIONS.dita#RRECOGNITIONS"/>, <xref href="Orlando_entry_xsd_Element_RRESPONSES.dita#RRESPONSES"/>, <xref href="Orlando_entry_xsd_Element_RSELFDESCRIPTION.dita#RSELFDESCRIPTION"/>, <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERNAME.dita#TCHARACTERNAME"/>, <xref href="Orlando_entry_xsd_Element_TCHARACTERTYPEROLE.dita#TCHARACTERTYPEROLE"/>, <xref href="Orlando_entry_xsd_Element_TGENRE.dita#TGENRE"/>, <xref href="Orlando_entry_xsd_Element_TINTERTEXTUALITY.dita#TINTERTEXTUALITY"/>, <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>, <xref href="Orlando_entry_xsd_Element_TTECHNIQUES.dita#TTECHNIQUES"/>, <xref href="Orlando_entry_xsd_Element_TTHEMETOPIC.dita#TTHEMETOPIC"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/> | <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/> | <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>, <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;SIC annotationId="" CORR="" offsetId=""&gt;
+  &lt;NAME annotationId="" offsetId="" REF="" STANDARD=""&gt;{1,1}&lt;/NAME&gt;
+  &lt;PLACE annotationId="" ID="" LAT="" LONG="" offsetId="" REF="" REG=""&gt;{1,1}&lt;/PLACE&gt;
+  &lt;QUOTE DIRECT="Y" ID="" LAYOUT="INLINE"&gt;{1,1}&lt;/QUOTE&gt;
+&lt;/SIC&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="3">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#SIC_CORR"/>
+                                    </entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#SIC_annotationId"/>
+                                    </entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col3">
+                                       <codeblock outputclass="language-xml">Provides a unique annotation identifier for the element bearing the
+attribute.</codeblock>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#SIC_offsetId"/>
+                                    </entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col3">
+                                       <codeblock outputclass="language-xml">Designates the parent tag from which the offset is being
+counted.</codeblock>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="SIC"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;This element is left over from the TEI set of elements and is meant to be used in the same way that you would use a [sic] tag in regular prose. For our purposes, we have devised a set of practice directives to guide you in your use of this element. It is primarily a formatting tag which inserts the word [sic] in rendered text.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType mixed="true"&gt;
+    &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+      &lt;xs:element ref="NAME"/&gt;
+      &lt;xs:element ref="PLACE"/&gt;
+      &lt;xs:element ref="QUOTE"/&gt;
+    &lt;/xs:choice&gt;
+    &lt;xs:attribute name="CORR"/&gt;
+    &lt;xs:attribute name="annotationId"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Provides a unique annotation identifier for the element bearing the attribute.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="offsetId"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Designates the parent tag from which the offset is being counted.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+    &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="SIC_CORR">
+      <title>Attribute SIC / @CORR</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#SIC"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="CORR"/&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="SIC_annotationId">
+      <title>Attribute SIC / @annotationId</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Provides a unique annotation identifier for the element bearing the
+attribute.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#SIC"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="annotationId"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Provides a unique annotation identifier for the element bearing the attribute.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="SIC_offsetId">
+      <title>Attribute SIC / @offsetId</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Designates the parent tag from which the offset is being
+counted.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#SIC"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="offsetId"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Designates the parent tag from which the offset is being counted.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

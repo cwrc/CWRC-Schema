@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="NATIONALITY">
+   <title>Element NATIONALITY</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">This
+sub-element within culturalFormation and NationalityIssue captures specific
+information concerning a person's nationality. Include multiple times to
+capture multiple nationalities and changes in her citizenship.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_NATIONALITY">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_NATIONALITY.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>188,40,389,82</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#NATIONALITY_CURRENTALTERNATIVETERM"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>188,135,246,159</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#NATIONALITY_REG"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>188,225,392,285</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#NATIONALITY_SELF-DEFINED"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>245,345,360,369</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_GEOGHERITAGE.dita#GEOGHERITAGE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>245,422,386,446</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_NATIONALHERITAGE.dita#NATIONALHERITAGE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>245,499,310,523</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>245,533,399,557</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_POLITICALAFFILIATION.dita#POLITICALAFFILIATION"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>mixed: </entry>
+                                    <entry>
+                                       <b>true</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Elements </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_CHRONPROSE.dita#CHRONPROSE"/>, <xref href="Orlando_entry_xsd_Element_CLASS.dita#CLASS"/>, <xref href="Orlando_entry_xsd_Element_ETHNICITY.dita#ETHNICITY"/>, <xref href="Orlando_entry_xsd_Element_GEOGHERITAGE.dita#GEOGHERITAGE"/>, <xref href="Orlando_entry_xsd_Element_NATIONALHERITAGE.dita#NATIONALHERITAGE"/>, <xref href="Orlando_entry_xsd_Element_P.dita#P"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>, <xref href="Orlando_entry_xsd_Element_RACECOLOUR.dita#RACECOLOUR"/>, <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_GEOGHERITAGE.dita#GEOGHERITAGE"/> | <xref href="Orlando_entry_xsd_Element_NATIONALHERITAGE.dita#NATIONALHERITAGE"/> | <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/> | <xref href="Orlando_entry_xsd_Element_POLITICALAFFILIATION.dita#POLITICALAFFILIATION"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_GEOGHERITAGE.dita#GEOGHERITAGE"/>, <xref href="Orlando_entry_xsd_Element_NATIONALHERITAGE.dita#NATIONALHERITAGE"/>, <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>, <xref href="Orlando_entry_xsd_Element_POLITICALAFFILIATION.dita#POLITICALAFFILIATION"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;NATIONALITY CURRENTALTERNATIVETERM="" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;
+  &lt;GEOGHERITAGE FOREBEAR="FAMILY" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;{1,1}&lt;/GEOGHERITAGE&gt;
+  &lt;NATIONALHERITAGE CURRENTALTERNATIVETERM="" FOREBEAR="FAMILY" REG="" SELF-DEFINED="SELFUNKNOWN"&gt;{1,1}&lt;/NATIONALHERITAGE&gt;
+  &lt;PLACE annotationId="" ID="" LAT="" LONG="" offsetId="" REF="" REG=""&gt;{1,1}&lt;/PLACE&gt;
+  &lt;POLITICALAFFILIATION ACTIVISM="ACTIVISTYES" CURRENTALTERNATIVETERM="" ID="" INVOLVEMENT="INVOLVEMENTYES" MEMBERSHIP="MEMBERSHIPYES" REG="" WOMAN-GENDERISSUE="GENDERYES"&gt;{1,1}&lt;/POLITICALAFFILIATION&gt;
+&lt;/NATIONALITY&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="4">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="2*"/>
+                              <colspec colnum="4" colname="col4" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Default</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#NATIONALITY_CURRENTALTERNATIVETERM"/>
+                                    </entry>
+                                    <entry>xs:NCName</entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">This attribute allows you to capture changes in terminology over time. The
+older name in your prose may not be familiar to your reader nor helpful for
+indexing purposes and therefore needs explanation.</codeblock>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#NATIONALITY_REG"/>
+                                    </entry>
+                                    <entry/>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">Reg (or regularization) contains a reading which has been regularized or
+normalized in some sense.</codeblock>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#NATIONALITY_SELF-DEFINED"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry>SELFUNKNOWN</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">Self-defined is an attribute attached to all identity categories within
+biography. Its purpose is to distinguish between people who place themselves
+within an identity category (i.e., "Jeannette Winterson identifies as
+lesbian") and those whom we place in that category though they
+themselves did not (i.e., "While she denied being a lesbian, she
+maintained relationships with women throughout her life"). This
+attribute acknowledges the importance of personal, political and historical
+placements of one's own subject position; it assumes that identities
+are not simply labels we assign to other people but shifting categories
+which we both place ourselves within, and, in which history places
+us.</codeblock>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="NATIONALITY"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;This sub-element within culturalFormation and NationalityIssue captures specific information concerning a person's nationality. Include multiple times to capture multiple nationalities and changes in her citizenship.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType mixed="true"&gt;
+    &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+      &lt;xs:element ref="GEOGHERITAGE"/&gt;
+      &lt;xs:element ref="NATIONALHERITAGE"/&gt;
+      &lt;xs:element ref="PLACE"/&gt;
+      &lt;xs:element ref="POLITICALAFFILIATION"/&gt;
+    &lt;/xs:choice&gt;
+    &lt;xs:attribute name="CURRENTALTERNATIVETERM" type="xs:NCName"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;This attribute allows you to capture changes in terminology over time. The older name in your prose may not be familiar to your reader nor helpful for indexing purposes and therefore needs explanation.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="REG"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Reg (or regularization) contains a reading which has been regularized or normalized in some sense.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="SELF-DEFINED" default="SELFUNKNOWN"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Self-defined is an attribute attached to all identity categories within biography. Its purpose is to distinguish between people who place themselves within an identity category (i.e., "Jeannette Winterson identifies as lesbian") and those whom we place in that category though they themselves did not (i.e., "While she denied being a lesbian, she maintained relationships with women throughout her life"). This attribute acknowledges the importance of personal, political and historical placements of one's own subject position; it assumes that identities are not simply labels we assign to other people but shifting categories which we both place ourselves within, and, in which history places us.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="SELFYES"/&gt;
+          &lt;xs:enumeration value="SELFNO"/&gt;
+          &lt;xs:enumeration value="SELFUNKNOWN"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="NATIONALITY_CURRENTALTERNATIVETERM">
+      <title>Attribute NATIONALITY / @CURRENTALTERNATIVETERM</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">This attribute allows you to capture changes in terminology over time. The
+older name in your prose may not be familiar to your reader nor helpful for
+indexing purposes and therefore needs explanation.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>xs:NCName</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#NATIONALITY"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="CURRENTALTERNATIVETERM" type="xs:NCName"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;This attribute allows you to capture changes in terminology over time. The older name in your prose may not be familiar to your reader nor helpful for indexing purposes and therefore needs explanation.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="NATIONALITY_REG">
+      <title>Attribute NATIONALITY / @REG</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Reg (or regularization) contains a reading which has been regularized or
+normalized in some sense.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#NATIONALITY"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="REG"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Reg (or regularization) contains a reading which has been regularized or normalized in some sense.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="NATIONALITY_SELF-DEFINED">
+      <title>Attribute NATIONALITY / @SELF-DEFINED</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Self-defined is an attribute attached to all identity categories within
+biography. Its purpose is to distinguish between people who place themselves
+within an identity category (i.e., "Jeannette Winterson identifies as
+lesbian") and those whom we place in that category though they
+themselves did not (i.e., "While she denied being a lesbian, she
+maintained relationships with women throughout her life"). This
+attribute acknowledges the importance of personal, political and historical
+placements of one's own subject position; it assumes that identities
+are not simply labels we assign to other people but shifting categories
+which we both place ourselves within, and, in which history places
+us.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>default: </entry>
+                                       <entry>
+                                          <b>SELFUNKNOWN</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SELFYES</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SELFNO</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SELFUNKNOWN</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#NATIONALITY"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="SELF-DEFINED" default="SELFUNKNOWN"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Self-defined is an attribute attached to all identity categories within biography. Its purpose is to distinguish between people who place themselves within an identity category (i.e., "Jeannette Winterson identifies as lesbian") and those whom we place in that category though they themselves did not (i.e., "While she denied being a lesbian, she maintained relationships with women throughout her life"). This attribute acknowledges the importance of personal, political and historical placements of one's own subject position; it assumes that identities are not simply labels we assign to other people but shifting categories which we both place ourselves within, and, in which history places us.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="SELFYES"/&gt;
+      &lt;xs:enumeration value="SELFNO"/&gt;
+      &lt;xs:enumeration value="SELFUNKNOWN"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

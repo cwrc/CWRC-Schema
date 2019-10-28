@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="LOCATION">
+   <title>Element LOCATION</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">Location is one of the 16 major biography elements defined
+as integral to mapping a woman's life. One of the
+strengths of our electronic literary history will be its
+ability to make connections between people and places
+hitherto unknown. Researchers will be able to use our
+resource to discover who was living in a particular place at
+the same time or to make connections between historical
+events and women writers who were living in that place at
+the time of the event. For these reasons, this Project
+emphasizes location and place as one of the major focusses
+of our research. In addition, we emphasize structuring
+information concerning location because we hope to generate
+maps for each writer, tracking her geographical movements
+over the course of her life.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_LOCATION">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_LOCATION.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>172,40,364,82</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#LOCATION_RELATIONTO"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>229,99,343,123</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>229,189,285,213</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>229,279,346,303</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_BIOGRAPHY.dita#BIOGRAPHY_DIV1"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/> | <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/>, <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;LOCATION RELATIONTO=""&gt;
+  &lt;CHRONSTRUCT CHRONCOLUMN="" CHRONCOLUMN1="" CHRONCOLUMN2="" CHRONCOLUMN3="" RELEVANCE="" RELEVANCE1="" RELEVANCE2="" RELEVANCE3="" RESP=""&gt;{1,1}&lt;/CHRONSTRUCT&gt;
+  &lt;DIV2 ID=""&gt;{1,1}&lt;/DIV2&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+&lt;/LOCATION&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="3">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#LOCATION_RELATIONTO"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry>required</entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="LOCATION"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Location is one of the 16 major biography elements defined as integral to mapping a woman's life. One of the strengths of our electronic literary history will be its ability to make connections between people and places hitherto unknown. Researchers will be able to use our resource to discover who was living in a particular place at the same time or to make connections between historical events and women writers who were living in that place at the time of the event. For these reasons, this Project emphasizes location and place as one of the major focusses of our research. In addition, we emphasize structuring information concerning location because we hope to generate maps for each writer, tracking her geographical movements over the course of her life.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+      &lt;xs:element ref="CHRONSTRUCT"/&gt;
+      &lt;xs:element ref="DIV2"/&gt;
+      &lt;xs:element ref="RESEARCHNOTE"/&gt;
+    &lt;/xs:choice&gt;
+    &lt;xs:attribute name="RELATIONTO" use="required"&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="LIVED"/&gt;
+          &lt;xs:enumeration value="VISITED"/&gt;
+          &lt;xs:enumeration value="MOVED"/&gt;
+          &lt;xs:enumeration value="UNKNOWN"/&gt;
+          &lt;xs:enumeration value="TRAVELLED"/&gt;
+          &lt;xs:enumeration value="MIGRATED"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="LOCATION_RELATIONTO">
+      <title>Attribute LOCATION / @RELATIONTO</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>use: </entry>
+                                       <entry>
+                                          <b>required</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>LIVED</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>VISITED</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MOVED</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>UNKNOWN</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TRAVELLED</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MIGRATED</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#LOCATION"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="RELATIONTO" use="required"&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="LIVED"/&gt;
+      &lt;xs:enumeration value="VISITED"/&gt;
+      &lt;xs:enumeration value="MOVED"/&gt;
+      &lt;xs:enumeration value="UNKNOWN"/&gt;
+      &lt;xs:enumeration value="TRAVELLED"/&gt;
+      &lt;xs:enumeration value="MIGRATED"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

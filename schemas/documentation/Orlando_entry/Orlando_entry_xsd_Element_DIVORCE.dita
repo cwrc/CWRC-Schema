@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="DIVORCE">
+   <title>Element DIVORCE</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">The
+divorce element is used to indicate that a woman was divorced from her husband. Use
+separation when she was separated but did not divorce him. Appearance of the divorce
+element in a biography document will signify that the subject of the biography was
+divorced.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_DIVORCE">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_DIVORCE.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,2,289,26</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,36,279,60</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,126,270,150</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_JOB.dita#JOB"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,216,281,240</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,250,305,274</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,340,284,364</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,374,289,398</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,451,318,475</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_SEPARATION.dita#SEPARATION"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,541,307,565</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,631,279,655</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>mixed: </entry>
+                                    <entry>
+                                       <b>true</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Elements </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_CHILDLESSNESS.dita#CHILDLESSNESS"/>, <xref href="Orlando_entry_xsd_Element_CHRONPROSE.dita#CHRONPROSE"/>, <xref href="Orlando_entry_xsd_Element_P.dita#P"/>, <xref href="Orlando_entry_xsd_Element_SEPARATION.dita#SEPARATION"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/> | <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/> | <xref href="Orlando_entry_xsd_Element_JOB.dita#JOB"/> | <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/> | <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/> | <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/> | <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/> | <xref href="Orlando_entry_xsd_Element_SEPARATION.dita#SEPARATION"/> | <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/> | <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/>, <xref href="Orlando_entry_xsd_Element_DATE.dita#DATE"/>, <xref href="Orlando_entry_xsd_Element_JOB.dita#JOB"/>, <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>, <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>, <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>, <xref href="Orlando_entry_xsd_Element_SEPARATION.dita#SEPARATION"/>, <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>, <xref href="Orlando_entry_xsd_Element_TITLE.dita#TITLE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;DIVORCE&gt;
+  &lt;BIBCITS ID=""&gt;{1,1}&lt;/BIBCITS&gt;
+  &lt;DATE annotationId="" CALENDAR="NEWSTYLE" CERTAINTY="CERT" ID="" offsetId="" VALUE=""&gt;{1,1}&lt;/DATE&gt;
+  &lt;JOB CURRENTALTERNATIVETERM="" FAMILYBUSINESS="" HISTORICALTERM="" HISTORICALTERMCONTEXTDATE="" ID="" REG=""&gt;{1,1}&lt;/JOB&gt;
+  &lt;NAME annotationId="" offsetId="" REF="" STANDARD=""&gt;{1,1}&lt;/NAME&gt;
+  &lt;ORGNAME annotationId="" offsetId="" ORGTYPE="" REF="" REG="" STANDARD=""&gt;{1,1}&lt;/ORGNAME&gt;
+  &lt;PLACE annotationId="" ID="" LAT="" LONG="" offsetId="" REF="" REG=""&gt;{1,1}&lt;/PLACE&gt;
+  &lt;QUOTE DIRECT="Y" ID="" LAYOUT="INLINE"&gt;{1,1}&lt;/QUOTE&gt;
+  &lt;SEPARATION&gt;{1,1}&lt;/SEPARATION&gt;
+  &lt;SOCALLED&gt;{1,1}&lt;/SOCALLED&gt;
+  &lt;TITLE annotationId="" offsetId="" REF="" REG="" REND="" TITLETYPE=""&gt;{1,1}&lt;/TITLE&gt;
+&lt;/DIVORCE&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="DIVORCE"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;The divorce element is used to indicate that a woman was divorced from her husband. Use separation when she was separated but did not divorce him. Appearance of the divorce element in a biography document will signify that the subject of the biography was divorced.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType mixed="true"&gt;
+    &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+      &lt;xs:element ref="BIBCITS"/&gt;
+      &lt;xs:element ref="DATE"/&gt;
+      &lt;xs:element ref="JOB"/&gt;
+      &lt;xs:element ref="NAME"/&gt;
+      &lt;xs:element ref="ORGNAME"/&gt;
+      &lt;xs:element ref="PLACE"/&gt;
+      &lt;xs:element ref="QUOTE"/&gt;
+      &lt;xs:element ref="SEPARATION"/&gt;
+      &lt;xs:element ref="SOCALLED"/&gt;
+      &lt;xs:element ref="TITLE"/&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

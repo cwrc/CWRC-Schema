@@ -1,0 +1,1157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="SCHOOL">
+   <title>Element SCHOOL</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">This
+content sub-element can record either the specific name or a description of an
+institution and includes numerous attributes to identify the gender, class, level,
+type of school attended.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_SCHOOL">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_SCHOOL.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>160,40,352,82</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#SCHOOL_INSTITUTION"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>160,135,352,177</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#SCHOOL_INSTITUTIONLEVEL"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>160,230,218,254</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#SCHOOL_REG"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>160,320,364,380</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#SCHOOL_RELIGIOUS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>160,433,352,475</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#SCHOOL_STUDENTBODY"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>217,535,287,559</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>217,569,318,593</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_INSTRUCTOR.dita#INSTRUCTOR"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>217,659,279,683</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>217,693,303,717</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>217,783,282,807</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>217,817,287,841</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>217,894,334,918</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>217,971,283,995</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#SCHOOL"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>217,1061,305,1085</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>217,1151,292,1175</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_SUBJECT.dita#SUBJECT"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>mixed: </entry>
+                                    <entry>
+                                       <b>true</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Elements </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_AWARD.dita#AWARD"/>, <xref href="Orlando_entry_xsd_Element_CHRONPROSE.dita#CHRONPROSE"/>, <xref href="Orlando_entry_xsd_Element_CONTESTEDBEHAVIOUR.dita#CONTESTEDBEHAVIOUR"/>, <xref href="Orlando_entry_xsd_Element_DATESTRUCT.dita#DATESTRUCT"/>, <xref href="Orlando_entry_xsd_Element_DEGREE.dita#DEGREE"/>, <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>, <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>, <xref href="Orlando_entry_xsd_Element_P.dita#P"/>, <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>, <xref href="#SCHOOL"/>, <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/> | <xref href="Orlando_entry_xsd_Element_INSTRUCTOR.dita#INSTRUCTOR"/> | <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/> | <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/> | <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/> | <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="#SCHOOL"/> | <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/> | <xref href="Orlando_entry_xsd_Element_SUBJECT.dita#SUBJECT"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_BIBCITS.dita#BIBCITS"/>, <xref href="Orlando_entry_xsd_Element_INSTRUCTOR.dita#INSTRUCTOR"/>, <xref href="Orlando_entry_xsd_Element_NAME.dita#NAME"/>, <xref href="Orlando_entry_xsd_Element_ORGNAME.dita#ORGNAME"/>, <xref href="Orlando_entry_xsd_Element_PLACE.dita#PLACE"/>, <xref href="Orlando_entry_xsd_Element_QUOTE.dita#QUOTE"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="#SCHOOL"/>, <xref href="Orlando_entry_xsd_Element_SOCALLED.dita#SOCALLED"/>, <xref href="Orlando_entry_xsd_Element_SUBJECT.dita#SUBJECT"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;SCHOOL INSTITUTION="" INSTITUTIONLEVEL="" REG="" RELIGIOUS="RELIGIOUSYES" STUDENTBODY=""&gt;
+  &lt;BIBCITS ID=""&gt;{1,1}&lt;/BIBCITS&gt;
+  &lt;INSTRUCTOR&gt;{1,1}&lt;/INSTRUCTOR&gt;
+  &lt;NAME annotationId="" offsetId="" REF="" STANDARD=""&gt;{1,1}&lt;/NAME&gt;
+  &lt;ORGNAME annotationId="" offsetId="" ORGTYPE="" REF="" REG="" STANDARD=""&gt;{1,1}&lt;/ORGNAME&gt;
+  &lt;PLACE annotationId="" ID="" LAT="" LONG="" offsetId="" REF="" REG=""&gt;{1,1}&lt;/PLACE&gt;
+  &lt;QUOTE DIRECT="Y" ID="" LAYOUT="INLINE"&gt;{1,1}&lt;/QUOTE&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;SCHOOL INSTITUTION="" INSTITUTIONLEVEL="" REG="" RELIGIOUS="RELIGIOUSYES" STUDENTBODY=""&gt;{1,1}&lt;/SCHOOL&gt;
+  &lt;SOCALLED&gt;{1,1}&lt;/SOCALLED&gt;
+  &lt;SUBJECT REG=""&gt;{1,1}&lt;/SUBJECT&gt;
+&lt;/SCHOOL&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="4">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="2*"/>
+                              <colspec colnum="4" colname="col4" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Default</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#SCHOOL_INSTITUTION"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">This optional attribute attached to school records the significant
+differences between types of institutions. We are interested in the effect
+of institutional structures on women's lives and hope to capture, for
+example, how institutional differences between trade schools and boarding
+schools influenced women. Because of the complicated range of educational
+insitutions, this attribute has numerous values.</codeblock>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#SCHOOL_INSTITUTIONLEVEL"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">This optional attribute attached to school allows us to gather information
+about the level of educational status achieved by a person. We are
+interested in how many women writers went to university, how many had access
+to primary education but not secondary, and the difference institutional
+levels of women's education across historical
+periods.</codeblock>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#SCHOOL_REG"/>
+                                    </entry>
+                                    <entry/>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">Reg (or regularization) contains a reading which has been regularized or
+normalized in some sense.</codeblock>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#SCHOOL_RELIGIOUS"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry>RELIGIOUSYES</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">This optional attribute attached to school registers whether or not the
+school attended was a religious school and tracks the changing historical
+significance of organized religion to women's
+education.</codeblock>
+                                    </entry>
+                                 </row>
+                                 <row>
+                                    <entry>
+                                       <xref href="#SCHOOL_STUDENTBODY"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry/>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col4">
+                                       <codeblock outputclass="language-xml">This optional attribute attached to school records whether or not the
+school is a single sex school. This attribute helps us to interpret the
+influence of single sex education on women writers across historical
+periods.</codeblock>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="SCHOOL"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;This content sub-element can record either the specific name or a description of an institution and includes numerous attributes to identify the gender, class, level, type of school attended.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType mixed="true"&gt;
+    &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+      &lt;xs:element ref="BIBCITS"/&gt;
+      &lt;xs:element ref="INSTRUCTOR"/&gt;
+      &lt;xs:element ref="NAME"/&gt;
+      &lt;xs:element ref="ORGNAME"/&gt;
+      &lt;xs:element ref="PLACE"/&gt;
+      &lt;xs:element ref="QUOTE"/&gt;
+      &lt;xs:element ref="RESEARCHNOTE"/&gt;
+      &lt;xs:element ref="SCHOOL"/&gt;
+      &lt;xs:element ref="SOCALLED"/&gt;
+      &lt;xs:element ref="SUBJECT"/&gt;
+    &lt;/xs:choice&gt;
+    &lt;xs:attribute name="INSTITUTION"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;This optional attribute attached to school records the significant differences between types of institutions. We are interested in the effect of institutional structures on women's lives and hope to capture, for example, how institutional differences between trade schools and boarding schools influenced women. Because of the complicated range of educational insitutions, this attribute has numerous values.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="BOARDING"&gt;
+            &lt;xs:annotation&gt;
+              &lt;xs:documentation&gt;boarding: a boarding school is a school at which the students sleep. Common in the fee-paying system, less common in the state or free system, though in some areas like the Highlands and Islands of Scotland boarding schools are (or maybe were) standard at secondary level because of far-flung nature of terrain. Often weekly boarding (home for weekends) rather than for whole term. You can call them boarding schools even if they take some day pupils as well.&lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+          &lt;/xs:enumeration&gt;
+          &lt;xs:enumeration value="GRAMMAR"&gt;
+            &lt;xs:annotation&gt;
+              &lt;xs:documentation&gt;grammar: Grammar schools date back to the middle ages; grammar in title means education in Latin (occasionally Greek as well). They were for boys only, though some took a few girls almost without noticing. Grammar schools for girls began in the nineteenth century; academic education was thought of as needing single-sex environment. Entrance exam from 19?? was exam called the "Eleven Plus" from age at which children sat it. Grammar schools creamed off the top 10% or so of the population. They gradually died out after Comprehensive Schools were set up by act of 19??. Presently making a come-back.&lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+          &lt;/xs:enumeration&gt;
+          &lt;xs:enumeration value="PRIVATE"&gt;
+            &lt;xs:annotation&gt;
+              &lt;xs:documentation&gt;private: The broad category private (or fee-paying) includes the subcategory of public schools which are a particular group of high-status, now private schools with a particular history.&lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+          &lt;/xs:enumeration&gt;
+          &lt;xs:enumeration value="STATE"&gt;
+            &lt;xs:annotation&gt;
+              &lt;xs:documentation&gt;state: Schools provided for out of the taxes for free education are called state schools.&lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+          &lt;/xs:enumeration&gt;
+          &lt;xs:enumeration value="DAMESCHOOL"&gt;
+            &lt;xs:annotation&gt;
+              &lt;xs:documentation&gt;dameSchool: A totally informal school run by a woman on her own initiative, usually at a primary level: teaching elementary alphabet, etc. Dr. Johnson went to one.&lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+          &lt;/xs:enumeration&gt;
+          &lt;xs:enumeration value="DAYSCHOOL"&gt;
+            &lt;xs:annotation&gt;
+              &lt;xs:documentation&gt;day school: a day school applies in contexts where boarding schools are common. Attending a day school is different from being a day pupil at a boarding school.&lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+          &lt;/xs:enumeration&gt;
+          &lt;xs:enumeration value="COMPREHENSIVE"&gt;
+            &lt;xs:annotation&gt;
+              &lt;xs:documentation&gt;comprehensive: Brave new idea of putting whole ability range in same (therefore typically larger) school. In many communities the grammar school and the secondary modern were each converted into a comprehensive and the teachers had to spend a decade convincing the local residents that the one that used to be the secondary modern was now as good as the one that used to be the grammar school.&lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+          &lt;/xs:enumeration&gt;
+          &lt;xs:enumeration value="SECONDARYMODERN"&gt;
+            &lt;xs:annotation&gt;
+              &lt;xs:documentation&gt;secondaryModern: These replaced trade or vocational schools when another Education Act went through, as the schools for those who failed the 11+ exam. A well-meant system but children felt rejected. Harrowing tales of those who actually made it to university in the end despite having failed the 11+ and attended a Secondary Modern.&lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+          &lt;/xs:enumeration&gt;
+          &lt;xs:enumeration value="TRADESCHOOL"&gt;
+            &lt;xs:annotation&gt;
+              &lt;xs:documentation&gt;tradeSchool: A secondary or post secondary institution where people learn a trade.&lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+          &lt;/xs:enumeration&gt;
+          &lt;xs:enumeration value="PREP"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="INSTITUTIONLEVEL"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;This optional attribute attached to school allows us to gather information about the level of educational status achieved by a person. We are interested in how many women writers went to university, how many had access to primary education but not secondary, and the difference institutional levels of women's education across historical periods.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="PRIMARY"/&gt;
+          &lt;xs:enumeration value="SECONDARY"/&gt;
+          &lt;xs:enumeration value="POST-SECONDARY"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="REG"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Reg (or regularization) contains a reading which has been regularized or normalized in some sense.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="RELIGIOUS" default="RELIGIOUSYES"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;This optional attribute attached to school registers whether or not the school attended was a religious school and tracks the changing historical significance of organized religion to women's education.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="RELIGIOUSYES"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+    &lt;xs:attribute name="STUDENTBODY"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;This optional attribute attached to school records whether or not the school is a single sex school. This attribute helps us to interpret the influence of single sex education on women writers across historical periods.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="SINGLESEX"/&gt;
+          &lt;xs:enumeration value="CO-ED"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="SCHOOL_INSTITUTION">
+      <title>Attribute SCHOOL / @INSTITUTION</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">This optional attribute attached to school records the significant
+differences between types of institutions. We are interested in the effect
+of institutional structures on women's lives and hope to capture, for
+example, how institutional differences between trade schools and boarding
+schools influenced women. Because of the complicated range of educational
+insitutions, this attribute has numerous values.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>BOARDING</entry>
+                                       <entry>
+                                          <codeblock outputclass="language-xml">boarding:
+a boarding school is a school at which the students sleep. Common in the
+fee-paying system, less common in the state or free system, though in
+some areas like the Highlands and Islands of Scotland boarding schools
+are (or maybe were) standard at secondary level because of far-flung
+nature of terrain. Often weekly boarding (home for weekends) rather than
+for whole term. You can call them boarding schools even if they take
+some day pupils as well.</codeblock>
+                                       </entry>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>GRAMMAR</entry>
+                                       <entry>
+                                          <codeblock outputclass="language-xml">grammar:
+Grammar schools date back to the middle ages; grammar in title means
+education in Latin (occasionally Greek as well). They were for boys
+only, though some took a few girls almost without noticing. Grammar
+schools for girls began in the nineteenth century; academic education
+was thought of as needing single-sex environment. Entrance exam from
+19?? was exam called the "Eleven Plus" from age at which children sat
+it. Grammar schools creamed off the top 10% or so of the population.
+They gradually died out after Comprehensive Schools were set up by act
+of 19??. Presently making a come-back.</codeblock>
+                                       </entry>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PRIVATE</entry>
+                                       <entry>
+                                          <codeblock outputclass="language-xml">private:
+The broad category private (or fee-paying) includes the subcategory of
+public schools which are a particular group of high-status, now private
+schools with a particular history.</codeblock>
+                                       </entry>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>STATE</entry>
+                                       <entry>
+                                          <codeblock outputclass="language-xml">state:
+Schools provided for out of the taxes for free education are called
+state schools.</codeblock>
+                                       </entry>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DAMESCHOOL</entry>
+                                       <entry>
+                                          <codeblock outputclass="language-xml">dameSchool: A totally informal school run by a woman on her own
+initiative, usually at a primary level: teaching elementary alphabet,
+etc. Dr. Johnson went to one.</codeblock>
+                                       </entry>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>DAYSCHOOL</entry>
+                                       <entry>
+                                          <codeblock outputclass="language-xml">day
+school: a day school applies in contexts where boarding schools are
+common. Attending a day school is different from being a day pupil at a
+boarding school.</codeblock>
+                                       </entry>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>COMPREHENSIVE</entry>
+                                       <entry>
+                                          <codeblock outputclass="language-xml">comprehensive: Brave new idea of putting whole ability range in same
+(therefore typically larger) school. In many communities the grammar
+school and the secondary modern were each converted into a comprehensive
+and the teachers had to spend a decade convincing the local residents
+that the one that used to be the secondary modern was now as good as the
+one that used to be the grammar school.</codeblock>
+                                       </entry>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SECONDARYMODERN</entry>
+                                       <entry>
+                                          <codeblock outputclass="language-xml">secondaryModern: These replaced trade or vocational schools when
+another Education Act went through, as the schools for those who failed
+the 11+ exam. A well-meant system but children felt rejected. Harrowing
+tales of those who actually made it to university in the end despite
+having failed the 11+ and attended a Secondary Modern.</codeblock>
+                                       </entry>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>TRADESCHOOL</entry>
+                                       <entry>
+                                          <codeblock outputclass="language-xml">tradeSchool: A secondary or post secondary institution where people
+learn a trade.</codeblock>
+                                       </entry>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PREP</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#SCHOOL"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="INSTITUTION"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;This optional attribute attached to school records the significant differences between types of institutions. We are interested in the effect of institutional structures on women's lives and hope to capture, for example, how institutional differences between trade schools and boarding schools influenced women. Because of the complicated range of educational insitutions, this attribute has numerous values.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="BOARDING"&gt;
+        &lt;xs:annotation&gt;
+          &lt;xs:documentation&gt;boarding: a boarding school is a school at which the students sleep. Common in the fee-paying system, less common in the state or free system, though in some areas like the Highlands and Islands of Scotland boarding schools are (or maybe were) standard at secondary level because of far-flung nature of terrain. Often weekly boarding (home for weekends) rather than for whole term. You can call them boarding schools even if they take some day pupils as well.&lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+      &lt;/xs:enumeration&gt;
+      &lt;xs:enumeration value="GRAMMAR"&gt;
+        &lt;xs:annotation&gt;
+          &lt;xs:documentation&gt;grammar: Grammar schools date back to the middle ages; grammar in title means education in Latin (occasionally Greek as well). They were for boys only, though some took a few girls almost without noticing. Grammar schools for girls began in the nineteenth century; academic education was thought of as needing single-sex environment. Entrance exam from 19?? was exam called the "Eleven Plus" from age at which children sat it. Grammar schools creamed off the top 10% or so of the population. They gradually died out after Comprehensive Schools were set up by act of 19??. Presently making a come-back.&lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+      &lt;/xs:enumeration&gt;
+      &lt;xs:enumeration value="PRIVATE"&gt;
+        &lt;xs:annotation&gt;
+          &lt;xs:documentation&gt;private: The broad category private (or fee-paying) includes the subcategory of public schools which are a particular group of high-status, now private schools with a particular history.&lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+      &lt;/xs:enumeration&gt;
+      &lt;xs:enumeration value="STATE"&gt;
+        &lt;xs:annotation&gt;
+          &lt;xs:documentation&gt;state: Schools provided for out of the taxes for free education are called state schools.&lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+      &lt;/xs:enumeration&gt;
+      &lt;xs:enumeration value="DAMESCHOOL"&gt;
+        &lt;xs:annotation&gt;
+          &lt;xs:documentation&gt;dameSchool: A totally informal school run by a woman on her own initiative, usually at a primary level: teaching elementary alphabet, etc. Dr. Johnson went to one.&lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+      &lt;/xs:enumeration&gt;
+      &lt;xs:enumeration value="DAYSCHOOL"&gt;
+        &lt;xs:annotation&gt;
+          &lt;xs:documentation&gt;day school: a day school applies in contexts where boarding schools are common. Attending a day school is different from being a day pupil at a boarding school.&lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+      &lt;/xs:enumeration&gt;
+      &lt;xs:enumeration value="COMPREHENSIVE"&gt;
+        &lt;xs:annotation&gt;
+          &lt;xs:documentation&gt;comprehensive: Brave new idea of putting whole ability range in same (therefore typically larger) school. In many communities the grammar school and the secondary modern were each converted into a comprehensive and the teachers had to spend a decade convincing the local residents that the one that used to be the secondary modern was now as good as the one that used to be the grammar school.&lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+      &lt;/xs:enumeration&gt;
+      &lt;xs:enumeration value="SECONDARYMODERN"&gt;
+        &lt;xs:annotation&gt;
+          &lt;xs:documentation&gt;secondaryModern: These replaced trade or vocational schools when another Education Act went through, as the schools for those who failed the 11+ exam. A well-meant system but children felt rejected. Harrowing tales of those who actually made it to university in the end despite having failed the 11+ and attended a Secondary Modern.&lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+      &lt;/xs:enumeration&gt;
+      &lt;xs:enumeration value="TRADESCHOOL"&gt;
+        &lt;xs:annotation&gt;
+          &lt;xs:documentation&gt;tradeSchool: A secondary or post secondary institution where people learn a trade.&lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+      &lt;/xs:enumeration&gt;
+      &lt;xs:enumeration value="PREP"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="SCHOOL_INSTITUTIONLEVEL">
+      <title>Attribute SCHOOL / @INSTITUTIONLEVEL</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">This optional attribute attached to school allows us to gather information
+about the level of educational status achieved by a person. We are
+interested in how many women writers went to university, how many had access
+to primary education but not secondary, and the difference institutional
+levels of women's education across historical
+periods.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PRIMARY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SECONDARY</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>POST-SECONDARY</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#SCHOOL"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="INSTITUTIONLEVEL"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;This optional attribute attached to school allows us to gather information about the level of educational status achieved by a person. We are interested in how many women writers went to university, how many had access to primary education but not secondary, and the difference institutional levels of women's education across historical periods.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="PRIMARY"/&gt;
+      &lt;xs:enumeration value="SECONDARY"/&gt;
+      &lt;xs:enumeration value="POST-SECONDARY"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="SCHOOL_REG">
+      <title>Attribute SCHOOL / @REG</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Reg (or regularization) contains a reading which has been regularized or
+normalized in some sense.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#SCHOOL"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="REG"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Reg (or regularization) contains a reading which has been regularized or normalized in some sense.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="SCHOOL_RELIGIOUS">
+      <title>Attribute SCHOOL / @RELIGIOUS</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">This optional attribute attached to school registers whether or not the
+school attended was a religious school and tracks the changing historical
+significance of organized religion to women's
+education.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>default: </entry>
+                                       <entry>
+                                          <b>RELIGIOUSYES</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>RELIGIOUSYES</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#SCHOOL"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="RELIGIOUS" default="RELIGIOUSYES"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;This optional attribute attached to school registers whether or not the school attended was a religious school and tracks the changing historical significance of organized religion to women's education.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="RELIGIOUSYES"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="SCHOOL_STUDENTBODY">
+      <title>Attribute SCHOOL / @STUDENTBODY</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">This optional attribute attached to school records whether or not the
+school is a single sex school. This attribute helps us to interpret the
+influence of single sex education on women writers across historical
+periods.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>SINGLESEX</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>CO-ED</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#SCHOOL"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="STUDENTBODY"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;This optional attribute attached to school records whether or not the school is a single sex school. This attribute helps us to interpret the influence of single sex education on women writers across historical periods.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="SINGLESEX"/&gt;
+      &lt;xs:enumeration value="CO-ED"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

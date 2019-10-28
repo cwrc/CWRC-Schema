@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="BIOGRAPHY">
+   <title>Element BIOGRAPHY</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">Biography
+is the large, all-encompassing element in all biography documents.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_BIOGRAPHY">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_BIOGRAPHY.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>176,40,303,82</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIOGRAPHY_ID"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>233,99,313,123</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>233,189,350,213</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>233,266,289,290</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#BIOGRAPHY_DIV1"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>233,356,334,380</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_WORKSCITED.dita#WORKSCITED"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_DIV0.dita#DIV0"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="#BIOGRAPHY_DIV1"/> | <xref href="Orlando_entry_xsd_Element_WORKSCITED.dita#WORKSCITED"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="#BIOGRAPHY_DIV1"/>, <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="Orlando_entry_xsd_Element_WORKSCITED.dita#WORKSCITED"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;BIOGRAPHY ID=""&gt;
+  &lt;HEADING&gt;{1,1}&lt;/HEADING&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;DIV1&gt;{1,1}&lt;/DIV1&gt;
+  &lt;WORKSCITED&gt;{1,1}&lt;/WORKSCITED&gt;
+&lt;/BIOGRAPHY&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="3">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#BIOGRAPHY_ID"/>
+                                    </entry>
+                                    <entry>xs:NCName</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="BIOGRAPHY"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Biography is the large, all-encompassing element in all biography documents.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:choice maxOccurs="unbounded"&gt;
+      &lt;xs:element ref="HEADING"/&gt;
+      &lt;xs:element ref="RESEARCHNOTE"/&gt;
+      &lt;xs:element name="DIV1"&gt;
+        &lt;xs:annotation&gt;
+          &lt;xs:documentation&gt;Div1 (i.e. level-1 text division) is an element that marks the second largest structural division in a document.&lt;/xs:documentation&gt;
+        &lt;/xs:annotation&gt;
+        &lt;xs:complexType&gt;
+          &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+            &lt;xs:element ref="HEADING"/&gt;
+            &lt;xs:element ref="KEYWORDCLASS"/&gt;
+            &lt;xs:element ref="RESEARCHNOTE"/&gt;
+            &lt;xs:element ref="BIRTH"/&gt;
+            &lt;xs:element ref="DEATH"/&gt;
+            &lt;xs:element ref="EDUCATION"/&gt;
+            &lt;xs:element ref="FAMILY"/&gt;
+            &lt;xs:element ref="INTIMATERELATIONSHIPS"/&gt;
+            &lt;xs:element ref="LOCATION"/&gt;
+            &lt;xs:element ref="OCCUPATION"/&gt;
+            &lt;xs:element ref="PERSONNAME"/&gt;
+            &lt;xs:element ref="POLITICS"/&gt;
+            &lt;xs:element ref="CULTURALFORMATION"/&gt;
+            &lt;xs:element ref="FRIENDSASSOCIATES"/&gt;
+            &lt;xs:element ref="LEISUREANDSOCIETY"/&gt;
+            &lt;xs:element ref="OTHERLIFEEVENT"/&gt;
+            &lt;xs:element ref="VIOLENCE"/&gt;
+            &lt;xs:element ref="WEALTH"/&gt;
+            &lt;xs:element ref="HEALTH"/&gt;
+          &lt;/xs:choice&gt;
+        &lt;/xs:complexType&gt;
+      &lt;/xs:element&gt;
+      &lt;xs:element ref="WORKSCITED"/&gt;
+    &lt;/xs:choice&gt;
+    &lt;xs:attribute name="ID" type="xs:NCName"/&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="BIOGRAPHY_DIV1">
+      <title>Element BIOGRAPHY / DIV1</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Div1 (i.e.
+level-1 text division) is an element that marks the second largest
+structural division in a document.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Diagram</entry>
+                     <entry>
+                        <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_DIV1">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_DIV1.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,2,276,26</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,92,314,116</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,126,313,150</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,203,258,227</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_BIRTH.dita#BIRTH"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,293,264,317</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DEATH.dita#DEATH"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,383,292,407</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_EDUCATION.dita#EDUCATION"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,473,266,497</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_FAMILY.dita#FAMILY"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,563,361,587</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_INTIMATERELATIONSHIPS.dita#INTIMATERELATIONSHIPS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,640,285,664</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_LOCATION.dita#LOCATION"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,730,301,754</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_OCCUPATION.dita#OCCUPATION"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,820,300,844</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_PERSONNAME.dita#PERSONNAME"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,910,275,934</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_POLITICS.dita#POLITICS"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,1000,351,1024</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_CULTURALFORMATION.dita#CULTURALFORMATION"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,1077,338,1101</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_FRIENDSASSOCIATES.dita#FRIENDSASSOCIATES"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,1154,339,1178</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_LEISUREANDSOCIETY.dita#LEISUREANDSOCIETY"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,1231,319,1255</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_OTHERLIFEEVENT.dita#OTHERLIFEEVENT"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,1308,280,1332</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_VIOLENCE.dita#VIOLENCE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,1398,271,1422</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_WEALTH.dita#WEALTH"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>196,1488,270,1512</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_HEALTH.dita#HEALTH"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>complex</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Model</entry>
+                     <entry>
+                        <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/> | <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/> | <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> | <xref href="Orlando_entry_xsd_Element_BIRTH.dita#BIRTH"/> | <xref href="Orlando_entry_xsd_Element_DEATH.dita#DEATH"/> | <xref href="Orlando_entry_xsd_Element_EDUCATION.dita#EDUCATION"/> | <xref href="Orlando_entry_xsd_Element_FAMILY.dita#FAMILY"/> | <xref href="Orlando_entry_xsd_Element_INTIMATERELATIONSHIPS.dita#INTIMATERELATIONSHIPS"/> | <xref href="Orlando_entry_xsd_Element_LOCATION.dita#LOCATION"/> | <xref href="Orlando_entry_xsd_Element_OCCUPATION.dita#OCCUPATION"/> | <xref href="Orlando_entry_xsd_Element_PERSONNAME.dita#PERSONNAME"/> | <xref href="Orlando_entry_xsd_Element_POLITICS.dita#POLITICS"/> | <xref href="Orlando_entry_xsd_Element_CULTURALFORMATION.dita#CULTURALFORMATION"/> | <xref href="Orlando_entry_xsd_Element_FRIENDSASSOCIATES.dita#FRIENDSASSOCIATES"/> | <xref href="Orlando_entry_xsd_Element_LEISUREANDSOCIETY.dita#LEISUREANDSOCIETY"/> | <xref href="Orlando_entry_xsd_Element_OTHERLIFEEVENT.dita#OTHERLIFEEVENT"/> | <xref href="Orlando_entry_xsd_Element_VIOLENCE.dita#VIOLENCE"/> | <xref href="Orlando_entry_xsd_Element_WEALTH.dita#WEALTH"/> | <xref href="Orlando_entry_xsd_Element_HEALTH.dita#HEALTH"/>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Children</entry>
+                     <entry>
+                        <xref href="Orlando_entry_xsd_Element_BIRTH.dita#BIRTH"/>, <xref href="Orlando_entry_xsd_Element_CULTURALFORMATION.dita#CULTURALFORMATION"/>, <xref href="Orlando_entry_xsd_Element_DEATH.dita#DEATH"/>, <xref href="Orlando_entry_xsd_Element_EDUCATION.dita#EDUCATION"/>, <xref href="Orlando_entry_xsd_Element_FAMILY.dita#FAMILY"/>, <xref href="Orlando_entry_xsd_Element_FRIENDSASSOCIATES.dita#FRIENDSASSOCIATES"/>, <xref href="Orlando_entry_xsd_Element_HEADING.dita#HEADING"/>, <xref href="Orlando_entry_xsd_Element_HEALTH.dita#HEALTH"/>, <xref href="Orlando_entry_xsd_Element_INTIMATERELATIONSHIPS.dita#INTIMATERELATIONSHIPS"/>, <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/>, <xref href="Orlando_entry_xsd_Element_LEISUREANDSOCIETY.dita#LEISUREANDSOCIETY"/>, <xref href="Orlando_entry_xsd_Element_LOCATION.dita#LOCATION"/>, <xref href="Orlando_entry_xsd_Element_OCCUPATION.dita#OCCUPATION"/>, <xref href="Orlando_entry_xsd_Element_OTHERLIFEEVENT.dita#OTHERLIFEEVENT"/>, <xref href="Orlando_entry_xsd_Element_PERSONNAME.dita#PERSONNAME"/>, <xref href="Orlando_entry_xsd_Element_POLITICS.dita#POLITICS"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>, <xref href="Orlando_entry_xsd_Element_VIOLENCE.dita#VIOLENCE"/>, <xref href="Orlando_entry_xsd_Element_WEALTH.dita#WEALTH"/>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Instance</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;DIV1&gt;
+  &lt;HEADING&gt;{1,1}&lt;/HEADING&gt;
+  &lt;KEYWORDCLASS annotationId="" KEYWORDTYPE="" offsetId=""&gt;{1,1}&lt;/KEYWORDCLASS&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{1,1}&lt;/RESEARCHNOTE&gt;
+  &lt;BIRTH&gt;{1,1}&lt;/BIRTH&gt;
+  &lt;DEATH&gt;{1,1}&lt;/DEATH&gt;
+  &lt;EDUCATION MODE=""&gt;{1,1}&lt;/EDUCATION&gt;
+  &lt;FAMILY ID=""&gt;{1,1}&lt;/FAMILY&gt;
+  &lt;INTIMATERELATIONSHIPS EROTIC=""&gt;{1,1}&lt;/INTIMATERELATIONSHIPS&gt;
+  &lt;LOCATION RELATIONTO=""&gt;{1,1}&lt;/LOCATION&gt;
+  &lt;OCCUPATION&gt;{1,1}&lt;/OCCUPATION&gt;
+  &lt;PERSONNAME&gt;{1,1}&lt;/PERSONNAME&gt;
+  &lt;POLITICS&gt;{1,1}&lt;/POLITICS&gt;
+  &lt;CULTURALFORMATION&gt;{1,1}&lt;/CULTURALFORMATION&gt;
+  &lt;FRIENDSASSOCIATES&gt;{1,1}&lt;/FRIENDSASSOCIATES&gt;
+  &lt;LEISUREANDSOCIETY&gt;{1,1}&lt;/LEISUREANDSOCIETY&gt;
+  &lt;OTHERLIFEEVENT&gt;{1,1}&lt;/OTHERLIFEEVENT&gt;
+  &lt;VIOLENCE&gt;{1,1}&lt;/VIOLENCE&gt;
+  &lt;WEALTH&gt;{1,1}&lt;/WEALTH&gt;
+  &lt;HEALTH ISSUE=""&gt;{1,1}&lt;/HEALTH&gt;
+&lt;/DIV1&gt;</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:element name="DIV1"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Div1 (i.e. level-1 text division) is an element that marks the second largest structural division in a document.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+      &lt;xs:element ref="HEADING"/&gt;
+      &lt;xs:element ref="KEYWORDCLASS"/&gt;
+      &lt;xs:element ref="RESEARCHNOTE"/&gt;
+      &lt;xs:element ref="BIRTH"/&gt;
+      &lt;xs:element ref="DEATH"/&gt;
+      &lt;xs:element ref="EDUCATION"/&gt;
+      &lt;xs:element ref="FAMILY"/&gt;
+      &lt;xs:element ref="INTIMATERELATIONSHIPS"/&gt;
+      &lt;xs:element ref="LOCATION"/&gt;
+      &lt;xs:element ref="OCCUPATION"/&gt;
+      &lt;xs:element ref="PERSONNAME"/&gt;
+      &lt;xs:element ref="POLITICS"/&gt;
+      &lt;xs:element ref="CULTURALFORMATION"/&gt;
+      &lt;xs:element ref="FRIENDSASSOCIATES"/&gt;
+      &lt;xs:element ref="LEISUREANDSOCIETY"/&gt;
+      &lt;xs:element ref="OTHERLIFEEVENT"/&gt;
+      &lt;xs:element ref="VIOLENCE"/&gt;
+      &lt;xs:element ref="WEALTH"/&gt;
+      &lt;xs:element ref="HEALTH"/&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+   <topic id="BIOGRAPHY_ID">
+      <title>Attribute BIOGRAPHY / @ID</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>xs:NCName</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#BIOGRAPHY"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="ID" type="xs:NCName"/&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

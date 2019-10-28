@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="POLITICS">
+   <title>Element POLITICS</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">Politics is one of the 16 major biography elements defined
+as integral to mapping a woman's life. This content
+element captures all information concerning a person's
+political life. Women's involvement in political
+activities and organizations is a central critical concern
+in our literary history; we are interested in both how
+political awareness influenced women's writing and how
+writing influenced feminist political activity. Given the
+high priority we attach to political involvement, wherever
+possible include information concerning her political life,
+however minimal.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_POLITICS">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_POLITICS.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,2,336,26</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>290,79,404,103</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>290,169,346,193</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>219,259,337,283</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_BIOGRAPHY.dita#BIOGRAPHY_DIV1"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> , (<xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/> | <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>) , <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/>, <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>, <xref href="Orlando_entry_xsd_Element_KEYWORDCLASS.dita#KEYWORDCLASS"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;POLITICS&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{0,1}&lt;/RESEARCHNOTE&gt;
+  &lt;CHRONSTRUCT CHRONCOLUMN="" CHRONCOLUMN1="" CHRONCOLUMN2="" CHRONCOLUMN3="" RELEVANCE="" RELEVANCE1="" RELEVANCE2="" RELEVANCE3="" RESP=""&gt;{1,1}&lt;/CHRONSTRUCT&gt;
+  &lt;DIV2 ID=""&gt;{1,1}&lt;/DIV2&gt;
+  &lt;KEYWORDCLASS annotationId="" KEYWORDTYPE="" offsetId=""&gt;{0,unbounded}&lt;/KEYWORDCLASS&gt;
+&lt;/POLITICS&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="POLITICS"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Politics is one of the 16 major biography elements defined as integral to mapping a woman's life. This content element captures all information concerning a person's political life. Women's involvement in political activities and organizations is a central critical concern in our literary history; we are interested in both how political awareness influenced women's writing and how writing influenced feminist political activity. Given the high priority we attach to political involvement, wherever possible include information concerning her political life, however minimal.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element minOccurs="0" ref="RESEARCHNOTE"/&gt;
+      &lt;xs:choice maxOccurs="unbounded"&gt;
+        &lt;xs:element ref="CHRONSTRUCT"/&gt;
+        &lt;xs:element ref="DIV2"/&gt;
+      &lt;/xs:choice&gt;
+      &lt;xs:element minOccurs="0" maxOccurs="unbounded" ref="KEYWORDCLASS"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="RACEANDETHNICITY">
+   <title>Element RACEANDETHNICITY</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">RaceAndEthnicity is a significant sub-element
+within culturalFormation. It captures information
+and discussions of a person's subject
+position with regards to race and ethnicity by
+working in conjunction with subject specific
+sub-elements (raceColour, nationalHeritage,
+geogHeritage, ethnicity). The following discussion
+applies to both the general discursive discussion
+of raceAndEthnicity as well as the specific
+sub-element categories. Despite the anxieties of
+the ways in which categories of race or ethnicity
+circulate and serve various kinds of undesirable
+interests, to ignore or go the totally free-text
+route is not a responsible solution for this
+project, though it would certainly be easier and
+simpler. The trick here is to make the
+complexities of the question of race and ethnicity
+emerge, and to make it clear that these are
+shifting, historically constituted, and
+interestedly deployed categories whose use must be
+understood contextually. The discursiveness with
+which we will present these categories will,
+hopefully, help to do this and also allay the
+anxiety we feel about "labelling" in a
+vacuum. In other words, the project has no notion
+that we could or should come up with what is in
+any way an exact, fully defined, or mutually
+exclusive set of categories: the point is the
+overlap within them. Within this system, counting
+per se becomes highly problematic and the user has
+to do some work (and some thinking/active
+defining) before arriving at any kind of list or
+count, and will hopefully arrive at it with a
+sense of how problematic such an activity is. We
+want, as we go, to build carefully sets of
+associations for either the thesaurus or a
+specialized search function, gradually building a
+set of lists, eventually with fleshed-out
+definitions, to become glossary items attached to
+the terms that are hard to understand. People
+tagging will use what terms seem to them to be
+right for the context, tagging with the category
+or categories within which they seem to fit, but
+they should be encouraged not to let
+race/ethnicity become invisible or only an issue
+in relation to the marginalized. If we think it
+will look silly if there is a statement in entry
+after entry on British women writers saying that
+she was (presumably) white, I think that's an
+indication of the force of biographical
+conventions and we should not let them dictate our
+practices. And we should, as stressed by those
+concerned about "white" and
+"black" as homogenizing categories,
+encourage people to reach for specificity through
+multiplicity: i.e. generally attempt to include at
+least two of: "race/colour";
+"ethnicity"; "nationality" or
+"national-heritage." Beginning with the
+list started by the race-ethnicity subgroup, we
+have devised a structured vocabulary for these
+tags, though the lists need not be mutually
+exclusive or even internally consistent. Thus
+"Jewish" will appear in both
+"race/colour" and "ethnicity"
+tag lists, "Ukrainian" may appear in
+both "national-heritage" and
+"ethnicity" tag lists.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_RACEANDETHNICITY">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_RACEANDETHNICITY.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>260,6,316,30</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_CULTURALFORMATION.dita#CULTURALFORMATION"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;RACEANDETHNICITY&gt;
+  &lt;DIV2 ID=""&gt;{1,1}&lt;/DIV2&gt;
+&lt;/RACEANDETHNICITY&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="RACEANDETHNICITY"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;RaceAndEthnicity is a significant sub-element within culturalFormation. It captures information and discussions of a person's subject position with regards to race and ethnicity by working in conjunction with subject specific sub-elements (raceColour, nationalHeritage, geogHeritage, ethnicity). The following discussion applies to both the general discursive discussion of raceAndEthnicity as well as the specific sub-element categories. Despite the anxieties of the ways in which categories of race or ethnicity circulate and serve various kinds of undesirable interests, to ignore or go the totally free-text route is not a responsible solution for this project, though it would certainly be easier and simpler. The trick here is to make the complexities of the question of race and ethnicity emerge, and to make it clear that these are shifting, historically constituted, and interestedly deployed categories whose use must be understood contextually. The discursiveness with which we will present these categories will, hopefully, help to do this and also allay the anxiety we feel about "labelling" in a vacuum. In other words, the project has no notion that we could or should come up with what is in any way an exact, fully defined, or mutually exclusive set of categories: the point is the overlap within them. Within this system, counting per se becomes highly problematic and the user has to do some work (and some thinking/active defining) before arriving at any kind of list or count, and will hopefully arrive at it with a sense of how problematic such an activity is. We want, as we go, to build carefully sets of associations for either the thesaurus or a specialized search function, gradually building a set of lists, eventually with fleshed-out definitions, to become glossary items attached to the terms that are hard to understand. People tagging will use what terms seem to them to be right for the context, tagging with the category or categories within which they seem to fit, but they should be encouraged not to let race/ethnicity become invisible or only an issue in relation to the marginalized. If we think it will look silly if there is a statement in entry after entry on British women writers saying that she was (presumably) white, I think that's an indication of the force of biographical conventions and we should not let them dictate our practices. And we should, as stressed by those concerned about "white" and "black" as homogenizing categories, encourage people to reach for specificity through multiplicity: i.e. generally attempt to include at least two of: "race/colour"; "ethnicity"; "nationality" or "national-heritage." Beginning with the list started by the race-ethnicity subgroup, we have devised a structured vocabulary for these tags, though the lists need not be mutually exclusive or even internally consistent. Thus "Jewish" will appear in both "race/colour" and "ethnicity" tag lists, "Ukrainian" may appear in both "national-heritage" and "ethnicity" tag lists.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element ref="DIV2"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

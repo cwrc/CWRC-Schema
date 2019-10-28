@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="HEALTH">
+   <title>Element HEALTH</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">Health is one of the 16 major biography elements defined as
+integral to mapping a woman's life. Within this
+element, discuss all events and issues associated with her
+health, both mental and physical. We are particularly
+interested in women's health issues and this element
+has an associated attribute value to indicate such. We hope
+to make connections between social, political and historical
+health issues (for example, the gendered nature of mental
+health) and the personal lives of women writers (the
+experience of a woman writer being incarcerated in a mental
+institution). While we are not interested in listing all
+health problems a woman writer encountered, we are
+interested in analyzing the effect of her health on her life
+and writing.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_HEALTH">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_HEALTH.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>136,40,328,82</coords>
+                                                
+                                                
+                                                
+                                                        <xref href="#HEALTH_ISSUE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>214,142,331,166</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>285,219,399,243</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>285,309,341,333</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_BIOGRAPHY.dita#BIOGRAPHY_DIV1"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/> , (<xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/> | <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>)</entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/>, <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;HEALTH ISSUE=""&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{0,1}&lt;/RESEARCHNOTE&gt;
+  &lt;CHRONSTRUCT CHRONCOLUMN="" CHRONCOLUMN1="" CHRONCOLUMN2="" CHRONCOLUMN3="" RELEVANCE="" RELEVANCE1="" RELEVANCE2="" RELEVANCE3="" RESP=""&gt;{1,1}&lt;/CHRONSTRUCT&gt;
+  &lt;DIV2 ID=""&gt;{1,1}&lt;/DIV2&gt;
+&lt;/HEALTH&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Attributes</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="3">
+                              <colspec colnum="1" colname="col1" align="left" colwidth="3*"/>
+                              <colspec colnum="2" colname="col2" align="left" colwidth="3*"/>
+                              <colspec colnum="3" colname="col3" align="left" colwidth="1*"/>
+                              <thead>
+                                 <row>
+                                    <entry>QName</entry>
+                                    <entry>Type</entry>
+                                    <entry>Use</entry>
+                                 </row>
+                              </thead>
+                              <tbody>
+                                 <row>
+                                    <entry>
+                                       <xref href="#HEALTH_ISSUE"/>
+                                    </entry>
+                                    <entry>restriction of xs:token</entry>
+                                    <entry>optional</entry>
+                                 </row>
+                                 <row>
+                                    <entry namest="col1" nameend="col3">
+                                       <codeblock outputclass="language-xml">Issue denotes the specific type of health issue
+described within a biography section. Its attribute
+values will allow us to separate health issues
+pertaining to physical and mental health and to
+specifically female health concerns. We are
+interested in facilitating research on the gendered
+nature of women's relation to the medical
+institution, female illnesses such as breast cancer,
+and women's oppression by mental health
+institutions, to name only a few.</codeblock>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="HEALTH"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Health is one of the 16 major biography elements defined as integral to mapping a woman's life. Within this element, discuss all events and issues associated with her health, both mental and physical. We are particularly interested in women's health issues and this element has an associated attribute value to indicate such. We hope to make connections between social, political and historical health issues (for example, the gendered nature of mental health) and the personal lives of women writers (the experience of a woman writer being incarcerated in a mental institution). While we are not interested in listing all health problems a woman writer encountered, we are interested in analyzing the effect of her health on her life and writing.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:element minOccurs="0" ref="RESEARCHNOTE"/&gt;
+      &lt;xs:choice maxOccurs="unbounded"&gt;
+        &lt;xs:element ref="CHRONSTRUCT"/&gt;
+        &lt;xs:element ref="DIV2"/&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:sequence&gt;
+    &lt;xs:attribute name="ISSUE"&gt;
+      &lt;xs:annotation&gt;
+        &lt;xs:documentation&gt;Issue denotes the specific type of health issue described within a biography section. Its attribute values will allow us to separate health issues pertaining to physical and mental health and to specifically female health concerns. We are interested in facilitating research on the gendered nature of women's relation to the medical institution, female illnesses such as breast cancer, and women's oppression by mental health institutions, to name only a few.&lt;/xs:documentation&gt;
+      &lt;/xs:annotation&gt;
+      &lt;xs:simpleType&gt;
+        &lt;xs:restriction base="xs:token"&gt;
+          &lt;xs:enumeration value="PHYSICAL"/&gt;
+          &lt;xs:enumeration value="MENTAL"/&gt;
+          &lt;xs:enumeration value="FEMALEBODY"/&gt;
+        &lt;/xs:restriction&gt;
+      &lt;/xs:simpleType&gt;
+    &lt;/xs:attribute&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+   <topic id="HEALTH_ISSUE">
+      <title>Attribute HEALTH / @ISSUE</title>
+      <body>
+         <table frame="all" rowsep="1" colsep="1">
+            <tgroup cols="2">
+               <colspec colwidth="3*" align="left"/>
+               <colspec colwidth="25*" align="left"/>
+               <tbody>
+                  <row>
+                     <entry>Namespace</entry>
+                     <entry>No namespace</entry>
+                  </row>
+                  <row>
+                     <entry>Annotations</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">Issue denotes the specific type of health issue
+described within a biography section. Its attribute
+values will allow us to separate health issues
+pertaining to physical and mental health and to
+specifically female health concerns. We are
+interested in facilitating research on the gendered
+nature of women's relation to the medical
+institution, female illnesses such as breast cancer,
+and women's oppression by mental health
+institutions, to name only a few.</codeblock>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Type</entry>
+                     <entry>restriction of xs:token</entry>
+                  </row>
+                  <row>
+                     <entry>Properties</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>content: </entry>
+                                       <entry>
+                                          <b>simple</b>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Facets</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="3">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="3*" align="left"/>
+                                 <colspec colwidth="5*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>PHYSICAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>MENTAL</entry>
+                                       <entry/>
+                                    </row>
+                                    <row>
+                                       <entry>enumeration</entry>
+                                       <entry>FEMALEBODY</entry>
+                                       <entry/>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Used by</entry>
+                     <entry>
+                        <p>
+                           <table frame="all" rowsep="1" colsep="1">
+                              <tgroup cols="2">
+                                 <colspec colwidth="2*" align="left"/>
+                                 <colspec colwidth="8*" align="left"/>
+                                 <tbody>
+                                    <row>
+                                       <entry>Element </entry>
+                                       <entry>
+                                          <xref href="#HEALTH"/>
+                                       </entry>
+                                    </row>
+                                 </tbody>
+                              </tgroup>
+                           </table>
+                        </p>
+                     </entry>
+                  </row>
+                  <row>
+                     <entry>Source</entry>
+                     <entry>
+                        <codeblock outputclass="language-xml">&lt;xs:attribute name="ISSUE"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;Issue denotes the specific type of health issue described within a biography section. Its attribute values will allow us to separate health issues pertaining to physical and mental health and to specifically female health concerns. We are interested in facilitating research on the gendered nature of women's relation to the medical institution, female illnesses such as breast cancer, and women's oppression by mental health institutions, to name only a few.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+    &lt;xs:restriction base="xs:token"&gt;
+      &lt;xs:enumeration value="PHYSICAL"/&gt;
+      &lt;xs:enumeration value="MENTAL"/&gt;
+      &lt;xs:enumeration value="FEMALEBODY"/&gt;
+    &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+&lt;/xs:attribute&gt;</codeblock>
+                     </entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </body>
+   </topic>
+</topic>

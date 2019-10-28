@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="MARRIAGE">
+   <title>Element MARRIAGE</title>
+   <body>
+      <table frame="all" rowsep="1" colsep="1">
+         <tgroup cols="2">
+            <colspec colwidth="3*" align="left"/>
+            <colspec colwidth="25*" align="left"/>
+            <tbody>
+               <row>
+                  <entry>Namespace</entry>
+                  <entry>No namespace</entry>
+               </row>
+               <row>
+                  <entry>Annotations</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">The marriage element is used to capture the event
+of a person's wedding ceremony or the fact of
+her marriage. Marriage is often a central and
+defining moment in a woman writer's life and we
+want to systematize this event. Because of the
+institutional definition of marriage, we want to
+separate out the legal act of marriage from the
+details of married life. For this reason, do not
+use this element for a detailed discussion of her
+married life but place such discussions within the
+general family/ member=husband
+element.</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Diagram</entry>
+                  <entry>
+                     <p>
+                            
+                                    
+                                    <imagemap id="Orlando_entry_xsd_Element_MARRIAGE">
+                                        
+                                        <image href="img/Orlando_entry_xsd_Element_MARRIAGE.jpeg"/>
+                                        
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>298,2,412,26</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>298,92,354,116</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>
+                                                    
+                                            </area>
+                                          
+                                            <area>
+                                                <shape>rect</shape>
+                                                <coords>227,182,344,206</coords>
+                                                
+                                                
+                                                
+                                                        
+                                                        <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                                                    
+                                            </area>
+                                        
+                                    </imagemap>
+                        </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Properties</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>content: </entry>
+                                    <entry>
+                                       <b>complex</b>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Used by</entry>
+                  <entry>
+                     <p>
+                        <table frame="all" rowsep="1" colsep="1">
+                           <tgroup cols="2">
+                              <colspec colwidth="2*" align="left"/>
+                              <colspec colwidth="8*" align="left"/>
+                              <tbody>
+                                 <row>
+                                    <entry>Element </entry>
+                                    <entry>
+                                       <xref href="Orlando_entry_xsd_Element_MEMBER.dita#MEMBER"/>
+                                    </entry>
+                                 </row>
+                              </tbody>
+                           </tgroup>
+                        </table>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Model</entry>
+                  <entry>(<xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/> | <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>) , <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Children</entry>
+                  <entry>
+                     <xref href="Orlando_entry_xsd_Element_CHRONSTRUCT.dita#CHRONSTRUCT"/>, <xref href="Orlando_entry_xsd_Element_DIV2.dita#DIV2"/>, <xref href="Orlando_entry_xsd_Element_RESEARCHNOTE.dita#RESEARCHNOTE"/>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Instance</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;MARRIAGE&gt;
+  &lt;CHRONSTRUCT CHRONCOLUMN="" CHRONCOLUMN1="" CHRONCOLUMN2="" CHRONCOLUMN3="" RELEVANCE="" RELEVANCE1="" RELEVANCE2="" RELEVANCE3="" RESP=""&gt;{1,1}&lt;/CHRONSTRUCT&gt;
+  &lt;DIV2 ID=""&gt;{1,1}&lt;/DIV2&gt;
+  &lt;RESEARCHNOTE annotationId="" offsetId=""&gt;{0,1}&lt;/RESEARCHNOTE&gt;
+&lt;/MARRIAGE&gt;</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>Source</entry>
+                  <entry>
+                     <codeblock outputclass="language-xml">&lt;xs:element name="MARRIAGE"&gt;
+  &lt;xs:annotation&gt;
+    &lt;xs:documentation&gt;The marriage element is used to capture the event of a person's wedding ceremony or the fact of her marriage. Marriage is often a central and defining moment in a woman writer's life and we want to systematize this event. Because of the institutional definition of marriage, we want to separate out the legal act of marriage from the details of married life. For this reason, do not use this element for a detailed discussion of her married life but place such discussions within the general family/ member=husband element.&lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:complexType&gt;
+    &lt;xs:sequence&gt;
+      &lt;xs:choice maxOccurs="unbounded"&gt;
+        &lt;xs:element ref="CHRONSTRUCT"/&gt;
+        &lt;xs:element ref="DIV2"/&gt;
+      &lt;/xs:choice&gt;
+      &lt;xs:element minOccurs="0" ref="RESEARCHNOTE"/&gt;
+    &lt;/xs:sequence&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</codeblock>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>
