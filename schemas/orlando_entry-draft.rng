@@ -5,7 +5,8 @@
     <start>
         <element name="ENTRY">
             <attribute name="ID">
-                <a:documentation>Attribute ID on the ENTRY element is meant to keep the legacy 6 letter code for each author bio &amp; writing document pairs.</a:documentation>
+                <a:documentation>Attribute ID on the ENTRY element is meant to keep the legacy 6
+                    letter code for each author bio &amp; writing document pairs.</a:documentation>
                 <data type="NCName"/>
             </attribute>
             <element name="ORLANDOHEADER">
@@ -5042,14 +5043,12 @@
                     <ref name="TITLE"/>
                     <element name="ADDRESS">
                         <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Address, a
-                            sub-element within place, captures the specific address where a person
-                            lived or where a specific and significant event occurred. Before tagging
-                            an address, consider whether it is significant enough to capture in SGML
-                            (if a woman writer lived at the address, capture it; if she visited a
-                            friend there, probably not). Often for recent writers many addresses are
-                            available. Don&apos;t include them all. Include only those significant
-                            to the document you are writing.</a:documentation>
+                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Include an
+                            address (if sources record it) if subject of entry spent some years
+                            there or it was the scene of anything important in her life. Might at
+                            some future time be used for mapping. Use Reg attribute only in case of
+                            obsolete or wrong spelling (within quote); use Current and Reg when
+                            street name or number has changed.</a:documentation>
                         <optional>
                             <attribute name="CURRENT"/>
                             <a:documentation
@@ -5075,6 +5074,11 @@
                         </oneOrMore>
                     </element>
                     <element name="AREA">
+                        <a:documentation>The largest geographical concept used in the schema. Not
+                            yet implemented; may need further discussion, but used to enable a
+                            search to group a number of Geogs (generally nation states). Values:
+                            Asia, Africa, Europe, North America, South America, Caribbean,
+                            Australasia, Antarctica.</a:documentation>
                         <optional>
                             <attribute name="CURRENT">
                                 <a:documentation
