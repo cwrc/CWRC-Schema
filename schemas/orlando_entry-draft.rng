@@ -72,10 +72,15 @@
                         <text/>
                     </element>
                 </element>
-                <element name="REVISIONDESC">
+                <oneOrMore><element name="REVISIONDESC">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                         >revisionDesc (or revision description) summarizes the revision history for
                         a file.</a:documentation>
+                    <optional>
+                        <attribute name="TYPE">
+                            <value type="token">LEGACY</value>
+                        </attribute>
+                    </optional>
                     <oneOrMore>
                         <element name="RESPONSIBILITY">
                             <a:documentation
@@ -83,6 +88,14 @@
                                 responsibility element records a particular workflow activity in the
                                 workflow chain.</a:documentation>
                             <ref name="RESP-attribute"/>
+                            <optional>
+                                <attribute name="TARGET">
+                                    <choice>
+                                        <value type="token">BIOGRAPHY</value>
+                                        <value type="token">WRITING</value>
+                                    </choice>
+                                </attribute>
+                            </optional>
                             <attribute name="WORKSTATUS" a:defaultValue="SUB">
                                 <a:documentation
                                     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
@@ -142,7 +155,7 @@
                             </zeroOrMore>
                         </element>
                     </oneOrMore>
-                </element>
+                </element></oneOrMore>
             </element>
             <element name="DIV0">
                 <element name="STANDARD">
