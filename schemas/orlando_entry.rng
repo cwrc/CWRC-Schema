@@ -9,6 +9,35 @@
                     letter code for each author bio &amp; writing document pairs.</a:documentation>
                 <data type="NCName"/>
             </attribute>
+            <attribute name="PERSON">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    >Person is an attribute applied to the Writing document as a whole, and
+                    specifies information about the type of person who is the subject of the
+                    document; for example, if they are known primarily as a writer, or a historical
+                    figure.</a:documentation>
+                <choice>
+                    <value>HISTORICALFIGURE</value>
+                    <value>WRITER</value>
+                    <value>BRWWRITER</value>
+                    <value>IBRWRITER</value>
+                </choice>
+            </attribute>
+            <attribute name="SEX">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sex
+                    is an attribute applied to the Writing document as a whole, and specifies
+                    whether the individual who is the subject of the document is female, male,
+                    transgendered, transgendered male-to-female, transgendered female-to-male, or
+                    undefined.</a:documentation>
+                <choice>
+                    <value>FEMALE</value>
+                    <value>MALE</value>
+                    <value>TRANSGENDERED</value>
+                    <value>TRANSGENDERED FEMALE-TO-MALE</value>
+                    <value>TRANSGENDERED MALE-TO-FEMALE</value>
+                    <value>UNDEFINED</value>
+                    <data type="string"/>
+                </choice>
+            </attribute>
             <element name="ORLANDOHEADER">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     >Equivalent to TEI's TEIHeader, OrlandoHeader supplies the descriptive and
@@ -72,90 +101,104 @@
                         <text/>
                     </element>
                 </element>
-                <oneOrMore><element name="REVISIONDESC">
-                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >revisionDesc (or revision description) summarizes the revision history for
-                        a file.</a:documentation>
-                    <optional>
-                        <attribute name="TYPE">
-                            <value type="token">LEGACY</value>
-                        </attribute>
-                    </optional>
-                    <oneOrMore>
-                        <element name="RESPONSIBILITY">
-                            <a:documentation
-                                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
-                                responsibility element records a particular workflow activity in the
-                                workflow chain.</a:documentation>
-                            <ref name="RESP-attribute"/>
-                            <optional>
-                                <attribute name="TARGET">
-                                    <choice>
-                                        <value type="token">BIOGRAPHY</value>
-                                        <value type="token">WRITING</value>
-                                    </choice>
-                                </attribute>
-                            </optional>
-                            <attribute name="WORKSTATUS" a:defaultValue="SUB">
+                <oneOrMore>
+                    <element name="REVISIONDESC">
+                        <a:documentation
+                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                            >revisionDesc (or revision description) summarizes the revision history
+                            for a file.</a:documentation>
+                        <optional>
+                            <attribute name="TYPE">
+                                <value type="token">LEGACY</value>
+                            </attribute>
+                        </optional>
+                        <oneOrMore>
+                            <element name="RESPONSIBILITY">
                                 <a:documentation
                                     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Describes the work status of a document.</a:documentation>
-                                <choice>
-                                    <value type="token">SUB</value>
-                                    <a:documentation>Submitted (SUB)</a:documentation>
-                                    <value type="token">RWT</value>
-                                    <a:documentation>Researched / Written / Tagged
-                                        (RWT)</a:documentation>
-                                    <value type="token">CAS</value>
-                                    <a:documentation>Checked Against Sources (CAS)</a:documentation>
-                                    <value type="token">RBV</value>
-                                    <a:documentation>Reviewed by Volume Author
-                                        (RVB)</a:documentation>
-                                    <value type="token">CFT</value>
-                                    <a:documentation>Checked for Tagging (CFT)</a:documentation>
-                                    <value type="token">CFB</value>
-                                    <a:documentation>Checked for Bibliographic Practices
-                                        (CFB)</a:documentation>
-                                    <value type="token">CFC</value>
-                                    <!-- MRB: CFC? -->
-                                    <value type="token">REV</value>
-                                    <a:documentation>Revised (REV)</a:documentation>
-                                    <value type="token">OLD</value>
-                                    <!-- MRB: OLD? -->
-                                    <value type="token">PUB</value>
-                                    <a:documentation>Published (PUB)</a:documentation>
-                                    <value type="token">ENH</value>
-                                    <a:documentation>Enhanced (ENH)</a:documentation>
-                                </choice>
-                            </attribute>
-                            <attribute name="WORKVALUE" a:defaultValue="I">
-                                <a:documentation
-                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                    >Records the completion information of a particular work status
-                                    phase of a document.</a:documentation>
-                                <choice>
-                                    <value>I</value>
-                                    <a:documentation>Incomplete</a:documentation>
-                                    <value>P</value>
-                                    <a:documentation>Pending</a:documentation>
-                                    <value>C</value>
-                                    <a:documentation>Complete</a:documentation>
-                                    <value>O</value>
-                                    <!-- MRB: O? -->
-                                </choice>
-                            </attribute>
-                            <ref name="DATE"/>
-                            <zeroOrMore>
-                                <element name="ITEM">
+                                    >The responsibility element records a particular workflow
+                                    activity in the workflow chain.</a:documentation>
+                                <ref name="RESP-attribute"/>
+                                <optional>
+                                    <attribute name="TARGET">
+                                        <choice>
+                                            <value type="token">BIOGRAPHY</value>
+                                            <value type="token">WRITING</value>
+                                        </choice>
+                                    </attribute>
+                                </optional>
+                                <attribute name="WORKSTATUS" a:defaultValue="SUB">
                                     <a:documentation
                                         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                        >item contains one component of a list.</a:documentation>
-                                    <text/>
-                                </element>
-                            </zeroOrMore>
+                                        >Describes the work status of a document.</a:documentation>
+                                    <choice>
+                                        <value type="token">SUB</value>
+                                        <a:documentation>Submitted (SUB)</a:documentation>
+                                        <value type="token">RWT</value>
+                                        <a:documentation>Researched / Written / Tagged
+                                            (RWT)</a:documentation>
+                                        <value type="token">CAS</value>
+                                        <a:documentation>Checked Against Sources
+                                            (CAS)</a:documentation>
+                                        <value type="token">RBV</value>
+                                        <a:documentation>Reviewed by Volume Author
+                                            (RVB)</a:documentation>
+                                        <value type="token">CFT</value>
+                                        <a:documentation>Checked for Tagging (CFT)</a:documentation>
+                                        <value type="token">CFB</value>
+                                        <a:documentation>Checked for Bibliographic Practices
+                                            (CFB)</a:documentation>
+                                        <value type="token">CFC</value>
+                                        <!-- MRB: CFC? -->
+                                        <value type="token">REV</value>
+                                        <a:documentation>Revised (REV)</a:documentation>
+                                        <value type="token">OLD</value>
+                                        <!-- MRB: OLD? -->
+                                        <value type="token">PUB</value>
+                                        <a:documentation>Published (PUB)</a:documentation>
+                                        <value type="token">ENH</value>
+                                        <a:documentation>Enhanced (ENH)</a:documentation>
+                                    </choice>
+                                </attribute>
+                                <attribute name="WORKVALUE" a:defaultValue="I">
+                                    <a:documentation
+                                        xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                        >Records the completion information of a particular work
+                                        status phase of a document.</a:documentation>
+                                    <choice>
+                                        <value>I</value>
+                                        <a:documentation>Incomplete</a:documentation>
+                                        <value>P</value>
+                                        <a:documentation>Pending</a:documentation>
+                                        <value>C</value>
+                                        <a:documentation>Complete</a:documentation>
+                                        <value>O</value>
+                                        <!-- MRB: O? -->
+                                    </choice>
+                                </attribute>
+                                <ref name="DATE"/>
+                                <zeroOrMore>
+                                    <element name="ITEM">
+                                        <a:documentation
+                                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                            >item contains one component of a
+                                            list.</a:documentation>
+                                        <text/>
+                                    </element>
+                                </zeroOrMore>
+                            </element>
+                        </oneOrMore>
+                    </element>
+                </oneOrMore>
+                <optional>
+                    <element name="XENODATA">
+                        <a:documentation>(non-ORLANDO metadata) provides a container element into which metadata in non-ORLANDO formats may be placed. (similar in role to the homonymous TEI element)</a:documentation>
+                        <element name="rdf:RDF"
+                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                            <ref name="any_content"/>
                         </element>
-                    </oneOrMore>
-                </element></oneOrMore>
+                    </element>
+                </optional>
             </element>
             <element name="DIV0">
                 <element name="STANDARD">
@@ -212,6 +255,31 @@
                         <ref name="WRITING"/>
                     </group>
                 </choice>
+                <element name="WORKSCITED">
+                    <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >The WorksCited is an informal but complete list of all sources used in the
+                        writing of documents. You should ensure that all of these sources are also
+                        entered in the bibliography database.</a:documentation>
+                    <oneOrMore>
+                        <choice>
+                            <ref name="RESEARCHNOTE"/>
+                            <element name="SOURCE">
+                                <a:documentation
+                                    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                    >source describes the original source for the information
+                                    contained with a manuscript description.</a:documentation>
+                                <oneOrMore>
+                                    <choice>
+                                        <text/>
+                                        <ref name="RESEARCHNOTE"/>
+                                        <ref name="SCHOLARNOTE"/>
+                                        <ref name="TITLE"/>
+                                    </choice>
+                                </oneOrMore>
+                            </element>
+                        </choice>
+                    </oneOrMore>
+                </element>
             </element>
         </element>
     </start>
@@ -1044,32 +1112,6 @@
                         </zeroOrMore>
                     </element>
 
-                    <element name="WORKSCITED">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
-                            WorksCited is an informal but complete list of all sources used in the
-                            writing of documents. You should ensure that all of these sources are
-                            also entered in the bibliography database.</a:documentation>
-                        <oneOrMore>
-                            <choice>
-                                <ref name="RESEARCHNOTE"/>
-                                <element name="SOURCE">
-                                    <a:documentation
-                                        xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                        >source describes the original source for the information
-                                        contained with a manuscript description.</a:documentation>
-                                    <oneOrMore>
-                                        <choice>
-                                            <text/>
-                                            <ref name="RESEARCHNOTE"/>
-                                            <ref name="SCHOLARNOTE"/>
-                                            <ref name="TITLE"/>
-                                        </choice>
-                                    </oneOrMore>
-                                </element>
-                            </choice>
-                        </oneOrMore>
-                    </element>
                 </choice>
             </oneOrMore>
         </element>
@@ -1084,13 +1126,6 @@
                     <data type="NCName"/>
                 </attribute>
             </optional>
-
-            <!-- begin optional RDF element pattern -->
-
-            <!-- begin ORLANDOHEADER element pattern -->
-            <!-- end ORLANDOHEADER element pattern -->
-
-            <!-- begin DIV0 element pattern -->
 
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Div0
                 (i.e. level-0 text division) is the largest structural element permitted in any
@@ -1145,32 +1180,6 @@
                                 </element>
                             </choice>
                         </zeroOrMore>
-                    </element>
-                    <element name="WORKSCITED">
-                        <a:documentation
-                            xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
-                            WorksCited is an informal but complete list of all sources used in the
-                            writing of documents. You should ensure that all of these sources are
-                            also entered in the bibliography database.</a:documentation>
-                        <oneOrMore>
-                            <choice>
-                                <ref name="RESEARCHNOTE"/>
-                                <element name="SOURCE">
-                                    <a:documentation
-                                        xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                                        >source describes the original source for the information
-                                        contained with a manuscript description.</a:documentation>
-                                    <oneOrMore>
-                                        <choice>
-                                            <text/>
-                                            <ref name="RESEARCHNOTE"/>
-                                            <ref name="SCHOLARNOTE"/>
-                                            <ref name="TITLE"/>
-                                        </choice>
-                                    </oneOrMore>
-                                </element>
-                            </choice>
-                        </oneOrMore>
                     </element>
                 </choice>
             </oneOrMore>
