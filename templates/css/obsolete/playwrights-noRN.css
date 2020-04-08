@@ -2,20 +2,18 @@
 
 *{
     color:black;
-    font-family:sans-serif;
-    background-color:#fdf8e5
+    font-family:sans-serif /* ;
+   background-color:#fdf8e5*/
 }
-/**:empty{
-    display:none
-}*/
+
 RESEARCHNOTE{
+    display:none;
     background-color:#FBEFEF;
     color:#663366;
     font-family:Arial, Helvetica, sans-serif;
     font-size:smaller;
     margin:0%;
     padding:0%;
-    display:none
 }
 
 
@@ -58,119 +56,156 @@ RESPONSIBILITY{
 
 /*High-level body styling*/
 
-ENTRY {display:block; margin-left:3%}
+ENTRY{
+    display:block;
+    margin-left:3%;
+    margin-right:3%;
+}
 
+P,
+LISTBIBCIT{
+    line-height:150%
+}
 
-
-
-HEADING{display:block;
+HEADING{
+    display:block;
     font-weight:bold;
     color:brown;
     padding-bottom:12pt
 }
 
 HEADING[SUBTYPE = "1"]{
-    font-size:xx-large;
+    font-size:3em;
     text-align:center;
+    padding-top:1em
 }
 
+HEADING{line-height:110%}
+
 HEADING[SUBTYPE = "2"]{
-    font-size:x-large;
-    margin-left:4%; padding-bottom:1%; margin-bottom:1%; border-bottom:solid;
+    font-size:2em;
+    padding-bottom:1%;
+    margin-bottom:1%;
+    border-bottom:solid;
     padding-top:2%;
     border-color:black
 }
 
 HEADING[SUBTYPE = "3"]{
-    font-size:large;
+    font-size:1.5em;
     padding-left:4%;
-    padding-top:1%;
-    padding-bottom:1%
+    padding-top:1em;
+    padding-bottom:0.5em
+}
+
+TEXTSCOPE HEADING[SUBTYPE = "3"]
+{
+    padding-left:0%
 }
 
 HEADING[SUBTYPE = "4"]{
-    font-size:medium;
-    padding-left:6%
+    font-size:1em;
+    /*padding-left:4%;*/
+    padding-top:1em;
+    padding-bottom:0.2em
 }
 
 
+/*Figures styling*/
 
-
-
-
-/*Folds (Oxygen only)*/
-
-/*BIRTH,
-RESIDENCEANDMOBILITY,
-PRODUCTION,
-CULTURALFORMATION,
-FAMILY,
-EDUCATTION, 
-OTHERLIFEEVENT,
-OCCUPATION,
-TEXTSCOPE
-{
-    -oxy-foldable:true;
-    -oxy-folded:true;
-    -oxy-not-foldable-child:HEADING}*/
-
-/*PERSONNAME {
-    -oxy-foldable:true;
-    -oxy-folded:true;
-    -oxy-not-foldable-child:BIRTHNAME}*/
-
-/*End folds*/
-
-
-
-
-
+FIGURE{
+    display:block;
+    text-align:center;
+    border:thin solid white;
+    margin:0.5em;
+    padding:0.5em  
+}
 
 
 
 /*Mid-level body styling*/
 
-BIRTHNAME,
-NICKNAME,
-BIRTH,
-RESIDENCEANDMOBILITY P,
-PLITERARYMOVEMENTS,
-SEXUALIDENTITY,
-NATIONALHERITAGE,
-DENOMINATION,
-CLASSISSUE P,
-MARRIAGE,
+ENTRY PERSONNAME,
+ENTRY BIRTH,
+ENTRY DEATH,
+ENTRY RESIDENCEANDMOBILITY,
+ENTRY CULTURALFORMATION,
+ENTRY PRODUCTION,
+ENTRY FAMILY,
+ENTRY RECEPTION,
+ENTRY OCCUPATION,
+ENTRY EDUCATION,
+ENTRY OTHERLIFEEVENT,
+ENTRY HEALTH,
+ENTRY TEXTSCOPE
+{
+    display:block;
+    margin-left:4%;
+}
+
+TEXTSCOPE PRODUCTION,
+TEXTSCOPE RECEPTION
+{
+    display:block;
+    margin-left:0%
+}
+
+PERSONNAME P BIRTHNAME,
+BIRTHNAME GIVEN,
+BIRTHNAME SURNAME,
+PERSONNAME P NICKNAME,
+ENTRY BIRTH,
+BIRTH CHRONSTRUCT DATE,
+DEATH CHRONSTRUCT DATE,
+BIRTH CHRONSTRUCT CHRONPROSE,
+DEATH CHRONSTRUCT CHRONPROSE,
+ENTRY RESIDENCEANDMOBILITY P,
+ENTRY PRODUCTION P,
+ENTRY CULTURALFORMATION P,
 FAMILY P,
-P CHILDREN,
-RSELFDESCRIPTION,
-OCCUPATION P{display:block; margin-left:4%; padding-left:0%}
+ENTRY RECEPTION,
+ENTRY OCUPATION P /*,
+ENTRY TEXTSCOPE*/
+{
+    display:block;
+    margin-bottom:1em;
+}
 
 /*field labels:*/
 
 GIVEN:before{
-    content:"First Name: ";
-    display:inline-block; margin-left:0%; padding-left:0%
+    content:"First Name:";
+    display:inline-block;
+    padding-right:0.5em
+
+}
+GIVEN + GIVEN{
+    display:block
 }
 GIVEN + GIVEN:before{
-    content:"Middle Name: ";
-    display:inline-block
+    content:"Middle Name:";
+    display:inline-block;
+    padding-right:0.5em
 }
-SURNAME{display:block}
+
 
 SURNAME:before{
-    content:"Last Name at Birth: ";
+    content:"Last Name at Birth:";
+    padding-right:0.5em
 }
 NICKNAME:before{
-    content:"Nickname: ";
+    content:"Nickname:";
+    padding-right:0.5em
 }
 
 GENDER:before{
-    content:"Gender: ";
+    content:"Gender:";
+    padding-right:0.5em
 }
 
-DENOMINATION:before{
+/*DENOMINATION:first-of-type:before{
     content:"Religious Affiliation: ";
-}
+}*/
 
 
 
@@ -182,33 +217,121 @@ EDUCATION DATASTRUCT,
 OTHERLIFEEVENT DATASTRUCT,
 OCCUPATION DATASTRUCT,
 RECEPTION DATASTRUCT
-{display:list-item;
-margin-left:8%; padding-top:1%; padding-bottom:1%}
+{
+    display:block
+}
+
 
 
 CHRONSTRUCT DATE,
-CHRONSTRUCT DATERANGE {padding-right:3%; width:16em}
-CHRONPROSE,
-DATASTRUCT{width:auto}
+CHRONSTRUCT DATERANGE{
+    display:table-cell;
+    width:9em; /*border:solid;*/
+    padding-right:0%
+}
+CHRONPROSE{
+    display:table-cell; /*border:solid
+    ;*/
+    line-height:150%
+}
+DATASTRUCT{ /*border:solid;*/
+    width:auto;
+    line-height:150%
+}
 
-OTHERLIFEEVENT CHRONSTRUCT DATE,
-OTHERLIFEEVENT CHRONSTRUCT DATERANGE {padding-right:0%}
+TEXTSCOPE PRODUCTION P{
+    display:block;
+    padding-left:12em;
+    padding-bottom:0%;
+    margin-bottom:0%
+}
 
-OCCUPATION CHRONSTRUCT CHRONPROSE ORGNAME {padding-left:3%}
-BIRTH CHRONSTRUCT CHRONPROSE {display:block}
+/*OTHERLIFEEVENT CHRONSTRUCT DATE,
+OTHERLIFEEVENT CHRONSTRUCT DATERANGE{
+    padding-right:0%
+}*/
 
-TEXTUALFEATURES P{display:block; margin-left:4%}
+/*OCCUPATION CHRONSTRUCT CHRONPROSE ORGNAME{
+    padding-left:3%
+}*/
+BIRTH CHRONSTRUCT CHRONPROSE, 
+DEATH CHRONSTRUCT CHRONPROSE,
+BIRTH CHRONSTRUCT DATE
+DEATH CHRONSTRUCT DATE{
+    display:block; width:100%
+}
 
-HEADING TITLE{DISPLAY:block; padding-top:1%;padding-bottom:1%; color:brown}
+TEXTUALFEATURES{
+    padding-top:0%;
+    margin-top:0%
+}
 
-TEXTUALFEATURES HEADING[SUBTYPE="4"],
-TEXTSCOPE PRODUCTION HEADING[SUBTYPE="4"],
-TEXTSCOPE RECEPTION HEADING[SUBTYPE="4"]
-{display:block;color:black;font-weight:bold; padding-left:4%}
-/*NATIONALHERITAGE:before{content:"National / Ethnic Background: ";
-color:olive}*/
+TEXTUALFEATURES HEADING{
+    padding-top:0%;
+    margin-top:1em
+}
 
-TITLE[LEVEL = "MONOGRAPHIC"]{font-style:italic}
+TEXTUALFEATURES P{
+    display:block;
+}
+
+/*TEXTSCOPE PRODUCTION{
+    padding-top:0em;
+    margin-top:0em
+}*/
+
+
+
+TITLE[LEVEL = "MONOGRAPHIC"]{
+    font-style:italic
+}
+
+TITLE[LEVEL = "ANALYTIC"]:before{
+    content:"\""
+}
+TITLE[LEVEL = "ANALYTIC"]:after{
+    content:"\""
+}
+
+EMPH{
+    font-style:italic
+}
+SOCALLED:before{
+    content:"\""
+}
+SOCALLED:after{
+    content:"\""
+}
+/*TITLE[LEVEL = "UNPUBLISHED"] EMPH:before{
+    content:"\""
+}
+TITLE[LEVEL = "UNPUBLISHED"] EMPH:after{
+    content:"\""
+}*/
+TITLE[LEVEL = "UNPUBLISHED"] EMPH{
+    font-style:italic;
+}
+
+HEADING TITLE EMPH{
+    color:brown
+}
+/*
+PRODUCTION CHRONSTRUCT,
+TEXTSCOPE PRODUCTION P{
+    display:block;
+    padding-left:5%
+}*/
+
+HEADING TITLE{
+    display:inline;
+    padding-top:1%;
+    padding-bottom:1%;
+    color:brown
+}
+
+TITLE[LEVEL = "MONOGRAPHIC"] TITLE[LEVEL = "MONOGRAPHIC"]{
+    font-style:normal
+}
 
 
 
