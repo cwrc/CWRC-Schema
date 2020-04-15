@@ -1,0 +1,85 @@
+/* Typography */
+
+.header-1, .header-2, .header-3, .body-text, .body-text-small {
+	font-family: CambridgeSans;
+	font-style: normal;
+	color: #1d1d1d;
+}
+
+.header-1, .header-2, .header-3 {
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.header-1 {
+	font-size: 36px;
+}
+
+.header-2 {
+	font-size: 24px;
+}
+
+ .header-3 {
+	font-size: 18px;
+}
+
+.body-text, .body-text-small {
+ 	font-weight: normal;
+ 	line-height: 1.4;
+}
+
+.body-text {
+	font-size: 18px;
+}
+
+.body-text-small {
+	font-size: 14px;
+	letter-spacing: 0.4px;
+}
+
+.body-link {
+	font-weight: 600;
+}
+
+.body-text a:link {
+	color: #00649B;
+}
+
+.body-text a:hover {
+	color: #034970;
+}
+
+/* Buttons */
+
+.botton-primary, .button-secondary, .botton-primary-white, .button-secondary-white {
+	height: 36px;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 9px 32px;
+	border-radius: 18px;
+}
+
+.botton-primary, .button-secondary:hover {
+	color: #FFFFFF;
+	background-color: #00649B;
+	border: solid 2px #00649B;
+}
+
+.button-secondary, .botton-primary:hover {
+	color: #00649B;
+	background: none;
+	border: solid 2px #00649B;
+}
+
+.botton-primary-white, .button-secondary-white:hover {
+	color: #1D1D1D;
+	background: FFFFFF;
+	border: solid 2px #FFFFFF;
+}
+
+.button-secondary-white, .botton-primary-white:hover {
+	color: FFFFFF;
+	background: none;
+	border: solid 2px #FFFFFF;
+}
+
