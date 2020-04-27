@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- File name: orlando_event.rng -->
+<!-- File name: orlando_event_v2.rng -->
 
 <!-- 
     * MRB: Mon 16-Jun-2014
@@ -34,9 +34,25 @@
 
 <!-- 
 *** Revisions ***
+* MVI: April 27 2020
+- removed annotationId, offsetID, rdf:RDF
+-added ORLANDOHEADER/XENODATA
 * MRB: 30-Oct-2016
   - Revised the element FIGDESC so that in addition to the child element of text, added child elements of BIBCITS, DATE, NAME,
-    ORGNAME, PLACE, and TITLE.
+    ORGNAME, PLACE, TITLE, and XREF.
+* MRB: May 2016: Made the following changes:
+  - Created a new annotationId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, DATESTRUCT,
+     SCHOLARNOTE, RESEARCHNOTE, BIBCIT, and KEYWORDCLASS; provides a unique annotation identifier for the element bearing the attribute.
+  - Created a new offsetId attribute in the elements NAME, ORGNAME, PLACE, TITLE, SIC, XREF, DATE, DATERANGE, DATESTRUCT,
+     SCHOLARNOTE, RESEARCHNOTE, BIBCIT, and KEYWORDCLASS; designates the parent tag from which the offset is being counted.
+  - Added the XREF element, so that the link annotation object in CWRC-Writer could be invoked in Orlando event documents.
+* MRB: January 2016: Made the following change:
+  - Created a new optional rdf:RDF element as the first child element of the root EVENT element, that can contain any type of descendant node
+     (element, attribute, or content); this is so that documents can be used in CWRC-Writer (which stores RDF annotation information in the
+     "rdf:RDF" element bundle) as well as other XML editors, and still validate correctly if the rdf:RDF element is present or not present.  The rdf:RDF
+     element references a globally defined any_content pattern, which in turn references a globally defined any_element pattern, which in turn
+     references a globally defined any_attribute pattern; this allows any element, attribute, or text node to appear as a descendant in the rdf:RDF
+     element.
 * MRB: September 2015: Made the following changes:
   - Removed the attribute PROPOSEDALTERNATIVENAME from the element TGENRE.
   - Created three new optional attributes for the root element EVENT: EID, FILENAME, and SUBSET.
@@ -49,6 +65,9 @@
   - Created a new element GRAPHIC, with attribute URL, as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE.
   - Created a new element FIGURE as a child element to the elements CHRONPROSE, P, and RESEARCHNOTE; FIGURE has a child element of FIGDESC, and REFs to child
     elements of GRAPHIC, HEAD, and P.
+* MRB: Mon 04-May-2015: *_v2 schema copy uses the ISO 8601 date format rather than the customized Orlando date format; this meant making changes
+   to the defined pattern in the VALUE attribute in the DATE element, the FROM and TO attributes in the DATERANGE element, and the VALUE attribute in
+   the DATESTRUCT element.
 * MRB: March 2015: Made the following changes:
   - Modified a copy of the events schema used to model events that could be pasted into the Document Archive textarea form field (i.e., orlando_document_archive_events.rng) into
     a schema that models Orlando freestanding events in the CWRC repository (i.e., this schema, orlando_event.rng).
@@ -84,7 +103,8 @@
 <grammar xmlns="http://relaxng.org/ns/structure/1.0"
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
-    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
     <!-- begin <start> element pattern -->
     <start>
@@ -113,6 +133,8 @@
                     <data type="string"/>
                 </attribute>
             </optional>
+
+            
 
             <!-- begin ORLANDOHEADER element pattern -->
             <element name="ORLANDOHEADER">
@@ -257,6 +279,15 @@
                         </element>
                     </oneOrMore>
                 </element>
+                <optional>
+                    <element name="XENODATA">
+                        <a:documentation>(non-ORLANDO metadata) provides a container element into which metadata in non-ORLANDO formats may be placed. (similar in role to the homonymous TEI element)</a:documentation>
+                        <element name="rdf:RDF"
+                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                            <ref name="any_content"/>
+                        </element>
+                    </element>
+                </optional>
             </element>
             <!-- end ORLANDOHEADER element pattern -->
 
@@ -523,12 +554,8 @@
                         >Value is used to record a formatted date-related value.</a:documentation>
                     <choice>
                         <data type="date"/>
-                        <data type="string">
-                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
-                        </data>
-                        <data type="string">
-                            <param name="pattern">(\d{4})(\-{2})</param>
-                        </data>
+                        <data type="gYearMonth"/>
+                        <data type="gYear"/>
                     </choice>
                 </attribute>
             </optional>
@@ -582,16 +609,12 @@
                         >Value is used to record a formatted date-related value.</a:documentation>
                     <choice>
                         <data type="date"/>
-                        <data type="string">
-                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
-                        </data>
-                        <data type="string">
-                            <param name="pattern">(\d{4})(\-{2})</param>
-                        </data>
+                        <data type="gYearMonth"/>
+                        <data type="gYear"/>
                     </choice>
                 </attribute>
             </optional>
-            <oneOrMore>
+           <oneOrMore>
                 <choice>
                     <text/>
                     <element name="DAY">
@@ -797,12 +820,8 @@
                         >From is used to record a formatted date-related value.</a:documentation>
                     <choice>
                         <data type="date"/>
-                        <data type="string">
-                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
-                        </data>
-                        <data type="string">
-                            <param name="pattern">(\d{4})(\-{2})</param>
-                        </data>
+                        <data type="gYearMonth"/>
+                        <data type="gYear"/>
                     </choice>
                 </attribute>
             </optional>
@@ -812,12 +831,8 @@
                         >To is used to record a formatted date-related value.</a:documentation>
                     <choice>
                         <data type="date"/>
-                        <data type="string">
-                            <param name="pattern">(\d{4})((\-(0[1-9]|1[0-2])\-))</param>
-                        </data>
-                        <data type="string">
-                            <param name="pattern">(\d{4})(\-{2})</param>
-                        </data>
+                        <data type="gYearMonth"/>
+                        <data type="gYear"/>
                     </choice>
                 </attribute>
             </optional>
@@ -1683,6 +1698,29 @@
         </element>
     </define>
 
+    <define name="XREF">
+        <element name="XREF">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The xref
+                element surrounds a url which you wish to make into a hyperlink.</a:documentation>
+            <optional>
+                <ref name="RESP-attribute"/>
+            </optional>
+            <attribute name="URL">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">URL
+                    (uniform resource locator) specifies the URL from which the media concerned may
+                    be obtained.</a:documentation>
+                <data type="anyURI"/>
+            </attribute>
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="ORGNAME"/>
+                    <ref name="TITLE"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
     <define name="ORGNAME">
         <element name="ORGNAME">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
@@ -1878,6 +1916,7 @@
                         <ref name="ORGNAME"/>
                         <ref name="PLACE"/>
                         <ref name="TITLE"/>
+                        <ref name="XREF"/>
                     </element>
                     <ref name="GRAPHIC"/>
                     <ref name="P"/>
@@ -2204,6 +2243,37 @@
         </attribute>
     </define>
     <!-- end @RESP attribute pattern -->
+
+    <!-- begin globally defined any node pattern -->
+
+    <define name="any_content">
+        <interleave>
+            <zeroOrMore>
+                <ref name="any_element"/>
+            </zeroOrMore>
+            <text/>
+        </interleave>
+    </define>
+
+    <define name="any_element">
+        <element>
+            <anyName/>
+            <zeroOrMore>
+                <ref name="any_attribute"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="any_content"/>
+            </zeroOrMore>
+        </element>
+    </define>
+
+    <define name="any_attribute">
+        <attribute>
+            <anyName/>
+        </attribute>
+    </define>
+
+    <!-- end globally defined any node pattern -->
 
 </grammar>
 <!-- end root <grammar> element -->
