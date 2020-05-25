@@ -245,7 +245,7 @@
                         both for minor writers about whom little is known, and for major writers
                         whose work needs to be sumarized before launching into the
                         details.</a:documentation>
-                    <ref name="P"/>
+                    <optional><oneOrMore><ref name="P"/></oneOrMore></optional>
                 </element>
                 <choice>
                     <ref name="BIOGRAPHY"/>
@@ -293,7 +293,7 @@
                     <data type="NCName"/>
                 </attribute>
             </optional>
-            <oneOrMore>
+            <optional><oneOrMore>
                 <choice>
                     <ref name="HEADING"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1113,7 +1113,7 @@
                     </element>
 
                 </choice>
-            </oneOrMore>
+            </oneOrMore></optional>
         </element>
     </define>
 
@@ -1134,7 +1134,7 @@
                 in other types of information. For CWRC projects, Div0 is the element that contains
                 everything in a document except the cataloguing information that is contained in the
                 CWRCHeader element.</a:documentation>
-            <oneOrMore>
+            <optional><oneOrMore>
                 <choice>
                     <ref name="HEADING"/>
                     <ref name="RESEARCHNOTE"/>
@@ -1182,7 +1182,7 @@
                         </zeroOrMore>
                     </element>
                 </choice>
-            </oneOrMore>
+            </oneOrMore></optional>
             <optional>
                 <element name="BIOGPROSE">
                     <text/>
