@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <xs:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="rdf.xsd"/>
   <xs:element name="ENTRY">
     <xs:complexType>
       <xs:sequence>
@@ -12,6 +13,65 @@
                     letter code for each author bio &amp; writing document pairs.</xs:documentation>
         </xs:annotation>
       </xs:attribute>
+      <xs:attribute name="PERSON" use="required">
+        <xs:annotation>
+          <xs:documentation>Person is an attribute applied to the Writing document as a whole, and
+                    specifies information about the type of person who is the subject of the
+                    document; for example, if they are known primarily as a writer, or a historical
+                    figure.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="HISTORICALFIGURE"/>
+            <xs:enumeration value="WRITER"/>
+            <xs:enumeration value="BRWWRITER"/>
+            <xs:enumeration value="IBRWRITER"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="SEX" use="required">
+        <xs:annotation>
+          <xs:documentation>Sex
+                    is an attribute applied to the Writing document as a whole, and specifies
+                    whether the individual who is the subject of the document is female, male,
+                    transgendered, transgendered male-to-female, transgendered female-to-male, or
+                    undefined.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:union memberTypes="xs:string">
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="FEMALE"/>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="MALE"/>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="TRANSGENDERED"/>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="TRANSGENDERED FEMALE-TO-MALE"/>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="TRANSGENDERED MALE-TO-FEMALE"/>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="UNDEFINED"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:union>
+        </xs:simpleType>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
   <xs:element name="ORLANDOHEADER">
@@ -23,7 +83,8 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="FILEDESC"/>
-        <xs:element ref="REVISIONDESC"/>
+        <xs:element maxOccurs="unbounded" ref="REVISIONDESC"/>
+        <xs:element minOccurs="0" ref="XENODATA"/>
       </xs:sequence>
       <xs:attribute name="TYPE" default="text">
         <xs:annotation>
@@ -113,20 +174,26 @@
   </xs:element>
   <xs:element name="REVISIONDESC">
     <xs:annotation>
-      <xs:documentation>revisionDesc (or revision description) summarizes the revision history for
-                        a file.</xs:documentation>
+      <xs:documentation>revisionDesc (or revision description) summarizes the revision history
+                            for a file.</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element maxOccurs="unbounded" ref="RESPONSIBILITY"/>
       </xs:sequence>
+      <xs:attribute name="TYPE">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="LEGACY"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
   <xs:element name="RESPONSIBILITY">
     <xs:annotation>
-      <xs:documentation>The
-                                responsibility element records a particular workflow activity in the
-                                workflow chain.</xs:documentation>
+      <xs:documentation>The responsibility element records a particular workflow
+                                    activity in the workflow chain.</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
@@ -134,6 +201,14 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="ITEM"/>
       </xs:sequence>
       <xs:attributeGroup ref="RESP-attribute"/>
+      <xs:attribute name="TARGET">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="BIOGRAPHY"/>
+            <xs:enumeration value="WRITING"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
       <xs:attribute name="WORKSTATUS" use="required">
         <xs:annotation>
           <xs:documentation>Describes the work status of a document.</xs:documentation>
@@ -148,18 +223,19 @@
             <xs:enumeration value="RWT">
               <xs:annotation>
                 <xs:documentation>Researched / Written / Tagged
-                                        (RWT)</xs:documentation>
+                                            (RWT)</xs:documentation>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="CAS">
               <xs:annotation>
-                <xs:documentation>Checked Against Sources (CAS)</xs:documentation>
+                <xs:documentation>Checked Against Sources
+                                            (CAS)</xs:documentation>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="RBV">
               <xs:annotation>
                 <xs:documentation>Reviewed by Volume Author
-                                        (RVB)</xs:documentation>
+                                            (RVB)</xs:documentation>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="CFT">
@@ -170,7 +246,7 @@
             <xs:enumeration value="CFB">
               <xs:annotation>
                 <xs:documentation>Checked for Bibliographic Practices
-                                        (CFB)</xs:documentation>
+                                            (CFB)</xs:documentation>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="CFC"/>
@@ -195,8 +271,8 @@
       </xs:attribute>
       <xs:attribute name="WORKVALUE" use="required">
         <xs:annotation>
-          <xs:documentation>Records the completion information of a particular work status
-                                    phase of a document.</xs:documentation>
+          <xs:documentation>Records the completion information of a particular work
+                                        status phase of a document.</xs:documentation>
         </xs:annotation>
         <xs:simpleType>
           <xs:restriction base="xs:token">
@@ -223,8 +299,19 @@
   </xs:element>
   <xs:element name="ITEM" type="xs:string">
     <xs:annotation>
-      <xs:documentation>item contains one component of a list.</xs:documentation>
+      <xs:documentation>item contains one component of a
+                                            list.</xs:documentation>
     </xs:annotation>
+  </xs:element>
+  <xs:element name="XENODATA">
+    <xs:annotation>
+      <xs:documentation>(non-ORLANDO metadata) provides a container element into which metadata in non-ORLANDO formats may be placed. (similar in role to the homonymous TEI element)</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rdf:RDF"/>
+      </xs:sequence>
+    </xs:complexType>
   </xs:element>
   <xs:element name="DIV0">
     <xs:complexType>
@@ -239,6 +326,7 @@
             <xs:element ref="WRITING"/>
           </xs:sequence>
         </xs:choice>
+        <xs:element ref="WORKSCITED"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -284,8 +372,34 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="P"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="P"/>
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WORKSCITED">
+    <xs:annotation>
+      <xs:documentation>The WorksCited is an informal but complete list of all sources used in the
+                        writing of documents. You should ensure that all of these sources are also
+                        entered in the bibliography database.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="RESEARCHNOTE"/>
+        <xs:element ref="SOURCE"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SOURCE">
+    <xs:annotation>
+      <xs:documentation>source describes the original source for the information
+                                    contained with a manuscript description.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="RESEARCHNOTE"/>
+        <xs:element ref="SCHOLARNOTE"/>
+        <xs:element ref="TITLE"/>
+      </xs:choice>
     </xs:complexType>
   </xs:element>
   <xs:element name="BIOGRAPHY">
@@ -294,7 +408,7 @@
                 is the large, all-encompassing element in all biography documents.</xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="HEADING"/>
         <xs:element ref="RESEARCHNOTE"/>
         <xs:element name="DIV1">
@@ -327,7 +441,6 @@
             </xs:choice>
           </xs:complexType>
         </xs:element>
-        <xs:element ref="WORKSCITED"/>
       </xs:choice>
       <xs:attribute name="ID" type="xs:NCName"/>
     </xs:complexType>
@@ -1142,33 +1255,6 @@
       </xs:attribute>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WORKSCITED">
-    <xs:annotation>
-      <xs:documentation>The
-                            WorksCited is an informal but complete list of all sources used in the
-                            writing of documents. You should ensure that all of these sources are
-                            also entered in the bibliography database.</xs:documentation>
-    </xs:annotation>
-    <xs:complexType>
-      <xs:choice maxOccurs="unbounded">
-        <xs:element ref="RESEARCHNOTE"/>
-        <xs:element ref="SOURCE"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SOURCE">
-    <xs:annotation>
-      <xs:documentation>source describes the original source for the information
-                                        contained with a manuscript description.</xs:documentation>
-    </xs:annotation>
-    <xs:complexType mixed="true">
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element ref="RESEARCHNOTE"/>
-        <xs:element ref="SCHOLARNOTE"/>
-        <xs:element ref="TITLE"/>
-      </xs:choice>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="WRITING">
     <xs:annotation>
       <xs:documentation>Writing
@@ -1176,7 +1262,7 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:choice maxOccurs="unbounded">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element ref="HEADING"/>
           <xs:element ref="RESEARCHNOTE"/>
           <xs:element name="DIV1">
@@ -1219,7 +1305,6 @@
               </xs:sequence>
             </xs:complexType>
           </xs:element>
-          <xs:element ref="WORKSCITED"/>
         </xs:choice>
         <xs:element minOccurs="0" ref="BIOGPROSE"/>
       </xs:sequence>
@@ -8690,6 +8775,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
+      <xs:attribute name="REG"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="TGENREISSUE">
@@ -10218,11 +10304,9 @@
     </xs:attribute>
   </xs:attributeGroup>
   <!-- begin globally defined any node pattern -->
-  <xs:group name="any_content">
-    <xs:sequence>
-      <xs:group minOccurs="0" maxOccurs="unbounded" ref="any_element"/>
-    </xs:sequence>
-  </xs:group>
+  <xs:complexType name="any_content" mixed="true">
+    <xs:group minOccurs="0" maxOccurs="unbounded" ref="any_element"/>
+  </xs:complexType>
   <xs:group name="any_element">
     <xs:sequence>
       <xs:any processContents="skip"/>
