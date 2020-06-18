@@ -101,7 +101,7 @@
                         <text/>
                     </element>
                 </element>
-                <oneOrMore>
+                <optional><oneOrMore>
                     <element name="REVISIONDESC">
                         <a:documentation
                             xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
@@ -189,7 +189,7 @@
                             </element>
                         </oneOrMore>
                     </element>
-                </oneOrMore>
+                </oneOrMore></optional>
                 <optional>
                     <element name="XENODATA">
                         <a:documentation>(non-ORLANDO metadata) provides a container element into which metadata in non-ORLANDO formats may be placed. (similar in role to the homonymous TEI element)</a:documentation>
@@ -8880,6 +8880,11 @@
                         <value>VILLANELLE</value>
                         <value>YOUNGADULTWRITING</value>
                     </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="REG">
+                    
                 </attribute>
             </optional>
             <oneOrMore>
