@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://cwrc.ca/schemas/orlando_entry.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet type="text/css" href="https://cwrc.ca/templates/css/orlando.css"?>
+<ENTRY ID="SixLetterCode" PERSON="BRWWRITER" SEX="FEMALE">
+    <ORLANDOHEADER>
+        <FILEDESC>
+            <TITLESTMT>
+                <DOCTITLE>[Insert Author Name]</DOCTITLE>
+            </TITLESTMT>
+            <PUBLICATIONSTMT>
+                <AUTHORITY>Orlando Project</AUTHORITY>
+            </PUBLICATIONSTMT>
+            <SOURCEDESC>Created from original research by members of the Orlando
+                Project</SOURCEDESC>
+        </FILEDESC>
+        <XENODATA>
+            <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </XENODATA>
+    </ORLANDOHEADER>
+    <DIV0>
+        <STANDARD>[InsertAuthorStandardName]</STANDARD>
+        <AUTHORSUMMARY>
+            <RESEARCHNOTE>This subsection (AUTHORSUMMARY) usually encloses summary statements about
+                an author (a short preface) which are visible before opening the writing document of
+                each woman writer. This element can contain a short writer profile, or an entry
+                summary (similar to an abstract). It is useful both for minor writers about whom
+                little is known, and for major writers whose work needs to be summarized before
+                launching into the details. In results on a tag search, access to the AuthorSummary
+                appears as Profile; users click on it for a thumbnail on authors appearing in their
+                results. For this reason it should be kept short (ideally not more than five lines)
+                but should usually specify time-period and most important genres written, and should
+                indicate what is interesting in this writer.</RESEARCHNOTE>
+            <P>[Insert author summary here]</P>
+        </AUTHORSUMMARY>
+        <BIOGRAPHY>
+            <RESEARCHNOTE>This template provides sections for topics generally found in a writer's
+                entry. Please note that any irrelevant tags or sections can simply be deleted when
+                not applicable. You can also add other sections, with other available tags (see
+                below) like INTIMATERELATIONSHIPS (non-familial intimate relationships; this tag has
+                an attribute), FRIENDSASSOCIATES (close, and broader social circle), HEALTH (mental
+                and physical health, including issues having to do with the female body; this tag
+                has an attribute), LOCATION (travel, visits, moves, migrations, and residences; this
+                tag has an attribute), POLITICS (political affiliations and degree of involvement in
+                political organizations), LEISUREANDSOCIETY (social and leisure activities),
+                VIOLENCE (any domestic or other violence), WEALTH (material wealth or poverty;
+                significant changes in standard of living). N.b. insert a Chronstruct wherever you
+                wish information to be tied to a date, available for pulling out into timelines (as
+                in Birth and Death here. When in doubt over decisions, try looking at existing
+                Orlando entries.</RESEARCHNOTE>
+            <HEADING>Biography</HEADING>
+            <DIV1>
+                <PERSONNAME>
+                    <DIV2>
+                        <DATASTRUCT>
+                            <RESEARCHNOTE>Only a few names types will apply in each entry. Delete
+                                all name types that do not apply (including their enclosing DATAITEM
+                                tags)</RESEARCHNOTE>
+                            <DATAITEM>
+                                <BIRTHNAME>
+                                    <GIVEN>[BirthGivenName]</GIVEN>
+                                    <GIVEN>[BirthGivenName]</GIVEN>
+                                    <SURNAME>[BirthSurname]</SURNAME>
+                                </BIRTHNAME>
+                            </DATAITEM>
+                            <DATAITEM>
+                                <NICKNAME>[InsertNickname]</NICKNAME>
+                            </DATAITEM>
+                            <DATAITEM>
+                                <MARRIED>[InsertMarriedName]</MARRIED>
+                            </DATAITEM>
+                            <DATAITEM>
+                                <INDEXED>[InsertIndexedName]</INDEXED>
+                            </DATAITEM>
+                            <DATAITEM>
+                                <SELFCONSTRUCTED>[InsertSelfConsctructedName]</SELFCONSTRUCTED>
+                            </DATAITEM>
+                            <DATAITEM>
+                                <PSEUDONYM>[InsertPseudonym]</PSEUDONYM>
+                            </DATAITEM>
+                            <DATAITEM>
+                                <RELIGIOUSNAME>[InsertReligiousName]</RELIGIOUSNAME>
+                            </DATAITEM>
+                            <DATAITEM>
+                                <ROYAL>[InsertRoyalName]</ROYAL>
+                            </DATAITEM>
+                            <DATAITEM>
+                                <STYLED>[InsertStyledName]</STYLED><RESEARCHNOTE>This is for what
+                                    are called courtesy titles, e.g. Lady Mary (as opposed to Lady
+                                    Smith, which is Titled). Don&apos;t worry about
+                                    it!</RESEARCHNOTE>
+                            </DATAITEM>
+                            <DATAITEM>
+                                <TITLED>[InsertTitledName]</TITLED>
+                            </DATAITEM>
+                        </DATASTRUCT>
+                    </DIV2>
+                </PERSONNAME>
+            </DIV1>
+            <DIV1>
+                <HEADING>Birth and Family</HEADING>
+                <BIRTH>
+                    <DIV2>
+                        <CHRONSTRUCT RESP="SYS" RELEVANCE="SELECTIVE" CHRONCOLUMN="WRITINGCLIMATE">
+                            <DATE>[Insert date]</DATE>
+                            <CHRONPROSE><BIRTHPOSITION>[Insert prose statement about birth here:
+                                    place, birth position if known, any other relevant detail.
+                                    Delete Birthposition tag if this is not
+                                known.]</BIRTHPOSITION></CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT>Insert citation information here</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <RESEARCHNOTE>Above is an empty bibliographical citation (BIBCIT tag):
+                            please fill in the appropriate information, plus both the PLACEHOLDER,
+                            and the DBREF attributes. Note that the plural BIBCITS tag is used to
+                            enclose one or any number of BIBCIT tags. Please insert at least one
+                            BIBCIT at the end of each paragraph or CHRONSTRUCT.</RESEARCHNOTE>
+                        <SHORTPROSE>
+                            <P>[Insert any further details of birth here. Delete tags if nothing
+                                further to add.] <BIBCITS>
+                                    <BIBCIT>Insert citation information here</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </BIRTH>
+            </DIV1>
+            <DIV1>
+                <CULTURALFORMATION>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>[Insert prose summary here of issues and circumstances surrounding
+                                class, language, religion, sexuality, race, ethnicity, nationality,
+                                and geographical heritage. This tag should always be used even if
+                                all you have little to say, e.g. that she was a middle-class
+                                Englishwoman, Methodist, presumably white. If you want to enter into
+                                detail about any of these issues, do so in a second-level DIV2 tag
+                                within CulturalFormation (see list in About the Tags), e.g.
+                                &lt;culturalformation>&lt;religion>&lt;div2>&lt;shortprose>&lt;p>[prose
+                                description of sect or personal beliefs
+                                here]&lt;/>&lt;/>&lt;/>&lt;/>,&lt;/>. One example follows.</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                    <RELIGION>
+                        <DIV2>
+                            <SHORTPROSE>
+                                <P>[Insert information here if, for instance, she later diverged
+                                    sharply from the religion of her upbringing. Tag e.g. Anglican
+                                    Church with both &lt;denomination> and &lt;orgname> tags.]</P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </RELIGION>
+                </CULTURALFORMATION>
+            </DIV1>
+            <DIV1>
+                <FAMILY>
+                    <MEMBER RELATION="MOTHER">
+                        <DIV2>
+                            <HEADING>Mother</HEADING>
+                            <SHORTPROSE>
+                                <P>[Insert prose here: a paragraph or two if you have pertinent
+                                    information, but always in sentence form even if you have
+                                    nothing but a birth name.]</P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </MEMBER>
+                    <MEMBER RELATION="FATHER">
+                        <DIV2>
+                            <HEADING>Father</HEADING>
+                            <SHORTPROSE>
+                                <P>[Insert prose here]</P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </MEMBER>
+                    <MEMBER RELATION="OTHER">
+                        <DIV2>
+                            <SHORTPROSE>
+                                <P>[Insert prose here and in parallel div2s about any siblings,
+                                    grandparents, aunts etc. who call for comment. Alter attribute
+                                    according to relation. Copy and repeat as necessary; add
+                                    Heading(s) to taste; delete this Member tag if nothing to say
+                                    about family members except parents. You can insert a &lt;div2>
+                                    immediately inside the &lt;family> tag (without using
+                                    &lt;member> for general statements about the family.]</P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </MEMBER>
+                </FAMILY>
+            </DIV1>
+            <DIV1>
+                <HEADING>Education</HEADING>
+                <RESEARCHNOTE>Please click on the EDUCATION element below, and add the appropriate
+                    MODE attribute value (see attribute panel after clicking on
+                    EDUCATION)</RESEARCHNOTE>
+                <EDUCATION>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>[Insert prose here. You may want to add another Education tag to
+                                recognize two MODE attributes, e.g. one for Institutional and one
+                                for Self-taught. Remember there are specific tags for subjects
+                                studied, school companions, instructors, degrees, awards, and
+                                contested behaviour (rebellion, nonconformity, etc.). Remember also
+                                to use a chronstruct wherever you want to tie a statement to a date.<BIBCITS>
+                                    <BIBCIT>Insert citation information here</BIBCIT>
+                                </BIBCITS>]</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </EDUCATION>
+            </DIV1>
+            <DIV1>
+                <LOCATION RELATIONTO="LIVED">
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>[You will likely want to say where she grew up. This Location tag may
+                                be used to capture information about later places connected with
+                                her, or you may prefer to open another one(s) later. You may use it,
+                                too, with different attributes for visiting, travelling, etc. Delete
+                                this tag if nothing to say on this subject.]<BIBCITS>
+                                    <BIBCIT>Insert citation information here</BIBCIT>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </LOCATION>
+            </DIV1>
+            <DIV1>
+                <HEADING>Marriage</HEADING>
+                <RESEARCHNOTE>Please click on the MEMBER element below, and add the appropriate
+                    RELATION attribute value (currently set to "HUSBAND"). Delete complete DIV1 if
+                    not applicable.)</RESEARCHNOTE>
+                <FAMILY>
+                    <MEMBER RELATION="HUSBAND">
+                        <MARRIAGE>
+                            <DIV2>
+                                <CHRONSTRUCT CHRONCOLUMN="BRITISHWOMENWRITERS"
+                                    RELEVANCE="COMPREHENSIVE" RESP="IMG">
+                                    <DATE/>
+                                    <CHRONPROSE>[Wedding date is a milestone worth mentioning if
+                                        known. If you can&apos;t or don&apos;t want to give it,
+                                        delete Chronstruct. <RESEARCHNOTE>n.b. choosing a Relevance
+                                            attribute is a judgement call. Most events in bio
+                                            documents are Comprehensive (furthest from Selective)
+                                            because they are not significant to literary history,
+                                            only to the subject herself.</RESEARCHNOTE></CHRONPROSE>
+                                    <BIBCITS>
+                                        <BIBCIT>Insert citation information here</BIBCIT>
+                                    </BIBCITS>
+                                </CHRONSTRUCT>
+                                <SHORTPROSE>
+                                    <P>[Insert prose here about either the spouse, the marriage, or
+                                        both. You may want to place information about children here
+                                        (inside &lt;children> tag with attribute giving number;
+                                        still births etc. are counted in if recorded). Or you may
+                                        want a separate &lt;member> tag for a child whose life or
+                                        career is of interest.]</P>
+                                </SHORTPROSE>
+                            </DIV2>
+                        </MARRIAGE>
+                    </MEMBER>
+                    <MEMBER RELATION="CHILD">
+                        <DIV2>
+                            <SHORTPROSE>
+                                <P>[This is another member tag for a child. Change the attribute on
+                                    the member tag if you want to specify a daughter, son, or
+                                    another relation.</P>
+                            </SHORTPROSE>
+                        </DIV2>
+                    </MEMBER>
+                </FAMILY>
+            </DIV1>
+            <DIV1>
+                <HEADING>Occupation</HEADING>
+                <OCCUPATION>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>[Insert prose here: anything about a writer&apos;s day job or other
+                                important activities. Choose different words for &lt;heading> if
+                                appropriate. Use &lt;job> for paid work and &lt;significantactivity>
+                                for something major but unpaid. Delete the tag if nothing to say
+                                about work.]</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </OCCUPATION>
+            </DIV1>
+            <DIV1>
+                <POLITICS>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>[Insert any statement about political activity, using
+                                &lt;politicalaffiliation> tag if appropriate. Orlando defines
+                                political activity broadly, encompassing activism around
+                                vegetarianism, homelessness, etc. &lt;Liveswith> tag is available
+                                here. Use &lt;heading> if you wish and include citation.]</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </POLITICS>
+            </DIV1>
+            <DIV1>
+                <FRIENDSASSOCIATES>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>[Insert comment on friendships, joint action, enmities etc. Tag
+                                names; use &lt;heading> if you wish, include citation.]</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </FRIENDSASSOCIATES>
+            </DIV1>
+            <DIV1>
+                <INTIMATERELATIONSHIPS>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>[Remember this tag covers more than only sexual relations (see
+                                attribute). Occasionally family or business relationships may
+                                qualify. &lt;Liveswith> tag is available here.]</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </INTIMATERELATIONSHIPS>
+            </DIV1>
+            <DIV1>
+                <WEALTH>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>[Insert any information about non-literary earnings, family money,
+                                extraordinary expenses, etc. This tag seems to capture more about
+                                poverty than about wealth.]</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </WEALTH>
+            </DIV1>
+            <DIV1>
+                <HEALTH>
+                    <DIV2>
+                        <SHORTPROSE>
+                            <P>[Use this for significant rather than day-to-day information;
+                                don&apos;t get overwhelmed in detail.]</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </HEALTH>
+            </DIV1>
+            <RESEARCHNOTE>n.b. there are still more big-bucket tags available - &lt;violence>, used
+                both for e.g. marital violence and for e.g. bombing in wartime,
+                &lt;leisureandsociety>, and &lt;otherlifeevent> - for which the procedure is as
+                above. Delete the Div1 below (&lt;Death>) if subject still alive.</RESEARCHNOTE>
+            <DIV1>
+                <HEADING>Death</HEADING>
+                <DEATH>
+                    <DIV2>
+                        <CHRONSTRUCT RESP="SYS" RELEVANCE="SELECTIVE" CHRONCOLUMN="WRITINGCLIMATE">
+                            <DATE>[InsertDate]</DATE>
+                            <CHRONPROSE>[Insert summary of event here, including place and cause
+                                (for which there is a tag) if known]</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT>Insert citation information here</BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>[Insert details of event here]</P>
+                        </SHORTPROSE>
+                    </DIV2>
+                </DEATH>
+            </DIV1>
+        </BIOGRAPHY>
+        <WRITING>
+            <HEADING>Writing</HEADING>
+            <DIV1>
+                <HEADING>[Insert first heading: could be Novels, or Before her First Travels, or
+                    Left Unpublished, depending on how you decide to organize the
+                    document.]</HEADING>
+                <DIV2>
+                    <HEADING>Insert first subheading if you wish. If you are going to comment on a
+                        string of works, you may want a new div2 for each, whose subheadings are all
+                        titles. If you&apos;re giving just 2 paragraphs to her novels, grouping them
+                        all together, you probably don&apos;t want any subheading at all.</HEADING>
+                    <RESEARCHNOTE>If it&apos;s one div2 per text, then you need a bibliography entry
+                        for each, and a Textscope tag (which goes, as here, inside the div2 tag,
+                        after the heading). A textscope has no <SOCALLED>prose</SOCALLED>, only the
+                        attribute values filled in for dbref and placeholder. The first is the bibl
+                        dbase number, the latter lists author, Reg title, and date, e.g. Jane
+                        Austen, Pride and Prejudice, 1813. The textscope exists to link all
+                        citations of a primary text to the core discussion of it. Before making any
+                        new entry in the bibliography database, check to see if this text (in this
+                        edition) is already listed there; if so, use the existing bibl dbase
+                        number.</RESEARCHNOTE>
+                    <TEXTSCOPE> </TEXTSCOPE>
+                    <PRODUCTION>
+                        <RESEARCHNOTE>PRODUCTION : In this section you can supply basic facts about
+                            composition and publication. You can also as far as you wish expand on
+                            literary activity related to the work or group of works in question,
+                            writing influences, literary schools, material conditions of writing,
+                            authorship issues, relationships with publishers, rejections, earnings,
+                            editions, mode of publication, type of press, place of publication,
+                            price, editions, periodical publication, circulation, press run,
+                            advertising, anthologization, media, manuscript history, current
+                            archival locations, etc.</RESEARCHNOTE>
+                        <CHRONSTRUCT CHRONCOLUMN="WRITINGCLIMATE" RELEVANCE="SELECTIVE" RESP="SYS">
+                            <DATE>DD Month YYYY</DATE>
+                            <CHRONPROSE>[Insert brief (ideally not more than two lines) statement as
+                                to composition (if this is dated) or publication. Include title of
+                                work and if possible name and tag its genre(s). Though you may wish
+                                to name publisher and/or place of publication you don&apos;t need
+                                to, since this will be available in the bibliographic
+                                    listing.]<RESEARCHNOTE>You may not wish to tie any statement
+                                    about this text or group of texts to a date (for appearing in
+                                    timelines). In that case delete the Chronstruct and position
+                                    your comments in Shortprose.</RESEARCHNOTE></CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT>
+                                    <RESEARCHNOTE>You need a citation for specific facts (see Life
+                                        template).</RESEARCHNOTE>
+                                </BIBCIT>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>[Add more details, as above, about this text and its
+                                    making.]<RESEARCHNOTE>As in everything else, your best guide is
+                                    to look at existing Orlando entries and see how they are
+                                    structured.</RESEARCHNOTE><BIBCITS>
+                                    <BIBCIT/>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </PRODUCTION>
+                    <TEXTUALFEATURES>
+                        <RESEARCHNOTE>TEXTUALFEATURES: Descriptions or summaries of plot, setting,
+                            genre names, tone/style, voice/narration, literary techniques,
+                            theme/topic, motifs, characters, intertextuality:anything you want to
+                            say about this text(s).</RESEARCHNOTE>
+                        <SHORTPROSE>
+                            <P>[Textual features prose here]</P>
+                        </SHORTPROSE>
+                    </TEXTUALFEATURES>
+                    <RECEPTION>
+                        <SHORTPROSE>
+                            <RESEARCHNOTE>RECEPTION: Responses to his/her work: reviews,
+                                self-description, fictionalized treatments of the author,
+                                recognitions with name and value where appropriate, penalties,
+                                destruction of work, influence exerted, best known work, status as
+                                landmark text (if any, and if not said in publication Chronstruct).
+                                N.b. responses to a specific work are best discussed in its div2;
+                                reponses to a writer&apos;s oeuvre are best kept for separate
+                                Reception tag late in the entry.</RESEARCHNOTE>
+                            <P>[Reception prose here]<BIBCITS>
+                                    <BIBCIT/>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </RECEPTION>
+                </DIV2>
+            </DIV1>
+            <DIV1>
+                <HEADING>Insert second heading: could be Poetry, or After Visiting Asia, or In
+                    Periodicals, etc.</HEADING>
+                <RESEARCHNOTE>To create more sections or subsections, EITHER copy this entire DIV1
+                    and paste below, after the div1 ends and before the WORKSCITED tag, OR copy the
+                    div2 that follows and paste it after the div2 ends but before the div1 ends. You
+                    may need to do this several times or many times. Do it BEFORE you begin writing
+                    within the existing div1 or div2.</RESEARCHNOTE>
+                <DIV2>
+                    <HEADING>Insert subheading if desired.</HEADING>
+                    <TEXTSCOPE/>
+                    <PRODUCTION>
+                        <CHRONSTRUCT CHRONCOLUMN="WRITINGCLIMATE" RELEVANCE="SELECTIVE" RESP="SYS">
+                            <DATE>DD Month YYYY</DATE>
+                            <CHRONPROSE>[Event Prose: anything that needs to be tied to a date, like
+                                composition, submission/rejection, publication.</CHRONPROSE>
+                            <BIBCITS>
+                                <BIBCIT/>
+                            </BIBCITS>
+                        </CHRONSTRUCT>
+                        <SHORTPROSE>
+                            <P>[further details of composition and publication ]<BIBCITS>
+                                    <BIBCIT/>
+                                </BIBCITS></P>
+                        </SHORTPROSE>
+                    </PRODUCTION>
+                    <TEXTUALFEATURES>
+                        <SHORTPROSE>
+                            <P>[Textual features prose here]</P>
+                        </SHORTPROSE>
+                    </TEXTUALFEATURES>
+                    <RECEPTION>
+                        <SHORTPROSE>
+                            <P>[Reception prose here]</P>
+                        </SHORTPROSE>
+                    </RECEPTION>
+                </DIV2>
+            </DIV1>
+            <RESEARCHNOTE>You may wish to close with a
+                &lt;div1>&lt;div2>&lt;production>&lt;shortprose>&lt;p> containing a general
+                statement about e.g. editions or translations or illustration or performance, or
+                about whereabouts of archives. And/or with parallel &lt;textualfeatures> or
+                &lt;reception> sections about general characteristics of her oeuvre, and/or about
+                initial success and later attack, or vice versa, or reputation generally. You may or
+                may not wish to give such a paragraph or paragraphs a Heading. Don&apos;t forget to
+                compare with some existing Orlando entries!</RESEARCHNOTE>
+        </WRITING>
+        <WORKSCITED>
+            <SOURCE> Unless otherwise noted, all information is from <TITLE TITLETYPE="MONOGRAPHIC"
+                    >[InsertSourceTitle]</TITLE>. </SOURCE>
+            <SOURCE>[InsertWorkCited]</SOURCE>
+            <RESEARCHNOTE>You may find it useful to insert here details of sources you have used, if
+                for instance someone else, not yourself, is going to enter them in the bibl
+                dbase.</RESEARCHNOTE>
+
+        </WORKSCITED>
+    </DIV0>
+</ENTRY>
