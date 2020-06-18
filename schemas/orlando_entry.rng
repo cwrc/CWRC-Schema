@@ -245,7 +245,7 @@
                         both for minor writers about whom little is known, and for major writers
                         whose work needs to be sumarized before launching into the
                         details.</a:documentation>
-                    <optional><oneOrMore><ref name="P"/></oneOrMore></optional>
+                    <optional><oneOrMore><choice><ref name="P"/><ref name="RESEARCHNOTE"/></choice></oneOrMore></optional>
                 </element>
                 <choice>
                     <ref name="BIOGRAPHY"/>
