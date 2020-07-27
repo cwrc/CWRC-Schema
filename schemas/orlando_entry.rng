@@ -184,6 +184,11 @@
                                             >item contains one component of a
                                             list.</a:documentation>
                                         <text/>
+                                        <optional>
+                                            <oneOrMore>
+                                                <ref name="NAME"></ref>
+                                            </oneOrMore>
+                                        </optional>
                                     </element>
                                 </zeroOrMore>
                             </element>
@@ -255,6 +260,16 @@
                         <ref name="WRITING"/>
                     </group>
                 </choice>
+                <optional>
+                    <element name="BIOGPROSE">
+                        <oneOrMore>
+                            <choice>
+                                <text/>
+                                <ref name="RESEARCHNOTE"/>
+                            </choice>
+                        </oneOrMore>
+                    </element>
+                </optional>
                 <element name="WORKSCITED">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                         >The WorksCited is an informal but complete list of all sources used in the
