@@ -260,17 +260,7 @@
                         <ref name="WRITING"/>
                     </group>
                 </choice>
-                <optional>
-                    <element name="BIOGPROSE">
-                        <oneOrMore>
-                            <choice>
-                                <text/>
-                                <ref name="RESEARCHNOTE"/>
-                            </choice>
-                        </oneOrMore>
-                    </element>
-                </optional>
-                <element name="WORKSCITED">
+                 <element name="WORKSCITED">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                         >The WorksCited is an informal but complete list of all sources used in the
                         writing of documents. You should ensure that all of these sources are also
@@ -1129,6 +1119,16 @@
 
                 </choice>
             </oneOrMore></optional>
+            <optional>
+                <element name="BIOGPROSE">
+                    <oneOrMore>
+                        <choice>
+                            <text/>
+                            <ref name="RESEARCHNOTE"/>
+                        </choice>
+                    </oneOrMore>
+                </element>
+            </optional>
         </element>
     </define>
 
