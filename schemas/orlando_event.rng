@@ -1389,6 +1389,14 @@
                 </attribute>
             </optional>
             <optional>
+                <attribute name="REG" a:documentation="Regularized value">
+                    <a:documentation
+                        xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                        >Reg (or regularization) contains a reading which has been
+                        regularized or normalized in some sense.</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
                 <attribute name="LAT">
                     <a:documentation>Latitude in decimal degrees of the place entity. Example: for
                         the place entity Edmonton, the latitude in decimal degrees is "53.55014"
