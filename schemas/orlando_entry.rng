@@ -22,22 +22,6 @@
                     <value>IBRWRITER</value>
                 </choice>
             </attribute>
-            <attribute name="SEX">
-                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sex
-                    is an attribute applied to the Writing document as a whole, and specifies
-                    whether the individual who is the subject of the document is female, male,
-                    transgendered, transgendered male-to-female, transgendered female-to-male, or
-                    undefined.</a:documentation>
-                <choice>
-                    <value>FEMALE</value>
-                    <value>MALE</value>
-                    <value>TRANSGENDERED</value>
-                    <value>TRANSGENDERED FEMALE-TO-MALE</value>
-                    <value>TRANSGENDERED MALE-TO-FEMALE</value>
-                    <value>UNDEFINED</value>
-                    <data type="string"/>
-                </choice>
-            </attribute>
             <element name="ORLANDOHEADER">
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     >Equivalent to TEI's TEIHeader, OrlandoHeader supplies the descriptive and
@@ -776,6 +760,9 @@
                                             which to analyse the construction of
                                             subjectivity.</a:documentation>
                                         <optional>
+                                            <ref name="GENDER"/>
+                                        </optional>
+                                        <optional>
                                             <choice>
                                                 <ref name="CLASS"/>
                                                 <ref name="RACECOLOUR"/>
@@ -809,6 +796,22 @@
                                                   <ref name="CHRONSTRUCT"/>
                                                   <ref name="DIV2"/>
                                                   </choice>
+                                                  </element>
+                                                  <element name="GENDERISSUE">
+                                                  <a:documentation
+                                                  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                                                  >GENDERISSUE is a significant sub-element within
+                                                  GENDER which captures a discussion about a
+                                                  writer’s understanding and embodiment of gender.
+                                                  It works in conjunction with the GENDER element
+                                                  and its GENDERIDENTITY attribute to structure the
+                                                  gender subject positions of writers with textbase
+                                                  profiles. Use to discuss issues of importance
+                                                  around a woman's gender as it impinges upon
+                                                  identity, such as when a writer explores,
+                                                  questions, and critiques gender
+                                                  norms.</a:documentation>
+                                                  <ref name="DIV2"/>
                                                   </element>
                                                   <element name="NATIONALITYISSUE">
                                                   <a:documentation
@@ -2931,35 +2934,28 @@
 
     <define name="GENDER">
         <element name="GENDER">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The
-                gender element is designed to record gender-related information. See the gender
-                attribute which is attached to the gender element for more detailed
-                information.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This
+                element is designed to capture the gender of the subject to whom it is applied in a
+                single word or phrase. The GENDERISSUE tag is available for more substantive
+                discussions of gender and gender identity.Gender is a historically constructed and
+                linguistically complex category that can shift over the course of a person's
+                lifetime, in which case multiple elements can be used. The GENDER tag has multiple
+                attributes: GENDERIDENTITY, CURRENT, ALTERNATIVE, SELFIDENTITIED [etc] with
+                definitions for the latter attributes the same as for other CF terms. </a:documentation>
             <optional>
-                <attribute name="GENDER">
+                <attribute name="GENDERIDENTITY">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                        >This attribute is designed to capture the gender of the subject it is being
-                        applied to. Gender is a historically constructed and linguistically complex
-                        category that can shift over the course of a person's lifetime, in which
-                        case multiple values can be applied to this element. The values associated
-                        with this element are meant to capture the most common forms of gender
-                        identity; other terms may be provided in the prose content of the element.
-                        The values are the following: female, male, transgendered, transgendered
-                        male-to-female, transgendered female-to-male, undefined, ungendered, or
-                        unknown.</a:documentation>
+                        >The GENDERIDENTITY attribute values on the GENDER tag are meant to capture
+                        the most common forms of gender identity; other terms may be provided in the
+                        prose content of the element.</a:documentation>
                     <list>
                         <oneOrMore>
                             <choice>
-                                <value>FEMALE</value>
-                                <value>MALE</value>
-                                <value>TRANSGENDERED</value>
-                                <value>TRANSGENDERED FEMALE-TO-MALE</value>
-                                <value>TRANSGENDERED MALE-TO-FEMALE</value>
-                                <value>UNDEFINED</value>
-                                <value>UNGENDERED</value>
+                                <value>WOMAN</value>
+                                <value>NONCONFORMING</value>
+                                <value>TRANS</value>
+                                <value>MAN</value>
                                 <value>UNKNOWN</value>
-                                <data type="string"/>
-                                <empty/>
                             </choice>
                         </oneOrMore>
                     </list>
@@ -8978,8 +8974,11 @@
                         responded to other texts written by male or female
                         authors.</a:documentation>
                     <choice>
-                        <value>FEMALE</value>
-                        <value>MALE</value>
+                        <value>WOMAN</value>
+                        <value>NONCONFORMING</value>
+                        <value>TRANS</value>
+                        <value>MAN</value>
+                        <value>UNKNOWN</value>
                     </choice>
                 </attribute>
             </optional>
