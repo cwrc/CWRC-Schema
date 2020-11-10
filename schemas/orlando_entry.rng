@@ -199,6 +199,13 @@
                 </optional>
             </element>
             <element name="DIV0">
+                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Div0
+                    (i.e. level-0 text division) is the largest structural element permitted in any
+                    document. XML works on the principle that all information in a document exists
+                    hierarchically, or, stated otherwise, that all types of information can be contained
+                    in other types of information. For CWRC projects, Div0 is the element that contains
+                    everything in a document except the cataloguing information that is contained in the
+                    CWRCHeader element.</a:documentation>
                 <element name="STANDARD">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                         >Standard is an element used to record the standard name by which a woman
@@ -1177,14 +1184,6 @@
                     <data type="NCName"/>
                 </attribute>
             </optional>
-
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Div0
-                (i.e. level-0 text division) is the largest structural element permitted in any
-                document. XML works on the principle that all information in a document exists
-                hierarchically, or, stated otherwise, that all types of information can be contained
-                in other types of information. For CWRC projects, Div0 is the element that contains
-                everything in a document except the cataloguing information that is contained in the
-                CWRCHeader element.</a:documentation>
             <optional>
                 <oneOrMore>
                     <choice>
