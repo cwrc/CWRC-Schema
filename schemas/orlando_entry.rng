@@ -202,10 +202,10 @@
                 <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Div0
                     (i.e. level-0 text division) is the largest structural element permitted in any
                     document. XML works on the principle that all information in a document exists
-                    hierarchically, or, stated otherwise, that all types of information can be contained
-                    in other types of information. For CWRC projects, Div0 is the element that contains
-                    everything in a document except the cataloguing information that is contained in the
-                    CWRCHeader element.</a:documentation>
+                    hierarchically, or, stated otherwise, that all types of information can be
+                    contained in other types of information. For CWRC projects, Div0 is the element
+                    that contains everything in a document except the cataloguing information that
+                    is contained in the CWRCHeader element.</a:documentation>
                 <element name="STANDARD">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                         >Standard is an element used to record the standard name by which a woman
@@ -316,9 +316,12 @@
                                 xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Div1
                                 (i.e. level-1 text division) is an element that marks the second
                                 largest structural division in a document.</a:documentation>
+                            <optional>
+                                <ref name="HEADING"/>
+                            </optional>
                             <zeroOrMore>
                                 <choice>
-                                    <ref name="HEADING"/>
+                                    <!--<ref name="HEADING"/>-->
                                     <ref name="KEYWORDCLASS"/>
                                     <ref name="RESEARCHNOTE"/>
                                     <element name="BIRTH">
@@ -335,10 +338,7 @@
                                             <ref name="CHRONSTRUCT"/>
                                         </optional>
                                         <optional>
-                                            <choice>
-                                                <ref name="BIRTHPOSITION"/>
-                                                <ref name="RESEARCHNOTE"/>
-                                            </choice>
+                                            <ref name="RESEARCHNOTE"/>
                                         </optional>
                                         <zeroOrMore>
                                             <ref name="DIV2"/>
@@ -767,13 +767,9 @@
                                             which to analyse the construction of
                                             subjectivity.</a:documentation>
                                         <optional>
-                                            <oneOrMore><ref name="GENDER"/></oneOrMore>
-                                        </optional>
-                                        <optional>
-                                            <choice>
-                                                <ref name="CLASS"/>
-                                                <ref name="RACECOLOUR"/>
-                                            </choice>
+                                            <oneOrMore>
+                                                <ref name="GENDER"/>
+                                            </oneOrMore>
                                         </optional>
                                         <choice>
                                             <ref name="CHRONSTRUCT"/>
@@ -2565,9 +2561,7 @@
                             tabular data in the document.</a:documentation>
                         <oneOrMore>
                             <choice>
-                                <ref name="INDEXED"/>
                                 <ref name="RESEARCHNOTE"/>
-                                <ref name="SELFCONSTRUCTED"/>
                                 <element name="DATAITEM">
                                     <a:documentation
                                         xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
@@ -2642,12 +2636,7 @@
                                 </element>
                             </choice>
                         </oneOrMore>
-                        <optional>
-                            <choice>
-                                <ref name="MARRIED"/>
-                                <ref name="NICKNAME"/>
-                            </choice>
-                        </optional>
+
                     </element>
                     <element name="SHORTPROSE">
                         <oneOrMore>
