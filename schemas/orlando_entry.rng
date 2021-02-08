@@ -86,6 +86,17 @@
                     </element>
                 </element>
                 <optional>
+                    <element name="XENODATA">
+                        <a:documentation>(non-ORLANDO metadata) provides a container element into
+                            which metadata in non-ORLANDO formats may be placed. (similar in role to
+                            the homonymous TEI element)</a:documentation>
+                        <element name="rdf:RDF"
+                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                            <ref name="any_content"/>
+                        </element>
+                    </element>
+                </optional>
+                <optional>
                     <oneOrMore>
                         <element name="REVISIONDESC">
                             <a:documentation
