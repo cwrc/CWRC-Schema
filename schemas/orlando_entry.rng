@@ -221,9 +221,9 @@
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                         >Standard is an element used to record the standard name by which a woman
                         writer is known. It prefaces the document and should reflect the name under
-                        which she wrote or the name chosen as standard by the <em>Feminist
-                            Companion</em> or the <em>Drabble Oxford
-                        Companion</em>.</a:documentation>
+                        which she wrote or the name chosen as standard by the Feminist
+                            Companion or the Drabble Oxford
+                        Companion.</a:documentation>
                     <optional>
                         <attribute name="WROTEORPUBLISHEDAS" a:defaultValue="WROTEPUBLISHEDASYES">
                             <a:documentation
@@ -4954,7 +4954,7 @@
                 structures information about geographical location. Locating events and people is a
                 priority of our Project. By emphasizing the facts of where events occurred, we will
                 be able to bring together people and places, uncovering geographical connections
-                between writers as yet undiscovered. <br/>There are two main goals for tagging
+                between writers as yet undiscovered. There are two main goals for tagging
                 place: mapping and indexing. We hope to automatically provide our end users with
                 maps of literary history. For example, by using the places tagged with biography
                 documents, we hope to generate a map for each woman writer&apos;s life which places
@@ -4964,7 +4964,7 @@
                 it is crucial that we provide place information in a structured and recognizable
                 way. In addition to mapping, we want to provide end users with an index of places.
                 For example, we want to be able to index all women writers who lived in Bloomsbury
-                or all events which took place in Bath. <br/>While we prioritize the tagging of
+                or all events which took place in Bath. While we prioritize the tagging of
                 place, not all places require tagging. We hope to enhance our geographical
                 information by context specific tagging. For example, by tagging only places where
                 events occurred inside Event chronstructs and not all places mentioned within the
@@ -8502,13 +8502,13 @@
                 attributes: DBREF, which contains the dbref number of the corresponding bibliography
                 item in the bibl database, and PLACEHOLDER, which contains a brief mention of the
                 work under discussion and consists of the BWW's initials, a short title, and
-                date.<br/> This element must be used in conjunction with a Div 2. You may not use it
+                date. This element must be used in conjunction with a Div 2. You may not use it
                 at the Div 1 level. You do not need to use a TextScope for each individual text you
                 are discussing, or even for each text to which you devote an entire Div 2. Use the
                 TextScope to demarcate discussions of major texts only. A useful rule of thumb is to
                 consider whether you would enter the work under discussion in the bibliography
                 database. If you would, then use a textscope for your discussion. Minor works would
-                not be entered in the bibliography database and so do not require a textscope.<br/>
+                not be entered in the bibliography database and so do not require a textscope.
                 The TextScope is not the same as a heading (and in fact may directly repeat your
                 heading). Instead, the textScope demarcates the main discussion of a text for
                 searching/indexing purposes. It is also used as a bibliographic pointer that will

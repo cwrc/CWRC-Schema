@@ -1558,7 +1558,7 @@
         <element name="STANDARD">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Standard is an element used to record the
             standard name by which a woman writer is known. It prefaces the document and should reflect the name under which she wrote
-            or the name chosen as standard by the <em>Feminist Companion</em> or the <em>Drabble Oxford Companion</em>.</a:documentation>
+            or the name chosen as standard by the Feminist Companion or the Drabble Oxford Companion.</a:documentation>
             <optional>
                 <attribute name="WROTEORPUBLISHEDAS" a:defaultValue="WROTEPUBLISHEDASYES">
                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">WroteOrPublishedAs is an attribute
@@ -2780,13 +2780,13 @@
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Place is a universal element, available throughout most XML
                 elements, which structures information about geographical location. Locating events and people is a priority of CWRC projects. By
                 emphasizing the facts of where events occurred, we will be able to bring together people and places, uncovering geographical connections
-                between writers as yet undiscovered. <br/>There are two main goals for tagging place: mapping and indexing. We hope to automatically
+                between writers as yet undiscovered. There are two main goals for tagging place: mapping and indexing. We hope to automatically
                 provide our end users with maps of literary history. For example, by using the places tagged with biography documents, we hope to
                 generate a map for each woman writer&apos;s life which places her in specific places at specific times in her life. We also hope to
                 allow end users to see a map of events for a particular year which would bring together geographical information from different CWRC
                 projects. In order to automate mapping, it is crucial that we provide place information in a structured and recognizable way. In
                 addition to mapping, we want to provide end users with an index of places. For example, we want to be able to index all women writers
-                who lived in Bloomsbury or all events which took place in Bath. <br/>While we prioritize the tagging of place, not all places require
+                who lived in Bloomsbury or all events which took place in Bath. While we prioritize the tagging of place, not all places require
                 tagging. We hope to enhance our geographical information by context specific tagging. For example, by tagging only places where events
                 occurred inside Event chronstructs and not all places mentioned within the prose, we will be able to map that event to the place tagged.
                 </a:documentation>
