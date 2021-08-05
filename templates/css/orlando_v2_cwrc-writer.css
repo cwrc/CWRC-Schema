@@ -303,10 +303,7 @@ BIBCITS::after {
 } 
 
 BIBCITS:empty {
-  content : "!!! no BIBCITS";
-    padding-left : 1ex;
-    font-weight: bold;
-    color:red
+  content : url(https://cwrc.ca/templates/images/no_bibcit.png)
 }
 
 SCHOLARNOTE::before {
