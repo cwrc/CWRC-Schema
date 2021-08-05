@@ -19,7 +19,7 @@ ORLANDOHEADER {
     font-size : small;
 }
 FILEDESC {
-    content : url(http://cwrc.ca/templates/images/theorlandoproject.gif);
+    content : url(https://cwrc.ca/templates/images/theorlandoproject.gif);
     background-color : #990000;
     color : #FFF;
     font-weight : bold;
@@ -182,59 +182,59 @@ CHRONSTRUCT DATE {
     font-weight : bold;
 }
 CHRONSTRUCT[CHRONCOLUMN = "BRITISHWOMENWRITERS"]::before {
-    content : url(http://cwrc.ca/templates/images/pen1.gif);
+    content : url(https://cwrc.ca/templates/images/pen1.gif);
 }
 /*
   CHRONSTRUCT[CHRONCOLUMN1="BRITISHWOMENWRITERS1"]{
-  content:url(http://cwrc.ca/templates/images/pen1.gif);
+  content:url(https://cwrc.ca/templates/images/pen1.gif);
   }
   CHRONSTRUCT[CHRONCOLUMN2="BRITISHWOMENWRITERS2"]{
-  content:url(http://cwrc.ca/templates/images/pen1.gif);
+  content:url(https://cwrc.ca/templates/images/pen1.gif);
   }
   CHRONSTRUCT[CHRONCOLUMN3="BRITISHWOMENWRITERS3"]{
-  content:url(http://cwrc.ca/templates/images/pen1.gif);
+  content:url(https://cwrc.ca/templates/images/pen1.gif);
   }
  */
 CHRONSTRUCT[CHRONCOLUMN = "NATIONALINTERNATIONAL"]::before {
-    content : url(http://cwrc.ca/templates/images/earth1.gif);
+    content : url(https://cwrc.ca/templates/images/earth1.gif);
 }
 /*
   CHRONSTRUCT[CHRONCOLUMN1="NATIONALINTERNATIONAL1"]{
-  content:url(http://cwrc.ca/templates/images/earth1.gif);
+  content:url(https://cwrc.ca/templates/images/earth1.gif);
   }
   CHRONSTRUCT[CHRONCOLUMN2="NATIONALINTERNATIONAL2"]{
-  content:url(http://cwrc.ca/templates/images/earth1.gif);
+  content:url(https://cwrc.ca/templates/images/earth1.gif);
   }
   CHRONSTRUCT[CHRONCOLUMN3="NATIONALINTERNATIONAL3"]{
-  content:url(http://cwrc.ca/templates/images/earth1.gif);
+  content:url(https://cwrc.ca/templates/images/earth1.gif);
   }
  */
 CHRONSTRUCT[CHRONCOLUMN = "SOCIALCLIMATE"]::before {
-    content : url(http://cwrc.ca/templates/images/people1.gif);
+    content : url(https://cwrc.ca/templates/images/people1.gif);
 }
 /*
   CHRONSTRUCT[CHRONCOLUMN1="SOCIALCLIMATE1"]{
-  content:url(http://cwrc.ca/templates/images/people1.gif);
+  content:url(https://cwrc.ca/templates/images/people1.gif);
   }
   CHRONSTRUCT[CHRONCOLUMN2="SOCIALCLIMATE2"]{
-  content:url(http://cwrc.ca/templates/images/people1.gif);
+  content:url(https://cwrc.ca/templates/images/people1.gif);
   }
   CHRONSTRUCT[CHRONCOLUMN3="SOCIALCLIMATE3"]{
-  content:url(http://cwrc.ca/templates/images/people1.gif);
+  content:url(https://cwrc.ca/templates/images/people1.gif);
   }
  */
 CHRONSTRUCT[CHRONCOLUMN = "WRITINGCLIMATE"]::before {
-    content : url(http://cwrc.ca/templates/images/book1.gif);
+    content : url(https://cwrc.ca/templates/images/book1.gif);
 }
 /*
   CHRONSTRUCT[CHRONCOLUMN1="WRITINGCLIMATE1"]{
-  content:url(http://cwrc.ca/templates/images/book1.gif);
+  content:url(https://cwrc.ca/templates/images/book1.gif);
   }
   CHRONSTRUCT[CHRONCOLUMN2="WRITINGCLIMATE2"]{
-  content:url(http://cwrc.ca/templates/images/book1.gif);
+  content:url(https://cwrc.ca/templates/images/book1.gif);
   }
   CHRONSTRUCT[CHRONCOLUMN3="WRITINGCLIMATE3"]{
-  content:url(http://cwrc.ca/templates/images/book1.gif);
+  content:url(https://cwrc.ca/templates/images/book1.gif);
   }
  */
 SHORTPROSE {
@@ -300,10 +300,18 @@ BIBCITS::before {
 }    
 BIBCITS::after {
     content : " ";
-}    
+} 
+
+BIBCITS:empty {
+  content : "!!! no BIBCITS";
+    padding-left : 1ex;
+    font-weight: bold;
+    color:red
+}
+
 SCHOLARNOTE::before {
     /* 
-    content : url(http://cwrc.ca/templates/images/note.gif);
+    content : url(https://cwrc.ca/templates/images/note.gif);
     padding-left : 1ex;
     */
 }
