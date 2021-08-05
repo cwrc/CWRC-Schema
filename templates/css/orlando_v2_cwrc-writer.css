@@ -296,15 +296,14 @@ BIBCIT:hover:after {
     }
     */
 BIBCITS::before {
-    content : " ";
+    content : " Citations    ";
+    color: red
 }    
 BIBCITS::after {
-    content : " ";
+    content : "    Citations";
+    color: red
 } 
 
-BIBCITS:empty {
-  content : url(https://cwrc.ca/templates/images/no_bibcit.png)
-}
 
 SCHOLARNOTE::before {
     /* 
