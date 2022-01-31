@@ -1226,7 +1226,10 @@ docTitle {
 }
 /*DToC changes */
 body,
-div[type = "chapter"] {
+div[type = "chapter"],
+div[type = "preface"],
+div[type = "afterword"],
+div[type = "contributors"]{
   display: block;
   padding-left: 0.5em;
   padding-right: 0.5em;
