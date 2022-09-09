@@ -74,21 +74,21 @@ text{
 
 *[_tag = "bibl"]{
     display:list-item;
-    list-style-image:url(http://cwrc.ca/templates/images/TEI-bibl.jpg);
+    list-style-image:url(https://cwrc.ca/templates/images/TEI-bibl.jpg);
     list-style-position:inside
 }
 
 *[_tag = "note"][type  =  "researchNote"]:before{
-    content:url(http://cwrc.ca/templates/images/TEI-info-RN.jpg);
+    content:url(https://cwrc.ca/templates/images/TEI-info-RN.jpg);
     padding-left:1em;
     padding-right:0.5em
 }
 *[_tag = "note"][type  =  "scholarNote"]:before{
-    content:url(http://cwrc.ca/templates/images/TEI-note-SN.jpg);
+    content:url(https://cwrc.ca/templates/images/TEI-note-SN.jpg);
     padding-right:0.5em
 }
 *[_tag = "note"][type  =  "keyword"]:before{
-    content:url(http://cwrc.ca/templates/images/TEI-keyword.jpg);
+    content:url(https://cwrc.ca/templates/images/TEI-keyword.jpg);
     padding-right:0.5em
 }
 *[_tag = "emph"]{
