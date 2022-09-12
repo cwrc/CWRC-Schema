@@ -621,9 +621,9 @@ l {
     display : block;
     white-space : nowrap;
 }
-l:after {
-    content:counter(line);
-    counter-increment: line;
+lg l:after {
+    counter-increment:line;
+    content: counter(line);
     text-align:right;
     float: right;
     color:silver;
@@ -667,6 +667,7 @@ lb:before {
 lg {
     display : block;
     margin-bottom : 0.5em;
+    counter-reset: line;
 }
 list {
     display : block;
