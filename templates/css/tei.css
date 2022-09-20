@@ -17,11 +17,22 @@
  *
  */
 /* Use Georgia for default font */
+@namespace xml url(https://www.w3.org/XML/1998/namespace);
+
 TEI {
     margin : 10px 25px;
     font-family : Georgia, serif;
     line-height : 1.5;
 }
+
+*[xml|lang ^= "ar"],
+*[xml|lang ^= "fa"],
+*[xml|lang ^= "he"],
+*[xml|lang ^= "iw"],
+*[xml|lang ^= "ota"] {
+    direction: rtl;
+}
+
 abbr {
     display : inline;
 }
