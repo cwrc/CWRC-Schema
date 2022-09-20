@@ -25,11 +25,11 @@ TEI {
     line-height : 1.5;
 }
 
-p[xml|lang="ar"],
-p[xml|lang="fa"],
-p[xml|lang="he"],
-p[xml|lang="iw"],
-p[xml|lang="ota"] {
+p[xml\:lang="ar"],
+p[xml\:lang="fa"],
+p[xml\:lang="he"],
+p[xml\:lang="iw"],
+p[xml\:lang="ota"] {
     direction: rtl;
 }
 
