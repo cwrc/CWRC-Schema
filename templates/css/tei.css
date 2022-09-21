@@ -17,7 +17,6 @@
  *
  */
 /* Use Georgia for default font */
-@namespace xml url(https://www.w3.org/XML/1998/namespace);
 
 TEI {
     margin : 10px 25px;
@@ -25,13 +24,6 @@ TEI {
     line-height : 1.5;
 }
 
-p[xml\:lang="ar"],
-p[xml\:lang="fa"],
-p[xml\:lang="he"],
-p[xml\:lang="iw"],
-p[xml\:lang="ota"] {
-    direction: rtl;
-}
 
 abbr {
     display : inline;
