@@ -137,6 +137,13 @@ AVAILABILITY {
 P {
     display : block;
 }
+RESEARCHNOTE:before {
+    content:'research note: [';
+    font-variant:small-caps;
+}
+RESEARCHNOTE:after {
+    content:']';
+}
 RESEARCHNOTE {
     background-color : #FBEFEF;
     color : #663366;
@@ -162,7 +169,7 @@ CHRONSTRUCT {
 CHRONSTRUCT DATE {
     font-weight : bold;
 }
-CHRONSTRUCT[CHRONCOLUMN = "BRITISHWOMENWRITERS"] {
+CHRONSTRUCT[CHRONCOLUMN = "BRITISHWOMENWRITERS"]::before {
     content : url(https://cwrc.ca/templates/images/pen1.gif);
 }
 /*
@@ -176,7 +183,7 @@ CHRONSTRUCT[CHRONCOLUMN = "BRITISHWOMENWRITERS"] {
   content:url(https://cwrc.ca/templates/images/pen1.gif);
   }
  */
-CHRONSTRUCT[CHRONCOLUMN = "NATIONALINTERNATIONAL"] {
+CHRONSTRUCT[CHRONCOLUMN = "NATIONALINTERNATIONAL"]::before {
     content : url(https://cwrc.ca/templates/images/earth1.gif);
 }
 /*
@@ -190,7 +197,7 @@ CHRONSTRUCT[CHRONCOLUMN = "NATIONALINTERNATIONAL"] {
   content:url(https://cwrc.ca/templates/images/earth1.gif);
   }
  */
-CHRONSTRUCT[CHRONCOLUMN = "SOCIALCLIMATE"] {
+CHRONSTRUCT[CHRONCOLUMN = "SOCIALCLIMATE"]::before {
     content : url(https://cwrc.ca/templates/images/people1.gif);
 }
 /*
@@ -204,7 +211,7 @@ CHRONSTRUCT[CHRONCOLUMN = "SOCIALCLIMATE"] {
   content:url(https://cwrc.ca/templates/images/people1.gif);
   }
  */
-CHRONSTRUCT[CHRONCOLUMN = "WRITINGCLIMATE"] {
+CHRONSTRUCT[CHRONCOLUMN = "WRITINGCLIMATE"]::before {
     content : url(https://cwrc.ca/templates/images/book1.gif);
 }
 /*
@@ -239,17 +246,22 @@ BIBCIT::before {
     font-size : small;
 }
 */
-BIBCIT {
+BIBCIT::before {
     content : url(https://cwrc.ca/templates/images/bibcit.gif);
     }
 BIBCITS {
     background-color : #FFC;
 }
 BIBCITS::before {
-    content : " ";
+    content : " (";
+}
+BIBCITS::after {
+    content : ") "
+}
+SCHOLARNOTE P ::before {
+    content : url(https://cwrc.ca/templates/images/note.gif)
 }
 SCHOLARNOTE P {
-    content : url(https://cwrc.ca/templates/images/note.gif);
     background-color : #E0E0F8;
 }
 NAME {
