@@ -784,9 +784,16 @@
             <data type="anyURI"/>
             <optional>
                 <ref name="cert-attribute"/>
+              <ref name="preferred-attribute"></ref>
             </optional>
         </element>
     </define>
+  <define name="preferred-attribute">
+    <attribute name="preferred">
+      <a:documentation>Captures whether the external identifier specified in the sameAs element is the preferred one.</a:documentation>
+      <value>yes</value>
+    </attribute>
+  </define>
 
     <define name="cert-attribute">
         <attribute name="cert" a:defaultValue="4">
