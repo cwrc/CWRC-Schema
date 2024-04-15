@@ -1,0 +1,1476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File name: entities.rng -->
+<!--
+  * MRB: Fri 01-Aug-2014
+  *
+  * Purpose: RELAX NG schema to model CWRC entities
+  *
+  * Description: A RELAX NG schema to model person entities, organization entities, and place entities.  As well, this omnibus schema also includes "interace
+  * annotation" code that is used to generate the entity creation/editing HTML forms (the "CWRC dialogs") for these three type of entities, using the
+  * <xs:annotation> element to contain this interface annotation code.
+  *
+  * Schema design pattern: Although the standard design pattern terminology found in the literature refers to, and is most appropriate for, W3C XML
+  * Schema (XSD), there is some applicability when applied to the schema design patterns in RELAX NG (RNG).  The standard four schema design patterns
+  * are the following: Russian Doll, Salami Slice, Venetian Blind, and Garden of Eden.  The CWRC entities schema uses the Garden of Eden design with respect
+  * to elements, wherein all elements are defined globally (the concept of "type", i.e., simple type and complex type, is only germane to XSD schemas), and all
+  * attributes are also defined globally (in the Garden of Eden pattern, type is defined globally, and type can be used to define attribute pattern directives).
+  *
+  * Interface annotation code: The interface annotation code has the following elements and attributes:
+  *  - <xs:annotation>: highest element; introduces start of an interface annotation code block
+  *  - <xs:appinfo>: second highest element; wrapper for interface annotation code
+  *  - <interface-field>: contains a @path attribute whose value is a Unix-style directory path of the
+  *        XML path through the XML tree to the element of interest; branches in the tree can be indicated
+  *        via a Boolean "or" using the pipe-divider symbol "|"; contains three child elements: <label>,
+  *        <help-text>, and <input>
+  *  - <label>: contains an @xml:lang attribute with a value of "en", and the text node value is the
+  *        text string that you want the label to display
+  *  - <help-text>: contains an @xml:lang attribute with a value of "en", and the text node value is the
+  *        help text string you want to see displayed when the user clicks on the icon with a question mark
+  *  - <input>: declares the type of form element; values are the following:
+  *        - combobox: defines a drop-down menu list (same as dropDown and slider)
+  *        - dialogue: this text node value also has a @label attribute with a value of "Add" in the <input>
+  *             element; only occurs twice, with "Variant names(s)" (the <variant> element), and "Dates of
+  *             existence" (the <dateSingle> element); doesn't appear to have any working function or purpose
+  *        - datePicker: used to call a JavaScript library that displays a calendar to select a date value
+  *        - dropDown: defines a drop-down menu list (same as combobox and slider)
+  *        - header: indicates that the <label> element text node value should have a CSS style applied to it
+  *             to make the font larger, as in a header
+  *        - slider: defines a drop-down menu list (same as combobox and dropDown)
+  *        - textArea: defines a multiline text area box
+  *        - textField: defines a single line text field
+  *        - readonlyTextField: defines a read-only single line text field
+  *  - <values>: can contain a @type attribute with possible values of person, organization, or place; provides
+  *        an enumerated list of values for the <input> element types of combobox, dropDown, and slider;
+  *        occurs as a child element of <xs:appinfo>; contains a child element of <choice>
+  *  - <choice>: a container element that contains the enumerated list of values; contains three child elements:
+  *        <value>, <data>, and <a:documentation>
+  *  - <value>: contains an @a:en attribute, whose value is what is displayed to the user in the drop-down menu
+  *        list; the text node value is the value associated with the element in the @path of the
+  *        <interface-field> element; can also have a @default attribute with a value of "yes", to indicate the
+  *        default value for the element listed in the @path attribute of the <interface-field> element
+  *  - <data>: contains an @a:en attribute with a value of "Specify" (what is displayed to the user in the
+  *        drop-down menu list), and a @type attribute with a values of "string"; used to record input from
+  *        the user for lists that are open
+  *  - <a:documentation>: it appears this was intended to provide help text associated with each value in the
+  *        enumerated list that is displayed to the user, but this feature was not implemented in the code
+  *  - <interface>: special container element only used by the interface order code block
+  *  - <interface-order>: special flag that contains the code that defines the order of the three top-level
+  *        elements of <identity>, <description>, and <recordInfo>
+-->
+<!--
+  *** Revisions ***
+       MRB: Thu 05-Mar-2016
+       * Added the value "Google Maps" to the list of enumerated values in the <projectId> element.
+       MRB: Tue 03-Mar-2016
+       * Changed the data type for the <entityId> element from "XML NMTOKEN" to "string".
+       * Added the value "VIAF" to the list of enumerated values in the <projectId> element.
+       MRB: Thu 10-Mar-2016
+       * Eliminated the <dateType> element enumerated list value of "flourish".
+       * Removed the <textDate> element.
+       * Restricted the <dateSingle> element to a single required <standardDate> child element, and a
+       single required <dateType> child element.
+       MRB: Mon 13-Jul-2015
+       * Added the <variantType> element to the interface annotation code for place entities, with the values of
+       "alternate names", "deprecated", and "historic".
+       * Fixed the duplication of the "ceww" and "eccji" values in the enumerated list of values for the <projectId>
+       element.
+       * Added the <resource> element to the interface annotation code for both organization entities and place
+       entities.
+        MRB: Mon 27-Apr-2015: Removed the <standardDate> regular expression patterns for the Orlando legacy
+        date format (YYYY-MM-, and YYYY-hyphen)
+       MRB: Thur 16-Apr-2015
+       * Added "emic" as an option for contribuing project.
+       MRB: Mon 23-Feb-2015
+       * Added a new value of "fullNameDirectOrder" to the enumerated list for the @partType attribute; also
+       changed the exisiting value of "fullName" to "fullNameInvertedOrder".
+       * Added interface annotation code to the <interest> element.
+       * Added interface annotation code to the <activity> element.
+       * Added interface annotation code to the <occupation> element.
+       * Changed the pattern directive for the <resource> element from <optional> to <zeroOrMore>.
+       * Changed the pattern directive for the <occupation> element from <optional> to <zeroOrMore>.
+       * Changed the pattern directive for the <recordChangeDate> element from <zeroOrMore> to <optional>.
+       MRB: Wed 11-Feb-2015
+       * Added new introductory schema comments on the interface annotation code.
+       * Added interface annotation code to the <recordCreationDate> element.
+       * Deleted the interface annotation code for the <originInfo> element, and added new interface annotation
+       code to the parent of <originInfo>, the element <recordInfo>; <recordInfo> is defined in three different
+       places in the schema (i.e., in recordInfo container elements for each of the person, organization, and
+       place entity code blocks).  Making this change makes the labelling hierarchy for the top-level <recordInfo>
+       element parallel the labelling structure of the other two top-level elements of <identity> and <description>.
+       * Changed the order of the three top-level elements from <recordInfo>, <identity>, and <description>, to
+       <identity>, <description>, and <recordInfo> (i.e., moved <recordInfo> from being the first top-level element
+       to being the last top-level element).  Also reordered the element and annotation definitions in the schema so
+       that they reflect this new sequence order.
+       * Added the <interleave> directive around the child elements of the <originInfo> element.
+       * Changed the access condition statement in the <accessCondition> element from CC BY-NC 3.0 to CC BY-NC 4.0.
+       MRB: Tue 19-Aug-2014: Redefined the regular expression patterns in the <standardDate> element; the regular
+       expression patterns allow for Orlando dates in the Orlando legacy date format YYYY-MM-DD, YYYY-MM-, and
+       YYYY-hyphen (possibly remove in the future if change dates in Orlando person entities to ISO 8601 formatted dates).
+       MRB: Fri 01-Aug-2014
+       * Revised and simplified the /entity/person/identity/preferredForm/namePart[@partType] attribute so that it only
+       has four enumerated values: family, given, fullName, and termsOfAddress; this parallels the enumerated list of values
+       that is used in the MODS schema's /mods/name/namePart[@type] attribute (except for the fullName value).
+       * Revised and simplifed the /entity/person/description/existDates element: deleted the <dateRange> child element;
+       added the @qualifier (approximate, inferred, questionable) attribute to the <standardDate> element; changed the
+       <dateType> element's enumerated list of values to birth, death, flourish, establishment, and dissolution.
+       * Deleted top-level <relations> element; an entity's relationships with other entities will be established in the RDF
+       triplestore.
+       * Changed the <projectId> element pattern from an open text field to a closed enumerated list (canwwr, ceww,
+       eccji, orlando).
+       * Deleted the @xml:id attribute and the 34 references to it (id-attribute); no need for a TEI-inspired reference
+       system to mark up particular sections of the spartan entities, because users will be linking to the entire entity, not
+       a part of the entity.
+       * Deleted elements and attributes that were not being, and would not be, used.
+       * Modified many of the annotation statements for both the schema annotation documentation and the interface
+       annotation code that provide element/attribute help statements and interface form element labels in the entity
+       creation/editing form dialogs.
+       * Reordered the element and annotation definitions in the schema so that they are in the sequence we would like
+       them to appear in the entity creation/editing form dialogs.
+       MRB: Tue 27-May-2014: Added schema code and interface annotation code for a <factuality> element in /entity/*/
+       description/factuality, with values of real, fictional, or both (i.e., a mixture of both real and fictional).
+       MRB: Tue 22-Apr-2014: Added interface annotation code to render header labels for the four top-level element
+       sections: recordInfo, identity, description, and relations.
+       MRB: Fri 14-Mar-2014: Added two new values to the <gender> element: "transgendered male-to-female", and
+       "transgendered female-to-male".
+       MRB: Mon 03-Mar-2014: Revised the <relations> element section's interface annotation code.
+       MRB: Sat 01-Mar-2014: Eliminated the <access> element.
+       MRB: Mon 18-Feb-2014
+       * Deleted child elements of the <note> element, the <access>, <p>, and <projectId> elements, and also made
+       these changes in the interface annotation code; deleted the <note> element attributes of @xml:id and @xml:lang
+       from the interface annotation code; and allowed text content to be written to the <note> element text node.
+       * Removed three "hidden" interface annotation code elements: the <accessCondition>, <recordChangeDate>, and
+       <recordCreationDate> elements.
+       MRB: Thu 16-Jan-2014: Added an originInfo/recordOrigin element.
+       MRB: Tue 07-Jan-2014: Revised and added to place entity section.
+       MRB: Mon 06-Jan-2014: Revised the <recordCreationDate> and <recordChangeDate> elements.
+       MRB: Fri 27-Dec-2013: Revised and added to place entity section.
+       MRB: Wed 18-Dec-2013: Added @url attribute to provide a link to various server-side lists of values.
+       MRB: Mon 16-Dec-2013: Added additional interface annotation code.
+       MRB: Mon 09-Dec-2013: Added interface annotation code for various elements and attributes.
+       MRB: Thu 05-Dec-2013
+       * Revised <personRef>, <organizationRef>, and <placeRef> elements so that relation references now can refer to a
+       repeatable child element of <name> as well as a repeatable child element of <uri>.
+       * Added an <accessCondition> element, along with its required attribute @type, and its optional
+       child element <a>, which has a required attribute of @href and an optional attribute of @rel.
+       MRB: Tue 19-Nov-2013: The <access> element in the XPath /cwrc/entity/*/recordInfo/access has been eliminated and will
+       be replaced with the <accessCondition> element in the XPath /cwrc/entity/*/recordInfo/accessCondition.
+       MRB: Mon 28-Oct-2013
+       Revised the following:
+       * Changed <standardDate> from a required element to an optional element.
+       * Changed <note><access> from a required element to an optional element.
+       MRB: Mon 09-Sep-2013: Revised <relation> element section so that relation references to person and organization follow
+       the approach adopted in the placeRef/uri approach, i.e., now have personRef/uri and organizationRef/uri.
+       MRB: July 2013: The entity schema now includes the person, organization, and place entity types; i.e., a place entity
+       code section was developed.  The title entity is defined by the MODS schema mods.xsd.  The events entity schema will
+       eventually be developed in RDF by JS.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="cwrc">
+    <xs:annotation>
+      <xs:documentation>Group of CWRC records</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="entity"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="entity">
+    <xs:annotation>
+      <xs:documentation>CWRC entity record</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="person"/>
+        <xs:element ref="organization"/>
+        <xs:element ref="place"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="person">
+    <xs:annotation>
+      <xs:documentation>CWRC person entity record</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="identity"/>
+        <xs:group ref="personDescription-element"/>
+        <xs:group ref="personRecordInfo-element"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="organization">
+    <xs:annotation>
+      <xs:documentation>CWRC organization entity record</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="identity"/>
+        <xs:group ref="orgDescription-element"/>
+        <xs:group ref="orgRecordInfo-element"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="place">
+    <xs:annotation>
+      <xs:documentation>CWRC place entity record</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="identity"/>
+        <xs:group ref="placeDescription-element"/>
+        <xs:group ref="placeRecordInfo-element"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="identity">
+    <xs:annotation>
+      <xs:documentation>A container element grouping data for identification of a CWRC entity
+                instance</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="preferredForm"/>
+        <xs:element ref="displayLabel"/>
+        <xs:element ref="variantForms"/>
+        <xs:element ref="sameAs"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="personDescription-element">
+    <xs:sequence>
+      <xs:element name="description">
+        <xs:annotation>
+          <xs:documentation>This section captures descriptive data about a CWRC person entity
+                record</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="existDates"/>
+            <xs:element ref="factuality"/>
+            <xs:element ref="genders"/>
+            <xs:element ref="occupations"/>
+            <xs:element ref="activities"/>
+            <xs:element ref="researchInterests"/>
+            <xs:element ref="descriptiveNotes"/>
+            <xs:element ref="relatedResources"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="orgDescription-element">
+    <xs:sequence>
+      <xs:element name="description">
+        <xs:annotation>
+          <xs:documentation>This section captures descriptive data about a CWRC organization entity
+                record</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="existDates"/>
+            <xs:element ref="factuality"/>
+            <xs:element ref="descriptiveNotes"/>
+            <xs:element ref="relatedResources"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="placeDescription-element">
+    <xs:sequence>
+      <xs:element name="description">
+        <xs:annotation>
+          <xs:documentation>This section captures descriptive data about a CWRC place entity
+                record</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="existDates"/>
+            <xs:element ref="factuality"/>
+            <xs:element ref="latitude"/>
+            <xs:element ref="longitude"/>
+            <xs:element ref="featureClass"/>
+            <xs:element ref="featureCodeLabel"/>
+            <xs:element ref="countryName"/>
+            <xs:element ref="firstAdministrativeDivision"/>
+            <xs:element ref="secondAdministrativeDivision"/>
+            <xs:element ref="elevation"/>
+            <xs:element ref="averageElevation"/>
+            <xs:element ref="timeZoneOffset"/>
+            <xs:element ref="descriptiveNotes"/>
+            <xs:element ref="relatedResources"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="personRecordInfo-element">
+    <xs:sequence>
+      <xs:element name="recordInfo">
+        <xs:annotation>
+          <xs:documentation>Captures record-level information. Components of this element are kept
+                to a minimum given that administrative and object-level metadata is captured in
+                other FOXML datastreams.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="personTypes"/>
+            <xs:element ref="originInfo"/>
+            <xs:element ref="entityId"/>
+            <xs:element ref="accessCondition"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="orgRecordInfo-element">
+    <xs:sequence>
+      <xs:element name="recordInfo">
+        <xs:annotation>
+          <xs:documentation>Captures record-level information. Components of this element are kept
+                to a minimum given that administrative and object-level metadata is captured in
+                other FOXML datastreams.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="orgTypes"/>
+            <xs:element ref="originInfo"/>
+            <xs:element ref="entityId"/>
+            <xs:element ref="accessCondition"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="placeRecordInfo-element">
+    <xs:sequence>
+      <xs:element name="recordInfo">
+        <xs:annotation>
+          <xs:documentation>Captures record-level information. Components of this element are kept
+                to a minimum given that administrative and object-level metadata is captured in
+                other FOXML datastreams.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="placeTypes"/>
+            <xs:element ref="originInfo"/>
+            <xs:element ref="entityId"/>
+            <xs:element ref="accessCondition"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:element name="preferredForm">
+    <xs:annotation>
+      <xs:documentation>An element used to indicate which recorded entity name is the preferred
+                one for display purposes in a given context.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="namePart"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="displayLabel" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Display label of entity described if different than CWRC's
+                preferredForm.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="namePart">
+    <xs:annotation>
+      <xs:documentation>Used to distinguish components of the name of the entity. Equivalent to
+                MADS's namePart and to EAC-CPF's part element.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attribute name="partType">
+        <xs:annotation>
+          <xs:documentation>Captures types of name components of person entities. Example:
+                family.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:union>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="fullNameInvertedOrder">
+                  <xs:annotation>
+                    <xs:documentation>e.g., Abergavenny, Frances Neville, Baroness</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="fullNameDirectOrder">
+                  <xs:annotation>
+                    <xs:documentation>e.g., Baroness Frances Neville Abergavenny</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="family">
+                  <xs:annotation>
+                    <xs:documentation>e.g., Abergavenny</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="given">
+                  <xs:annotation>
+                    <xs:documentation>e.g., Frances Neville</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+                <xs:enumeration value="termsOfAddress">
+                  <xs:annotation>
+                    <xs:documentation>e.g., Baroness</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:length value="0"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:union>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="partType-attribute">
+    <xs:attribute name="partType" use="required">
+      <xs:annotation>
+        <xs:documentation>Captures types of name components of person entities. Example:
+                family.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="fullNameInvertedOrder">
+                <xs:annotation>
+                  <xs:documentation>e.g., Abergavenny, Frances Neville, Baroness</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="fullNameDirectOrder">
+                <xs:annotation>
+                  <xs:documentation>e.g., Baroness Frances Neville Abergavenny</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="family">
+                <xs:annotation>
+                  <xs:documentation>e.g., Abergavenny</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="given">
+                <xs:annotation>
+                  <xs:documentation>e.g., Frances Neville</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+              <xs:enumeration value="termsOfAddress">
+                <xs:annotation>
+                  <xs:documentation>e.g., Baroness</xs:documentation>
+                </xs:annotation>
+              </xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:length value="0"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="variantForms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="variant"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="variant">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="namePart"/>
+        <xs:element ref="variantType"/>
+        <xs:element ref="authorizedBy"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="variantType">
+    <xs:annotation>
+      <xs:documentation>Captures name type to describe contexts in which this name was used to
+                refer to the present entity.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="birthName"/>
+        <xs:enumeration value="marriedName"/>
+        <xs:enumeration value="indexedName"/>
+        <xs:enumeration value="pseudonym"/>
+        <xs:enumeration value="usedForm"/>
+        <xs:enumeration value="nickname"/>
+        <xs:enumeration value="religiousName"/>
+        <xs:enumeration value="royalName"/>
+        <xs:enumeration value="selfConstructedName"/>
+        <xs:enumeration value="styledName"/>
+        <xs:enumeration value="titledName"/>
+        <xs:enumeration value="orlandoStandardName"/>
+        <xs:enumeration value="birthName"/>
+        <xs:enumeration value="descriptive">
+          <xs:annotation>
+            <xs:documentation>e.g., Women's Aid Society</xs:documentation>
+          </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="popular">
+          <xs:annotation>
+            <xs:documentation>e.g., "Wrens" for "Women's Royal Naval Service"</xs:documentation>
+          </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="acronym">
+          <xs:annotation>
+            <xs:documentation>e.g., OCLC</xs:documentation>
+          </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="alternate names">
+          <xs:annotation>
+            <xs:documentation>e.g.,
+                    Edmonton,Edmontona,Edmontonas,Edmontono,Edmundopolis,Edmuntun,Ehdmonton</xs:documentation>
+          </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="deprecated"/>
+        <xs:enumeration value="historic"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="authorizedBy">
+    <xs:annotation>
+      <xs:documentation>authorizedBy element captures a note indicating that one or more
+                projects use the present name as a preferred form in their local
+                context.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="projectId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sameAs">
+    <xs:annotation>
+      <xs:documentation>Enter a URI to a linked data resource that is the same as this entity
+                (e.g., a VIAF record).</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:anyURI">
+          <xs:attribute name="cert">
+            <xs:annotation>
+              <xs:documentation>Captures degree of certainty about a particular statement about the
+                entity described.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:union>
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:enumeration value="4"/>
+                    <xs:enumeration value="3"/>
+                    <xs:enumeration value="2"/>
+                    <xs:enumeration value="1"/>
+                  </xs:restriction>
+                </xs:simpleType>
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:length value="0"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:union>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="cert-attribute">
+    <xs:attribute name="cert" use="required">
+      <xs:annotation>
+        <xs:documentation>Captures degree of certainty about a particular statement about the
+                entity described.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="4"/>
+              <xs:enumeration value="3"/>
+              <xs:enumeration value="2"/>
+              <xs:enumeration value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:length value="0"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="existDates">
+    <xs:annotation>
+      <xs:documentation>A container element for the dateSingle element.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="dateSingle"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dateSingle" type="date-pattern">
+    <xs:annotation>
+      <xs:documentation>If known, enter dates of existence (i.e. birth, death, establishment,
+                or dissolution), of the present entity. </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="date-pattern">
+    <xs:sequence>
+      <xs:element ref="standardDate"/>
+      <xs:element ref="dateType"/>
+      <xs:element minOccurs="0" ref="note"/>
+    </xs:sequence>
+    <xs:attribute name="cert">
+      <xs:annotation>
+        <xs:documentation>Captures degree of certainty about a particular statement about the
+                entity described.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:union>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="4"/>
+              <xs:enumeration value="3"/>
+              <xs:enumeration value="2"/>
+              <xs:enumeration value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:length value="0"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:element name="standardDate">
+    <xs:annotation>
+      <xs:documentation>Captures a date of existence in ISO standard format.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:restriction base="xs:anyType">
+          <xs:simpleType>
+            <xs:union>
+              <xs:simpleType>
+                <xs:union memberTypes="xs:date xs:gYearMonth xs:gYear"/>
+              </xs:simpleType>
+              <xs:simpleType>
+                <xs:restriction base="xs:token">
+                  <xs:length value="0"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:union>
+          </xs:simpleType>
+          <xs:attribute name="qualifier">
+            <xs:annotation>
+              <xs:documentation>Use the qualifier attribute if a date is approximate, inferred, or
+                questionable. The following values are used with the qualifier attribute:
+                approximate: this value is used to identify a date that may not be exact, but is
+                approximated, such as "ca. 1972"; inferred: this value is used to identify a date
+                that has not been transcribed directly from a resource, such as "[not before 1852]";
+                questionable: this value is used to identify a questionable date for a resource,
+                such as "1972?". </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="approximate"/>
+                <xs:enumeration value="inferred"/>
+                <xs:enumeration value="questionable"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:restriction>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="qualifer-attribute">
+    <xs:attribute name="qualifier" use="required">
+      <xs:annotation>
+        <xs:documentation>Use the qualifier attribute if a date is approximate, inferred, or
+                questionable. The following values are used with the qualifier attribute:
+                approximate: this value is used to identify a date that may not be exact, but is
+                approximated, such as "ca. 1972"; inferred: this value is used to identify a date
+                that has not been transcribed directly from a resource, such as "[not before 1852]";
+                questionable: this value is used to identify a questionable date for a resource,
+                such as "1972?". </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="approximate"/>
+          <xs:enumeration value="inferred"/>
+          <xs:enumeration value="questionable"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:element name="dateType">
+    <xs:annotation>
+      <xs:documentation>Captures a date type in relation to its association with the entity
+                described. Prescribed values: person entities: birth, death; organization and place
+                entities: establishment, dissolution</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="birth"/>
+        <xs:enumeration value="death"/>
+        <xs:enumeration value="establishment"/>
+        <xs:enumeration value="dissolution"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="note" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>A field to record a note about some aspect of the present
+                entity.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="factuality">
+    <xs:annotation>
+      <xs:documentation>Factuality captures whether or not the entity (person, organization, or
+                place) is real, fictional, or both (i.e., a mixture of both real and
+                fictional).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="real"/>
+            <xs:enumeration value="fictional"/>
+            <xs:enumeration value="both"/>
+          </xs:restriction>
+        </xs:simpleType>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="genders">
+    <xs:annotation>
+      <xs:documentation>A group of gender terms associated with a CWRC entity record. For more
+                information see gender element.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="gender"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gender">
+    <xs:annotation>
+      <xs:documentation>Gender captures a group of gender terms associated with a person
+                entity.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:restriction base="xs:anyType">
+          <xs:simpleType>
+            <xs:union>
+              <xs:simpleType>
+                <xs:union memberTypes="xs:string">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="female"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="male"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="transgendered"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="transgendered female-to-male"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="transgendered male-to-female"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="undefined"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="ungendered"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:enumeration value="unknown"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:union>
+              </xs:simpleType>
+              <xs:simpleType>
+                <xs:restriction base="xs:token">
+                  <xs:length value="0"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:union>
+          </xs:simpleType>
+          <xs:attribute name="cert">
+            <xs:annotation>
+              <xs:documentation>Captures degree of certainty about a particular statement about the
+                entity described.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:union>
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:enumeration value="4"/>
+                    <xs:enumeration value="3"/>
+                    <xs:enumeration value="2"/>
+                    <xs:enumeration value="1"/>
+                  </xs:restriction>
+                </xs:simpleType>
+                <xs:simpleType>
+                  <xs:restriction base="xs:token">
+                    <xs:length value="0"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:union>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:restriction>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="occupations">
+    <xs:annotation>
+      <xs:documentation>A group of occupation terms associated with a CWRC entity record. For
+                more information see occupation element.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="occupation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="occupation">
+    <xs:annotation>
+      <xs:documentation>Occupation captures relevant paid occupations held by the person
+                described in an entity record.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="term"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activities">
+    <xs:annotation>
+      <xs:documentation>A group of activity terms associated with a CWRC entity record. For
+                more information see activity element.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="activity"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="activity">
+    <xs:annotation>
+      <xs:documentation>Activity captures all unpaid work or function such as volunteer work or
+                other significant activity that a person was engaged in. Examples: parenting, unpaid
+                domestic labour, nursing, as well as philantropic, missionary, or other political
+                activities.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="term"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="researchInterests">
+    <xs:annotation>
+      <xs:documentation>A group of research interest terms associated with a CWRC person entity
+                record. For more information see interest element.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="interest"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interest">
+    <xs:annotation>
+      <xs:documentation>This field can capture a topic of interest or research interest
+                associated with a person entity.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="term"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="term">
+    <xs:annotation>
+      <xs:documentation>Term works as a generic field to capture terms associated with an
+                entity in terms of occupation, activity, and research interests.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attribute name="cert">
+        <xs:annotation>
+          <xs:documentation>Captures degree of certainty about a particular statement about the
+                entity described.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:union>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="4"/>
+                <xs:enumeration value="3"/>
+                <xs:enumeration value="2"/>
+                <xs:enumeration value="1"/>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:length value="0"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:union>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="descriptiveNotes">
+    <xs:annotation>
+      <xs:documentation>A container element to hold one or more general notes about the present
+                entity.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="note"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="relatedResources">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="resource"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resource" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>A source of evidence used in describing the entity or entities
+                instances. Equivalent to EAC-CFPF's source element.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="latitude">
+    <xs:annotation>
+      <xs:documentation>Latitude in decimal degrees of the place entity. Example: for the place
+                entity Edmonton, the latitude in decimal degrees is "53.55014" (WGS [World Geodetic
+                System] 84 reference coordinate system).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:decimal">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="longitude">
+    <xs:annotation>
+      <xs:documentation>Longitude in decimal degrees of the place entity. Example: for the
+                place entity Edmonton, the longitude in decimal degrees is "-113.46871" (WGS [World
+                Geodetic System] 84 reference coordinate system).</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:decimal">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="featureClass">
+    <xs:annotation>
+      <xs:documentation>The GeoNames feature class of the place entity. Example: for the place
+                entity Edmonton, the GeoNames feature class is "Populated Place
+                Feature".</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="Populated Place Feature">
+              <xs:annotation>
+                <xs:documentation>Select this value for populated places, such as cities, towns,
+                        and villages.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Administrative Boundary Feature">
+              <xs:annotation>
+                <xs:documentation>Select this value for administrative divisions, such as
+                        countries, provinces, states, counties, and other political
+                        regions.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Area Feature">
+              <xs:annotation>
+                <xs:documentation>Select this value for area or polygon features, such as parks,
+                        reserves, and historical regions.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Hydrographic Feature">
+              <xs:annotation>
+                <xs:documentation>Select this value for water features, such as streams, rivers,
+                        and lakes.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Hypsographic Feature">
+              <xs:annotation>
+                <xs:documentation>Select this value for elevated features, such as mountains,
+                        hills, and rocks.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Road/Railroad Feature">
+              <xs:annotation>
+                <xs:documentation>Select this value for linear features, such as roads, streets,
+                        railroads, and trails.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Spot Feature">
+              <xs:annotation>
+                <xs:documentation>Select this value for spot or point features, such as
+                        buildings, facilities, and structures.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Undersea Feature">
+              <xs:annotation>
+                <xs:documentation>Select this value for undersea features, such as canyons,
+                        reefs, and shoals.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Vegetation Feature">
+              <xs:annotation>
+                <xs:documentation>Select this value for vegetation features, such as forests,
+                        heaths, and meadows.</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="featureCodeLabel" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The GeoNames feature code label of the place entity (see
+                http://www.geonames.org/export/codes.html). Example: for the place entity Edmonton,
+                the GeoNames feature code label is "seat of a first-order administrative
+                division".</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="countryName" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The ISO 3166-1 English country name that contains the place entity (see
+                http://en.wikipedia.org/wiki/ISO_3166-1). Example: for the place entity Edmonton,
+                the English country name is "Canada".</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="firstAdministrativeDivision" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The ISO 3166-2 country subdivision name, or first-level (first-order)
+                administrative division name (e.g., province or state) that contains the place
+                entity (see http://en.wikipedia.org/wiki/ISO_3166-2). Example: for the place entity
+                Edmonton, the first-level administrative division name is
+                "Alberta".</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="secondAdministrativeDivision" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The second-level (second-order) administrative division name (e.g.,
+                county) that contains the place entity (see
+                http://en.wikipedia.org/wiki/Table_of_administrative_divisions_by_country). Example:
+                for the place entity Arva, Ontario, the second-level administrative division name is
+                "Middlesex County".</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="elevation">
+    <xs:annotation>
+      <xs:documentation>Elevation in meters of the place entity. Example: for the place entity
+                Mount Logan (in Yukon), the elevation in meters is "5,959".</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:integer">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="averageElevation">
+    <xs:annotation>
+      <xs:documentation>Using a digital elevation model (srtm3 or gtopo30), average elevation
+                of a 3''x3'' (ca 90mx90m) or 30''x30'' (ca 900mx900m) area in meters. Example: for
+                the place entity Edmonton, the average elevation in meters is
+                "610".</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:integer">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="timeZoneOffset">
+    <xs:annotation>
+      <xs:documentation>The time zone UTC standard time offset that contains the place entity.
+                Example: for the place entity Edmonton, the time zone UTM standard time offset is
+                "-7.0".</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:decimal">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="personTypes">
+    <xs:annotation>
+      <xs:documentation>Captures generic person types defined by each project. Based on
+                WEAC-CPF's @localType.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="personType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personType">
+    <xs:annotation>
+      <xs:documentation>Captures generic person types defined by each project. Based on
+                WEAC-CPF's @localType.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="creator"/>
+        <xs:enumeration value="writer"/>
+        <xs:enumeration value="critic"/>
+        <xs:enumeration value="canwwr:creator"/>
+        <xs:enumeration value="canwwr:critic"/>
+        <xs:enumeration value="orl:BWW"/>
+        <xs:enumeration value="orl:IBW"/>
+        <xs:enumeration value="orl:IWW"/>
+        <xs:enumeration value="orl:MW"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="orgTypes">
+    <xs:annotation>
+      <xs:documentation>Captures generic organization types defined by each project. Based on
+                WEAC-CPF's @localType.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="orgType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="orgType">
+    <xs:annotation>
+      <xs:documentation>Captures generic organization types. Based on EAC-CPF's
+                @localType.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="labour"/>
+            <xs:enumeration value="club or society"/>
+            <xs:enumeration value="political"/>
+            <xs:enumeration value="academic"/>
+            <xs:enumeration value="research"/>
+            <xs:enumeration value="corporate"/>
+            <xs:enumeration value="activist"/>
+            <xs:enumeration value="governmental"/>
+            <xs:enumeration value="military"/>
+            <xs:enumeration value="law-enforcement"/>
+            <xs:enumeration value="professional"/>
+            <xs:enumeration value="sporting"/>
+            <xs:enumeration value="medical"/>
+            <xs:enumeration value="altruistic"/>
+            <xs:enumeration value="non-profit"/>
+            <xs:enumeration value="artistic"/>
+            <xs:enumeration value="dramatic"/>
+            <xs:enumeration value="ethnic"/>
+            <xs:enumeration value="literary"/>
+            <xs:enumeration value="musical"/>
+            <xs:enumeration value="religious"/>
+            <xs:enumeration value="publishing"/>
+            <xs:enumeration value="school"/>
+          </xs:restriction>
+        </xs:simpleType>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="placeTypes">
+    <xs:annotation>
+      <xs:documentation>Captures generic place types defined by CWRC.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="placeType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="placeType">
+    <xs:annotation>
+      <xs:documentation>Captures generic place types defined by CWRC.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="currentHumanPlace"/>
+        <xs:enumeration value="historicalHumanPlace"/>
+        <xs:enumeration value="currentNaturalPlace"/>
+        <xs:enumeration value="historicalNaturalPlace"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="originInfo">
+    <xs:annotation>
+      <xs:documentation>Record origin information. Equivalent to MADS recordInfo element,
+                similar to EAC-CPF's control element.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="projectId"/>
+        <xs:element ref="recordIdentifier"/>
+        <xs:element ref="recordCreationDate"/>
+        <xs:element ref="recordChangeDate"/>
+        <xs:element ref="recordOrigin"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="projectId">
+    <xs:annotation>
+      <xs:documentation>Similar to EAC-CPF's agencyCode. In CWRC's context, projectId captures
+                an identifier for the originating project. Subsequent modifications of the record
+                should be captured in FOXML's datastreams</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="canwwr">
+              <xs:annotation>
+                <xs:documentation>canwwwr</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ceww">
+              <xs:annotation>
+                <xs:documentation>ceww</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="cwrc">
+              <xs:annotation>
+                <xs:documentation>cwrc</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="eccji">
+              <xs:annotation>
+                <xs:documentation>eccji</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="emic">
+              <xs:annotation>
+                <xs:documentation>emic</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="GeoNames">
+              <xs:annotation>
+                <xs:documentation>GeoNames</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Google Maps">
+              <xs:annotation>
+                <xs:documentation>Google Maps</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="orlando">
+              <xs:annotation>
+                <xs:documentation>orlando</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="VIAF">
+              <xs:annotation>
+                <xs:documentation>VIAF</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="recordIdentifier">
+    <xs:annotation>
+      <xs:documentation>Provenance field used to capture original record identifiers. CWRC
+                record identifiers are captured in entityId and in FOXML.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="source" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>Contains the code or name of the organization whose system
+                        control number is located in the recordIdentifier element.</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recordCreationDate">
+    <xs:annotation>
+      <xs:documentation>Provenance field used to capture the original creation date of the
+                entity or authority record. Equivalent to MADS recordCreationDate and EAC-CPF's
+                maintenanceHistory/maintenance/Event/eventType[text()="created"]/eventDateTime .
+                Date format is in the form of YYYY, YYYY-MM, or YYYY-MM-DD format.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union>
+        <xs:simpleType>
+          <xs:union memberTypes="xs:date xs:gYearMonth xs:gYear"/>
+        </xs:simpleType>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="recordChangeDate">
+    <xs:annotation>
+      <xs:documentation>Provenance field used to capture the last modification date of an
+                entity record. Equivalent to MADS recordChangeDate and EAC-CPF's
+                maintenanceHistory/maintenance/Event/eventType/eventDateTime . Date format is in the
+                form of YYYY, YYYY-MM, or YYYY-MM-DD format.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union>
+        <xs:simpleType>
+          <xs:union memberTypes="xs:date xs:gYearMonth xs:gYear"/>
+        </xs:simpleType>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="recordOrigin" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Field that records the origin or provenance of the entity
+                record.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="entityId">
+    <xs:annotation>
+      <xs:documentation>Optional CWRC record identifier. This information is captured in FOXML.
+                Equivalent to EAC-CPF's recordId.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:union memberTypes="xs:string">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:length value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:union>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="accessCondition">
+    <xs:annotation>
+      <xs:documentation>Use the following access condition statement: Use of this public-domain
+                resource is governed by the &lt;a
+                href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license" &gt;Creative
+                Commons Attribution-NonCommercial 4.0 International License&lt;/a&gt;. </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="a"/>
+      </xs:sequence>
+      <xs:attribute name="type" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="use and reproduction"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="a">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:token">
+          <xs:attributeGroup ref="href-attribute"/>
+          <xs:attribute name="rel" type="xs:token"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="href-attribute">
+    <xs:attribute name="href" use="required" type="xs:anyURI"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="rel-attribute">
+    <xs:attribute name="rel" use="required" type="xs:token"/>
+  </xs:attributeGroup>
+</xs:schema>
