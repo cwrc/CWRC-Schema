@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://cwrc.ca/schemas/entities.rng"
+        type="application/xml"
+        schematypens="http://relaxng.org/ns/structure/1.0"
+      ?>
+<entity>
+  <person>
+    <identity>
+      <preferredForm>
+        <namePart partType=""/>
+      </preferredForm>
+
+      <variantForms>
+        <variant>
+          <namePart partType="family"/>
+          <namePart partType="fullNameDirectOrder"/>
+          <namePart partType="fullNameInvertedOrder"/>
+          <namePart partType="given"/>
+          <namePart partType="termsOfAddress"/>
+          <variantType>acronym</variantType>
+          <variantType>alternate names</variantType>
+          <variantType>birthName</variantType>
+          <variantType>deprecated</variantType>
+          <variantType>descriptive</variantType>
+          <variantType>historic</variantType>
+          <variantType>indexedName</variantType>
+          <variantType>marriedName</variantType>
+          <variantType>nickname</variantType>
+          <variantType>orlandoStandardName</variantType>
+          <variantType>popular</variantType>
+          <variantType>pseudonym</variantType>
+          <variantType>religiousName</variantType>
+          <variantType>royalName</variantType>
+          <variantType>selfConstructedName</variantType>
+          <variantType>styledName</variantType>
+          <variantType>titledName</variantType>
+          <variantType>usedForm</variantType>
+          <authorizedBy>
+            <projectId>orlando</projectId>
+          </authorizedBy>
+        </variant>
+      </variantForms>
+      <displayLabel/>
+      <sameAs/>
+    </identity>
+    <description>
+      <existDates>
+        <dateSingle>
+          <standardDate/>
+          <dateType>birth</dateType>
+        </dateSingle>
+      </existDates>
+      <factuality>real</factuality>
+      <!--<factuality>real</factuality>
+    <factuality>both</factuality>-->
+      <genders>
+        <gender cert="1"/>
+      </genders>
+      <occupations>
+        <occupation/>
+      </occupations>
+      <researchInterests>
+        <interest/>
+      </researchInterests>
+      <activities>
+        <activity/>
+      </activities>
+      <descriptiveNotes>
+        <note/>
+      </descriptiveNotes>
+      <relatedResources>
+        <resource/>
+      </relatedResources>
+    </description>
+    <recordInfo>
+      <accessCondition type="use and reproduction"/>
+      <entityId/>
+      <originInfo>
+        <projectId>orlando</projectId>
+        <recordChangeDate/>
+        <recordCreationDate/>
+        <recordOrigin></recordOrigin>
+      </originInfo>
+      <personTypes>
+        <personType>writer</personType>
+      </personTypes>
+    </recordInfo>
+  </person>
+</entity>

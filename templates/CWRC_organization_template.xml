@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://cwrc.ca/schemas/entities.rng"
+        type="application/xml"
+        schematypens="http://relaxng.org/ns/structure/1.0"
+      ?>
+<entity>
+  <organization>
+    <identity>
+      <preferredForm>
+        <namePart partType=""/>
+      </preferredForm>
+
+      <variantForms>
+        <variant>
+          <namePart partType="family"/>
+          <namePart partType="fullNameDirectOrder"/>
+          <namePart partType="fullNameInvertedOrder"/>
+
+          <variantType>acronym</variantType>
+          <variantType>alternate names</variantType>
+          <variantType>deprecated</variantType>
+          <variantType>descriptive</variantType>
+          <variantType>historic</variantType>
+          <variantType>indexedName</variantType>
+          <variantType>orlandoStandardName</variantType>
+          <variantType>popular</variantType>
+          <variantType>usedForm</variantType>
+          <authorizedBy>
+            <projectId>orlando</projectId>
+          </authorizedBy>
+        </variant>
+      </variantForms>
+      <displayLabel/>
+      <sameAs/>
+    </identity>
+    <description>
+      <existDates>
+        <dateSingle>
+          <standardDate/>
+          <dateType>establishment</dateType>
+        </dateSingle>
+        <dateSingle>
+          <standardDate/>
+          <dateType>dissolution</dateType>
+        </dateSingle>
+      </existDates>
+      <factuality>real</factuality>
+      <!--<factuality>real</factuality>
+    <factuality>both</factuality>-->
+      <descriptiveNotes>
+        <note/>
+      </descriptiveNotes>
+      <relatedResources>
+        <resource/>
+      </relatedResources>
+    </description>
+    <recordInfo>
+      <accessCondition type="use and reproduction"/>
+      <entityId/>
+      <originInfo>
+        <projectId>orlando</projectId>
+        <recordChangeDate/>
+        <recordCreationDate/>
+        <recordOrigin/>
+      </originInfo>
+      <orgTypes>
+        <orgType>academic</orgType>
+        <orgType>activist</orgType>
+        <orgType>altruistic</orgType>
+        <orgType>artistic</orgType>
+        <orgType>club or society</orgType>
+        
+      </orgTypes>
+    </recordInfo>
+  </organization>
+</entity>

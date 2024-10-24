@@ -336,10 +336,7 @@ docAuthor {
 byline docAuthor {
   display: inline;
 }
-titlePage docAuthor {
-}
-titlePage docTitle {
-}
+
 edition {
   display: block;
   margin-bottom: 0.5em;
@@ -864,10 +861,10 @@ ptr:before {
   color: red;
   content: "[" attr(target) "]";
 }
-publicationStmt {
-  /*    display : block;
-    margin-bottom : 0.5em;*/
-}
+/* publicationStmt {
+     display : block;
+    margin-bottom : 0.5em;
+}*/
 publicationStmt p {
   display: block;
   margin-bottom: 0;
@@ -922,16 +919,12 @@ q:before {
 q:after {
   content: close-quote;
 }
-ref {
+ref [target~=commons] {
   display: inline;
   color: blue;
   background-color: inherit;
 }
-ref[target] {
-  display: inline;
-  color: inherit;
-  background-color: inherit;
-}
+
 
 ref:before {
   color: gray;
