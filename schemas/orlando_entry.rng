@@ -1620,7 +1620,7 @@
 
  <define name="DENOMINATION">
  <element name="DENOMINATION">
- <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" >Denomination captures the names of religious denominations associated with a person&apos;s life. We are defining denomination very broadly to include a wide range of categories from Christian to atheist to Seekers to Clapham Sect. While we recognize that many of the denominations listed below are conceptually different (for example, Buddhhierarchicalism is on a different hierarchical, conceptual level than Calvinist), for the purposes of this Project we are overlooking these distinctions.</a:documentation>
+ <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" >Denomination captures the names of religious denominations associated with a person&apos;s life. We are defining denomination very broadly to include a wide range of categories from Christian to atheist to Seekers to Clapham Sect. While we recognize that many of the denominations listed below are conceptually different (for example, Buddhhist is on a different hierarchical, conceptual level than Calvinist), for the purposes of this project we are overlooking these distinctions.</a:documentation>
  <optional>
  <attribute name="CURRENTALTERNATIVETERM"/>
  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This attribute allows you to capture changes in terminology over time. The older name in your prose may not be familiar to your reader nor helpful for indexing purposes and therefore needs explanation.</a:documentation>
