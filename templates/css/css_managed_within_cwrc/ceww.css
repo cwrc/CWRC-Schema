@@ -4,21 +4,15 @@ CWRC{
     background-color:#fffcf5
 }
 
-RESEARCHNOTE{
-    background-color:#fffcf5;
-    color:#663366;
-    font-size:smaller;
-    text-align:center;
-    display:block;
-    margin-left:8em;
-    margin-right:8em;
-    padding:1em
+RESEARCHNOTE
+{
+    display:none
 }
 
 
-#comment{
+#comment
+{
     display:none
-
 }
 
 CWRCHEADER,
@@ -49,26 +43,28 @@ KEYWORDS{
 }
 
 
-ENTRY{
+ENTRY
+{
     display:block;
-    margin-left:2.5em
+    margin-left:2.5em;
+    margin-right:1.5em
 }
 
 ENTRY FRONT DATASTRUCT DATAITEM + DATAITEM 
 {
-    display:compact;
+    display:block;
     font-size:smaller;
-    text-align:center
+    text-align:center;
+    margin:0.5em;
+    padding:1em
 }
 
 ENTRY FRONT DATASTRUCT DATAITEM FIGURE
 {
-    display:block;
-    text-align:center;
+    display:flex;
     border:thin solid white;
-    margin:0.5em;
-    padding:0.5em;
-    max-width:480px
+    justify-content:center;
+    align-items:center
 }
 
 
@@ -84,7 +80,7 @@ P
 FRONT P
 {
     display:block;
-    font-style:italic;
+    font-style:italic
 }
 
 
@@ -93,21 +89,10 @@ FRONT P + P
     font-size:smaller;
     display:block;
     text-align:right;
-    padding-left:2em;
-    padding-right:2em;
     font-style:normal
 }
 
-FIGURE
-{
-    text-align:center;
-    display:block;
-    margin:0.5em;
-    padding:0.5em  
-}
-
-
-
+HEADING{line-height:110%}
 
 HEADING[SUBTYPE = "1"]
 {
@@ -115,12 +100,21 @@ HEADING[SUBTYPE = "1"]
     font-size:xx-large;
     font-weight:bold;
     color:#7c1a0f;
-    padding-top:0.5em;
     padding-bottom:0.5em;
     display:block
 }
 
-HEADING[SUBTYPE = "2"],
+HEADING[SUBTYPE = "2"]
+{
+    font-weight:bold;
+    color:#7c1a0f;
+    display:block;
+    font-size:x-large;
+    font-weight:bold;
+    padding-top:1em;
+    padding-bottom:1em
+}
+
 HEADING[SUBTYPE = "2"] NAME
 {
     font-weight:bold;
@@ -178,6 +172,7 @@ AUTHORSUMMARY P:first-child
     border-color:#7c1a0f
 }
 
+
 AUTHORSUMMARY:nth-of-type(1)
 {
     font-size:smaller;
@@ -186,7 +181,7 @@ AUTHORSUMMARY:nth-of-type(1)
     padding-left:15%; 
     padding-right:15%;
     text-align:center
-    }
+}
     
 
 AUTHORSUMMARY PERSONNAME DATASTRUCT DATAITEM:first-child
@@ -206,7 +201,12 @@ BIRTH:before
     font-weight:bold
 }
 
-BIRTH,
+BIRTH
+{
+    display:block;
+    padding-top:3em
+}
+
 DEATH,
 PERSONNAME
 {
@@ -371,6 +371,16 @@ FAMILYMEMBER[RELATION = "STEPDAUGHTER"] CHRONSTRUCT
     font-weight:normal
 }
 
+FAMILYMEMBER[RELATION = "SIBLING"] CHRONSTRUCT CHRONPROSE NAME,
+FAMILYMEMBER[RELATION = "BROTHER"] CHRONSTRUCT CHRONPROSE NAME,
+FAMILYMEMBER[RELATION = "SISTER"] CHRONSTRUCT CHRONPROSE NAME,
+FAMILYMEMBER[RELATION = "DAUGHTER"] CHRONSTRUCT CHRONPROSE NAME,
+FAMILYMEMBER[RELATION = "SON"] CHRONSTRUCT CHRONPROSE NAME,
+FAMILYMEMBER[RELATION = "STEPSON"] CHRONSTRUCT CHRONPROSE NAME,
+FAMILYMEMBER[RELATION = "STEPDAUGHTER"] CHRONSTRUCT CHRONPROSE NAME
+{
+    font-weight:bold
+}
 
 FAMILYMEMBER[RELATION = "SIBLING"] P,
 FAMILYMEMBER[RELATION = "BROTHER"] P,
@@ -428,6 +438,13 @@ AWARDS RECEPTION P
    padding-right:5em
 }
 
+XREF
+{
+    color:#953f36;
+}
+
+
+
 EMPH
 {
     font-style:italic
@@ -443,4 +460,3 @@ OTHERLIFEEVENT DATASTRUCT DATAITEM
     display:block;
     margin-left:2em
 }
-
