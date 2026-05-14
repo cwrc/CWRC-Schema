@@ -887,7 +887,7 @@ q:before {
 q:after {
     content : close-quote;
 }
-ref {
+ref[target*="http"] {
     display : inline;
     color : blue;
     background-color : inherit;
