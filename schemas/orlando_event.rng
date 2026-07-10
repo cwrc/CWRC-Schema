@@ -201,14 +201,14 @@
  <text/>
  </element>
  </element>
-   <element name="XENODATA">
+   <optional><element name="XENODATA">
      <a:documentation>(non-ORLANDO metadata) provides a container element into which metadata in non-ORLANDO formats may be placed. (similar in role to the homonymous TEI element)</a:documentation>
      <element name="rdf:RDF"
        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
        <ref name="any_content"/>
      </element>
-   </element>
-   <element name="REVISIONDESC">
+   </element></optional>
+   <optional><element name="REVISIONDESC">
  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
  >revisionDesc (or revision description) summarizes the revision history for
  a file.</a:documentation>
@@ -286,7 +286,7 @@
  </zeroOrMore>
  </element>
  </oneOrMore>
- </element>
+ </element></optional>
  <optional>
  <element name="XENODATA">
  <a:documentation>(non-ORLANDO metadata) provides a container element into which metadata in non-ORLANDO formats may be placed. (similar in role to the homonymous TEI element)</a:documentation>
